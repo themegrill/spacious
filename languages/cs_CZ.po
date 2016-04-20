@@ -1,0 +1,897 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spacious\n"
+"POT-Creation-Date: 2014-03-20 18:51+0545\n"
+"PO-Revision-Date: 2014-05-05 19:01+0100\n"
+"Last-Translator: Pavel Šimonek <pasimonek@gmail.com>\n"
+"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_x;_nx;_ex;esc_attr__;esc_attr_e\n"
+"Language: cs\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Tuto stránku nemůžu najít."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr "Zdá se, že v tomto umístění nic není. Zkuste vyhledávání."
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Jedna reakce na &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Navigace ke komentářům"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Starší komentáře"
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Novější komentáře &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Komentáře jsou uzavřené"
+
+#: content-blog-full-content.php:23 content-page.php:17 content-single.php:29
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:41
+msgid "No Comments"
+msgstr "Bez komentářů"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:41
+msgid "1 Comment"
+msgstr "1 komentář"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:41
+msgid "% Comments"
+msgstr "% komentáře(ů)"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:41
+msgid "Comments Off"
+msgstr "Komentáře vypnuty"
+
+#: content-blog-full-content.php:41 content-blog-image-large.php:54
+#: content-blog-image-medium.php:56 content-page.php:26 content-single.php:47
+#: content.php:43
+msgid "Edit"
+msgstr "Upravit"
+
+#: content-blog-image-large.php:55 content-blog-image-medium.php:57
+#: content.php:44 inc/header-functions.php:101 inc/widgets/widgets.php:357
+msgid "Read more"
+msgstr "Čtěte více"
+
+#: content-single.php:22
+msgid "Tagged on: "
+msgstr "Tagy:"
+
+#: header.php:87
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Vyberte rozložení"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Výchozí rozložení"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr "Pravý panel"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Levý panel"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Bez bočního panelu, plná šířka"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Bez bočního panelu, vystředěný obsah"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:85
+#: inc/admin/options/includes/class-options-framework-admin.php:86
+#: inc/admin/options/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr "Možnosti tématu"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:173
+msgid "Save Options"
+msgstr "Možnosti uložení"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Restore Defaults"
+msgstr "Obnovit výchozí stav"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "Klikněte na OK pro obnovení. Všechna nastavení tématu budou ztracena!"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr "Výchozí možnosti obnoveny."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr "Možnosti uloženy."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "Soubor nevybrán"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:66
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr "Nahrát"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:68
+#: inc/admin/options/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr "Odstranit"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Aktualizujte vaši verzi Wordpress pro plnou podporu médií."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "Zobrazit soubor"
+
+#: inc/admin/options/includes/class-options-sanitization.php:241
+msgid "No Repeat"
+msgstr "Neopakovat"
+
+#: inc/admin/options/includes/class-options-sanitization.php:242
+msgid "Repeat Horizontally"
+msgstr "Opakovat horizontálně"
+
+#: inc/admin/options/includes/class-options-sanitization.php:243
+msgid "Repeat Vertically"
+msgstr "Opakovat vertikálně"
+
+#: inc/admin/options/includes/class-options-sanitization.php:244
+msgid "Repeat All"
+msgstr "Opakovat vše"
+
+#: inc/admin/options/includes/class-options-sanitization.php:257
+msgid "Top Left"
+msgstr "Nahoře vlevo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:258
+msgid "Top Center"
+msgstr "Nahoře uprostřed"
+
+#: inc/admin/options/includes/class-options-sanitization.php:259
+msgid "Top Right"
+msgstr "Nahoře vpravo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:260
+msgid "Middle Left"
+msgstr "Uprostřed vlevo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:261
+msgid "Middle Center"
+msgstr "Uprostřed na střed"
+
+#: inc/admin/options/includes/class-options-sanitization.php:262
+msgid "Middle Right"
+msgstr "Uprostřed vpravo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:263
+msgid "Bottom Left"
+msgstr "Dole vlevo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:264
+msgid "Bottom Center"
+msgstr "Dole uprostřed"
+
+#: inc/admin/options/includes/class-options-sanitization.php:265
+msgid "Bottom Right"
+msgstr "Dole vpravo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:278
+msgid "Scroll Normally"
+msgstr "Posunovat normálně"
+
+#: inc/admin/options/includes/class-options-sanitization.php:279
+msgid "Fixed in Place"
+msgstr "Fixovaný v místě"
+
+#: inc/admin/options/includes/class-options-sanitization.php:353
+msgid "Normal"
+msgstr "Normálně"
+
+#: inc/admin/options/includes/class-options-sanitization.php:354
+msgid "Italic"
+msgstr "Kurzíva"
+
+#: inc/admin/options/includes/class-options-sanitization.php:355
+msgid "Bold"
+msgstr "Tučně"
+
+#: inc/admin/options/includes/class-options-sanitization.php:356
+msgid "Bold Italic"
+msgstr "Tučná kurzíva"
+
+#: inc/functions.php:320
+msgid "Post navigation"
+msgstr "Navigace ke komentářům"
+
+#: inc/functions.php:324 navigation.php:42
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/functions.php:325 navigation.php:43
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/functions.php:330
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší příspěvky"
+
+#: inc/functions.php:334
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/functions.php:360
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/functions.php:360
+msgid "(Edit)"
+msgstr "(Upravit)"
+
+#: inc/functions.php:375
+msgid "Post author"
+msgstr "Autor příspěvku"
+
+#: inc/functions.php:378
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s v %2$s"
+
+#: inc/functions.php:380
+#, php-format
+msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+msgstr "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+
+#: inc/functions.php:386
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentář čeká na schválení"
+
+#: inc/functions.php:391
+msgid "Reply"
+msgstr "Odpovědět"
+
+#: inc/functions.php:445
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/functions.php:454
+msgid "ThemeGrill"
+msgstr "ThemeGrill"
+
+#: inc/functions.php:463
+msgid "Copyright &copy; "
+msgstr "Copyright &copy; "
+
+#: inc/functions.php:463
+msgid "Theme by: spacious"
+msgstr "Theme by: spacious"
+
+#: inc/functions.php:463
+msgid "Powered by: "
+msgstr "Powered by: "
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Strana %s"
+
+#: inc/header-functions.php:135
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: inc/header-functions.php:143
+#, php-format
+msgid "Day: %s"
+msgstr "Den: %s"
+
+#: inc/header-functions.php:146
+#, php-format
+msgid "Month: %s"
+msgstr "Měsíc: %s"
+
+#: inc/header-functions.php:149
+#, php-format
+msgid "Year: %s"
+msgstr "Rok: %s"
+
+#: inc/header-functions.php:152
+msgid "Asides"
+msgstr "Po stranách"
+
+#: inc/header-functions.php:155
+msgid "Images"
+msgstr "Obrázky"
+
+#: inc/header-functions.php:158
+msgid "Videos"
+msgstr "Videa"
+
+#: inc/header-functions.php:161
+msgid "Quotes"
+msgstr "Citace"
+
+#: inc/header-functions.php:164
+msgid "Links"
+msgstr "Odkazy"
+
+#: inc/header-functions.php:167 sidebar-left.php:29 sidebar.php:29
+msgid "Archives"
+msgstr "Archivy"
+
+#: inc/header-functions.php:172
+msgid "Page NOT Found"
+msgstr "Strana nenalezena"
+
+#: inc/header-functions.php:175
+msgid "Search Results"
+msgstr "Výsledky vyhledávání"
+
+#: inc/header-functions.php:204
+msgid "You are here:"
+msgstr "Jste zde:"
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr "Zobrazí widgety vpravo."
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr "Zobrazí widgety vlevo."
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr "Hlavičkový panel"
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr "Zobrazí widgety v sekci hlavičky hned nad hlavním menu navigace."
+
+#: inc/widgets/widgets.php:51
+msgid "Business Top Sidebar"
+msgstr "Horní panel Business"
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Business Page Template Top Section. Sutiable widget: "
+msgstr "Zobrazí widgety v horní sekci šablony Business. Použitelné widgety: "
+
+#: inc/widgets/widgets.php:62
+msgid "Business Middle Left Sidebar"
+msgstr "Levý prostřední panel pro Business"
+
+#: inc/widgets/widgets.php:64
+msgid ""
+"Shows widgets on Business Page Template Middle Section Left Half. Sutiable "
+"widget: "
+msgstr ""
+"Zobrazí widgety v prostřední sekci v levé polovině šablony Business. "
+"Použitelné widgety:"
+
+#: inc/widgets/widgets.php:73
+msgid "Business Middle Right Sidebar"
+msgstr "Pravý prostřední panel pro Business"
+
+#: inc/widgets/widgets.php:75
+msgid ""
+"Shows widgets on Business Page Template Middle Section Right Half. Sutiable "
+"widget: "
+msgstr ""
+"Zobrazí widgety v prostřední sekci v pravé polovině šablony Business. "
+"Použitelné widgety:"
+
+#: inc/widgets/widgets.php:85
+msgid "Business Bottom Sidebar"
+msgstr "Spodní panel pro Business"
+
+#: inc/widgets/widgets.php:87
+msgid ""
+"Shows widgets on Business Page Template Bottom Section. Sutiable widget: "
+msgstr "Zobrazí widgety ve spodní sekci šablony Business. Použitelné widgety:"
+
+#: inc/widgets/widgets.php:96
+msgid "Contact Page Sidebar"
+msgstr "Panel Contact"
+
+#: inc/widgets/widgets.php:98
+msgid "Shows widgets on Contact Page Template."
+msgstr "Zobrazí widgety v šabloně Contact."
+
+#: inc/widgets/widgets.php:107
+msgid "Error 404 Page Sidebar"
+msgstr "Panel chyby 404"
+
+#: inc/widgets/widgets.php:109
+msgid "Shows widgets on Error 404 page."
+msgstr "Zobrazí widgety na chybové stránce 404."
+
+#: inc/widgets/widgets.php:118
+msgid "Footer Sidebar One"
+msgstr "První panel patičky"
+
+#: inc/widgets/widgets.php:120
+msgid "Shows widgets at footer sidebar one."
+msgstr "Zobrazí widgety v prvním panelu patičky."
+
+#: inc/widgets/widgets.php:129
+msgid "Footer Sidebar Two"
+msgstr "Druhý panel patičky"
+
+#: inc/widgets/widgets.php:131
+msgid "Shows widgets at footer sidebar two."
+msgstr "Zobrazí widgety ve druhém panelu patičky."
+
+#: inc/widgets/widgets.php:140
+msgid "Footer Sidebar Three"
+msgstr "Třetí panel patičky"
+
+#: inc/widgets/widgets.php:142
+msgid "Shows widgets at footer sidebar three."
+msgstr "Zobrazí widgety ve třetím panelu patičky."
+
+#: inc/widgets/widgets.php:151
+msgid "Footer Sidebar Four"
+msgstr "Čtvrtý panel patičky"
+
+#: inc/widgets/widgets.php:153
+msgid "Shows widgets at footer sidebar four."
+msgstr "Zobrazí widgety ve čtvrtém panelu patičky."
+
+#: inc/widgets/widgets.php:176
+msgid "Display Featured Single Page"
+msgstr "Zobrazí doporučenou jednu stránku"
+
+#: inc/widgets/widgets.php:187
+msgid ""
+"Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr ""
+"Použitelné pro horní panel domovské stránky, levý spodní panel domovské "
+"stránky a boční panel."
+
+#: inc/widgets/widgets.php:190 inc/widgets/widgets.php:522
+#: inc/widgets/widgets.php:567
+msgid "Title:"
+msgstr "Název:"
+
+#: inc/widgets/widgets.php:193
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Pokud je nadpis prázdný, zobrazí se název stránky."
+
+#: inc/widgets/widgets.php:196 inc/widgets/widgets.php:294
+#: inc/widgets/widgets.php:576
+msgid "Page"
+msgstr "Strana"
+
+#: inc/widgets/widgets.php:200
+msgid "Remove Featured image"
+msgstr "Odstranit doporučený obrázek"
+
+#: inc/widgets/widgets.php:205 inc/widgets/widgets.php:210
+msgid "Show Image Before Title"
+msgstr "Zobrazit obrázek před nadpisem"
+
+#: inc/widgets/widgets.php:206 inc/widgets/widgets.php:211
+msgid "Show Image After Title"
+msgstr "Zobrazit obrázek za nadpisem"
+
+#: inc/widgets/widgets.php:276
+msgid ""
+"Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Zobrazí některé stránky jako služby. Nejlepší pro horní nebo spodní panel "
+"Business."
+
+#: inc/widgets/widgets.php:278
+msgid "TG: Services"
+msgstr "TG: Služby"
+
+#: inc/widgets/widgets.php:377
+msgid "Use this widget to show the call to action section."
+msgstr "Použijte tento widget pro sekci volání akce."
+
+#: inc/widgets/widgets.php:379
+msgid "TG: Call To Action Widget"
+msgstr "TG: Widget volání akce"
+
+#: inc/widgets/widgets.php:395
+msgid "Call to Action Main Text"
+msgstr "Hlavní text volání akce"
+
+#: inc/widgets/widgets.php:397
+msgid "Call to Action Additional Text"
+msgstr "Další text volání akce"
+
+#: inc/widgets/widgets.php:400
+msgid "Button Text:"
+msgstr "Text tlačítka:"
+
+#: inc/widgets/widgets.php:404
+msgid "Button Redirect Link:"
+msgstr "Odkaz přesměrování:"
+
+#: inc/widgets/widgets.php:477
+msgid "Display Testimonial"
+msgstr "Zobrazit reference"
+
+#: inc/widgets/widgets.php:479
+msgid "TG: Testimonial"
+msgstr "TG: Reference"
+
+#: inc/widgets/widgets.php:524
+msgid "Testimonial Description"
+msgstr "Popis reference"
+
+#: inc/widgets/widgets.php:527
+msgid "Name:"
+msgstr "Jméno:"
+
+#: inc/widgets/widgets.php:530
+msgid "Byline:"
+msgstr "Další:"
+
+#: inc/widgets/widgets.php:544
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Ukažte některé své stránky jako poslední práci. Nejlepší pro horní nebo "
+"spodní panel Business."
+
+#: inc/widgets/widgets.php:546
+msgid "TG: Featured Widget"
+msgstr "TG: Widget doporučení"
+
+#: inc/widgets/widgets.php:570
+msgid "Description"
+msgstr "Popis"
+
+#: navigation.php:22
+msgid "&laquo; Previous"
+msgstr "&laquo; Předchozí"
+
+#: navigation.php:23
+msgid "Next &raquo;"
+msgstr "Další &raquo;"
+
+#: navigation.php:34
+msgid "&larr; Previous"
+msgstr "&larr; Předchozí"
+
+#: navigation.php:35
+msgid "Next &rarr;"
+msgstr "Další &rarr;"
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Jste připravení publikovat váš první příspěvek? <a href=\"%1$s\">Začněte "
+"zde</a>."
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Omlouváme se, ale nic neodpovídá vašemu hledání. Zkuste prosím jiná slova "
+"pro hledání."
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Vypadá to, že nemůžeme najít to, co hledáte. Možná vám pomůže vyhledávání."
+
+#: options.php:31
+msgid "Header"
+msgstr "Hlavička"
+
+#: options.php:37
+msgid "Header Logo"
+msgstr "Logo hlavičky"
+
+#: options.php:38
+msgid "Upload logo for your header."
+msgstr "Nahrajte logo pro vaši hlavičku."
+
+#: options.php:45
+msgid "Header Logo Only"
+msgstr "Pouze logo"
+
+#: options.php:46
+msgid "Header Text Only"
+msgstr "Pouze text"
+
+#: options.php:47
+msgid "Show Both"
+msgstr "Zobrazit obojí"
+
+#: options.php:48
+msgid "Disable"
+msgstr "Vypnout"
+
+#: options.php:51
+msgid "Show"
+msgstr "Zobrazit"
+
+#: options.php:52
+msgid "Choose the option that you want."
+msgstr "Vyberte možnost, kterou chcete."
+
+#: options.php:61
+msgid "Need to replace Header Image?"
+msgstr "Potřebujete nahradit obrázek v hlavičce?"
+
+#: options.php:62 options.php:167
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "<a href=\"%1$s\">Klikněte zde</a>"
+
+#: options.php:68
+msgid "Heder Image Position"
+msgstr "Pozice obrázku v hlavičce"
+
+#: options.php:69
+msgid "Choose top header image display position."
+msgstr "Vyberte pozici zobrazení obrázku v hlavičce."
+
+#: options.php:74
+msgid ""
+"Position Above (Default): Display the Header image just above the site title "
+"and main menu part."
+msgstr ""
+"Pozice nad (výchozí): Zobrazí obrázek hlavičky hned nad nadpisem stránky a "
+"hlavním menu."
+
+#: options.php:75
+msgid ""
+"Position Below: Display the Header image just below the site title and main "
+"menu part."
+msgstr ""
+"Pozice pod: Zobrazí obrázek hlavičky hned pod nadpisem stránky a hlavním "
+"menu."
+
+#: options.php:83
+msgid "Design"
+msgstr "Návrh"
+
+#: options.php:88
+msgid "Site Layout"
+msgstr "Rozložení webu"
+
+#: options.php:89
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Vyberte rozvržení vašeho webu. Změna se projeví na celém webu."
+
+#: options.php:94
+msgid "Boxed layout with content width of 1218px"
+msgstr "Rozložení v rámečku se šířkou 1218px"
+
+#: options.php:95
+msgid "Boxed layout with content width of 978px"
+msgstr "Rozložení v rámečku se šířkou 978px"
+
+#: options.php:96
+msgid "Wide layout with content width of 1218px"
+msgstr "Rozložení na celou šířku s obsahem o šířce 1218px"
+
+#: options.php:97
+msgid "Wide layout with content width of 978px"
+msgstr "Rozložení na celou šířku s obsahem o šířce 978px"
+
+#: options.php:102
+msgid "Default layout"
+msgstr "Výchozí rozložení"
+
+#: options.php:103
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Vyberte výchozí rozložení. Toto rozložení bude aplikováno na celý web, "
+"archivy, vyhledávání atd. Rozložení pro jednu stránku nemůže být řízeno s "
+"následujících voleb."
+
+#: options.php:116
+msgid "Default layout for pages only"
+msgstr "Výchozí rozložení pouze pro stránky"
+
+#: options.php:117
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Vyberte výchozí rozložení pro stránky. Toto rozložení bude aplikováno na "
+"všechny stránky, dokud nebude nastaveno rozložení pro konkrétní stránku."
+
+#: options.php:130
+msgid "Default layout for single posts only"
+msgstr "Výchozí rozložení pouze pro jednotlivé příspěvky"
+
+#: options.php:131
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Vyberte výchozí rozložení pro jednotlivé příspěvky. Toto rozložení bude "
+"aplikováno na všechny příspěvky, dokud nebude nastaveno rozložení pro "
+"konkrétní příspěvek."
+
+#: options.php:145
+msgid "Primary color option"
+msgstr "Primární volba barvy"
+
+#: options.php:146
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+"Toto bude aplikováno na odkazy, tlačítka a mnohé další. Vyberte barvu, "
+"kterou si přejete."
+
+#: options.php:154
+msgid "Color Skin"
+msgstr "Barevné schéma"
+
+#: options.php:155
+msgid "Choose the light or dark skin. This will be reflected in whole site."
+msgstr "Vyberte světlé nebo tmavé schéma. Toto bude aplikováno na celý web."
+
+#: options.php:166
+msgid "Need to replace default background?"
+msgstr "Potřebujete nahradit výchozí pozadí?"
+
+#: options.php:167
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Poznámka: pozadí bude viditelné pouze pokud vyberete některé z rozložení v "
+"rámečku."
+
+#: options.php:172
+msgid "Custom CSS"
+msgstr "Vlastní CSS"
+
+#: options.php:173
+msgid "Write your custom css."
+msgstr "Definujte vaše vlastní css."
+
+#: options.php:182
+msgid "Additional"
+msgstr "Další"
+
+#: options.php:188
+msgid "Activate favicon"
+msgstr "Aktivovat favicon"
+
+#: options.php:189
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr ""
+"Zatrhněte pro aktivaci favicon. Nahrajte ikonu oblíbené stránky pomocí "
+"možností níže"
+
+#: options.php:197
+msgid "Upload favicon"
+msgstr "Nahrát favicon"
+
+#: options.php:198
+msgid "Upload favicon for your site."
+msgstr "Nahrajte favicon pro vaši stránku."
+
+#: options.php:206
+msgid "Slider"
+msgstr "Banner"
+
+#: options.php:212
+msgid "Activate slider"
+msgstr "Aktivovat banner"
+
+#: options.php:213
+msgid "Check to activate slider."
+msgstr "Zatrhněte pro aktivaci banneru."
+
+#: options.php:222
+#, php-format
+msgid "Image Upload #%1$s"
+msgstr "Nahrání obrázku #%1$s"
+
+#: options.php:223
+msgid "Upload slider image."
+msgstr "Nahrát obrázek banneru."
+
+#: options.php:228
+#, php-format
+msgid "Slider Title %1$s"
+msgstr "Název banneru %1$s"
+
+#: options.php:229
+msgid "Enter title for your slider."
+msgstr "Zadejte název pro váš banner."
+
+#: options.php:235
+#, php-format
+msgid "Slider Description %1$s"
+msgstr "Popis banneru %1$s"
+
+#: options.php:236
+msgid "Enter your slider description."
+msgstr "Zadejte popis vašeho banneru."
+
+#: options.php:242
+#, php-format
+msgid "Slider redirect link %1$s"
+msgstr "Odkaz pro přesměrování banneru %1$s"
+
+#: options.php:243
+msgid "Enter link to redirect slider when clicked"
+msgstr "Zadejte odkaz, kam se má stránka přesměrovat po kliknutí na banner."
+
+#: options.php:262
+msgid "About Spacious"
+msgstr "O Spacious"
+
+#: options.php:264
+msgid "Upgrade to Pro"
+msgstr "Povýšit na verzi Pro"
+
+#: options.php:265
+msgid "Free Support"
+msgstr "Podpora zdarma"
+
+#: options.php:266
+msgid "Documentation"
+msgstr "Dokumentace"
+
+#: options.php:267
+msgid "View Demo"
+msgstr "Zobrazit demo"
+
+#: options.php:270
+msgid "If you like our work. Buy us a beer."
+msgstr "Pokud se vám naše práce  líbí, kupte nám pivo."
+
+#: searchform.php:12 searchform.php:15
+msgid "Search"
+msgstr "Vyhledat"
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr "Meta"

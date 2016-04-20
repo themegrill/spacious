@@ -1,0 +1,946 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Related Translations\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-03 19:09+0000\n"
+"PO-Revision-Date: 2015-02-04 01:34+0000\n"
+"Last-Translator: Yury Kherimyan\n"
+"Language-Team: Sudavar\n"
+"Language: Greek\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco https://localise.biz\n"
+"X-Loco-Source-Locale: en_US\n"
+"X-Loco-Target-Locale: el_GR\n"
+"X-Loco-Project-Id: 5341\n"
+"X-Loco-Tagged: Spacious Theme\n"
+"X-Loco-Api-Version: 1.0.8"
+
+#: comments.php:18 functions/crossroad-1-column-magazine-widget.php:172
+#: functions/crossroad-1-column-magazine-widget.php:219
+#: functions/crossroad-2-columns-magazine-widget.php:102
+#: functions/crossroad-2-columns-magazine-widget.php:146
+#: functions/crossroad-2-columns-magazine-widget.php:194
+#: functions/crossroad-2-columns-magazine-widget.php:239 loco:#: 54d11cde14d725b7558b4571
+msgid "1 Comment"
+msgstr "1 Σχόλιο"
+
+#: options.php:195 loco:54d11cde14d725b7558b461e
+msgid "Additional"
+msgstr "Επιπλέον"
+
+#: arw-widget.php:50 loco:54d11cde14d725b7558b45b7
+msgid "Archives"
+msgstr "Αρχείο"
+
+#: inc/header-functions.php:165 loco:54d11cde14d725b7558b45b2
+msgid "Asides"
+msgstr "Εμπρόθετα άρθρα"
+
+#: inc/admin/options/includes/class-options-sanitization.php:426 59a loco:#: 54d11cde14d725b7558b459a
+msgid "Bold"
+msgstr "Έντονα"
+
+#: inc/widgets/widgets.php:570 loco:54d11cde14d725b7558b45ec
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: options.php:82 loco:54d11cde14d725b7558b4603
+msgid "Design"
+msgstr "Σχέδιο"
+
+#: options.php:47 loco:54d11cde14d725b7558b45fa
+msgid "Disable"
+msgstr "Απενεργοποίηση"
+
+#: options.php:291 loco:54d11cde14d725b7558b4631
+msgid "Documentation"
+msgstr "Τεκμηρίωση"
+
+#: class-birthdays-widget-settings.php:512 loco:54d11cde14d725b7558b4574
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: options.php:30 loco:54d11cde14d725b7558b45f4
+msgid "Header"
+msgstr "Κεφαλίδα"
+
+#: inc/header-functions.php:168 loco:54d11cde14d725b7558b45b3
+msgid "Images"
+msgstr "Εικόνες"
+
+#: inc/admin/options/includes/class-options-sanitization.php:425 599 loco:#: 54d11cde14d725b7558b4599
+msgid "Italic"
+msgstr "Πλάγια"
+
+#: inc/header-functions.php:177 loco:54d11cde14d725b7558b45b6
+msgid "Links"
+msgstr "Σύνδεσμοι"
+
+#: header.php:92 loco:54d11cde14d725b7558b4577
+msgid "Menu"
+msgstr "Μενού"
+
+#: sidebar-secondary.php:22 sidebar-shop.php:6 sidebar.php:17 loco:#: 54d11cde14d725b7558b4636
+msgid "Meta"
+msgstr "Meta"
+
+#: functions.php:347 loco:54d11cde14d725b7558b4598
+msgid "Normal"
+msgstr "Κανονικό"
+
+#: inc/widgets/widgets.php:196 inc/widgets/widgets.php:294
+#: inc/widgets/widgets.php:576 loco:54d11cde14d725b7558b45d9
+msgid "Page"
+msgstr "Σελίδα"
+
+#: inc/header-functions.php:174 loco:54d11cde14d725b7558b45b5
+msgid "Quotes"
+msgstr "Παραθέσεις"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:67
+#: inc/admin/options/includes/class-options-media-uploader.php:119 586 loco:#: 54d11cde14d725b7558b4586
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: functions.php:584 loco:54d11cde14d725b7558b45a7
+msgid "Reply"
+msgstr "Απάντηση"
+
+#: functions/crossroad-search-widget.php:111 searchform.php:11
+#: searchform.php:12 searchform.php:13 loco:54d11cde14d725b7558b4635
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#: arw-widget-settings.php:21 loco:54d11cde14d725b7558b45fb
+msgid "Show"
+msgstr "Προηγούμενο"
+
+#: options.php:219 loco:54d11cde14d725b7558b4623
+msgid "Slider"
+msgstr "Slider"
+
+#: inc/functions.php:434 loco:54d11cde14d725b7558b45a9
+msgid "ThemeGrill"
+msgstr "ThemeGrill"
+
+#: class-birthdays-widget-settings.php:623 loco:54d11cde14d725b7558b4585
+msgid "Upload"
+msgstr "Μεταφόρτωση"
+
+#: inc/header-functions.php:171 loco:54d11cde14d725b7558b45b4
+msgid "Videos"
+msgstr "Βίντεο"
+
+#: inc/functions.php:432 loco:54d11cde14d725b7558b45a8
+msgid "WordPress"
+msgstr "WordPress"
+
+#: options.php:287 loco:54d11cde14d725b7558b462e
+msgid "About Spacious"
+msgstr "Σχετικά με το Spacious"
+
+#: options.php:201 loco:54d11cde14d725b7558b461f
+msgid "Activate favicon"
+msgstr "Ενεργοποιήστε εικονίδιο"
+
+#: options.php:225 loco:54d11cde14d725b7558b4624
+msgid "Activate slider"
+msgstr "Ενεργοποίηση slider"
+
+#: inc/header-functions.php:148 loco:54d11cde14d725b7558b45ae
+msgid "Author: %s"
+msgstr "Συγγραφέας: %s"
+
+#: options.php:152 loco:54d11cde14d725b7558b4615
+msgid "Blog Full Content"
+msgstr "Πλήρες κείμενο άρθρου"
+
+#: options.php:151 loco:54d11cde14d725b7558b4614
+msgid "Blog Image Alternate Medium"
+msgstr "Εναλλακτική μεσαία εικόνα άρθρου"
+
+#: options.php:149 loco:54d11cde14d725b7558b4612
+msgid "Blog Image Large"
+msgstr "Πλήρες άρθρο με μεγάλη εικόνα"
+
+#: options.php:150 loco:54d11cde14d725b7558b4613
+msgid "Blog Image Medium"
+msgstr "Σύνοψη άρθρου με μεσαία εικόνα"
+
+#: options.php:143 loco:54d11cde14d725b7558b4610
+msgid "Blog Posts display type"
+msgstr "Τύπος εμφάνισης άρθρων Ιστολογίου"
+
+#: inc/admin/options/includes/class-options-sanitization.php:427 59b loco:#: 54d11cde14d725b7558b459b
+msgid "Bold Italic"
+msgstr "Πλάγια έντονα"
+
+#: inc/admin/options/includes/class-options-sanitization.php:338 594 loco:#: 54d11cde14d725b7558b4594
+msgid "Bottom Center"
+msgstr "Κάτω Μέση"
+
+#: inc/admin/options/includes/class-options-sanitization.php:337 593 loco:#: 54d11cde14d725b7558b4593
+msgid "Bottom Left"
+msgstr "Κάτω Αριστερά"
+
+#: inc/admin/options/includes/class-options-sanitization.php:339 595 loco:#: 54d11cde14d725b7558b4595
+msgid "Bottom Right"
+msgstr "Κάτω Δεξιά"
+
+#: options.php:93 loco:54d11cde14d725b7558b4606
+msgid "Boxed layout with content width of 1218px"
+msgstr "Διάταξη boxed με πλάτος περιεχομένου 1218px"
+
+#: options.php:94 loco:54d11cde14d725b7558b4607
+msgid "Boxed layout with content width of 978px"
+msgstr "Διάταξη boxed με πλάτος περιεχομένου 978px"
+
+#: inc/widgets/widgets.php:85 loco:54d11cde14d725b7558b45c7
+msgid "Business Bottom Sidebar"
+msgstr "Στήλη Υποσέλιδου θέματος Business"
+
+#: inc/widgets/widgets.php:62 loco:54d11cde14d725b7558b45c2
+msgid "Business Middle Left Sidebar"
+msgstr "Business Μεσαία Αριστερή Στήλη"
+
+#: inc/widgets/widgets.php:73 loco:54d11cde14d725b7558b45c5
+msgid "Business Middle Right Sidebar"
+msgstr "Business Μεσαία Δεξιά Στήλη"
+
+#: inc/widgets/widgets.php:51 loco:54d11cde14d725b7558b45bf
+msgid "Business Top Sidebar"
+msgstr "Στήλη Κεφαλίδας Σελίδας Business"
+
+#: inc/widgets/widgets.php:404 loco:54d11cde14d725b7558b45e4
+msgid "Button Redirect Link:"
+msgstr "Σύνδεσμος ανακατεύθυνσης κουμπιού:"
+
+#: inc/widgets/widgets.php:400 loco:54d11cde14d725b7558b45e3
+msgid "Button Text:"
+msgstr "Κείμενο Κουμπιού:"
+
+#: inc/widgets/widgets.php:530 loco:54d11cde14d725b7558b45e9
+msgid "Byline:"
+msgstr "Υπογραφή Συντάκτη"
+
+#: inc/widgets/widgets.php:397 loco:54d11cde14d725b7558b45e2
+msgid "Call to Action Additional Text"
+msgstr "Επιπλέον κείμενο widget \"Κλήση για Δράση\""
+
+#: inc/widgets/widgets.php:395 loco:54d11cde14d725b7558b45e1
+msgid "Call to Action Main Text"
+msgstr "Κυρίως κείμενο widget \"Κλήση για Δράση\""
+
+#: options.php:202 loco:54d11cde14d725b7558b4620
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr ""
+"Επιλέξτε για ενεργοποίηση εικονιδίου. Μεταφορτώστε εικονίδιο από την επιλογή "
+"παρακάτω"
+
+#: options.php:226 loco:54d11cde14d725b7558b4625
+msgid "Check to activate slider."
+msgstr "Επιλέξτε για ενεργοποίηση slider."
+
+#: options.php:235 loco:54d11cde14d725b7558b4627
+msgid "Check to disable slider in Posts Page"
+msgstr "Επιλέξτε για απενεργοποίηση slider στη σελίδα άρθρων"
+
+#: options.php:144 loco:54d11cde14d725b7558b4611
+msgid ""
+"Choose the display type for the latests posts view or posts page view (static "
+"front page)."
+msgstr ""
+"Επιλέξτε τον τρόπο εμφάνισης των άρθρων στην εμφάνιση των τελευταίων άρθρων ή "
+"στην αρχική στατική σελίδα."
+
+#: options.php:168 loco:54d11cde14d725b7558b4619
+msgid "Choose the light or dark skin. This will be reflected in whole site."
+msgstr "Επιλέξτε ανοιχτό ή σκούρο θέμα. Αυτό θα επηρεάσει όλη τη σελίδα σας."
+
+#: options.php:51 loco:54d11cde14d725b7558b45fc
+msgid "Choose the option that you want."
+msgstr "Επιλέξτε την επιλογή που θέλετε."
+
+#: options.php:68 loco:54d11cde14d725b7558b4600
+msgid "Choose top header image display position."
+msgstr "Επιλέξτε τη θέση της εικόνας κεφαλίδας."
+
+#: options.php:88 loco:54d11cde14d725b7558b4605
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Επιλέξτε τη διάταξη ιστοχώρου. Η αλλαγή θα επηρεάσει όλη τη σελίδα."
+
+#: options.php:61 options.php:180 loco:54d11cde14d725b7558b45fe
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "Πατήστε εδώ"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:199 581 loco:#: 54d11cde14d725b7558b4581
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "Πατήστε ΟΚ για επαναφορά. Οποιεσδήποτε ρυθμίσεις στο θέμα θα χαθούν!"
+
+#: options.php:167 loco:54d11cde14d725b7558b4618
+msgid "Color Skin"
+msgstr "Χρώμα Θέματος"
+
+#: comments.php:22 comments.php:37 loco:54d11cde14d725b7558b456b
+msgid "Comment navigation"
+msgstr "Περιήγηση Σχολίων"
+
+#: comments.php:18 functions/crossroad-1-column-magazine-widget.php:172
+#: functions/crossroad-1-column-magazine-widget.php:219
+#: functions/crossroad-2-columns-magazine-widget.php:102
+#: functions/crossroad-2-columns-magazine-widget.php:146
+#: functions/crossroad-2-columns-magazine-widget.php:194
+#: functions/crossroad-2-columns-magazine-widget.php:239 loco:#: 54d11cde14d725b7558b4572
+msgid "% Comments"
+msgstr "% Σχόλια"
+
+#: comments.php:28 loco:54d11cde14d725b7558b456e
+msgid "Comments are closed."
+msgstr "Τα σχόλια είναι απενεργοποιημένα."
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60 573 loco:#: 54d11cde14d725b7558b4573
+msgid "Comments Off"
+msgstr "Τα σχόλια είναι απενεργοποιημένα"
+
+#: inc/widgets/widgets.php:96 loco:54d11cde14d725b7558b45c9
+msgid "Contact Page Sidebar"
+msgstr "Πλευρική Στήλη Σελίδας Επικοινωνίας"
+
+#: inc/functions.php:436 loco:54d11cde14d725b7558b45aa
+msgid "Copyright &copy; %1$s %2$s."
+msgstr "Copyright &copy; %1$s %2$s."
+
+#: options.php:185 loco:54d11cde14d725b7558b461c
+msgid "Custom CSS"
+msgstr "Προσαρμοσμένο CSS"
+
+#: inc/header-functions.php:156 loco:54d11cde14d725b7558b45af
+msgid "Day: %s"
+msgstr "Μέρα: %s"
+
+#: inc/admin/meta-boxes.php:28 loco:54d11cde14d725b7558b4579
+msgid "Default Layout"
+msgstr "Προεπιλεγμένη εμφάνιση"
+
+#: options.php:101 loco:54d11cde14d725b7558b460a
+msgid "Default layout"
+msgstr "Προεπιλεγμένη Διάταξη"
+
+#: options.php:115 loco:54d11cde14d725b7558b460c
+msgid "Default layout for pages only"
+msgstr "Προεπιλεγμένη διάταξη για σελίδες μόνο"
+
+#: options.php:129 loco:54d11cde14d725b7558b460e
+msgid "Default layout for single posts only"
+msgstr "Προεπιλεγμένη διάταξη για άρθρα μόνο"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:230 582 loco:#: 54d11cde14d725b7558b4582
+msgid "Default options restored."
+msgstr "Φορτώθηκαν οι προεπιλογές."
+
+#: options.php:234 loco:54d11cde14d725b7558b4626
+msgid "Disable slider in Posts page"
+msgstr "Απενεργοποίηση slider στη σελίδα άρθρων"
+
+#: inc/widgets/widgets.php:176 loco:54d11cde14d725b7558b45d5
+msgid "Display Featured Single Page"
+msgstr "Εμφάνιση Επιλεγμένης Σελίδας"
+
+#: inc/widgets/widgets.php:276 loco:54d11cde14d725b7558b45dd
+msgid "Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Εμφάνιση μερικών σελίδων ως υπηρεσίες. Καταλληλότερο για στήλη κορυφής "
+"θέματος Business θέματος ή στήλη υποσέλιδου."
+
+#: inc/widgets/widgets.php:477 loco:54d11cde14d725b7558b45e5
+msgid "Display Testimonial"
+msgstr "Εμφάνιση Μαρτυρίας"
+
+#: inc/widgets/widgets.php:193 loco:54d11cde14d725b7558b45d8
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Εμφανίζει τον τίτλο της σελίδας εάν το πεδίο τίτλος είναι κενός."
+
+#: inc/functions.php:381 loco:54d11cde14d725b7558b45a2
+msgid "(Edit)"
+msgstr "(Επεξεργασία)"
+
+#: options.php:268 loco:54d11cde14d725b7558b462d
+msgid "Enter link to redirect slider when clicked"
+msgstr "Δώστε σύνδεσμο για ανακατεύθυνση όταν πατηθεί το slider"
+
+#: options.php:262 loco:54d11cde14d725b7558b462c
+msgid "Enter the button text. Default is \"Read more\""
+msgstr "Δώστε το κείμενο του κουμπιού. Η προεπιλογή είναι \"Διαβάστε Περισσότερα\""
+
+#: options.php:250 loco:54d11cde14d725b7558b462a
+msgid "Enter title for your slider."
+msgstr "Δώστε τίτλο για το slider."
+
+#: options.php:256 loco:54d11cde14d725b7558b462b
+msgid "Enter your slider description."
+msgstr "Δώστε περιγραφή για το slider."
+
+#: inc/widgets/widgets.php:107 loco:54d11cde14d725b7558b45cb
+msgid "Error 404 Page Sidebar"
+msgstr "Πλευρική Στήλη Σελίδας Λάθους 404"
+
+#: inc/admin/options/includes/class-options-sanitization.php:352 597 loco:#: 54d11cde14d725b7558b4597
+msgid "Fixed in Place"
+msgstr "Σταθερή θέση"
+
+#: inc/widgets/widgets.php:151 loco:54d11cde14d725b7558b45d3
+msgid "Footer Sidebar Four"
+msgstr "Στήλη Υποσέλιδου 4η"
+
+#: inc/widgets/widgets.php:118 loco:54d11cde14d725b7558b45cd
+msgid "Footer Sidebar One"
+msgstr "Στήλη Υποσέλιδου 1η"
+
+#: inc/widgets/widgets.php:140 loco:54d11cde14d725b7558b45d1
+msgid "Footer Sidebar Three"
+msgstr "Στήλη Υποσέλιδου 3η"
+
+#: inc/widgets/widgets.php:129 loco:54d11cde14d725b7558b45cf
+msgid "Footer Sidebar Two"
+msgstr "Στήλη Υποσέλιδου 2η"
+
+#: options.php:290 loco:54d11cde14d725b7558b4630
+msgid "Free Support"
+msgstr "Δωρεάν Υποστήριξη"
+
+#: options.php:67 loco:54d11cde14d725b7558b45ff
+msgid "Header Image Position"
+msgstr "Θέση Εικόνας Κεφαλίδας"
+
+#: options.php:36 loco:54d11cde14d725b7558b45f5
+msgid "Header Logo"
+msgstr "Λογότυπο κεφαλίδας"
+
+#: options.php:44 loco:54d11cde14d725b7558b45f7
+msgid "Header Logo Only"
+msgstr "Μόνο λογότυπο κεφαλίδας"
+
+#: inc/widgets/widgets.php:40 loco:54d11cde14d725b7558b45bd
+msgid "Header Sidebar"
+msgstr "Στήλη κεφαλίδας"
+
+#: options.php:45 loco:54d11cde14d725b7558b45f8
+msgid "Header Text Only"
+msgstr "Μόνο κείμενο κεφαλίδας"
+
+#: options.php:296 loco:54d11cde14d725b7558b4634
+msgid "If you like our work. Buy us a beer."
+msgstr "Εάν σου αρέσει η δουλειά μας, αγόρασε μας μια μπύρα"
+
+#: options.php:244 loco:54d11cde14d725b7558b4628
+msgid "Image Upload #%1$s"
+msgstr ""
+"Μεταφόρτωση Εικόνας \n"
+"#%1$s"
+
+#: 404.php:24 loco:54d11cde14d725b7558b456a
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr "Όπως φαίνεται δεν βρέθηκε κάτι εδώ. Δοκιμάστε την αναζήτηση παρακάτω."
+
+#: no-results.php:27 loco:54d11cde14d725b7558b45f3
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
+msgstr ""
+"Φαίνεται πως δεν μπορέσαμε να βρούμε αυτό που ψάχνετε. Ίσως βοηθήσει η "
+"αναζήτηση."
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29 57b loco:#: 54d11cde14d725b7558b457b
+msgid "Left Sidebar"
+msgstr "Αριστερή πλευρική στήλη"
+
+#: inc/admin/options/includes/class-options-sanitization.php:335 591 loco:#: 54d11cde14d725b7558b4591
+msgid "Middle Center"
+msgstr "Κέντρο"
+
+#: inc/admin/options/includes/class-options-sanitization.php:334 590 loco:#: 54d11cde14d725b7558b4590
+msgid "Middle Left"
+msgstr "Κέντρο Αριστερά"
+
+#: inc/admin/options/includes/class-options-sanitization.php:336 592 loco:#: 54d11cde14d725b7558b4592
+msgid "Middle Right"
+msgstr "Κέντρο Δεξιά"
+
+#: inc/header-functions.php:159 loco:54d11cde14d725b7558b45b0
+msgid "Month: %s"
+msgstr ""
+"Μήνας: \n"
+"%s"
+
+#: inc/widgets/widgets.php:527 loco:54d11cde14d725b7558b45e8
+msgid "Name:"
+msgstr "Όνομα:"
+
+#: options.php:179 loco:54d11cde14d725b7558b461a
+msgid "Need to replace default background?"
+msgstr "Θέλετε να αντικαταστήσετε το προεπιλεγμένο φόντο?"
+
+#: options.php:60 loco:54d11cde14d725b7558b45fd
+msgid "Need to replace Header Image?"
+msgstr "Θέλετε να αντικαταστήσετε την εικόνα Κεφαλίδας?"
+
+#: comments.php:24 comments.php:39 loco:54d11cde14d725b7558b456d
+msgid "Newer Comments &rarr;"
+msgstr "Νεότερα Σχόλια &rarr;"
+
+#: archive.php:20 home.php:28 index.php:18 layout-blog.php:32 search.php:16 loco:#: 54d11cde14d725b7558b45a0
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Νεότερα άρθρα <span class=\"meta-nav\">&rarr;</span>"
+
+#: navigation.php:35 loco:54d11cde14d725b7558b45f0
+msgid "Next &rarr;"
+msgstr ""
+"Επόμενα\n"
+" &rarr;"
+
+#: navigation.php:23 loco:54d11cde14d725b7558b45ee
+msgid "Next &raquo;"
+msgstr "Επόμενα &raquo;"
+
+#: inc/functions.php:346 navigation.php:43 loco:54d11cde14d725b7558b459e
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: functions/crossroad-1-column-magazine-widget.php:172
+#: functions/crossroad-1-column-magazine-widget.php:219
+#: functions/crossroad-2-columns-magazine-widget.php:102
+#: functions/crossroad-2-columns-magazine-widget.php:146
+#: functions/crossroad-2-columns-magazine-widget.php:194
+#: functions/crossroad-2-columns-magazine-widget.php:239 loco:#: 54d11cde14d725b7558b4570
+msgid "No Comments"
+msgstr "Χωρίς σχόλια"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:62 584 loco:#: 54d11cde14d725b7558b4584
+msgid "No file chosen"
+msgstr "Δεν επιλέχθηκε αρχείο."
+
+#: inc/admin/options/includes/class-options-sanitization.php:316 589 loco:#: 54d11cde14d725b7558b4589
+msgid "No Repeat"
+msgstr "Χωρίς Επανάληψη"
+
+#: inc/admin/meta-boxes.php:48 loco:54d11cde14d725b7558b457d
+msgid "No Sidebar Content Centered"
+msgstr "Χωρίς πλευρική στήλη, περιεχόμενο με  κεντρική στοίχηση"
+
+#: inc/admin/meta-boxes.php:43 loco:54d11cde14d725b7558b457c
+msgid "No Sidebar Full Width"
+msgstr "Μέγιστο πλάτος χωρίς πλευρική στήλη"
+
+#: options.php:180 loco:54d11cde14d725b7558b461b
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Σημείωση: Το φόντο θα φαίνεται μόνο αν διαλέξετε κάποια από τις διατάξεις "
+"κουτιού στην επιλογή διάταξης της σελίδας."
+
+#: comments.php:23 comments.php:38 loco:54d11cde14d725b7558b456c
+msgid "&larr; Older Comments"
+msgstr "&larr; Παλαιότερα Σχόλια"
+
+#: archive.php:19 home.php:27 index.php:17 layout-blog.php:31 search.php:15 loco:#: 54d11cde14d725b7558b459f
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Παλαιότερα Άρθρα"
+
+#: comments.php:15 loco:54d11cde14d725b7558b4567
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Μία σκέψη στο &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s σκέψεις στο &ldquo;%2$s&rdquo;"
+
+#: 404.php:22 loco:54d11cde14d725b7558b4569
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ουπς! Η σελίδα δεν είναι διαθέσιμη."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:284 583 loco:#: 54d11cde14d725b7558b4583
+msgid "Options saved."
+msgstr "Οι επιλογές αποθηκεύτηκαν."
+
+#: inc/header-functions.php:185 loco:54d11cde14d725b7558b45b8
+msgid "Page NOT Found"
+msgstr "Η σελίδα δεν βρέθηκε"
+
+#: inc/header-functions.php:47 loco:54d11cde14d725b7558b45ad
+msgid "Page %s"
+msgstr "Σελίδα %s"
+
+#: template-archives.php:27 loco:54d11cde14d725b7558b456f
+msgid "Pages:"
+msgstr "Σελίδες:"
+
+#: inc/functions.php:401 loco:54d11cde14d725b7558b45a5
+msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+msgstr "<a class=\"comment-permalink\" href=\"%1$s\">Σύνδεσμος</a>"
+
+#: functions.php:541 loco:54d11cde14d725b7558b45a1
+msgid "Pingback:"
+msgstr "Παράθεση:"
+
+#: options.php:73 loco:54d11cde14d725b7558b4601
+msgid ""
+"Position Above (Default): Display the Header image just above the site title "
+"and main menu part."
+msgstr ""
+"Θέση από πάνω (Προεπιλογή): Εμφάνισε την εικόνα κεφαλίδας ακριβώς πάνω από "
+"τον τίτλο του ιστοχώρου και το κυρίως μενού."
+
+#: options.php:74 loco:54d11cde14d725b7558b4602
+msgid ""
+"Position Below: Display the Header image just below the site title and main "
+"menu part."
+msgstr ""
+"Θέση από κάτω: Εμφάνισε την εικόνα κεφαλίδας ακριβώς κάτω από τον τίτλο του "
+"ιστοχώρου και το κυρίως μενού."
+
+#: inc/functions.php:396 loco:54d11cde14d725b7558b45a3
+msgid "Post author"
+msgstr "Συγγραφέας άρθρου"
+
+#: inc/functions.php:341 loco:54d11cde14d725b7558b459c
+msgid "Post navigation"
+msgstr "Περιήγηση άρθρων"
+
+#: inc/functions.php:436 loco:54d11cde14d725b7558b45ab
+msgid "Powered by %s."
+msgstr "Κατασκευασμένο με %s."
+
+#: navigation.php:34 loco:54d11cde14d725b7558b45ef
+msgid "&larr; Previous"
+msgstr "&larr; Προηγούμενα"
+
+#: navigation.php:22 loco:54d11cde14d725b7558b45ed
+msgid "&laquo; Previous"
+msgstr "&laquo; Προηγούμενα"
+
+#: inc/functions.php:345 navigation.php:42 loco:54d11cde14d725b7558b459d
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: options.php:158 loco:54d11cde14d725b7558b4616
+msgid "Primary color option"
+msgstr "Πρωτεύον χρώμα"
+
+#: options.php:293 loco:54d11cde14d725b7558b4633
+msgid "Rate this theme"
+msgstr "Αξιολόγηστε το θέμα"
+
+#: content-archive.php:100 content-archive.php:104 content-category.php:95
+#: content-category.php:99 content-search.php:90 content-search.php:94
+#: content-tag.php:90 content-tag.php:94
+#: functions/crossroad-blog-widget.php:157
+#: functions/crossroad-blog-widget.php:161 loco:54d11cde14d725b7558b4575
+msgid "Read More"
+msgstr "Διαβάστε Περισσότερα"
+
+#: no-results.php:18 loco:54d11cde14d725b7558b45f1
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Έτοιμοι να δημοσιεύσετε το πρώτο σας άρθρο? \n<a href=\"%1$s\">Ξεκινήστε από εδώ</"
+"a>."
+
+#: inc/widgets/widgets.php:200 loco:54d11cde14d725b7558b45da
+msgid "Remove Featured image"
+msgstr "Αφαίρεση Επιλεγμένης Εικόνας"
+
+#: inc/admin/options/includes/class-options-sanitization.php:319 58c loco:#: 54d11cde14d725b7558b458c
+msgid "Repeat All"
+msgstr "Επανάληψη Παντού"
+
+#: inc/admin/options/includes/class-options-sanitization.php:317 58a loco:#: 54d11cde14d725b7558b458a
+msgid "Repeat Horizontally"
+msgstr "Οριζόντια Επανάληψη"
+
+#: inc/admin/options/includes/class-options-sanitization.php:318 58b loco:#: 54d11cde14d725b7558b458b
+msgid "Repeat Vertically"
+msgstr "Κατακόρυφη Επανάληψη"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:199 580 loco:#: 54d11cde14d725b7558b4580
+msgid "Restore Defaults"
+msgstr "Επαναφορά Προεπιλογών"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18 57a loco:#: 54d11cde14d725b7558b457a
+msgid "Right Sidebar"
+msgstr "Δεξιά πλευρική στήλη"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:198 57f loco:#: 54d11cde14d725b7558b457f
+msgid "Save Options"
+msgstr "Αποθήκευση Επιλογών"
+
+#: inc/admin/options/includes/class-options-sanitization.php:351 596 loco:#: 54d11cde14d725b7558b4596
+msgid "Scroll Normally"
+msgstr "Κανονική Κύληση"
+
+#: inc/header-functions.php:188 loco:54d11cde14d725b7558b45b9
+msgid "Search Results"
+msgstr "Αποτελέσματα Αναζήτησης"
+
+#: options.php:116 loco:54d11cde14d725b7558b460d
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Επιλέξτε προεπιλεγμένη διάταξη για σελίδες. Αυτή η διάταξη θα επηρεάσει όλες "
+"τις σελίδες του ιστοχώρου εκτός εάν οριστεί διαφορετική διάταξη σε "
+"συγκεκριμένη σελίδα."
+
+#: options.php:130 loco:54d11cde14d725b7558b460f
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Επιλέξτε προεπιλεγμένη διάταξη για μεμονωμένα άρθρα. Αυτή η διάταξη θα "
+"επηρεάσει όλα τα μεμονωμένα άρθρα του ιστοχώρου εκτός εάν οριστεί διαφορετική "
+"διάταξη σε συγκεκριμένα άρθρα."
+
+#: options.php:102 loco:54d11cde14d725b7558b460b
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Επιλέξτε προεπιλεγμένη διάταξη. Αυτή η διάταξη θα επηρεάσει γενικές περιοχές "
+"της σελίδας όπως αρχείο, αναζήτηση κλπ. Η διάταξη των μεμονωμένων άρθρων και "
+"σελίδων μπορεί να ρυθμιστεί στις παρακάτω επιλογές."
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18 578 loco:#: 54d11cde14d725b7558b4578
+msgid "Select Layout"
+msgstr "Επέλεξε εμφάνιση"
+
+#: options.php:46 loco:54d11cde14d725b7558b45f9
+msgid "Show Both"
+msgstr "Εμφάνιση και των δύο"
+
+#: inc/widgets/widgets.php:206 inc/widgets/widgets.php:211 5dc loco:#: 54d11cde14d725b7558b45dc
+msgid "Show Image After Title"
+msgstr "Εμφάνιση Εικόνας μετά τον τίτλο"
+
+#: inc/widgets/widgets.php:205 inc/widgets/widgets.php:210 5db loco:#: 54d11cde14d725b7558b45db
+msgid "Show Image Before Title"
+msgstr "Εμφάνιση Εικόνας πριν τον τίτλο"
+
+#: inc/widgets/widgets.php:544 loco:54d11cde14d725b7558b45ea
+msgid "Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Εμφάνιση μερικών σελίδων σας ως πρόσφατη εργασία. Καταλληλότερο για άνω ή "
+"κάτω στήλη Business θέματος."
+
+#: inc/widgets/widgets.php:153 loco:54d11cde14d725b7558b45d4
+msgid "Shows widgets at footer sidebar four."
+msgstr "Εμφάνιση Widgets στη στήλη υποσέλιδου 4."
+
+#: inc/widgets/widgets.php:120 loco:54d11cde14d725b7558b45ce
+msgid "Shows widgets at footer sidebar one."
+msgstr "Εμφάνιση Widgets στη στήλη υποσέλιδου 1."
+
+#: inc/widgets/widgets.php:142 loco:54d11cde14d725b7558b45d2
+msgid "Shows widgets at footer sidebar three."
+msgstr "Εμφάνιση Widgets στη στήλη υποσέλιδου 3."
+
+#: inc/widgets/widgets.php:131 loco:54d11cde14d725b7558b45d0
+msgid "Shows widgets at footer sidebar two."
+msgstr "Εμφάνιση Widgets στη στήλη υποσέλιδου 2."
+
+#: inc/widgets/widgets.php:31 loco:54d11cde14d725b7558b45bc
+msgid "Shows widgets at Left side."
+msgstr "Εμφάνιση Widgets στην αριστερή πλευρά."
+
+#: inc/widgets/widgets.php:20 loco:54d11cde14d725b7558b45bb
+msgid "Shows widgets at Right side."
+msgstr "Εμφάνιση Widgets στη δεξιά πλευρά."
+
+#: inc/widgets/widgets.php:42 loco:54d11cde14d725b7558b45be
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr "Εμφάνιση Widgets στη κεφαλίδα ακριβώς πάνω από το κυρίως μενού."
+
+#: inc/widgets/widgets.php:87 loco:54d11cde14d725b7558b45c8
+msgid "Shows widgets on Business Page Template Bottom Section."
+msgstr "Εμφάνιση Widgets στο κάτω τμήμα του Business θέματος."
+
+#: inc/widgets/widgets.php:64 loco:54d11cde14d725b7558b45c3
+msgid "Shows widgets on Business Page Template Middle Section Left Half."
+msgstr ""
+"Εμφάνιση Widgets στο αριστερό κομμάτι του μεσαίου τμήματος του Business "
+"θέματος."
+
+#: inc/widgets/widgets.php:75 loco:54d11cde14d725b7558b45c6
+msgid "Shows widgets on Business Page Template Middle Section Right Half."
+msgstr "Εμφάνιση Widgets στο δεξί κομμάτι του μεσαίου τμήματος του Business θέματος."
+
+#: inc/widgets/widgets.php:53 loco:54d11cde14d725b7558b45c0
+msgid "Shows widgets on Business Page Template Top Section."
+msgstr "Εμφάνιση Widgets στο άνω τμήμα του Business θέματος."
+
+#: inc/widgets/widgets.php:98 loco:54d11cde14d725b7558b45ca
+msgid "Shows widgets on Contact Page Template."
+msgstr "Εμφάνιση Widgets στη στήλη σελίδας επικοινωνίας."
+
+#: inc/widgets/widgets.php:109 loco:54d11cde14d725b7558b45cc
+msgid "Shows widgets on Error 404 page."
+msgstr "Εμφάνιση Widgets στη στήλη σελίδας σφάλματος 404."
+
+#: options.php:87 loco:54d11cde14d725b7558b4604
+msgid "Site Layout"
+msgstr "Διάταξη Ιστοχώρου"
+
+#: no-results.php:22 loco:54d11cde14d725b7558b45f2
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Συγνώμη, αλλά δεν βρέθηκε κάτι σύμφωνο με τους όρους αναζήτησης. Παρακαλώ "
+"δοκιμάστε ξανά με διαφορετικές λέξεις."
+
+#: inc/widgets/widgets.php:187 loco:54d11cde14d725b7558b45d6
+msgid "Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr ""
+"Κατάλληλο για στήλη κεφαλίδας αρχικής σελίδας, κάτω αριστερής στήλης αρχικής "
+"σελίδας και πλευρικής στήλης."
+
+#: inc/widgets/widgets.php:53 inc/widgets/widgets.php:87 5c1 loco:#: 54d11cde14d725b7558b45c1
+msgid "Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget"
+msgstr ""
+"Κατάλληλο Widget: TG: Υπηρεσίες, TG: Widget Κλήση για Δράση, TG: Widget "
+"Προτεινόμενο"
+
+#: inc/widgets/widgets.php:64 inc/widgets/widgets.php:75 5c4 loco:#: 54d11cde14d725b7558b45c4
+msgid "Suitable widget: TG: Testimonial, TG: Featured Single Page"
+msgstr "Κατάλληλο Widget: TG: Μαρτυρίες, TG: Επιλεγμένη Σελίδα"
+
+#: content-single.php:22 loco:54d11cde14d725b7558b4576
+msgid "Tagged on: "
+msgstr "Ετικέτες:"
+
+#: inc/widgets/widgets.php:524 loco:54d11cde14d725b7558b45e7
+msgid "Testimonial Description"
+msgstr "Περιγραφή Μαρτυρίας"
+
+#: inc/widgets/widgets.php:379 loco:54d11cde14d725b7558b45e0
+msgid "TG: Call To Action Widget"
+msgstr "TG: Widget Κλήση για Δράση"
+
+#: inc/widgets/widgets.php:546 loco:54d11cde14d725b7558b45eb
+msgid "TG: Featured Widget"
+msgstr "TG: Widget Χαρακτηριστικών"
+
+#: inc/widgets/widgets.php:278 loco:54d11cde14d725b7558b45de
+msgid "TG: Services"
+msgstr "TG: Υπηρεσίες"
+
+#: inc/widgets/widgets.php:479 loco:54d11cde14d725b7558b45e6
+msgid "TG: Testimonial"
+msgstr "TG: Μαρτυρίες"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:91
+#: inc/admin/options/includes/class-options-framework-admin.php:92 57e loco:#: 54d11cde14d725b7558b457e
+msgid "Theme Options"
+msgstr "Επιλογές Θέματος"
+
+#: inc/functions.php:436 loco:54d11cde14d725b7558b45ac
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+"Θέμα: \n"
+"%1$s από %2$s."
+
+#: options.php:159 loco:54d11cde14d725b7558b4617
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+"Αυτό θα επηρεάσει συνδέσμους, κουμπιά και πολλά άλλα. Διαλέξτε ένα χρώμα να "
+"ταιριάζει στη σελίδα σας."
+
+#: arw-widget-settings.php:4 loco:54d11cde14d725b7558b45d7
+msgid "Title:"
+msgstr "Τίτλος"
+
+#: inc/admin/options/includes/class-options-sanitization.php:332 58e loco:#: 54d11cde14d725b7558b458e
+msgid "Top Center"
+msgstr "Πάνω Μέση"
+
+#: inc/admin/options/includes/class-options-sanitization.php:331 58d loco:#: 54d11cde14d725b7558b458d
+msgid "Top Left"
+msgstr "Πάνω Αριστερά"
+
+#: inc/admin/options/includes/class-options-sanitization.php:333 58f loco:#: 54d11cde14d725b7558b458f
+msgid "Top Right"
+msgstr "Πάνω Δεξιά"
+
+#: options.php:289 loco:54d11cde14d725b7558b462f
+msgid "Upgrade to Pro"
+msgstr "Αναβάθμιση στη Pro έκδοση"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:70 587 loco:#: 54d11cde14d725b7558b4587
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Ενημερώστε το WordPress για πλήρη υποστήριξη πολυμέσων."
+
+#: options.php:210 loco:54d11cde14d725b7558b4621
+msgid "Upload favicon"
+msgstr "Μεταφόρτωση εικονιδίου"
+
+#: options.php:211 loco:54d11cde14d725b7558b4622
+msgid "Upload favicon for your site."
+msgstr "Μεταφορτώστε εικονίδιο για τη σελίδα σας."
+
+#: options.php:37 loco:54d11cde14d725b7558b45f6
+msgid "Upload logo for your header. Recommended image size is 100 X 100 pixels."
+msgstr ""
+"Μεταφορτώστε λογότυπο για τη κεφαλίδα. Προτεινόμενο μέγεθος εικόνας 100 x 100 "
+"εικονοστοιχεία."
+
+#: options.php:245 loco:54d11cde14d725b7558b4629
+msgid "Upload slider image."
+msgstr "Μεταφόρτωση εικόνας slider."
+
+#: inc/widgets/widgets.php:377 loco:54d11cde14d725b7558b45df
+msgid "Use this widget to show the call to action section."
+msgstr "Χρησιμοποιήστε αυτό το Widget για να εμφανίσετε το τμήμα \"κλήση για δράση\"."
+
+#: options.php:292 loco:54d11cde14d725b7558b4632
+msgid "View Demo"
+msgstr "Δες το Demo"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:94 588 loco:#: 54d11cde14d725b7558b4588
+msgid "View File"
+msgstr "Εμφάνιση αρχείου"
+
+#: options.php:95 loco:54d11cde14d725b7558b4608
+msgid "Wide layout with content width of 1218px"
+msgstr "Διάταξη width με πλάτος περιεχομένου 1218px"
+
+#: options.php:96 loco:54d11cde14d725b7558b4609
+msgid "Wide layout with content width of 978px"
+msgstr "Διάταξη wide με πλάτος περιεχομένου 978px"
+
+#: options.php:186 loco:54d11cde14d725b7558b461d
+msgid "Write your custom css."
+msgstr "Γράψτε το δικό σας CSS."
+
+#: inc/functions.php:399 loco:54d11cde14d725b7558b45a4
+msgid "%1$s at %2$s"
+msgstr "%1$s στις %2$s"
+
+#: inc/header-functions.php:162 loco:54d11cde14d725b7558b45b1
+msgid "Year: %s"
+msgstr ""
+"Χρόνος: \n"
+"%s"
+
+#: inc/header-functions.php:221 loco:54d11cde14d725b7558b45ba
+msgid "You are here:"
+msgstr "Είστε εδώ:"
+
+#: functions.php:736 loco:54d11cde14d725b7558b45a6
+msgid "Your comment is awaiting moderation."
+msgstr "Το σχολιό σας περιμένει έγκριση."

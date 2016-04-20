@@ -1,0 +1,937 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spacious\n"
+"POT-Creation-Date: 2014-11-14 09:48+0100\n"
+"PO-Revision-Date: 2015-06-30 23:23+0200\n"
+"Last-Translator: Mario Weinert <info@wdmw.de>\n"
+"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_x;_nx;_ex;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hups! Kyseistä sivua ei löydy."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr "Voi harmi! Sivua ei löytynyt. Palaa takaisin tai kokeile hakua."
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Hakutulokset &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Kommenttinavigaatio"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Vanhemmat kommentit"
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Uudemmat kommentit &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Kommentointi suljettu."
+
+#: content-blog-full-content.php:23 content-page.php:17 content-single.php:29
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "No Comments"
+msgstr "Ei kommentteja"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "1 Comment"
+msgstr "1 kommentti"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "% Comments"
+msgstr "% kommenttia"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "Comments Off"
+msgstr "Kommentointi on suljettu"
+
+#: content-blog-full-content.php:41 content-blog-image-large.php:54
+#: content-blog-image-medium.php:56 content-page.php:26 content-single.php:47
+#: content.php:62
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: content-blog-image-large.php:55 content-blog-image-medium.php:57
+#: content.php:63 inc/header-functions.php:111 inc/widgets/widgets.php:258
+#: inc/widgets/widgets.php:357
+msgid "Read more"
+msgstr "Lue lisää"
+
+#: content-single.php:22
+msgid "Tagged on: "
+msgstr "Merkitty:"
+
+#: header.php:84
+msgid "Menu"
+msgstr "Valikko"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Valitse ulkoasu"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Perusulkoasu"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr "Oikea sivupalkki"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Vasen sivupalkki"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Ei sivupalkkeja - täysi leveys"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Ei sivupalkkia - sisältö keskitetty"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:85
+#: inc/admin/options/includes/class-options-framework-admin.php:86
+#: inc/admin/options/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr "Teeman asetukset"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:173
+msgid "Save Options"
+msgstr "Tallennusvalinnat"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Restore Defaults"
+msgstr "Palauta oletusasetukset"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "Klikkaa OK jatkaaksesi nollausta. Kaikki teeman asetukset poistetaan!"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr "Oletusasetukset palautettu."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr "Asetukset tallennettu."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "Tiedostoa ei ole valittu"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:66
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr "Lataa"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:68
+#: inc/admin/options/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr "Poista"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Päivitä uudempaan WordPress-versioon saadaksesi täyden mediatuen."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "Näytä tiedosto"
+
+#: inc/admin/options/includes/class-options-sanitization.php:241
+msgid "No Repeat"
+msgstr "Ei toistoa"
+
+#: inc/admin/options/includes/class-options-sanitization.php:242
+msgid "Repeat Horizontally"
+msgstr "Toista vaakasuunnassa"
+
+#: inc/admin/options/includes/class-options-sanitization.php:243
+msgid "Repeat Vertically"
+msgstr "Toista pystysuunnassa"
+
+#: inc/admin/options/includes/class-options-sanitization.php:244
+msgid "Repeat All"
+msgstr "Toista kaikki"
+
+#: inc/admin/options/includes/class-options-sanitization.php:257
+msgid "Top Left"
+msgstr "Yläreuna vasen"
+
+#: inc/admin/options/includes/class-options-sanitization.php:258
+msgid "Top Center"
+msgstr "Yläreuna keskiosa"
+
+#: inc/admin/options/includes/class-options-sanitization.php:259
+msgid "Top Right"
+msgstr "Yläreuna oikea"
+
+#: inc/admin/options/includes/class-options-sanitization.php:260
+msgid "Middle Left"
+msgstr "Keskitetty vasen"
+
+#: inc/admin/options/includes/class-options-sanitization.php:261
+msgid "Middle Center"
+msgstr "Keskitetty keskiosa"
+
+#: inc/admin/options/includes/class-options-sanitization.php:262
+msgid "Middle Right"
+msgstr "Keskitetty oikea"
+
+#: inc/admin/options/includes/class-options-sanitization.php:263
+msgid "Bottom Left"
+msgstr "Alareuna vasen"
+
+#: inc/admin/options/includes/class-options-sanitization.php:264
+msgid "Bottom Center"
+msgstr "Alareuna keskitetty"
+
+#: inc/admin/options/includes/class-options-sanitization.php:265
+msgid "Bottom Right"
+msgstr "Alareuna oikea"
+
+#: inc/admin/options/includes/class-options-sanitization.php:278
+msgid "Scroll Normally"
+msgstr "Vieritä normaalisti"
+
+#: inc/admin/options/includes/class-options-sanitization.php:279
+msgid "Fixed in Place"
+msgstr "Kiinnitetty"
+
+#: inc/admin/options/includes/class-options-sanitization.php:353
+msgid "Normal"
+msgstr "Normaali"
+
+#: inc/admin/options/includes/class-options-sanitization.php:354
+msgid "Italic"
+msgstr "Kursiivi"
+
+#: inc/admin/options/includes/class-options-sanitization.php:355
+msgid "Bold"
+msgstr "Lihavoitu"
+
+#: inc/admin/options/includes/class-options-sanitization.php:356
+msgid "Bold Italic"
+msgstr "Lihavoitu kursiivi"
+
+#: inc/functions.php:341
+msgid "Post navigation"
+msgstr "Kommenttivalikko"
+
+#: inc/functions.php:345 navigation.php:42
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/functions.php:346 navigation.php:43
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/functions.php:351
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Vanhemmat viestit"
+
+#: inc/functions.php:355
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Uudemmat viestit <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/functions.php:381
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/functions.php:381
+msgid "(Edit)"
+msgstr "(Muokkaa)"
+
+#: inc/functions.php:396
+msgid "Post author"
+msgstr "Kirjoittaja"
+
+#: inc/functions.php:399
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s:sta"
+
+#: inc/functions.php:401
+#, php-format
+msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+msgstr "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+
+#: inc/functions.php:407
+msgid "Your comment is awaiting moderation."
+msgstr "Kommenttisi odottaa hyväksyntää."
+
+#: inc/functions.php:412
+msgid "Reply"
+msgstr "Vastaa"
+
+#: inc/functions.php:432
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/functions.php:434
+msgid "ThemeGrill"
+msgstr "ThemeGrill"
+
+#: inc/functions.php:436
+#, php-format
+msgid "Copyright &copy; %1$s %2$s."
+msgstr "Copyright &copy; %1$s %2$s."
+
+#: inc/functions.php:436
+#, php-format
+msgid "Powered by %s."
+msgstr "%s"
+
+#: inc/functions.php:436
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "%1$s - %2$s."
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Sivu %s"
+
+#: inc/header-functions.php:145
+#, php-format
+msgid "Author: %s"
+msgstr "Kirjoittaja: %s"
+
+#: inc/header-functions.php:153
+#, php-format
+msgid "Day: %s"
+msgstr "Päivä: %s"
+
+#: inc/header-functions.php:156
+#, php-format
+msgid "Month: %s"
+msgstr "Kuukausi: %s"
+
+#: inc/header-functions.php:159
+#, php-format
+msgid "Year: %s"
+msgstr "Vuosi: %s"
+
+#: inc/header-functions.php:162
+msgid "Asides"
+msgstr "Sivuhuomautukset"
+
+#: inc/header-functions.php:165
+msgid "Images"
+msgstr "Kuvat"
+
+#: inc/header-functions.php:168
+msgid "Videos"
+msgstr "Videot"
+
+#: inc/header-functions.php:171
+msgid "Quotes"
+msgstr "Lainaukset"
+
+#: inc/header-functions.php:174
+msgid "Links"
+msgstr "Linkit"
+
+#: inc/header-functions.php:177 sidebar-left.php:29 sidebar.php:29
+msgid "Archives"
+msgstr "Arkistot"
+
+#: inc/header-functions.php:182
+msgid "Page NOT Found"
+msgstr "Sivua ei löydy"
+
+#: inc/header-functions.php:185
+msgid "Search Results"
+msgstr "Hakutulokset"
+
+#: inc/header-functions.php:218
+msgid "You are here:"
+msgstr "Olet tässä:"
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr "Näytä vimpaimet oikealla"
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr "Näytä vimpaimet vasemmalla"
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr "Yläpalkin sivupalkki"
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr "Näytä vimpaimet yläpalkissa päävalikon yläpuolella"
+
+#: inc/widgets/widgets.php:51
+msgid "Business Top Sidebar"
+msgstr "Business-yläsivupalkki"
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Business Page Template Top Section."
+msgstr "Näytä vimpaimet Business-yläsivupalkin yläosiossa."
+
+#: inc/widgets/widgets.php:53 inc/widgets/widgets.php:87
+msgid ""
+"Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget"
+msgstr ""
+"Sopivat vimpaimet: TG: Services, TG: Call To Action Widget, TG: Featured "
+"Widget"
+
+#: inc/widgets/widgets.php:62
+msgid "Business Middle Left Sidebar"
+msgstr "Business keskitetty vasen sivupalkki"
+
+#: inc/widgets/widgets.php:64
+msgid "Shows widgets on Business Page Template Middle Section Left Half."
+msgstr ""
+"Näytä vimpaimet Business-sivupohjan keskialueen vasemmalla puolikkaalla."
+
+#: inc/widgets/widgets.php:64 inc/widgets/widgets.php:75
+msgid "Suitable widget: TG: Testimonial, TG: Featured Single Page"
+msgstr "Sopivat vimpaimet: TG: Testimonial, TG: Featured Single Page"
+
+#: inc/widgets/widgets.php:73
+msgid "Business Middle Right Sidebar"
+msgstr "Business keskitetty oikea sivupalkki"
+
+#: inc/widgets/widgets.php:75
+msgid "Shows widgets on Business Page Template Middle Section Right Half."
+msgstr "Näytä vimpaimet Business-sivupohjan keskialueen oikealla puolikkaalla."
+
+#: inc/widgets/widgets.php:85
+msgid "Business Bottom Sidebar"
+msgstr "Business alareunan sivupalkki"
+
+#: inc/widgets/widgets.php:87
+msgid "Shows widgets on Business Page Template Bottom Section."
+msgstr "Näytä vimpaimet Business-sivupohjan alaosassa."
+
+#: inc/widgets/widgets.php:96
+msgid "Contact Page Sidebar"
+msgstr "Contact-sivun sivupalkki"
+
+#: inc/widgets/widgets.php:98
+msgid "Shows widgets on Contact Page Template."
+msgstr "Näytä vimpaimet Contact Page sivupohjalla"
+
+#: inc/widgets/widgets.php:107
+msgid "Error 404 Page Sidebar"
+msgstr "Error 404 sivun sivupalkki"
+
+#: inc/widgets/widgets.php:109
+msgid "Shows widgets on Error 404 page."
+msgstr "Näytä vimpaimet Error 404 sivulla"
+
+#: inc/widgets/widgets.php:118
+msgid "Footer Sidebar One"
+msgstr "Alapalkin sivupalkki 1"
+
+#: inc/widgets/widgets.php:120
+msgid "Shows widgets at footer sidebar one."
+msgstr "Näytä vimpaimet alapalkin sivupalkissa 1."
+
+#: inc/widgets/widgets.php:129
+msgid "Footer Sidebar Two"
+msgstr "Alapalkin sivupalkki 2"
+
+#: inc/widgets/widgets.php:131
+msgid "Shows widgets at footer sidebar two."
+msgstr "Näytä vimpaimet alapalkin sivupalkissa 2."
+
+#: inc/widgets/widgets.php:140
+msgid "Footer Sidebar Three"
+msgstr "Alapalkin sivupalkki 3"
+
+#: inc/widgets/widgets.php:142
+msgid "Shows widgets at footer sidebar three."
+msgstr "Näytä vimpaimet alapalkin sivupalkissa 3."
+
+#: inc/widgets/widgets.php:151
+msgid "Footer Sidebar Four"
+msgstr "Alapalkin sivupalkki 4"
+
+#: inc/widgets/widgets.php:153
+msgid "Shows widgets at footer sidebar four."
+msgstr "Näytä vimpaimet alapalkin sivupalkissa 4."
+
+#: inc/widgets/widgets.php:176
+msgid "Display Featured Single Page"
+msgstr "Näytä Featured Single Page"
+
+#: inc/widgets/widgets.php:187
+msgid ""
+"Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr ""
+"Sopii kotiyläsivupalkin, kotisivun alavasemman sivupalkin and sivulla olevan "
+"sivupalkin kanssa käytettäväksi."
+
+#: inc/widgets/widgets.php:190 inc/widgets/widgets.php:522
+#: inc/widgets/widgets.php:567
+msgid "Title:"
+msgstr "Otsikko:"
+
+#: inc/widgets/widgets.php:193
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Näyttää sivun otsikon, mikäli otsikko jätetään tyhjäksi."
+
+#: inc/widgets/widgets.php:196 inc/widgets/widgets.php:294
+#: inc/widgets/widgets.php:576
+msgid "Page"
+msgstr "Sivu"
+
+#: inc/widgets/widgets.php:200
+msgid "Remove Featured image"
+msgstr "Poista Featured image"
+
+#: inc/widgets/widgets.php:205 inc/widgets/widgets.php:210
+msgid "Show Image Before Title"
+msgstr "Näytä kuva ennen otsikkoa"
+
+#: inc/widgets/widgets.php:206 inc/widgets/widgets.php:211
+msgid "Show Image After Title"
+msgstr "Näytä kuva otsikon jälkeen"
+
+#: inc/widgets/widgets.php:276
+msgid ""
+"Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Näyttää jotkin sivut palveluina. Toimii parhaiten Business ylä- tai "
+"alapalkin kanssa."
+
+#: inc/widgets/widgets.php:278
+msgid "TG: Services"
+msgstr "TG: Services"
+
+#: inc/widgets/widgets.php:377
+msgid "Use this widget to show the call to action section."
+msgstr "Käytä tätä vimpainta näyttääksesi \"Call to action”-osion."
+
+#: inc/widgets/widgets.php:379
+msgid "TG: Call To Action Widget"
+msgstr "TG: Call To Action vimpain"
+
+#: inc/widgets/widgets.php:395
+msgid "Call to Action Main Text"
+msgstr "Call to Action pääteksti"
+
+#: inc/widgets/widgets.php:397
+msgid "Call to Action Additional Text"
+msgstr "Call to Action lisäteksti"
+
+#: inc/widgets/widgets.php:400
+msgid "Button Text:"
+msgstr "Painikkeen teksti:"
+
+#: inc/widgets/widgets.php:404
+msgid "Button Redirect Link:"
+msgstr "Painikkeen uudelleenohjauslinkki:"
+
+#: inc/widgets/widgets.php:477
+msgid "Display Testimonial"
+msgstr "Näytä Testimonial"
+
+#: inc/widgets/widgets.php:479
+msgid "TG: Testimonial"
+msgstr "TG: Testimonial"
+
+#: inc/widgets/widgets.php:524
+msgid "Testimonial Description"
+msgstr "Testimonial kuvaus"
+
+#: inc/widgets/widgets.php:527
+msgid "Name:"
+msgstr "Nimi:"
+
+#: inc/widgets/widgets.php:530
+msgid "Byline:"
+msgstr "Alaotsikko:"
+
+#: inc/widgets/widgets.php:544
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Näytä joitain sivuja viimeaikoina päivitettynä. Sopii parhaiten Business "
+"ylä- tai alasivupalkin kanssa."
+
+#: inc/widgets/widgets.php:546
+msgid "TG: Featured Widget"
+msgstr "TG: Featured vimpain"
+
+#: inc/widgets/widgets.php:570
+msgid "Description"
+msgstr "Kuvaus"
+
+#: navigation.php:22
+msgid "&laquo; Previous"
+msgstr "&laquo; edellinen"
+
+#: navigation.php:23
+msgid "Next &raquo;"
+msgstr "seuraava &raquo;"
+
+#: navigation.php:34
+msgid "&larr; Previous"
+msgstr "&larr; edellinen"
+
+#: navigation.php:35
+msgid "Next &rarr;"
+msgstr "seuraava  &rarr;"
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Valmiina julkaisemaan ensimmäisen kirjoituksesi? <a href=\"%1$s\">Aloita "
+"tästä</a>."
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Valitettavasti hakusanoilla ei löytynyt mitään. Yritä uudelleen toisilla "
+"hakusanoilla."
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Näyttää siltä, ettemme löydä, mitä etsit. Ehkäpä haku voisi auttaa."
+
+#: options.php:31
+msgid "Header"
+msgstr "Otsikko"
+
+#: options.php:37
+msgid "Header Logo"
+msgstr "Otsikkologo"
+
+#: options.php:38
+msgid "Upload logo for your header."
+msgstr "Lataa logo sivusi yläpalkkiin."
+
+#: options.php:45
+msgid "Header Logo Only"
+msgstr "Näytä yläpalkissa vain otsikkologo"
+
+#: options.php:46
+msgid "Header Text Only"
+msgstr "Näytä yläpalkissa vain teksti"
+
+#: options.php:47
+msgid "Show Both"
+msgstr "Näytä molemmat"
+
+#: options.php:48
+msgid "Disable"
+msgstr "Poista käytöstä"
+
+#: options.php:51
+msgid "Show"
+msgstr "Näytä"
+
+#: options.php:52
+msgid "Choose the option that you want."
+msgstr "Valitse vaihtoehto, jonka haluat."
+
+#: options.php:61
+msgid "Need to replace Header Image?"
+msgstr "Haluatko vaihtaa yläpalkin kuvan?"
+
+#: options.php:62 options.php:181
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "<a href=\"%1$s\">Napsauta tätä</a>"
+
+#: options.php:68
+msgid "Header Image Position"
+msgstr "Yläpalkin kuvan sijainti"
+
+#: options.php:69
+msgid "Choose top header image display position."
+msgstr "Valitse yläpalkin kuvan sijainti"
+
+#: options.php:74
+msgid ""
+"Position Above (Default): Display the Header image just above the site title "
+"and main menu part."
+msgstr ""
+"Sijanti yläpuolella (oletusasetus): Näytä yläpalkin kuva sivun otsikon ja "
+"päävalikon yläpuolella"
+
+#: options.php:75
+msgid ""
+"Position Below: Display the Header image just below the site title and main "
+"menu part."
+msgstr ""
+"Sijainti alapuolella: Näytä yläpalkin kuva sivun otsikon ja päävalikon "
+"alapuolella."
+
+#: options.php:83
+msgid "Design"
+msgstr "Muotoilu"
+
+#: options.php:88
+msgid "Site Layout"
+msgstr "Sivun ulkoasu"
+
+#: options.php:89
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Valitse sivuston ulkoasu. Muutos tehdään koko sivustolle."
+
+#: options.php:94
+msgid "Boxed layout with content width of 1218px"
+msgstr "Neliöulkoasu, sisällön leveys 1218px"
+
+#: options.php:95
+msgid "Boxed layout with content width of 978px"
+msgstr "Neliöulkoasu, sisällön leveys 978px"
+
+#: options.php:96
+msgid "Wide layout with content width of 1218px"
+msgstr "Laaja ulkoasu, sisällön leveys 1218px"
+
+#: options.php:97
+msgid "Wide layout with content width of 978px"
+msgstr "Laaja ulkoasu, sisällön leveys 978px"
+
+#: options.php:102
+msgid "Default layout"
+msgstr "Vakioulkoasu"
+
+#: options.php:103
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Valitse vakioulkoasu. Tämä ulkoasu on käytössä koko sivuston arkistoissa, "
+"haussa jne. Yksittäisen artikkelinn ja sivun ulkoasua voi säädellä alemmilla "
+"valinnoilla."
+
+#: options.php:116
+msgid "Default layout for pages only"
+msgstr "Vakioulkoasu vain sivuille"
+
+#: options.php:117
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Valitse vakioulkoasu sivuille. Tämä ulkoasu on käytössä kaikilla sivuilla, "
+"ellet aseta tietylle sivulle uniikkia ulkoasua."
+
+#: options.php:130
+msgid "Default layout for single posts only"
+msgstr "Vakioulkoasu vain yksittäisille artikkeleille."
+
+#: options.php:131
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Valitse vakioulkoasu yksittäisille artikkeleille. Tämä ulkoasu on käytössä "
+"kaikissa artikkeleissa, ellet aseta tietylle artikkelille uniikkia ulkoasua."
+
+#: options.php:144
+msgid "Blog Posts display type"
+msgstr "Blogiartikkelien näyttötapa"
+
+#: options.php:145
+msgid ""
+"Choose the display type for the latests posts view or posts page view "
+"(static front page)."
+msgstr ""
+"Valitse näyttötapa viimeisten artikkelien näkymässä tai "
+"artikkelisivunäkymässä (staattinen etusivu)."
+
+#: options.php:150
+msgid "Blog Image Large"
+msgstr "Suuri blogikuva"
+
+#: options.php:151
+msgid "Blog Image Medium"
+msgstr "Keskikokoinen blogikuva"
+
+#: options.php:152
+msgid "Blog Image Alternate Medium"
+msgstr "Vaihtoehtoinen keskikokoinen blogikuva."
+
+#: options.php:153
+msgid "Blog Full Content"
+msgstr "Blogiartikkelin koko sisältö"
+
+#: options.php:159
+msgid "Primary color option"
+msgstr "Päävärivalinta"
+
+#: options.php:160
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+"Tämä vaikuttaa linkkeihin, nappeihin ja moniin muihin. Valitse väri, joka "
+"sopii sivustollesi."
+
+#: options.php:168
+msgid "Color Skin"
+msgstr "Väri"
+
+#: options.php:169
+msgid "Choose the light or dark skin. This will be reflected in whole site."
+msgstr "Valitse vaalea tai tumma tausta. Tämä vaikuttaa koko sivustoon."
+
+#: options.php:180
+msgid "Need to replace default background?"
+msgstr "Haluatko vaihtaa vakiotaustan?"
+
+#: options.php:181
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Huomaa: Tausta näkyy ainostaan, jos valitsit neliöidyn ulkoasun sivuston "
+"ulkoasuvalinnassa."
+
+#: options.php:186
+msgid "Custom CSS"
+msgstr "Kustoimoitu CSS"
+
+#: options.php:187
+msgid "Write your custom css."
+msgstr "Kirjoita kustomoitu CSS-tyyli."
+
+#: options.php:196
+msgid "Additional"
+msgstr "Ylimääräinen"
+
+#: options.php:202
+msgid "Activate favicon"
+msgstr "Aktivoi favicon"
+
+#: options.php:203
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr "Valitse aktivoidaksesi faviconin. Lataa favicon alta."
+
+#: options.php:211
+msgid "Upload favicon"
+msgstr "Lataa favicon"
+
+#: options.php:212
+msgid "Upload favicon for your site."
+msgstr "Lataa sivustollesi favicon"
+
+#: options.php:220
+msgid "Slider"
+msgstr "Kuvapalkki"
+
+#: options.php:226
+msgid "Activate slider"
+msgstr "Aktivoi kuvapalkki"
+
+#: options.php:227
+msgid "Check to activate slider."
+msgstr "Valitse aktivoidaksesi kuvapalkin."
+
+#: options.php:235
+msgid "Disable slider in Posts page"
+msgstr "Poista kuvapalkki Posts sivulta"
+
+#: options.php:236
+msgid "Check to disable slider in Posts Page"
+msgstr "Valitse poistaaksesi kuvapalkin Posts-sivulta"
+
+#: options.php:245
+#, php-format
+msgid "Image Upload #%1$s"
+msgstr "Kuvan lataus #%1$s"
+
+#: options.php:246
+msgid "Upload slider image."
+msgstr "Lataa kuvapalkin kuva."
+
+#: options.php:251
+msgid "Enter title for your slider."
+msgstr "Anna kuvapalkin otsikko."
+
+#: options.php:257
+msgid "Enter your slider description."
+msgstr "Anna kuvapalkin kuvaus."
+
+#: options.php:263
+msgid "Enter link to redirect slider when clicked"
+msgstr "Anna osoite, johon ohjataan kun kuvapalkkia klikataan."
+
+#: options.php:282
+msgid "About Spacious"
+msgstr "Lisätietoa Spacious-teemasta"
+
+#: options.php:284
+msgid "Upgrade to Pro"
+msgstr "Vaihda Pro-versioon"
+
+#: options.php:285
+msgid "Free Support"
+msgstr "Ilmainen tuki"
+
+#: options.php:286
+msgid "Documentation"
+msgstr "Dokumentointi"
+
+#: options.php:287
+msgid "View Demo"
+msgstr "Näytä demo"
+
+#: options.php:288
+msgid "Rate this theme"
+msgstr "Arvioi tämä teema"
+
+#: options.php:291
+msgid "If you like our work. Buy us a beer."
+msgstr "Jos pidät työstämme, osta meille olut."
+
+#: searchform.php:12 searchform.php:15
+msgid "Search"
+msgstr "Etsi"
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr "Meta"
+
+#~ msgid "Theme by: spacious"
+#~ msgstr "Theme von: spacious"
+
+#~ msgid "Slider Title %1$s"
+#~ msgstr "Slider-Titel #%1$s"
+
+#~ msgid "Slider Description %1$s"
+#~ msgstr "Slider-Beschreibung #%1$s"
+
+#~ msgid "Slider redirect link %1$s"
+#~ msgstr "Slider-Weiterleitung #%1$s"

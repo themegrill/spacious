@@ -1,0 +1,946 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spacious\n"
+"POT-Creation-Date: 2014-12-10 11:15+0545\n"
+"PO-Revision-Date: 2015-04-04 19:34+0100\n"
+"Last-Translator: \n"
+"Language-Team: ThemeGrill <themegrill@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;esc_attr__;esc_attr_e\n"
+"Language: it\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! Pagina non trovata."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr ""
+"Non abbiamo trovato niente in questa pagina. Perché non provi con il motore "
+"di ricerca?"
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un pensiero su &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensieri su &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Navigazione commenti"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Vecchi commenti"
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Nuovi commenti &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: content-blog-full-content.php:23 content-page.php:17 content-single.php:29
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "No Comments"
+msgstr "Nessun commento"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "1 Comment"
+msgstr "1 Commento"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "% Comments"
+msgstr "% Commenti"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "Comments Off"
+msgstr "Commenti disabilitati"
+
+#: content-blog-full-content.php:41 content-blog-image-large.php:54
+#: content-blog-image-medium.php:56 content-page.php:26 content-single.php:47
+#: content.php:62
+msgid "Edit"
+msgstr "Modifica"
+
+#: content-blog-image-large.php:55 content-blog-image-medium.php:57
+#: content.php:63 inc/header-functions.php:87 inc/widgets/widgets.php:258
+#: inc/widgets/widgets.php:357 options.php:264
+msgid "Read more"
+msgstr "Continua a leggere"
+
+#: content-single.php:22
+msgid "Tagged on: "
+msgstr "Tags: "
+
+#: header.php:92
+msgid "Menu"
+msgstr "Menu"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Seleziona aspetto"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Aspetto predefinito"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr "Barra laterale destra"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Barra laterale sinistra"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Senza barra laterale, tutta pagina"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Senza barra laterale, contenuto centrato"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:91
+#: inc/admin/options/includes/class-options-framework-admin.php:92
+msgid "Theme Options"
+msgstr "Opzioni del tema"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:198
+msgid "Save Options"
+msgstr "Salvare le opzioni"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:199
+msgid "Restore Defaults"
+msgstr "Ripristina impostazioni predefinite"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:199
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+"Fare clic su OK per ripristinare. Tutte le impostazioni del tema saranno "
+"perse!"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:230
+msgid "Default options restored."
+msgstr "Le opzioni predefinite sono state ripristinate."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:284
+msgid "Options saved."
+msgstr "Opzioni salvate. "
+
+#: inc/admin/options/includes/class-options-media-uploader.php:62
+msgid "No file chosen"
+msgstr "Nessun file selezionato"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:65
+#: inc/admin/options/includes/class-options-media-uploader.php:118
+msgid "Upload"
+msgstr "Caricare"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:67
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Remove"
+msgstr "Eliminare"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:70
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+"Aggiornare la versione di WordPress per ottenere un supporto media completo."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:94
+msgid "View File"
+msgstr "Visualizzare file"
+
+#: inc/admin/options/includes/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr "Non ripetere"
+
+#: inc/admin/options/includes/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr "Ripetere orizzontalmente "
+
+#: inc/admin/options/includes/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr "Ripetere verticalmente"
+
+#: inc/admin/options/includes/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr "Ripetere tutto"
+
+#: inc/admin/options/includes/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr "In alto a sinistra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr "In alto centrato"
+
+#: inc/admin/options/includes/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr "In alto a destra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr "Centro a sinistra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr "Allineato al centro"
+
+#: inc/admin/options/includes/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr "Centro a destra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr "In basso a sinistra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr "In basso al centro"
+
+#: inc/admin/options/includes/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr "In basso a destra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr "Scorrere normalmente"
+
+#: inc/admin/options/includes/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr "Blocca nella posizione"
+
+#: inc/admin/options/includes/class-options-sanitization.php:424
+msgid "Normal"
+msgstr "Normale"
+
+#: inc/admin/options/includes/class-options-sanitization.php:425
+msgid "Italic"
+msgstr "Corsivo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:426
+msgid "Bold"
+msgstr "Grassetto"
+
+#: inc/admin/options/includes/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr "Grassetto e corsivo"
+
+#: inc/functions.php:341
+msgid "Post navigation"
+msgstr "Navigazione articolo"
+
+#: inc/functions.php:345 navigation.php:42
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr; Precedente"
+
+#: inc/functions.php:346 navigation.php:43
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "Successivo &rarr;"
+
+#: inc/functions.php:351
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Articoli  più vecchi"
+
+#: inc/functions.php:355
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Articoli recenti <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/functions.php:381
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/functions.php:381
+msgid "(Edit)"
+msgstr "(Modifica)"
+
+#: inc/functions.php:396
+msgid "Post author"
+msgstr "Autore/Autrice dell'articolo"
+
+#: inc/functions.php:399
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s alle %2$s"
+
+#: inc/functions.php:401
+#, php-format
+msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+msgstr "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+
+#: inc/functions.php:407
+msgid "Your comment is awaiting moderation."
+msgstr "Il tuo commento è in attesa di moderazione."
+
+#: inc/functions.php:412
+msgid "Reply"
+msgstr "Rispondi"
+
+#: inc/functions.php:432
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/functions.php:434
+msgid "ThemeGrill"
+msgstr "ThemeGrill"
+
+#: inc/functions.php:436
+#, php-format
+msgid "Copyright &copy; %1$s %2$s."
+msgstr "Copyright &copy; %1$s %2$s."
+
+#: inc/functions.php:436
+#, php-format
+msgid "Powered by %s."
+msgstr "Powered by %s."
+
+#: inc/functions.php:436
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Theme: %1$s by %2$s."
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: inc/header-functions.php:148
+#, php-format
+msgid "Author: %s"
+msgstr "Autore/Autrice: %s"
+
+#: inc/header-functions.php:156
+#, php-format
+msgid "Day: %s"
+msgstr "Giorno: %s"
+
+#: inc/header-functions.php:159
+#, php-format
+msgid "Month: %s"
+msgstr "Mese: %s"
+
+#: inc/header-functions.php:162
+#, php-format
+msgid "Year: %s"
+msgstr "Anno: %s"
+
+#: inc/header-functions.php:165
+msgid "Asides"
+msgstr "Divagazioni"
+
+#: inc/header-functions.php:168
+msgid "Images"
+msgstr "Immagini"
+
+#: inc/header-functions.php:171
+msgid "Videos"
+msgstr "Video"
+
+#: inc/header-functions.php:174
+msgid "Quotes"
+msgstr "Citazioni"
+
+#: inc/header-functions.php:177
+msgid "Links"
+msgstr "Link"
+
+#: inc/header-functions.php:180 sidebar-left.php:29 sidebar.php:29
+msgid "Archives"
+msgstr "Archivi"
+
+#: inc/header-functions.php:185
+msgid "Page NOT Found"
+msgstr "Pagina NON trovata"
+
+#: inc/header-functions.php:188
+msgid "Search Results"
+msgstr "Risultati della ricerca"
+
+#: inc/header-functions.php:221
+msgid "You are here:"
+msgstr "Ti trovi qui:"
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr "Mostra widgets a destra."
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr "Mostra widgets a sinistra."
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr "Intestazione barra laterale"
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr "Mostra widgets nella testata, sopra il menu di navigazione."
+
+#: inc/widgets/widgets.php:51
+msgid "Business Top Sidebar"
+msgstr "Business Area superiore"
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Business Page Template Top Section."
+msgstr "Mostra widgets nel Business Template - Top Section."
+
+#: inc/widgets/widgets.php:53 inc/widgets/widgets.php:87
+msgid ""
+"Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget"
+msgstr ""
+"Widget adatti: TG: Services, TG: Call To Action Widget, TG: Featured Widget"
+
+#: inc/widgets/widgets.php:62
+msgid "Business Middle Left Sidebar"
+msgstr "Business Area centrale sinistra"
+
+#: inc/widgets/widgets.php:64
+msgid "Shows widgets on Business Page Template Middle Section Left Half."
+msgstr "Mostra widgets nel Business Template - Middle Section Left Half."
+
+#: inc/widgets/widgets.php:64 inc/widgets/widgets.php:75
+msgid "Suitable widget: TG: Testimonial, TG: Featured Single Page"
+msgstr "Widget adatti: TG: Testimonial, TG: Featured Single Page"
+
+#: inc/widgets/widgets.php:73
+msgid "Business Middle Right Sidebar"
+msgstr "Business Area centrale destra"
+
+#: inc/widgets/widgets.php:75
+msgid "Shows widgets on Business Page Template Middle Section Right Half."
+msgstr "Mostra widgets nel Business Template - Middle Section Right Half."
+
+#: inc/widgets/widgets.php:85
+msgid "Business Bottom Sidebar"
+msgstr "Business Area inferiore"
+
+#: inc/widgets/widgets.php:87
+msgid "Shows widgets on Business Page Template Bottom Section."
+msgstr "Mostra widgets nel Business Template - Bottom Section."
+
+#: inc/widgets/widgets.php:96
+msgid "Contact Page Sidebar"
+msgstr "Contact Page Area"
+
+#: inc/widgets/widgets.php:98
+msgid "Shows widgets on Contact Page Template."
+msgstr "Mostra widgets nel Contact Page Template."
+
+#: inc/widgets/widgets.php:107
+msgid "Error 404 Page Sidebar"
+msgstr "Area Errore 404"
+
+#: inc/widgets/widgets.php:109
+msgid "Shows widgets on Error 404 page."
+msgstr "Mostra widgets nella pagina Errore 404."
+
+#: inc/widgets/widgets.php:118
+msgid "Footer Sidebar One"
+msgstr "Piè di pagina Uno"
+
+#: inc/widgets/widgets.php:120
+msgid "Shows widgets at footer sidebar one."
+msgstr "Mostra widgets nella prima colonna del piè de pagina."
+
+#: inc/widgets/widgets.php:129
+msgid "Footer Sidebar Two"
+msgstr "Piè di pagina Due"
+
+#: inc/widgets/widgets.php:131
+msgid "Shows widgets at footer sidebar two."
+msgstr "Mostra widgets nella seconda colonna del piè di pagina."
+
+#: inc/widgets/widgets.php:140
+msgid "Footer Sidebar Three"
+msgstr "Piè di pagina Tre"
+
+#: inc/widgets/widgets.php:142
+msgid "Shows widgets at footer sidebar three."
+msgstr "Mostra widgets nella terza colonna del piè di pagina."
+
+#: inc/widgets/widgets.php:151
+msgid "Footer Sidebar Four"
+msgstr "Piè di pagina Quattro"
+
+#: inc/widgets/widgets.php:153
+msgid "Shows widgets at footer sidebar four."
+msgstr "Mostra widgets nella quarta colonna del piè di pagina."
+
+#: inc/widgets/widgets.php:176
+msgid "Display Featured Single Page"
+msgstr "Mostra in evidenza una singola pagina"
+
+#: inc/widgets/widgets.php:187
+msgid ""
+"Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr ""
+"Adatto per le aree Home superiore, Home inferiore parti sinistra e destra."
+
+#: inc/widgets/widgets.php:190 inc/widgets/widgets.php:522
+#: inc/widgets/widgets.php:567
+msgid "Title:"
+msgstr "Titolo:"
+
+#: inc/widgets/widgets.php:193
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Mostra il titolo della pagina se il campo \"titolo\" è vuoto."
+
+#: inc/widgets/widgets.php:196 inc/widgets/widgets.php:294
+#: inc/widgets/widgets.php:576
+msgid "Page"
+msgstr "Pagina"
+
+#: inc/widgets/widgets.php:200
+msgid "Remove Featured image"
+msgstr "Eliminare l'immagine in evidenza"
+
+#: inc/widgets/widgets.php:205 inc/widgets/widgets.php:210
+msgid "Show Image Before Title"
+msgstr "Mostrare l'immagine prima del titolo"
+
+#: inc/widgets/widgets.php:206 inc/widgets/widgets.php:211
+msgid "Show Image After Title"
+msgstr "Mostrare l'immagine dopo il titolo"
+
+#: inc/widgets/widgets.php:276
+msgid ""
+"Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Mostrare alcune pagine come \"Services\". Ideale per l'area Business, parti "
+"superiore o inferiore."
+
+#: inc/widgets/widgets.php:278
+msgid "TG: Services"
+msgstr "TG: Services"
+
+#: inc/widgets/widgets.php:377
+msgid "Use this widget to show the call to action section."
+msgstr "Usare questo widget per mostrare la sezione \"Call to action\"."
+
+#: inc/widgets/widgets.php:379
+msgid "TG: Call To Action Widget"
+msgstr "TG: Call To Action Widget"
+
+#: inc/widgets/widgets.php:395
+msgid "Call to Action Main Text"
+msgstr "Testo principale Call to Action"
+
+#: inc/widgets/widgets.php:397
+msgid "Call to Action Additional Text"
+msgstr "Testo secondario Call to Action"
+
+#: inc/widgets/widgets.php:400
+msgid "Button Text:"
+msgstr "Testo del pulsante:"
+
+#: inc/widgets/widgets.php:404
+msgid "Button Redirect Link:"
+msgstr "Link del pulsante:"
+
+#: inc/widgets/widgets.php:477
+msgid "Display Testimonial"
+msgstr "Mostrare testimonianze"
+
+#: inc/widgets/widgets.php:479
+msgid "TG: Testimonial"
+msgstr "TG: Testimonial"
+
+#: inc/widgets/widgets.php:524
+msgid "Testimonial Description"
+msgstr "Testo Testimonial"
+
+#: inc/widgets/widgets.php:527
+msgid "Name:"
+msgstr "Nome:"
+
+#: inc/widgets/widgets.php:530
+msgid "Byline:"
+msgstr "Informazioni Testimone:"
+
+#: inc/widgets/widgets.php:544
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Mostrare le tue pagine come lavori recenti. Ideale per Business, aree "
+"superiore o inferiore."
+
+#: inc/widgets/widgets.php:546
+msgid "TG: Featured Widget"
+msgstr "TG: Featured Widget"
+
+#: inc/widgets/widgets.php:570
+msgid "Description"
+msgstr "Descrizione"
+
+#: navigation.php:22
+msgid "&laquo; Previous"
+msgstr "&laquo; Precedente"
+
+#: navigation.php:23
+msgid "Next &raquo;"
+msgstr "Successivo &raquo;"
+
+#: navigation.php:34
+msgid "&larr; Previous"
+msgstr "&larr; Precedente"
+
+#: navigation.php:35
+msgid "Next &rarr;"
+msgstr "Successivo &rarr;"
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Sei pronto/a a pubblicare il tuo primo articolo? <a href=\"%1$s\">Inizia "
+"qui</a>."
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Ci dispiace, non abbiamo trovato nulla che corrisponda ai tuoi criteri di "
+"ricerca. Riprova utilizzando parole diverse."
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Sembra che non abbiamo trovato quello che stai cercando... Forse il motore "
+"di ricerca ti può aiutare."
+
+#: options.php:30
+msgid "Header"
+msgstr "Testata"
+
+#: options.php:36
+msgid "Header Logo"
+msgstr "Logo testata"
+
+#: options.php:37
+msgid ""
+"Upload logo for your header. Recommended image size is 100 X 100 pixels."
+msgstr ""
+"Carica il logo per la tua testata. Dimensione dell'immagine raccomandata 100 "
+"x 100 pixel"
+
+#: options.php:44
+msgid "Header Logo Only"
+msgstr "Mostra solo il logo"
+
+#: options.php:45
+msgid "Header Text Only"
+msgstr "Mostra solo il testo"
+
+#: options.php:46
+msgid "Show Both"
+msgstr "Mostra entrambi"
+
+#: options.php:47
+msgid "Disable"
+msgstr "Disattivare"
+
+#: options.php:50
+msgid "Show"
+msgstr "Mostrare"
+
+#: options.php:51
+msgid "Choose the option that you want."
+msgstr "Scegli l'opzione che vuoi."
+
+#: options.php:60
+msgid "Need to replace Header Image?"
+msgstr "Vuoi sostituire l'immagine della testata?"
+
+#: options.php:61 options.php:180
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "<a href=\"%1$s\">Clicca qui</a>"
+
+#: options.php:67
+msgid "Header Image Position"
+msgstr "Scegli la posizione dell'immagine di testata."
+
+#: options.php:68
+msgid "Choose top header image display position."
+msgstr "Scegli la posizione dell'immagine di testata."
+
+#: options.php:73
+msgid ""
+"Position Above (Default): Display the Header image just above the site title "
+"and main menu part."
+msgstr ""
+"Posizione superiore (default): visualizza l'immagine della testata sopra il "
+"titolo del sito e il menu principale."
+
+#: options.php:74
+msgid ""
+"Position Below: Display the Header image just below the site title and main "
+"menu part."
+msgstr ""
+"Posizione inferiore: visualizza l'immagine della testata sotto il titolo del "
+"sito e il menu principale."
+
+#: options.php:82
+msgid "Design"
+msgstr "Design"
+
+#: options.php:87
+msgid "Site Layout"
+msgstr "Layout del sito"
+
+#: options.php:88
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr ""
+"Scegli il layout per il tuo sito. Questo cambiamento si rifletterà su tutte "
+"le pagine."
+
+#: options.php:93
+msgid "Boxed layout with content width of 1218px"
+msgstr "Boxed layout con larghezza del contenuto di 1218px"
+
+#: options.php:94
+msgid "Boxed layout with content width of 978px"
+msgstr "Boxed layout con larghezza del contenuto di 978px"
+
+#: options.php:95
+msgid "Wide layout with content width of 1218px"
+msgstr "Layout ampio con larghezza del contenuto di 1218px"
+
+#: options.php:96
+msgid "Wide layout with content width of 978px"
+msgstr "Layout ampio con larghezza del contenuto di 978px"
+
+#: options.php:101
+msgid "Default layout"
+msgstr "Layout predefinito"
+
+#: options.php:102
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Seleziona layout predefinito. Questo layout si rifletterà su tutti gli "
+"archivi del sito, la ricerca ecc. Il layout di un singolo articolo o pagina "
+"può essere impostato nelle opzioni inferiori."
+
+#: options.php:115
+msgid "Default layout for pages only"
+msgstr "Layout predefinito solo per le pagine"
+
+#: options.php:116
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Seleziona il layout predefinito per le pagine. Questo layout si rifletterà "
+"su tutte le pagine. In ogni caso utilizzando le opzioni di una singola "
+"pagina, è possibile cambiare il layout."
+
+#: options.php:129
+msgid "Default layout for single posts only"
+msgstr "Layout predefinito solo per gli articoli"
+
+#: options.php:130
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Layout predefinito solo per gli articoli. Questo layout si rifletterà su "
+"tutti gli articoli. In ogni caso utilizzando le opzioni di un singolo "
+"articolo, è possibile cambiare il layout."
+
+#: options.php:143
+msgid "Blog Posts display type"
+msgstr "Tipo di visualizzazione del Blog Posts"
+
+#: options.php:144
+msgid ""
+"Choose the display type for the latests posts view or posts page view "
+"(static front page)."
+msgstr ""
+"Scegliere il tipo di visualizzazione per la vista ultimi post o la vista "
+"pagina posts (pagina statica)."
+
+#: options.php:149
+msgid "Blog Image Large"
+msgstr "Blog con immagine larga"
+
+#: options.php:150
+msgid "Blog Image Medium"
+msgstr "Blog con immagine media"
+
+#: options.php:151
+msgid "Blog Image Alternate Medium"
+msgstr "Blog con immagini medie alternate"
+
+#: options.php:152
+msgid "Blog Full Content"
+msgstr "Blog di soli contenuti"
+
+#: options.php:158
+msgid "Primary color option"
+msgstr "Opzione colore primario"
+
+#: options.php:159
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+"Questo cambierà il colore di link, pulsanti e molte altre cose. Scegli un "
+"colore per il tuo sito."
+
+#: options.php:167
+msgid "Color Skin"
+msgstr "Colore dell'interfaccia"
+
+#: options.php:168
+msgid "Choose the light or dark skin. This will be reflected in whole site."
+msgstr ""
+"Scegliere un'interfaccia chiara o scura . Questo si rifletterà su tutto il "
+"sito. "
+
+#: options.php:179
+msgid "Need to replace default background?"
+msgstr "Vuoi sostituire lo sfondo predefinito?"
+
+#: options.php:180
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Nota: lo sfondo si vedrà solo se scegli una qualsiasi opzione nel riquadro "
+"delle opzioni di layout del sito. "
+
+#: options.php:185
+msgid "Custom CSS"
+msgstr "CSS personalizzato"
+
+#: options.php:186
+msgid "Write your custom css."
+msgstr "Scrivi il tuo CSS personalizzato."
+
+#: options.php:195
+msgid "Additional"
+msgstr "Aggiuntivo"
+
+#: options.php:201
+msgid "Activate favicon"
+msgstr "Attivare favicon"
+
+#: options.php:202
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr ""
+"Selezionare per attivare favicon. Caricare favicon nel riquadro inferiore"
+
+#: options.php:210
+msgid "Upload favicon"
+msgstr "Caricare favicon"
+
+#: options.php:211
+msgid "Upload favicon for your site."
+msgstr "Caricare favicon per il tuo sito."
+
+#: options.php:219
+msgid "Slider"
+msgstr "Slider"
+
+#: options.php:225
+msgid "Activate slider"
+msgstr "Attivare slider"
+
+#: options.php:226
+msgid "Check to activate slider."
+msgstr "Selezionare per attivare lo scorrimento delle immagini (slider)."
+
+#: options.php:234
+msgid "Disable slider in Posts page"
+msgstr "Disattivare lo slide nelle pagine Posts"
+
+#: options.php:235
+msgid "Check to disable slider in Posts Page"
+msgstr "Selezionare per disabilitare lo slide nelle pagine Posts"
+
+#: options.php:244
+#, php-format
+msgid "Image Upload #%1$s"
+msgstr "Caricare immagine #%1$s"
+
+#: options.php:245
+msgid "Upload slider image."
+msgstr "Caricare immagine per slider."
+
+#: options.php:250
+msgid "Enter title for your slider."
+msgstr "Inserire titolo slider."
+
+#: options.php:256
+msgid "Enter your slider description."
+msgstr "Inserire descrizione slider."
+
+#: options.php:262
+msgid "Enter the button text. Default is \"Read more\""
+msgstr "Inserire il testo del pulsate. Quello di default è \"Read more\""
+
+#: options.php:268
+msgid "Enter link to redirect slider when clicked"
+msgstr "Inserire un link collegato allo slider."
+
+#: options.php:287
+msgid "About Spacious"
+msgstr "Informazioni su Spacious"
+
+#: options.php:289
+msgid "Upgrade to Pro"
+msgstr "Versione Pro"
+
+#: options.php:290
+msgid "Free Support"
+msgstr "Supporto gratuito"
+
+#: options.php:291
+msgid "Documentation"
+msgstr "Documentazione"
+
+#: options.php:292
+msgid "View Demo"
+msgstr "Demo"
+
+#: options.php:293
+msgid "Rate this theme"
+msgstr "Vota il tema"
+
+#: options.php:296
+msgid "If you like our work. Buy us a beer."
+msgstr "Se ti piace il nostro lavoro... offrici una birra!"
+
+#: searchform.php:12
+msgid "Search"
+msgstr "Cerca"
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr "Meta"

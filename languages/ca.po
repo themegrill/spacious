@@ -1,0 +1,906 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Spacious (Español de España)\n"
+"POT-Creation-Date: 2014-05-06 18:08+0545\n"
+"PO-Revision-Date: 2014-07-23 10:27+0100\n"
+"Last-Translator: \n"
+"Language-Team: Equipo de traducciones de Usuarios de WordPress (www.usuwp."
+"es) <traducciones@usuwp.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: ../\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_x;_x;_nx;_ex;esc_attr__;esc_attr_e\n"
+"Language: es_ES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Ai! No hem pogut trobar aquesta pàgina."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr "No hem trobat res aquí. Vols provar amb el cercador?"
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Un pensament en &ldquo;%2$s&rdquo;"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Navegador de comentaris"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentaris més antics"
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios més recents &rarr;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Els comentaris estan tancats."
+
+#: content-blog-full-content.php:23 content-page.php:17 content-single.php:29
+msgid "Pages:"
+msgstr "Pàgines:"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "No Comments"
+msgstr "Sense comentaris"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "1 Comment"
+msgstr "Un comentari"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "% Comments"
+msgstr "% Comentaris"
+
+#: content-blog-full-content.php:39 content-blog-image-large.php:52
+#: content-blog-image-medium.php:54 content-single.php:45 content.php:60
+msgid "Comments Off"
+msgstr "Comentaris tancats"
+
+#: content-blog-full-content.php:41 content-blog-image-large.php:54
+#: content-blog-image-medium.php:56 content-page.php:26 content-single.php:47
+#: content.php:62
+msgid "Edit"
+msgstr "Editar"
+
+#: content-blog-image-large.php:55 content-blog-image-medium.php:57
+#: content.php:63 inc/header-functions.php:111 inc/widgets/widgets.php:258
+#: inc/widgets/widgets.php:357
+msgid "Read more"
+msgstr "Seguir llegint"
+
+#: content-single.php:22
+msgid "Tagged on: "
+msgstr "Etiquetat a:"
+
+#: header.php:84
+msgid "Menu"
+msgstr "Menú"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Selecciona distribució"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Predeterminada"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:18
+msgid "Right Sidebar"
+msgstr "Barra lateral dreta"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Barra lateral esquerra"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Sense barra lateral, amb ample complert"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Sense barra lateral, amb el contingut centrat"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:85
+#: inc/admin/options/includes/class-options-framework-admin.php:86
+#: inc/admin/options/includes/class-options-framework-admin.php:307
+msgid "Theme Options"
+msgstr "Opcions del tema"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:173
+msgid "Save Options"
+msgstr "Desar opcions"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Restore Defaults"
+msgstr "Restaurar els paràmetres per defecte"
+
+#: inc/admin/options/includes/class-options-framework-admin.php:174
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+"Prem \"OK\" per reiniciar el tema. Vés amb compte, perdràs tots els canvis."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:205
+msgid "Default options restored."
+msgstr "Les opcions per defecte han estat restablertes."
+
+#: inc/admin/options/includes/class-options-framework-admin.php:259
+msgid "Options saved."
+msgstr "Canvis desats."
+
+#: inc/admin/options/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "No has seleccionat cap fitxer"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:66
+#: inc/admin/options/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr "Pujar"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:68
+#: inc/admin/options/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr "Eliminar"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Veure fitxer"
+
+#: inc/admin/options/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "Ver archivo"
+
+#: inc/admin/options/includes/class-options-sanitization.php:241
+msgid "No Repeat"
+msgstr "No repetir"
+
+#: inc/admin/options/includes/class-options-sanitization.php:242
+msgid "Repeat Horizontally"
+msgstr "Repetir horitzontalment"
+
+#: inc/admin/options/includes/class-options-sanitization.php:243
+msgid "Repeat Vertically"
+msgstr "Repetir verticalment"
+
+#: inc/admin/options/includes/class-options-sanitization.php:244
+msgid "Repeat All"
+msgstr "Repetir tot"
+
+#: inc/admin/options/includes/class-options-sanitization.php:257
+msgid "Top Left"
+msgstr "A dalt a l'esquerra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:258
+msgid "Top Center"
+msgstr "A dalt centrat"
+
+#: inc/admin/options/includes/class-options-sanitization.php:259
+msgid "Top Right"
+msgstr "A dalt a la dreta"
+
+#: inc/admin/options/includes/class-options-sanitization.php:260
+msgid "Middle Left"
+msgstr "Al mig de l'esquerra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:261
+msgid "Middle Center"
+msgstr "Al mig, centrat"
+
+#: inc/admin/options/includes/class-options-sanitization.php:262
+msgid "Middle Right"
+msgstr "Al mig a la dreta"
+
+#: inc/admin/options/includes/class-options-sanitization.php:263
+msgid "Bottom Left"
+msgstr "Abaix a l'esquerra"
+
+#: inc/admin/options/includes/class-options-sanitization.php:264
+msgid "Bottom Center"
+msgstr "Abaix, al centre"
+
+#: inc/admin/options/includes/class-options-sanitization.php:265
+msgid "Bottom Right"
+msgstr "Abaix a la dreta"
+
+#: inc/admin/options/includes/class-options-sanitization.php:278
+msgid "Scroll Normally"
+msgstr "Scroll normal"
+
+#: inc/admin/options/includes/class-options-sanitization.php:279
+msgid "Fixed in Place"
+msgstr "Fixat al seu lloc"
+
+#: inc/admin/options/includes/class-options-sanitization.php:353
+msgid "Normal"
+msgstr "Normal"
+
+#: inc/admin/options/includes/class-options-sanitization.php:354
+msgid "Italic"
+msgstr "Cursiva"
+
+#: inc/admin/options/includes/class-options-sanitization.php:355
+msgid "Bold"
+msgstr "Negreta"
+
+#: inc/admin/options/includes/class-options-sanitization.php:356
+msgid "Bold Italic"
+msgstr "Negreta i cursiva"
+
+#: inc/functions.php:325
+msgid "Post navigation"
+msgstr "Navegació per les entrades"
+
+#: inc/functions.php:329 navigation.php:42
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/functions.php:330 navigation.php:43
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/functions.php:335
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Entrades antigues"
+
+#: inc/functions.php:339
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Entrades recents <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/functions.php:365
+msgid "Pingback:"
+msgstr ""
+
+#: inc/functions.php:365
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: inc/functions.php:380
+msgid "Post author"
+msgstr "Autor de l'entrada"
+
+#: inc/functions.php:383
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s a les %2$s"
+
+#: inc/functions.php:385
+#, php-format
+msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
+msgstr "<a class=\"comment-permalink\" href=\"%1$s\">Enllaç permanent</a>"
+
+#: inc/functions.php:391
+msgid "Your comment is awaiting moderation."
+msgstr "El teu comentari està pendent de moderació."
+
+#: inc/functions.php:396
+msgid "Reply"
+msgstr "Respondre"
+
+#: inc/functions.php:450
+msgid "WordPress"
+msgstr ""
+
+#: inc/functions.php:459
+msgid "ThemeGrill"
+msgstr ""
+
+#: inc/functions.php:468
+msgid "Copyright &copy; "
+msgstr ""
+
+#: inc/functions.php:468
+msgid "Theme by: "
+msgstr "Tema dissenyat per:"
+
+#: inc/functions.php:468
+msgid "Powered by: "
+msgstr ""
+"Traducido por: <a title=\"Usuarios de WordPress\" target=\"_blank\" href="
+"\"http://jflamarich.com/\"><span>Usuarios de WordPress</span></a> Creat amb"
+
+#: inc/header-functions.php:47
+#, php-format
+msgid "Page %s"
+msgstr "Pàgina %s"
+
+#: inc/header-functions.php:145
+#, php-format
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: inc/header-functions.php:153
+#, php-format
+msgid "Day: %s"
+msgstr "Dia: %s"
+
+#: inc/header-functions.php:156
+#, php-format
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+#: inc/header-functions.php:159
+#, php-format
+msgid "Year: %s"
+msgstr "Any: %s"
+
+#: inc/header-functions.php:162
+msgid "Asides"
+msgstr ""
+
+#: inc/header-functions.php:165
+msgid "Images"
+msgstr "Imatges"
+
+#: inc/header-functions.php:168
+msgid "Videos"
+msgstr "Vídeos"
+
+#: inc/header-functions.php:171
+msgid "Quotes"
+msgstr "Cites"
+
+#: inc/header-functions.php:174
+msgid "Links"
+msgstr "Enllaços"
+
+#: inc/header-functions.php:177 sidebar-left.php:29 sidebar.php:29
+msgid "Archives"
+msgstr "Ftixers"
+
+#: inc/header-functions.php:182
+msgid "Page NOT Found"
+msgstr "Pàgina no trobada"
+
+#: inc/header-functions.php:185
+msgid "Search Results"
+msgstr "Resultats de la cerca"
+
+#: inc/header-functions.php:214
+msgid "You are here:"
+msgstr "Estàs a:"
+
+#: inc/widgets/widgets.php:20
+msgid "Shows widgets at Right side."
+msgstr "Mostra els widgets a la part dreta"
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at Left side."
+msgstr "Mostra els widgets a la part esquerra"
+
+#: inc/widgets/widgets.php:40
+msgid "Header Sidebar"
+msgstr "Barra de la capçalera"
+
+#: inc/widgets/widgets.php:42
+msgid "Shows widgets in header section just above the main navigation menu."
+msgstr ""
+"Aquests widgets es mostraran a la capçalera, per sobre del menú de navegació."
+
+#: inc/widgets/widgets.php:51
+msgid "Business Top Sidebar"
+msgstr "Business - Barra superior"
+
+#: inc/widgets/widgets.php:53
+msgid "Shows widgets on Business Page Template Top Section. Sutiable widget: "
+msgstr ""
+"Aquests widgets es mostraran dins la pàgina que tingui assignada la "
+"plantilla de \"Business\", a la part superior. Widget recomanat:"
+
+#: inc/widgets/widgets.php:62
+msgid "Business Middle Left Sidebar"
+msgstr "Business - Barra central esquerra"
+
+#: inc/widgets/widgets.php:64
+msgid ""
+"Shows widgets on Business Page Template Middle Section Left Half. Sutiable "
+"widget: "
+msgstr ""
+"Aquests widgets es mostraran dins la pàgina que tingui assignada la "
+"plantilla de \"Business\", a l'esquerra de la part central. Widget recomanat:"
+
+#: inc/widgets/widgets.php:73
+msgid "Business Middle Right Sidebar"
+msgstr "Business - Barra central dreta"
+
+#: inc/widgets/widgets.php:75
+msgid ""
+"Shows widgets on Business Page Template Middle Section Right Half. Sutiable "
+"widget: "
+msgstr ""
+"Aquests widgets es mostraran dins la pàgina que tingui assignada la "
+"plantilla de \"Business\", a la dreta de la part central. Widget recomanat:"
+
+#: inc/widgets/widgets.php:85
+msgid "Business Bottom Sidebar"
+msgstr "Business - Barra inferior"
+
+#: inc/widgets/widgets.php:87
+msgid ""
+"Shows widgets on Business Page Template Bottom Section. Sutiable widget: "
+msgstr ""
+"Aquests widgets es mostraran dins la pàgina que tingui assignada la "
+"plantilla de \"Negocios\", a la part inferior. Widget recomanat:"
+
+#: inc/widgets/widgets.php:96
+msgid "Contact Page Sidebar"
+msgstr "Barra lateral de la Pàgina de Contacte"
+
+#: inc/widgets/widgets.php:98
+msgid "Shows widgets on Contact Page Template."
+msgstr ""
+"Aquests widgets es mostraran dins la pàgina que tingui assignada la "
+"plantilla de \"Pàgina de contacte\"."
+
+#: inc/widgets/widgets.php:107
+msgid "Error 404 Page Sidebar"
+msgstr "Barra lateral a la pàgina d'Error 404"
+
+#: inc/widgets/widgets.php:109
+msgid "Shows widgets on Error 404 page."
+msgstr ""
+"Aquests widgets es mostraran dins la pàgina que tingui assignada la "
+"plantilla de \"Error 404\"."
+
+#: inc/widgets/widgets.php:118
+msgid "Footer Sidebar One"
+msgstr "Barra del peu de pàgina 1"
+
+#: inc/widgets/widgets.php:120
+msgid "Shows widgets at footer sidebar one."
+msgstr "Mostra els widgets a la primera columna del peu de pàgina."
+
+#: inc/widgets/widgets.php:129
+msgid "Footer Sidebar Two"
+msgstr "Barra del peu de pàgina 2"
+
+#: inc/widgets/widgets.php:131
+msgid "Shows widgets at footer sidebar two."
+msgstr "Mostra els widgets a la segona columna del peu de pàgina."
+
+#: inc/widgets/widgets.php:140
+msgid "Footer Sidebar Three"
+msgstr "Barra del peu de pàgina 3"
+
+#: inc/widgets/widgets.php:142
+msgid "Shows widgets at footer sidebar three."
+msgstr "Mostra els widgets a la tercera columna del peu de pàgina."
+
+#: inc/widgets/widgets.php:151
+msgid "Footer Sidebar Four"
+msgstr "Barra del peu de pàgina 4"
+
+#: inc/widgets/widgets.php:153
+msgid "Shows widgets at footer sidebar four."
+msgstr "Mostra els widgets a la quarta columna del peu de pàgina."
+
+#: inc/widgets/widgets.php:176
+msgid "Display Featured Single Page"
+msgstr "Mostra una pàgina de forma destacada"
+
+#: inc/widgets/widgets.php:187
+msgid ""
+"Suitable for Home Top Sidebar, Home Bottom Left Sidebar and Side Sidbar."
+msgstr "Es pot colocar a les barres superior, inferior esquerra i lateral."
+
+#: inc/widgets/widgets.php:190 inc/widgets/widgets.php:522
+#: inc/widgets/widgets.php:567
+msgid "Title:"
+msgstr "Títol:"
+
+#: inc/widgets/widgets.php:193
+msgid "Displays the title of the Page if title input is empty."
+msgstr "Deixa-ho en blanc si vols mostrar el títol de la Pàgina."
+
+#: inc/widgets/widgets.php:196 inc/widgets/widgets.php:294
+#: inc/widgets/widgets.php:576
+msgid "Page"
+msgstr "Pàgina"
+
+#: inc/widgets/widgets.php:200
+msgid "Remove Featured image"
+msgstr "Eliminar la imatge destacada"
+
+#: inc/widgets/widgets.php:205 inc/widgets/widgets.php:210
+msgid "Show Image Before Title"
+msgstr "Mostrar imatge abans del títol"
+
+#: inc/widgets/widgets.php:206 inc/widgets/widgets.php:211
+msgid "Show Image After Title"
+msgstr "Mostrar imatge després del títol"
+
+#: inc/widgets/widgets.php:276
+msgid ""
+"Display some pages as services. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Mostra algunes pàgines com a serveis. Ideal per a la barra Business superior "
+"o inferior."
+
+#: inc/widgets/widgets.php:278
+msgid "TG: Services"
+msgstr "TG: Serveis"
+
+#: inc/widgets/widgets.php:377
+msgid "Use this widget to show the call to action section."
+msgstr "Fes servir aquest widget per mostrar una crida a l'acció."
+
+#: inc/widgets/widgets.php:379
+msgid "TG: Call To Action Widget"
+msgstr "TG: Widget de Crida a l'Acció"
+
+#: inc/widgets/widgets.php:395
+msgid "Call to Action Main Text"
+msgstr "Text principal de la crida a l'acció"
+
+#: inc/widgets/widgets.php:397
+msgid "Call to Action Additional Text"
+msgstr "Text adicional de la crida a l'acció"
+
+#: inc/widgets/widgets.php:400
+msgid "Button Text:"
+msgstr "Text del botó:"
+
+#: inc/widgets/widgets.php:404
+msgid "Button Redirect Link:"
+msgstr "Enllaç del botó:"
+
+#: inc/widgets/widgets.php:477
+msgid "Display Testimonial"
+msgstr "Mostra les valoracions"
+
+#: inc/widgets/widgets.php:479
+msgid "TG: Testimonial"
+msgstr "TG: Valoracions"
+
+#: inc/widgets/widgets.php:524
+msgid "Testimonial Description"
+msgstr "Text de la valoració"
+
+#: inc/widgets/widgets.php:527
+msgid "Name:"
+msgstr "Nom:"
+
+#: inc/widgets/widgets.php:530
+msgid "Byline:"
+msgstr "Càrrec"
+
+#: inc/widgets/widgets.php:544
+msgid ""
+"Show your some pages as recent work. Best for Business Top or Bottom sidebar."
+msgstr ""
+"Mostra les teves pàgines com a mostra de feina recent. Ideal per a la "
+"plantilla Business, a les zones superior o central."
+
+#: inc/widgets/widgets.php:546
+msgid "TG: Featured Widget"
+msgstr "TG: Widget Destacat"
+
+#: inc/widgets/widgets.php:570
+msgid "Description"
+msgstr "Descripció"
+
+#: navigation.php:22
+msgid "&laquo; Previous"
+msgstr "&laquo; Anterior"
+
+#: navigation.php:23
+msgid "Next &raquo;"
+msgstr "Següent &raquo;"
+
+#: navigation.php:34
+msgid "&larr; Previous"
+msgstr "&larr; Anterior"
+
+#: navigation.php:35
+msgid "Next &rarr;"
+msgstr "Següent &rarr;"
+
+#: no-results.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Estàs a punt per publicar la teva primera entrada? <a href=\"%1$s\">Fes-ho "
+"aquí!</a>."
+
+#: no-results.php:22
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Ho sentim, però no hem trobat res que concordi amb els teus termes de cerca. "
+"Intenta-ho un altre cop."
+
+#: no-results.php:27
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Sembla que no hem pogut trobar el que busques. Potser el cercador et pot "
+"ajudar."
+
+#: options.php:31
+msgid "Header"
+msgstr "Capçalera"
+
+#: options.php:37
+msgid "Header Logo"
+msgstr "Logotip"
+
+#: options.php:38
+msgid "Upload logo for your header."
+msgstr "Puja un logo per la teva capçalera."
+
+#: options.php:45
+msgid "Header Logo Only"
+msgstr "Mostrar només el logo a la capçalera"
+
+#: options.php:46
+msgid "Header Text Only"
+msgstr "Mostrar només el text de capçalera"
+
+#: options.php:47
+msgid "Show Both"
+msgstr "Mostrar tots dos"
+
+#: options.php:48
+msgid "Disable"
+msgstr "Desactiva"
+
+#: options.php:51
+msgid "Show"
+msgstr "Què vols mostrar?"
+
+#: options.php:52
+msgid "Choose the option that you want."
+msgstr "Escull l'opció que més t'agradi."
+
+#: options.php:61
+msgid "Need to replace Header Image?"
+msgstr "Vols canviar la imatge de capçalera?"
+
+#: options.php:62 options.php:167
+#, php-format
+msgid "<a href=\"%1$s\">Click Here</a>"
+msgstr "<a href=\"%1$s\">Fes clic aquí</a>"
+
+#: options.php:68
+msgid "Heder Image Position"
+msgstr "Posició de la imatge de la capçalera"
+
+#: options.php:69
+msgid "Choose top header image display position."
+msgstr "Escull la posició de la imatge de capçalera."
+
+#: options.php:74
+msgid ""
+"Position Above (Default): Display the Header image just above the site title "
+"and main menu part."
+msgstr ""
+"Superior. Mostra la imatge per sobre del títol del web i del menú principal. "
+"És l'opció per defecte."
+
+#: options.php:75
+msgid ""
+"Position Below: Display the Header image just below the site title and main "
+"menu part."
+msgstr "A sota. Mostra la imatge just per sota del títol i el menú principal."
+
+#: options.php:83
+msgid "Design"
+msgstr "Disseny"
+
+#: options.php:88
+msgid "Site Layout"
+msgstr "Disseny de la pàgina"
+
+#: options.php:89
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Escull l'estructura general. L'elecció s'aplica sobre tot el web."
+
+#: options.php:94
+msgid "Boxed layout with content width of 1218px"
+msgstr "Distribució en caixa, amb un ample de contingut de 1218px"
+
+#: options.php:95
+msgid "Boxed layout with content width of 978px"
+msgstr "Distribució en caixa, amb un ample de contingut de 978px"
+
+#: options.php:96
+msgid "Wide layout with content width of 1218px"
+msgstr "Distribució ample, a 1218px"
+
+#: options.php:97
+msgid "Wide layout with content width of 978px"
+msgstr "Distribució ample, a 978px"
+
+#: options.php:102
+msgid "Default layout"
+msgstr "Distribució general"
+
+#: options.php:103
+msgid ""
+"Select default layout. This layout will be reflected in whole site archives, "
+"search etc. The layout for a single post and page can be controlled from "
+"below options."
+msgstr ""
+"Selecciona la distribució per defecte. Aquesta distribució s'aplicarà a "
+"l'arxiu, cerques... La distribució per a les entrades i les pàgines es pot "
+"modificar més endavant."
+
+#: options.php:116
+msgid "Default layout for pages only"
+msgstr "Distribució per a les pàgines"
+
+#: options.php:117
+msgid ""
+"Select default layout for pages. This layout will be reflected in all pages "
+"unless unique layout is set for specific page."
+msgstr ""
+"Aquesta distribució es veurà reflectida només a les pàgines, si bé es pot "
+"canviar individualment a cada pàgina."
+
+#: options.php:130
+msgid "Default layout for single posts only"
+msgstr "Distribució per a les entrades"
+
+#: options.php:131
+msgid ""
+"Select default layout for single posts. This layout will be reflected in all "
+"single posts unless unique layout is set for specific post."
+msgstr ""
+"Aquesta distribució es veurà reflectida a totes les entrades, a no ser que "
+"s'especifiqui una altra distribució per a una entrada específica."
+
+#: options.php:145
+msgid "Primary color option"
+msgstr "Color primari"
+
+#: options.php:146
+msgid ""
+"This will reflect in links, buttons and many others. Choose a color to match "
+"your site."
+msgstr ""
+"Això canviarà el color dels enllaços, botons i més coses. Escull un color "
+"que vagi bé amb la teva pàgina."
+
+#: options.php:154
+msgid "Color Skin"
+msgstr "Color del disseny"
+
+#: options.php:155
+msgid "Choose the light or dark skin. This will be reflected in whole site."
+msgstr ""
+"Escull entre un color de disseny clar o fosc. Això afectarà a tot el teu web."
+
+#: options.php:166
+msgid "Need to replace default background?"
+msgstr "Vols canviar el color de fons?"
+
+#: options.php:167
+msgid ""
+"Note: The background will only be seen if you choose any of the boxed layout "
+"option in site layout option."
+msgstr ""
+"Nota: El fons només es mostrarà si selecciones qualsevol de les opcions de "
+"disseny \"en caixa\"."
+
+#: options.php:172
+msgid "Custom CSS"
+msgstr "CSS personalitzat"
+
+#: options.php:173
+msgid "Write your custom css."
+msgstr "Escriu aquí el teu CSS."
+
+#: options.php:182
+msgid "Additional"
+msgstr "Adicional"
+
+#: options.php:188
+msgid "Activate favicon"
+msgstr "Activar favicon"
+
+#: options.php:189
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr "Marca aquesta opció per activar el favicon. No oblidis pujar la icona."
+
+#: options.php:197
+msgid "Upload favicon"
+msgstr "Pujar favicon"
+
+#: options.php:198
+msgid "Upload favicon for your site."
+msgstr "Puja un favicon per la teva pàgina."
+
+#: options.php:206
+msgid "Slider"
+msgstr ""
+
+#: options.php:212
+msgid "Activate slider"
+msgstr "Activar slider"
+
+#: options.php:213
+msgid "Check to activate slider."
+msgstr "Marca per activar el slider."
+
+#: options.php:222
+#, php-format
+msgid "Image Upload #%1$s"
+msgstr "Imatge núm %1$s"
+
+#: options.php:223
+msgid "Upload slider image."
+msgstr "Puja una imatge pel teu slider."
+
+#: options.php:228
+#, php-format
+msgid "Slider Title %1$s"
+msgstr "Títol %1$s"
+
+#: options.php:229
+msgid "Enter title for your slider."
+msgstr "Introdueix el títol del teu slider"
+
+#: options.php:235
+#, php-format
+msgid "Slider Description %1$s"
+msgstr "Descripció %1$s"
+
+#: options.php:236
+msgid "Enter your slider description."
+msgstr "Introdueix la descripció del teu slider."
+
+#: options.php:242
+#, php-format
+msgid "Slider redirect link %1$s"
+msgstr "Enllaç de l'slider %1$s"
+
+#: options.php:243
+msgid "Enter link to redirect slider when clicked"
+msgstr "Introdueix l'enllaç que es visitarà al prèmer sobre la imatge"
+
+#: options.php:262
+msgid "About Spacious"
+msgstr "Sobre Spacious"
+
+#: options.php:264
+msgid "Upgrade to Pro"
+msgstr "Actualitzar a la versió PRO"
+
+#: options.php:265
+msgid "Free Support"
+msgstr "Suport gratuït"
+
+#: options.php:266
+msgid "Documentation"
+msgstr "Documentació"
+
+#: options.php:267
+msgid "View Demo"
+msgstr "Veure demo"
+
+#: options.php:270
+msgid "If you like our work. Buy us a beer."
+msgstr "Si t'agrada la nostra feina, convida'ns a una cervesa!"
+
+#: searchform.php:12 searchform.php:15
+msgid "Search"
+msgstr "Cercar"
+
+#: sidebar-left.php:36 sidebar.php:36
+msgid "Meta"
+msgstr ""
