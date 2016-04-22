@@ -1909,7 +1909,7 @@ a#scroll-up:hover {
 	}
 }
 @media screen and (max-width: 768px) {
-	#primary, #secondary {
+	#primary, #secondary, .wide-978 #primary, .narrow-978 #primary {
 		float: none;
 		width: 100%;
 		margin: 0;
