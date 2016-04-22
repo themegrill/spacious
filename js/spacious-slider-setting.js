@@ -14,7 +14,10 @@ jQuery('.slider-cycle').cycle({
 	pagerActiveClass: 'active',
 	pagerTemplate: '<a></a>',
 	pauseOnHover: true,
-	autoHeight: "container"
+	autoHeight: "container",
+	swipe: true,
+	swipeFx: 'scrollHorz'
+
 });
 
 });

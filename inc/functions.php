@@ -57,6 +57,7 @@ function spacious_scripts_styles_method() {
 	 * Register JQuery cycle2 js file for slider.
 	 */
 	wp_register_script( 'jquery_cycle', SPACIOUS_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
+	wp_register_script( 'jquery-swipe', SPACIOUS_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), false, true );
 
 	wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Lato' );
 
@@ -64,6 +65,7 @@ function spacious_scripts_styles_method() {
 	 * Enqueue Slider setup js file.
 	 */
 	if ( is_home() || is_front_page() && spacious_options( 'spacious_activate_slider', '0' ) == '1' ) {
+		wp_enqueue_script( 'jquery-swipe' );
 		wp_enqueue_script( 'spacious_slider', SPACIOUS_JS_URL . '/spacious-slider-setting.js', array( 'jquery_cycle' ), false, true );
 	}
 	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );

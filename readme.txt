@@ -49,6 +49,7 @@ and we will include it within the theme from next version update.
 * Fix - WooCommerce shop error fixed.
 * Fix - Box and Wide at 978px Layout issue on Tab is fixed.
 * Feature - Jquery cycle plugin for slider upgraded to Jquery cycle2 v2.1.6.
+* Feature - Added Swipe feature on slider for touch devices.
 
 = Version 1.3.8 =
 * Fix - Slider disable in blog page bug fixed.
