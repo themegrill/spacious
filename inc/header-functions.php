@@ -72,9 +72,8 @@ function spacious_featured_image_slider() {
 						<?php
 					}
 				}
-				?>
+				?> <nav id="controllers" class="clearfix"></nav>
 			</div>
-			<nav id="controllers" class="clearfix"></nav>
 		</section>
 
 		<?php

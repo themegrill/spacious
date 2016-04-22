@@ -769,6 +769,9 @@ li.default-menu {
 #featured-slider .slider-cycle {
 	position: relative;
 }
+#featured-slider .slides{
+	width: 100%;
+}
 .wide-978 #featured-slider .slider-cycle,
 .wide-1218 #featured-slider .slider-cycle {
    max-width: 1600px;

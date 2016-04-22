@@ -54,11 +54,11 @@ function spacious_scripts_styles_method() {
 		wp_enqueue_script( 'comment-reply' );
 
 	/**
-	 * Register JQuery cycle js file for slider.
+	 * Register JQuery cycle2 js file for slider.
 	 */
-	wp_register_script( 'jquery_cycle', SPACIOUS_JS_URL . '/jquery.cycle.all.min.js', array( 'jquery' ), '3.0.3', true );
+	wp_register_script( 'jquery_cycle', SPACIOUS_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
 
-   wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Lato' );
+	wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Lato' );
 
 	/**
 	 * Enqueue Slider setup js file.
