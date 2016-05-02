@@ -80,6 +80,7 @@ module.exports = function( grunt ){
 					'**',
 					'!.*',
 					'!*.md',
+					'!*.zip',
 					'!.*/**',
 					'!Gruntfile.js',
 					'!package.json',
