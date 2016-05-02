@@ -20,29 +20,22 @@ module.exports = function( grunt ){
 				'<%= dirs.js %>/*.js',
 				'!<%= dirs.js %>/*.min.js',
 				'!<%= dirs.js %>/html5shiv.js',
-				'!<%= dirs.js %>/html5shiv.min.js',
 				'!<%= dirs.js %>/jquery.cycle2.js',
-				'!<%= dirs.js %>/jquery.cycle2.swipe.js',
-				'!<%= dirs.js %>/jquery.navigation.js'
+				'!<%= dirs.js %>/jquery.cycle2.swipe.js'
 			]
 		},
 
 		// Generate POT files.
 		makepot: {
-			options: {
-				type: 'wp-theme',
-				domainPath: 'languages',
-				potHeaders: {
-					'report-msgid-bugs-to': 'themegrill@gmail.com',
-					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
-				}
-			},
 			dist: {
 				options: {
+					type: 'wp-theme',
+					domainPath: 'languages',
 					potFilename: 'spacious.pot',
-					exclude: [
-						'deploy/.*' // Exclude deploy directory
-					]
+					potHeaders: {
+						'report-msgid-bugs-to': 'themegrill@gmail.com',
+						'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
+					}
 				}
 			}
 		},
