@@ -5,7 +5,7 @@
   "homepage": "http://themegrill.com/themes/spacious",
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:ThemeGrill/spacious.git"
+    "url": "git@github.com:themegrill/spacious.git"
   },
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
