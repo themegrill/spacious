@@ -86,7 +86,7 @@ module.exports = function( grunt ){
 					'!node_modules/**'
 				],
 				dest: 'spacious',
-				expand: true,
+				expand: true
 			}
 		}
 	});
