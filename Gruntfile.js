@@ -68,12 +68,34 @@ module.exports = function( grunt ){
 				],
 				expand: true
 			}
+		},
+
+		// Compress files and folders.
+		compress: {
+			options: {
+				pretty: true,
+				archive: 'spacious.zip'
+			},
+			files: {
+				src: [
+					'**',
+					'!.*',
+					'!*.md',
+					'!.*/**',
+					'!Gruntfile.js',
+					'!package.json',
+					'!node_modules/**'
+				],
+				dest: 'spacious',
+				expand: true,
+			}
 		}
 	});
 
 	// Load NPM tasks to be used here
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
+	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 
 	// Register tasks
@@ -84,5 +106,10 @@ module.exports = function( grunt ){
 	grunt.registerTask( 'dev', [
 		'default',
 		'makepot'
+	]);
+
+	grunt.registerTask( 'zip', [
+		'dev',
+		'compress'
 	]);
 };
