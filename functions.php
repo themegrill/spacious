@@ -151,23 +151,13 @@ require_once( SPACIOUS_WIDGETS_DIR . '/widgets.php' );
  */
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
-/*
- * Adding Admin Menu for theme options
+/**
+ * Assign the Spacious version to a variable.
  */
-add_action( 'admin_menu', 'spacious_theme_options_menu' );
-function spacious_theme_options_menu() {
-   add_theme_page( 'Theme Options', 'Theme Options', 'manage_options', 'spacious-theme-options', 'spacious_theme_options' );
-}
+$theme            = wp_get_theme( 'spacious' );
+$spacious_version = $theme['Version'];
 
-function spacious_theme_options() {
-   if ( !current_user_can( 'manage_options' ) )  {
-      wp_die( __( 'You do not have sufficient permissions to access this page.', 'spacious' ) );
-   } ?>
-   <h1 class="spacious-theme-options"><?php _e( 'Theme Options', 'spacious' ); ?></h1>
-   <?php
-   printf( __('<p style="font-size: 16px; max-width: 800px";>As our themes are hosted on WordPress repository, we need to follow the WordPress theme guidelines and as per the new guiedlines we have migrated all our Theme Options to Customizer.</p><p style="font-size: 16px; max-width: 800px";>We too think this is a better move in the long run. All the options are unchanged, it is just that they are moved to customizer. So, please use this <a href="%1$s">link</a> to customize your site. If you have any issues then do let us know via our <a href="%2$s">Contact form</a></p>', 'spacious'),
-      esc_url(admin_url( 'customize.php' ) ),
-      esc_url('http://themegrill.com/contact/')
-   );
+/* Calling in the admin area for the Welcome Page */
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-spacious-admin.php';
 }
-?>
