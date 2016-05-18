@@ -73,14 +73,20 @@ class Spacious_Admin {
 	 */
 	private function intro() {
 		global $spacious_version;
+		$theme = wp_get_theme( get_template() );
 
 		// Drop minor version if 0
 		$major_version = substr( $spacious_version, 0, 3 );
 		?>
-		<h1><?php printf( __( 'Welcome to Spacious %s', 'spacious' ), $major_version ); ?></h1>
+		<div class="spacious-theme-info">
+			<h1><?php printf( __( 'Welcome to Spacious %s', 'spacious' ), $major_version ); ?></h1>
 
-		<div class="about-text"><?php esc_html_e( 'Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love.', 'spacious' ); ?></div>
-		<div class="spacious-badge"><?php printf( __( '%s Version %s %s', 'spacious' ), '<span class="spacious-version">', $spacious_version, '</span>' ); ?></div>
+			<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
+
+			<div class="spacious-screenshot">
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" />
+			</div>
+		</div>
 
 		<p class="spacious-actions">
 			<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e( 'Customize', 'spacious' ); ?></a>
@@ -91,10 +97,15 @@ class Spacious_Admin {
 		<h2 class="nav-tab-wrapper">
 			<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'spacious-welcome' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome' ), 'themes.php' ) ) ); ?>">
 				<?php _e( "Spacious", 'spacious' ); ?>
-			</a><a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome', 'tab' => 'changelog' ), 'themes.php' ) ) ); ?>">
+			</a>
+			<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome', 'tab' => 'changelog' ), 'themes.php' ) ) ); ?>">
 				<?php _e( 'Changelog', 'spacious' ); ?>
-			</a><a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome', 'tab' => 'supported_plugins' ), 'themes.php' ) ) ); ?>">
+			</a>
+			<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome', 'tab' => 'supported_plugins' ), 'themes.php' ) ) ); ?>">
 				<?php _e( 'Supported Plugins', 'spacious' ); ?>
+			</a>
+			<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome', 'tab' => 'free_vs_pro' ), 'themes.php' ) ) ); ?>">
+				<?php _e( 'Free Vs Pro', 'spacious' ); ?>
 			</a>
 		</h2>
 		<?php
@@ -139,14 +150,14 @@ class Spacious_Admin {
 					</div>
 
 					<div class="col">
-						<h3><?php echo esc_html_e( 'Need any support', 'spacious' ); ?></h3>
+						<h3><?php echo esc_html_e( 'Need any support?', 'spacious' ); ?></h3>
 						<p><?php esc_html_e( 'You could not setup your site and require any help regarding the theme issues? Then, we are here to help you to set it up properly.', 'spacious' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php _e( 'Support Forum', 'spacious' ); ?></a></p>
 					</div>
 
 					<div class="col">
 						<h3><?php echo esc_html_e( 'Need more exciting features', 'spacious' ); ?></h3>
-						<p><?php esc_html_e( 'You are fully satisfied with the free theme and need more of the features in the theme. Then, the pro version of this theme will provide you with more flexible options.', 'spacious' ) ?></p>
+						<p><?php esc_html_e( 'You are fully satisfied with the free theme and need more features in the theme. Then, the pro version of this theme will provide you with more flexible options.', 'spacious' ) ?></p>
 						<p><a href="<?php echo esc_url( 'http://themegrill.com/themes/spacious-pro/' ); ?>" class="button button-secondary"><?php _e( 'View Pro', 'spacious' ); ?></a></p>
 					</div>
 				</div>
@@ -173,7 +184,7 @@ class Spacious_Admin {
 
 			<?php $this->intro(); ?>
 
-			<p class="about-description"><?php esc_html_e( 'Our theme is constanly updated with more bug fixes and new feature addition. You can see some of the recent changes done in this theme.', 'spacious' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'Our theme is constanly updated with more bug fixes and new feature addition. You can see all of the changes done in this theme from below.', 'spacious' ); ?></p>
 
 			<?php
 			WP_Filesystem();
@@ -182,7 +193,7 @@ class Spacious_Admin {
 			$spacious_changelog_lines = explode(PHP_EOL, $spacious_changelog);
 			foreach($spacious_changelog_lines as $spacious_changelog_line) {
 				echo nl2br(esc_html($spacious_changelog_line));
-				echo '<br><br>';
+				echo '<br />';
 			}
 			?>
 
@@ -201,12 +212,154 @@ class Spacious_Admin {
 
 			<p class="about-description"><?php _e( 'This theme supports many plugins which are available in the WordPress plugin directory.', 'spacious' ); ?></p>
 			<ol>
-			    <li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'spacious'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
-			    <li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'spacious'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
-			    <li><?php printf(__('<a href="%s" target="_blank">Breadcrumb NavXT</a>', 'spacious'), esc_url('https://wordpress.org/plugins/breadcrumb-navxt/')); ?></li>
-			    <li><?php printf(__('<a href="%s" target="_blank">WooCommerce</a>', 'spacious'), esc_url('https://wordpress.org/plugins/woocommerce/')); ?></li>
-			    <li><?php printf(__('<a href="%s" target="_blank">Polylang</a> - Avaiable in Pro Version', 'spacious'), esc_url('https://wordpress.org/plugins/polylang/')); ?></li>
+				<li><?php printf(__('<a href="%s" target="_blank">Contact Form 7</a>', 'spacious'), esc_url('https://wordpress.org/plugins/contact-form-7/')); ?></li>
+				<li><?php printf(__('<a href="%s" target="_blank">WP-PageNavi</a>', 'spacious'), esc_url('https://wordpress.org/plugins/wp-pagenavi/')); ?></li>
+				<li><?php printf(__('<a href="%s" target="_blank">Breadcrumb NavXT</a>', 'spacious'), esc_url('https://wordpress.org/plugins/breadcrumb-navxt/')); ?></li>
+				<li><?php printf(__('<a href="%s" target="_blank">WooCommerce</a>', 'spacious'), esc_url('https://wordpress.org/plugins/woocommerce/')); ?></li>
+				<li><?php printf(__('<a href="%s" target="_blank">Polylang</a> &amp; <a href="%s" target="_blank">WPML</a> - Avaiable in Pro Version', 'spacious'), esc_url('https://wordpress.org/plugins/polylang/'), esc_url('https://wpml.org/')); ?></li>
 			</ol>
+
+		</div>
+		<?php
+	}
+
+	/**
+	 * Output the free vs pro screen.
+	 */
+	public function free_vs_pro_screen() {
+		?>
+		<div class="wrap about-wrap">
+
+			<?php $this->intro(); ?>
+
+			<p class="about-description"><?php _e( 'There are many features available in this theme already, although many more features are available in the pro version of this theme. The list can be found as below for their differences.', 'spacious' ); ?></p>
+
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th><h3><?php esc_html_e('Spacious', 'spacious'); ?></h3></th>
+						<th><h3><?php esc_html_e('Spacious Pro', 'spacious'); ?></h3></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><h3><?php esc_html_e('Slider', 'spacious'); ?></h3></td>
+						<td><?php esc_html_e('4', 'spacious'); ?></td>
+						<td><?php esc_html_e('Unlimited Slides', 'spacious'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Google Fonts Option', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><?php esc_html_e('600+', 'spacious'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Font Size options', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Primary Color', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Multiple Color Options', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><?php esc_html_e('35+ color options', 'spacious'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Additional Top Header', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><?php esc_html_e('Social Icons + Menu + Header text option', 'spacious'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Social Icons', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Boxed & Wide layout option', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Light & Dark Color skin', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Woocommerce Compatible', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Translation Ready', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('WPML Compatible', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Polylang Compatible', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Breadcrumb NavXT Compatible', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Footer Copyright Editor', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Support', 'spacious'); ?></h3></td>
+						<td><?php esc_html_e('Forum', 'spacious'); ?></td>
+						<td><?php esc_html_e('Forum + Emails/Support Ticket', 'spacious'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Services widget', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Call to Action widget', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Featured Singe page widget', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Featured widget (Recent Work/Portfolio)', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Testimonial', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Featured Posts', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('TG: Our Clients', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+				</tbody>
+			</table>
 
 		</div>
 		<?php

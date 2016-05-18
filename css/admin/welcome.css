@@ -1,56 +1,32 @@
-.about-wrap .spacious-version,
-.spacious-badge {
-    margin: 5px 0 0;
-    text-rendering: optimizeLegibility
-}
-
 .return-to-dashboard.spacious {
 	clear: both;
 }
 
-.spacious-badge {
-    background: url(images/spacious-logo.png?ver=1.3.8) center 24px no-repeat #fff;
-    -webkit-background-size: 85px 85px;
-    background-size: 85px 85px;
-    color: #78c8e6;
-    font-size: 14px;
-    text-align: center;
-    font-weight: 600;
-    padding-top: 120px;
-    height: 40px;
-    display: inline-block;
-    width: 150px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
-}
-
-.about-wrap .spacious-badge {
-    position: absolute;
-    top: 0;
-    right: 0
-}
-
-.about-wrap .spacious-version {
-    color: #fff;
-    display: block;
-    padding: 10px 0;
-    background: #0fbe7c;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .2)
-}
-
 p.spacious-actions a.skip {
-    opacity: .5
+    opacity: .5;
 }
 
 p.spacious-actions a.docs:focus,
 p.spacious-actions a.docs:hover,
 p.spacious-actions a.skip:focus,
 p.spacious-actions a.skip:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 p.spacious-actions a.button-primary,
 p.spacious-actions a.button-secondary {
-    text-decoration: none!important
+    text-decoration: none!important;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+}
+
+tr {
+	border-bottom: 2px solid #fff;
 }
