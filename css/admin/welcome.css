@@ -61,6 +61,28 @@ tr {
 .spacious-theme-info {
     display: inline-block;
 }
+.wrap table{
+	border-collapse: unset;
+}
+.wrap table th {
+  width: 33%;
+}
+.wrap table th:first-child{
+	background-color: rgba(0,0,0,0);
+}
+.wrap table th{
+	background-color: #24B37E;
+}
+.wrap table th:last-child{
+	background-color: #228B9B;
+}
+.wrap table th h3{ 
+	color: #fff
+}
+
+.wrap table td span {
+	font-size: 25px;
+}
 
 @media (max-width: 1200px) {
     .about-wrap h1 {
