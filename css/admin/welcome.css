@@ -1,5 +1,5 @@
 .return-to-dashboard.spacious {
-	clear: both;
+    clear: both;
 }
 
 p.spacious-actions a.skip {
@@ -19,14 +19,68 @@ p.spacious-actions a.button-secondary {
 }
 
 table {
-	width: 100%;
-	border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 td {
-	text-align: center;
+    text-align: center;
 }
 
 tr {
-	border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.about-wrap {
+    max-width: 100%;
+}
+
+.welcome-description-wrap {
+    float: left;
+    width: 45%;
+}
+
+.about-wrap h1,
+.about-wrap .about-text {
+    margin-right: 5%;
+}
+
+.spacious-screenshot {
+    width: 50%;
+    float: right;
+}
+
+.wrap .dashicons-no {
+    color: #FF0000;
+}
+
+.wrap .dashicons-yes {
+    color: #008000;
+}
+
+.spacious-theme-info {
+    display: inline-block;
+}
+
+@media (max-width: 1200px) {
+    .about-wrap h1 {
+        font-size: 35px;
+    }
+    .about-wrap .about-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 980px) {
+.welcome-description-wrap {
+    float: none;
+    width: 100%;
+}
+.spacious-screenshot {
+    width: 100%;
+    float: none;
+}
+.about-wrap h1, .about-wrap .about-text {
+margin-right: 0;
+}
 }

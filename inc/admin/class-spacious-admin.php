@@ -79,10 +79,12 @@ class Spacious_Admin {
 		$major_version = substr( $spacious_version, 0, 3 );
 		?>
 		<div class="spacious-theme-info">
-			<h1><?php printf( __( 'Welcome to Spacious %s', 'spacious' ), $major_version ); ?></h1>
+			<div class="welcome-description-wrap">
+				<h1><?php printf( __( 'Welcome to Spacious %s', 'spacious' ), $major_version ); ?></h1>
 
-			<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
-
+				<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
+			</div>
+		
 			<div class="spacious-screenshot">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" />
 			</div>
