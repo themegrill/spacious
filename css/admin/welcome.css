@@ -27,48 +27,46 @@ td {
     text-align: center;
 }
 
-tr {
-    border-bottom: 2px solid #fff;
-}
-
 .about-wrap {
     max-width: 100%;
 }
+.about-wrap h1 {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 38px;
+  font-weight: 600;
+}
 
 .welcome-description-wrap {
-    float: left;
-    width: 45%;
+  display: inline-block;
+  width: 100%;
+  margin: 20px 0;
+}
+.about-wrap .about-text,.spacious-screenshot {
+  margin: 20px 10px;
+  width: 47%;
+  float: left;
 }
 
-.about-wrap h1,
-.about-wrap .about-text {
-    margin-right: 5%;
+.about-wrap table td h3 {
+  margin: 20px;
+  padding-left: 20px;
+  text-align: left;
 }
-
-.spacious-screenshot {
-    width: 50%;
-    float: right;
-}
-
-.wrap .dashicons-no {
-    color: #FF0000;
-}
-
-.wrap .dashicons-yes {
-    color: #008000;
-}
-
-.spacious-theme-info {
-    display: inline-block;
-}
-.wrap table{
-	border-collapse: unset;
+.wrap table {
+  border: 1px solid #e1e1e1;
+  border-collapse: collapse;
 }
 .wrap table th {
   width: 33%;
 }
 .wrap table th:first-child{
 	background-color: rgba(0,0,0,0);
+
+}
+.about-wrap table .table-feature-title > h3 {
+  color: #404040;
 }
 .wrap table th{
 	background-color: #24B37E;
@@ -77,32 +75,48 @@ tr {
 	background-color: #228B9B;
 }
 .wrap table th h3{ 
-	color: #fff
+	color: #fff;
+    margin:15px;
 }
-
+tr:nth-child(2n) {
+  background-color: #e7e7e7;
+}
 .wrap table td span {
 	font-size: 25px;
 }
+.wrap table td .dashicons.dashicons-no {
+    color: #CE2D2D; 
+}
+.wrap table td .dashicons.dashicons-yes {
+    color: #24B37E; 
+}
+
+@media (max-width: 1400px) {
+.about-wrap h1{
+    font-size: 30px;
+}
+.about-wrap .about-text{
+  font-size: 16px;
+}
+}
 
 @media (max-width: 1200px) {
-    .about-wrap h1 {
-        font-size: 35px;
-    }
-    .about-wrap .about-text {
-        font-size: 15px;
-    }
+.about-wrap .about-text{
+  font-size: 14px;
+}
+.about-wrap table td h3,
+.about-wrap table td {
+    font-size: 14px;
+}
 }
 
 @media (max-width: 980px) {
-.welcome-description-wrap {
-    float: none;
-    width: 100%;
+    .about-wrap h1{
+    font-size: 25px;
 }
-.spacious-screenshot {
-    width: 100%;
-    float: none;
+.about-wrap .about-text,.spacious-screenshot {
+  float: none;
+  width: 100%;
 }
-.about-wrap h1, .about-wrap .about-text {
-margin-right: 0;
-}
+
 }
