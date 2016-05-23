@@ -246,7 +246,7 @@ class Spacious_Admin {
 				</thead>
 				<tbody>
 					<tr>
-						<td><h3><?php esc_html_e('Slider', 'spacious'); ?></h3></td>
+						<td><h3><?php esc_html_e('Slider', 'spacious'); ?></h3><span class="table-desc">Number of sliders.</span></td>
 						<td><?php esc_html_e('4', 'spacious'); ?></td>
 						<td><?php esc_html_e('Unlimited Slides', 'spacious'); ?></td>
 					</tr>

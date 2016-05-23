@@ -62,8 +62,15 @@ td {
   width: 33%;
 }
 .wrap table th:first-child{
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0.03);
 
+}
+.about-wrap table td .table-desc {
+  font-size: 15px;
+  margin: 20px;
+  padding-left: 20px;
+  display: block;
+  text-align: left;
 }
 .about-wrap table .table-feature-title > h3 {
   color: #404040;
