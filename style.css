@@ -713,6 +713,7 @@ li.default-menu {
 }
 .main-small-navigation li {
   background: #3A3A3A;
+  position: relative;
 }
 .main-small-navigation li:hover {
   background: #0FBE7C;
@@ -726,6 +727,10 @@ li.default-menu {
 .main-small-navigation ul > .current_page_item,
 .main-small-navigation ul > .current-menu-item {
   background: #0FBE7C;
+}
+
+.sub-toggle {
+  display: none;
 }
 
 /* =SECONDARY MENUS
@@ -1962,6 +1967,44 @@ a#scroll-up:hover {
 	#featured-slider .entry-title span { font-size: 18px; line-height: 1.4; }
 	#featured-slider .entry-content p { font-size: 14px; line-height: 1.4; }
 	#featured-slider .slider-read-more-button { font-size: 14px; padding: 5px 10px; padding: 0.5rem 1rem; }
+	   .sub-toggle {
+     background: #0FBE7C none repeat scroll 0 0;
+     color: #ffffff;
+     cursor: pointer;
+     display: block;
+     height: 24px;
+     line-height: 21px;
+     position: absolute;
+     right: 15px;
+     text-align: center;
+     top: 9px;
+     width: 24px;
+   }
+   .main-small-navigation li.current-menu-item > .sub-toggle {
+      background: #ffffff none repeat scroll 0 0;
+   }
+
+   .main-small-navigation li.current-menu-item > .sub-toggle i{
+      color: #d40234;
+   }
+   .menu-primary-container .sub-menu {
+      display: none;
+   }
+.sub-toggle span {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 23px;
+  margin-left: 6px;
+}
+
+.main-small-navigation li:hover > .sub-toggle{
+	background: #ffffff;
+	color: #0FBE7C;
+}
+.sub-toggle span.genericon-downarrow {
+  line-height: 30px;
+  margin-left: 0;
+}
 }
 @media screen and (max-width: 767px) {
 	.tg-one-half, .tg-one-third, .tg-one-fourth {
@@ -1985,6 +2028,7 @@ a#scroll-up:hover {
 	.wide-978 #primary, .narrow-978 #primary, .wide-978 #secondary, .narrow-978 #secondary {
 		width: 100%;
 	}
+
 }
 @media screen and (max-width: 600px) {
 	#featured-slider .entry-description-container { padding: 3px 6px; padding: 0.3rem 0.6rem; }
