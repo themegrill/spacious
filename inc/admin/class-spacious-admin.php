@@ -216,6 +216,8 @@ class Spacious_Admin {
 	 * Output the changelog screen.
 	 */
 	public function changelog_screen() {
+		global $wp_filesystem;
+
 		?>
 		<div class="wrap about-wrap">
 
@@ -224,14 +226,22 @@ class Spacious_Admin {
 			<p class="about-description"><?php esc_html_e( 'View changelog below.', 'spacious' ); ?></p>
 
 			<?php
-			WP_Filesystem();
-			global $wp_filesystem;
-			$spacious_changelog = $wp_filesystem->get_contents( get_template_directory().'/changelog.txt' );
-			$spacious_changelog_lines = explode(PHP_EOL, $spacious_changelog);
-			foreach($spacious_changelog_lines as $spacious_changelog_line) {
-				echo nl2br(esc_html($spacious_changelog_line));
-				echo '<br />';
-			}
+				$changelog_file = apply_filters( 'spacious_changelog_file', get_template_directory() . '/changelog.txt' );
+
+				// Check if the changelog file exists and is readable.
+				if ( $changelog_file && is_readable( $changelog_file ) ) {
+					WP_Filesystem();
+					$changelog = $wp_filesystem->get_contents( $changelog_file );
+					$changelog_lines = explode( PHP_EOL, $changelog );
+
+					echo '<pre class="changelog">';
+
+					foreach( $changelog_lines as $changelog_line ) {
+						echo esc_html( $changelog_line );
+					}
+
+					echo '</pre>';
+				}
 			?>
 
 		</div>
