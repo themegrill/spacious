@@ -246,12 +246,13 @@ class Spacious_Admin {
 	 */
 	private function parse_changelog( $content, $spacious_version ) {
 		$matches   = null;
-		$regexp    = '~==\s*Changelog\s*==\s*=\s*(.*)\s*=(.*)(=\s*Version\s*(' . preg_quote( $spacious_version ) . ')\s*=|$)~Uis';
+		$regexp    = '~==\s*Changelog\s*==\s*=\s*(.*)\s*=(.*)($)~Uis';
 		$changelog = '';
 
 		if ( preg_match( $regexp, $content, $matches ) ) {
 			$version = trim( $matches[1] );
 			$changes = explode( '\r\n', trim( $matches[2] ) );
+			$notices = (array) preg_split('~[\r\n]+~', trim( $matches[2] ) );
 
 			$changelog .= '<pre class="changelog">';
 

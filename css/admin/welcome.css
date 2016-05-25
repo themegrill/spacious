@@ -43,6 +43,10 @@ pre.changelog {
 	padding: 0 0 0 4px;
 }
 
+pre.changelog span {
+    font-weight: 700;
+}
+
 .about-wrap {
     max-width: 100%;
 }
