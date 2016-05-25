@@ -216,7 +216,7 @@ class Spacious_Admin {
 	 * Output the changelog screen.
 	 */
 	public function changelog_screen() {
-		global $wp_filesystem;
+		global $wp_filesystem, $spacious_version;
 
 		?>
 		<div class="wrap about-wrap">
@@ -226,26 +226,35 @@ class Spacious_Admin {
 			<p class="about-description"><?php esc_html_e( 'View changelog below.', 'spacious' ); ?></p>
 
 			<?php
-				$changelog_file = apply_filters( 'spacious_changelog_file', get_template_directory() . '/changelog.txt' );
+				$changelog_file = apply_filters( 'spacious_changelog_file', get_template_directory() . '/readme.txt' );
 
 				// Check if the changelog file exists and is readable.
 				if ( $changelog_file && is_readable( $changelog_file ) ) {
 					WP_Filesystem();
 					$changelog = $wp_filesystem->get_contents( $changelog_file );
-					$changelog_lines = explode( PHP_EOL, $changelog );
+					$changelog_list = $this->parse_changelog( $changelog, $spacious_version );
 
-					echo '<pre class="changelog">';
-
-					foreach( $changelog_lines as $changelog_line ) {
-						echo esc_html( $changelog_line );
-					}
-
-					echo '</pre>';
+					echo wp_kses_post( $changelog_list );
 				}
 			?>
 
 		</div>
 		<?php
+	}
+
+	/**
+	 * Parse changelog data.
+	 */
+	private function parse_changelog( $content, $spacious_version ) {
+		$matches   = null;
+		$regexp    = '~==\s*Changelog\s*==\s*=\s*(.*)\s*=(.*)(=\s*' . preg_quote( $spacious_version ) . '\s*=|$)~Uis';
+		$changelog = '';
+
+		if ( preg_match( $regexp, $content, $matches ) ) {
+			$version = trim( $matches[1] );
+
+			echo $version;
+		}
 	}
 
 	/**
