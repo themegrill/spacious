@@ -941,7 +941,49 @@ li.default-menu {
     display: none;
 }
 
+.site-header .menu-toggle {
+  background: #3a3a3a none repeat scroll 0 0;
+  border-radius: 2px;
+  color: #fff;
+  font: 0px/0 a;
+  margin: 0;
+  padding: 8px 12px;
+  text-align: center;
+}
 
+#site-navigation {
+  float: left;
+}
+
+#header-text-nav-wrap #header-right-section .widget,
+#header-text-nav-wrap {
+  padding: 0;
+}
+
+#header-right-sidebar {
+  float: right;
+  margin-top: 9px;
+}
+
+.site-header .menu-toggle::before {
+  font-size: 34px;
+  line-height: 22px;
+  margin-right: 0;
+}
+
+#header-text-nav-container {
+  position: relative;
+  margin-bottom: 15px;
+  border:none;
+}
+
+#site-navigation .menu-primary-container {
+  left: 0;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 9999;
+}
 /* =SECONDARY MENUS
 ----------------------------------------------- */
 
