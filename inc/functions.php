@@ -359,9 +359,9 @@ function spacious_custom_css() {
 			.post .entry-meta .read-more-link { background-color: '.$primary_color.'; }
 			.post .entry-meta a:hover, .type-page .entry-meta a:hover { color: '.$primary_color.'; }
 			.single #content .tags a:hover { color: '.$primary_color.'; }
-			.widget_testimonial .testimonial-icon:before { color: '.$primary_color.'; }
+			.widget_testimonial .testimonial-icon:before,.main-small-navigation li:hover > .sub-toggle { color: '.$primary_color.'; }
 			a#scroll-up { background-color: '.$primary_color.'; }
-			.search-form span { background-color: '.$primary_color.'; }';
+			.search-form span,.sub-toggle { background-color: '.$primary_color.'; }';
 	}
 
 	if( !empty( $spacious_internal_css ) ) {
