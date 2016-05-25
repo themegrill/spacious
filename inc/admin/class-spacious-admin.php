@@ -233,7 +233,6 @@ class Spacious_Admin {
 					WP_Filesystem();
 					$changelog = $wp_filesystem->get_contents( $changelog_file );
 					$changelog_list = $this->parse_changelog( $changelog, $spacious_version );
-
 					echo wp_kses_post( $changelog_list );
 				}
 			?>
@@ -247,14 +246,23 @@ class Spacious_Admin {
 	 */
 	private function parse_changelog( $content, $spacious_version ) {
 		$matches   = null;
-		$regexp    = '~==\s*Changelog\s*==\s*=\s*(.*)\s*=(.*)(=\s*' . preg_quote( $spacious_version ) . '\s*=|$)~Uis';
+		$regexp    = '~==\s*Changelog\s*==\s*=\s*(.*)\s*=(.*)(=\s*Version\s*(' . preg_quote( $spacious_version ) . ')\s*=|$)~Uis';
 		$changelog = '';
 
 		if ( preg_match( $regexp, $content, $matches ) ) {
 			$version = trim( $matches[1] );
+			$changes = explode( '\r\n', trim( $matches[2] ) );
 
-			echo $version;
+			$changelog .= '<pre class="changelog">';
+
+			foreach ( $changes as $index => $line ) {
+				$changelog .= wp_kses_post( preg_replace( '~(=\s*Version\s*(\d+(?:\.\d+)+)\s*=|$)~Uis', '<span class="title">${1}</span>', $line ) );
+			}
+
+			$changelog .= '</pre>';
 		}
+
+		return wp_kses_post( $changelog );
 	}
 
 	/**
