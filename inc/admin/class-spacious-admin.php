@@ -252,7 +252,7 @@ class Spacious_Admin {
 		if ( preg_match( $regexp, $content, $matches ) ) {
 			$version = trim( $matches[1] );
 			$changes = explode( '\r\n', trim( $matches[2] ) );
-			$notices = (array) preg_split('~[\r\n]+~', trim( $matches[2] ) );
+			$notices = (array) preg_split( '~[\r\n]+~', trim( $matches[2] ) );
 
 			$changelog .= '<pre class="changelog">';
 
