@@ -2569,50 +2569,84 @@ a#scroll-up:hover {
         line-height: 30px;
         margin-left: 0;
     }
-	.better-responsive-menu .site-header .menu-toggle {
-	    background: #3a3a3a none repeat scroll 0 0;
-	    border-radius: 2px;
-	    color: #fff;
-	    font: 0px/0 a;
-	    margin: 0;
-	    padding: 8px 12px;
-	    text-align: center;
-	}
+    .better-responsive-menu .site-header .menu-toggle {
+        background: #3a3a3a none repeat scroll 0 0;
+        border-radius: 2px;
+        color: #fff;
+        font: 0px/0 a;
+        margin: 0;
+        padding: 8px 12px;
+        text-align: center;
+    }
+    .better-responsive-menu #site-navigation {
+        float: left;
+    }
+    .better-responsive-menu #header-text-nav-wrap #header-right-section .widget,
+    .better-responsive-menu #header-text-nav-wrap {
+        padding: 0;
+    }
+    .better-responsive-menu #header-right-sidebar {
+        float: none;
+        margin-top: 9px;
+    }
+    .better-responsive-menu .site-header .menu-toggle::before {
+        font-size: 34px;
+        line-height: 22px;
+        margin-right: 0;
+    }
+    .better-responsive-menu #header-text-nav-container {
+        position: relative;
+        margin-bottom: 15px;
+        border: none;
+    }
+    .better-responsive-menu #site-navigation .menu-primary-container {
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 9999;
+    }
+    ..better-responsive-menu #header-text {
+        float: left;
+        text-align: left;
+    }
+}
 
-	.better-responsive-menu #site-navigation {
-	    float: left;
-	}
-
-	.better-responsive-menu #header-text-nav-wrap #header-right-section .widget,
-	.better-responsive-menu #header-text-nav-wrap {
-	    padding: 0;
-	}
-
-	.better-responsive-menu #header-right-sidebar {
-	    float: right;
-	    margin-top: 9px;
-	}
-
-	.better-responsive-menu .site-header .menu-toggle::before {
-	    font-size: 34px;
-	    line-height: 22px;
-	    margin-right: 0;
-	}
-
-	.better-responsive-menu #header-text-nav-container {
-	    position: relative;
-	    margin-bottom: 15px;
-	    border: none;
-	}
-
-	.better-responsive-menu #site-navigation .menu-primary-container {
-	    left: 0;
-	    position: absolute;
-	    top: 100%;
-	    width: 100%;
-	    z-index: 9999;
-	}
-
+@media (min-width: 600px) and (max-width: 768px) {
+    .better-responsive-menu #header-right-section {
+        float: right;
+        margin-top: 15px;
+        max-width: 100%;
+    }
+    .better-responsive-menu #site-navigation {
+        float: right;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .better-responsive-menu .main-small-navigation {
+        margin-top: 10px;
+    }
+    .better-responsive-menu #header-logo-image {
+        float: left;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    .better-responsive-menu #header-left-section {
+        float: left;
+        margin-top: 10px;
+    }
+    .better-responsive-menu #header-text {
+        float: left;
+        margin: 13px 0 0;
+        text-align: left;
+    }
+    .better-responsive-menu #site-description {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    .better-responsive-menu #site-title a {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -2681,6 +2715,24 @@ a#scroll-up:hover {
     .gallery-columns-9 .gallery-item {
         width: 25%;
     }
+    .better-responsive-menu #header-logo-image {
+        display: inline-block;
+    }
+    .better-responsive-menu #header-text {
+        display: inline-block;
+        float: none;
+        margin-top: 12px;
+        vertical-align: top;
+        text-align: left;
+    }
+    .better-responsive-menu #header-left-section {
+        padding-top: 10px;
+        text-align: center;
+    }
+    .better-responsive-menu #header-right-sidebar {
+        float: right;
+        margin-top: 10px;
+    }
 }
 
 @media only screen and (max-width: 420px) {
@@ -2701,6 +2753,9 @@ a#scroll-up:hover {
     .gallery-columns-8 .gallery-item,
     .gallery-columns-9 .gallery-item {
         width: 33.33%;
+    }
+    .better-responsive-menu #header-text {
+        text-align: center;
     }
 }
 
