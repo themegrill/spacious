@@ -303,6 +303,11 @@ class Spacious_Admin {
 						<td><?php esc_html_e('Unlimited Slides', 'spacious'); ?></td>
 					</tr>
 					<tr>
+						<td><h3><?php esc_html_e('Slider Settings', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><?php esc_html_e('Slides type, duration & delay time', 'spacious'); ?></td>
+					</tr>
+					<tr>
 						<td><h3><?php esc_html_e('Google Fonts Option', 'spacious'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></span></td>
 						<td><?php esc_html_e('600+', 'spacious'); ?></td>
@@ -313,14 +318,9 @@ class Spacious_Admin {
 						<td><span class="dashicons dashicons-yes"></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('Primary Color', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e('Multiple Color Options', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><?php esc_html_e('35+ color options', 'spacious'); ?></td>
+						<td><h3><?php esc_html_e('Color Palette', 'spacious'); ?></h3></td>
+						<td><?php esc_html_e('Primary Color Option', 'spacious'); ?></span></td>
+						<td><?php esc_html_e('Multiple Color Options', 'spacious'); ?></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Additional Top Header', 'spacious'); ?></h3></td>
@@ -348,6 +348,11 @@ class Spacious_Admin {
 						<td><span class="dashicons dashicons-yes"></td>
 					</tr>
 					<tr>
+						<td><h3><?php esc_html_e('Woocommerce Page Layouts', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
 						<td><h3><?php esc_html_e('Translation Ready', 'spacious'); ?></h3></td>
 						<td><span class="dashicons dashicons-yes"></td>
 						<td><span class="dashicons dashicons-yes"></td>
@@ -368,9 +373,29 @@ class Spacious_Admin {
 						<td><span class="dashicons dashicons-yes"></td>
 					</tr>
 					<tr>
+						<td><h3><?php esc_html_e('BreadCrumb Custom Text', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Author Bio', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
 						<td><h3><?php esc_html_e('Footer Copyright Editor', 'spacious'); ?></h3></td>
 						<td><span class="dashicons dashicons-no"></td>
 						<td><span class="dashicons dashicons-yes"></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Footer Widgets Column', 'spacious'); ?></h3></td>
+						<td><?php esc_html_e('One Column', 'spacious'); ?></td>
+						<td><?php esc_html_e('1,2,3,4 Columns', 'spacious'); ?></td>
+					</tr>
+					<tr>
+						<td><h3><?php esc_html_e('Demo Content', 'spacious'); ?></h3></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Support', 'spacious'); ?></h3></td>
