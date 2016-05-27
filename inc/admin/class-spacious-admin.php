@@ -216,7 +216,7 @@ class Spacious_Admin {
 	 * Output the changelog screen.
 	 */
 	public function changelog_screen() {
-		global $wp_filesystem, $spacious_version;
+		global $wp_filesystem;
 
 		?>
 		<div class="wrap about-wrap">
@@ -232,27 +232,27 @@ class Spacious_Admin {
 				if ( $changelog_file && is_readable( $changelog_file ) ) {
 					WP_Filesystem();
 					$changelog = $wp_filesystem->get_contents( $changelog_file );
-					$changelog_list = $this->parse_changelog( $changelog, $spacious_version );
+					$changelog_list = $this->parse_changelog( $changelog );
+
 					echo wp_kses_post( $changelog_list );
 				}
 			?>
-
 		</div>
 		<?php
 	}
 
 	/**
 	 * Parse changelog data.
+	 * @param  string $content
+	 * @return string
 	 */
-	private function parse_changelog( $content, $spacious_version ) {
+	private function parse_changelog( $content ) {
 		$matches   = null;
-		$regexp    = '~==\s*Changelog\s*==\s*=\s*(.*)\s*=(.*)($)~Uis';
+		$regexp    = '~==\s*Changelog\s*==(.*)($)~Uis';
 		$changelog = '';
 
 		if ( preg_match( $regexp, $content, $matches ) ) {
-			$version = trim( $matches[1] );
-			$changes = explode( '\r\n', trim( $matches[2] ) );
-			$notices = (array) preg_split( '~[\r\n]+~', trim( $matches[2] ) );
+			$changes = explode( '\r\n', trim( $matches[1] ) );
 
 			$changelog .= '<pre class="changelog">';
 
