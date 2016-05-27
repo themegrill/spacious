@@ -44,9 +44,10 @@ and we will include it within the theme from next version update.
 
 /**********************************************************/
 
-== CHANGE LOG ==
+== Changelog ==
 
 = Version 1.4.0 =
+* Sample test.
 
 = Version 1.3.9 =
 * Fix - WooCommerce shop error fixed.
