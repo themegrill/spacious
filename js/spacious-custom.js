@@ -16,11 +16,10 @@ jQuery(document).ready(function() {
         });
     });
 
-    jQuery('.menu-primary-container .menu-item-has-children').append('<span class="sub-toggle"> <span class="genericon genericon-rightarrow"></span> </span>');
+    jQuery('.menu-primary-container .menu-item-has-children').append('<span class="sub-toggle"> <span class="fa  fa-caret-right"></span> </span>');
 
     jQuery('.menu-primary-container .sub-toggle').click(function() {
         jQuery(this).parent('.menu-item-has-children').children('ul.sub-menu').first().slideToggle('1000');
-        jQuery(this).children('.genericon').first().toggleClass('genericon-downarrow');
-        jQuery(this).children('.genericon').toggleClass('genericon-rightarrow');
+        jQuery(this).children('.sub-toggle .fa').first().toggleClass('fa-caret-down fa-caret-right');
     });
 });

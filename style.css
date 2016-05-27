@@ -892,8 +892,9 @@ li.default-menu {
 }
 
 .site-header .menu-toggle:before {
-    content: '\2261';
+    content: '\f0c9';
     margin-right: 10px;
+    font-family: FontAwesome;
 }
 
 .main-small-navigation {
@@ -2571,12 +2572,14 @@ a#scroll-up:hover {
     }
     .better-responsive-menu .site-header .menu-toggle {
         background: #3a3a3a none repeat scroll 0 0;
-        border-radius: 2px;
         color: #fff;
         font: 0px/0 a;
+        height: 36px;
         margin: 0;
-        padding: 8px 12px;
+        padding: 0;
+        position: relative;
         text-align: center;
+        width: 40px;
     }
     .better-responsive-menu #site-navigation {
         float: left;
@@ -2590,10 +2593,19 @@ a#scroll-up:hover {
         margin-top: 9px;
     }
     .better-responsive-menu .site-header .menu-toggle::before {
-        font-size: 34px;
-        line-height: 22px;
+        font-size: 21px;
+        left: 50%;
+        line-height: 25px;
         margin-right: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
+
     .better-responsive-menu #header-text-nav-container {
         position: relative;
         margin-bottom: 15px;
