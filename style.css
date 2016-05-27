@@ -570,10 +570,10 @@ h3#site-title {
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-	font: normal 18px/1 'Genericons';
-	content: '\f400';
-	vertical-align: middle;
-	padding: 0 7px;
+	font: 14px/32px "FontAwesome";
+	content: '\f002';
+	vertical-align: top;
+	padding: 0 9px;
 }
 
 
@@ -1139,18 +1139,16 @@ li.default-menu {
 	text-align: left;
 }
 .widget_testimonial .testimonial-icon:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-	font: normal 22px/1 'Genericons';
-	vertical-align: top;
-	content: '\f106';
-	width: 25px;
-	height: 19px;
-	float: left;
-	margin-right: 3.06%;
-	color: #0FBE7C;
-	transform: rotate(180deg);
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 17px/1 'FontAwesome';
+    vertical-align: top;
+    content: '\f10d';
+    width: 25px;
+    height: 19px;
+    float: left;
+    margin-right: 3.06%;
+    color: #0FBE7C;
 }
 .widget_testimonial .testimonial-post {
 	padding: 20px;
@@ -1345,16 +1343,27 @@ li.default-menu {
 .comments-area article header .comment-edit-link:before,
 .comments-area article header .comment-permalink:before,
 .comments-area article header .comment-date-time:before {
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-	font: normal 22px/1 'Genericons';
-	vertical-align: top;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 22px/1 'FontAwesome';
+    vertical-align: top;
 }
-.comments-area article header .comment-author-link:before { content: '\f304'; }
-.comments-area article header .comment-edit-link:before { content: '\f411'; }
-.comments-area article header .comment-permalink:before { content: '\f107'; }
-.comments-area article header .comment-date-time:before { content: '\f307'; }
+
+.comments-area article header .comment-author-link:before {
+    content: '\f007';
+}
+
+.comments-area article header .comment-edit-link:before {
+    content: '\f044';
+}
+
+.comments-area article header .comment-permalink:before {
+    content: '\f0c1';
+}
+
+.comments-area article header .comment-date-time:before {
+    content: '\f073';
+}
 .comment-content {
 	padding: 2rem;
 	background-color: #F8F8F8;
@@ -1377,12 +1386,11 @@ li.default-menu {
 	color: #0FBE7C;
 }
 .comment .comment-reply-link:before {
-	content: '\f412';
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-	font: normal 22px/1 'Genericons';
-	vertical-align: top;
+    content: '\f075';
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 22px/1 'FontAwesome';
+    vertical-align: top;
 }
 .comment-list {
 	margin-bottom: 34px;
@@ -1619,24 +1627,26 @@ li.default-menu {
 /* =SCROLL UP
 ----------------------------------------------- */
 a#scroll-up {
-	bottom: 20px;
-	position: fixed;
-	right: 20px;
-	display: none;
-	-webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-	font: normal 26px/1 'Genericons';
-	vertical-align: top;
-	color: #FFFFFF;
-	background-color: #0FBE7C;
-	opacity: 0.5;
-	filter:alpha(opacity=50); /* For IE8 and earlier */
-	border-radius: 3px;
-	padding: 6px;
+    bottom: 20px;
+    position: fixed;
+    right: 20px;
+    display: none;
+    -webkit-font-smoothing: antialiased;
+    font: normal 26px/1 'FontAwesome';
+    vertical-align: top;
+    color: #FFFFFF;
+    background-color: #0FBE7C;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    /* For IE8 and earlier */
+    border-radius: 3px;
+    padding: 6px 12px;
 }
+
 a#scroll-up:before {
-	content: '\f432';
+    content: '\f106';
 }
+
 a#scroll-up:hover {
 	opacity: 1;
 	filter:alpha(opacity=100); /* For IE8 and earlier */
@@ -1790,16 +1800,16 @@ a#scroll-up:hover {
 .post .entry-meta .comments:before,
 .post .entry-meta .edit-link:before {
 	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-	font: normal 18px/1 'Genericons';
-	vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    font: 14px/20px "FontAwesome";
+    vertical-align: top;
+    margin-right: 8px;
 }
-.post .entry-meta .by-author:before { content: '\f304'; }
-.post .entry-meta .date:before { content: '\f307'; }
-.post .entry-meta .category:before { content: '\f301'; }
-.post .entry-meta .comments:before { content: '\f300'; }
-.post .entry-meta .edit-link:before { 	content: '\f411'; }
+.post .entry-meta .by-author:before { content: '\f007'; }
+.post .entry-meta .date:before { content: '\f073'; }
+.post .entry-meta .category:before { content: '\f07b'; }
+.post .entry-meta .comments:before { content: '\f075'; }
+.post .entry-meta .edit-link:before { 	content: '\f044'; }
 .single #content .tags {
 	margin: 30px 0;
 }
