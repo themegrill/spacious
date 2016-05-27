@@ -242,7 +242,7 @@ class Spacious_Admin {
 	}
 
 	/**
-	 * Parse changelog data.
+	 * Parse changelog from readme file.
 	 * @param  string $content
 	 * @return string
 	 */
