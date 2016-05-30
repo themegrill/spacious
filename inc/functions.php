@@ -358,7 +358,18 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: '.$primary_color.'; }
 			.widget_testimonial .testimonial-icon:before { color: '.$primary_color.'; }
 			a#scroll-up { background-color: '.$primary_color.'; }
-			.search-form span { background-color: '.$primary_color.'; }';
+			.search-form span { background-color: '.$primary_color.'; }
+			.woocommerce ul.products li.product .onsale, .woocommerce span.onsale, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button,
+			.woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt,
+			.woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce #respond input#submit.alt:hover,
+			.woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
+			.woocommerce ul.products li.product .button, .woocommerce #review_form #respond .form-submit input, .woocommerce div.product form.cart .button,
+			.woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button,
+			.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover,
+			.woocommerce input.button:hover{ background-color: '.$primary_color.'; }
+			.woocommerce ul.products li.product .price .amount, .woocommerce .woocommerce-message::before,
+			.woocommerce div.product p.price ins, .woocommerce div.product span.price ins,.price .amount{ color: '.$primary_color.'; }
+			.woocommerce .woocommerce-message{border-top-color: '.$primary_color.'}';
 	}
 
 	if( !empty( $spacious_internal_css ) ) {
