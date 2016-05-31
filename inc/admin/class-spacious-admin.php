@@ -49,9 +49,9 @@ class Spacious_Admin {
 	 * Add admin notice.
 	 */
 	public function admin_notice() {
-		global $pagenow;
+		global $spacious_version, $pagenow;
 
-		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
+		if ( version_compare( $spacious_version, '1.4.0', '=' ) || ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 		}
 	}
@@ -61,9 +61,12 @@ class Spacious_Admin {
 	 */
 	public function welcome_notice() {
 		?>
-		<div class="updated notice is-dismissible">
-			<p><?php echo sprintf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?></p>
-			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?></a></p>
+		<div id="message" class="updated spacious-message">
+			<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?></p>
+			<p class="submit">
+				<a class="button-primary" href="<?php echo esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?></a>
+				<a class="button-secondary skip" href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'spacious-hide-notice', 'welcome' ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>"><?php _e( 'Hide This Notice', 'spacious' ); ?></a>
+			</p>
 		</div>
 		<?php
 	}
@@ -75,6 +78,7 @@ class Spacious_Admin {
 	 */
 	private function intro() {
 		global $spacious_version;
+
 		$theme = wp_get_theme( get_template() );
 
 		// Drop minor version if 0
