@@ -57,6 +57,7 @@ class Spacious_Admin {
 		// Let's bail on theme activation.
 		if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
+			update_option( 'spacious_admin_notice_welcome', 1 );
 
 		// No option? Let run the notice wizard again..
 		} elseif( ! get_option( 'spacious_admin_notice_welcome' ) ) {
