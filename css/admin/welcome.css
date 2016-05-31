@@ -27,26 +27,6 @@ td {
     text-align: center;
 }
 
-pre.changelog {
-	font-size: 12px;
-	background-color: #f5f5f5;
-	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #f5f5f5), color-stop(50%, #e6e6e6));
-	background-image: -webkit-linear-gradient(#f5f5f5 50%, #e6e6e6 50%);
-	background-image: linear-gradient(#f5f5f5 50%,#e6e6e6 50%);
-	background-size: 38px 38px;
-	border: 1px solid #d4d4d4;
-	display: block;
-	line-height: 19px;
-	margin-bottom: 10px;
-	overflow: visible;
-	overflow-y: hidden;
-	padding: 0 0 0 4px;
-}
-
-pre.changelog span {
-    font-weight: 700;
-}
-
 .about-wrap {
     max-width: 100%;
 }
@@ -101,7 +81,7 @@ pre.changelog span {
 .wrap table th:last-child{
 	background-color: #228B9B;
 }
-.wrap table th h3{
+.wrap table th h3{ 
 	color: #fff;
     margin:15px;
 }
@@ -112,11 +92,29 @@ tr:nth-child(2n) {
 	font-size: 25px;
 }
 .wrap table td .dashicons.dashicons-no {
-    color: #CE2D2D;
+    color: #CE2D2D; 
 }
 .wrap table td .dashicons.dashicons-yes {
-    color: #24B37E;
+    color: #24B37E; 
 }
+table tr .btn-wrapper {
+    padding: 10px 0;
+}
+
+table tr .btn-wrapper .button {
+    background-color: #228b9b;
+    color: #fff;
+    font-size: 14px;
+    line-height: 0;
+    padding: 27px 0;
+    width: 59%;
+}
+
+table tr .btn-wrapper .button:hover {
+    background: #097282 none repeat scroll 0 0;
+    color: #fff;
+}
+
 
 @media (max-width: 1400px) {
 .about-wrap h1{
