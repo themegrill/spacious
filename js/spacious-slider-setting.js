@@ -3,7 +3,7 @@
  *
  * Contains all the slider settings for the featured post/page slider.
  */
-jQuery( window ).load( function () {
+jQuery(document).ready(function(){
 	jQuery( '.slider-cycle' ).cycle({
 		fx: 'fade',
 		timeout: 4000,
@@ -15,6 +15,7 @@ jQuery( window ).load( function () {
 		pauseOnHover: true,
 		autoHeight: 'container',
 		swipe: true,
-		swipeFx: 'scrollHorz'
+		swipeFx: 'scrollHorz',
+		log: false
 	});
 });

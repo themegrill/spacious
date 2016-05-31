@@ -48,6 +48,7 @@ and we will include it within the theme from next version update.
 
 = Version 1.4.0 =
 * Tweaks - Introduced welcome page for theme.
+* Fix - Removed deprecated load() function used for slider-setting script.
 
 = Version 1.3.9 =
 * Fix - WooCommerce shop error fixed.
