@@ -332,78 +332,78 @@ class Spacious_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Font Size options', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Color Palette', 'spacious'); ?></h3></td>
-						<td><?php esc_html_e('Primary Color Option', 'spacious'); ?></span></td>
-						<td><?php esc_html_e('Multiple Color Options', 'spacious'); ?></span></td>
+						<td><?php esc_html_e('Primary Color Option', 'spacious'); ?></td>
+						<td><?php esc_html_e('Multiple Color Options', 'spacious'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Additional Top Header', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
 						<td><?php esc_html_e('Social Icons + Menu + Header text option', 'spacious'); ?></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Social Icons', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Boxed & Wide layout option', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Light & Dark Color skin', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Woocommerce Compatible', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Woocommerce Page Layouts', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Translation Ready', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('WPML Compatible', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Polylang Compatible', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Breadcrumb NavXT Compatible', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('BreadCrumb Custom Text', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Author Bio', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Footer Copyright Editor', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('Footer Widgets Column', 'spacious'); ?></h3></td>
@@ -422,38 +422,38 @@ class Spacious_Admin {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Services widget', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Call to Action widget', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Featured Singe page widget', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Featured widget (Recent Work/Portfolio)', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Testimonial', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-yes"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Featured Posts', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e('TG: Our Clients', 'spacious'); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></td>
-						<td><span class="dashicons dashicons-yes"></td>
+						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 				</tbody>
 			</table>
