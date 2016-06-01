@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 
 = Version 1.4.0 =
+* Tweaks - Updated theme tags as per new introduced tags
 * Tweaks - Introduced welcome page for theme.
 * Fix - Removed deprecated load() function used for slider-setting script.
 
