@@ -254,7 +254,7 @@ class Spacious_Admin {
 
 			<?php $this->intro(); ?>
 
-			<p class="about-description"><?php esc_html_e( 'View changelog below.', 'spacious' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'View changelog below:', 'spacious' ); ?></p>
 
 			<?php
 				$changelog_file = apply_filters( 'spacious_changelog_file', get_template_directory() . '/readme.txt' );
@@ -306,7 +306,7 @@ class Spacious_Admin {
 
 			<?php $this->intro(); ?>
 
-			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins.', 'spacious' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins:', 'spacious' ); ?></p>
 			<ol>
 				<li><?php printf(__('<a href="%s" target="_blank">Social Icons</a>', 'spacious'), esc_url('https://wordpress.org/plugins/social-icons/')); ?>
 					<?php esc_html_e(' by ThemeGrill', 'spacious'); ?>
