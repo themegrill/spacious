@@ -130,11 +130,11 @@ class Spacious_Admin {
 		<p class="spacious-actions">
 			<a href="<?php echo esc_url( 'http://themegrill.com/themes/spacious/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'spacious' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'spacious_pro_theme_url', 'http://demo.themegrill.com/spacious/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'spacious' ); ?></a>
+			<a href="<?php echo esc_url( 'http://demo.themegrill.com/spacious/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'spacious' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'spacious_pro_theme_url', 'http://themegrill.com/themes/spacious-pro/' ) ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'spacious' ); ?></a>
+			<a href="<?php echo esc_url( 'http://themegrill.com/themes/spacious-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'spacious' ); ?></a>
 
-			<a href="<?php echo esc_url( apply_filters( 'spacious_pro_theme_url', 'http://wordpress.org/support/view/theme-reviews/spacious?filter=5' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'spacious' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/spacious?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'spacious' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
