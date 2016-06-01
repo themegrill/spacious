@@ -112,11 +112,11 @@ class Spacious_Admin {
 		$major_version = substr( $spacious_version, 0, 3 );
 		?>
 		<div class="spacious-theme-info">
-				<h1>
-					<?php esc_html_e('About', 'spacious'); ?>
-					<?php echo $theme->display( 'Name' ); ?>
-					<?php printf( esc_html__( '%s', 'spacious' ), $major_version ); ?>
-				</h1>
+			<h1>
+				<?php esc_html_e('About', 'spacious'); ?>
+				<?php echo $theme->display( 'Name' ); ?>
+				<?php printf( '%s', $major_version ); ?>
+			</h1>
 
 			<div class="welcome-description-wrap">
 				<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
