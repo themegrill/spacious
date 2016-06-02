@@ -321,7 +321,7 @@ class Spacious_Admin {
 				<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/polylang/' ); ?>" target="_blank"><?php esc_html_e( 'Polylang', 'spacious' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'spacious'); ?>
 				</li>
-				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WMPL', 'spacious' ); ?></a>
+				<li><a href="<?php echo esc_url( 'https://wpml.org/' ); ?>" target="_blank"><?php esc_html_e( 'WPML', 'spacious' ); ?></a>
 					<?php esc_html_e('Fully Compatible in Pro Version', 'spacious'); ?>
 				</li>
 			</ol>
