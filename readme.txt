@@ -34,7 +34,7 @@ Get theme instruction at http://themegrill.com/theme-instruction/spacious
 Get free support at http://themegrill.com/support-forum
 
 = Theme Features Usage =
-All available options can be used from Appearance->Theme Options
+All available options can be used from Appearance->Customize
 
 /**********************************************************/
 
