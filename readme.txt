@@ -45,6 +45,8 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version 1.4.0.1 =
+* Tweaks - HTML tags removed from the string translation.
 
 = Version 1.4.0 =
 * Tweaks - Updated theme tags as per new introduced tags
