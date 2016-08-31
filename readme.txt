@@ -46,7 +46,8 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
-* Updated the theme tags
+* Tweaks - Removed Portugese (Brazil) language file as 100% translation now available at wordpress.org
+* Tweaks - Updated the theme tags
 
 = Version 1.4.0.1 =
 * Tweaks - HTML tags removed from the string translation.
