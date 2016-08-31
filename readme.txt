@@ -46,6 +46,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Tweaks - Removed French language file as 100% translation now available at wordpress.org
 * Tweaks - Removed Italian language file as 100% translation now available at wordpress.org
 * Tweaks - Removed Portugese (Brazil) language file as 100% translation now available at wordpress.org
 * Tweaks - Updated the theme tags
