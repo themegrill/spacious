@@ -466,7 +466,7 @@ class Spacious_Admin {
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e('TG: Featured Singe page widget', 'spacious'); ?></h3></td>
+						<td><h3><?php esc_html_e('TG: Featured Single page widget', 'spacious'); ?></h3></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
