@@ -183,6 +183,9 @@ function spacious_body_class( $classes ) {
 	elseif( $layout_meta == 'no_sidebar_full_width' ) { $classes[] = 'no-sidebar-full-width'; }
 	elseif( $layout_meta == 'no_sidebar_content_centered' ) { $classes[] = 'no-sidebar'; }
 
+	if( spacious_options( 'spacious_new_menu', '1' ) == '1' ){
+		$classes[] = 'better-responsive-menu';
+	}
 
 	if ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) == 'blog_medium_alternate' ) {
 		$classes[] = 'blog-alternate-medium';
@@ -356,9 +359,9 @@ function spacious_custom_css() {
 			.post .entry-meta .read-more-link { background-color: '.$primary_color.'; }
 			.post .entry-meta a:hover, .type-page .entry-meta a:hover { color: '.$primary_color.'; }
 			.single #content .tags a:hover { color: '.$primary_color.'; }
-			.widget_testimonial .testimonial-icon:before { color: '.$primary_color.'; }
+			.widget_testimonial .testimonial-icon:before,.main-small-navigation li:hover > .sub-toggle { color: '.$primary_color.'; }
 			a#scroll-up { background-color: '.$primary_color.'; }
-			.search-form span { background-color: '.$primary_color.'; }';
+			.search-form span,.sub-toggle { background-color: '.$primary_color.'; }';
 	}
 
 	if( !empty( $spacious_internal_css ) ) {
