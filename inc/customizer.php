@@ -679,20 +679,6 @@ add_action('customize_register', 'spacious_customize_register');
 
 /*****************************************************************************************/
 
-/**
- * Enqueue scripts for customizer
- */
-function spacious_customizer_js() {
-   wp_enqueue_script( 'spacious_customizer_script', get_template_directory_uri() . '/js/spacious_customizer.js', array("jquery"), 'false', true  );
-
-   wp_localize_script( 'spacious_customizer_script', 'spacious_customizer_obj', array(
-
-      'pro' => __('View PRO version','spacious')
-
-   ) );
-}
-add_action( 'customize_controls_enqueue_scripts', 'spacious_customizer_js' );
-
 /*
  * Custom Scripts
  */
