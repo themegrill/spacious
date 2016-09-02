@@ -17,25 +17,29 @@ function spacious_customize_register($wp_customize) {
       public function render_content() {
          //Add Theme instruction, Support Forum, Demo Link, Rating Link
          $important_links = array(
+            'view-pro' => array(
+               'link' => esc_url('http://themegrill.com/themes/spacious-pro/'),
+               'text' => esc_html__('View Pro', 'spacious'),
+            ),
             'theme-info' => array(
                'link' => esc_url('http://themegrill.com/themes/spacious/'),
-               'text' => __('Theme Info', 'spacious'),
+               'text' => esc_html__('Theme Info', 'spacious'),
             ),
             'support' => array(
                'link' => esc_url('http://themegrill.com/support-forum/'),
-               'text' => __('Support Forum', 'spacious'),
+               'text' => esc_html__('Support Forum', 'spacious'),
             ),
             'documentation' => array(
                'link' => esc_url('http://themegrill.com/theme-instruction/spacious/'),
-               'text' => __('Documentation', 'spacious'),
+               'text' => esc_html__('Documentation', 'spacious'),
             ),
             'demo' => array(
                'link' => esc_url('http://demo.themegrill.com/spacious/'),
-               'text' => __('View Demo', 'spacious'),
+               'text' => esc_html__('View Demo', 'spacious'),
             ),
             'rating' => array(
                'link' => esc_url('http://wordpress.org/support/view/theme-reviews/spacious?filter=5'),
-               'text' => __('Rate this theme', 'spacious'),
+               'text' => esc_html__('Rate this theme', 'spacious'),
             ),
          );
          foreach ($important_links as $important_link) {
