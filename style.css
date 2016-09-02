@@ -2024,3 +2024,56 @@ a#scroll-up:hover {
 .date .updated {
   display: none;
 }
+/* Woocommerce CSS
+----------------------------------------------- */
+
+.woocommerce ul.products li.product a img,
+.woocommerce div.product div.images img:hover {
+    opacity: 1;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce ul.products li.product .button,
+.woocommerce #review_form #respond .form-submit input,
+.woocommerce div.product form.cart .button,
+.woocommerce .woocommerce-error .button,
+.woocommerce .woocommerce-info .button,
+.woocommerce .woocommerce-message .button,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+    color: #fff;
+}
+
+.woocommerce ul.products li.product .price del,
+.woocommerce div.product p.price del .amount,
+.woocommerce div.product span.price del .amount {
+    display: inline-block;
+    color: #a1a1a1;
+}
+
+.woocommerce ul.products li.product .price ins {
+    text-decoration: none;
+}
+
+.woocommerce ul.products li.product .price del .amount {
+    color: #a1a1a1;
+    margin-right: 10px;
+}
+
+.woocommerce .star-rating span::before,
+.woocommerce p.stars a::before {
+    color: #FFD700;
+}
