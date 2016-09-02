@@ -30,7 +30,7 @@ function spacious_customize_register($wp_customize) {
                'text' => esc_html__('Support Forum', 'spacious'),
             ),
             'documentation' => array(
-               'link' => esc_url('http://themegrill.com/theme-instruction/spacious/'),
+               'link' => esc_url('http://docs.themegrill.com/spacious/'),
                'text' => esc_html__('Documentation', 'spacious'),
             ),
             'demo' => array(
@@ -45,17 +45,7 @@ function spacious_customize_register($wp_customize) {
          foreach ($important_links as $important_link) {
             echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
          }
-         ?>
-         <div align="center" style="padding:5px; background-color:#fafafa;border: 1px solid #CCC;margin-bottom: 10px;">
-            <strong><?php esc_attr_e( 'If you like our work. Buy us a beer.', 'spacious' ); ?></strong>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-               <input type="hidden" name="cmd" value="_s-xclick">
-               <input type="hidden" name="hosted_button_id" value="8AHDCA8CDGAJG">
-               <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal">
-               <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-            </form>
-         </div>
-         <?php
+
       }
 
    }
