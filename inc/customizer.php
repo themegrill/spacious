@@ -431,7 +431,7 @@ function spacious_customize_register($wp_customize) {
    ));
 
    $wp_customize->add_control(new spacious_Custom_CSS_Control($wp_customize, $spacious_themename.'[spacious_custom_css]', array(
-      'label' => __('Write your custom css.', 'spacious'),
+      'label' => __('Write your Custom CSS.', 'spacious'),
       'section' => 'spacious_custom_css_setting',
       'settings' => $spacious_themename.'[spacious_custom_css]'
    )));
