@@ -223,16 +223,20 @@ class Spacious_Admin {
 					<div class="col">
 						<h3>
 							<?php
-							esc_html_e( 'Translate', 'spacious' );
-							echo ' ' . $theme->display( 'Name' );
+							printf(
+								esc_html__('Translate %s', 'spacious'),
+								$theme->display( 'Name' )
+							)
 							?>
 						</h3>
 						<p><?php esc_html_e( 'Click below to translate this theme into your own language.', 'spacious' ) ?></p>
 						<p>
 							<a href="<?php echo esc_url( 'http://translate.wordpress.org/projects/wp-themes/spacious' ); ?>" class="button button-secondary">
 								<?php
-								esc_html_e( 'Translate', 'spacious' );
-								echo ' ' . $theme->display( 'Name' );
+								printf(
+									esc_html__('Translate %s', 'spacious'),
+									$theme->display( 'Name' )
+								)
 								?>
 							</a>
 						</p>
