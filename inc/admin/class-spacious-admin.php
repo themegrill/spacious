@@ -34,7 +34,9 @@ class Spacious_Admin {
 		$theme = wp_get_theme( get_template() );
 
 		$page = add_theme_page(
+			/* translators: %s is theme name. */
 			sprintf( esc_html__('About %s', 'spacious'), $theme->display( 'Name' ) ),
+			/* translators: %s is theme name. */
 			sprintf( esc_html__('About %s', 'spacious'), $theme->display( 'Name' ) ),
 			'activate_plugins',
 			'spacious-welcome',
@@ -118,8 +120,8 @@ class Spacious_Admin {
 		?>
 		<div class="spacious-theme-info">
 			<h1>
-				<?php /* translators: %s is theme name. */
-							printf(
+				<?php
+							printf( /* translators: %s is theme name. */
 								esc_html__('About %s', 'spacious'),
 									$theme->display( 'Name' )
 									.' '
@@ -235,6 +237,7 @@ class Spacious_Admin {
 							<a href="<?php echo esc_url( 'http://translate.wordpress.org/projects/wp-themes/spacious' ); ?>" class="button button-secondary">
 								<?php
 								printf(
+									/* translators: %s is theme name. */
 									esc_html__('Translate %s', 'spacious'),
 									$theme->display( 'Name' )
 								)
