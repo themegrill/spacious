@@ -224,6 +224,7 @@ class Spacious_Admin {
 						<h3>
 							<?php
 							printf(
+							 /* translators: %s is theme name. */
 								esc_html__('Translate %s', 'spacious'),
 								$theme->display( 'Name' )
 							)
