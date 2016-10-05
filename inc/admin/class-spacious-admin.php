@@ -33,7 +33,12 @@ class Spacious_Admin {
 	public function admin_menu() {
 		$theme = wp_get_theme( get_template() );
 
-		$page = add_theme_page( esc_html__( 'About', 'spacious' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'spacious' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'spacious-welcome', array( $this, 'welcome_screen' ) );
+		$page = add_theme_page(
+			sprintf( esc_html__('About %s', 'spacious'), $theme->display( 'Name' ) ),
+			sprintf( esc_html__('About %s', 'spacious'), $theme->display( 'Name' ) ),
+			'activate_plugins',
+			'spacious-welcome',
+			array( $this, 'welcome_screen' ) );
 		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 	}
 
@@ -113,9 +118,13 @@ class Spacious_Admin {
 		?>
 		<div class="spacious-theme-info">
 			<h1>
-				<?php esc_html_e('About', 'spacious'); ?>
-				<?php echo $theme->display( 'Name' ); ?>
-				<?php printf( '%s', $major_version ); ?>
+				<?php /* translators: %s is theme name. */
+							printf(
+								esc_html__('About %s', 'spacious'),
+									$theme->display( 'Name' )
+									.' '
+									. sprintf( '%s', $major_version )
+							); ?>
 			</h1>
 
 			<div class="welcome-description-wrap">
