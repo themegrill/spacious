@@ -134,7 +134,7 @@ class Spacious_Admin {
 
 			<a href="<?php echo esc_url( 'http://themegrill.com/themes/spacious-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'spacious' ); ?></a>
 
-			<a href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/spacious?filter=5#postform' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'spacious' ); ?></a>
+			<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/spacious/reviews/?rate=5#new-post' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'spacious' ); ?></a>
 		</p>
 
 		<h2 class="nav-tab-wrapper">
