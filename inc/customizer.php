@@ -59,7 +59,7 @@ function spacious_customize_register($wp_customize) {
     */
    $wp_customize->add_setting('spacious_important_links', array(
       'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'spacious_links_sanitize'
+      'sanitize_callback' => 'spacious_false_sanitize'
    ));
 
    $wp_customize->add_control(new Spacious_Important_Links($wp_customize, 'important_links', array(
@@ -669,7 +669,7 @@ function spacious_customize_register($wp_customize) {
    }
 
    // sanitization of links
-   function spacious_links_sanitize() {
+   function spacious_false_sanitize() {
       return false;
    }
 
