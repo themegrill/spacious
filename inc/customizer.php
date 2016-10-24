@@ -509,22 +509,24 @@ function spacious_customize_register($wp_customize) {
 		}
 	}
 
-	// Slider Section.
-	$wp_customize->add_section( 'spacious_slider_section', array(
-		'priority'    => 700,
-		'title'       => esc_html__( 'Slider', 'spacious' ),
-		'description' => sprintf( esc_html__( 'We are delivering slider option via plugin. So, please use our %sSpacious Campanion%s plugin to add slider in your site.', 'spacious' ), '<a href="https://wordpress.org/plugins/spacious-campanion/" target="_blank">', '</a>' )
-	) );
+	// Slider Section (Deprecated).
+	if ( ! is_plugin_active( 'spacious-companion/spacious-companion.php' ) ) {
+		$wp_customize->add_section( 'spacious_slider_section', array(
+			'priority'    => 700,
+			'title'       => esc_html__( 'Slider', 'spacious' ),
+			'description' => sprintf( esc_html__( 'We are delivering slider option via plugin. So, please use our %sSpacious Campanion%s plugin to add slider in your site.', 'spacious' ), '<a href="https://wordpress.org/plugins/spacious-campanion/" target="_blank">', '</a>' )
+		) );
 
-	$wp_customize->add_setting( 'spacious_slider_setting', array(
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_false_sanitize'
-	) );
+		$wp_customize->add_setting( 'spacious_slider_setting', array(
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_false_sanitize'
+		) );
 
-	$wp_customize->add_control( new Spacious_Section_Information( $wp_customize, 'spacious_slider_setting', array(
-		'section' => 'spacious_slider_section',
-		'setting' => 'spacious_slider_setting',
-	) ) );
+		$wp_customize->add_control( new Spacious_Section_Information( $wp_customize, 'spacious_slider_setting', array(
+			'section' => 'spacious_slider_section',
+			'setting' => 'spacious_slider_setting',
+		) ) );
+	}
 
    // Start of data sanitization
    // radio/select sanitization
