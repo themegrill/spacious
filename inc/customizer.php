@@ -9,51 +9,50 @@
 
 function spacious_customize_register($wp_customize) {
 
-   // Theme important links started
-   class Spacious_Important_Links extends WP_Customize_Control {
+	// Theme important links started
+	class Spacious_Important_Links extends WP_Customize_Control {
 
-      public $type = "spacious-important-links";
+		public $type = "spacious-important-links";
 
-      public function render_content() {
-         //Add Theme instruction, Support Forum, Demo Link, Rating Link
-         $important_links = array(
-            'view-pro' => array(
-               'link' => esc_url('http://themegrill.com/themes/spacious-pro/'),
-               'text' => esc_html__('View Pro', 'spacious'),
-            ),
-            'theme-info' => array(
-               'link' => esc_url('http://themegrill.com/themes/spacious/'),
-               'text' => esc_html__('Theme Info', 'spacious'),
-            ),
-            'support' => array(
-               'link' => esc_url('http://themegrill.com/support-forum/'),
-               'text' => esc_html__('Support Forum', 'spacious'),
-            ),
-            'documentation' => array(
-               'link' => esc_url('http://docs.themegrill.com/spacious/'),
-               'text' => esc_html__('Documentation', 'spacious'),
-            ),
-            'demo' => array(
-               'link' => esc_url('http://demo.themegrill.com/spacious/'),
-               'text' => esc_html__('View Demo', 'spacious'),
-            ),
-            'rating' => array(
-               'link' => esc_url('http://wordpress.org/support/view/theme-reviews/spacious?filter=5'),
-               'text' => esc_html__('Rate this theme', 'spacious'),
-            ),
-         );
-         foreach ($important_links as $important_link) {
-            echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
-         }
+		public function render_content() {
+			// Add Theme instruction, Support Forum, Demo Link, Rating Link
+			$important_links = array(
+				'view-pro' => array(
+					'link' => esc_url('http://themegrill.com/themes/spacious-pro/'),
+					'text' => esc_html__('View Pro', 'spacious'),
+				),
+				'theme-info' => array(
+					'link' => esc_url('http://themegrill.com/themes/spacious/'),
+					'text' => esc_html__('Theme Info', 'spacious'),
+				),
+				'support' => array(
+					'link' => esc_url('http://themegrill.com/support-forum/'),
+					'text' => esc_html__('Support Forum', 'spacious'),
+				),
+				'documentation' => array(
+					'link' => esc_url('http://docs.themegrill.com/spacious/'),
+					'text' => esc_html__('Documentation', 'spacious'),
+				),
+				'demo' => array(
+					'link' => esc_url('http://demo.themegrill.com/spacious/'),
+					'text' => esc_html__('View Demo', 'spacious'),
+				),
+				'rating' => array(
+					'link' => esc_url('http://wordpress.org/support/view/theme-reviews/spacious?filter=5'),
+					'text' => esc_html__('Rate this theme', 'spacious'),
+				),
+			);
 
-      }
+			foreach ( $important_links as $important_link ) {
+				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
+			}
+		}
+	}
 
-   }
-
-   $wp_customize->add_section('spacious_important_links', array(
-      'priority' => 1,
-      'title' => __('Spacious Important Links', 'spacious'),
-   ));
+	$wp_customize->add_section( 'spacious_important_links', array(
+		'priority' => 1,
+		'title' => __( 'Spacious Important Links', 'spacious' ),
+	) );
 
    /**
     * This setting has the dummy Sanitization function as it contains no value to be sanitized
@@ -511,21 +510,134 @@ function spacious_customize_register($wp_customize) {
 
 	// Slider Section (Deprecated).
 	if ( ! is_plugin_active( 'spacious-companion/spacious-companion.php' ) ) {
-		$wp_customize->add_section( 'spacious_slider_section', array(
-			'priority'    => 700,
-			'title'       => esc_html__( 'Slider', 'spacious' ),
-			'description' => sprintf( esc_html__( 'We are delivering slider option via plugin. So, please use our %sSpacious Campanion%s plugin to add slider in your site.', 'spacious' ), '<a href="https://wordpress.org/plugins/spacious-campanion/" target="_blank">', '</a>' )
+
+		$wp_customize->add_panel( 'spacious_slider_options', array(
+			'priority'   => 515,
+			'capability' => 'edit_theme_options',
+			'title'      => __( 'Slider', 'spacious-companion' ),
 		) );
 
-		$wp_customize->add_setting( 'spacious_slider_setting', array(
+		// Activate Slider.
+		$wp_customize->add_section( 'spacious_slider_activate_section', array(
+			'title'    => __( 'Activate slider', 'spacious-companion' ),
+			'priority' => 1,
+			'panel'    => 'spacious_slider_options',
+			'description' => sprintf( esc_html__( 'We are delivering slider option via plugin. So, please use our %sSpacious Campanion%s plugin to add slider in your site.', 'spacious' ), '<a href="https://wordpress.org/plugins/spacious-campanion/" target="_blank">', '</a>' ),
+		) );
+
+		$wp_customize->add_setting( $spacious_themename . '[spacious_activate_slider]', array(
+			'default'           => 0,
+			'type'              => 'option',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_false_sanitize'
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
 		) );
 
-		$wp_customize->add_control( new Spacious_Section_Information( $wp_customize, 'spacious_slider_setting', array(
-			'section' => 'spacious_slider_section',
-			'setting' => 'spacious_slider_setting',
-		) ) );
+		$wp_customize->add_control( $spacious_themename . '[spacious_activate_slider]', array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Check to activate slider.', 'spacious-companion' ),
+			'section' => 'spacious_slider_activate_section',
+			'setting' => $spacious_themename . '[spacious_activate_slider]',
+		) );
+
+		// Disable blog page slider.
+		$wp_customize->add_section( 'spacious_disable_slider_blog_page_section', array(
+			'title'    => __( 'Disable slider in Posts page', 'spacious-companion' ),
+			'priority' => 2,
+			'panel'    => 'spacious_slider_options',
+		) );
+
+		$wp_customize->add_setting( $spacious_themename . '[spacious_blog_slider]', array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		) );
+
+		$wp_customize->add_control( $spacious_themename . '[spacious_blog_slider]', array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Check to disable slider in Posts Page.', 'spacious-companion' ),
+			'section' => 'spacious_disable_slider_blog_page_section',
+			'setting' => $spacious_themename . '[spacious_blog_slider]',
+		) );
+
+		for ( $i = 1; $i <= 5; $i++ ) {
+			// Adding slider section.
+			$wp_customize->add_section( 'spacious_slider_number_section' . $i, array(
+				'title'    => sprintf( __( 'Image Upload #%1$s', 'spacious-companion' ), $i ),
+				'priority' => 10,
+				'panel'    => 'spacious_slider_options',
+			) );
+
+			// Adding slider image url.
+			$wp_customize->add_setting( $spacious_themename . '[spacious_slider_image' . $i . ']', array(
+				'default'           => '',
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'esc_url_raw',
+			) );
+
+			$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_slider_image' . $i . ']', array(
+				'label'   => __( 'Upload slider image.', 'spacious-companion' ),
+				'section' => 'spacious_slider_number_section' . $i,
+				'setting' => $spacious_themename . '[spacious_slider_image' . $i . ']',
+			) ) );
+
+			// Adding slider title.
+			$wp_customize->add_setting( $spacious_themename . '[spacious_slider_title' . $i . ']', array(
+				'default'           => '',
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+
+			$wp_customize->add_control( $spacious_themename . '[spacious_slider_title' . $i . ']', array(
+				'label'   => __( 'Enter title for your slider.', 'spacious-companion' ),
+				'section' => 'spacious_slider_number_section' . $i,
+				'setting' => $spacious_themename . '[spacious_slider_title' . $i . ']',
+			) );
+
+			// Adding slider description.
+			$wp_customize->add_setting( $spacious_themename . '[spacious_slider_text' . $i . ']', array(
+				'default'           => '',
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'spacious_text_sanitize',
+			) );
+
+			$wp_customize->add_control( new Spacious_Text_Area_Control( $wp_customize, $spacious_themename . '[spacious_slider_text' . $i . ']', array(
+				'label'   => __( 'Enter your slider description.', 'spacious-companion' ),
+				'section' => 'spacious_slider_number_section' . $i,
+				'setting' => $spacious_themename . '[spacious_slider_text' . $i . ']',
+			) ) );
+
+			// Adding slider button text.
+			$wp_customize->add_setting( $spacious_themename . '[spacious_slider_button_text' . $i . ']', array(
+				'default'           => __( 'Read more', 'spacious-companion' ),
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'wp_filter_nohtml_kses',
+			) );
+
+			$wp_customize->add_control( $spacious_themename . '[spacious_slider_button_text' . $i . ']', array(
+				'label'   => __( 'Enter the button text. Default is "Read more"', 'spacious-companion' ),
+				'section' => 'spacious_slider_number_section' . $i,
+				'setting' => $spacious_themename . '[spacious_slider_button_text' . $i . ']',
+			) );
+
+			// Adding button url.
+			$wp_customize->add_setting( $spacious_themename . '[spacious_slider_link' . $i . ']', array(
+				'default'           => '',
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'esc_url_raw',
+			) );
+
+			$wp_customize->add_control( $spacious_themename . '[spacious_slider_link' . $i . ']', array(
+				'label'   => __( 'Enter link to redirect slider when clicked', 'spacious-companion' ),
+				'section' => 'spacious_slider_number_section' . $i,
+				'setting' => $spacious_themename . '[spacious_slider_link' . $i . ']',
+			) );
+		}
 	}
 
    // Start of data sanitization
