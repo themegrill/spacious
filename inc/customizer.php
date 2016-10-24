@@ -681,7 +681,6 @@ function spacious_customize_register($wp_customize) {
    function spacious_false_sanitize() {
       return false;
    }
-
 }
 add_action('customize_register', 'spacious_customize_register');
 
