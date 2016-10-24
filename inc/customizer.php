@@ -60,7 +60,7 @@ function spacious_customize_register($wp_customize) {
     */
    $wp_customize->add_setting('spacious_important_links', array(
       'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'spacious_links_sanitize'
+      'sanitize_callback' => 'spacious_false_sanitize'
    ));
 
    $wp_customize->add_control(new Spacious_Important_Links($wp_customize, 'important_links', array(
@@ -501,6 +501,31 @@ function spacious_customize_register($wp_customize) {
       }
    }
 
+	// Start of the slider option
+	class Spacious_Slider_Information extends WP_Customize_Control {
+
+		public $type = "spacious-slider-infomation";
+		public function render_content() {
+			printf( esc_html__( 'We are migrating the slider option via the plugin. So, please refer to this %splugin%s to add slider in your site.', 'spacious' ), '<a href="https://themegrill.com/plugins/spacious-campanion/" target="_blank">', '</a>' );
+		}
+
+	}
+
+	$wp_customize->add_section( 'spacious_slider_section', array(
+		'priority' => 700,
+		'title' => esc_html__( 'Slider', 'spacios' ),
+	));
+
+	$wp_customize->add_setting( 'spacious_slider_setting', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_false_sanitize'
+	) );
+
+	$wp_customize->add_control( new Spacious_Slider_Information( $wp_customize, 'spacious_slider_setting', array(
+		'section' => 'spacious_slider_section',
+		'setting' => 'spacious_slider_setting',
+	) ) );
+
    // Start of data sanitization
    // radio/select sanitization
    function spacious_radio_select_sanitize( $input, $setting ) {
@@ -539,8 +564,7 @@ function spacious_customize_register($wp_customize) {
       return $input;
    }
 
-   // sanitization of links
-   function spacious_links_sanitize() {
+   function spacious_false_sanitize() {
       return false;
    }
 
