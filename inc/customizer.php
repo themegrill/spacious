@@ -500,14 +500,6 @@ function spacious_customize_register($wp_customize) {
       }
    }
 
-	// Control section information.
-	class Spacious_Section_Information extends WP_Customize_Control {
-		public $type = "spacious-section-infomation";
-		public function render_content() {
-			return true;
-		}
-	}
-
 	// Slider Section (Deprecated).
 	if ( ! is_plugin_active( 'spacious-companion/spacious-companion.php' ) ) {
 
