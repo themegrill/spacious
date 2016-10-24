@@ -498,7 +498,6 @@ function spacious_customize_register($wp_customize) {
          </label>
       <?php
       }
-
    }
 
    // Start of the Slider Options
@@ -668,11 +667,9 @@ function spacious_customize_register($wp_customize) {
       return $input;
    }
 
-   // sanitization of links
    function spacious_false_sanitize() {
       return false;
    }
-
 }
 add_action('customize_register', 'spacious_customize_register');
 
