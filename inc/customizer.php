@@ -9,51 +9,50 @@
 
 function spacious_customize_register($wp_customize) {
 
-   // Theme important links started
-   class Spacious_Important_Links extends WP_Customize_Control {
+	// Theme important links started
+	class Spacious_Important_Links extends WP_Customize_Control {
 
-      public $type = "spacious-important-links";
+		public $type = "spacious-important-links";
 
-      public function render_content() {
-         //Add Theme instruction, Support Forum, Demo Link, Rating Link
-         $important_links = array(
-            'view-pro' => array(
-               'link' => esc_url('http://themegrill.com/themes/spacious-pro/'),
-               'text' => esc_html__('View Pro', 'spacious'),
-            ),
-            'theme-info' => array(
-               'link' => esc_url('http://themegrill.com/themes/spacious/'),
-               'text' => esc_html__('Theme Info', 'spacious'),
-            ),
-            'support' => array(
-               'link' => esc_url('http://themegrill.com/support-forum/'),
-               'text' => esc_html__('Support Forum', 'spacious'),
-            ),
-            'documentation' => array(
-               'link' => esc_url('http://docs.themegrill.com/spacious/'),
-               'text' => esc_html__('Documentation', 'spacious'),
-            ),
-            'demo' => array(
-               'link' => esc_url('http://demo.themegrill.com/spacious/'),
-               'text' => esc_html__('View Demo', 'spacious'),
-            ),
-            'rating' => array(
-               'link' => esc_url('http://wordpress.org/support/view/theme-reviews/spacious?filter=5'),
-               'text' => esc_html__('Rate this theme', 'spacious'),
-            ),
-         );
-         foreach ($important_links as $important_link) {
-            echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr($important_link['text']) . ' </a></p>';
-         }
+		public function render_content() {
+			// Add Theme instruction, Support Forum, Demo Link, Rating Link
+			$important_links = array(
+				'view-pro' => array(
+					'link' => esc_url('http://themegrill.com/themes/spacious-pro/'),
+					'text' => esc_html__('View Pro', 'spacious'),
+				),
+				'theme-info' => array(
+					'link' => esc_url('http://themegrill.com/themes/spacious/'),
+					'text' => esc_html__('Theme Info', 'spacious'),
+				),
+				'support' => array(
+					'link' => esc_url('http://themegrill.com/support-forum/'),
+					'text' => esc_html__('Support Forum', 'spacious'),
+				),
+				'documentation' => array(
+					'link' => esc_url('http://docs.themegrill.com/spacious/'),
+					'text' => esc_html__('Documentation', 'spacious'),
+				),
+				'demo' => array(
+					'link' => esc_url('http://demo.themegrill.com/spacious/'),
+					'text' => esc_html__('View Demo', 'spacious'),
+				),
+				'rating' => array(
+					'link' => esc_url('http://wordpress.org/support/view/theme-reviews/spacious?filter=5'),
+					'text' => esc_html__('Rate this theme', 'spacious'),
+				),
+			);
 
-      }
+			foreach ( $important_links as $important_link ) {
+				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
+			}
+		}
+	}
 
-   }
-
-   $wp_customize->add_section('spacious_important_links', array(
-      'priority' => 1,
-      'title' => __('Spacious Important Links', 'spacious'),
-   ));
+	$wp_customize->add_section( 'spacious_important_links', array(
+		'priority' => 1,
+		'title' => __( 'Spacious Important Links', 'spacious' ),
+	) );
 
    /**
     * This setting has the dummy Sanitization function as it contains no value to be sanitized
