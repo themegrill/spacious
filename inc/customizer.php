@@ -506,12 +506,12 @@ function spacious_customize_register($wp_customize) {
 		$wp_customize->add_panel( 'spacious_slider_options', array(
 			'priority'   => 515,
 			'capability' => 'edit_theme_options',
-			'title'      => __( 'Slider', 'spacious-companion' ),
+			'title'      => __( 'Slider', 'spacious' ),
 		) );
 
 		// Activate Slider.
 		$wp_customize->add_section( 'spacious_slider_activate_section', array(
-			'title'    => __( 'Activate slider', 'spacious-companion' ),
+			'title'    => __( 'Activate slider', 'spacious' ),
 			'priority' => 1,
 			'panel'    => 'spacious_slider_options',
 			'description' => sprintf( esc_html__( 'We are delivering slider option via plugin. So, please use our %sSpacious Campanion%s plugin to add slider in your site.', 'spacious' ), '<a href="https://wordpress.org/plugins/spacious-campanion/" target="_blank">', '</a>' ),
@@ -526,14 +526,14 @@ function spacious_customize_register($wp_customize) {
 
 		$wp_customize->add_control( $spacious_themename . '[spacious_activate_slider]', array(
 			'type'    => 'checkbox',
-			'label'   => __( 'Check to activate slider.', 'spacious-companion' ),
+			'label'   => __( 'Check to activate slider.', 'spacious' ),
 			'section' => 'spacious_slider_activate_section',
 			'setting' => $spacious_themename . '[spacious_activate_slider]',
 		) );
 
 		// Disable blog page slider.
 		$wp_customize->add_section( 'spacious_disable_slider_blog_page_section', array(
-			'title'    => __( 'Disable slider in Posts page', 'spacious-companion' ),
+			'title'    => __( 'Disable slider in Posts page', 'spacious' ),
 			'priority' => 2,
 			'panel'    => 'spacious_slider_options',
 		) );
@@ -547,7 +547,7 @@ function spacious_customize_register($wp_customize) {
 
 		$wp_customize->add_control( $spacious_themename . '[spacious_blog_slider]', array(
 			'type'    => 'checkbox',
-			'label'   => __( 'Check to disable slider in Posts Page.', 'spacious-companion' ),
+			'label'   => __( 'Check to disable slider in Posts Page.', 'spacious' ),
 			'section' => 'spacious_disable_slider_blog_page_section',
 			'setting' => $spacious_themename . '[spacious_blog_slider]',
 		) );
@@ -555,7 +555,7 @@ function spacious_customize_register($wp_customize) {
 		for ( $i = 1; $i <= 5; $i++ ) {
 			// Adding slider section.
 			$wp_customize->add_section( 'spacious_slider_number_section' . $i, array(
-				'title'    => sprintf( __( 'Image Upload #%1$s', 'spacious-companion' ), $i ),
+				'title'    => sprintf( __( 'Image Upload #%1$s', 'spacious' ), $i ),
 				'priority' => 10,
 				'panel'    => 'spacious_slider_options',
 			) );
@@ -569,7 +569,7 @@ function spacious_customize_register($wp_customize) {
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_slider_image' . $i . ']', array(
-				'label'   => __( 'Upload slider image.', 'spacious-companion' ),
+				'label'   => __( 'Upload slider image.', 'spacious' ),
 				'section' => 'spacious_slider_number_section' . $i,
 				'setting' => $spacious_themename . '[spacious_slider_image' . $i . ']',
 			) ) );
@@ -583,7 +583,7 @@ function spacious_customize_register($wp_customize) {
 			) );
 
 			$wp_customize->add_control( $spacious_themename . '[spacious_slider_title' . $i . ']', array(
-				'label'   => __( 'Enter title for your slider.', 'spacious-companion' ),
+				'label'   => __( 'Enter title for your slider.', 'spacious' ),
 				'section' => 'spacious_slider_number_section' . $i,
 				'setting' => $spacious_themename . '[spacious_slider_title' . $i . ']',
 			) );
@@ -597,21 +597,21 @@ function spacious_customize_register($wp_customize) {
 			) );
 
 			$wp_customize->add_control( new Spacious_Text_Area_Control( $wp_customize, $spacious_themename . '[spacious_slider_text' . $i . ']', array(
-				'label'   => __( 'Enter your slider description.', 'spacious-companion' ),
+				'label'   => __( 'Enter your slider description.', 'spacious' ),
 				'section' => 'spacious_slider_number_section' . $i,
 				'setting' => $spacious_themename . '[spacious_slider_text' . $i . ']',
 			) ) );
 
 			// Adding slider button text.
 			$wp_customize->add_setting( $spacious_themename . '[spacious_slider_button_text' . $i . ']', array(
-				'default'           => __( 'Read more', 'spacious-companion' ),
+				'default'           => __( 'Read more', 'spacious' ),
 				'type'              => 'option',
 				'capability'        => 'edit_theme_options',
 				'sanitize_callback' => 'wp_filter_nohtml_kses',
 			) );
 
 			$wp_customize->add_control( $spacious_themename . '[spacious_slider_button_text' . $i . ']', array(
-				'label'   => __( 'Enter the button text. Default is "Read more"', 'spacious-companion' ),
+				'label'   => __( 'Enter the button text. Default is "Read more"', 'spacious' ),
 				'section' => 'spacious_slider_number_section' . $i,
 				'setting' => $spacious_themename . '[spacious_slider_button_text' . $i . ']',
 			) );
@@ -625,7 +625,7 @@ function spacious_customize_register($wp_customize) {
 			) );
 
 			$wp_customize->add_control( $spacious_themename . '[spacious_slider_link' . $i . ']', array(
-				'label'   => __( 'Enter link to redirect slider when clicked', 'spacious-companion' ),
+				'label'   => __( 'Enter link to redirect slider when clicked', 'spacious' ),
 				'section' => 'spacious_slider_number_section' . $i,
 				'setting' => $spacious_themename . '[spacious_slider_link' . $i . ']',
 			) );
