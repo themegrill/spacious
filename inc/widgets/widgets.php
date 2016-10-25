@@ -170,14 +170,23 @@ function spacious_widgets_init() {
  * @access private
  */
 function _spacious_backup_widget_data() {
-	$widget_data['testimonial'] = get_option( 'widget_spacious_testimonial_widget' );
+	global $spacious_version;
 
-	// Update widget data options.
-	foreach ( $widget_data as $key=> $value ) {
-		update_option( 'spacious_companion_' . $key . '_widget', $value );
+	$widget_data   = array();
+	$spacious_data = get_option( 'spacious', array() );
+
+	// Empty? This is an old install :)
+	if ( ! empty( $spacious_data ) && version_compare( $spacious_version, '1.5', '>' ) ) {
+		$widget_data['testimonial'] = get_option( 'widget_spacious_testimonial_widget' );
+
+		// Store widgets data.
+		foreach ( $widget_data as $key => $value ) {
+			update_option( 'spacious_companion_' . $key . '_widget', $value );
+		}
 	}
 }
-add_action( 'widgets_init', '_spacious_backup_widget_data' );
+add_action( 'after_switch_theme', '_spacious_backup_widget_data' );
+
 
 /****************************************************************************************/
 
@@ -521,7 +530,7 @@ class spacious_testimonial_widget extends WP_Widget {
 			$instance['text'] = current_user_can( 'unfiltered_html' ) ? $new_instance['text'] : stripslashes( wp_filter_post_kses( addslashes( $new_instance['text'] ) ) ); // wp_filter_post_kses() expects slashed ;)
 		}
 
-		return apply_filters( 'spacious_testimonial_widget_settings_sanitize_option', $instance, $new_instance );
+		return apply_filters( 'spacious_widget_settings_sanitize_option', $instance, $new_instance );
 	}
 
 	function form( $instance ) {
