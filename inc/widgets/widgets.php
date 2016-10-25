@@ -502,12 +502,12 @@ class spacious_testimonial_widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		$instance['name'] = strip_tags($new_instance['name']);
 		$instance['byline'] = strip_tags($new_instance['byline']);
-		if ( current_user_can('unfiltered_html') )
-			$instance['text'] =  $new_instance['text'];
-		else
-			$instance['text'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['text']) ) ); // wp_filter_post_kses() expects slashed
-		$instance['filter'] = isset($new_instance['filter']);
-		return $instance;
+
+		if ( ! is_plugin_active( 'spacious-companion/spacious-companion.php' ) ) {
+			$instance['text'] = current_user_can( 'unfiltered_html' ) ? $new_instance['text'] : stripslashes( wp_filter_post_kses( addslashes( $new_instance['text'] ) ) ); // wp_filter_post_kses() expects slashed ;)
+		}
+
+		return apply_filters( 'spacious_testimonial_widget_settings_sanitize_option', $instance, $new_instance );
 	}
 
 	function form( $instance ) {
@@ -515,12 +515,19 @@ class spacious_testimonial_widget extends WP_Widget {
 		$title = strip_tags($instance['title']);
 		$name = strip_tags($instance['name']);
 		$byline = strip_tags($instance['byline']);
-		$text = esc_textarea($instance['text']);
-?>
+		?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e( 'Title:', 'spacious' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
-		<?php _e( 'Testimonial Description','spacious'); ?>
-		<textarea class="widefat" rows="8" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea>
+
+		<?php if ( ! is_plugin_active( 'spacious-companion/spacious-companion.php' ) ) : ?>
+			<p>
+				<label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Testimonial Description:', 'spacious' ); ?></label>
+				<textarea class="widefat" rows="8" cols="20" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>"><?php echo esc_textarea( $instance['text'] ); ?></textarea>
+				<small><?php printf( esc_html__( 'We are delivering this textarea field via our %sSpacious Campanion%s plugin.', 'spacious' ), '<a href="https://wordpress.org/plugins/spacious-campanion/" target="_blank">', '</a>' ); ?></small>
+			</p>
+		<?php endif; ?>
+
+		<?php do_action( 'spacious_testimonial_widget_after_title', $instance, $this ); ?>
 
 		<p><label for="<?php echo $this->get_field_id('name'); ?>"><?php _e( 'Name:', 'spacious' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('name'); ?>" name="<?php echo $this->get_field_name('name'); ?>" type="text" value="<?php echo esc_attr($name); ?>" /></p>
