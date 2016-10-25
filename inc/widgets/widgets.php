@@ -165,6 +165,20 @@ function spacious_widgets_init() {
 	register_widget( "spacious_recent_work_widget" );
 }
 
+/**
+ * Backup spacious widget data.
+ * @access private
+ */
+function _spacious_backup_widget_data() {
+	$widget_data['testimonial'] = get_option( 'widget_spacious_testimonial_widget' );
+
+	// Update widget data options.
+	foreach ( $widget_data as $key=> $value ) {
+		update_option( 'spacious_companion_' . $key . '_widget', $value );
+	}
+}
+add_action( 'widgets_init', '_spacious_backup_widget_data' );
+
 /****************************************************************************************/
 
 /**
