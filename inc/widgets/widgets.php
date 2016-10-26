@@ -469,6 +469,8 @@ class spacious_call_to_action_widget extends WP_Widget {
 
 /**************************************************************************************/
 
+if ( ! class_exists( 'spacious_testimonial_widget' ) ) :
+
 /**
  * Testimonial widget
  */
@@ -534,6 +536,8 @@ class spacious_testimonial_widget extends WP_Widget {
 <?php
 	}
 }
+
+endif;
 
 /**************************************************************************************/
 
