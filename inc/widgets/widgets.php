@@ -164,7 +164,7 @@ function spacious_widgets_init() {
 	register_widget( "spacious_recent_work_widget" );
 
 	if ( ! is_plugin_active( 'spacious-companion/spacious-companion.php' ) ) {
-		register_widget( "spacious_testimonial_widget" );
+		register_widget( 'spacious_testimonial_widget' );
 	}
 }
 
@@ -469,7 +469,9 @@ class spacious_call_to_action_widget extends WP_Widget {
 
 /**************************************************************************************/
 
- /**
+if ( ! class_exists( 'spacious_testimonial_widget' ) ) :
+
+/**
  * Testimonial widget
  */
 class spacious_testimonial_widget extends WP_Widget {
@@ -534,6 +536,8 @@ class spacious_testimonial_widget extends WP_Widget {
 <?php
 	}
 }
+
+endif;
 
 /**************************************************************************************/
 
