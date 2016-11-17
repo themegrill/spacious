@@ -648,4 +648,6 @@ function spacious_site_icon_migrate() {
 		delete_option( 'theme_mods_spacious', 'spacious_favicon' );
 	}
 }
+
+add_action( 'after_setup_theme', 'spacious_site_icon_migrate' );
 ?>
