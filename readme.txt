@@ -45,6 +45,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+
+= Version TBD =
+* Feature - Added backward compatibility for Site Icon introduced in WordPress 4.3
+
 = Version 1.4.1 - 2016-09-02 =
 * Tweaks - Removed Russian language file as 100% translation now available at wordpress.org
 * Tweaks - Removed French language file as 100% translation now available at wordpress.org

@@ -436,54 +436,56 @@ function spacious_customize_register($wp_customize) {
    )));
    // End of Design Options
 
-   // Start of the Additional Options
-   $wp_customize->add_panel('spacious_additional_options', array(
-      'capabitity' => 'edit_theme_options',
-      'priority' => 510,
-      'title' => __('Additional', 'spacious')
-   ));
+   	if ( !has_site_icon() && ( spacious_options( 'spacious_favicon', '' ) != '' ) ) {
+	    // Start of the Additional Options
+	    $wp_customize->add_panel('spacious_additional_options', array(
+	      'capabitity' => 'edit_theme_options',
+	      'priority' => 510,
+	      'title' => __('Additional', 'spacious')
+	    ));
 
-   // Favicon activate option
-   $wp_customize->add_section('spacious_additional_activate_section', array(
-      'priority' => 1,
-      'title' => __('Activate favicon', 'spacious'),
-      'panel' => 'spacious_additional_options'
-   ));
+	    // Favicon activate option
+	    $wp_customize->add_section('spacious_additional_activate_section', array(
+	      'priority' => 1,
+	      'title' => __('Activate favicon', 'spacious'),
+	      'panel' => 'spacious_additional_options'
+	    ));
 
-   $wp_customize->add_setting($spacious_themename.'[spacious_activate_favicon]', array(
-      'default' => 0,
-      'type' => 'option',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'spacious_checkbox_sanitize'
-   ));
+	    $wp_customize->add_setting($spacious_themename.'[spacious_activate_favicon]', array(
+	      'default' => 0,
+	      'type' => 'option',
+	      'capability' => 'edit_theme_options',
+	      'sanitize_callback' => 'spacious_checkbox_sanitize'
+	    ));
 
-   $wp_customize->add_control($spacious_themename.'[spacious_activate_favicon]', array(
-      'type' => 'checkbox',
-      'label' => __('Check to activate favicon. Upload fav icon from below option', 'spacious'),
-      'section' => 'spacious_additional_activate_section',
-      'settings' => $spacious_themename.'[spacious_activate_favicon]'
-   ));
+	    $wp_customize->add_control($spacious_themename.'[spacious_activate_favicon]', array(
+	      'type' => 'checkbox',
+	      'label' => __('Check to activate favicon. Upload fav icon from below option', 'spacious'),
+	      'section' => 'spacious_additional_activate_section',
+	      'settings' => $spacious_themename.'[spacious_activate_favicon]'
+	    ));
 
-   // Fav icon upload option
-   $wp_customize->add_section('spacious_favicon_upload_section',array(
-      'priority' => 2,
-      'title' => __('Upload favicon', 'spacious'),
-      'panel' => 'spacious_additional_options'
-   ));
+	    // Fav icon upload option
+	    $wp_customize->add_section('spacious_favicon_upload_section',array(
+	      'priority' => 2,
+	      'title' => __('Upload favicon', 'spacious'),
+	      'panel' => 'spacious_additional_options'
+	    ));
 
-   $wp_customize->add_setting($spacious_themename.'[spacious_favicon]', array(
-      'default' => 0,
-      'type' => 'option',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esc_url_raw'
-   ));
+	    $wp_customize->add_setting($spacious_themename.'[spacious_favicon]', array(
+	      'default' => 0,
+	      'type' => 'option',
+	      'capability' => 'edit_theme_options',
+	      'sanitize_callback' => 'esc_url_raw'
+	    ));
 
-   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $spacious_themename.'[spacious_favicon]', array(
-      'label' => __('Upload favicon for your site.', 'spacious'),
-      'section' => 'spacious_favicon_upload_section',
-      'settings' => $spacious_themename.'[spacious_favicon]'
-   )));
-   // End of Additional Options
+	    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $spacious_themename.'[spacious_favicon]', array(
+	      'label' => __('Upload favicon for your site.', 'spacious'),
+	      'section' => 'spacious_favicon_upload_section',
+	      'settings' => $spacious_themename.'[spacious_favicon]'
+	    )));
+	    // End of Additional Options
+	}
 
    // Adding Text Area Control For Use In Customizer
    class Spacious_Text_Area_Control extends WP_Customize_Control {
