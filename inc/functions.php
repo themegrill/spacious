@@ -256,7 +256,7 @@ function spacious_favicon() {
 	if ( spacious_options( 'spacious_activate_favicon', '0' ) == '1' ) {
 		$spacious_favicon = spacious_options( 'spacious_favicon', '' );
 		$spacious_favicon_output = '';
-		if ( !empty( $spacious_favicon ) && !has_site_icon() ) {
+		if ( ! function_exists( 'has_site_icon' ) || ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
 			$spacious_favicon_output .= '<link rel="shortcut icon" href="'.esc_url( $spacious_favicon ).'" type="image/x-icon" />';
 		}
 		echo $spacious_favicon_output;
@@ -639,7 +639,7 @@ function spacious_site_icon_migrate() {
 
 	$image_url = spacious_options( 'spacious_favicon', '' );
 
-	if ( ! has_site_icon() && ! empty( $image_url ) ) {
+	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ! empty( $image_url ) ) ) {
 		$customizer_site_icon_id = attachment_url_to_postid( $image_url );
 		update_option( 'site_icon', $customizer_site_icon_id );
 		// Set the transfer as complete.
