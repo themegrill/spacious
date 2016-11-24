@@ -628,4 +628,16 @@ function spacious_wrapper_end() {
 }
 
 add_theme_support( 'woocommerce' );
+
+// Displays the site logo
+if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
+	/**
+	 * Displays the optional custom logo.
+	 */
+	function spacious_the_custom_logo() {
+		if ( function_exists( 'the_custom_logo' )  && ( spacious_options( 'spacious_header_logo_image','' ) == '') ) {
+			the_custom_logo();
+		}
+	}
+}
 ?>

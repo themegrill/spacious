@@ -70,6 +70,16 @@ function spacious_setup() {
    // Supporting title tag via add_theme_support (since WordPress 4.1)
    add_theme_support( 'title-tag' );
 
+   // Adds the support for the Custom Logo introduced in WordPress 4.5
+   add_theme_support( 'custom-logo',
+   		array(
+   			'height' => '100',
+   			'width' => '100',
+   			'flex-width' => true,
+   			'flex-height' => true,
+   		)
+   	);
+
 	// Registering navigation menus.
 	register_nav_menus( array(
 		'primary' 	=> __( 'Primary Menu','spacious' ),

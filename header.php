@@ -46,10 +46,16 @@ wp_head();
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
 						<?php
-						if( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'both' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' ) && spacious_options( 'spacious_header_logo_image', '' ) != '' ) {
+						if( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'both' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' ) ) {
 						?>
 							<div id="header-logo-image">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo spacious_options( 'spacious_header_logo_image', '' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+								<?php if ( spacious_options('spacious_header_logo_image', '') != '') { ?>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo spacious_options( 'spacious_header_logo_image', '' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+								<?php } ?>
+
+								<?php if (function_exists('the_custom_logo') && has_custom_logo( $blog_id = 0 )) {
+									spacious_the_custom_logo();
+								} ?>
 							</div><!-- #header-logo-image -->
 						<?php
 						}
