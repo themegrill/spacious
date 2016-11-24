@@ -89,18 +89,21 @@ function spacious_customize_register($wp_customize) {
       'panel' => 'spacious_header_options'
    ));
 
-   $wp_customize->add_setting($spacious_themename.'[spacious_header_logo_image]', array(
-      'default' => '',
-      'type' => 'option',
-      'capability' => 'edit_theme_options',
-      'sanitize_callback' => 'esc_url_raw'
-   ));
+   	if ( !function_exists('the_custom_logo') || ( spacious_options('spacious_header_logo_image', '') != '' ) ) {
+	   $wp_customize->add_setting($spacious_themename.'[spacious_header_logo_image]', array(
+	    	'default' => '',
+	      	'type' => 'option',
+	      	'capability' => 'edit_theme_options',
+	      	'sanitize_callback' => 'esc_url_raw'
+	   	));
 
-   $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $spacious_themename.'[spacious_header_logo_image]', array(
-      'label' => __('Upload logo for your header. Recommended image size is 100 X 100 pixels.', 'spacious'),
-      'section' => 'spacious_header_logo',
-      'setting' => $spacious_themename.'[spacious_header_logo_image]'
-   )));
+   		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $spacious_themename.'[spacious_header_logo_image]', array(
+      		'label' => __('Upload logo for your header. Recommended image size is 100 X 100 pixels.', 'spacious'),
+      		'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'spacious'  ), '<strong>', '</strong>'),
+      		'section' => 'spacious_header_logo',
+      		'setting' => $spacious_themename.'[spacious_header_logo_image]'
+   		)));
+	}
 
    // Header logo and text display type option
    $wp_customize->add_section('spacious_show_option', array(
