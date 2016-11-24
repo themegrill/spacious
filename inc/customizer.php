@@ -99,6 +99,7 @@ function spacious_customize_register($wp_customize) {
 
    		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $spacious_themename.'[spacious_header_logo_image]', array(
       		'label' => __('Upload logo for your header. Recommended image size is 100 X 100 pixels.', 'spacious'),
+      		'description' => sprintf(__( '%sInfo:%s This option will be removed in upcoming update. Please go to Site Identity section to upload the theme logo.', 'spacious'  ), '<strong>', '</strong>'),
       		'section' => 'spacious_header_logo',
       		'setting' => $spacious_themename.'[spacious_header_logo_image]'
    		)));
