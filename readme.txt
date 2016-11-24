@@ -46,7 +46,8 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 
-= Version 1.4.2 TBD =
+= Version 1.4.2  TBD =
+* Feature - Added support for Site Icon introduced in WordPress 4.3
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
 
 = Version 1.4.1 - 2016-09-02 =

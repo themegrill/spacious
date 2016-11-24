@@ -256,7 +256,7 @@ function spacious_favicon() {
 	if ( spacious_options( 'spacious_activate_favicon', '0' ) == '1' ) {
 		$spacious_favicon = spacious_options( 'spacious_favicon', '' );
 		$spacious_favicon_output = '';
-		if ( !empty( $spacious_favicon ) ) {
+		if ( ! function_exists( 'has_site_icon' ) || ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
 			$spacious_favicon_output .= '<link rel="shortcut icon" href="'.esc_url( $spacious_favicon ).'" type="image/x-icon" />';
 		}
 		echo $spacious_favicon_output;
@@ -629,6 +629,42 @@ function spacious_wrapper_end() {
 
 add_theme_support( 'woocommerce' );
 
+/**
+ * Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
+ */
+function spacious_site_icon_migrate() {
+	if ( get_option( 'spacious_site_icon_transfer' ) ) {
+		return;
+	}
+
+	$spacious_favicon = spacious_options( 'spacious_favicon', 0 );
+
+	// Migrate spacious site icon.
+	if ( function_exists( 'has_site_icon' ) && ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
+		$theme_options = get_option( 'spacious' );
+		$attachment_id = attachment_url_to_postid( $spacious_favicon );
+
+		// Update site icon transfer options.
+		if ( $theme_options && $attachment_id ) {
+			update_option( 'site_icon', $attachment_id );
+			update_option( 'spacious_site_icon_transfer', 1 );
+
+			// Remove old favicon options.
+			foreach ( $theme_options as $option_key => $option_value ) {
+				if ( in_array( $option_key, array( 'spacious_favicon', 'spacious_activate_favicon' ) ) ) {
+					unset( $theme_options[ $option_key ] );
+				}
+			}
+		}
+
+		// Finally, update spacious theme options.
+		update_option( 'spacious', $theme_options );
+	}
+}
+
+add_action( 'after_setup_theme', 'spacious_site_icon_migrate' );
+
+
 // Displays the site logo
 if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
 	/**
@@ -640,4 +676,3 @@ if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
 		}
 	}
 }
-?>
