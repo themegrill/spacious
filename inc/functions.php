@@ -21,9 +21,9 @@ function spacious_options( $id, $default = false ) {
    // getting options value
    $spacious_options = get_option( $themename );
    if ( isset( $spacious_options[ $id ] ) ) {
-      return $spacious_options[ $id ];
+	  return $spacious_options[ $id ];
    } else {
-      return $default;
+	  return $default;
    }
 }
 
@@ -87,7 +87,7 @@ add_filter('the_content', 'spacious_add_mod_hatom_data');
 function spacious_add_mod_hatom_data($content) {
    $title = get_the_title();
    if ( is_single() ) {
-      $content .= '<div class="extra-hatom-entry-title"><span class="entry-title">' . $title . '</span></div>';
+	  $content .= '<div class="extra-hatom-entry-title"><span class="entry-title">' . $title . '</span></div>';
    }
    return $content;
 }
@@ -546,9 +546,9 @@ function spacious_textarea_sanitization_change() {
  */
 function spacious_sanitize_textarea_custom( $input,$option ) {
    if( $option['id'] == "spacious_custom_css" ) {
-      $output = wp_filter_nohtml_kses( $input );
+	  $output = wp_filter_nohtml_kses( $input );
    } else {
-      $output = $input;
+	  $output = $input;
    }
    return $output;
 }
@@ -561,46 +561,46 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
  */
 function spacious_entry_meta() {
    if ( 'post' == get_post_type() ) :
-      echo '<footer class="entry-meta-bar clearfix">';
-      echo '<div class="entry-meta clearfix">';
-      ?>
+	  echo '<footer class="entry-meta-bar clearfix">';
+	  echo '<div class="entry-meta clearfix">';
+	  ?>
 
-      <span class="by-author author vcard"><a class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+	  <span class="by-author author vcard"><a class="url fn n" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
 
-      <?php
-      $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-      if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-         $time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
-      }
-      $time_string = sprintf( $time_string,
-         esc_attr( get_the_date( 'c' ) ),
-         esc_html( get_the_date() ),
-         esc_attr( get_the_modified_date( 'c' ) ),
-         esc_html( get_the_modified_date() )
-      );
-      printf( __( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark">%3$s</a></span>', 'spacious' ),
-         esc_url( get_permalink() ),
-         esc_attr( get_the_time() ),
-         $time_string
-      ); ?>
+	  <?php
+	  $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+	  if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		 $time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
+	  }
+	  $time_string = sprintf( $time_string,
+		 esc_attr( get_the_date( 'c' ) ),
+		 esc_html( get_the_date() ),
+		 esc_attr( get_the_modified_date( 'c' ) ),
+		 esc_html( get_the_modified_date() )
+	  );
+	  printf( __( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark">%3$s</a></span>', 'spacious' ),
+		 esc_url( get_permalink() ),
+		 esc_attr( get_the_time() ),
+		 $time_string
+	  ); ?>
 
-      <?php if( has_category() ) { ?>
-         <span class="category"><?php the_category(', '); ?></span>
-      <?php } ?>
+	  <?php if( has_category() ) { ?>
+		 <span class="category"><?php the_category(', '); ?></span>
+	  <?php } ?>
 
-      <?php if ( comments_open() ) { ?>
-         <span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
-      <?php } ?>
+	  <?php if ( comments_open() ) { ?>
+		 <span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
+	  <?php } ?>
 
-      <?php edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' ); ?>
+	  <?php edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' ); ?>
 
-      <?php if ( ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && !is_single() ) { ?>
-         <span class="read-more-link"><a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a></span>
-      <?php } ?>
+	  <?php if ( ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && !is_single() ) { ?>
+		 <span class="read-more-link"><a class="read-more" href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a></span>
+	  <?php } ?>
 
-      <?php
-      echo '</div>';
-      echo '</footer>';
+	  <?php
+	  echo '</div>';
+	  echo '</footer>';
    endif;
 }
 endif;
@@ -681,16 +681,26 @@ if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
  * Migrate any existing theme CSS codes added in Customize Options to the core option added in WordPress 4.7
  */
 function spacious_custom_css_migrate() {
-    if ( function_exists( 'wp_update_custom_css_post' ) ) {
-        $custom_css = spacious_options( 'spacious_custom_css' );
-        if ( $custom_css ) {
-            $core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
-            $return = wp_update_custom_css_post( $core_css . $custom_css );
-            if ( ! is_wp_error( $return ) ) {
-                // Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
-                remove_theme_mod( 'spacious_custom_css' );
-            }
-        }
-    }
+	if ( function_exists( 'wp_update_custom_css_post' ) ) {
+		$custom_css = spacious_options( 'spacious_custom_css' );
+		if ( $custom_css ) {
+			$core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
+			$return = wp_update_custom_css_post( $core_css . $custom_css );
+			$theme_options = get_option( 'spacious' );
+
+			if ( ! is_wp_error( $return ) ) {
+				// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
+				foreach ( $theme_options as $option_key => $option_value ) {
+					if ( in_array( $option_key, array( 'spacious_custom_css' ) ) ) {
+						unset( $theme_options[ $option_key ] );
+					}
+				}
+			}
+
+			// Finally, update spacious theme options.
+			update_option( 'spacious', $theme_options );
+		}
+	}
 }
+
 add_action( 'after_setup_theme', 'spacious_custom_css_migrate' );
