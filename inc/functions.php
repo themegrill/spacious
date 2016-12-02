@@ -686,19 +686,19 @@ function spacious_custom_css_migrate() {
 		if ( $custom_css ) {
 			$core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
 			$return = wp_update_custom_css_post( $core_css . $custom_css );
-			$theme_options = get_option( 'spacious' );
 
 			if ( ! is_wp_error( $return ) ) {
+				$theme_options = get_option( 'spacious' );
 				// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
 				foreach ( $theme_options as $option_key => $option_value ) {
 					if ( in_array( $option_key, array( 'spacious_custom_css' ) ) ) {
 						unset( $theme_options[ $option_key ] );
 					}
 				}
-			}
 
-			// Finally, update spacious theme options.
-			update_option( 'spacious', $theme_options );
+				// Finally, update spacious theme options.
+				update_option( 'spacious', $theme_options );
+			}
 		}
 	}
 }
