@@ -587,6 +587,7 @@ nav li > ol {
 .main-navigation {
 	float: right;
 	padding-top: 5px;
+	position: relative;
 }
 .main-navigation li {
 	float: left;
@@ -760,6 +761,9 @@ li.default-menu {
 	color: #0FBE7C;
 }
 
+.sub-toggle {
+	display: none;
+}
 /* =FEATURED SLIDER
 ----------------------------------------------- */
 #featured-slider {
@@ -1962,6 +1966,70 @@ a#scroll-up:hover {
 	#featured-slider .entry-title span { font-size: 18px; line-height: 1.4; }
 	#featured-slider .entry-content p { font-size: 14px; line-height: 1.4; }
 	#featured-slider .slider-read-more-button { font-size: 14px; padding: 5px 10px; padding: 0.5rem 1rem; }
+
+	.better-responsive-menu .main-navigation .menu {
+		background-color: #fff;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		z-index: 9999;
+	}
+	.better-responsive-menu .main-navigation li {
+	    padding: 0;
+	    width: 100%;
+	}
+	.better-responsive-menu .main-navigation li a {
+	    box-sizing: border-box;
+	    border-bottom: 1px solid #eeeeee;
+	    display: inline-block;
+	    line-height: 40px;
+	    padding: 0 20px;
+	    width: 100%;
+	    line-height: 40px;
+	    height: 40px;
+	    font-size: 16px;
+	}
+	.sub-toggle {
+	  background-color: #0fbe7c;
+	  color: #fff;
+	  cursor: pointer;
+	  height: 20px;
+	  position: absolute;
+	  right: 5px;
+	  text-align: center;
+	  top: 10px;
+	  display: block;
+	  width: 20px;
+	}
+	.sub-toggle .genericon {
+	    line-height: 20px;
+	    font-size: 10px;
+	}
+	.better-responsive-menu .main-navigation ul li ul {
+	    position: static;
+	    width: 100%;
+	    float: left;
+	    border: none;
+	}
+	.sub-toggle.active{
+		transform: rotate(90deg);
+	}
+	.sub-toggle .genericon {
+	    display: inline-block;
+	    font-size: 10px;
+	    line-height: 20px;
+	    margin-left: 5px;
+	}
+	.better-responsive-menu .main-navigation ul li:hover ul, 
+	.better-responsive-menu .main-navigation ul ul li:hover ul, 
+	.better-responsive-menu .main-navigation ul ul ul li:hover ul, 
+	.better-responsive-menu .main-navigation ul ul ul ul li:hover ul, 
+	.better-responsive-menu .main-navigation ul ul ul ul ul li:hover ul{
+		display: none;
+	}
+	.better-responsive-menu .main-navigation ul li ul li{
+		border: none;
+	}
 }
 @media screen and (max-width: 767px) {
 	.tg-one-half, .tg-one-third, .tg-one-fourth {
