@@ -73,10 +73,8 @@ function spacious_scripts_styles_method() {
 
 	wp_enqueue_style( 'google_fonts' );
 
-   $spacious_user_agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-	if(preg_match('/(?i)msie [1-8]/',$spacious_user_agent)) {
-		wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
-	}
+	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
+	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
 
 }
 
@@ -690,10 +688,8 @@ function spacious_custom_css_migrate() {
 			if ( ! is_wp_error( $return ) ) {
 				$theme_options = get_option( 'spacious' );
 				// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
-				foreach ( $theme_options as $option_key => $option_value ) {
-					if ( in_array( $option_key, array( 'spacious_custom_css' ) ) ) {
-						unset( $theme_options[ $option_key ] );
-					}
+				if ( isset( $theme_options[ 'spacious_custom_css' ] ) ) {
+					unset( $theme_options[ 'spacious_custom_css' ] );
 				}
 
 				// Finally, update spacious theme options.
