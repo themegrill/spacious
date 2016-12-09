@@ -441,7 +441,7 @@ if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
   }
    // End of Design Options
 
-   	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( spacious_options( 'spacious_favicon', '' ) == '' ) ) ) {
+	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( spacious_options( 'spacious_favicon', '' ) != '' ) ) ) {
 	    // Start of the Additional Options
 	    $wp_customize->add_panel('spacious_additional_options', array(
 	      'capabitity' => 'edit_theme_options',

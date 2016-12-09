@@ -365,7 +365,7 @@ function spacious_custom_css() {
 		<?php
 	}
 
-	$spacious_custom_css = spacious_options( 'spacious_custom_css', '' );
+	$spacious_custom_css = spacious_options( 'spacious_custom_css' );
 	if( $spacious_custom_css && ! function_exists( 'wp_update_custom_css_post' ) ) {
 		?>
 		<style type="text/css"><?php echo $spacious_custom_css; ?></style>
