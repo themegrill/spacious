@@ -402,6 +402,7 @@ function spacious_customize_register($wp_customize) {
       )
    )));
 
+if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
    // Custom CSS setting
    class spacious_Custom_CSS_Control extends WP_Customize_Control {
 
@@ -437,9 +438,10 @@ function spacious_customize_register($wp_customize) {
       'section' => 'spacious_custom_css_setting',
       'settings' => $spacious_themename.'[spacious_custom_css]'
    )));
+  }
    // End of Design Options
 
-   	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( spacious_options( 'spacious_favicon', '' ) == '' ) ) ) {
+	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( spacious_options( 'spacious_favicon', '' ) != '' ) ) ) {
 	    // Start of the Additional Options
 	    $wp_customize->add_panel('spacious_additional_options', array(
 	      'capabitity' => 'edit_theme_options',
