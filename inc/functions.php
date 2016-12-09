@@ -662,7 +662,6 @@ function spacious_site_icon_migrate() {
 
 add_action( 'after_setup_theme', 'spacious_site_icon_migrate' );
 
-
 // Displays the site logo
 if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
 	/**
@@ -700,3 +699,29 @@ function spacious_custom_css_migrate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_custom_css_migrate' );
+
+/**
+ * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section
+ */
+function spacious_site_logo_migrate() {
+	if ( function_exists( 'the_custom_logo' ) && ! has_custom_logo( $blog_id = 0 ) ) {
+		$logo_url = spacious_options( 'spacious_header_logo_image' );
+
+		if ( $logo_url ) {
+			$customizer_site_logo_id = attachment_url_to_postid( $logo_url );
+			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
+
+			// Delete the old Site Logo theme_mod option.
+			$theme_options = get_option( 'spacious' );
+
+			if ( isset( $theme_options[ 'spacious_header_logo_image' ] ) ) {
+				unset( $theme_options[ 'spacious_header_logo_image' ] );
+			}
+
+			// Finally, update spacious theme options.
+			update_option( 'spacious', $theme_options );
+		}
+	}
+}
+
+add_action( 'after_setup_theme', 'spacious_site_logo_migrate' );

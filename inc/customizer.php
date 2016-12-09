@@ -89,7 +89,7 @@ function spacious_customize_register($wp_customize) {
       'panel' => 'spacious_header_options'
    ));
 
-   	if ( !function_exists('the_custom_logo') || ( spacious_options('spacious_header_logo_image', '') != '' ) ) {
+	if ( ! function_exists( 'the_custom_logo' ) ) {
 	   $wp_customize->add_setting($spacious_themename.'[spacious_header_logo_image]', array(
 	    	'default' => '',
 	      	'type' => 'option',
