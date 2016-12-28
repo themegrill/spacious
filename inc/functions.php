@@ -639,7 +639,11 @@ function spacious_site_icon_migrate() {
 
 	// Migrate spacious site icon.
 	if ( function_exists( 'has_site_icon' ) && ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
-		$theme_options = get_option( 'spacious' );
+		// assigning theme name
+		$themename = get_option( 'stylesheet' );
+		$themename = preg_replace("/\W/", "_", strtolower( $themename ) );
+
+		$theme_options = get_option( $themename );
 		$attachment_id = attachment_url_to_postid( $spacious_favicon );
 
 		// Update site icon transfer options.
@@ -656,7 +660,7 @@ function spacious_site_icon_migrate() {
 		}
 
 		// Finally, update spacious theme options.
-		update_option( 'spacious', $theme_options );
+		update_option( $themename, $theme_options );
 	}
 }
 
@@ -681,18 +685,22 @@ function spacious_custom_css_migrate() {
 	if ( function_exists( 'wp_update_custom_css_post' ) ) {
 		$custom_css = spacious_options( 'spacious_custom_css' );
 		if ( $custom_css ) {
+			// assigning theme name
+			$themename = get_option( 'stylesheet' );
+			$themename = preg_replace("/\W/", "_", strtolower( $themename ) );
+
 			$core_css = wp_get_custom_css(); // Preserve any CSS already added to the core option.
 			$return = wp_update_custom_css_post( $core_css . $custom_css );
 
 			if ( ! is_wp_error( $return ) ) {
-				$theme_options = get_option( 'spacious' );
+				$theme_options = get_option( $themename );
 				// Remove the old theme_mod, so that the CSS is stored in only one place moving forward.
 				if ( isset( $theme_options[ 'spacious_custom_css' ] ) ) {
 					unset( $theme_options[ 'spacious_custom_css' ] );
 				}
 
 				// Finally, update spacious theme options.
-				update_option( 'spacious', $theme_options );
+				update_option( $themename, $theme_options );
 			}
 		}
 	}
@@ -708,18 +716,22 @@ function spacious_site_logo_migrate() {
 		$logo_url = spacious_options( 'spacious_header_logo_image' );
 
 		if ( $logo_url ) {
+			// assigning theme name
+			$themename = get_option( 'stylesheet' );
+			$themename = preg_replace("/\W/", "_", strtolower( $themename ) );
+
 			$customizer_site_logo_id = attachment_url_to_postid( $logo_url );
 			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
 
 			// Delete the old Site Logo theme_mod option.
-			$theme_options = get_option( 'spacious' );
+			$theme_options = get_option( $themename );
 
 			if ( isset( $theme_options[ 'spacious_header_logo_image' ] ) ) {
 				unset( $theme_options[ 'spacious_header_logo_image' ] );
 			}
 
 			// Finally, update spacious theme options.
-			update_option( 'spacious', $theme_options );
+			update_option( $themename, $theme_options );
 		}
 	}
 }

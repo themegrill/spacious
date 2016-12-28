@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
+
 = Version 1.4.2 - 2016-12-09 =
 * Feature - Added support for Site Icon introduced in WordPress 4.3
 * Feature - Added the Custom Site Logo feature introduced in WordPress 4.5
