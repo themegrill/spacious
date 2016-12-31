@@ -45,7 +45,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.3 - 2016-12-31 =
 * Fix - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
 * Added - RTL Language support.
 
