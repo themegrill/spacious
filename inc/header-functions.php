@@ -14,11 +14,14 @@ if ( ! function_exists( 'spacious_render_header_image' ) ) :
  * Shows the small info text on top header part
  */
 function spacious_render_header_image() {
-	$header_image = get_header_image();
-	if( !empty( $header_image ) ) {
-	?>
-		<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-	<?php
+	if ( function_exists( 'the_custom_header_markup' ) ) {
+		the_custom_header_markup();
+	} else {
+		$header_image = get_header_image();
+		if ( ! empty( $header_image ) ) { ?>
+			<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			<?php
+		}
 	}
 }
 endif;
