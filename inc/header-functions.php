@@ -8,6 +8,25 @@
  */
 
 /****************************************************************************************/
+// Filter the get_header_image_tag() for supporting the older way of displaying the header image
+function spacious_header_image_markup( $html, $header, $attr ) {
+	$output = '';
+	$header_image = get_header_image();
+
+	if( ! empty( $header_image ) ) {
+		$output .= '<img src="' . esc_url( $header_image ) . '" class="header-image" width="' . get_custom_header()->width . '" height="' . get_custom_header()->height . '" alt="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">';
+	}
+
+	return $output;
+}
+
+function spacious_header_image_markup_filter() {
+	add_filter( 'get_header_image_tag', 'spacious_header_image_markup', 10, 3 );
+}
+
+add_action( 'spacious_header_image_markup_render','spacious_header_image_markup_filter' );
+
+/****************************************************************************************/
 
 if ( ! function_exists( 'spacious_render_header_image' ) ) :
 /**
@@ -15,6 +34,7 @@ if ( ! function_exists( 'spacious_render_header_image' ) ) :
  */
 function spacious_render_header_image() {
 	if ( function_exists( 'the_custom_header_markup' ) ) {
+		do_action( 'spacious_header_image_markup_render' );
 		the_custom_header_markup();
 	} else {
 		$header_image = get_header_image();
