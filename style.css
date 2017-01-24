@@ -1848,14 +1848,14 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
 }
 
 .wp-custom-header-video-button:before {
-    content: '\f04b';
+    content: "\f452";
     display: block;
-    font-family: FontAwesome;
+    font-family:  "Genericons";
     font-size: 20px;
 }
 
 .wp-custom-header-video-button.wp-custom-header-video-pause:before{
-    content: '\f04c';
+    content: "\f448";
 }
 /* =RESPONSIVE STRUCTURE
 ----------------------------------------------- */
