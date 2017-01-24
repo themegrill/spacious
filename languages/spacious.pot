@@ -1,14 +1,14 @@
-# Copyright (C) 2016 ThemeGrill
+# Copyright (C) 2017 ThemeGrill
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.4.1\n"
+"Project-Id-Version: Spacious 1.4.3\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2016-12-09 07:00:12+00:00\n"
+"POT-Creation-Date: 2017-01-24 09:29:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -673,7 +673,7 @@ msgstr ""
 msgid "Enter your slider description."
 msgstr ""
 
-#: inc/customizer.php:611 inc/functions.php:596 inc/header-functions.php:42
+#: inc/customizer.php:611 inc/functions.php:596 inc/header-functions.php:65
 #: inc/widgets/widgets.php:258 inc/widgets/widgets.php:355
 msgid "Read more"
 msgstr ""
@@ -768,55 +768,55 @@ msgstr ""
 msgid "Comments Off"
 msgstr ""
 
-#: inc/header-functions.php:102
+#: inc/header-functions.php:125
 msgid "Author: %s"
 msgstr ""
 
-#: inc/header-functions.php:110
+#: inc/header-functions.php:133
 msgid "Day: %s"
 msgstr ""
 
-#: inc/header-functions.php:113
+#: inc/header-functions.php:136
 msgid "Month: %s"
 msgstr ""
 
-#: inc/header-functions.php:116
+#: inc/header-functions.php:139
 msgid "Year: %s"
 msgstr ""
 
-#: inc/header-functions.php:119
+#: inc/header-functions.php:142
 msgid "Asides"
 msgstr ""
 
-#: inc/header-functions.php:122
+#: inc/header-functions.php:145
 msgid "Images"
 msgstr ""
 
-#: inc/header-functions.php:125
+#: inc/header-functions.php:148
 msgid "Videos"
 msgstr ""
 
-#: inc/header-functions.php:128
+#: inc/header-functions.php:151
 msgid "Quotes"
 msgstr ""
 
-#: inc/header-functions.php:131
+#: inc/header-functions.php:154
 msgid "Links"
 msgstr ""
 
-#: inc/header-functions.php:137 sidebar-left.php:29 sidebar.php:29
+#: inc/header-functions.php:160 sidebar-left.php:29 sidebar.php:29
 msgid "Archives"
 msgstr ""
 
-#: inc/header-functions.php:142
+#: inc/header-functions.php:165
 msgid "Page NOT Found"
 msgstr ""
 
-#: inc/header-functions.php:145
+#: inc/header-functions.php:168
 msgid "Search Results"
 msgstr ""
 
-#: inc/header-functions.php:178
+#: inc/header-functions.php:201
 msgid "You are here:"
 msgstr ""
 
