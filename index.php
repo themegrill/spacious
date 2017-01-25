@@ -6,9 +6,7 @@
  * @subpackage Spacious
  * @since Spacious 1.0
  */
-?>
-
-<?php get_header(); ?>
+get_header(); ?>
 
 	<?php do_action( 'spacious_before_body_content' ); ?>
 
