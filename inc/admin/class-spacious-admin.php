@@ -181,6 +181,11 @@ class Spacious_Admin {
 
 			<div class="changelog point-releases">
 				<div class="under-the-hood two-col">
+               <div class="col">
+                  <h3><?php esc_html_e( 'Import Demo', 'spacious' ); ?></h3>
+                  <p><?php esc_html_e( 'Needs ThemeGrill Demo Importer plugin.', 'spacious' ) ?></p>
+                  <p><a href="<?php echo esc_url( network_admin_url( 'plugin-install.php?tab=search&type=term&s=themegrill-demo-importer' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install', 'spacious' ); ?></a></p>
+               </div>
 					<div class="col">
 						<h3><?php esc_html_e( 'Theme Customizer', 'spacious' ); ?></h3>
 						<p><?php esc_html_e( 'All Theme Options are available via Customize screen.', 'spacious' ) ?></p>
