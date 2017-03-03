@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.5 - 2017-03-03 =
 * Tweaks - Add support for customize selective refresh widgets
 * Tweaks - Add TGMPA to recommend ThemeGrill Demo Importer plugin
 
