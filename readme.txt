@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Add support for customize selective refresh widgets
+
 = Version 1.4.4 - 2017-01-24 =
 * Added - Support for Video Headers introduced in WordPress 4.7.
 
