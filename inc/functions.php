@@ -618,14 +618,20 @@ add_action('woocommerce_before_main_content', 'spacious_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'spacious_wrapper_end', 10);
 
 function spacious_wrapper_start() {
-  echo '<div id="primary">';
+	echo '<div id="primary">';
 }
 
 function spacious_wrapper_end() {
-  echo '</div>';
+	echo '</div>';
 }
 
-add_theme_support( 'woocommerce' );
+function spacious_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
 
 /**
  * Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
