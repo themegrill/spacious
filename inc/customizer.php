@@ -18,23 +18,23 @@ function spacious_customize_register($wp_customize) {
 			// Add Theme instruction, Support Forum, Demo Link, Rating Link
 			$important_links = array(
 				'view-pro' => array(
-					'link' => esc_url('http://themegrill.com/themes/spacious-pro/'),
+					'link' => esc_url('https://themegrill.com/themes/spacious-pro/'),
 					'text' => esc_html__('View Pro', 'spacious'),
 				),
 				'theme-info' => array(
-					'link' => esc_url('http://themegrill.com/themes/spacious/'),
+					'link' => esc_url('https://themegrill.com/themes/spacious/'),
 					'text' => esc_html__('Theme Info', 'spacious'),
 				),
 				'support' => array(
-					'link' => esc_url('http://themegrill.com/support-forum/'),
+					'link' => esc_url('https://themegrill.com/support-forum/'),
 					'text' => esc_html__('Support Forum', 'spacious'),
 				),
 				'documentation' => array(
-					'link' => esc_url('http://docs.themegrill.com/spacious/'),
+					'link' => esc_url('https://docs.themegrill.com/spacious/'),
 					'text' => esc_html__('Documentation', 'spacious'),
 				),
 				'demo' => array(
-					'link' => esc_url('http://demo.themegrill.com/spacious/'),
+					'link' => esc_url('https://demo.themegrill.com/spacious/'),
 					'text' => esc_html__('View Demo', 'spacious'),
 				),
 				'rating' => array(
