@@ -672,7 +672,9 @@ li.default-menu {
 .main-navigation select {
 	display: none;
 }
-
+.main-navigation ul li.focus >ul{
+	display: block;
+}
 /* =SMALL MENU
 ----------------------------------------------- */
 .menu-toggle {
