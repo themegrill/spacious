@@ -306,7 +306,7 @@ function spacious_darkcolor($hex, $steps) {
 
 /****************************************************************************************/
 
-add_action('wp_head', 'spacious_custom_css');
+add_action('wp_head', 'spacious_custom_css', 100);
 /**
  * Hooks the Custom Internal CSS to head section
  */
