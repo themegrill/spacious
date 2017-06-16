@@ -111,6 +111,109 @@ function spacious_setup() {
 	// Support for selective refresh widgets in Customizer
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets' => array(
+			// Place three core-defined widgets in the sidebar area.
+			'spacious_header_sidebar' => array(
+				'text_about',
+			),
+
+			// Add the core-defined business info widget to the footer 1 area.
+			'spacious_footer_sidebar_one' => array(
+				'text_business_info',
+			),
+
+			// Put two core-defined widgets in the footer 2 area.
+			'spacious_footer_sidebar_two' => array(
+				'search',
+			),
+
+			// Put two core-defined widgets in the footer 2 area.
+			'spacious_footer_sidebar_three' => array(
+				'text_about',
+			),
+
+			// Put two core-defined widgets in the footer 2 area.
+			'spacious_footer_sidebar_four' => array(
+				'search',
+				'text_about',
+			),
+		),
+
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts' => array(
+			'home',
+			'about' => array(
+				'thumbnail' => '{{image-spacious1}}',
+			),
+			'contact' => array(
+				'thumbnail' => '{{image-spacious2}}',
+			),
+			'blog' => array(
+				'thumbnail' => '{{image-spacious3}}',
+			),
+		),
+
+		// Create the custom image attachments used as post thumbnails for pages.
+		'attachments' => array(
+			'image-spacious1' => array(
+				'post_title' => _x( 'about', 'Theme starter content', 'spacious' ),
+				'file' => 'images/hero1.jpg', // URL relative to the template directory.
+			),
+			'image-spacious2' => array(
+				'post_title' => _x( 'contact', 'Theme starter content', 'spacious' ),
+				'file' => 'images/hero2.jpg',
+			),
+			'image-spacious3' => array(
+				'post_title' => _x( 'blog', 'Theme starter content', 'spacious' ),
+				'file' => 'images/hero3.jpg',
+			),
+		),
+
+		// Default to a static front page and assign the front and posts pages.
+		'options' => array(
+			'show_on_front' => 'page',
+			'page_on_front' => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+
+		// Set up nav menus for each of the two areas registered in the theme.
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'primary' => array(
+				'name' => __( 'Primary Menu', 'spacious' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "social" location.
+			'footer' => array(
+				'name' => __( 'Footer Menu', 'spacious' ),
+				'items' => array(
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+		),
+	);
+
+	/**
+	 * Filters Twenty Seventeen array of starter content.
+	 *
+	 * @since Twenty Seventeen 1.1
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'spacious_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
+
 }
 endif;
 
