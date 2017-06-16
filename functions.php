@@ -226,6 +226,11 @@ function spacious_setup() {
 					'page_about',
 					'page_blog',
 					'page_contact',
+					'page_service' => array(
+						'type' => 'post_type',
+						'object' => 'page',
+						'object_id' => '{{service}}',
+					),
 				),
 			),
 
