@@ -113,6 +113,31 @@ function spacious_setup() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts' => array(
+			'home' => array(
+				'post_title'   => esc_html__( 'Home', 'spacious' ),
+				'template' => 'page-templates/business.php',
+			),
+			'about' => array(
+				'post_title'   => esc_html__( 'Welcome', 'spacious' ),
+				'post_content' => esc_html__( 'This is your homepage which is what most visitors will see when they first visit your shop.You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'spacious' ),
+				'thumbnail' => '{{image-spacious1}}',
+			),
+			'contact' => array(
+				'thumbnail' => '{{image-spacious2}}',
+			),
+			'blog' => array(
+				'thumbnail' => '{{image-spacious3}}',
+			),
+			'service' => array(
+				'post_type' => 'page',
+				'post_title' => 'Service',
+				'post_content' => 'About services',
+				'thumbnail' => '{{image-service}}',
+			),
+		),
+
 		'widgets' => array(
 			// Place three core-defined widgets in the sidebar area.
 			'spacious_header_sidebar' => array(
@@ -131,43 +156,56 @@ function spacious_setup() {
 
 			// Put two core-defined widgets in the footer 2 area.
 			'spacious_footer_sidebar_three' => array(
-				'text_about',
+				'text_cta_contact' => array(
+                    'text', array(
+                        'title' => '', // Blank title
+                        'text' => '<a class="btn btn-primary" href="/contact/">Contact Us</a>'
+                    ),
+                ),
 			),
 
 			// Put two core-defined widgets in the footer 2 area.
 			'spacious_footer_sidebar_four' => array(
-				'search',
 				'text_about',
 			),
-		),
 
-		// Specify the core-defined pages to create and add custom thumbnails to some of them.
-		'posts' => array(
-			'home',
-			'about' => array(
-				'thumbnail' => '{{image-spacious1}}',
-			),
-			'contact' => array(
-				'thumbnail' => '{{image-spacious2}}',
-			),
-			'blog' => array(
-				'thumbnail' => '{{image-spacious3}}',
+			// Put custom cta widget in the widget area business pate top section sidebar
+			'spacious_business_page_top_section_sidebar' => array(
+				'CTA' => array(
+					'spacious_call_to_action_widget',
+					array(
+					    'text_main' => 'Spacious is incredibly spacious with a clean responsive design.', 	// Blank title.
+					    'text_additional' => 'And it has many awesome features like image slider, theme options & many more!',
+					    'button_text'	=> 'View Spacious Pro',
+					    'button_url'	=> 'http://themegrill.com/themes/spacious-pro/',
+					),
+				),
+				'Service' => array(
+					'spacious_service_widget',
+					array(
+					    'page_id0' => '{{service}}', 	// Blank title.
+					),
+				),
 			),
 		),
 
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments' => array(
 			'image-spacious1' => array(
-				'post_title' => _x( 'about', 'Theme starter content', 'spacious' ),
+				'post_title' => _x( 'spacious1', 'Theme starter content', 'spacious' ),
 				'file' => 'images/hero1.jpg', // URL relative to the template directory.
 			),
 			'image-spacious2' => array(
-				'post_title' => _x( 'contact', 'Theme starter content', 'spacious' ),
+				'post_title' => _x( 'spacious2', 'Theme starter content', 'spacious' ),
 				'file' => 'images/hero2.jpg',
 			),
 			'image-spacious3' => array(
-				'post_title' => _x( 'blog', 'Theme starter content', 'spacious' ),
+				'post_title' => _x( 'spacious3', 'Theme starter content', 'spacious' ),
 				'file' => 'images/hero3.jpg',
+			),
+			'image-service' => array(
+				'post_title' => _x( 'service', 'Theme starter content', 'spacious' ),
+				'file' => 'images/time.png',
 			),
 		),
 
