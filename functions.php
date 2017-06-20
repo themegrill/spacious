@@ -113,6 +113,57 @@ function spacious_setup() {
 
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
+		'widgets' => array(
+			// Place three core-defined widgets in the sidebar area.
+			'spacious_header_sidebar' => array(
+				'text_about',
+			),
+
+			// Add the core-defined business info widget to the footer siderbar 1.
+			'spacious_footer_sidebar_one' => array(
+				'text_business_info',
+			),
+
+			// Put two core-defined widgets in the footer siderbar 2.
+			'spacious_footer_sidebar_two' => array(
+				'search',
+			),
+
+			// Put two core-defined widgets in the footer siderbar 3.
+			'spacious_footer_sidebar_three' => array(
+				'text_cta_contact' => array(
+                    'text', array(
+                        'title' => '', // Blank title
+                        'text' => '<a class="btn btn-primary" href="/contact/">Contact Us</a>'
+                    ),
+                ),
+			),
+
+			// Put two core-defined widgets in the footer siderbar 4.
+			'spacious_footer_sidebar_four' => array(
+				'text_about',
+			),
+
+			// Put custom cta widget in the widget area business page top section sidebar
+			'spacious_business_page_top_section_sidebar' => array(
+				'Service' => array(
+					'spacious_service_widget',
+					array(
+					    'page_id0'  => '{{about}}',
+					),
+				),
+				'CTA' => array(
+					'spacious_call_to_action_widget',
+					array(
+					    'text_main' => 'Spacious is incredibly spacious with a clean responsive design.', 	// Blank title.
+					    'text_additional' => 'And it has many awesome features like image slider, theme options & many more!',
+					    'button_text'	=> 'View Spacious ',
+					    'button_url'	=> 'http://themegrill.com/themes/spacious-pro/',
+					),
+				),
+			),
+		),
+
 		// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts' => array(
 			'home' => array(
@@ -122,7 +173,6 @@ function spacious_setup() {
 			'about' => array(
 				'post_title'   => esc_html__( 'Welcome', 'spacious' ),
 				'post_content' => esc_html__( 'This is your homepage which is what most visitors will see when they first visit your shop.You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'spacious' ),
-				'thumbnail' => '{{image-spacious1}}',
 			),
 			'contact' => array(
 				'thumbnail' => '{{image-spacious2}}',
@@ -135,57 +185,6 @@ function spacious_setup() {
 				'post_title' => 'Service',
 				'post_content' => 'About services',
 				'thumbnail' => '{{image-service}}',
-			),
-		),
-
-		'widgets' => array(
-			// Place three core-defined widgets in the sidebar area.
-			'spacious_header_sidebar' => array(
-				'text_about',
-			),
-
-			// Add the core-defined business info widget to the footer 1 area.
-			'spacious_footer_sidebar_one' => array(
-				'text_business_info',
-			),
-
-			// Put two core-defined widgets in the footer 2 area.
-			'spacious_footer_sidebar_two' => array(
-				'search',
-			),
-
-			// Put two core-defined widgets in the footer 2 area.
-			'spacious_footer_sidebar_three' => array(
-				'text_cta_contact' => array(
-                    'text', array(
-                        'title' => '', // Blank title
-                        'text' => '<a class="btn btn-primary" href="/contact/">Contact Us</a>'
-                    ),
-                ),
-			),
-
-			// Put two core-defined widgets in the footer 2 area.
-			'spacious_footer_sidebar_four' => array(
-				'text_about',
-			),
-
-			// Put custom cta widget in the widget area business pate top section sidebar
-			'spacious_business_page_top_section_sidebar' => array(
-				'CTA' => array(
-					'spacious_call_to_action_widget',
-					array(
-					    'text_main' => 'Spacious is incredibly spacious with a clean responsive design.', 	// Blank title.
-					    'text_additional' => 'And it has many awesome features like image slider, theme options & many more!',
-					    'button_text'	=> 'View Spacious Pro',
-					    'button_url'	=> 'http://themegrill.com/themes/spacious-pro/',
-					),
-				),
-				'Service' => array(
-					'spacious_service_widget',
-					array(
-					    'page_id0' => '{{service}}', 	// Blank title.
-					),
-				),
 			),
 		),
 
@@ -214,6 +213,22 @@ function spacious_setup() {
 			'show_on_front' => 'page',
 			'page_on_front' => '{{home}}',
 			'page_for_posts' => '{{blog}}',
+		),
+
+		// Set the front page section theme mods to the IDs of the core-registered pages.
+		'theme_mods' => array(
+			'spacious[spacious_activate_slider]' 	 => '1',
+			'spacious[spacious_slider_image1]'   	 => get_template_directory_uri().'/images/book.jpg',
+			'spacious[spacious_slider_title1]'	 	 => 'Clean Code',
+			'spacious[spacious_slider_text1]'	 	 => 'Cotton candy liquorice donut unerdwear.com caramels powder bonbon. Sugar plum fruitcake gummies. Brownie marshmallow jelly-o jelly beans. Gummi bears gummi bears jelly cheesecake jelly beans jelly beans fruitcake',
+			'spacious[spacious_slider_button_text1]' => 'Read More',
+			'spacious[spacious_slider_link1]' 	 	 => '#',
+			'spacious[spacious_slider_image2]'   	 => get_template_directory_uri().'/images/chess.jpg',
+			'spacious[spacious_slider_title2]'	 	 => 'Free Awesome slider',
+			'spacious[spacious_slider_text2]'	 	 => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. Macaroon tiramisu fruitcake tiramisu.',
+			'spacious[spacious_slider_button_text2]' => 'Read More',
+			'spacious[spacious_slider_link2]' 	 	 => '#',
+
 		),
 
 		// Set up nav menus for each of the two areas registered in the theme.
@@ -246,13 +261,6 @@ function spacious_setup() {
 		),
 	);
 
-	/**
-	 * Filters Twenty Seventeen array of starter content.
-	 *
-	 * @since Twenty Seventeen 1.1
-	 *
-	 * @param array $starter_content Array of starter content.
-	 */
 	$starter_content = apply_filters( 'spacious_starter_content', $starter_content );
 
 	add_theme_support( 'starter-content', $starter_content );
