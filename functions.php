@@ -146,12 +146,6 @@ function spacious_setup() {
 
 			// Put custom cta widget in the widget area business page top section sidebar
 			'spacious_business_page_top_section_sidebar' => array(
-				'Service' => array(
-					'spacious_service_widget',
-					array(
-					    'page_id0'  => '{{about}}',
-					),
-				),
 				'CTA' => array(
 					'spacious_call_to_action_widget',
 					array(
@@ -159,6 +153,14 @@ function spacious_setup() {
 					    'text_additional' => 'And it has many awesome features like image slider, theme options & many more!',
 					    'button_text'	=> 'View Spacious ',
 					    'button_url'	=> 'http://themegrill.com/themes/spacious-pro/',
+					),
+				),
+				'Service' => array(
+					'spacious_service_widget',
+					array(
+					    'page_id0'  => '2',
+					    'page_id1'  => '2',
+					    'page_id2'  => '2',
 					),
 				),
 			),
@@ -186,6 +188,7 @@ function spacious_setup() {
 				'post_content' => 'About services',
 				'thumbnail' => '{{image-service}}',
 			),
+
 		),
 
 		// Create the custom image attachments used as post thumbnails for pages.

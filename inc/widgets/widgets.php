@@ -315,51 +315,84 @@ class spacious_service_widget extends WP_Widget {
 
  		global $post;
  		$page_array = array();
- 		for( $i=0; $i<6; $i++ ) {
+ 		for ( $i=0; $i<6; $i++ ) {
  			$var = 'page_id'.$i;
  			$page_id = isset( $instance[ $var ] ) ? $instance[ $var ] : '';
 
- 			if( !empty( $page_id ) )
+ 			if ( ! empty( $page_id ) ) {
  				array_push( $page_array, $page_id );// Push the page id in the array
+ 			}
  		}
+
+
+
 		$get_featured_pages = new WP_Query( array(
 			'posts_per_page' 			=> -1,
 			'post_type'					=>  array( 'page' ),
 			'post__in'		 			=> $page_array,
 			'orderby' 		 			=> 'post__in'
 		) );
+
 		echo $before_widget; ?>
-			<?php
-			$j = 1;
- 			while( $get_featured_pages->have_posts() ):$get_featured_pages->the_post();
-				$page_title = get_the_title();
-				if( $j % 2 == 1 && $j > 1 ) {
-					$service_class = "tg-one-third";
-				}
-				elseif ( $j % 3 == 1 && $j > 1 ) {
-					$service_class = "tg-one-third tg-after-three-blocks-clearfix";
-				}
-				else {
-					$service_class = "tg-one-third";
-				}
-				?>
-				<div class="<?php echo $service_class; ?>">
-					<?php
-					if ( has_post_thumbnail() ) {
-						echo'<div class="service-image">'.get_the_post_thumbnail( $post->ID, 'featured' ).'</div>';
+		<?php
+ 			if ( spacious_enable_starter_content() ) {
+	 			for ( $i=0; $i < 3 ; $i++ ) {
+		 				while( $get_featured_pages->have_posts() ):$get_featured_pages->the_post();
+		 				$page_title = get_the_title();
+						if ( $i % 2 == 1 && $i > 1 ) {
+							$service_class = "tg-one-third";
+						} elseif ( $i % 3 == 1 && $i > 1 ) {
+							$service_class = "tg-one-third tg-after-three-blocks-clearfix";
+						} else {
+							$service_class = "tg-one-third";
+						}
+						?>
+						<div class="<?php echo $service_class; ?>">
+							<?php
+								echo'<div class="service-image"><img src="'.get_template_directory_uri(). '/images/time.png'.'"></div>';
+							?>
+							<?php echo $before_title; ?><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php echo $page_title; ?></a><?php echo $after_title; ?>
+							<?php the_excerpt(); ?>
+							<div class="more-link-wrap">
+								<a class="more-link" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php _e( 'Read more','spacious' ); ?></a>
+							</div>
+						</div>
+						<?php
+						endwhile;
+	 			}
+	 		} else {
+	 			$j = 1;
+	 			while( $get_featured_pages->have_posts() ):$get_featured_pages->the_post();
+					$page_title = get_the_title();
+					if( $j % 2 == 1 && $j > 1 ) {
+						$service_class = "tg-one-third";
+					}
+					elseif ( $j % 3 == 1 && $j > 1 ) {
+						$service_class = "tg-one-third tg-after-three-blocks-clearfix";
+					}
+					else {
+						$service_class = "tg-one-third";
 					}
 					?>
-					<?php echo $before_title; ?><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php echo $page_title; ?></a><?php echo $after_title; ?>
-					<?php the_excerpt(); ?>
-					<div class="more-link-wrap">
-						<a class="more-link" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php _e( 'Read more','spacious' ); ?></a>
+					<div class="<?php echo $service_class; ?>">
+						<?php
+						if ( has_post_thumbnail() ) {
+							echo'<div class="service-image">'.get_the_post_thumbnail( $post->ID, 'featured' ).'</div>';
+						}
+						?>
+						<?php echo $before_title; ?><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php echo $page_title; ?></a><?php echo $after_title; ?>
+						<?php the_excerpt(); ?>
+						<div class="more-link-wrap">
+							<a class="more-link" title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php _e( 'Read more','spacious' ); ?></a>
+						</div>
 					</div>
-				</div>
-				<?php $j++; ?>
-			<?php endwhile;
-	 		// Reset Post Data
- 			wp_reset_query();
- 			?>
+					<?php $j++; ?>
+				<?php endwhile;
+		 		// Reset Post Data
+	 			wp_reset_query();
+	 		}
+	 	?>
+
 		<?php
 		echo $after_widget;
  	}
