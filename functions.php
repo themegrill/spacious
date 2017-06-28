@@ -114,7 +114,7 @@ function spacious_setup() {
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
 		'widgets' => array(
-			// Add the serach widget to the header sidebar.
+			// Add the search widget to the header sidebar.
 			'spacious_header_sidebar' => array(
 				'header_search'	=> array(
 					'search',
@@ -123,12 +123,35 @@ function spacious_setup() {
 				),
 			),
 
-			// Add the core-defined business info widget to the footer siderbar 1.
+			// Add the text widget to the contact sidebar.
+			'spacious_contact_page_sidebar' => array(
+				'text_contact'	=> array(
+					'text',
+					array( 'title'	=> 'Contact Information',
+						   'text'	=>  '<ul>
+										 	<li>Sukedhara | Kathmandu | Nepal</li>
+										 	<li>Phone: (977) 985238979</li>
+										 	<li>Fax: (977) 123-4567</li>
+										 	<li>Email: themegrill@gmail.com</li>
+										 	<li>Website: www.themegrill.com</li>
+										</ul>',
+					),
+				),
+				'text_widget'	=> array(
+					'text',
+					array( 'title'	=> 'Text Widget',
+						   'text'	=>  'We built themes that are eye catching and easy to use, with lots 			of options and templates to change the look of your site as you 			wish.
+										Also we provide extensive support for all our themes.',
+					),
+				),
+			),
+
+			// Add the text widget in the footer siderbar 1.
 			'spacious_footer_sidebar_one' => array(
 				'text_contact' => array(
-                    'text',	array(
-                        'title' => 'Contact Info', // Blank title
-                        'text' => '<ul>
+                    'text',
+                    array( 'title' => 'Contact Info', // Blank title
+                        	'text' => '<ul>
 								 	<li>Sukedhara | Kathmandu | Nepal</li>
 								 	<li>Phone: (977) 985238979</li>
 								 	<li>Fax: (977) 123-4567</li>
@@ -139,12 +162,12 @@ function spacious_setup() {
                 ),
 			),
 
-			// Put two core-defined widgets in the footer siderbar 2.
+			// Put the search widget in the footer siderbar 2.
 			'spacious_footer_sidebar_two' => array(
 				'search',
 			),
 
-			// Put two core-defined widgets in the footer siderbar 3.
+			// Put the text widget in the footer siderbar 3.
 			'spacious_footer_sidebar_three' => array(
 				'text_custom_menu' => array(
                     'text',	array(
@@ -163,7 +186,7 @@ function spacious_setup() {
                     ),
                 ),
 			),
-			// Put two core-defined widgets in the footer siderbar 4.
+			// Put the text widget in the footer siderbar 4.
 			'spacious_footer_sidebar_four' => array(
 				'text_custom_menu2' => array(
                     'text',	array(
@@ -178,11 +201,11 @@ function spacious_setup() {
 								 	<li><a href="https://themegrill.com/themes/ample/">Ample</a></li>
 								 	<li><a href="https://themegrill.com/themes/colornews/">ColorNews</a></li>
 								  </ul>'
+							  	),
                     ),
-                ),
-			),
+				),
 
-			// Put custom cta widget in the widget area business page top section sidebar
+			// Put custom cta widget in the widget area business page top section sidebar.
 			'spacious_business_page_top_section_sidebar' => array(
 				'CTA' => array(
 					'spacious_call_to_action_widget',
@@ -227,7 +250,7 @@ function spacious_setup() {
 			),
 		),
 
-		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+			// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts' => array(
 			'home' => array(
 				'post_title'   => esc_html__( 'Home', 'spacious' ),
@@ -243,8 +266,7 @@ function spacious_setup() {
 				'post_title' => 'Theme Info',
 				'post_content' => 'About theme info',
 			),
-			'blog' => array(
-			),
+			'blog',
 			'layout' => array(
 				'post_type' => 'page',
 				'post_title' => 'Layout',
@@ -260,9 +282,10 @@ function spacious_setup() {
 				'post_title' => 'Video Tutorial',
 				'post_content' => 'About view tutorial',
 			),
-			'contact' => array(
+			'contact'		=> array(
+				'template'	=> 'page-templates/contact.php',
+				),
 			),
-		),
 
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments' => array(
