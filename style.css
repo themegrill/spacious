@@ -1221,6 +1221,23 @@ li.default-menu {
 	box-shadow:0 0 2px rgba(0, 0, 0, 0.6);
 }
 
+/* Text widget */
+
+.widget_text {
+   word-wrap: break-word;
+   margin-bottom: 30px;
+}
+.widget_text .textwidget {
+   padding-bottom: 15px;
+}
+.tg-one-half .widget_text .widget-title {
+   text-align: left;
+}
+.widget_text ul,
+.widget_text ol {
+   margin-top: 5px;
+}
+
 /* =MEDIA
 ----------------------------------------------- */
 .wp-caption {
