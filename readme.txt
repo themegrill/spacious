@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version 1.4.7 - 2017-07-05 =
+* Added - Support for starter content added.
+
 = Version 1.4.6 - 2017-04-28 =
 * Tweaks - Add theme support for WooCommerce 3.0's new gallery feature
 
