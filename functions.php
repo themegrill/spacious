@@ -149,17 +149,17 @@ function spacious_setup() {
 			// Add the text widget in the footer siderbar 1.
 			'spacious_footer_sidebar_one' => array(
 				'text_contact' => array(
-                    'text',
-                    array( 'title' => 'Contact Info', // Blank title
-                        	'text' => '<ul>
-								 	<li>Sukedhara | Kathmandu | Nepal</li>
-								 	<li>Phone: (977) 985238979</li>
-								 	<li>Fax: (977) 123-4567</li>
-								 	<li>Email: themegrill@gmail.com</li>
-								 	<li>Website: www.themegrill.com</li>
-								  </ul>'
-                    ),
-                ),
+				    'text',
+				    array( 'title' => 'Contact Info',
+				        	'text' => '<ul>
+									 	 <li>Sukedhara | Kathmandu | Nepal</li>
+									 	 <li>Phone: (977) 985238979</li>
+									 	 <li>Fax: (977) 123-4567</li>
+									 	 <li>Email: themegrill@gmail.com</li>
+									 	 <li>Website: www.themegrill.com</li>
+									  </ul>'
+			        ),
+			    ),
 			),
 
 			// Put the search widget in the footer siderbar 2.
@@ -169,118 +169,141 @@ function spacious_setup() {
 
 			// Put the text widget in the footer siderbar 3.
 			'spacious_footer_sidebar_three' => array(
-				'text_custom_menu' => array(
-                    'text',	array(
-                        'title' => 'Premium Themes', // Blank title
-                        'text' => '<ul>
-								 	<li><a href="https://themegrill.com/themes/colormag/">ColorMag Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/foodhunt/">Foodhunt Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/accelerate/">Accelerate Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/esteem/">Esteem Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/estore/">eStore Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/himalayas/">Himalayas Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/radiate/">Radiate Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/fitclub/">FitClub Pro</a></li>
-								 	<li><a href="https://themegrill.com/themes/colornews/">ColorNews Pro</a></li>
-								  </ul>'
-                    ),
-                ),
-			),
-			// Put the text widget in the footer siderbar 4.
-			'spacious_footer_sidebar_four' => array(
-				'text_custom_menu2' => array(
-                    'text',	array(
-                        'title' => 'More Free Themes', // Blank title
-                        'text' => '<ul>
-								 	<li><a href="https://themegrill.com/themes/colormag/">ColorMag</a></li>
-								 	<li><a href="https://themegrill.com/themes/foodhunt/">Foodhunt</a></li>
-								 	<li><a href="https://themegrill.com/themes/accelerate/">Accelerate</a></li>
-								 	<li><a href="https://themegrill.com/themes/esteem/">Esteem</a></li>
-								 	<li><a href="https://themegrill.com/themes/estore/">eStore</a></li>
-								 	<li><a href="https://themegrill.com/themes/envince/">Envince</a></li>
-								 	<li><a href="https://themegrill.com/themes/ample/">Ample</a></li>
-								 	<li><a href="https://themegrill.com/themes/colornews/">ColorNews</a></li>
-								  </ul>'
-							  	),
-                    ),
-				),
-
-			// Put custom cta widget in the widget area business page top section sidebar.
-			'spacious_business_page_top_section_sidebar' => array(
-				'CTA' => array(
-					'spacious_call_to_action_widget',
+				'text_custom_menu'	=> array(
+					'text',
 					array(
-					    'text_main' => 'Spacious is incredibly spacious with a clean responsive design.', 	// Blank title.
-					    'text_additional' => 'And it has many awesome features like image slider, theme options & many more!',
-					    'button_text'	=> 'View Spacious ',
-					    'button_url'	=> 'http://themegrill.com/themes/spacious-pro/',
+					    'title' => 'Premium Themes',
+					    'text'  => '<ul>
+								 	  <li><a href="https://themegrill.com/themes/colormag/">ColorMag Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/foodhunt/">Foodhunt Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/accelerate/">Accelerate Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/esteem/">Esteem Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/estore/">eStore Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/himalayas/">Himalayas Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/radiate/">Radiate Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/fitclub/">FitClub Pro</a></li>
+								 	  <li><a href="https://themegrill.com/themes/colornews/">ColorNews Pro</a></li>
+								    </ul>'
 					),
 				),
 			),
+
+			// Put the text widget in the footer siderbar 4.
+			'spacious_footer_sidebar_four' => array(
+				'text_custom_menu2' => array(
+					'text',
+					array(
+					    'title' => 'More Free Themes',
+					    'text'  => '<ul>
+								 	 <li><a href="https://themegrill.com/themes/colormag/">ColorMag</a></li>
+								 	 <li><a href="https://themegrill.com/themes/foodhunt/">Foodhunt</a></li>
+								 	 <li><a href="https://themegrill.com/themes/accelerate/">Accelerate</a></li>
+								 	 <li><a href="https://themegrill.com/themes/esteem/">Esteem</a></li>
+								 	 <li><a href="https://themegrill.com/themes/estore/">eStore</a></li>
+								 	 <li><a href="https://themegrill.com/themes/envince/">Envince</a></li>
+								 	 <li><a href="https://themegrill.com/themes/ample/">Ample</a></li>
+								 	 <li><a href="https://themegrill.com/themes/colornews/">ColorNews</a></li>
+								   </ul>'
+				  	),
+				),
+			),
+
+			// Put custom text and cta widget in the widget area business page top section sidebar.
+			'spacious_business_page_top_section_sidebar' => array(
+				'text_service_widget' => array(
+					'text',
+					array(
+						'title' => 'Text Title',
+						'text'  => 'This is text widget content.'
+				  	),
+				),
+				'CTA' => array(
+					'spacious_call_to_action_widget',
+					array(
+					    'text_main' 	  => 'Spacious is incredibly spacious with a clean responsive design.',
+					    'text_additional' => 'And it has many awesome features like image slider, theme options & many more!',
+					    'button_text'	  => 'View Spacious ',
+					    'button_url'	  => 'http://themegrill.com/themes/spacious-pro/',
+					),
+				),
+			),
+
+			// Put custom featured single page widget in the widget area business page middle section left half sidebar.
+			'spacious_business_page_middle_section_left_half_sidebar' => array(
+				'featured_single_page' => array(
+			        'spacious_featured_single_page_widget',
+			        array(
+			            'title' 	=> '',
+			            'page_id'   => '02',
+				  	),
+			    ),
+			),
+
+			// Put custom testimonial widget in the widget area business page middle section right half sidebar.
 			'spacious_business_page_middle_section_right_half_sidebar' => array(
 				'testimonial' => array(
 					'spacious_testimonial_widget',
 					array(
-					    'title' => 'What our Client says', 	// Blank title.
-					    'text' => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. ',
-					    'name'	=> 'Mr. Biping Singh',
+					    'title' 	=> 'What our Client says',
+					    'text' 		=> 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. ',
+					    'name'		=> 'Mr. Biping Singh',
 					    'byline'	=> 'CEO',
 					),
 				),
 				'testimonial-2' => array(
 					'spacious_testimonial_widget',
 					array(
-					    'title' => '', 	// Blank title.
-					    'text' => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. Macaroon tiramisu fruitcake tiramisu.Chocolate bar caramels fruitcake icing. Jujubes fdasfa',
-					    'name'	=> 'Mr. XYZ',
+					    'title' 	=> '', 	// Blank title.
+					    'text' 		=> 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. Macaroon tiramisu fruitcake tiramisu.Chocolate bar caramels fruitcake icing. Jujubes fdasfa',
+					    'name'		=> 'Mr. XYZ',
 					    'byline'	=> 'Manager',
 					),
 				),
 			),
+
+			// Put custom text widget in the widget area business page bottom section sidebar.
 			'spacious_business_page_bottom_section_sidebar' => array(
-				'featured-widget' => array(
-					'spacious_recent_work_widget',
+				'text_featured_widget' => array(
+					'text',
 					array(
-					    'title' => 'Recent Work', 	// Blank title.
-					    'text' => 'Use the TG:Featured Widget to show this section. In the widget just add the title and description.
-							Then add three pages from the three drop down option. The featured images of those pages will be shown in the right and link back to those added pages.',
-						'page_id0' => '2',
+					    'title'	=> 'Title Text Widget',
+					    'text'	=> 'This is content of text widget',
 					),
 				),
 			),
-		),
+			),
 
-			// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts' => array(
 			'home' => array(
-				'post_title'   => esc_html__( 'Home', 'spacious' ),
-				'template' => 'page-templates/business.php',
+				'post_title'	=> esc_html__( 'Home', 'spacious' ),
+				'template'		=> 'page-templates/business.php',
 			),
 			'download' => array(
-				'post_type' => 'page',
-				'post_title' => 'Download',
-				'post_content' => 'About download',
+				'post_type'		=> 'page',
+				'post_title'	=> 'Download',
+				'post_content'	=> 'About download',
 			),
 			'theme-info' => array(
-				'post_type' => 'page',
-				'post_title' => 'Theme Info',
-				'post_content' => 'About theme info',
+				'post_type'		=> 'page',
+				'post_title'	=> 'Theme Info',
+				'post_content'	=> 'About theme info',
 			),
 			'blog',
 			'layout' => array(
-				'post_type' => 'page',
-				'post_title' => 'Layout',
-				'post_content' => 'About layout',
+				'post_type'		=> 'page',
+				'post_title'	=> 'Layout',
+				'post_content'	=> 'About layout',
 			),
 			'view-pro' => array(
-				'post_type' => 'page',
-				'post_title' => 'View Pro',
-				'post_content' => 'About view pro',
+				'post_type'		=> 'page',
+				'post_title'	=> 'View Pro',
+				'post_content'	=> 'About view pro',
 			),
 			'video-tutorial' => array(
-				'post_type' => 'page',
-				'post_title' => 'Video Tutorial',
-				'post_content' => 'About view tutorial',
+				'post_type'		=> 'page',
+				'post_title'	=> 'Video Tutorial',
+				'post_content'	=> 'About view tutorial',
 			),
 			'contact'		=> array(
 				'template'	=> 'page-templates/contact.php',
@@ -290,68 +313,69 @@ function spacious_setup() {
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments' => array(
 			'image-logo' => array(
-				'post_title' => _x( 'spacious1', 'Theme starter content', 'spacious' ),
-				'file' => 'images/spacious-logo.png', // URL relative to the template directory.
+				'post_title'	=> _x( 'spacious1', 'Theme starter content', 'spacious' ),
+				'file' 			=> 'images/spacious-logo.png', // URL relative to the template directory.
 			),
 		),
 
 		// Default to a static front page and assign the front and posts pages.
 		'options' => array(
-			'show_on_front' => 'page',
-			'page_on_front' => '{{home}}',
-			'page_for_posts' => '{{blog}}',
-			'blogname' 			 => 'Spacious',
-			'blogdescription' 	 => 'ThemeGrill Demo site',
+			'show_on_front' 	=> 'page',
+			'page_on_front' 	=> '{{home}}',
+			'page_for_posts' 	=> '{{blog}}',
+			'blogname'			=> 'Spacious',
+			'blogdescription'	=> 'ThemeGrill Demo site',
 			),
 
 		// Set the front page section theme mods to the IDs of the core-registered pages.
 		'theme_mods' => array(
-			'custom_logo'						 	 => '{{image-logo}}',
-			'spacious[spacious_show_header_logo_text]' => 'both',
-			'spacious[spacious_activate_slider]' 	 => '1',
-			'spacious[spacious_slider_image1]'   	 => get_template_directory_uri().'/images/book.jpg',
-			'spacious[spacious_slider_title1]'	 	 => 'Free Awesome slider',
-			'spacious[spacious_slider_text1]'	 	 => 'Cotton candy liquorice donut unerdwear.com caramels powder bonbon. Sugar plum fruitcake gummies. Brownie marshmallow jelly-o jelly beans. Gummi bears gummi bears jelly cheesecake jelly beans jelly beans fruitcake',
-			'spacious[spacious_slider_button_text1]' => 'Read More',
-			'spacious[spacious_slider_link1]' 	 	 => '#',
-			'spacious[spacious_slider_image2]'   	 => get_template_directory_uri().'/images/chess.jpg',
-			'spacious[spacious_slider_title2]'	 	 => 'Clean Code',
-			'spacious[spacious_slider_text2]'	 	 => 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. Macaroon tiramisu fruitcake tiramisu.',
-			'spacious[spacious_slider_button_text2]' => 'Read More',
-			'spacious[spacious_slider_link2]' 	 	 => '#',
+			'custom_logo'						 	 	=> '{{image-logo}}',
+			'spacious[spacious_show_header_logo_text]'	=> 'both',
+			'spacious[spacious_activate_slider]'		=> '1',
+			'spacious[spacious_blog_slider]'		 	=> '1',
+			'spacious[spacious_slider_image1]'   	 	=> get_template_directory_uri().'/images/book.jpg',
+			'spacious[spacious_slider_title1]'	 	 	=> 'Free Awesome slider',
+			'spacious[spacious_slider_text1]'	 	 	=> 'Cotton candy liquorice donut unerdwear.com caramels powder bonbon. Sugar plum fruitcake gummies. Brownie marshmallow jelly-o jelly beans. Gummi bears gummi bears jelly cheesecake jelly beans jelly beans fruitcake',
+			'spacious[spacious_slider_button_text1]' 	=> 'Read More',
+			'spacious[spacious_slider_link1]' 	 	 	=> '#',
+			'spacious[spacious_slider_image2]'   	 	=> get_template_directory_uri().'/images/chess.jpg',
+			'spacious[spacious_slider_title2]'	 	 	=> 'Clean Code',
+			'spacious[spacious_slider_text2]'	 	 	=> 'Chocolate bar caramels fruitcake icing. Jujubes gingerbread marzipan applicake sweet lemon drops. Marshmallow cupcake bear claw oat cake candy marzipan. Cookie soufflé bear claw. Macaroon tiramisu fruitcake tiramisu.',
+			'spacious[spacious_slider_button_text2]' 	=> 'Read More',
+			'spacious[spacious_slider_link2]' 	 	 	=> '#',
 			),
 
 		// Set up nav menus for each of the two areas registered in the theme.
 		'nav_menus' => array(
 			// Assign a menu to the "primary" location.
 			'primary' => array(
-				'name' => __( 'Primary Menu', 'spacious' ),
-				'items' => array(
+				'name'	=> __( 'Primary Menu', 'spacious' ),
+				'items'	=> array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_download' => array(
-						'type' => 'post_type',
-						'object' => 'page',
-						'object_id' => '{{download}}',
+						'type' 		=> 'post_type',
+						'object' 	=> 'page',
+						'object_id'	=> '{{download}}',
 					),
 					'page_theme-info' => array(
-						'type' => 'post_type',
-						'object' => 'page',
-						'object_id' => '{{theme-info}}',
+						'type' 		=> 'post_type',
+						'object' 	=> 'page',
+						'object_id'	=> '{{theme-info}}',
 					),
 					'page_blog',
 					'page_layout' => array(
-						'type' => 'post_type',
-						'object' => 'page',
-						'object_id' => '{{layout}}',
+						'type' 		=> 'post_type',
+						'object' 	=> 'page',
+						'object_id'	=> '{{layout}}',
 					),
 					'page_view-pro' => array(
-						'type' => 'post_type',
-						'object' => 'page',
+						'type' 		=> 'post_type',
+						'object' 	=> 'page',
 						'object_id' => '{{view-pro}}',
 					),
 					'page_video-tutorial' => array(
-						'type' => 'post_type',
-						'object' => 'page',
+						'type' 		=> 'post_type',
+						'object' 	=> 'page',
 						'object_id' => '{{video-tutorial}}',
 					),
 					'page_contact',
@@ -360,7 +384,7 @@ function spacious_setup() {
 
 			// Assign a menu to the "footer" location.
 			'footer' => array(
-				'name' => __( 'Footer Menu', 'spacious' ),
+				'name'	=> __( 'Footer Menu', 'spacious' ),
 				'items' => array(
 					'page_about',
 					'page_blog',
@@ -373,8 +397,7 @@ function spacious_setup() {
 	$starter_content = apply_filters( 'spacious_starter_content', $starter_content );
 
 	add_theme_support( 'starter-content', $starter_content );
-
-}
+	}
 endif;
 
 /**

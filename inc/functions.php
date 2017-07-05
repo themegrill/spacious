@@ -743,12 +743,3 @@ function spacious_site_logo_migrate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_site_logo_migrate' );
-
-/**
- * Function to identify if starter content is enabled.
- */
-function spacious_enable_starter_content() {
-	if ( get_option( 'fresh_site' ) == 1 ){
-		return true;
-	}
-}
