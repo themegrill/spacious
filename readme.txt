@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweaks - Introduce selective refresh for site title and description
+
 = Version 1.4.7 - 2017-07-05 =
 * Added - Support for starter content added.
 
