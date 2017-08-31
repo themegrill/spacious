@@ -1205,8 +1205,8 @@ li.default-menu {
 .call-to-action-button {
 	float: right;
 	background-color: #0FBE7C;
-   border-radius: 3px 3px 3px 3px;
-   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 	color: #FFFFFF;
 	font-size: 22px;
 	line-height: 40px;
@@ -1214,6 +1214,7 @@ li.default-menu {
 	font-family: 'Lato',sans-serif;
 	padding: 5px 3.28407225%;
 	margin-top: 4px;
+	width: fit-content;
 }
 .call-to-action-button:hover {
 	-webkit-box-shadow:0 0 2px rgba(0, 0, 0, 0.6);

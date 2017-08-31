@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Fix - Call to action button issue on chrome
 * Tweaks - Introduce selective refresh for site title and description
 
 = Version 1.4.7 - 2017-07-05 =
