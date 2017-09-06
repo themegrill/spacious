@@ -198,9 +198,20 @@ if ( ! function_exists( 'spacious_breadcrumb' ) ) :
 function spacious_breadcrumb() {
 	if( function_exists( 'bcn_display' ) ) {
 		echo '<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">';
-		echo '<span class="breadcrumb-title">'.__( 'You are here:', 'spacious' ).'</span>';
-		bcn_display();
-		echo '</div> <!-- .breadcrumb -->';
+			echo '<span class="breadcrumb-title">' . __( 'You are here: ', 'spacious' ).'</span>';
+			bcn_display();
+		echo '</div> <!-- .breadcrumb : NavXT -->';
+
+	} elseif ( function_exists( 'yoast_breadcrumb' ) ) { // SEO by Yoast
+		$yoast_breadcrumb_option = get_option( 'wpseo_internallinks' );
+
+		// check if yoast breadcrumb is enabled
+    	if ( $yoast_breadcrumb_option['breadcrumbs-enable'] === true ) {
+			echo '<div class="breadcrumb">';
+				echo '<span class="breadcrumb-title">' . __( 'You are here: ', 'spacious' ).'</span>';
+				yoast_breadcrumb();
+			echo '</div> <!-- .breadcrumb : Yoast -->';
+		}
 	}
 }
 endif;
