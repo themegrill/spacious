@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Tweak - Add theme support for Jetpack Responsive Videos.
 * Feature - Add support for yoast breadcrumb
 * Fix - Call to action button issue on chrome
 * Tweaks - Introduce selective refresh for site title and description
