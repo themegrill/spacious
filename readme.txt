@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Fix - Read more enabled on archive, search pages
 * Tweak - Add theme support for Jetpack Responsive Videos.
 * Feature - Add support for yoast breadcrumb
 * Fix - Call to action button issue on chrome
