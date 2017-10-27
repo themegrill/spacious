@@ -168,6 +168,27 @@ function spacious_customize_register($wp_customize) {
          'below' => __( 'Position Below: Display the Header image just below the site title and main menu part.', 'spacious' )
       )
    ));
+
+   // Responsive collapse menu
+   $wp_customize->add_section( 'spacious_new_menu', array(
+      'priority' => 4,
+      'title'    => __( 'Responsive Menu Style', 'spacious' ),
+      'panel' => 'spacious_header_options'
+   ));
+
+   $wp_customize->add_setting( $spacious_themename . '[spacious_new_menu]', array(
+      'default' => 0,
+      'type' => 'option',
+      'capability' => 'edit_theme_options',
+      'sanitize_callback' => 'spacious_checkbox_sanitize'
+   ));
+
+   $wp_customize->add_control( $spacious_themename . '[spacious_new_menu]', array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Switch to new responsive menu.', 'spacious' ),
+		'section' => 'spacious_new_menu'
+	));
+
    // End of Header Options
 
    // Start of the Design Options
