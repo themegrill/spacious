@@ -177,7 +177,7 @@ function spacious_customize_register($wp_customize) {
    ));
 
    $wp_customize->add_setting( $spacious_themename . '[spacious_new_menu]', array(
-      'default' => '0',
+      'default' => 0,
       'type' => 'option',
       'capability' => 'edit_theme_options',
       'sanitize_callback' => 'spacious_checkbox_sanitize'
