@@ -715,6 +715,7 @@ li.default-menu {
 }
 .main-small-navigation li {
   background: #3A3A3A;
+  position: relative;
 }
 .main-small-navigation li:hover {
   background: #0FBE7C;
@@ -1877,6 +1878,7 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
 .wp-custom-header-video-button.wp-custom-header-video-pause:before{
     content: "\f448";
 }
+
 /* =RESPONSIVE STRUCTURE
 ----------------------------------------------- */
 @media screen and (min-width: 1500px) {
@@ -2025,7 +2027,153 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
 	#featured-slider .entry-title span { font-size: 18px; line-height: 1.4; }
 	#featured-slider .entry-content p { font-size: 14px; line-height: 1.4; }
 	#featured-slider .slider-read-more-button { font-size: 14px; padding: 5px 10px; padding: 0.5rem 1rem; }
+
+	/* =RESPONSIVE SUB TOGGLE MENU
+	----------------------------------------------- */
+
+	/* sub-toggle */
+	.sub-toggle {
+        background: #0FBE7C none repeat scroll 0 0;
+        color: #ffffff;
+        cursor: pointer;
+        display: block;
+        height: 24px;
+        line-height: 21px;
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        top: 9px;
+        width: 24px;
+    }
+
+    .main-small-navigation li.current-menu-item > .sub-toggle {
+        background: #ffffff none repeat scroll 0 0;
+    }
+
+    .main-small-navigation li.current-menu-item > .sub-toggle i {
+        color: #d40234;
+    }
+
+    .better-responsive-menu .menu-primary-container .sub-menu {
+        display: none;
+    }
+
+    .sub-toggle span {
+        display: inline-block;
+        font-size: 11px;
+        line-height: 23px;
+        margin-left: 0;
+    }
+    .main-small-navigation li:hover > .sub-toggle {
+        background: #ffffff;
+        color: #0FBE7C;
+    }
+
+    .sub-toggle span.genericon-downarrow {
+        line-height: 30px;
+        margin-left: 0;
+    }
+
+    .better-responsive-menu .site-header .menu-toggle {
+        background: #3a3a3a none repeat scroll 0 0;
+        color: #fff;
+        font: 0px/0 a;
+        height: 36px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        width: 40px;
+    }
+
+    .better-responsive-menu #site-navigation {
+        float: left;
+    }
+
+    .better-responsive-menu #header-text-nav-wrap #header-right-section .widget,
+    .better-responsive-menu #header-text-nav-wrap {
+        padding: 0;
+    }
+
+    .better-responsive-menu .site-header .menu-toggle::before {
+        font-size: 21px;
+        left: 50%;
+        line-height: 25px;
+        margin-right: 0;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .better-responsive-menu #header-text-nav-container {
+        position: relative;
+        margin-bottom: 15px;
+        border: none;
+    }
+
+    .better-responsive-menu #site-navigation .menu-primary-container {
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .better-responsive-menu #header-text {
+        float: left;
+        text-align: left;
+    }
+
 }
+
+@media (min-width: 600px) and (max-width: 768px) {
+	.better-responsive-menu #header-right-section {
+        float: right;
+        margin-top: 15px;
+        max-width: 100%;
+    }
+
+    .better-responsive-menu #site-navigation {
+        float: right;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .better-responsive-menu .main-small-navigation {
+        margin-top: 10px;
+    }
+
+    .better-responsive-menu #header-logo-image {
+        float: left;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .better-responsive-menu #header-left-section {
+        float: left;
+        margin-top: 10px;
+    }
+
+    .better-responsive-menu #header-text {
+        float: left;
+        margin: 13px 0 0;
+        text-align: left;
+    }
+
+    .better-responsive-menu #site-description {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    .better-responsive-menu #site-title a {
+        font-size: 28px;
+    }
+}
+
 @media screen and (max-width: 767px) {
 	.tg-one-half, .tg-one-third, .tg-one-fourth {
 		float: none;
@@ -2064,6 +2212,27 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
    .gallery-columns-9 .gallery-item {
    	width:25%;
    }
+
+   .better-responsive-menu #header-logo-image {
+        display: inline-block;
+    }
+
+    .better-responsive-menu #header-text {
+        display: inline-block;
+        float: none;
+        margin-top: 12px;
+        vertical-align: top;
+    }
+
+    .better-responsive-menu #header-left-section {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .better-responsive-menu #header-right-sidebar {
+        float: right;
+        margin-top: 10px;
+    }
 }
 @media only screen and (max-width: 420px) {
    #page {
@@ -2081,6 +2250,10 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
    .gallery-columns-9 .gallery-item {
       width:33.33%;
    }
+
+   .better-responsive-menu #header-text {
+        text-align: center;
+    }
 }
 
 /* Remove the updated class from entry meta */
