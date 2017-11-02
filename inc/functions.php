@@ -184,7 +184,7 @@ function spacious_body_class( $classes ) {
 	elseif( $layout_meta == 'no_sidebar_full_width' ) { $classes[] = 'no-sidebar-full-width'; }
 	elseif( $layout_meta == 'no_sidebar_content_centered' ) { $classes[] = 'no-sidebar'; }
 
-	if( spacious_options( 'spacious_new_menu', '0' ) == '1' ){
+	if( spacious_options( 'spacious_new_menu', 0 ) == '1' ){
 		$classes[] = 'better-responsive-menu';
 	}
 
