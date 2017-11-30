@@ -578,6 +578,14 @@ function spacious_customize_register( $wp_customize ) {
 		'settings' => $spacious_themename . '[spacious_activate_slider]',
 	) );
 
+	// Selective refresh for slider activate
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_activate_slider]', array(
+			'selector'        => '#featured-slider',
+			'render_callback' => '',
+		) );
+	}
+
 	// Disable slider in blog page
 	$wp_customize->add_section( 'spacious_disable_slider_blog_page_section', array(
 		'priority' => 2,
