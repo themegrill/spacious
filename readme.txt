@@ -48,6 +48,8 @@ and we will include it within the theme from next version update.
 == Changelog ==
 = Version TBD =
 * Feature - Responsive menu option with submenu toggle
+* Feature - Introduce customizer selective and live refresh feature
+* Feature - Introduce customizer selective refresh widgets feature for theme bundled widgets
 
 = Version 1.4.8 - 2017-10-16 =
 * Fix - Read more enabled on archive, search pages
