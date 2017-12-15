@@ -12,8 +12,9 @@ function spacious_customize_register( $wp_customize ) {
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
-	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+   $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -409,6 +410,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( $spacious_themename . '[spacious_primary_color]', array(
 		'default'              => '#0FBE7C',
 		'type'                 => 'option',
+      'transport'            => 'postMessage',
 		'capability'           => 'edit_theme_options',
 		'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
 		'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
