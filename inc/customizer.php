@@ -14,7 +14,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-   $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -63,7 +63,7 @@ function spacious_customize_register( $wp_customize ) {
 			);
 
 			foreach ( $important_links as $important_link ) {
-				echo '<p><a target="_blank" href="' . $important_link[ 'link' ] . '" >' . esc_attr( $important_link[ 'text' ] ) . ' </a></p>';
+				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
 			}
 		}
 	}
@@ -93,7 +93,7 @@ function spacious_customize_register( $wp_customize ) {
 	$spacious_themename = get_option( 'stylesheet' );
 	$spacious_themename = preg_replace( "/\W/", "_", strtolower( $spacious_themename ) );
 
-	// Start of the Header Options
+	/****************************************Start of the Header Options****************************************/
 	// Header Options Area
 	$wp_customize->add_panel( 'spacious_header_options', array(
 		'capabitity' => 'edit_theme_options',
@@ -194,9 +194,62 @@ function spacious_customize_register( $wp_customize ) {
 		'section' => 'spacious_new_menu',
 	) );
 
+	// Header designs
+	$wp_customize->add_section( 'spacious_header_design_options', array(
+		'priority' => 2,
+		'title'    => __( 'Header Designs', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+	$wp_customize->add_setting( 'spacious[spacious_header_design]', array(
+		'default'           => 'style_one',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_radio_select_sanitize',
+	) );
+	$wp_customize->add_control( 'spacious[spacious_header_design]', array(
+		'type'    => 'radio',
+		'label'   => esc_html__( 'Choose a header design.', 'spacious' ),
+		'section' => 'spacious_header_design_options',
+		'choices' => array(
+			'style_one' => esc_html__( 'Style 1', 'spacious' ),
+			'style_two' => esc_html__( 'Style 2', 'spacious' ),
+		),
+	) );
+
 	// End of Header Options
 
-	// Start of the Design Options
+	/****************************************Start of the Footer Options****************************************/
+
+	$wp_customize->add_panel( 'spacious_footer_options', array(
+		'capabitity' => 'edit_theme_options',
+		'priority'   => 500,
+		'title'      => __( 'Footer', 'spacious' ),
+	) );
+
+	// Footer designs
+	$wp_customize->add_section( 'spacious_footer_design_options', array(
+		'priority' => 5,
+		'title'    => __( 'Footer Designs', 'spacious' ),
+		'panel'    => 'spacious_footer_options',
+	) );
+	$wp_customize->add_setting( 'spacious[spacious_footer_design]', array(
+		'default'           => 'style_one',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_radio_select_sanitize',
+	) );
+	$wp_customize->add_control( 'spacious[spacious_footer_design]', array(
+		'type'    => 'radio',
+		'label'   => esc_html__( 'Choose a footer design.', 'spacious' ),
+		'section' => 'spacious_footer_design_options',
+		'choices' => array(
+			'style_one' => esc_html__( 'Style 1', 'spacious' ),
+			'style_two' => esc_html__( 'Style 2', 'spacious' ),
+		),
+	) );
+	// End of Footer Options
+
+	/****************************************Start of the Design Options****************************************/
 	$wp_customize->add_panel( 'spacious_design_options', array(
 		'capabitity' => 'edit_theme_options',
 		'priority'   => 505,
@@ -240,46 +293,48 @@ function spacious_customize_register( $wp_customize ) {
 			$name = '_customize-radio-' . $this->id;
 
 			?>
-			<style>
-				#spacious-img-container .spacious-radio-img-img {
-					border: 3px solid #DEDEDE;
-					margin: 0 5px 5px 0;
-					cursor: pointer;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
+            <style>
+                #spacious-img-container .spacious-radio-img-img {
+                    border: 3px solid #DEDEDE;
+                    margin: 0 5px 5px 0;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                }
 
-				#spacious-img-container .spacious-radio-img-selected {
-					border: 3px solid #AAA;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
+                #spacious-img-container .spacious-radio-img-selected {
+                    border: 3px solid #AAA;
+                    border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                }
 
-				input[type=checkbox]:before {
-					content: '';
-					margin: -3px 0 0 -4px;
-				}
-			</style>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<ul class="controls" id='spacious-img-container'>
+                input[type=checkbox]:before {
+                    content: '';
+                    margin: -3px 0 0 -4px;
+                }
+            </style>
+            <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+            <ul class="controls" id='spacious-img-container'>
 				<?php
 				foreach ( $this->choices as $value => $label ) :
 					$class = ( $this->value() == $value ) ? 'spacious-radio-img-selected spacious-radio-img-img' : 'spacious-radio-img-img';
 					?>
-					<li style="display: inline;">
-						<label>
-							<input <?php $this->link(); ?>style='display:none' type="radio" value="<?php echo esc_attr( $value ); ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
+                    <li style="display: inline;">
+                        <label>
+                            <input <?php $this->link(); ?>style='display:none' type="radio"
+                                   value="<?php echo esc_attr( $value ); ?>"
+                                   name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
 							checked( $this->value(), $value ); ?> />
-							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>'/>
-						</label>
-					</li>
-					<?php
+                            <img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>'/>
+                        </label>
+                    </li>
+				<?php
 				endforeach;
 				?>
-			</ul>
-			<script type="text/javascript">
+            </ul>
+            <script type="text/javascript">
 				jQuery( document ).ready( function ( $ ) {
 					$( '.controls#spacious-img-container li img' ).click( function () {
 						$( '.controls#spacious-img-container li' ).each( function () {
@@ -288,7 +343,7 @@ function spacious_customize_register( $wp_customize ) {
 						$( this ).addClass( 'spacious-radio-img-selected' );
 					} );
 				} );
-			</script>
+            </script>
 			<?php
 		}
 	}
@@ -410,7 +465,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( $spacious_themename . '[spacious_primary_color]', array(
 		'default'              => '#0FBE7C',
 		'type'                 => 'option',
-      'transport'            => 'postMessage',
+		'transport'            => 'postMessage',
 		'capability'           => 'edit_theme_options',
 		'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
 		'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
@@ -455,10 +510,11 @@ function spacious_customize_register( $wp_customize ) {
 
 			public function render_content() {
 				?>
-				<label>
-					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-				</label>
+                <label>
+                    <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                    <textarea rows="5"
+                              style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+                </label>
 				<?php
 			}
 
@@ -487,7 +543,7 @@ function spacious_customize_register( $wp_customize ) {
 	// End of Design Options
 
 	if ( ! function_exists( 'has_site_icon' ) || ( ! has_site_icon() && ( spacious_options( 'spacious_favicon', '' ) != '' ) ) ) {
-		// Start of the Additional Options
+		/****************************************Start of the Additional Options****************************************/
 		$wp_customize->add_panel( 'spacious_additional_options', array(
 			'capabitity' => 'edit_theme_options',
 			'priority'   => 510,
@@ -544,15 +600,16 @@ function spacious_customize_register( $wp_customize ) {
 
 		public function render_content() {
 			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-			</label>
+            <label>
+                <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+                <textarea rows="5"
+                          style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+            </label>
 			<?php
 		}
 	}
 
-	// Start of the Slider Options
+	/****************************************Start of the Slider Options****************************************/
 	$wp_customize->add_panel( 'spacious_slider_options', array(
 		'capabitity' => 'edit_theme_options',
 		'priority'   => 515,
@@ -689,7 +746,7 @@ function spacious_customize_register( $wp_customize ) {
 	}
 	// End of Slider Options
 
-	// Start of data sanitization
+	/****************************************Start of the data sanitization****************************************/
 	// radio/select sanitization
 	function spacious_radio_select_sanitize( $input, $setting ) {
 		// Ensuring that the input is a slug.
@@ -776,46 +833,46 @@ add_action( 'customize_preview_init', 'spacious_customize_preview_js' );
 add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_custom_scripts' );
 
 function spacious_customizer_custom_scripts() { ?>
-	<style>
-		/* Theme Instructions Panel CSS */
-		li#accordion-section-spacious_important_links h3.accordion-section-title, li#accordion-section-spacious_important_links h3.accordion-section-title:focus {
-			background-color: #0FBE7C !important;
-			color: #fff !important;
-		}
+    <style>
+        /* Theme Instructions Panel CSS */
+        li#accordion-section-spacious_important_links h3.accordion-section-title, li#accordion-section-spacious_important_links h3.accordion-section-title:focus {
+            background-color: #0FBE7C !important;
+            color: #fff !important;
+        }
 
-		li#accordion-section-spacious_important_links h3.accordion-section-title:hover {
-			background-color: #0FBE7C !important;
-			color: #fff !important;
-		}
+        li#accordion-section-spacious_important_links h3.accordion-section-title:hover {
+            background-color: #0FBE7C !important;
+            color: #fff !important;
+        }
 
-		li#accordion-section-spacious_important_links h3.accordion-section-title:after {
-			color: #fff !important;
-		}
+        li#accordion-section-spacious_important_links h3.accordion-section-title:after {
+            color: #fff !important;
+        }
 
-		/* Upsell button CSS */
-		.themegrill-pro-info,
-		.customize-control-spacious-important-links a {
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
-			background: #008EC2;
-			color: #fff;
-			display: block;
-			margin: 15px 0 0;
-			padding: 5px 0;
-			text-align: center;
-			font-weight: 600;
-		}
+        /* Upsell button CSS */
+        .themegrill-pro-info,
+        .customize-control-spacious-important-links a {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8fc800+0,8fc800+100;Green+Flat+%232 */
+            background: #008EC2;
+            color: #fff;
+            display: block;
+            margin: 15px 0 0;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: 600;
+        }
 
-		.customize-control-spacious-important-links a {
-			padding: 8px 0;
-		}
+        .customize-control-spacious-important-links a {
+            padding: 8px 0;
+        }
 
-		.themegrill-pro-info:hover,
-		.customize-control-spacious-important-links a:hover {
-			color: #ffffff;
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
-			background: #2380BA;
-		}
-	</style>
+        .themegrill-pro-info:hover,
+        .customize-control-spacious-important-links a:hover {
+            color: #ffffff;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100;Green+Flat+%233 */
+            background: #2380BA;
+        }
+    </style>
 	<?php
 }
 
