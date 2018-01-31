@@ -1,8 +1,6 @@
 /**
- *
- * @description Suffice custom javascript functions
+ * @description Spacious custom javascript functions
  * @author ThemeGril
- *
  */
 
 /*===============================
