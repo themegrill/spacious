@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.4.9 - 2017-12-15 =
 * Feature - Responsive menu option with submenu toggle
 * Feature - Introduce customizer selective and live refresh feature
 * Feature - Introduce customizer selective refresh widgets feature for theme bundled widgets
