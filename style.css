@@ -661,7 +661,7 @@ li.default-menu {
 	padding: 6px 10px;
 	color: #666666;
 }
-.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover {
+.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover, .main-navigation ul li:hover > .sub-toggle {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
 	color: #0FBE7C;
 }
@@ -675,6 +675,29 @@ li.default-menu {
 .main-navigation ul li.focus >ul{
 	display: block;
 }
+
+.main-navigation ul li .sub-toggle {
+    position: absolute;
+    top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+    margin-left: 5px;
+    margin-top: 4px;
+}
+
+.main-navigation ul li >ul .sub-toggle {
+	margin: 0;
+	right: 10px;
+}
+
+.main-navigation ul li.current-menu-item .sub-toggle,
+.main-navigation ul li.current_page_ancestor .sub-toggle,
+.main-navigation ul li.current-menu-ancestor .sub-toggle,
+.main-navigation ul li.current_page_item .sub-toggle {
+	color: #0FBE7C;
+}
+
 /* =SMALL MENU
 ----------------------------------------------- */
 .menu-toggle {
