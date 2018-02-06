@@ -2075,7 +2075,8 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
     }
 
     .main-small-navigation li.current-menu-item > .sub-toggle {
-        background: #ffffff none repeat scroll 0 0;
+		background: #ffffff none repeat scroll 0 0;
+		color: #0FBE7C;
     }
 
     .main-small-navigation li.current-menu-item > .sub-toggle i {
