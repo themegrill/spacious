@@ -676,6 +676,11 @@ li.default-menu {
 	display: block;
 }
 
+.main-navigation ul li ul li.current-menu-item > a,
+.main-navigation ul li ul li.current-menu-ancestor > a {
+    color: #0FBE7C;
+}
+
 .main-navigation ul li .sub-toggle {
     position: absolute;
     top: 50%;
@@ -691,10 +696,10 @@ li.default-menu {
 	right: 10px;
 }
 
-.main-navigation ul li.current-menu-item .sub-toggle,
-.main-navigation ul li.current_page_ancestor .sub-toggle,
-.main-navigation ul li.current-menu-ancestor .sub-toggle,
-.main-navigation ul li.current_page_item .sub-toggle {
+.main-navigation ul li.current-menu-item > .sub-toggle,
+.main-navigation ul li.current_page_ancestor > .sub-toggle,
+.main-navigation ul li.current-menu-ancestor > .sub-toggle,
+.main-navigation ul li.current_page_item > .sub-toggle {
 	color: #0FBE7C;
 }
 
