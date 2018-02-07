@@ -333,6 +333,7 @@ define( 'SPACIOUS_LANGUAGES_DIR', SPACIOUS_PARENT_DIR . '/languages' );
 
 define( 'SPACIOUS_ADMIN_DIR', SPACIOUS_INCLUDES_DIR . '/admin' );
 define( 'SPACIOUS_WIDGETS_DIR', SPACIOUS_INCLUDES_DIR . '/widgets' );
+define( 'SPACIOUS_ELEMENTOR_DIR', SPACIOUS_INCLUDES_DIR . '/elementor' );
 
 define( 'SPACIOUS_ADMIN_IMAGES_DIR', SPACIOUS_ADMIN_DIR . '/images' );
 define( 'SPACIOUS_ADMIN_CSS_DIR', SPACIOUS_ADMIN_DIR . '/css' );
@@ -400,4 +401,9 @@ require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+/** Add the Elementor compatibility file */
+if ( defined( 'ELEMENTOR_VERSION' ) && defined( 'SPACIOUS_TOOLKIT_VERSION' ) ) {
+	require_once( SPACIOUS_ELEMENTOR_DIR . '/elementor.php' );
 }

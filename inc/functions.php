@@ -79,14 +79,6 @@ function spacious_scripts_styles_method() {
 
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
 	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
-
-	/**
-	 * Register scripts for elementor widgets
-	 */
-	wp_register_script( 'jquery-waypoints', SPACIOUS_JS_URL . '/waypoints.min.js', array( 'jquery' ), '2.0.3', true );
-	wp_register_script( 'jquery-countTo', SPACIOUS_JS_URL . '/jquery.countTo.min.js', array( 'jquery' ), false, true );
-	wp_register_script( 'elementor-custom', SPACIOUS_JS_URL . '/elementor-custom.js', array( 'jquery' ), false, true );
-
 }
 
 /****************************************************************************************/
