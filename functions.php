@@ -397,13 +397,15 @@ require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-a
 require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php' );
 
 /**
+ * Load the Spacious Toolkit file.
+ */
+if ( class_exists( 'Spacious_Toolkit' ) ) {
+	include_once( SPACIOUS_INCLUDES_DIR . '/spacious-toolkit.php' );
+}
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/** Add the Elementor compatibility file */
-if ( defined( 'ELEMENTOR_VERSION' ) && defined( 'SPACIOUS_TOOLKIT_VERSION' ) ) {
-	require_once( SPACIOUS_ELEMENTOR_DIR . '/elementor.php' );
 }
