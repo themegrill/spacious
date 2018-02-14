@@ -153,6 +153,103 @@ body.page-template-page-builder #main {
 	font-size: 14px;
 }
 
+.elementor .spacious-title .widget-title {
+	color: #444444;
+	padding-bottom: 15px;
+	font-weight: 600;
+}
+
+.elementor .spacious-title .widget-desc {
+	margin-bottom: 0;
+	color: #999999;
+	font-size: 14px;
+}
+
+.elementor .spacious-title.center {
+	text-align: center;
+}
+
+.elementor .spacious-title.right {
+	text-align: right;
+}
+
+.elementor .spacious-title.style_two .widget-title {
+	position: relative;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+
+.elementor .spacious-title.style_two .widget-title::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: 40px;
+	height: 1px;
+	background-color: #999999;
+}
+
+.elementor .spacious-title.style_two.center .widget-title::after {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.elementor .spacious-title.style_two.right .widget-title::after {
+	left: auto;
+	right: 0;
+}
+
+.elementor .spacious-title.style_three .widget-desc span {
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	padding-right: 10px;
+}
+
+.elementor .spacious-title.style_three .widget-desc span::before, .elementor .spacious-title.style_three .widget-desc span::after {
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	content: "";
+	width: 40px;
+	height: 1px;
+	background-color: #999999;
+}
+
+.elementor .spacious-title.style_three .widget-desc span::after {
+	display: none;
+}
+
+.elementor .spacious-title.style_three.center .widget-desc span {
+	padding-left: 10px;
+}
+
+.elementor .spacious-title.style_three.center .widget-desc span::before {
+	left: 100%;
+}
+
+.elementor .spacious-title.style_three.center .widget-desc span::after {
+	display: block;
+	left: auto;
+	right: 100%;
+}
+
+.elementor .spacious-title.style_three.right .widget-desc span {
+	padding-right: 0;
+	padding-left: 10px;
+}
+
+.elementor .spacious-title.style_three.right .widget-desc span::before {
+	display: none;
+}
+
+.elementor .spacious-title.style_three.right .widget-desc span::after {
+	display: block;
+	left: auto;
+	right: 100%;
+}
+
 .elementor .icon-box {
 	margin: 30px 0;
 	/*----------  Variation  ----------*/
