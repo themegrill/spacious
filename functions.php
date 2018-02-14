@@ -82,8 +82,8 @@ function spacious_setup() {
 
 	// Registering navigation menus.
 	register_nav_menus( array(
-		'primary' 	=> __( 'Primary Menu','spacious' ),
-		'footer' 	=> __( 'Footer Menu','spacious' )
+		'primary' 	=> esc_html__( 'Primary Menu','spacious' ),
+		'footer' 	=> esc_html__( 'Footer Menu','spacious' )
 	) );
 
 	// Cropping the images to different sizes to be used in the theme
