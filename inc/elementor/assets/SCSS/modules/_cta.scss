@@ -1,0 +1,26 @@
+.call-to-action {
+	padding: 30px;
+	border: 1px solid $color-gray-lighten;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+    
+	.call-to-action-left {
+		flex: 3;
+	}
+
+	.call-to-action-right {
+		flex: 1;
+		text-align: right;
+	}
+    
+	.call-to-action__title {
+		margin: 0;
+		color: $color-gray-dark;
+		font-size: 26px;
+	}
+    
+	.call-to-action__content {
+		color: $color-gray;
+	}
+}

@@ -28,7 +28,7 @@ var paths = {
 // Start browserSync
 function browserSyncStart( cb ) {
 	browserSync.init({
-		proxy:'localhost/spacious'
+		proxy:'spacious.local'
 	}, cb);
 }
 

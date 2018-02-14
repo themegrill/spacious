@@ -1,0 +1,190 @@
+.btn {
+	display: inline-block;
+	padding: 12px 30px;
+	border: none;
+	background: $color-gray-lighter;
+	color: $color-gray-dark;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	.fa {
+		padding-right: 10px;
+		color: #fff;
+	}
+
+	/*----------  Sizes  ----------*/
+	&.btn--small {
+		padding: 7px 15px;
+		border-width: 1px;
+		font-size: 12px;
+	}
+
+	&.btn--wide {
+		padding: 13px 45px;
+		border-width: 2px;
+		font-size: 12px;
+	}
+
+	&.btn--medium {
+		padding: 20px 45px;
+		border-width: 2px;
+		font-size: 14px;
+		font-weight: 500;
+	}
+
+	&.btn--large {
+		padding: 30px 60px;
+		border-width: 4px;
+		font-size: 22px;
+		font-weight: 500;
+	}
+
+	/*----------  Layout  ----------*/
+
+	&.btn--flat {
+		border-radius: none;
+	}
+
+	&.btn--rounded {
+		border-radius: 100px;
+	}
+
+	&.btn--bordered {
+		border-style: solid;
+		border-color: #fff;
+	}
+
+	&.btn--rectangular-rounded {
+		border-radius: 3px;
+	}
+
+
+	/*----------  Button color styles  ----------*/
+	&.btn--primary {
+		border-color: #fff;
+		background: $color-brand-primary;
+		color: #fff;
+
+		&:hover {
+			border-color: lighten($color-brand-primary, 3);
+			background: lighten($color-brand-primary, 3);
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.btn--orange {
+		border-color: #fff;
+		background: $color-orange;
+		color: #fff;
+
+		&:hover {
+			border-color: lighten($color-orange, 3);
+			background: lighten($color-orange, 3);
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.btn--cyan {
+		border-color: #fff;
+		background: $color-cyan;
+		color: #fff;
+
+		&:hover {
+			border-color: lighten($color-cyan, 3);
+			background: lighten($color-cyan, 3);
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		}
+	}
+	&.btn--pink {
+		border-color: #fff;
+		background: $color-pink;
+		color: #fff;
+
+		&:hover {
+			border-color: lighten($color-pink, 3);
+			background: lighten($color-pink, 3);
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.btn--yellow {
+		border-color: #fff;
+		background: darken($color-yellow, 10);
+		color: #fff;
+
+		&:hover {
+			border-color: lighten($color-yellow, 1);
+			background: lighten($color-yellow, 1);
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&.btn--ghost {
+		border-style: solid;
+		background: transparent;
+	}
+
+	&.btn--white {
+		background: #fff;
+		color: $color-gray-darker;
+		
+		.fa {
+			color: $color-gray-darker;
+		}
+
+		&:hover {
+			background: $color-gray-darker;
+			color: #fff;
+
+			.fa {
+				color: #fff;
+			}
+		}
+	}
+
+	&.btn--black {
+		background: $color-gray-darker;
+		color: #fff;
+
+		&:hover {
+			background: #fff;
+			color: $color-gray-darker;
+
+			.fa {
+				color: $color-gray-darker;
+			}
+		}
+	}
+	&.btn--border {
+		padding: 5px 0;
+		border-top: 1px solid $color-gray-light;
+		border-bottom: 1px solid $color-gray-light;
+		background-color: transparent;
+		color: $color-gray;
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-decoration: none;
+		&:hover {
+			border-color: $color-brand-primary;
+			color: $color-brand-primary;
+		}
+	}
+}
+
+/*----------  Buttom Group  ----------*/
+.btn-group {
+	.btn {
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
