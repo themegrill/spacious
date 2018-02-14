@@ -376,7 +376,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
  * Load Demo Importer Configs.
  */
 if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require get_template_directory() . '/inc/demo-config.php';
+	require_once get_template_directory() . '/inc/demo-config.php';
 }
 
 /**
@@ -387,7 +387,7 @@ $spacious_version = $theme['Version'];
 
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-spacious-admin.php';
+	require_once get_template_directory() . '/inc/admin/class-spacious-admin.php';
 }
 
 /**
@@ -400,12 +400,12 @@ require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php
  * Load the Spacious Toolkit file.
  */
 if ( class_exists( 'Spacious_Toolkit' ) ) {
-	include_once( SPACIOUS_INCLUDES_DIR . '/spacious-toolkit.php' );
+	require_once( SPACIOUS_INCLUDES_DIR . '/spacious-toolkit.php' );
 }
 
 /**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require_once get_template_directory() . '/inc/jetpack.php';
 }
