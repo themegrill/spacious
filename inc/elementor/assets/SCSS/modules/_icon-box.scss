@@ -1,0 +1,136 @@
+.icon-box {
+    margin: 30px 0;
+    
+	.icon-box__icon {
+		color: $color-brand-primary;
+		font-size: 18px;
+	}
+    
+    .icon-box__title,
+    .icon-box__title a {
+        color: $color-gray-dark;
+        font-size: 18px;
+        text-decoration: none;
+        padding-bottom: 0;
+    }
+    .icon-box__title a {
+        &:hover {
+            color: $color-brand-primary;
+        }
+    }
+    
+	.icon-box__content {
+        color: $color-gray;
+        
+        p{
+            margin-top: 0;
+            margin-bottom: 0; 
+        }
+        
+	}
+    
+    
+	/*----------  Variation  ----------*/
+	&.icon-box--rounded {
+		padding: 0 30px;
+        text-align: center;
+        
+		&:hover {
+			.icon-box {
+				&__icon {
+					.fa {
+						transform: rotate(360deg) scale(1.3);
+					}
+                    
+					&::before {
+						top: -4px;
+						right: -4px;
+						bottom: -4px;
+						left: -4px;
+					}
+				}
+			}
+		}
+        
+		.icon-box__icon {
+			position: relative;
+			width: 150px;
+			height: 150px;
+			margin: 0 auto;
+            background: #fff;
+            border-radius: 100%;
+            border: 2px solid $color-brand-primary;
+            line-height: 150px;
+            transition: 1s border ease-in-out;
+            
+			.fa {
+				font-size: 32px;
+				transition: transform 0.35s;
+			}
+		}
+        
+		.icon-box__title {
+			margin: 25px 0 20px;
+		}
+		
+	}
+	
+    
+	&.icon-box-style-two {
+		position: relative;
+        
+		.icon-box__icon {
+			position: absolute;
+			top: 7px;
+			left: 0;
+		}
+        
+		.icon-box__title,
+		.icon-box__content {
+			margin-left: 30px;
+		}
+        
+		.icon-box__title {
+			margin-bottom: 10px;
+		}
+	}
+    
+    
+	&.icon-box-style-three {
+		padding: 45px 30px;
+		border-bottom: 2px solid $color-brand-primary;
+		background: #fff;
+		text-align: center;
+		box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.05);
+        
+		.icon-box__title {
+			margin: 20px 0;
+		}
+        
+		.icon-box__icon {
+			font-size: 48px;
+		}
+		
+    }
+    &.icon-box-style-four {
+		.icon-box__icon {
+			.fa {
+				width: 46px;
+				height: 46px;
+				border: 2px solid $color-gray-darken;
+				color: $color-gray-darken;
+				font-style: 20px;
+				line-height: 46px;
+				text-align: center;
+			}
+        }
+        .icon-box__title {
+            margin:  25px 0 15px; 
+            font-weight: 500;      
+        }
+        .icon-box__content {
+            color: $color-gray-light;
+            
+        }
+    }
+}

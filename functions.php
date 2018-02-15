@@ -82,8 +82,8 @@ function spacious_setup() {
 
 	// Registering navigation menus.
 	register_nav_menus( array(
-		'primary' 	=> __( 'Primary Menu','spacious' ),
-		'footer' 	=> __( 'Footer Menu','spacious' )
+		'primary' 	=> esc_html__( 'Primary Menu','spacious' ),
+		'footer' 	=> esc_html__( 'Footer Menu','spacious' )
 	) );
 
 	// Cropping the images to different sizes to be used in the theme
@@ -333,6 +333,7 @@ define( 'SPACIOUS_LANGUAGES_DIR', SPACIOUS_PARENT_DIR . '/languages' );
 
 define( 'SPACIOUS_ADMIN_DIR', SPACIOUS_INCLUDES_DIR . '/admin' );
 define( 'SPACIOUS_WIDGETS_DIR', SPACIOUS_INCLUDES_DIR . '/widgets' );
+define( 'SPACIOUS_ELEMENTOR_DIR', SPACIOUS_INCLUDES_DIR . '/elementor' );
 
 define( 'SPACIOUS_ADMIN_IMAGES_DIR', SPACIOUS_ADMIN_DIR . '/images' );
 define( 'SPACIOUS_ADMIN_CSS_DIR', SPACIOUS_ADMIN_DIR . '/css' );
@@ -375,7 +376,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
  * Load Demo Importer Configs.
  */
 if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require get_template_directory() . '/inc/demo-config.php';
+	require_once get_template_directory() . '/inc/demo-config.php';
 }
 
 /**
@@ -386,7 +387,7 @@ $spacious_version = $theme['Version'];
 
 /* Calling in the admin area for the Welcome Page */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/class-spacious-admin.php';
+	require_once get_template_directory() . '/inc/admin/class-spacious-admin.php';
 }
 
 /**
@@ -396,8 +397,15 @@ require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-a
 require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php' );
 
 /**
+ * Load the Spacious Toolkit file.
+ */
+if ( class_exists( 'Spacious_Toolkit' ) ) {
+	require_once( SPACIOUS_INCLUDES_DIR . '/spacious-toolkit.php' );
+}
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	require_once get_template_directory() . '/inc/jetpack.php';
 }

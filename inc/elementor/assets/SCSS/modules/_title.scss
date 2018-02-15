@@ -1,0 +1,114 @@
+.spacious-title {
+    .widget-title {
+        color: #444444;
+        padding-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .widget-desc {
+        margin-bottom: 0;
+        color: #999999;
+        font-size: 14px;
+    }
+    
+    &.center {
+        text-align: center; 
+    }
+    
+    &.right {
+        text-align: right;
+    }
+    
+    &.style_two {
+        .widget-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";
+                width: 40px;
+                height: 1px;
+                background-color: #999999;
+            }
+        }
+        &.center { 
+            .widget-title {
+                &::after {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        &.right { 
+            .widget-title {
+                &::after {
+                    left: auto;
+                    right:0;
+                }
+            }
+        }
+    }
+    
+    &.style_three {
+        .widget-desc {
+            span {
+                position: relative;
+                display: inline-block; 
+                margin: 0 auto;
+                padding-right: 10px;
+                
+                &::before,
+                &::after {
+                    position: absolute;
+                    top: 50%;
+                    left: 100%;
+                    content: "";
+                    width: 40px;
+                    height: 1px;
+                    background-color: #999999;
+                }
+                
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        &.center {
+            .widget-desc {
+                span {
+                    padding-left: 10px;
+                    
+                    &::before{
+                        left: 100%;
+                    }
+                    &::after {
+                        display: block;
+                        left: auto;
+                        right: 100%;
+                    }
+                }
+            }
+        }
+        &.right {
+            .widget-desc {
+                span {
+                    padding-right: 0;
+                    padding-left: 10px;
+                    
+                    &::before{
+                        display: none;
+                    }
+                    &::after {
+                        display: block;
+                        left: auto;
+                        right: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

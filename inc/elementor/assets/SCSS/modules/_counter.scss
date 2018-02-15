@@ -1,0 +1,36 @@
+.counter {
+	text-align: center;
+	
+	.counter__icon {
+		color: $color-brand-primary;
+		font-size: 40px;
+	}
+	
+	.counter__number {
+		position: relative;
+		margin: 20px 0 25px;
+		color: $color-gray-darker;
+		font-weight: 300;
+		font-size: 66px;
+		line-height: 66px;
+		padding-bottom: 10px;
+		
+		&::before {
+			content: '';
+			position: absolute;
+			width: 40px;
+			height: 2px;
+			right: 0;
+			bottom: -10px;
+			left: 0;
+			margin: 0 auto;
+			background: $color-brand-primary;
+		}
+	}
+	
+	.counter__title {
+		color: $color-gray-light;
+		display: block;
+	}
+}
+
