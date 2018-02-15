@@ -126,7 +126,7 @@ function spacious_continue_reading() {
 /****************************************************************************************/
 
 /**
- * Removing the default style of wordpress gallery
+ * Removing the default style of WordPress gallery
  */
 add_filter( 'use_default_gallery_style', '__return_false' );
 
@@ -408,14 +408,14 @@ function spacious_custom_css() {
 
 	if ( ! empty( $spacious_internal_css ) ) {
 		?>
-        <style type="text/css"><?php echo $spacious_internal_css; ?></style>
+		<style type="text/css"><?php echo $spacious_internal_css; ?></style>
 		<?php
 	}
 
 	$spacious_custom_css = spacious_options( 'spacious_custom_css' );
 	if ( $spacious_custom_css && ! function_exists( 'wp_update_custom_css_post' ) ) {
 		?>
-        <style type="text/css"><?php echo $spacious_custom_css; ?></style>
+		<style type="text/css"><?php echo $spacious_custom_css; ?></style>
 		<?php
 	}
 }
@@ -447,8 +447,8 @@ if ( ! function_exists( 'spacious_content_nav' ) ) :
 		$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
 
 		?>
-        <nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-            <h3 class="screen-reader-text"><?php _e( 'Post navigation', 'spacious' ); ?></h3>
+		<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
+			<h3 class="screen-reader-text"><?php _e( 'Post navigation', 'spacious' ); ?></h3>
 
 			<?php if ( is_single() ) : // navigation links for single posts ?>
 
@@ -458,16 +458,16 @@ if ( ! function_exists( 'spacious_content_nav' ) ) :
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 				<?php if ( get_next_posts_link() ) : ?>
-                    <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'spacious' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'spacious' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-                    <div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'spacious' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'spacious' ) ); ?></div>
 				<?php endif; ?>
 
 			<?php endif; ?>
 
-        </nav><!-- #<?php echo esc_html( $nav_id ); ?> -->
+		</nav>
 		<?php
 	}
 endif; // spacious_content_nav
@@ -487,17 +487,17 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 			case 'trackback' :
 				// Display trackbacks differently than normal comments.
 				?>
-                <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-                <p><?php _e( 'Pingback:', 'spacious' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'spacious' ), '<span class="edit-link">', '</span>' ); ?></p>
+				<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+				<p><?php _e( 'Pingback:', 'spacious' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'spacious' ), '<span class="edit-link">', '</span>' ); ?></p>
 				<?php
 				break;
 			default :
 				// Proceed with normal comments.
 				global $post;
 				?>
-                <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-                <article id="comment-<?php comment_ID(); ?>" class="comment">
-                    <header class="comment-meta comment-author vcard">
+				<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+				<article id="comment-<?php comment_ID(); ?>" class="comment">
+					<header class="comment-meta comment-author vcard">
 						<?php
 						echo get_avatar( $comment, 74 );
 						printf( '<div class="comment-author-link">%1$s%2$s</div>',
@@ -511,13 +511,13 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 						printf( __( '<a class="comment-permalink" href="%1$s">Permalink</a>', 'spacious' ), esc_url( get_comment_link( $comment->comment_ID ) ) );
 						edit_comment_link();
 						?>
-                    </header><!-- .comment-meta -->
+					</header><!-- .comment-meta -->
 
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-                        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'spacious' ); ?></p>
+						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'spacious' ); ?></p>
 					<?php endif; ?>
 
-                    <section class="comment-content comment">
+					<section class="comment-content comment">
 						<?php comment_text(); ?>
 						<?php comment_reply_link( array_merge( $args, array(
 							'reply_text' => __( 'Reply', 'spacious' ),
@@ -525,9 +525,9 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 							'depth'      => $depth,
 							'max_depth'  => $args['max_depth']
 						) ) ); ?>
-                    </section><!-- .comment-content -->
+					</section><!-- .comment-content -->
 
-                </article><!-- #comment-## -->
+				</article><!-- #comment-## -->
 				<?php
 				break;
 		endswitch; // end comment_type check
@@ -614,8 +614,8 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 			echo '<div class="entry-meta clearfix">';
 			?>
 
-            <span class="by-author author vcard"><a class="url fn n"
-                                                    href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+			<span class="by-author author vcard"><a class="url fn n"
+			                                        href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
 
 			<?php
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -635,18 +635,18 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 			); ?>
 
 			<?php if ( has_category() ) { ?>
-            <span class="category"><?php the_category( ', ' ); ?></span>
+			<span class="category"><?php the_category( ', ' ); ?></span>
 		<?php } ?>
 
 			<?php if ( comments_open() ) { ?>
-            <span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
+			<span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
 		<?php } ?>
 
 			<?php edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' ); ?>
 
 			<?php if ( ( ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && ! is_single() ) || is_archive() || is_search() ) { ?>
-            <span class="read-more-link"><a class="read-more"
-                                            href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a></span>
+			<span class="read-more-link"><a class="read-more"
+			                                href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a></span>
 		<?php } ?>
 
 			<?php
