@@ -19,6 +19,13 @@ class Spacious_Elementor_Addons {
 	private static $instance;
 
 	/**
+	 * Get suffix for library files
+	 *
+	 * @var string
+	 */
+	private $suffix;
+
+	/**
 	 * Returns an instance of this class.
 	 */
 	public static function get_instance() {
@@ -36,14 +43,20 @@ class Spacious_Elementor_Addons {
 	 */
 	public function __construct() {
 
+		// Assign suffix for library files
+		$this->suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
 		// Enqueue style for Elementor front-end
 		add_action( 'elementor/frontend/after_enqueue_styles', array( $this, 'spacious_elementor_styles' ) );
 
 		// Enqueue scripts for Elementor front-end
 		add_action( 'elementor/frontend/before_enqueue_scripts', array( $this, 'spacious_elementor_enqueue_scripts' ) );
 
-		// Enqueue styles for Elementor editor
-		add_action( 'elementor/editor/after_enqueue_styles', array( $this, 'spacious_elementor_enqueue_editor_styles' ) );
+		// Register scripts for Elementor front-end
+		add_action( 'elementor/frontend/before_register_scripts', array(
+			$this,
+			'spacious_elementor_register_scripts'
+		) );
 
 	}
 
@@ -59,14 +72,15 @@ class Spacious_Elementor_Addons {
 	 * Enqueue scripts for Elementor frontends
 	 */
 	public function spacious_elementor_enqueue_scripts() {
-
+		wp_enqueue_script( 'elementor-custom', SPACIOUS_JS_URL . '/elementor-custom.js', array( 'jquery' ), false, true );
 	}
 
 	/**
-	 * Enqueue styles for Elementor editor
+	 * Register script for Elementor frontends
 	 */
-	public function spacious_elementor_enqueue_editor_styles() {
-
+	public function spacious_elementor_register_scripts() {
+		wp_register_script( 'jquery-waypoints', SPACIOUS_JS_URL . '/waypoints' . $this->suffix . '.js', array( 'jquery' ), '2.0.3', true );
+		wp_register_script( 'jquery-countTo', SPACIOUS_JS_URL . '/jquery.countTo' . $this->suffix . '.js', array( 'jquery' ), false, true );
 	}
 
 }
