@@ -37,6 +37,7 @@ function spacious_content_width() {
 	$spacious_default_layout = spacious_options( 'default_layout', 'right_sidebar' );
 
 	if ( $layout_meta == 'default_layout' ) {
+
 		if ( ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
 			if ( $spacious_default_layout == 'no_sidebar_full_width' ) {
 				$content_width = 978; /* pixels */
@@ -48,6 +49,7 @@ function spacious_content_width() {
 		} else {
 			$content_width = 750; /* pixels */
 		}
+
 	} elseif ( ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
 		if ( $layout_meta == 'no_sidebar_full_width' ) {
 			$content_width = 978; /* pixels */
@@ -135,7 +137,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		$starter_content = array(
 			'widgets'     => array(
 				// Add the search widget to the header sidebar.
-				'spacious_header_sidebar'                                  => array(
+				'spacious_header_sidebar'       => array(
 					'header_search' => array(
 						'search',
 						array(
@@ -145,22 +147,23 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widgets to the contact sidebar.
-				'spacious_contact_page_sidebar'                            => array(
+				'spacious_contact_page_sidebar' => array(
 					'text_business_info',
 					'text_about',
 				),
 
 				// Add text widget and cta widget in the Business Top sidebar.
-				'spacious_business_page_top_section_sidebar'               => array(
+				'spacious_business_page_top_section_sidebar' => array(
 					'text_top_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Top Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Top Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-							           '<ul>
-                     <li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-                     <li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
-                     <li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li></ul>'
+										'<ul>
+											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
+											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+					                    </ul>'
 						),
 					),
 					'call_to_action'        => array(
@@ -175,7 +178,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widget and featured single page widget in the Business Middle Left Sidebar.
-				'spacious_business_page_middle_section_left_half_sidebar'  => array(
+				'spacious_business_page_middle_section_left_half_sidebar' => array(
 					'text_middle_left_sidebar_info' => array(
 						'text',
 						array(
@@ -212,50 +215,51 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widget in the Business Bottom Sidebar.
-				'spacious_business_page_bottom_section_sidebar'            => array(
+				'spacious_business_page_bottom_section_sidebar' => array(
 					'text_bottom_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Bottom Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Bottom Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-							           '<ul>
-                     <li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-                     <li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
-                     <li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li></ul>'
-						),
+										'<ul>
+											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
+											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
+										</ul>'
+											),
 					),
 				),
 
 				// Add the text widget in the footer siderbar 1.
-				'spacious_footer_sidebar_one'                              => array(
+				'spacious_footer_sidebar_one'   => array(
 					'text_business_info',
 				),
 
 				// Add search widget and text widget in the footer siderbar 2.
-				'spacious_footer_sidebar_two'                              => array(
+				'spacious_footer_sidebar_two'   => array(
 					'search',
 					'text_about'
 				),
 
 				// Add the text widget in the footer siderbar 3.
-				'spacious_footer_sidebar_three'                            => array(
+				'spacious_footer_sidebar_three' => array(
 					'text_custom_menu' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Spacious Important Links', 'spacious' ),
 							'text'  => '<ul>
-                             <li><a href="https://themegrill.com/themes/spacious/">' . esc_html__( 'Theme Info', 'spacious' ) . '</a></li>
-                             <li><a href="https://demo.themegrill.com/spacious/">' . esc_html__( 'View Demo', 'spacious' ) . '</a></li>
-                             <li><a href="https://www.youtube.com/watch?v=rhiybsv3vUU">' . esc_html__( 'Import Demo', 'spacious' ) . '</a></li>
-                             <li><a href="https://docs.themegrill.com/spacious/">' . esc_html__( 'Documentation', 'spacious' ) . '</a></li>
-                             <li><a href="https://themegrill.com/support-forum/forum/spacious-free/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
-                            </ul>'
+											<li><a href="https://themegrill.com/themes/spacious/">' . esc_html__( 'Theme Info', 'spacious' ) . '</a></li>
+											<li><a href="https://demo.themegrill.com/spacious/">' . esc_html__( 'View Demo', 'spacious' ) . '</a></li>
+											<li><a href="https://www.youtube.com/watch?v=rhiybsv3vUU">' . esc_html__( 'Import Demo', 'spacious' ) . '</a></li>
+											<li><a href="https://docs.themegrill.com/spacious/">' . esc_html__( 'Documentation', 'spacious' ) . '</a></li>
+											<li><a href="https://themegrill.com/support-forum/forum/spacious-free/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
+										</ul>'
 						),
 					),
 				),
 
 				// Add the featured single page widget in the footer siderbar 4.
-				'spacious_footer_sidebar_four'                             => array(
+				'spacious_footer_sidebar_four'  => array(
 					'featured_single_page' => array(
 						'spacious_featured_single_page_widget',
 						array(
@@ -380,20 +384,20 @@ define( 'SPACIOUS_ADMIN_IMAGES_URL', SPACIOUS_ADMIN_URL . '/images' );
 define( 'SPACIOUS_ADMIN_CSS_URL', SPACIOUS_ADMIN_URL . '/css' );
 
 /** Load functions */
-require_once( SPACIOUS_INCLUDES_DIR . '/custom-header.php' );
-require_once( SPACIOUS_INCLUDES_DIR . '/functions.php' );
-require_once( SPACIOUS_INCLUDES_DIR . '/customizer.php' );
-require_once( SPACIOUS_INCLUDES_DIR . '/header-functions.php' );
+require_once SPACIOUS_INCLUDES_DIR . '/custom-header.php';
+require_once SPACIOUS_INCLUDES_DIR . '/functions.php';
+require_once SPACIOUS_INCLUDES_DIR . '/customizer.php';
+require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
 
-require_once( SPACIOUS_ADMIN_DIR . '/meta-boxes.php' );
+require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
 
 /** Load Widgets and Widgetized Area */
-require_once( SPACIOUS_WIDGETS_DIR . '/widgets.php' );
+require_once SPACIOUS_WIDGETS_DIR . '/widgets.php';
 
 /**
  * Detect plugin. For use on Front End only.
  */
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
  * Load Demo Importer Configs.
@@ -416,14 +420,14 @@ if ( is_admin() ) {
 /**
  * Load TGMPA Configs.
  */
-require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
-require_once( SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php' );
+require_once SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php';
+require_once SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php';
 
 /**
  * Load the Spacious Toolkit file.
  */
 if ( class_exists( 'Spacious_Toolkit' ) ) {
-	require_once( SPACIOUS_INCLUDES_DIR . '/spacious-toolkit.php' );
+	require_once SPACIOUS_INCLUDES_DIR . '/spacious-toolkit.php';
 }
 
 /**
