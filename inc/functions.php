@@ -601,7 +601,7 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 	/**
 	 * Shows meta information of post.
 	 */
-	function spacious_entry_meta() {
+	function spacious_entry_meta( $spacious_show_readmore = true ) {
 		if ( 'post' == get_post_type() ) :
 			echo '<footer class="entry-meta-bar clearfix">';
 			echo '<div class="entry-meta clearfix">';
@@ -637,10 +637,16 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 
 			<?php edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' ); ?>
 
-			<?php if ( ( ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && ! is_single() ) || is_archive() || is_search() ) { ?>
-			<span class="read-more-link"><a class="read-more"
-			                                href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a></span>
-		<?php } ?>
+			<?php
+			if ( ( ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && ! is_single() ) || is_archive() || is_search() ) {
+				if ( $spacious_show_readmore ) { ?>
+					<span class="read-more-link">
+						<a class="read-more"
+						   href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a>
+					</span>
+					<?php
+				}
+			} ?>
 
 			<?php
 			echo '</div>';
