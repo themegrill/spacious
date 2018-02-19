@@ -58,6 +58,8 @@ class Spacious_Elementor_Addons {
 			'spacious_elementor_register_scripts'
 		) );
 
+		add_action( 'after_setup_theme', array( $this, 'spacious_elementor_setup' ) );
+
 	}
 
 	/**
@@ -81,6 +83,11 @@ class Spacious_Elementor_Addons {
 	public function spacious_elementor_register_scripts() {
 		wp_register_script( 'jquery-waypoints', SPACIOUS_JS_URL . '/waypoints' . $this->suffix . '.js', array( 'jquery' ), '2.0.3', true );
 		wp_register_script( 'jquery-countTo', SPACIOUS_JS_URL . '/jquery.countTo' . $this->suffix . '.js', array( 'jquery' ), false, true );
+	}
+
+	public function spacious_elementor_setup() {
+		add_image_size( 'featured-block', 575, 415, true );
+		add_image_size( 'featured-grid', 125, 125, true );
 	}
 
 }
