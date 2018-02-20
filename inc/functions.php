@@ -29,7 +29,6 @@ function spacious_options( $id, $default = false ) {
 
 /****************************************************************************************/
 
-add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 /**
  * Register jquery scripts
  */
@@ -72,6 +71,7 @@ function spacious_scripts_styles_method() {
 		wp_enqueue_script( 'jquery-swipe' );
 		wp_enqueue_script( 'spacious_slider', SPACIOUS_JS_URL . '/spacious-slider-setting.js', array( 'jquery_cycle' ), false, true );
 	}
+
 	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
 
@@ -80,13 +80,14 @@ function spacious_scripts_styles_method() {
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
 	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
 }
+add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 
 /****************************************************************************************/
 
-add_filter( 'the_content', 'spacious_add_mod_hatom_data' );
 // Adding the support for the entry-title tag for Google Rich Snippets
 function spacious_add_mod_hatom_data( $content ) {
 	$title = get_the_title();
+
 	if ( is_single() ) {
 		$content .= '<div class="extra-hatom-entry-title"><span class="entry-title">' . $title . '</span></div>';
 	}
@@ -94,9 +95,10 @@ function spacious_add_mod_hatom_data( $content ) {
 	return $content;
 }
 
+add_filter( 'the_content', 'spacious_add_mod_hatom_data' );
+
 /****************************************************************************************/
 
-add_filter( 'excerpt_length', 'spacious_excerpt_length' );
 /**
  * Sets the post excerpt length to 40 words.
  *
@@ -108,13 +110,16 @@ function spacious_excerpt_length( $length ) {
 	return 40;
 }
 
-add_filter( 'excerpt_more', 'spacious_continue_reading' );
+add_filter( 'excerpt_length', 'spacious_excerpt_length' );
+
 /**
  * Returns a "Continue Reading" link for excerpts
  */
 function spacious_continue_reading() {
 	return '';
 }
+
+add_filter( 'excerpt_more', 'spacious_continue_reading' );
 
 /****************************************************************************************/
 
@@ -141,7 +146,6 @@ add_filter( 'shortcode_atts_gallery', 'spacious_gallery_atts', 10, 3 );
 
 /****************************************************************************************/
 
-add_filter( 'body_class', 'spacious_body_class' );
 /**
  * Filter the body_class
  *
@@ -214,9 +218,11 @@ function spacious_body_class( $classes ) {
 	if ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) == 'blog_medium_alternate' ) {
 		$classes[] = 'blog-alternate-medium';
 	}
+
 	if ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) == 'blog_medium' ) {
 		$classes[] = 'blog-medium';
 	}
+
 	if ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) {
 		$classes[] = 'wide-978';
 	} elseif ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) {
@@ -229,6 +235,8 @@ function spacious_body_class( $classes ) {
 
 	return $classes;
 }
+
+add_filter( 'body_class', 'spacious_body_class' );
 
 /****************************************************************************************/
 
@@ -264,6 +272,7 @@ if ( ! function_exists( 'spacious_sidebar_select' ) ) :
 					get_sidebar( 'left' );
 				}
 			}
+
 			if ( is_single() ) {
 				if ( $spacious_default_post_layout == 'right_sidebar' ) {
 					get_sidebar();
@@ -285,8 +294,6 @@ endif;
 
 /****************************************************************************************/
 
-add_action( 'admin_head', 'spacious_favicon' );
-add_action( 'wp_head', 'spacious_favicon' );
 /**
  * Fav icon for the site
  */
@@ -294,12 +301,16 @@ function spacious_favicon() {
 	if ( spacious_options( 'spacious_activate_favicon', '0' ) == '1' ) {
 		$spacious_favicon        = spacious_options( 'spacious_favicon', '' );
 		$spacious_favicon_output = '';
+
 		if ( ! function_exists( 'has_site_icon' ) || ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
 			$spacious_favicon_output .= '<link rel="shortcut icon" href="' . esc_url( $spacious_favicon ) . '" type="image/x-icon" />';
 		}
+
 		echo $spacious_favicon_output;
 	}
 }
+add_action( 'admin_head', 'spacious_favicon' );
+add_action( 'wp_head', 'spacious_favicon' );
 
 /**************************************************************************************/
 
@@ -346,7 +357,6 @@ function spacious_darkcolor( $hex, $steps ) {
 
 /****************************************************************************************/
 
-add_action( 'wp_head', 'spacious_custom_css', 100 );
 /**
  * Hooks the Custom Internal CSS to head section
  */
@@ -412,6 +422,7 @@ function spacious_custom_css() {
 		<?php
 	}
 }
+add_action( 'wp_head', 'spacious_custom_css', 100 );
 
 /**************************************************************************************/
 
@@ -438,7 +449,6 @@ if ( ! function_exists( 'spacious_content_nav' ) ) :
 		}
 
 		$nav_class = ( is_single() ) ? 'post-navigation' : 'paging-navigation';
-
 		?>
 		<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
 			<h3 class="screen-reader-text"><?php _e( 'Post navigation', 'spacious' ); ?></h3>
@@ -529,7 +539,6 @@ endif;
 
 /**************************************************************************************/
 
-add_action( 'spacious_footer_copyright', 'spacious_footer_copyright', 10 );
 /**
  * function to show the footer info, copyright information
  */
@@ -547,6 +556,7 @@ if ( ! function_exists( 'spacious_footer_copyright' ) ) :
 		echo $spacious_footer_copyright;
 	}
 endif;
+add_action( 'spacious_footer_copyright', 'spacious_footer_copyright', 10 );
 
 /**************************************************************************************/
 
@@ -573,15 +583,6 @@ endif;
 
 /****************************************************************************************/
 
-add_action( 'admin_init', 'spacious_textarea_sanitization_change', 100 );
-/**
- * Override the default textarea sanitization.
- */
-function spacious_textarea_sanitization_change() {
-	remove_filter( 'of_sanitize_textarea', 'of_sanitize_textarea' );
-	add_filter( 'of_sanitize_textarea', 'spacious_sanitize_textarea_custom', 10, 2 );
-}
-
 /**
  * sanitize the input for custom css
  */
@@ -594,6 +595,15 @@ function spacious_sanitize_textarea_custom( $input, $option ) {
 
 	return $output;
 }
+
+/**
+ * Override the default textarea sanitization.
+ */
+function spacious_textarea_sanitization_change() {
+	remove_filter( 'of_sanitize_textarea', 'of_sanitize_textarea' );
+	add_filter( 'of_sanitize_textarea', 'spacious_sanitize_textarea_custom', 10, 2 );
+}
+add_action( 'admin_init', 'spacious_textarea_sanitization_change', 100 );
 
 /****************************************************************************************/
 
@@ -625,19 +635,18 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				$time_string
-			); ?>
+			);
 
-			<?php if ( has_category() ) { ?>
-			<span class="category"><?php the_category( ', ' ); ?></span>
-		<?php } ?>
+			if ( has_category() ) { ?>
+				<span class="category"><?php the_category( ', ' ); ?></span>
+			<?php }
 
-			<?php if ( comments_open() ) { ?>
-			<span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
-		<?php } ?>
+			if ( comments_open() ) { ?>
+				<span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
+			<?php }
 
-			<?php edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' ); ?>
+			edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' );
 
-			<?php
 			if ( ( ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && ! is_single() ) || is_archive() || is_search() ) {
 				if ( $spacious_show_readmore ) { ?>
 					<span class="read-more-link">
@@ -646,9 +655,8 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 					</span>
 					<?php
 				}
-			} ?>
+			}
 
-			<?php
 			echo '</div>';
 			echo '</footer>';
 		endif;
@@ -662,7 +670,7 @@ endif;
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
 add_filter( 'woocommerce_show_page_title', '__return_false' );
 
@@ -683,7 +691,6 @@ function spacious_woocommerce_support() {
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-
 add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
 
 /**
@@ -722,7 +729,6 @@ function spacious_site_icon_migrate() {
 		update_option( $themename, $theme_options );
 	}
 }
-
 add_action( 'after_setup_theme', 'spacious_site_icon_migrate' );
 
 // Displays the site logo
@@ -764,7 +770,6 @@ function spacious_custom_css_migrate() {
 		}
 	}
 }
-
 add_action( 'after_setup_theme', 'spacious_custom_css_migrate' );
 
 /**
@@ -794,5 +799,4 @@ function spacious_site_logo_migrate() {
 		}
 	}
 }
-
 add_action( 'after_setup_theme', 'spacious_site_logo_migrate' );
