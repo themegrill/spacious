@@ -108,11 +108,6 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		add_image_size( 'featured', 642, 300, true );
 		add_image_size( 'featured-blog-medium-small', 230, 230, true );
 
-		if ( class_exists( 'Spacious_Toolkit' ) ) {
-			add_image_size( 'featured-block', 575, 415, true );
-			add_image_size( 'featured-grid', 125, 125, true );
-		}
-
 		// Setup the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'spacious_custom_background_args', array(
 			'default-color' => 'eaeaea'
