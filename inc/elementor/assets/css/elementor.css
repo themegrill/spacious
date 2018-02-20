@@ -1146,7 +1146,8 @@ body.page-template-page-builder #main {
 }
 
 .elementor .tg-grid-content .tg-grid-title {
-	font-size: 20px;
+	font-size: 18px;
+	line-height: 26px;
 	padding-bottom: 5px;
 }
 
@@ -1157,12 +1158,14 @@ body.page-template-page-builder #main {
 }
 
 .elementor .tg-grid-content .tg-grid-thumb {
+	display: block;
 	position: absolute;
-	width: 125px;
+	width: 100px;
 }
 
 .elementor .tg-grid-content .tg-entry-content {
-	margin-left: 150px;
+	margin-left: 120px;
+	min-height: 100px;
 }
 
 .elementor .btn {
