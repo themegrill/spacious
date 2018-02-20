@@ -58,8 +58,6 @@ class Spacious_Elementor_Addons {
 			'spacious_elementor_register_scripts'
 		) );
 
-		add_action( 'after_setup_theme', array( $this, 'spacious_elementor_setup' ) );
-
 	}
 
 	/**
