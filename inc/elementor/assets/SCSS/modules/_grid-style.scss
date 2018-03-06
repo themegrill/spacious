@@ -1,0 +1,30 @@
+
+
+
+// --------Grid block styles -------//
+
+.tg-grid-content {
+
+    .tg-grid-title {
+        font-size: 18px;
+        line-height: 26px;
+        padding-bottom: 5px;
+    }
+
+    .tg-grid-thumb,
+    .tg-entry-content {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .tg-grid-thumb {
+        display: block;
+        position: absolute;
+        width: 100px;
+    }
+
+    .tg-entry-content {
+        margin-left: 120px;
+        min-height: 100px;
+    }
+}

@@ -1,0 +1,22 @@
+// --------common block styling -------//
+.tg-block-content-wrapper,
+.tg-grid-content-wrapper {
+    margin-bottom: 30px;
+}
+
+.entry-meta {
+    font-size: 14px;
+    margin-bottom: 18px;
+
+    span {
+        margin-right: 5px;
+
+        a {
+            color: $color-gray-dark;
+
+            &:hover {
+                color: $color-brand-primary;
+            }
+        }
+    }
+}
