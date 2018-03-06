@@ -16,6 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Setup demo importer packages.
  *
  * @param  array $packages
+ *
  * @return array
  */
 function spacious_demo_importer_packages( $packages ) {
@@ -24,8 +25,13 @@ function spacious_demo_importer_packages( $packages ) {
 			'name'    => __( 'Spacious', 'spacious' ),
 			'preview' => 'http://demo.themegrill.com/spacious/',
 		),
+		'spacious-blog' => array(
+			'name'    => __( 'Spacious Blog', 'spacious' ),
+			'preview' => 'http://demo.themegrill.com/spacious-blog/',
+		),
 	);
 
 	return array_merge( $new_packages, $packages );
 }
+
 add_filter( 'themegrill_demo_importer_packages', 'spacious_demo_importer_packages' );
