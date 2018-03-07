@@ -1,0 +1,157 @@
+
+/* =FOOTER WIDGET AREA
+----------------------------------------------- */
+
+.footer-widgets-wrapper {
+	background-color: #333333;
+	border-top: 1px solid #EAEAEA;
+}
+
+.footer-widgets-area {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	color: #999999;
+
+	.tg-one-fourth .widget-title {
+		text-align: left;
+	}
+
+	h3.widget-title {
+		color: #D5D5D5;
+	}
+
+	.tg-one-fourth p {
+		text-align: left;
+		color: #999999;
+	}
+
+	a {
+		color: #D5D5D5 !important;
+
+		&:hover {
+			color: #0FBE7C !important;
+		}
+	}
+}
+
+#colophon {
+	font-size: 14px;
+	line-height: 18px;
+
+	.widget {
+		padding-bottom: 25px;
+	}
+
+	.widget-title {
+		font-size: 22px;
+		line-height: 32px;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
+
+/* =FOOTER SOCKET AREA
+----------------------------------------------- */
+
+.footer-socket-wrapper {
+	padding: 10px 0px;
+	background-color: #F8F8F8;
+	border-top: 1px solid #EAEAEA;
+}
+
+.footer-socket-area {
+	width: 100%;
+}
+
+.footer-socket-wrapper {
+	.copyright {
+		color: #666666;
+		max-width: 50%;
+		float: left;
+		font-size: 12px;
+
+		a {
+			color: #666666;
+
+			&:hover {
+				color: #0FBE7C;
+			}
+		}
+	}
+
+	.small-menu {
+		float: right;
+
+		a {
+			padding-top: 0;
+		}
+		
+		ul li ul {
+			top: 21px;
+		}
+	}
+}
+
+/* =Footer layout two
+----------------------------------------------- */
+.spacious-footer-style-two {
+	.footer-widgets-wrapper {
+		background-color: #021827;
+		color:#a1b1bc;
+	}
+	.footer-widgets-area {
+		color:#a1b1bc;
+		padding-top: 60px;
+		
+		a {
+			color:#a1b1bc;
+			
+			&:hover {
+				color: #0FBE7C;
+			}
+		}
+
+		.tg-one-fourth p {
+			color:#a1b1bc;
+		}
+	}
+	.footer-socket-wrapper {
+		padding: 15px 0;
+		background-color: #01131F;
+		border-color:rgba(255, 255, 255,0.1);
+		.copyright {
+			color: #a1b1bc;
+
+			a {
+				color:#a1b1bc;
+				margin-left: 5px;
+			}
+		}
+		.small-menu a {
+			color: #a1b1bc;
+			&:hover {
+				color: #0FBE7C;
+			}
+		}
+	}
+	.widget-title span {
+		border-bottom:  none transparent;
+		color:#FFFFFF;
+	}
+}
+#colophon.spacious-footer-style-two {
+	.widget ul li{
+		border-color: rgba(255, 255, 255,0.1);
+		padding: 10px 0;
+		&:last-child {
+			border-bottom: none transparent;
+		}
+	}
+	#wp-calendar th, 
+	#wp-calendar td {
+		border-color: rgba(255, 255, 255,0.1);
+	}
+}
