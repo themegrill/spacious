@@ -160,12 +160,17 @@ li.default-menu {
 	}
 
 	ul {
+
 		li {
+
 			&.current-menu-item a,
 			&.current_page_ancestor a,
 			&.current-menu-ancestor a,
 			&.current_page_item a,
-			&:hover > a {
+			&.current-menu-ancestor > .sub-toggle,
+			&.current-menu-item > .sub-toggle,
+			&:hover > a,
+			&:hover > .sub-toggle {
 				color: #0FBE7C;
 			}
 
@@ -176,6 +181,21 @@ li.default-menu {
 
 			&:hover ul {
 				display: block;
+			}
+
+			.sub-toggle {
+				position: absolute;
+				top: 50%;
+				-ms-transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				margin-left: 5px;
+				margin-top: 4px;
+			}
+
+			> ul .sub-toggle {
+				margin: 0;
+				right: 10px;
 			}
 		}
 
@@ -210,6 +230,7 @@ li.default-menu {
 		}
 		
 		li {
+			
 			ul {
 				position: absolute;
 				background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
@@ -222,6 +243,15 @@ li.default-menu {
 					float: none;
 					border-bottom: 1px solid #EAEAEA;
 					padding: 0;
+
+					&.current-menu-item a,
+					&.current_page_ancestor a,
+					&.current-menu-ancestor a,
+					&.current_page_item a,
+					&:hover > a {
+						color: #0FBE7C;
+					}
+
 
 					a {
 						float: none;
@@ -501,11 +531,12 @@ li.default-menu {
 		
 		li {
 			padding: 0;
+
 			&:hover,
 			&.current-menu-ancestor,
 			&.current-menu-item {
 				
-				>a {
+				> a {
 					background-color: #fff;
 					color: #444444;
 				}
@@ -514,13 +545,20 @@ li.default-menu {
 		
 		ul {
 			li {
+
+				.sub-toggle {
+					margin-top: -3px;
+					margin-left: 0;
+					right: 7px;
+					color: #444444;
+				}
+
 				ul.sub-menu {
 					visibility: hidden;
 					opacity: 0;
 					position: absolute;
-					left: 50%;
+					left: 0;
 					z-index: 999;
-					margin: 0 0 0 -100px;
 					padding: 0;
 					background: #fff;
 					width: 200px;
@@ -530,7 +568,13 @@ li.default-menu {
 					border: 1px solid #01101B;
 					
 					li  {
+
 						border-bottom-color: #666666;
+
+						ul {
+							left: 200px;
+							top: -1px;
+						}
 						
 						&:last-child {
 							border-bottom: none transparent;
@@ -544,7 +588,7 @@ li.default-menu {
 						
 						&:hover {
 							
-							a {	
+							> a {	
 								background-color:  #ffffff;							
 								color: #444444;
 							}
