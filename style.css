@@ -28,6 +28,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	padding: 0;
 	vertical-align: baseline;
 }
+
 html {
 	overflow-y: scroll;
 	/* Keeps page centred in all browsers regardless of content height */
@@ -2160,33 +2161,6 @@ li.default-menu {
 
 /* =DROP DOWN
 ----------------------------------------------- */
-.main-navigation ul li .sub-toggle {
-    position: absolute;
-    top: 50%;
-	-ms-transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-    margin-left: 5px;
-    margin-top: 4px;
-}
-
-.main-navigation ul li >ul .sub-toggle {
-	margin: 0;
-	right: 10px;
-}
-
-.main-navigation ul li.current-menu-item > .sub-toggle,
-.main-navigation ul li.current_page_ancestor > .sub-toggle,
-.main-navigation ul li.current-menu-ancestor > .sub-toggle,
-.main-navigation ul li.current_page_item > .sub-toggle {
-	color: #0FBE7C;
-}
-
-.main-navigation ul li ul li.current-menu-item > a,
-.main-navigation ul li ul li.current-menu-ancestor > a {
-     color: #0FBE7C;
-}
-
 /* =SMALL MENU
 ----------------------------------------------- */
 .menu-toggle {
@@ -2295,7 +2269,7 @@ li.default-menu {
 	color: #0FBE7C;
 }
 
-/* =HEADER STYLE 2:
+/* =HEADER STYLE 2: 
 ----------------------------------------------- */
 .spacious-header-style-two #header-meta {
 	background-color: #01101B;
