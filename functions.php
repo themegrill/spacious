@@ -436,3 +436,10 @@ if ( class_exists( 'Spacious_Toolkit' ) ) {
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require_once get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Define Elementor partner ID
+ */
+if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
+	define( 'ELEMENTOR_PARTNER_ID', 2125 );
+}
