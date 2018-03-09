@@ -869,7 +869,9 @@ body {
 /* =CONTENT
 ----------------------------------------------- */
 
-.sticky {}
+.sticky {
+  display: block;
+}
 
 .extra-hatom-entry-title {
 	display: none;
@@ -1384,7 +1386,9 @@ body {
 	word-wrap: break-word;
 }
 
-.bypostauthor {}
+.bypostauthor {
+  display: block;
+}
 
 #comments {
 	h1, h2, h3, h4, h5, h6 {
