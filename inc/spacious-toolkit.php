@@ -4,7 +4,7 @@
  *
  * @package    ThemeGrill
  * @subpackage Spacious
- * @since      Spacious 1.4.9
+ * @since      Spacious 1.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

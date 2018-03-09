@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.4.9\n"
+"Project-Id-Version: Spacious 1.5\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-01-31 09:52:16+00:00\n"
+"POT-Creation-Date: 2018-03-09 11:11:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,148 +47,148 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: content-blog-full-content.php:23 content-page.php:17 content-single.php:29
+#: content-blog-full-content.php:23 content-page.php:22 content-single.php:34
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:26 inc/functions.php:599
+#: content-page.php:31 inc/functions.php:648
 msgid "Edit"
 msgstr ""
 
-#: content-single.php:22
+#: content-single.php:26
 msgid "Tagged on: "
 msgstr ""
 
-#: functions.php:85 functions.php:296
+#: functions.php:103 functions.php:321
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:86 functions.php:307
+#: functions.php:104 functions.php:333
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:137 inc/widgets/widgets.php:51
+#: functions.php:160 inc/widgets/widgets.php:51
 msgid "Business Top Sidebar"
 msgstr ""
 
-#: functions.php:138 inc/widgets/widgets.php:53
+#: functions.php:161 inc/widgets/widgets.php:53
 msgid "Shows widgets on Business Page Template Top Section."
 msgstr ""
 
-#: functions.php:138 functions.php:199 inc/widgets/widgets.php:53
+#: functions.php:161 functions.php:223 inc/widgets/widgets.php:53
 #: inc/widgets/widgets.php:87
 msgid ""
 "Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured "
 "Widget"
 msgstr ""
 
-#: functions.php:140 functions.php:201 inc/widgets/widgets.php:291
+#: functions.php:163 functions.php:225 inc/widgets/widgets.php:291
 msgid "TG: Services"
 msgstr ""
 
-#: functions.php:140 functions.php:201 inc/widgets/widgets.php:287
+#: functions.php:163 functions.php:225 inc/widgets/widgets.php:287
 msgid "Display some pages as services. Best for Business Top or Bottom sidebar."
 msgstr ""
 
-#: functions.php:141 functions.php:202 inc/widgets/widgets.php:395
+#: functions.php:164 functions.php:226 inc/widgets/widgets.php:395
 msgid "TG: Call To Action Widget"
 msgstr ""
 
-#: functions.php:141 functions.php:202 inc/widgets/widgets.php:391
+#: functions.php:164 functions.php:226 inc/widgets/widgets.php:391
 msgid "Use this widget to show the call to action section."
 msgstr ""
 
-#: functions.php:142 functions.php:203 inc/widgets/widgets.php:579
+#: functions.php:165 functions.php:227 inc/widgets/widgets.php:579
 msgid "TG: Featured Widget"
 msgstr ""
 
-#: functions.php:142 functions.php:203 inc/widgets/widgets.php:575
+#: functions.php:165 functions.php:227 inc/widgets/widgets.php:575
 msgid ""
 "Show your some pages as recent work. Best for Business Top or Bottom "
 "sidebar."
 msgstr ""
 
-#: functions.php:148 inc/widgets/widgets.php:411
+#: functions.php:172 inc/widgets/widgets.php:411
 msgid "Call to Action Main Text"
 msgstr ""
 
-#: functions.php:149 inc/widgets/widgets.php:413
+#: functions.php:173 inc/widgets/widgets.php:413
 msgid "Call to Action Additional Text"
 msgstr ""
 
-#: functions.php:150 functions.php:226 inc/admin/class-spacious-admin.php:131
+#: functions.php:174 functions.php:251 inc/admin/class-spacious-admin.php:131
 #: inc/customizer.php:45
 msgid "Theme Info"
 msgstr ""
 
-#: functions.php:161 inc/widgets/widgets.php:62
+#: functions.php:185 inc/widgets/widgets.php:62
 msgid "Business Middle Left Sidebar"
 msgstr ""
 
-#: functions.php:162 inc/widgets/widgets.php:64
+#: functions.php:186 inc/widgets/widgets.php:64
 msgid "Shows widgets on Business Page Template Middle Section Left Half."
 msgstr ""
 
-#: functions.php:162 functions.php:179 inc/widgets/widgets.php:64
+#: functions.php:186 functions.php:203 inc/widgets/widgets.php:64
 #: inc/widgets/widgets.php:75
 msgid "Suitable widget: TG: Testimonial, TG: Featured Single Page"
 msgstr ""
 
-#: functions.php:178 inc/widgets/widgets.php:73
+#: functions.php:202 inc/widgets/widgets.php:73
 msgid "Business Middle Right Sidebar"
 msgstr ""
 
-#: functions.php:179 inc/widgets/widgets.php:75
+#: functions.php:203 inc/widgets/widgets.php:75
 msgid "Shows widgets on Business Page Template Middle Section Right Half."
 msgstr ""
 
-#: functions.php:185 inc/admin/class-spacious-admin.php:484
+#: functions.php:209 inc/admin/class-spacious-admin.php:484
 #: inc/widgets/widgets.php:501
 msgid "TG: Testimonial"
 msgstr ""
 
-#: functions.php:198 inc/widgets/widgets.php:85
+#: functions.php:222 inc/widgets/widgets.php:85
 msgid "Business Bottom Sidebar"
 msgstr ""
 
-#: functions.php:199 inc/widgets/widgets.php:87
+#: functions.php:223 inc/widgets/widgets.php:87
 msgid "Shows widgets on Business Page Template Bottom Section."
 msgstr ""
 
-#: functions.php:224 inc/customizer.php:73
+#: functions.php:249 inc/customizer.php:73
 msgid "Spacious Important Links"
 msgstr ""
 
-#: functions.php:227 inc/admin/class-spacious-admin.php:133
+#: functions.php:252 inc/admin/class-spacious-admin.php:133
 #: inc/customizer.php:57
 msgid "View Demo"
 msgstr ""
 
-#: functions.php:228 inc/admin/class-spacious-admin.php:185
+#: functions.php:253 inc/admin/class-spacious-admin.php:185
 msgid "Import Demo"
 msgstr ""
 
-#: functions.php:229 inc/admin/class-spacious-admin.php:196
+#: functions.php:254 inc/admin/class-spacious-admin.php:196
 #: inc/admin/class-spacious-admin.php:198 inc/customizer.php:53
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:230 inc/admin/class-spacious-admin.php:204
+#: functions.php:255 inc/admin/class-spacious-admin.php:204
 #: inc/customizer.php:49
 msgid "Support Forum"
 msgstr ""
 
-#: functions.php:281 functions.php:286 inc/customizer.php:643
+#: functions.php:306 functions.php:311 inc/customizer.php:743
 msgid "Enter title for your slider."
 msgstr ""
 
-#: functions.php:283 functions.php:288 inc/customizer.php:664
-#: inc/functions.php:602 inc/header-functions.php:65
+#: functions.php:308 functions.php:313 inc/customizer.php:764
+#: inc/functions.php:654 inc/header-functions.php:65
 #: inc/widgets/widgets.php:267 inc/widgets/widgets.php:369
 msgid "Read more"
 msgstr ""
 
-#: header.php:98
+#: header.php:130
 msgid "Menu"
 msgstr ""
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Spacious Pro"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:359 inc/customizer.php:559
+#: inc/admin/class-spacious-admin.php:359 inc/customizer.php:659
 msgid "Slider"
 msgstr ""
 
@@ -623,214 +623,262 @@ msgstr ""
 msgid "Switch to new responsive menu."
 msgstr ""
 
-#: inc/customizer.php:203
-msgid "Design"
+#: inc/customizer.php:200
+msgid "Header Designs"
 msgstr ""
 
-#: inc/customizer.php:209
-msgid "Site Layout"
+#: inc/customizer.php:211
+msgid "Choose a header design."
 msgstr ""
 
-#: inc/customizer.php:222
-msgid "Choose your site layout. The change is reflected in whole site."
+#: inc/customizer.php:214 inc/customizer.php:246
+msgid "Style 1"
 msgstr ""
 
-#: inc/customizer.php:224
-msgid "Boxed layout with content width of 1218px"
-msgstr ""
-
-#: inc/customizer.php:225
-msgid "Boxed layout with content width of 978px"
+#: inc/customizer.php:215 inc/customizer.php:247
+msgid "Style 2"
 msgstr ""
 
 #: inc/customizer.php:226
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "Footer Designs"
+msgstr ""
+
+#: inc/customizer.php:243
+msgid "Choose a footer design."
+msgstr ""
+
+#: inc/customizer.php:256
+msgid "Design"
+msgstr ""
+
+#: inc/customizer.php:262
+msgid "Site Layout"
+msgstr ""
+
+#: inc/customizer.php:275
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr ""
+
+#: inc/customizer.php:277
+msgid "Boxed layout with content width of 1218px"
+msgstr ""
+
+#: inc/customizer.php:278
+msgid "Boxed layout with content width of 978px"
+msgstr ""
+
+#: inc/customizer.php:279
 msgid "Wide layout with content width of 1218px"
 msgstr ""
 
-#: inc/customizer.php:227
+#: inc/customizer.php:280
 msgid "Wide layout with content width of 978px"
 msgstr ""
 
-#: inc/customizer.php:299
+#: inc/customizer.php:354
 msgid "Default layout"
 msgstr ""
 
-#: inc/customizer.php:312
+#: inc/customizer.php:367
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, search etc. The layout for a single post and page can be "
 "controlled from below options."
 msgstr ""
 
-#: inc/customizer.php:326
+#: inc/customizer.php:381
 msgid "Default layout for pages only"
 msgstr ""
 
-#: inc/customizer.php:339
+#: inc/customizer.php:394
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page."
 msgstr ""
 
-#: inc/customizer.php:353
+#: inc/customizer.php:408
 msgid "Default layout for single posts only"
 msgstr ""
 
-#: inc/customizer.php:366
+#: inc/customizer.php:421
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post."
 msgstr ""
 
-#: inc/customizer.php:380
+#: inc/customizer.php:435
 msgid "Blog Posts display type"
 msgstr ""
 
-#: inc/customizer.php:393
+#: inc/customizer.php:448
 msgid ""
 "Choose the display type for the latests posts view or posts page view "
 "(static front page)."
 msgstr ""
 
-#: inc/customizer.php:395
+#: inc/customizer.php:450
 msgid "Blog Image Large"
 msgstr ""
 
-#: inc/customizer.php:396
+#: inc/customizer.php:451
 msgid "Blog Image Medium"
 msgstr ""
 
-#: inc/customizer.php:397
+#: inc/customizer.php:452
 msgid "Blog Image Alternate Medium"
 msgstr ""
 
-#: inc/customizer.php:398
+#: inc/customizer.php:453
 msgid "Blog Full Content"
 msgstr ""
 
-#: inc/customizer.php:407
+#: inc/customizer.php:462
 msgid "Primary color option"
 msgstr ""
 
-#: inc/customizer.php:420
+#: inc/customizer.php:475
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site."
 msgstr ""
 
-#: inc/customizer.php:428
+#: inc/customizer.php:483
 msgid "Color Skin"
 msgstr ""
 
-#: inc/customizer.php:441
+#: inc/customizer.php:496
 msgid "Choose the light or dark skin. This will be reflected in whole site."
 msgstr ""
 
-#: inc/customizer.php:469
+#: inc/customizer.php:525
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:538
 msgid "Write your Custom CSS."
 msgstr ""
 
-#: inc/customizer.php:494
+#: inc/customizer.php:549
 msgid "Additional"
 msgstr ""
 
-#: inc/customizer.php:500
+#: inc/customizer.php:557
 msgid "Activate favicon"
 msgstr ""
 
-#: inc/customizer.php:513
+#: inc/customizer.php:570
 msgid "Check to activate favicon. Upload fav icon from below option"
 msgstr ""
 
-#: inc/customizer.php:521
+#: inc/customizer.php:578
 msgid "Upload favicon"
 msgstr ""
 
-#: inc/customizer.php:533
+#: inc/customizer.php:590
 msgid "Upload favicon for your site."
 msgstr ""
 
-#: inc/customizer.php:565
+#: inc/customizer.php:600
+msgid "Featured Image In Single Post Page"
+msgstr ""
+
+#: inc/customizer.php:613
+msgid "Check to enable the featured image in single post page."
+msgstr ""
+
+#: inc/customizer.php:621
+msgid "Featured Image In Single Page"
+msgstr ""
+
+#: inc/customizer.php:634
+msgid "Check to enable the featured image in single page."
+msgstr ""
+
+#: inc/customizer.php:665
 msgid "Activate slider"
 msgstr ""
 
-#: inc/customizer.php:578
+#: inc/customizer.php:678
 msgid "Check to activate slider."
 msgstr ""
 
-#: inc/customizer.php:594
+#: inc/customizer.php:694
 msgid "Disable slider in Posts page"
 msgstr ""
 
-#: inc/customizer.php:607
+#: inc/customizer.php:707
 msgid "Check to disable slider in Posts Page"
 msgstr ""
 
-#: inc/customizer.php:616
+#: inc/customizer.php:716
 msgid "Image Upload #%1$s"
 msgstr ""
 
-#: inc/customizer.php:629
+#: inc/customizer.php:729
 msgid "Upload slider image."
 msgstr ""
 
-#: inc/customizer.php:657
+#: inc/customizer.php:757
 msgid "Enter your slider description."
 msgstr ""
 
-#: inc/customizer.php:671
+#: inc/customizer.php:771
 msgid "Enter the button text. Default is \"Read more\""
 msgstr ""
 
-#: inc/customizer.php:685
+#: inc/customizer.php:785
 msgid "Enter link to redirect slider when clicked"
 msgstr ""
 
-#: inc/functions.php:408
+#: inc/demo-config.php:29
+msgid "Spacious Blog"
+msgstr ""
+
+#: inc/functions.php:454
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:418
+#: inc/functions.php:464
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:422
+#: inc/functions.php:468
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:448
+#: inc/functions.php:494
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:448
+#: inc/functions.php:494
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:463
+#: inc/functions.php:509
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:466
+#: inc/functions.php:512
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:468
+#: inc/functions.php:514
 msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
 msgstr ""
 
-#: inc/functions.php:474
+#: inc/functions.php:520
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:479
+#: inc/functions.php:526
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:499
+#: inc/functions.php:549
 msgid "WordPress"
 msgstr ""
 
@@ -838,37 +886,37 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:503
+#: inc/functions.php:553
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:503
+#: inc/functions.php:553
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:503
+#: inc/functions.php:553
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:585
+#: inc/functions.php:634
 msgid ""
 "<span class=\"date\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:596
+#: inc/functions.php:645
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:596
+#: inc/functions.php:645
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:596
+#: inc/functions.php:645
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:596
+#: inc/functions.php:645
 msgid "Comments Off"
 msgstr ""
 
@@ -1482,12 +1530,16 @@ msgstr ""
 msgid "Contact Page Template"
 msgstr ""
 
-#: inc/functions.php:412 navigation.php:39
+#. Template Name of the plugin/theme
+msgid "Page Builder Template"
+msgstr ""
+
+#: inc/functions.php:458 navigation.php:39
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:413 navigation.php:40
+#: inc/functions.php:459 navigation.php:40
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""
