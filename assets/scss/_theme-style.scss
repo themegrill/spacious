@@ -401,10 +401,11 @@ textarea:focus {
 input.s {
 	width: 60%;
 	padding: 4px 10px;
-	height: 22px;
+	height: 32px;
 	color: #666666;
 	background-color: #FFFFFF;
 	margin: 0;
+	vertical-align: top;
 	border: 1px solid #EAEAEA;
 	
 	&:focus {
