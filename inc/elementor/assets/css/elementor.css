@@ -636,3 +636,42 @@ body.page-template-page-builder #main {
 		font-size: 12px;
 	}
 }
+
+.elementor .tg-grid-content .tg-grid-title {
+	font-size: 18px;
+	line-height: 26px;
+	padding-bottom: 5px;
+}
+
+.elementor .tg-grid-content .tg-grid-thumb {
+	display: block;
+	position: absolute;
+	width: 100px;
+}
+
+.elementor .tg-grid-content .tg-entry-content {
+	margin-left: 120px;
+	min-height: 100px;
+}
+
+.elementor .tg-block-content-wrapper,
+.elementor .tg-grid-content-wrapper {
+	margin-bottom: 30px;
+}
+
+.elementor .entry-meta {
+	font-size: 14px;
+	margin-bottom: 18px;
+}
+
+.elementor .entry-meta span {
+	margin-right: 5px;
+}
+
+.elementor .entry-meta span a {
+	color: #424143;
+}
+
+.elementor .entry-meta span a:hover {
+	color: #78b865;
+}
