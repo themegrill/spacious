@@ -38,6 +38,11 @@ html {
 	/* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
 
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 article, aside, details, figcaption, figure, footer, header, main, nav, section {
 	display: block;
 }
@@ -2030,7 +2035,6 @@ li.default-menu {
 	color: #444444;
 	display: block;
 	float: left;
-	padding: 16px 0 0;
 	height: 30px;
 }
 
@@ -2064,7 +2068,7 @@ li.default-menu {
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	margin-left: 5px;
-	margin-top: 4px;
+	margin-top: -4px;
 }
 
 .main-navigation ul li > ul .sub-toggle {
@@ -2100,7 +2104,7 @@ li.default-menu {
 	position: absolute;
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
 	border-top: 1px solid #0FBE7C;
-	top: 45px;
+	top: 30px;
 	left: 25px;
 	width: 150px;
 }
@@ -2379,7 +2383,7 @@ li.default-menu {
 }
 
 .spacious-header-style-two .main-navigation ul li .sub-toggle {
-	margin-top: -3px;
+	margin-top: 1px;
 	margin-left: 0;
 	right: 7px;
 	color: #444444;
@@ -2400,6 +2404,7 @@ li.default-menu {
 	transform: translateY(20px);
 	background-color: #01101B;
 	border: 1px solid #01101B;
+	top: 60px;
 }
 
 .spacious-header-style-two .main-navigation ul li ul.sub-menu li {
@@ -2407,7 +2412,7 @@ li.default-menu {
 }
 
 .spacious-header-style-two .main-navigation ul li ul.sub-menu li ul {
-	left: 200px;
+	left: 198px;
 	top: -1px;
 }
 
@@ -2437,6 +2442,7 @@ li.default-menu {
 .spacious-header-style-two .main-navigation a {
 	color: #a1b1bc;
 	padding: 20px;
+	height: auto;
 }
 
 .spacious-header-style-two .main-small-navigation {
