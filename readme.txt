@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-### Version 1.5- 2018-03-09
+### Version 1.5- 2018-03-13
 * Integrated Elementor Page Builder
 * Added an option for displaying a featured image in single post and page
 
