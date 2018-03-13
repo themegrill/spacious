@@ -47,8 +47,8 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 ### Version 1.5- 2018-03-13
-* Integrated Elementor Page Builder
-* Added an option for displaying a featured image in single post and page
+* Feature - Elementor Page Builder integration
+* Feature - Option for displaying a featured image in single post and page
 
 = Version 1.4.9 - 2017-12-15 =
 * Feature - Responsive menu option with submenu toggle
