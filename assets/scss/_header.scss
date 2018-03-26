@@ -124,7 +124,7 @@ nav li > {
 
 .main-navigation {
 	float: right;
-	padding-top: 5px;
+	padding-top: 20px;
 
 	li {
 		float: left;
@@ -185,11 +185,23 @@ li.default-menu {
 			.sub-toggle {
 				position: absolute;
 				top: 50%;
-				-ms-transform: translateY(-50%);
-				-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);
+				-ms-transform: translateY(-50%) rotate(90deg);
+				-webkit-transform: translateY(-50%) rotate(90deg);
+				transform: translateY(-50%) rotate(90deg);
 				margin-left: 5px;
 				margin-top: -4px;
+			}
+
+			ul {
+
+				li {
+
+					.sub-toggle {
+						-ms-transform: translateY(-50%) rotate(0deg);
+						-webkit-transform: translateY(-50%) rotate(0deg);
+						transform: translateY(-50%) rotate(0deg);
+					}
+				}
 			}
 
 			> ul .sub-toggle {
@@ -549,7 +561,7 @@ li.default-menu {
 					margin-top: 1px;
 					margin-left: 0;
 					right: 7px;
-					color: #444444;
+					color: #a1b1bc;
 				}
 
 				ul.sub-menu {

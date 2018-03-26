@@ -2010,7 +2010,7 @@ nav li > ol {
 
 .main-navigation {
 	float: right;
-	padding-top: 5px;
+	padding-top: 20px;
 }
 
 .main-navigation li {
@@ -2066,10 +2066,15 @@ li.default-menu {
 .main-navigation ul li .sub-toggle {
 	position: absolute;
 	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%) rotate(90deg);
+	transform: translateY(-50%) rotate(90deg);
 	margin-left: 5px;
 	margin-top: -4px;
+}
+
+.main-navigation ul li ul li .sub-toggle {
+	-webkit-transform: translateY(-50%) rotate(0deg);
+	transform: translateY(-50%) rotate(0deg);
 }
 
 .main-navigation ul li > ul .sub-toggle {
@@ -2387,7 +2392,7 @@ li.default-menu {
 	margin-top: 1px;
 	margin-left: 0;
 	right: 7px;
-	color: #444444;
+	color: #a1b1bc;
 }
 
 .spacious-header-style-two .main-navigation ul li ul.sub-menu {
