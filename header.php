@@ -127,7 +127,7 @@
 							} ?>
 
 							<nav id="site-navigation" class="main-navigation" role="navigation">
-								<h3 class="menu-toggle"><?php _e( 'Menu', 'spacious' ); ?></h3>
+								<p class="menu-toggle"><?php _e( 'Menu', 'spacious' ); ?></p>
 								<?php
 								if ( has_nav_menu( 'primary' ) ) {
 									wp_nav_menu( array(
