@@ -73,3 +73,25 @@
         }
     }( container ) );
 } ) ();
+
+jQuery( function( $ ) {
+	$( '.main-navigation ul li' ).hover(
+		function () {
+			if( $( this ).children( ' ul.sub-menu' ).length > 0 ) {
+
+				// Get document width
+				var docWidth = $( document ).width();
+
+				// Get window width
+				var windowWidth = $( window ).width();
+
+				// Condition where menu item goes out of viewport
+				if( docWidth > windowWidth ) {
+					$( this ).children( ' ul.sub-menu' ).addClass( 'spacious-menu--left' );
+				}
+			}
+		}, function() {
+			$( this ).children( ' ul.sub-menu' ).removeClass( 'spacious-menu--left' );
+		}
+	);
+});
