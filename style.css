@@ -2082,6 +2082,10 @@ li.default-menu {
 	right: 10px;
 }
 
+.main-navigation ul li > ul.spacious-menu--left {
+	left: -100%;
+}
+
 .main-navigation ul ul li:hover ul {
 	display: block;
 }

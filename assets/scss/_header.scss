@@ -208,6 +208,10 @@ li.default-menu {
 				margin: 0;
 				right: 10px;
 			}
+
+			> ul.spacious-menu--left {
+				left: -100%;
+			}
 		}
 
 		ul {
