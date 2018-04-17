@@ -74,24 +74,50 @@
     }( container ) );
 } ) ();
 
-jQuery( function( $ ) {
-	$( '.main-navigation ul li' ).hover(
-		function () {
-			if( $( this ).children( ' ul.sub-menu' ).length > 0 ) {
+/**
+ * Fixes menu out of viewport
+ */
+( function ( $ ) {
+	var handlerIn, handlerOut,
+		container = document.getElementById( 'site-navigation' );
 
-				// Get document width
-				var docWidth = $( document ).width();
+	// For touchscreen and mouse enter
+	handlerIn = function () {
+		if ( $( this ).children( 'ul.sub-menu' ).length > 0 ) {
 
-				// Get window width
-				var windowWidth = $( window ).width();
+			// Get document width
+			var docWidth = $( document ).width();
 
-				// Condition where menu item goes out of viewport
-				if( docWidth > windowWidth ) {
-					$( this ).children( ' ul.sub-menu' ).addClass( 'spacious-menu--left' );
-				}
+			// Get window width
+			var windowWidth = $( window ).width();
+
+			// Condition where menu item goes out of viewport
+			if ( docWidth > windowWidth ) {
+				$( this ).children( ' ul.sub-menu' ).addClass( 'spacious-menu--left' );
 			}
-		}, function() {
-			$( this ).children( ' ul.sub-menu' ).removeClass( 'spacious-menu--left' );
 		}
-	);
-});
+	};
+
+	// For mouse leave
+	handlerOut = function () {
+		$( this ).children( ' ul.sub-menu' ).removeClass( 'spacious-menu--left' );
+	};
+
+	// Desktop
+	$( '.main-navigation  .menu-item-has-children, .main-navigation .page_item_has_children' ).hover( handlerIn, handlerOut );
+
+
+	// Touch screen
+	( function ( container ) {
+		var i,
+			parentLink = container.querySelectorAll( '.main-navigation  .menu-item-has-children, .main-navigation .page_item_has_children' );
+
+		if ( 'ontouchstart' in window ) {
+
+			for ( i = 0; i < parentLink.length; ++i ) {
+				parentLink[ i ].addEventListener( 'touchstart', handlerIn, false );
+			}
+		}
+	} )( container );
+
+} )( jQuery );
