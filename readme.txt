@@ -46,7 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-### Version 1.5- 2018-03-13
+= TBD =
+* Fix - submenu out of viewport.
+
+= Version 1.5 - 2018-03-13 =
 * Feature - Elementor Page Builder integration
 * Feature - Option for displaying a featured image in single post and page
 
@@ -56,11 +59,11 @@ and we will include it within the theme from next version update.
 * Feature - Introduce customizer selective refresh widgets feature for theme bundled widgets
 
 = Version 1.4.8 - 2017-10-16 =
-* Fix - Read more enabled on archive, search pages
-* Tweak - Add theme support for Jetpack Responsive Videos.
+* Fix     - Read more enabled on archive, search pages
+* Tweak   - Add theme support for Jetpack Responsive Videos.
 * Feature - Add support for yoast breadcrumb
-* Fix - Call to action button issue on chrome
-* Tweaks - Introduce selective refresh for site title and description
+* Fix     - Call to action button issue on chrome
+* Tweaks  - Introduce selective refresh for site title and description
 
 = Version 1.4.7 - 2017-07-05 =
 * Added - Support for starter content added.
@@ -76,7 +79,7 @@ and we will include it within the theme from next version update.
 * Added - Support for Video Headers introduced in WordPress 4.7.
 
 = Version 1.4.3 - 2016-12-31 =
-* Fix - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
+* Fix   - Delete the old favicon, site logo and Custom CSS code theme options table supporting the child theme
 * Added - RTL Language support.
 
 = Version 1.4.2 - 2016-12-09 =
@@ -97,18 +100,18 @@ and we will include it within the theme from next version update.
 = Version 1.4.0 =
 * Tweaks - Updated theme tags as per new introduced tags
 * Tweaks - Introduced welcome page for theme.
-* Fix - Removed deprecated load() function used for slider-setting script.
+* Fix    - Removed deprecated load() function used for slider-setting script.
 
 = Version 1.3.9 =
-* Fix - WooCommerce shop error fixed.
-* Fix - Box and Wide at 978px Layout issue on Tab is fixed.
+* Fix     - WooCommerce shop error fixed.
+* Fix     - Box and Wide at 978px Layout issue on Tab is fixed.
 * Feature - Jquery cycle plugin for slider upgraded to Jquery cycle2 v2.1.6.
 * Feature - Added Swipe feature on slider for touch devices.
 
 = Version 1.3.8 =
-* Fix - Slider disable in blog page bug fixed.
-* Tweaks - Theme information is properly organized in Customize panel.
-* Tweaks - Language file updated.
+* Fix     - Slider disable in blog page bug fixed.
+* Tweaks  - Theme information is properly organized in Customize panel.
+* Tweaks  - Language file updated.
 * Feature - Theme is now compatible with WooCommerce.
 * Feature - Primary Color hover effect is added.
 
