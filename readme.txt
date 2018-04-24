@@ -47,7 +47,8 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
-* Fix - submenu out of viewport.
+* Tweak - Added condition for elementor counter widget js.
+* Fix   - submenu out of viewport.
 
 = Version 1.5 - 2018-03-13 =
 * Feature - Elementor Page Builder integration
