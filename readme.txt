@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.5.1 - 2018-05-03 =
 * Tweak - Added condition for elementor counter widget js.
 * Fix   - submenu out of viewport.
 
