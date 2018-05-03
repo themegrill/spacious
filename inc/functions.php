@@ -385,7 +385,7 @@ function spacious_custom_css() {
 			.breadcrumb a:hover { color: ' . $primary_color . '; }
 			.tg-one-half .widget-title a:hover, .tg-one-third .widget-title a:hover, .tg-one-fourth .widget-title a:hover { color: ' . $primary_color . '; }
 			.pagination span ,.site-header .menu-toggle:hover{ background-color: ' . $primary_color . '; }
-			.pagination a span:hover { color: ' . $primary_color . '; border-color: .' . $primary_color . '; }
+			.pagination a span:hover { color: ' . $primary_color . '; border-color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-post { border-color: ' . $primary_color . ' #EAEAEA #EAEAEA #EAEAEA; }
 			.call-to-action-content-wrapper { border-color: #EAEAEA #EAEAEA #EAEAEA ' . $primary_color . '; }
 			.call-to-action-button { background-color: ' . $primary_color . '; }
