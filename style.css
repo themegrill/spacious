@@ -2212,7 +2212,6 @@ li.default-menu {
 .main-small-navigation {
 	float: none;
 	padding-top: 0;
-	background-color: #000000;
 	margin-top: 5px;
 }
 
@@ -2939,6 +2938,10 @@ li.default-menu {
 }
 
 @media screen and (max-width: 600px) {
+	.main-navigation,
+	.main-small-navigation {
+		padding-top: 8px;
+	}
 	#featured-slider .entry-description-container {
 		padding: 3px 6px;
 		padding: 0.3rem 0.6rem;
