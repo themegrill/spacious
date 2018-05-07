@@ -1,7 +1,7 @@
 {
   "name": "spacious",
   "title": "Spacious",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "homepage": "https://themegrill.com/themes/spacious",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "browser-sync": "^2.18.8",
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-checktextdomain": "~1.0.0",
     "grunt-contrib-compress": "~1.2.0",
     "grunt-contrib-jshint": "~1.0.0",
