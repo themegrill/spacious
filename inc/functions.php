@@ -373,7 +373,7 @@ function spacious_custom_css() {
 			#site-title a:hover { color: ' . $primary_color . '; }
 			.main-navigation ul li.current_page_item a, .main-navigation ul li:hover > a { color: ' . $primary_color . '; }
 			.main-navigation ul li ul { border-top: 1px solid ' . $primary_color . '; }
-			.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover { color: ' . $primary_color . '; }
+			.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover, .main-navigation ul li:hover > .sub-toggle { color: ' . $primary_color . '; }
 			.site-header .menu-toggle:hover.entry-meta a.read-more:hover,#featured-slider .slider-read-more-button:hover,.call-to-action-button:hover,.entry-meta .read-more-link:hover,.spacious-button:hover, input[type="reset"]:hover, input[type="button"]:hover, input[type="submit"]:hover, button:hover { background: ' . $primary_dark . '; }
 			.main-small-navigation li:hover { background: ' . $primary_color . '; }
 			.main-small-navigation ul > .current_page_item, .main-small-navigation ul > .current-menu-item { background: ' . $primary_color . '; }

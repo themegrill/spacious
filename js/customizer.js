@@ -42,7 +42,7 @@
 			'#site-title a:hover { color: ' + primaryColor + '; }' +
 			'.main-navigation ul li.current_page_item a, .main-navigation ul li:hover > a { color: ' + primaryColor + '; }' +
 			'.main-navigation ul li ul { border-top: 1px solid ' + primaryColor + '; }' +
-			'.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover { color: ' + primaryColor + '; }' +
+			'.main-navigation ul li ul li a:hover, .main-navigation ul li ul li:hover > a, .main-navigation ul li.current-menu-item ul li a:hover, .main-navigation ul li:hover > .sub-toggle { color: ' + primaryColor + '; }' +
 			'.main-small-navigation li:hover { background: ' + primaryColor + '; }' +
 			'.main-small-navigation ul > .current_page_item, .main-small-navigation ul > .current-menu-item { background: ' + primaryColor + '; }' +
 			'.main-navigation a:hover, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current_page_ancestor a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current_page_item a, .main-navigation ul li:hover > a  { color: ' + primaryColor + '; }' +
