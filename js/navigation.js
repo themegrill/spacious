@@ -49,7 +49,7 @@
         var touchStartFn, i,
             parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
 
-        if ( 'ontouchstart' in window ) {
+        if ( ( 'ontouchstart' in window ) && ( window.matchMedia( "( min-width: 768px ) " ).matches ) ) {
             touchStartFn = function( e ) {
                 var menuItem = this.parentNode, i;
 
