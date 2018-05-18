@@ -47,7 +47,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 === TBD ===
+* Fix - Blank space on the right of small screen.
 * Fix - Mobile menu item with sub menu not opening in one click.
+* Fix - search icon spacing.
 
 = Version 1.5.1 - 2018-05-03 =
 * Tweak - Added condition for elementor counter widget js.
