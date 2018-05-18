@@ -1,7 +1,7 @@
 {
   "name": "spacious",
   "title": "Spacious",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "homepage": "https://themegrill.com/themes/spacious",
   "repository": {
     "type": "git",
@@ -17,7 +17,6 @@
     "grunt-contrib-compress": "~1.2.0",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-wp-i18n": "~0.5.4",
-    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-watch": "^4.3.11"
@@ -28,6 +27,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.0.0",
-    "browser-sync": "^2.23.6"
+    "browser-sync": "^2.23.6",
+    "gulp": "github:gulpjs/gulp#4.0"
   }
 }
