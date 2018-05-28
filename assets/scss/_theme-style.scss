@@ -2011,6 +2011,25 @@ a#scroll-up {
 	}
 }
 
+
+
+.author-box {
+	padding: 20px;
+	border: 1px solid #EAEAEA;
+
+	.author-img {
+
+		img {
+			float: none;
+			margin-bottom: 0;
+		}
+	}
+
+	.author-description-wrapper {
+		margin-left: 120px;
+	}
+}
+
 .single #content .tags {
 	margin: 30px 0;
 
