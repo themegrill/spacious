@@ -1827,6 +1827,19 @@ a#scroll-up:hover {
 	content: '\f411';
 }
 
+.author-box {
+	padding: 20px;
+	border: 1px solid #EAEAEA;
+}
+
+.author-box .author-img img {
+	margin-bottom: 0;
+}
+
+.author-box .author-description-wrapper {
+	margin-left: 120px;
+}
+
 .single #content .tags {
 	margin: 30px 0;
 }
@@ -3009,6 +3022,12 @@ li.default-menu {
 	.gallery-columns-8 .gallery-item,
 	.gallery-columns-9 .gallery-item {
 		width: 25%;
+	}
+	.author-box .author-img img {
+		margin-bottom: 20px;
+	}
+	.author-box .author-description-wrapper {
+		margin-left: 0;
 	}
 }
 
