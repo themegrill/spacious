@@ -200,13 +200,13 @@ function spacious_customize_register( $wp_customize ) {
 		'title'    => __( 'Header Designs', 'spacious' ),
 		'panel'    => 'spacious_header_options',
 	) );
-	$wp_customize->add_setting( 'spacious[spacious_header_design]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_design]', array(
 		'default'           => 'style_one',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_radio_select_sanitize',
 	) );
-	$wp_customize->add_control( 'spacious[spacious_header_design]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_design]', array(
 		'type'    => 'radio',
 		'label'   => esc_html__( 'Choose a header design.', 'spacious' ),
 		'section' => 'spacious_header_design_options',
@@ -232,13 +232,13 @@ function spacious_customize_register( $wp_customize ) {
 		'title'    => __( 'Footer Designs', 'spacious' ),
 		'panel'    => 'spacious_footer_options',
 	) );
-	$wp_customize->add_setting( 'spacious[spacious_footer_design]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_footer_design]', array(
 		'default'           => 'style_one',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_radio_select_sanitize',
 	) );
-	$wp_customize->add_control( 'spacious[spacious_footer_design]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_footer_design]', array(
 		'type'    => 'radio',
 		'label'   => esc_html__( 'Choose a footer design.', 'spacious' ),
 		'section' => 'spacious_footer_design_options',
@@ -601,32 +601,32 @@ function spacious_customize_register( $wp_customize ) {
 		'panel'    => 'spacious_additional_options',
 	) );
 
-	$wp_customize->add_setting( 'spacious[spacious_related_posts_activate]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_related_posts_activate]', array(
 		'default'           => 0,
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control( 'spacious[spacious_related_posts_activate]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_related_posts_activate]', array(
 		'type'     => 'checkbox',
 		'label'    => esc_html__( 'Check to activate the related posts', 'spacious' ),
 		'section'  => 'spacious_related_posts_section',
-		'settings' => 'spacious[spacious_related_posts_activate]',
+		'settings' => $spacious_themename . '[spacious_related_posts_activate]',
 	) );
 
-	$wp_customize->add_setting( 'spacious[spacious_related_posts]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_related_posts]', array(
 		'default'           => 'categories',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_radio_sanitize',
 	) );
 
-	$wp_customize->add_control( 'spacious[spacious_related_posts]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_related_posts]', array(
 		'type'     => 'radio',
 		'label'    => __( 'Related Posts Must Be Shown As:', 'spacious' ),
 		'section'  => 'spacious_related_posts_section',
-		'settings' => 'spacious[spacious_related_posts]',
+		'settings' => $spacious_themename . '[spacious_related_posts]',
 		'choices'  => array(
 			'categories' => esc_html__( 'Related Posts By Categories', 'spacious' ),
 			'tags'       => esc_html__( 'Related Posts By Tags', 'spacious' ),
@@ -640,18 +640,18 @@ function spacious_customize_register( $wp_customize ) {
 		'panel'    => 'spacious_additional_options',
 	) );
 
-	$wp_customize->add_setting( 'spacious[spacious_featured_image_single_post_page]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_featured_image_single_post_page]', array(
 		'default'           => 0,
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control( 'spacious[spacious_featured_image_single_post_page]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_featured_image_single_post_page]', array(
 		'type'     => 'checkbox',
 		'label'    => __( 'Check to enable the featured image in single post page.', 'spacious' ),
 		'section'  => 'spacious_featured_image_single_post_page_section',
-		'settings' => 'spacious[spacious_featured_image_single_post_page]',
+		'settings' => $spacious_themename . '[spacious_featured_image_single_post_page]',
 	) );
 
 	// Featured image in single page activate option
@@ -661,18 +661,18 @@ function spacious_customize_register( $wp_customize ) {
 		'panel'    => 'spacious_additional_options',
 	) );
 
-	$wp_customize->add_setting( 'spacious[spacious_featured_image_single_page]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_featured_image_single_page]', array(
 		'default'           => 0,
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control( 'spacious[spacious_featured_image_single_page]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_featured_image_single_page]', array(
 		'type'     => 'checkbox',
 		'label'    => __( 'Check to enable the featured image in single page.', 'spacious' ),
 		'section'  => 'spacious_featured_image_single_page_section',
-		'settings' => 'spacious[spacious_featured_image_single_page]',
+		'settings' => $spacious_themename . '[spacious_featured_image_single_page]',
 	) );
 
 	// Adding Text Area Control For Use In Customizer
