@@ -1830,6 +1830,7 @@ a#scroll-up:hover {
 .author-box {
 	padding: 20px;
 	border: 1px solid #EAEAEA;
+	margin-bottom: 20px;
 }
 
 .author-box .author-img img {
@@ -2306,7 +2307,7 @@ li.default-menu {
 	color: #0FBE7C;
 }
 
-/* =HEADER STYLE 2: 
+/* =HEADER STYLE 2:
 ----------------------------------------------- */
 .spacious-header-style-two #header-meta {
 	background-color: #01101B;
