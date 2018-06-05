@@ -675,6 +675,27 @@ function spacious_customize_register( $wp_customize ) {
 		'settings' => $spacious_themename . '[spacious_featured_image_single_page]',
 	) );
 
+	// Author bio option.
+	$wp_customize->add_section( 'spacious_author_bio_section', array(
+		'priority' => 5,
+		'title'    => __( 'Author Bio', 'spacious' ),
+		'panel'    => 'spacious_additional_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_author_bio]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_author_bio]', array(
+		'type'     => 'checkbox',
+		'label'    => __( 'Check to enable the author bio section just below the post.', 'spacious' ),
+		'section'  => 'spacious_author_bio_section',
+		'settings' => $spacious_themename . '[spacious_author_bio]',
+	) );
+
 	// Adding Text Area Control For Use In Customizer
 	class Spacious_Text_Area_Control extends WP_Customize_Control {
 
