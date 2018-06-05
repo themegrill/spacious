@@ -18,6 +18,11 @@ get_header(); ?>
 
 				<?php get_template_part( 'navigation', 'archive' ); ?>
 
+				<?php if ( spacious_options( 'spacious_related_posts_activate', 0 ) == 1 ) {
+				get_template_part( 'inc/related-posts' );
+				}
+				?>
+
 				<?php
 				if ( spacious_options( 'spacious_author_bio', 0 ) == 1 ) :
 					if ( get_the_author_meta( 'description' ) ) : ?>

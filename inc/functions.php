@@ -84,6 +84,50 @@ add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 
 /****************************************************************************************/
 
+/*
+ * Display the related posts.
+ */
+if ( ! function_exists( 'spacious_related_posts_function' ) ) {
+
+	function spacious_related_posts_function(){
+		wp_reset_postdata();
+		global $post;
+
+		// Define shared post arguments
+		$args = array(
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => false,
+			'update_post_term_cache' => false,
+			'ignore_sticky_posts'    => 1,
+			'orderby'                => 'rand',
+			'post__not_in'           => array( $post->ID ),
+			'posts_per_page'         => 3,
+		);
+
+		// Related by categories.
+		if ( spacious_options( 'spacious_related_posts', 'categories' ) == 'categories' ) {
+			$cats                 = wp_get_post_categories( $post->ID, array( 'fields' => 'ids' ) );
+			$args['category__in'] = $cats;
+		}
+
+		// Related by tags.
+		if ( spacious_options( 'spacious_related_posts', 'categories' ) == 'tags' ) {
+			$tags            = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
+			$args['tag__in'] = $tags;
+
+			if ( ! $tags ) {
+				$break = true;
+			}
+		}
+
+		$query = ! isset( $break ) ? new WP_Query( $args ) : new WP_Query();
+
+		return $query;
+	}
+}
+
+/****************************************************************************************/
+
 // Adding the support for the entry-title tag for Google Rich Snippets
 function spacious_add_mod_hatom_data( $content ) {
 	$title = get_the_title();

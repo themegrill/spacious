@@ -594,6 +594,45 @@ function spacious_customize_register( $wp_customize ) {
 		// End of Additional Options
 	}
 
+	//Related post
+	$wp_customize->add_section( 'spacious_related_posts_section', array(
+		'priority' => 5,
+		'title'    => esc_html__( 'Related Posts', 'spacious' ),
+		'panel'    => 'spacious_additional_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_related_posts_activate]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_related_posts_activate]', array(
+		'type'     => 'checkbox',
+		'label'    => esc_html__( 'Check to activate the related posts', 'spacious' ),
+		'section'  => 'spacious_related_posts_section',
+		'settings' => $spacious_themename . '[spacious_related_posts_activate]',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_related_posts]', array(
+		'default'           => 'categories',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_radio_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_related_posts]', array(
+		'type'     => 'radio',
+		'label'    => __( 'Related Posts Must Be Shown As:', 'spacious' ),
+		'section'  => 'spacious_related_posts_section',
+		'settings' => $spacious_themename . '[spacious_related_posts]',
+		'choices'  => array(
+			'categories' => esc_html__( 'Related Posts By Categories', 'spacious' ),
+			'tags'       => esc_html__( 'Related Posts By Tags', 'spacious' ),
+		),
+	) );
+
 	// Featured image in single post page activate option
 	$wp_customize->add_section( 'spacious_featured_image_single_post_page_section', array(
 		'priority' => 6,
@@ -621,7 +660,6 @@ function spacious_customize_register( $wp_customize ) {
 		'title'    => __( 'Featured Image In Single Page', 'spacious' ),
 		'panel'    => 'spacious_additional_options',
 	) );
-
 
 	$wp_customize->add_setting( $spacious_themename . '[spacious_featured_image_single_page]', array(
 		'default'           => 0,

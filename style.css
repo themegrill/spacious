@@ -1481,6 +1481,65 @@ body {
 	color: red;
 }
 
+.related-posts-main-title {
+	padding-bottom: 30px;
+}
+
+.related-posts {
+	margin: 0 -2.46305419%;
+}
+
+.related-posts .entry-title {
+	font-size: 18px;
+	line-height: 1.4;
+	padding-bottom: 0;
+}
+
+.related-posts .entry-title a {
+	color: #444444;
+}
+
+.related-posts .entry-title a:hover {
+	color: #0FBE7C;
+}
+
+.related-posts .entry-meta {
+	border: none 0;
+	font-size: 14px;
+}
+
+.related-posts .entry-meta .by-author,
+.related-posts .entry-meta .date,
+.related-posts .entry-meta .category,
+.related-posts .entry-meta .comments,
+.related-posts .entry-meta .edit-link {
+	padding: 5px 4px 5px 0;
+}
+
+.related-posts .entry-meta .by-author:before,
+.related-posts .entry-meta .date:before,
+.related-posts .entry-meta .category:before,
+.related-posts .entry-meta .comments:before,
+.related-posts .entry-meta .edit-link:before {
+	font: 12px/20px "FontAwesome";
+}
+
+.related-posts .entry-meta .by-author a,
+.related-posts .entry-meta .date a,
+.related-posts .entry-meta .category a,
+.related-posts .entry-meta .comments a,
+.related-posts .entry-meta .edit-link a {
+	color: #666666;
+}
+
+.related-posts .entry-meta .by-author a:hover,
+.related-posts .entry-meta .date a:hover,
+.related-posts .entry-meta .category a:hover,
+.related-posts .entry-meta .comments a:hover,
+.related-posts .entry-meta .edit-link a:hover {
+	color: #0FBE7C;
+}
+
 /* =WIDGETS
 ----------------------------------------------- */
 #secondary .widget ul li {
@@ -2953,6 +3012,9 @@ li.default-menu {
 	}
 	.wide-978 #primary, .narrow-978 #primary, .wide-978 #secondary, .narrow-978 #secondary {
 		width: 100%;
+	}
+	.related-posts {
+		margin: 0;
 	}
 }
 
