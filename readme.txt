@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Submenu location while fixing out of viewport.
+
 = Version 1.5.2 - 2018-05-18 =
 * Fix - Blank space on the right of small screen.
 * Fix - Mobile menu item with sub menu not opening in one click.
