@@ -81,7 +81,7 @@
 
 	var subMenu;
 
-	jQuery( '.main-navigation  .menu-item-has-children, .main-navigation .page_item_has_children' ).on( {
+	jQuery( '.main-navigation ul li a' ).on( {
 
 		'mouseover touchstart': function() {
 
@@ -96,7 +96,7 @@
 
 					var rect = subMenu.getBoundingClientRect();
 
-					if ( rect.right > ( window.innerWidth || document.documentElement.clientWidth ) ) {
+					if ( rect.right + 2 > ( window.innerWidth || document.documentElement.clientWidth ) ) {
 						return 'spacious-menu--left'; // menu goes out of viewport from right.
 					} else if ( rect.left < 0 ) {
 						return 'spacious-menu--right'; // menu goes out of viewport from left.
@@ -106,7 +106,7 @@
 				}
 			}
 
-			subMenu = jQuery( this ).children( '.sub-menu, .children' );
+			subMenu = jQuery( this ).next( '.sub-menu, .children' );
 
 			// If menu item has submenu
 			if ( subMenu.length > 0 ) {
