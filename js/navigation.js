@@ -81,7 +81,7 @@
 
 	var subMenu;
 
-	jQuery( '.main-navigation ul li a' ).on( {
+	jQuery( '.main-navigation ul li.menu-item-has-children a, .main-navigation ul li.page_item_has_children a' ).on( {
 
 		'mouseover touchstart': function() {
 
