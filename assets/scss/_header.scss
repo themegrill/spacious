@@ -231,13 +231,13 @@ li.default-menu {
 					z-index: 9999;
 				}
 
-				li:hover ul {
+				li:hover > ul {
 					display: block;
 				}
 
 				ul {
-					li:hover ul, 
-					ul li:hover ul {
+					li:hover > ul, 
+					ul li:hover > ul {
 						display: block;
 					}
 				}

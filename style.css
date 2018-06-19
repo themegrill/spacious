@@ -2173,12 +2173,12 @@ li.default-menu {
 	z-index: 9999;
 }
 
-.main-navigation ul ul ul li:hover ul {
+.main-navigation ul ul ul li:hover > ul {
 	display: block;
 }
 
-.main-navigation ul ul ul ul li:hover ul,
-.main-navigation ul ul ul ul ul li:hover ul {
+.main-navigation ul ul ul ul li:hover > ul,
+.main-navigation ul ul ul ul ul li:hover > ul {
 	display: block;
 }
 
@@ -2365,7 +2365,7 @@ li.default-menu {
 	color: #0FBE7C;
 }
 
-/* =HEADER STYLE 2:
+/* =HEADER STYLE 2: 
 ----------------------------------------------- */
 .spacious-header-style-two #header-meta {
 	background-color: #01101B;
