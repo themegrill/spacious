@@ -47,7 +47,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
-* Fix - Submenu location while fixing out of viewport.
+* Fix     - Submenu location while fixing out of viewport.
+* Feature - Related posts option.
+* Feature - Author bio option.
 
 = Version 1.5.2 - 2018-05-18 =
 * Fix - Blank space on the right of small screen.
