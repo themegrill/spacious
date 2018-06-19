@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.5.2\n"
+"Project-Id-Version: Spacious 1.5.3\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2018-05-18 10:04:06+00:00\n"
+"POT-Creation-Date: 2018-06-19 09:14:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,7 +51,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:31 inc/functions.php:648
+#: content-page.php:31 inc/functions.php:692
 msgid "Edit"
 msgstr ""
 
@@ -178,12 +178,12 @@ msgstr ""
 msgid "Support Forum"
 msgstr ""
 
-#: functions.php:306 functions.php:311 inc/customizer.php:743
+#: functions.php:306 functions.php:311 inc/customizer.php:803
 msgid "Enter title for your slider."
 msgstr ""
 
-#: functions.php:308 functions.php:313 inc/customizer.php:764
-#: inc/functions.php:654 inc/header-functions.php:65
+#: functions.php:308 functions.php:313 inc/customizer.php:824
+#: inc/functions.php:698 inc/header-functions.php:65
 #: inc/widgets/widgets.php:267 inc/widgets/widgets.php:369
 msgid "Read more"
 msgstr ""
@@ -389,7 +389,7 @@ msgstr ""
 msgid "Spacious Pro"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:405 inc/customizer.php:659
+#: inc/admin/class-spacious-admin.php:405 inc/customizer.php:719
 msgid "Slider"
 msgstr ""
 
@@ -473,7 +473,7 @@ msgstr ""
 msgid "BreadCrumb Custom Text"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:485
+#: inc/admin/class-spacious-admin.php:485 inc/customizer.php:681
 msgid "Author Bio"
 msgstr ""
 
@@ -787,54 +787,78 @@ msgid "Upload favicon for your site."
 msgstr ""
 
 #: inc/customizer.php:600
-msgid "Featured Image In Single Post Page"
+msgid "Related Posts"
 msgstr ""
 
 #: inc/customizer.php:613
+msgid "Check to activate the related posts"
+msgstr ""
+
+#: inc/customizer.php:627
+msgid "Related Posts Must Be Shown As:"
+msgstr ""
+
+#: inc/customizer.php:631
+msgid "Related Posts By Categories"
+msgstr ""
+
+#: inc/customizer.php:632
+msgid "Related Posts By Tags"
+msgstr ""
+
+#: inc/customizer.php:639
+msgid "Featured Image In Single Post Page"
+msgstr ""
+
+#: inc/customizer.php:652
 msgid "Check to enable the featured image in single post page."
 msgstr ""
 
-#: inc/customizer.php:621
+#: inc/customizer.php:660
 msgid "Featured Image In Single Page"
 msgstr ""
 
-#: inc/customizer.php:634
+#: inc/customizer.php:673
 msgid "Check to enable the featured image in single page."
 msgstr ""
 
-#: inc/customizer.php:665
+#: inc/customizer.php:694
+msgid "Check to enable the author bio section just below the post."
+msgstr ""
+
+#: inc/customizer.php:725
 msgid "Activate slider"
 msgstr ""
 
-#: inc/customizer.php:678
+#: inc/customizer.php:738
 msgid "Check to activate slider."
 msgstr ""
 
-#: inc/customizer.php:694
+#: inc/customizer.php:754
 msgid "Disable slider in Posts page"
 msgstr ""
 
-#: inc/customizer.php:707
+#: inc/customizer.php:767
 msgid "Check to disable slider in Posts Page"
 msgstr ""
 
-#: inc/customizer.php:716
+#: inc/customizer.php:776
 msgid "Image Upload #%1$s"
 msgstr ""
 
-#: inc/customizer.php:729
+#: inc/customizer.php:789
 msgid "Upload slider image."
 msgstr ""
 
-#: inc/customizer.php:757
+#: inc/customizer.php:817
 msgid "Enter your slider description."
 msgstr ""
 
-#: inc/customizer.php:771
+#: inc/customizer.php:831
 msgid "Enter the button text. Default is \"Read more\""
 msgstr ""
 
-#: inc/customizer.php:785
+#: inc/customizer.php:845
 msgid "Enter link to redirect slider when clicked"
 msgstr ""
 
@@ -842,47 +866,47 @@ msgstr ""
 msgid "Spacious Blog"
 msgstr ""
 
-#: inc/functions.php:454
+#: inc/functions.php:498
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:464
+#: inc/functions.php:508
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:468
+#: inc/functions.php:512
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:494
+#: inc/functions.php:538
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:494
+#: inc/functions.php:538
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:509
+#: inc/functions.php:553
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:512
+#: inc/functions.php:556
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:514
+#: inc/functions.php:558
 msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
 msgstr ""
 
-#: inc/functions.php:520
+#: inc/functions.php:564
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:526
+#: inc/functions.php:570
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:549
+#: inc/functions.php:593
 msgid "WordPress"
 msgstr ""
 
@@ -890,37 +914,37 @@ msgstr ""
 msgid "ThemeGrill"
 msgstr ""
 
-#: inc/functions.php:553
+#: inc/functions.php:597
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:553
+#: inc/functions.php:597
 msgid "Powered by %s."
 msgstr ""
 
-#: inc/functions.php:553
+#: inc/functions.php:597
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: inc/functions.php:634
+#: inc/functions.php:678 inc/related-posts.php:56
 msgid ""
 "<span class=\"date\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:645
+#: inc/functions.php:689
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:645
+#: inc/functions.php:689
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:645
+#: inc/functions.php:689
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:645
+#: inc/functions.php:689
 msgid "Comments Off"
 msgstr ""
 
@@ -974,6 +998,10 @@ msgstr ""
 
 #: inc/header-functions.php:201 inc/header-functions.php:211
 msgid "You are here: "
+msgstr ""
+
+#: inc/related-posts.php:6
+msgid "You May Also Like"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:327
@@ -1538,12 +1566,12 @@ msgstr ""
 msgid "Page Builder Template"
 msgstr ""
 
-#: inc/functions.php:458 navigation.php:39
+#: inc/functions.php:502 navigation.php:39
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:459 navigation.php:40
+#: inc/functions.php:503 navigation.php:40
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""
