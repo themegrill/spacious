@@ -15,20 +15,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Setup demo importer packages.
  *
+ * @deprecated 1.5.0
+ *
  * @param  array $packages
  *
  * @return array
  */
 function spacious_demo_importer_packages( $packages ) {
 	$new_packages = array(
-		'spacious-free' => array(
+		'spacious-free'         => array(
 			'name'    => __( 'Spacious', 'spacious' ),
 			'preview' => 'http://demo.themegrill.com/spacious/',
 		),
-		'spacious-blog' => array(
+		'spacious-blog'         => array(
 			'name'    => __( 'Spacious Blog', 'spacious' ),
 			'preview' => 'http://demo.themegrill.com/spacious-blog/',
 		),
+		'spacious-pro'          => array(
+			'name'     => __( 'Spacious Pro', 'spacious' ),
+			'preview'  => 'http://demo.themegrill.com/spacious-pro/',
+			'pro_link' => 'https://themegrill.com/themes/spacious/',
+		),
+		'spacious-pro-business' => array(
+			'name'     => __( 'Spacious Pro Business', 'spacious' ),
+			'preview'  => 'http://demo.themegrill.com/spacious-pro-business/',
+			'pro_link' => 'https://themegrill.com/themes/spacious/',
+		),
+
 	);
 
 	return array_merge( $new_packages, $packages );

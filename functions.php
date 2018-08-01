@@ -3,13 +3,14 @@
  * Spacious functions related to defining constants, adding files and WordPress core functionality.
  *
  * Defining some constants, loading all the required files and Adding some core functionality.
- * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
- * @uses register_nav_menu() To add support for navigation menu.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @package ThemeGrill
+ * @uses       add_theme_support() To add support for post thumbnails and automatic feed links.
+ * @uses       register_nav_menu() To add support for navigation menu.
+ * @uses       set_post_thumbnail_size() To set a custom post thumbnail size.
+ *
+ * @package    ThemeGrill
  * @subpackage Spacious
- * @since Spacious 1.0
+ * @since      Spacious 1.0
  */
 
 /**
@@ -101,7 +102,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		// Registering navigation menus.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary Menu', 'spacious' ),
-			'footer'  => esc_html__( 'Footer Menu', 'spacious' )
+			'footer'  => esc_html__( 'Footer Menu', 'spacious' ),
 		) );
 
 		// Cropping the images to different sizes to be used in the theme
@@ -112,7 +113,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 
 		// Setup the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'spacious_custom_background_args', array(
-			'default-color' => 'eaeaea'
+			'default-color' => 'eaeaea',
 		) ) );
 
 		// Adding excerpt option box for pages as well
@@ -137,7 +138,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		$starter_content = array(
 			'widgets'     => array(
 				// Add the search widget to the header sidebar.
-				'spacious_header_sidebar'       => array(
+				'spacious_header_sidebar'                                  => array(
 					'header_search' => array(
 						'search',
 						array(
@@ -147,23 +148,23 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widgets to the contact sidebar.
-				'spacious_contact_page_sidebar' => array(
+				'spacious_contact_page_sidebar'                            => array(
 					'text_business_info',
 					'text_about',
 				),
 
 				// Add text widget and cta widget in the Business Top sidebar.
-				'spacious_business_page_top_section_sidebar' => array(
+				'spacious_business_page_top_section_sidebar'               => array(
 					'text_top_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Top Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Top Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-										'<ul>
+							           '<ul>
 											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-					                    </ul>'
+					                    </ul>',
 						),
 					),
 					'call_to_action'        => array(
@@ -178,12 +179,12 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widget and featured single page widget in the Business Middle Left Sidebar.
-				'spacious_business_page_middle_section_left_half_sidebar' => array(
+				'spacious_business_page_middle_section_left_half_sidebar'  => array(
 					'text_middle_left_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Middle Left Sidebar', 'spacious' ),
-							'text'  => esc_html__( 'Shows widgets on Business Page Template Middle Section Left Half.', 'spacious' ) . ' ' . esc_html__( 'Suitable widget: TG: Testimonial, TG: Featured Single Page', 'spacious' )
+							'text'  => esc_html__( 'Shows widgets on Business Page Template Middle Section Left Half.', 'spacious' ) . ' ' . esc_html__( 'Suitable widget: TG: Testimonial, TG: Featured Single Page', 'spacious' ),
 						),
 					),
 					'featured_single_page'          => array(
@@ -200,7 +201,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 						'text',
 						array(
 							'title' => esc_html__( 'Business Middle Right Sidebar', 'spacious' ),
-							'text'  => esc_html__( 'Shows widgets on Business Page Template Middle Section Right Half.', 'spacious' ) . ' ' . esc_html__( 'Suitable widget: TG: Testimonial, TG: Featured Single Page', 'spacious' )
+							'text'  => esc_html__( 'Shows widgets on Business Page Template Middle Section Right Half.', 'spacious' ) . ' ' . esc_html__( 'Suitable widget: TG: Testimonial, TG: Featured Single Page', 'spacious' ),
 						),
 					),
 					'testimonial'                    => array(
@@ -211,38 +212,38 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 							'name'   => 'Mr. Bipin Singh',
 							'byline' => 'CEO',
 						),
-					)
+					),
 				),
 
 				// Add text widget in the Business Bottom Sidebar.
-				'spacious_business_page_bottom_section_sidebar' => array(
+				'spacious_business_page_bottom_section_sidebar'            => array(
 					'text_bottom_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Bottom Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Bottom Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-										'<ul>
+							           '<ul>
 											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
-										</ul>'
-											),
+										</ul>',
+						),
 					),
 				),
 
 				// Add the text widget in the footer siderbar 1.
-				'spacious_footer_sidebar_one'   => array(
+				'spacious_footer_sidebar_one'                              => array(
 					'text_business_info',
 				),
 
 				// Add search widget and text widget in the footer siderbar 2.
-				'spacious_footer_sidebar_two'   => array(
+				'spacious_footer_sidebar_two'                              => array(
 					'search',
-					'text_about'
+					'text_about',
 				),
 
 				// Add the text widget in the footer siderbar 3.
-				'spacious_footer_sidebar_three' => array(
+				'spacious_footer_sidebar_three'                            => array(
 					'text_custom_menu' => array(
 						'text',
 						array(
@@ -253,13 +254,13 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 											<li><a href="https://www.youtube.com/watch?v=rhiybsv3vUU">' . esc_html__( 'Import Demo', 'spacious' ) . '</a></li>
 											<li><a href="https://docs.themegrill.com/spacious/">' . esc_html__( 'Documentation', 'spacious' ) . '</a></li>
 											<li><a href="https://themegrill.com/support-forum/forum/spacious-free/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
-										</ul>'
+										</ul>',
 						),
 					),
 				),
 
 				// Add the featured single page widget in the footer siderbar 4.
-				'spacious_footer_sidebar_four'  => array(
+				'spacious_footer_sidebar_four'                             => array(
 					'featured_single_page' => array(
 						'spacious_featured_single_page_widget',
 						array(
@@ -293,7 +294,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 			'options'     => array(
 				'show_on_front'  => 'page',
 				'page_on_front'  => '{{home}}',
-				'page_for_posts' => '{{blog}}'
+				'page_for_posts' => '{{blog}}',
 			),
 
 			// Setting theme mods of slider settings.
@@ -400,11 +401,9 @@ require_once SPACIOUS_WIDGETS_DIR . '/widgets.php';
 include_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
- * Load Demo Importer Configs.
+ * Load Spacious Demo Importer compatibility file.
  */
-if ( class_exists( 'TG_Demo_Importer' ) ) {
-	require_once get_template_directory() . '/inc/demo-config.php';
-}
+require get_template_directory() . '/inc/demo-importer/class-demo-importer.php';
 
 /**
  * Assign the Spacious version to a variable.
