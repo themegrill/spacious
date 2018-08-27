@@ -59,17 +59,19 @@ function spacious_featured_image_slider() {
 			<div class="slider-cycle">
 				<?php
 				for( $i = 1; $i <= 5; $i++ ) {
-					$spacious_slider_title = spacious_options( 'spacious_slider_title'.$i , '' );
-					$spacious_slider_text = spacious_options( 'spacious_slider_text'.$i , '' );
-					$spacious_slider_image = spacious_options( 'spacious_slider_image'.$i , '' );
-					$spacious_slider_button_text = spacious_options( 'spacious_slider_button_text'.$i , __( 'Read more', 'spacious' ) );
-					$spacious_slider_link = spacious_options( 'spacious_slider_link'.$i , '#' );
+					$spacious_slider_title       = spacious_options( 'spacious_slider_title' . $i, '' );
+					$spacious_slider_text        = spacious_options( 'spacious_slider_text' . $i, '' );
+					$spacious_slider_image       = spacious_options( 'spacious_slider_image' . $i, '' );
+					$spacious_slider_button_text = spacious_options( 'spacious_slider_button_text' . $i, __( 'Read more', 'spacious' ) );
+					$spacious_slider_link        = spacious_options( 'spacious_slider_link' . $i, '#' );
+					$attachment_post_id          = attachment_url_to_postid( $spacious_slider_image );
+					$image_attributes             = wp_get_attachment_image_src( $attachment_post_id, 'full');
 					if( !empty( $spacious_header_title ) || !empty( $spacious_slider_text ) || !empty( $spacious_slider_image ) ) {
 						if ( $i == 1 ) { $classes = "slides displayblock"; } else { $classes = "slides displaynone"; }
 						?>
 						<div class="<?php echo $classes; ?>">
 							<figure>
-								<img alt="<?php echo esc_attr( $spacious_slider_title ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
+								<img width="<?php echo esc_attr($image_attributes[1]); ?>" height="<?php echo esc_attr($image_attributes[2]); ?>" alt="<?php echo esc_attr( $spacious_slider_title ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
 							</figure>
 							<div class="entry-container">
 								<?php if( !empty( $spacious_slider_title ) || !empty( $spacious_slider_text ) ) { ?>
