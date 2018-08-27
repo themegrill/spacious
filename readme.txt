@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Tweak - Width and height attribute for slider
+
 = Version 1.5.3 - 2018-06-19 =
 * Fix     - Submenu location while fixing out of viewport.
 * Feature - Related posts option.
