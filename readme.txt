@@ -48,6 +48,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 = TBD =
 * Tweak - Width and height attribute for slider
+* Update - Screenshot updated as per new wordpress.org guideline
 
 = Version 1.5.3 - 2018-06-19 =
 * Fix     - Submenu location while fixing out of viewport.
