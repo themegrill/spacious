@@ -63,7 +63,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 				update_option( 'spacious_admin_notice_welcome', 1 );
 
 				// No option? Let run the notice wizard again..
-			} else if ( ! get_option( 'spacious_admin_notice_welcome' ) ) {
+			} elseif ( ! get_option( 'spacious_admin_notice_welcome' ) ) {
 				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 			}
 		}
@@ -135,7 +135,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 
 				<a href="<?php echo esc_url( 'https://demo.themegrill.com/spacious/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'spacious' ); ?></a>
 
-				<a href="<?php echo esc_url( 'https://themegrill.com/themes/spacious-pro/' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'spacious' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themegrill.com/themes/spacious/?utm_source=spacious-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-primary docs" target="_blank"><?php esc_html_e( 'View PRO version', 'spacious' ); ?></a>
 
 				<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/spacious/reviews?rate=5#new-post' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'Rate this theme', 'spacious' ); ?></a>
 			</p>
@@ -236,7 +236,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 							<h3><?php esc_html_e( 'Need more features?', 'spacious' ); ?></h3>
 							<p><?php esc_html_e( 'Upgrade to PRO version for more exciting features.', 'spacious' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/themes/spacious-pro/' ); ?>" class="button button-secondary"><?php esc_html_e( 'View Pro', 'spacious' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/themes/spacious/?utm_source=spacious-about&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'View Pro', 'spacious' ); ?></a>
 							</p>
 						</div>
 
