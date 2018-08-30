@@ -220,7 +220,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 							<h3><?php esc_html_e( 'Documentation', 'spacious' ); ?></h3>
 							<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'spacious' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/theme-instruction/spacious/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Documentation', 'spacious' ); ?></a>
+								<a href="<?php echo esc_url( 'https://docs.themegrill.com/spacious/?utm_source=spacious-about&utm_medium=documentation-link&utm_campaign=documentation' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Documentation', 'spacious' ); ?></a>
 							</p>
 						</div>
 
