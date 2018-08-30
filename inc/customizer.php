@@ -928,14 +928,21 @@ add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_cust
 function spacious_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
-		li#accordion-section-spacious_important_links h3.accordion-section-title, li#accordion-section-spacious_important_links h3.accordion-section-title:focus {
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title, li#accordion-section-spacious_upsell_section h3.accordion-section-title:focus {
 			background-color: #0FBE7C !important;
+			border-left-color: #04a267;
 			color: #fff !important;
 		}
 
-		li#accordion-section-spacious_important_links h3.accordion-section-title:hover {
-			background-color: #0FBE7C !important;
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title a {
 			color: #fff !important;
+			display: block;
+			text-decoration: none;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title:hover {
+			background-color: #09ad6f !important;
+			border-left-color: #04a267 !important;
 		}
 
 		li#accordion-section-spacious_important_links h3.accordion-section-title:after {
