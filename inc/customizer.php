@@ -934,6 +934,21 @@ function spacious_customizer_custom_scripts() { ?>
 			color: #fff !important;
 		}
 
+		#accordion-section-spacious_upsell_section h3 a:after {
+			content: '\f345';
+			color: #fff;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 1;
+			font: 400 20px/1 dashicons;
+			speak: none;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-decoration: none!important;
+		}
+
 		li#accordion-section-spacious_upsell_section h3.accordion-section-title a {
 			color: #fff !important;
 			display: block;
