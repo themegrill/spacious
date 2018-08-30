@@ -928,7 +928,7 @@ add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_cust
 function spacious_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
-		li#accordion-section-spacious_upsell_section h3.accordion-section-title, li#accordion-section-spacious_upsell_section h3.accordion-section-title:focus {
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title {
 			background-color: #0FBE7C !important;
 			border-left-color: #04a267;
 			color: #fff !important;
@@ -938,6 +938,10 @@ function spacious_customizer_custom_scripts() { ?>
 			color: #fff !important;
 			display: block;
 			text-decoration: none;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title a:focus {
+			box-shadow: none;
 		}
 
 		li#accordion-section-spacious_upsell_section h3.accordion-section-title:hover {
