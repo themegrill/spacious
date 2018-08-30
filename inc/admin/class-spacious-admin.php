@@ -228,7 +228,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 							<h3><?php esc_html_e( 'Got theme support question?', 'spacious' ); ?></h3>
 							<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'spacious' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'spacious' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/?utm_source=spacious-about&utm_medium=support-forum-link&utm_campaign=support-forum' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Support Forum', 'spacious' ); ?></a>
 							</p>
 						</div>
 
@@ -244,7 +244,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 							<h3><?php esc_html_e( 'Got sales related question?', 'spacious' ); ?></h3>
 							<p><?php esc_html_e( 'Please send it via our sales contact page.', 'spacious' ) ?></p>
 							<p>
-								<a href="<?php echo esc_url( 'https://themegrill.com/contact/' ); ?>" class="button button-secondary"><?php esc_html_e( 'Contact Page', 'spacious' ); ?></a>
+								<a href="<?php echo esc_url( 'https://themegrill.com/contact/?utm_source=spacious-about&utm_medium=contact-page-link&utm_campaign=contact-page' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Contact Page', 'spacious' ); ?></a>
 							</p>
 						</div>
 
@@ -546,7 +546,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 						<td></td>
 						<td></td>
 						<td class="btn-wrapper">
-							<a href="<?php echo esc_url( apply_filters( 'spacious_pro_theme_url', 'https://themegrill.com/themes/spacious-pro/' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'spacious' ); ?></a>
+							<a href="<?php echo esc_url( apply_filters( 'spacious_pro_theme_url', 'https://themegrill.com/themes/spacious/?utm_source=spacious-free-vs-pro-table&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro' ) ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Pro', 'spacious' ); ?></a>
 						</td>
 					</tr>
 					</tbody>
