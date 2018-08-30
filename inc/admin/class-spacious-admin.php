@@ -131,7 +131,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 			</div>
 
 			<p class="spacious-actions">
-				<a href="<?php echo esc_url( 'https://themegrill.com/themes/spacious/' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'spacious' ); ?></a>
+				<a href="<?php echo esc_url( 'https://themegrill.com/themes/spacious/?utm_source=spacious-about&utm_medium=theme-info-link&utm_campaign=theme-info' ); ?>" class="button button-secondary" target="_blank"><?php esc_html_e( 'Theme Info', 'spacious' ); ?></a>
 
 				<a href="<?php echo esc_url( 'https://demo.themegrill.com/spacious/' ); ?>" class="button button-secondary docs" target="_blank"><?php esc_html_e( 'View Demo', 'spacious' ); ?></a>
 
