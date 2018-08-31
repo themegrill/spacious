@@ -28,65 +28,55 @@ function spacious_customize_register( $wp_customize ) {
 		) );
 	}
 
-	// Theme important links started
-	class Spacious_Important_Links extends WP_Customize_Control {
+	/**
+	 * Class to include upsell link campaign for theme.
+	 *
+	 * Class SPACIOUS_Upsell_Section
+	 */
+	class SPACIOUS_Upsell_Section extends WP_Customize_Section {
+		public $type = 'spacious-upsell-section';
+		public $url  = '';
+		public $id   = '';
 
-		public $type = "spacious-important-links";
+		/**
+		 * Gather the parameters passed to client JavaScript via JSON.
+		 *
+		 * @return array The array to be exported to the client as JSON.
+		 */
+		public function json() {
+			$json        = parent::json();
+			$json['url'] = esc_url( $this->url );
+			$json['id']  = $this->id;
 
-		public function render_content() {
-			// Add Theme instruction, Support Forum, Demo Link, Rating Link
-			$important_links = array(
-				'view-pro'      => array(
-					'link' => esc_url( 'https://themegrill.com/themes/spacious-pro/' ),
-					'text' => esc_html__( 'View Pro', 'spacious' ),
-				),
-				'theme-info'    => array(
-					'link' => esc_url( 'https://themegrill.com/themes/spacious/' ),
-					'text' => esc_html__( 'Theme Info', 'spacious' ),
-				),
-				'support'       => array(
-					'link' => esc_url( 'https://themegrill.com/support-forum/' ),
-					'text' => esc_html__( 'Support Forum', 'spacious' ),
-				),
-				'documentation' => array(
-					'link' => esc_url( 'https://docs.themegrill.com/spacious/' ),
-					'text' => esc_html__( 'Documentation', 'spacious' ),
-				),
-				'demo'          => array(
-					'link' => esc_url( 'https://demo.themegrill.com/spacious/' ),
-					'text' => esc_html__( 'View Demo', 'spacious' ),
-				),
-				'rating'        => array(
-					'link' => esc_url( 'http://wordpress.org/support/view/theme-reviews/spacious?filter=5' ),
-					'text' => esc_html__( 'Rate this theme', 'spacious' ),
-				),
-			);
+			return $json;
+		}
 
-			foreach ( $important_links as $important_link ) {
-				echo '<p><a target="_blank" href="' . $important_link['link'] . '" >' . esc_attr( $important_link['text'] ) . ' </a></p>';
-			}
+		/**
+		 * An Underscore (JS) template for rendering this section.
+		 */
+		protected function render_template() {
+			?>
+			<li id="accordion-section-{{ data.id }}" class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
+			</li>
+			<?php
 		}
 	}
 
-	$wp_customize->add_section( 'spacious_important_links', array(
-		'priority' => 1,
-		'title'    => __( 'Spacious Important Links', 'spacious' ),
-	) );
+	// Register `SPACIOUS_Upsell_Section` type section.
+	$wp_customize->register_section_type( 'SPACIOUS_Upsell_Section' );
 
-	/**
-	 * This setting has the dummy Sanitization function as it contains no value to be sanitized
-	 */
-	$wp_customize->add_setting( 'spacious_important_links', array(
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_false_sanitize',
-	) );
-
-	$wp_customize->add_control( new Spacious_Important_Links( $wp_customize, 'important_links', array(
-		'section'  => 'spacious_important_links',
-		'settings' => 'spacious_important_links',
-	) ) );
-	// Theme Important Links Ended
-
+	// Add `SPACIOUS_Upsell_Section` to display pro link.
+	$wp_customize->add_section(
+		new SPACIOUS_Upsell_Section( $wp_customize, 'spacious_upsell_section',
+			array(
+				'title'      => esc_html__( 'View PRO version', 'spacious' ),
+				'url'        => 'https://themegrill.com/themes/spacious/?utm_source=spacious-customizer&utm_medium=view-pro-link&utm_campaign=view-pro#free-vs-pro',
+				'capability' => 'edit_theme_options',
+				'priority'   => 1,
+			)
+		)
+	);
 	/*
 	 * Assigning the theme name
 	 */
@@ -327,7 +317,7 @@ function spacious_customize_register( $wp_customize ) {
 							       value="<?php echo esc_attr( $value ); ?>"
 							       name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
 							checked( $this->value(), $value ); ?> />
-							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>'/>
+							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>' />
 						</label>
 					</li>
 				<?php
@@ -938,14 +928,40 @@ add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_cust
 function spacious_customizer_custom_scripts() { ?>
 	<style>
 		/* Theme Instructions Panel CSS */
-		li#accordion-section-spacious_important_links h3.accordion-section-title, li#accordion-section-spacious_important_links h3.accordion-section-title:focus {
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title {
 			background-color: #0FBE7C !important;
+			border-left-color: #04a267;
 			color: #fff !important;
 		}
 
-		li#accordion-section-spacious_important_links h3.accordion-section-title:hover {
-			background-color: #0FBE7C !important;
+		#accordion-section-spacious_upsell_section h3 a:after {
+			content: '\f345';
+			color: #fff;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 1;
+			font: 400 20px/1 dashicons;
+			speak: none;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-decoration: none!important;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title a {
 			color: #fff !important;
+			display: block;
+			text-decoration: none;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title a:focus {
+			box-shadow: none;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title:hover {
+			background-color: #09ad6f !important;
+			border-left-color: #04a267 !important;
 		}
 
 		li#accordion-section-spacious_important_links h3.accordion-section-title:after {
@@ -976,6 +992,23 @@ function spacious_customizer_custom_scripts() { ?>
 			background: #2380BA;
 		}
 	</style>
+
+	<script>
+		( function ( $, api ) {
+			api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
+
+				// No events for this type of section.
+				attachEvents : function () {
+				},
+
+				// Always make the section active.
+				isContextuallyActive : function () {
+					return true;
+				}
+			} );
+		} )( jQuery, wp.customize );
+
+	</script>
 	<?php
 }
 

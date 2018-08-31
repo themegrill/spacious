@@ -2,16 +2,21 @@
 /**
  * Functions for configuring demo importer.
  *
- * @author   ThemeGrill
- * @category Admin
- * @package  Importer/Functions
- * @version  1.0.0
+ * @package Importer/Functions
+ * @version 1.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
+/**
+ * Setup demo importer config.
+ *
+ * @deprecated 1.5.0
+ *
+ * @param  array $demo_config Demo config.
+ *
+ * @return array
+ */
 /**
  * Setup demo importer packages.
  *
