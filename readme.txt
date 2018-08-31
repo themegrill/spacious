@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.5.4 - 2018-08-31 =
 * Update - Upsell link
 * Tweak - Width and height attribute for slider
 * Update - Screenshot updated as per new wordpress.org guideline
