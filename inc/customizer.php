@@ -131,7 +131,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_control( $spacious_themename . '[spacious_show_header_logo_text]', array(
 		'type'    => 'radio',
 		'label'   => __( 'Choose the option that you want.', 'spacious' ),
-		'section' => 'spacious_show_option',
+		'section' => 'title_tagline',
 		'choices' => array(
 			'logo_only' => __( 'Header Logo Only', 'spacious' ),
 			'text_only' => __( 'Header Text Only', 'spacious' ),
