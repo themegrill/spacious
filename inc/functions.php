@@ -844,3 +844,35 @@ function spacious_site_logo_migrate() {
 	}
 }
 add_action( 'after_setup_theme', 'spacious_site_logo_migrate' );
+
+/**
+ * Transfer header designs options to header display type.
+ */
+function spacious_site_header_migrate() {
+
+	if ( get_option( 'spacious_site_header_migrate' ) ) {
+		return;
+	}
+
+	$spacious_header_design = spacious_options( 'spacious_header_design', 'style_one' );
+
+	// Get theme options.
+	$theme_options = get_option( 'spacious' );
+
+	if ( 'style_two' === $spacious_header_design ) {
+
+		// Set header display type to 4
+		$theme_options['spacious_header_display_type'] = 'four';
+
+	}
+
+	// Remove header designs from database.
+	unset( $theme_options['spacious_header_design'] );
+
+	// Finally, update spacious theme options.
+	update_option( 'spacious', $theme_options );
+
+	update_option( 'spacious_site_header_migrate', 1 );
+
+}
+add_action( 'after_setup_theme', 'spacious_site_header_migrate' );

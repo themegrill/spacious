@@ -35,8 +35,8 @@ function spacious_customize_register( $wp_customize ) {
 	 */
 	class SPACIOUS_Upsell_Section extends WP_Customize_Section {
 		public $type = 'spacious-upsell-section';
-		public $url  = '';
-		public $id   = '';
+		public $url = '';
+		public $id = '';
 
 		/**
 		 * Gather the parameters passed to client JavaScript via JSON.
@@ -56,7 +56,8 @@ function spacious_customize_register( $wp_customize ) {
 		 */
 		protected function render_template() {
 			?>
-			<li id="accordion-section-{{ data.id }}" class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+			<li id="accordion-section-{{ data.id }}"
+				class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
 				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
 			</li>
 			<?php
@@ -140,6 +141,30 @@ function spacious_customize_register( $wp_customize ) {
 		),
 	) );
 
+	// Header display type option
+	$wp_customize->add_section( 'spacious_header_display_type_option', array(
+		'priority' => 2,
+		'title'    => __( 'Header Display Type', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( 'spacious[spacious_header_display_type]', array(
+		'default'           => 'one',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_radio_select_sanitize',
+	) );
+
+	$wp_customize->add_control( 'spacious[spacious_header_display_type]', array(
+		'type'    => 'radio',
+		'label'   => esc_html__( 'Choose the header display type that you want.', 'spacious' ),
+		'section' => 'spacious_header_display_type_option',
+		'choices' => array(
+			'one'  => esc_html__( 'Type 1 (Default): Header text & logo on left, menu on the right', 'spacious' ),
+			'four' => esc_html__( 'Type 4: Menu on bottom', 'spacious' ),
+		),
+	) );
+
 	// Header image position option
 	$wp_customize->add_section( 'spacious_header_image_position_section', array(
 		'priority' => 3,
@@ -182,28 +207,6 @@ function spacious_customize_register( $wp_customize ) {
 		'type'    => 'checkbox',
 		'label'   => __( 'Switch to new responsive menu.', 'spacious' ),
 		'section' => 'spacious_new_menu',
-	) );
-
-	// Header designs
-	$wp_customize->add_section( 'spacious_header_design_options', array(
-		'priority' => 2,
-		'title'    => __( 'Header Designs', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_design]', array(
-		'default'           => 'style_one',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_select_sanitize',
-	) );
-	$wp_customize->add_control( $spacious_themename . '[spacious_header_design]', array(
-		'type'    => 'radio',
-		'label'   => esc_html__( 'Choose a header design.', 'spacious' ),
-		'section' => 'spacious_header_design_options',
-		'choices' => array(
-			'style_one' => esc_html__( 'Style 1', 'spacious' ),
-			'style_two' => esc_html__( 'Style 2', 'spacious' ),
-		),
 	) );
 
 	// End of Header Options
@@ -314,10 +317,10 @@ function spacious_customize_register( $wp_customize ) {
 					<li style="display: inline;">
 						<label>
 							<input <?php $this->link(); ?>style='display:none' type="radio"
-							       value="<?php echo esc_attr( $value ); ?>"
-							       name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
+								   value="<?php echo esc_attr( $value ); ?>"
+								   name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
 							checked( $this->value(), $value ); ?> />
-							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>' />
+							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>'/>
 						</label>
 					</li>
 				<?php
@@ -325,14 +328,14 @@ function spacious_customize_register( $wp_customize ) {
 				?>
 			</ul>
 			<script type="text/javascript">
-				jQuery( document ).ready( function ( $ ) {
-					$( '.controls#spacious-img-container li img' ).click( function () {
-						$( '.controls#spacious-img-container li' ).each( function () {
-							$( this ).find( 'img' ).removeClass( 'spacious-radio-img-selected' );
-						} );
-						$( this ).addClass( 'spacious-radio-img-selected' );
-					} );
-				} );
+							jQuery( document ).ready( function( $ ) {
+								$( '.controls#spacious-img-container li img' ).click( function() {
+									$( '.controls#spacious-img-container li' ).each( function() {
+										$( this ).find( 'img' ).removeClass( 'spacious-radio-img-selected' );
+									} );
+									$( this ).addClass( 'spacious-radio-img-selected' );
+								} );
+							} );
 			</script>
 			<?php
 		}
@@ -503,7 +506,7 @@ function spacious_customize_register( $wp_customize ) {
 				<label>
 					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 					<textarea rows="5"
-					          style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+							  style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
 				</label>
 				<?php
 			}
@@ -696,7 +699,7 @@ function spacious_customize_register( $wp_customize ) {
 			<label>
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<textarea rows="5"
-				          style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+						  style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
 			</label>
 			<?php
 		}
@@ -759,7 +762,7 @@ function spacious_customize_register( $wp_customize ) {
 		'settings' => $spacious_themename . '[spacious_blog_slider]',
 	) );
 
-	for ( $i = 1; $i <= 5; $i ++ ) {
+	for ( $i = 1; $i <= 5; $i++ ) {
 		// adding slider section
 		$wp_customize->add_section( 'spacious_slider_number_section' . $i, array(
 			'priority' => 10,
@@ -946,7 +949,7 @@ function spacious_customizer_custom_scripts() { ?>
 			display: block;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			text-decoration: none!important;
+			text-decoration: none !important;
 		}
 
 		li#accordion-section-spacious_upsell_section h3.accordion-section-title a {
@@ -994,19 +997,19 @@ function spacious_customizer_custom_scripts() { ?>
 	</style>
 
 	<script>
-		( function ( $, api ) {
-			api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
+			( function( $, api ) {
+				api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
 
-				// No events for this type of section.
-				attachEvents : function () {
-				},
+					// No events for this type of section.
+					attachEvents: function() {
+					},
 
-				// Always make the section active.
-				isContextuallyActive : function () {
-					return true;
-				}
-			} );
-		} )( jQuery, wp.customize );
+					// Always make the section active.
+					isContextuallyActive: function() {
+						return true;
+					}
+				} );
+			} )( jQuery, wp.customize );
 
 	</script>
 	<?php
