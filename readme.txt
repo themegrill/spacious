@@ -46,6 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Remove - Backward compatible for header logo
+* Remove - Backward compatible for favicon
+
 = Version 1.5.4 - 2018-08-31 =
 * Update - Upsell link
 * Tweak - Width and height attribute for slider

@@ -5,9 +5,9 @@
  * This file contains all the functions and it's defination that particularly can't be
  * in other files.
  *
- * @package ThemeGrill
+ * @package    ThemeGrill
  * @subpackage Spacious
- * @since Spacious 1.0
+ * @since      Spacious 1.0
  */
 
 /****************************************************************************************/
@@ -80,6 +80,7 @@ function spacious_scripts_styles_method() {
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
 	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
 }
+
 add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 
 /****************************************************************************************/
@@ -89,7 +90,7 @@ add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
  */
 if ( ! function_exists( 'spacious_related_posts_function' ) ) {
 
-	function spacious_related_posts_function(){
+	function spacious_related_posts_function() {
 		wp_reset_postdata();
 		global $post;
 
@@ -336,26 +337,6 @@ if ( ! function_exists( 'spacious_sidebar_select' ) ) :
 	}
 endif;
 
-/****************************************************************************************/
-
-/**
- * Fav icon for the site
- */
-function spacious_favicon() {
-	if ( spacious_options( 'spacious_activate_favicon', '0' ) == '1' ) {
-		$spacious_favicon        = spacious_options( 'spacious_favicon', '' );
-		$spacious_favicon_output = '';
-
-		if ( ! function_exists( 'has_site_icon' ) || ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
-			$spacious_favicon_output .= '<link rel="shortcut icon" href="' . esc_url( $spacious_favicon ) . '" type="image/x-icon" />';
-		}
-
-		echo $spacious_favicon_output;
-	}
-}
-add_action( 'admin_head', 'spacious_favicon' );
-add_action( 'wp_head', 'spacious_favicon' );
-
 /**************************************************************************************/
 
 /**
@@ -466,6 +447,7 @@ function spacious_custom_css() {
 		<?php
 	}
 }
+
 add_action( 'wp_head', 'spacious_custom_css', 100 );
 
 /**************************************************************************************/
@@ -570,7 +552,7 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 							'reply_text' => __( 'Reply', 'spacious' ),
 							'after'      => '',
 							'depth'      => $depth,
-							'max_depth'  => $args['max_depth']
+							'max_depth'  => $args['max_depth'],
 						) ) ); ?>
 					</section><!-- .comment-content -->
 
@@ -647,6 +629,7 @@ function spacious_textarea_sanitization_change() {
 	remove_filter( 'of_sanitize_textarea', 'of_sanitize_textarea' );
 	add_filter( 'of_sanitize_textarea', 'spacious_sanitize_textarea_custom', 10, 2 );
 }
+
 add_action( 'admin_init', 'spacious_textarea_sanitization_change', 100 );
 
 /****************************************************************************************/
@@ -735,45 +718,8 @@ function spacious_woocommerce_support() {
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
+
 add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
-
-/**
- * Function to transfer the favicon added in Customizer Options of theme to Site Icon in Site Identity section
- */
-function spacious_site_icon_migrate() {
-	if ( get_option( 'spacious_site_icon_transfer' ) ) {
-		return;
-	}
-
-	$spacious_favicon = spacious_options( 'spacious_favicon', 0 );
-
-	// Migrate spacious site icon.
-	if ( function_exists( 'has_site_icon' ) && ( ! empty( $spacious_favicon ) && ! has_site_icon() ) ) {
-		// assigning theme name
-		$themename = get_option( 'stylesheet' );
-		$themename = preg_replace( "/\W/", "_", strtolower( $themename ) );
-
-		$theme_options = get_option( $themename );
-		$attachment_id = attachment_url_to_postid( $spacious_favicon );
-
-		// Update site icon transfer options.
-		if ( $theme_options && $attachment_id ) {
-			update_option( 'site_icon', $attachment_id );
-			update_option( 'spacious_site_icon_transfer', 1 );
-
-			// Remove old favicon options.
-			foreach ( $theme_options as $option_key => $option_value ) {
-				if ( in_array( $option_key, array( 'spacious_favicon', 'spacious_activate_favicon' ) ) ) {
-					unset( $theme_options[ $option_key ] );
-				}
-			}
-		}
-
-		// Finally, update spacious theme options.
-		update_option( $themename, $theme_options );
-	}
-}
-add_action( 'after_setup_theme', 'spacious_site_icon_migrate' );
 
 // Displays the site logo
 if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
@@ -781,7 +727,7 @@ if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
 	 * Displays the optional custom logo.
 	 */
 	function spacious_the_custom_logo() {
-		if ( function_exists( 'the_custom_logo' ) && ( spacious_options( 'spacious_header_logo_image', '' ) == '' ) ) {
+		if ( function_exists( 'the_custom_logo' ) ) {
 			the_custom_logo();
 		}
 	}
@@ -814,33 +760,5 @@ function spacious_custom_css_migrate() {
 		}
 	}
 }
+
 add_action( 'after_setup_theme', 'spacious_custom_css_migrate' );
-
-/**
- * Function to transfer the Header Logo added in Customizer Options of theme to Site Logo in Site Identity section
- */
-function spacious_site_logo_migrate() {
-	if ( function_exists( 'the_custom_logo' ) && ! has_custom_logo( $blog_id = 0 ) ) {
-		$logo_url = spacious_options( 'spacious_header_logo_image' );
-
-		if ( $logo_url ) {
-			// assigning theme name
-			$themename = get_option( 'stylesheet' );
-			$themename = preg_replace( "/\W/", "_", strtolower( $themename ) );
-
-			$customizer_site_logo_id = attachment_url_to_postid( $logo_url );
-			set_theme_mod( 'custom_logo', $customizer_site_logo_id );
-
-			// Delete the old Site Logo theme_mod option.
-			$theme_options = get_option( $themename );
-
-			if ( isset( $theme_options['spacious_header_logo_image'] ) ) {
-				unset( $theme_options['spacious_header_logo_image'] );
-			}
-
-			// Finally, update spacious theme options.
-			update_option( $themename, $theme_options );
-		}
-	}
-}
-add_action( 'after_setup_theme', 'spacious_site_logo_migrate' );
