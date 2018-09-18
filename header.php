@@ -37,10 +37,10 @@
 	<?php do_action( 'spacious_before_header' ); ?>
 
 	<?php
-	$spacious_header_design = spacious_options( 'spacious_header_design', 'style_one' );
+	$spacious_header_display_type = spacious_options( 'spacious_header_display_type', 'one' );
 	$header_class = '';
-	if ( $spacious_header_design === 'style_two' ) {
-		$header_class = 'spacious-header-style-two';
+	if ( $spacious_header_display_type === 'four' ) {
+		$header_class = ' spacious-header-display-four';
 	}
 	?>
 
@@ -51,15 +51,15 @@
 		} ?>
 
 		<div id="header-text-nav-container">
-			<?php if ( $spacious_header_design !== 'style_two' ): ?>
+			<?php if ( $spacious_header_display_type !== 'four' ): ?>
 			<div class="inner-wrap">
-			<?php endif; ?>
+				<?php endif; ?>
 
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
-						<?php if ( $spacious_header_design === 'style_two' ): ?>
+						<?php if ( $spacious_header_display_type === 'four' ): ?>
 						<div class="inner-wrap clearfix">
-						<?php endif;
+							<?php endif;
 
 							if ( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'both' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' ) ) { ?>
 								<div id="header-logo-image">
@@ -76,7 +76,7 @@
 									} ?>
 								</div><!-- #header-logo-image -->
 
-							<?php
+								<?php
 							}
 
 							$screen_reader = '';
@@ -105,14 +105,14 @@
 								<?php endif; ?><!-- #site-description -->
 							</div><!-- #header-text -->
 
-							<?php if ( $spacious_header_design === 'style_two' ): ?>
-							</div><!-- .inner-wrap -->
-							<?php endif; ?>
+							<?php if ( $spacious_header_display_type === 'four' ): ?>
+						</div><!-- .inner-wrap -->
+					<?php endif; ?>
 					</div><!-- #header-left-section -->
 					<div id="header-right-section">
-						<?php if ( $spacious_header_design === 'style_two' ): ?>
+						<?php if ( $spacious_header_display_type === 'four' ): ?>
 						<div class="inner-wrap clearfix">
-						<?php endif;
+							<?php endif;
 
 							if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
 								?>
@@ -140,15 +140,15 @@
 								?>
 							</nav>
 
-							<?php if ( $spacious_header_design === 'style_two' ): ?>
-							</div><!-- .inner-wrap -->
-							<?php endif; ?>
+							<?php if ( $spacious_header_display_type === 'four' ): ?>
+						</div><!-- .inner-wrap -->
+					<?php endif; ?>
 					</div><!-- #header-right-section -->
 
 				</div><!-- #header-text-nav-wrap -->
-				<?php if ( $spacious_header_design !== 'style_two' ): ?>
-				</div><!-- .inner-wrap -->
-				<?php endif; ?>
+				<?php if ( $spacious_header_display_type !== 'four' ): ?>
+			</div><!-- .inner-wrap -->
+		<?php endif; ?>
 		</div><!-- #header-text-nav-container -->
 
 		<?php if ( spacious_options( 'spacious_header_image_position', 'above' ) == 'below' ) {
