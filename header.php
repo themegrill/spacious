@@ -4,9 +4,9 @@
  *
  * Displays all of the <head> section and everything up till <div id="main" class="clearfix"> <div class="inner-wrap">
  *
- * @package ThemeGrill
+ * @package    ThemeGrill
  * @subpackage Spacious
- * @since Spacious 1.0
+ * @since      Spacious 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -19,10 +19,10 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11"/>
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php
 	/**
 	 * This hook is important for wordpress plugins and other many things
@@ -38,7 +38,7 @@
 
 	<?php
 	$spacious_header_design = spacious_options( 'spacious_header_design', 'style_one' );
-	$header_class = '';
+	$header_class           = '';
 	if ( $spacious_header_design === 'style_two' ) {
 		$header_class = 'spacious-header-style-two';
 	}
@@ -53,36 +53,29 @@
 		<div id="header-text-nav-container">
 			<?php if ( $spacious_header_design !== 'style_two' ): ?>
 			<div class="inner-wrap">
-			<?php endif; ?>
+				<?php endif; ?>
 
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
 						<?php if ( $spacious_header_design === 'style_two' ): ?>
 						<div class="inner-wrap clearfix">
-						<?php endif;
+							<?php endif;
 
 							if ( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'both' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' ) ) { ?>
 								<div id="header-logo-image">
-									<?php if ( spacious_options( 'spacious_header_logo_image', '' ) != '' ) { ?>
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-										   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-										   rel="home"><img
-													src="<?php echo spacious_options( 'spacious_header_logo_image', '' ); ?>"
-													alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
-									<?php } ?>
 
 									<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
 										spacious_the_custom_logo();
 									} ?>
 								</div><!-- #header-logo-image -->
 
-							<?php
+								<?php
 							}
 
 							$screen_reader = '';
 							if ( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'none' ) ) {
 								$screen_reader = 'screen-reader-text';
-							}?>
+							} ?>
 
 							<div id="header-text" class="<?php echo $screen_reader; ?>">
 								<?php if ( is_front_page() || is_home() ) : ?>
@@ -106,13 +99,13 @@
 							</div><!-- #header-text -->
 
 							<?php if ( $spacious_header_design === 'style_two' ): ?>
-							</div><!-- .inner-wrap -->
-							<?php endif; ?>
+						</div><!-- .inner-wrap -->
+					<?php endif; ?>
 					</div><!-- #header-left-section -->
 					<div id="header-right-section">
 						<?php if ( $spacious_header_design === 'style_two' ): ?>
 						<div class="inner-wrap clearfix">
-						<?php endif;
+							<?php endif;
 
 							if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
 								?>
@@ -132,7 +125,7 @@
 								if ( has_nav_menu( 'primary' ) ) {
 									wp_nav_menu( array(
 										'theme_location'  => 'primary',
-										'container_class' => 'menu-primary-container'
+										'container_class' => 'menu-primary-container',
 									) );
 								} else {
 									wp_page_menu();
@@ -141,14 +134,14 @@
 							</nav>
 
 							<?php if ( $spacious_header_design === 'style_two' ): ?>
-							</div><!-- .inner-wrap -->
-							<?php endif; ?>
+						</div><!-- .inner-wrap -->
+					<?php endif; ?>
 					</div><!-- #header-right-section -->
 
 				</div><!-- #header-text-nav-wrap -->
 				<?php if ( $spacious_header_design !== 'style_two' ): ?>
-				</div><!-- .inner-wrap -->
-				<?php endif; ?>
+			</div><!-- .inner-wrap -->
+		<?php endif; ?>
 		</div><!-- #header-text-nav-container -->
 
 		<?php if ( spacious_options( 'spacious_header_image_position', 'above' ) == 'below' ) {
