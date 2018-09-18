@@ -218,4 +218,22 @@ function spacious_breadcrumb() {
 }
 endif;
 
-?>
+/*	 * ************************************************************************************* */
+if ( ! function_exists( 'spacious_main_nav' ) ) :
+	function spacious_main_nav() { ?>
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<p class="menu-toggle"><?php _e( 'Menu', 'spacious' ); ?></p>
+			<?php
+			if ( has_nav_menu( 'primary' ) ) {
+				wp_nav_menu( array(
+					'theme_location'  => 'primary',
+					'container_class' => 'menu-primary-container'
+				) );
+			} else {
+				wp_page_menu();
+			}
+			?>
+		</nav>
+		<?php
+	}
+endif;
