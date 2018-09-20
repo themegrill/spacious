@@ -9,6 +9,11 @@
 
 function spacious_customize_register( $wp_customize ) {
 
+	// Include control classes.
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
+
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
 
@@ -155,15 +160,16 @@ function spacious_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'spacious_radio_select_sanitize',
 	) );
 
-	$wp_customize->add_control( 'spacious[spacious_header_display_type]', array(
-		'type'    => 'radio',
-		'label'   => esc_html__( 'Choose the header display type that you want.', 'spacious' ),
-		'section' => 'spacious_header_display_type_option',
-		'choices' => array(
-			'one'  => esc_html__( 'Type 1 (Default): Header text & logo on left, menu on the right', 'spacious' ),
-			'four' => esc_html__( 'Type 4: Menu on bottom', 'spacious' ),
+	$wp_customize->add_control( new Spacious_Image_Radio_Control( $wp_customize, 'spacious[spacious_header_display_type]', array(
+		'type'     => 'radio',
+		'label'    => __( 'Choose the header display type that you want.', 'spacious' ),
+		'section'  => 'spacious_header_display_type_option',
+		'settings' => 'spacious[spacious_header_display_type]',
+		'choices'  => array(
+			'one'  => SPACIOUS_ADMIN_IMAGES_URL . '/header-left.png',
+			'four' => SPACIOUS_ADMIN_IMAGES_URL . '/menu-bottom.png',
 		),
-	) );
+	) ) );
 
 	// Header image position option
 	$wp_customize->add_section( 'spacious_header_image_position_section', array(
@@ -274,72 +280,6 @@ function spacious_customize_register( $wp_customize ) {
 		),
 		'section' => 'spacious_site_layout_setting',
 	) );
-
-	class Spacious_Image_Radio_Control extends WP_Customize_Control {
-
-		public function render_content() {
-
-			if ( empty( $this->choices ) ) {
-				return;
-			}
-
-			$name = '_customize-radio-' . $this->id;
-
-			?>
-			<style>
-				#spacious-img-container .spacious-radio-img-img {
-					border: 3px solid #DEDEDE;
-					margin: 0 5px 5px 0;
-					cursor: pointer;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
-
-				#spacious-img-container .spacious-radio-img-selected {
-					border: 3px solid #AAA;
-					border-radius: 3px;
-					-moz-border-radius: 3px;
-					-webkit-border-radius: 3px;
-				}
-
-				input[type=checkbox]:before {
-					content: '';
-					margin: -3px 0 0 -4px;
-				}
-			</style>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<ul class="controls" id='spacious-img-container'>
-				<?php
-				foreach ( $this->choices as $value => $label ) :
-					$class = ( $this->value() == $value ) ? 'spacious-radio-img-selected spacious-radio-img-img' : 'spacious-radio-img-img';
-					?>
-					<li style="display: inline;">
-						<label>
-							<input <?php $this->link(); ?>style='display:none' type="radio"
-								   value="<?php echo esc_attr( $value ); ?>"
-								   name="<?php echo esc_attr( $name ); ?>" <?php $this->link();
-							checked( $this->value(), $value ); ?> />
-							<img src='<?php echo esc_html( $label ); ?>' class='<?php echo $class; ?>'/>
-						</label>
-					</li>
-				<?php
-				endforeach;
-				?>
-			</ul>
-			<script type="text/javascript">
-							jQuery( document ).ready( function( $ ) {
-								$( '.controls#spacious-img-container li img' ).click( function() {
-									$( '.controls#spacious-img-container li' ).each( function() {
-										$( this ).find( 'img' ).removeClass( 'spacious-radio-img-selected' );
-									} );
-									$( this ).addClass( 'spacious-radio-img-selected' );
-								} );
-							} );
-			</script>
-			<?php
-		}
-	}
 
 	// default layout setting
 	$wp_customize->add_section( 'spacious_default_layout_setting', array(
@@ -497,22 +437,6 @@ function spacious_customize_register( $wp_customize ) {
 
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
 		// Custom CSS setting
-		class spacious_Custom_CSS_Control extends WP_Customize_Control {
-
-			public $type = 'custom_css';
-
-			public function render_content() {
-				?>
-				<label>
-					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<textarea rows="5"
-							  style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-				</label>
-				<?php
-			}
-
-		}
-
 		$wp_customize->add_section( 'spacious_custom_css_setting', array(
 			'priority' => 8,
 			'title'    => __( 'Custom CSS', 'spacious' ),
@@ -688,22 +612,6 @@ function spacious_customize_register( $wp_customize ) {
 		'section'  => 'spacious_author_bio_section',
 		'settings' => $spacious_themename . '[spacious_author_bio]',
 	) );
-
-	// Adding Text Area Control For Use In Customizer
-	class Spacious_Text_Area_Control extends WP_Customize_Control {
-
-		public $type = 'text_area';
-
-		public function render_content() {
-			?>
-			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-				<textarea rows="5"
-						  style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
-			</label>
-			<?php
-		}
-	}
 
 	/****************************************Start of the Slider Options****************************************/
 	$wp_customize->add_panel( 'spacious_slider_options', array(
