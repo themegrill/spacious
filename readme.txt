@@ -47,13 +47,16 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
-* Remove - Backward compatible for header logo
-* Remove - Backward compatible for favicon
+* Remove - Backward compatible for header logo.
+* Remove - Backward compatible for favicon.
+* Add    - New style for header display type customizer option.
+* Merged - Header designs customizer option to header display type for easy enhancement in upcoming updates.
+* Remove - Footer designs options.
 
 = Version 1.5.4 - 2018-08-31 =
-* Update - Upsell link
-* Tweak - Width and height attribute for slider
-* Update - Screenshot updated as per new wordpress.org guideline
+* Update - Upsell link.
+* Tweak - Width and height attribute for slider.
+* Update - Screenshot updated as per new wordpress.org guideline.
 
 = Version 1.5.3 - 2018-06-19 =
 * Fix     - Submenu location while fixing out of viewport.
