@@ -359,7 +359,7 @@ function spacious_hex2rgb( $hexstr ) {
  */
 function spacious_darkcolor( $hex, $steps ) {
 	// Steps should be between -255 and 255. Negative = darker, positive = lighter
-	$steps = max( - 255, min( 255, $steps ) );
+	$steps = max( -255, min( 255, $steps ) );
 
 	// Normalize into a six character long hex string
 	$hex = str_replace( '#', '', $hex );
@@ -388,7 +388,7 @@ function spacious_darkcolor( $hex, $steps ) {
 function spacious_custom_css() {
 	$primary_color         = spacious_options( 'spacious_primary_color', '#0FBE7C' );
 	$primary_opacity       = spacious_hex2rgb( $primary_color );
-	$primary_dark          = spacious_darkcolor( $primary_color, - 50 );
+	$primary_dark          = spacious_darkcolor( $primary_color, -50 );
 	$spacious_internal_css = '';
 	if ( $primary_color != '#0FBE7C' ) {
 		$spacious_internal_css = ' blockquote { border-left: 3px solid ' . $primary_color . '; }
@@ -645,7 +645,7 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 			?>
 
 			<span class="by-author author vcard"><a class="url fn n"
-			                                        href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+													href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
 
 			<?php
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -762,3 +762,36 @@ function spacious_custom_css_migrate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_custom_css_migrate' );
+
+/**
+ * Transfer header designs options to header display type.
+ */
+function spacious_site_header_migrate() {
+
+	if ( get_option( 'spacious_site_header_migrate' ) ) {
+		return;
+	}
+
+	$spacious_header_design = spacious_options( 'spacious_header_design', 'style_one' );
+
+	// Get theme options.
+	$theme_options = get_option( 'spacious' );
+
+	if ( 'style_two' === $spacious_header_design ) {
+
+		// Set header display type to 4
+		$theme_options['spacious_header_display_type'] = 'four';
+
+	}
+
+	// Remove header designs from database.
+	unset( $theme_options['spacious_header_design'] );
+
+	// Finally, update spacious theme options.
+	update_option( 'spacious', $theme_options );
+
+	update_option( 'spacious_site_header_migrate', 1 );
+
+}
+
+add_action( 'after_setup_theme', 'spacious_site_header_migrate' );

@@ -2281,11 +2281,6 @@ li.default-menu {
 	margin-right: 10px;
 }
 
-.spacious-header-style-two .main-small-navigation {
-	background-color: #000000;
-	padding-top: 0;
-}
-
 .main-small-navigation {
 	float: none;
 }
@@ -2365,172 +2360,14 @@ li.default-menu {
 	color: #0FBE7C;
 }
 
-/* =HEADER STYLE 2: 
+/* =Header Display Menu Bottom
 ----------------------------------------------- */
-.spacious-header-style-two #header-meta {
-	background-color: #01101B;
-	border-bottom: none transparent;
-}
-
-.spacious-header-style-two .small-info-text p {
-	color: #a1b1bc;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.spacious-header-style-two .small-menu a {
-	color: #a1b1bc;
-	padding: 10px 0 10px 16px;
-	line-height: 26px;
-	height: auto;
-	display: block;
-}
-
-.spacious-header-style-two #header-text-nav-wrap {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.spacious-header-style-two #header-text-nav-container {
-	border-bottom: none transparent;
-}
-
-.spacious-header-style-two #site-title a {
-	color: #fff;
-}
-
-.spacious-header-style-two #site-description {
-	color: #a1b1bc;
-}
-
-.spacious-header-style-two #header-left-section {
-	background-color: #021827;
+.spacious-header-display-four .bottom-menu .main-navigation {
 	float: none;
-	margin-right: 0;
-	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 30px;
 }
 
-.spacious-header-style-two #header-left-section .social-links {
-	float: right;
-	padding-right: 0;
-	margin-top: 20px;
-}
-
-.spacious-header-style-two #header-left-section .social-links ul li a {
-	cursor: pointer;
-}
-
-.spacious-header-style-two #header-left-section .social-links ul li a:before {
-	color: #a1b1bc;
-}
-
-.spacious-header-style-two #header-left-section .social-links ul li a:hover:before {
-	color: #0FBE7C;
-}
-
-.spacious-header-style-two #header-left-section .social-links ul li:last-child {
-	padding-right: 0;
-}
-
-.spacious-header-style-two #header-right-section {
-	background-color: #01101B;
-	float: none;
-	width: 100%;
-}
-
-.spacious-header-style-two #header-right-section .header-action .search-wrapper {
-	padding-top: 17px;
-}
-
-.spacious-header-style-two #header-right-section .header-action .search-wrapper .fa {
-	color: #a1b1bc;
-}
-
-.spacious-header-style-two #header-right-section .header-action .search-wrapper:hover .fa {
-	color: #0FBE7C;
-}
-
-.spacious-header-style-two .main-navigation {
-	float: left;
-	padding-top: 0;
-}
-
-.spacious-header-style-two .main-navigation li {
-	padding: 0;
-}
-
-.spacious-header-style-two .main-navigation li:hover > a, .spacious-header-style-two .main-navigation li.current-menu-ancestor > a, .spacious-header-style-two .main-navigation li.current-menu-item > a {
-	background-color: #fff;
-	color: #444444;
-}
-
-.spacious-header-style-two .main-navigation ul li .sub-toggle {
-	margin-top: 1px;
-	margin-left: 0;
-	right: 7px;
-	color: #a1b1bc;
-}
-
-.spacious-header-style-two .main-navigation ul li ul.sub-menu {
-	visibility: hidden;
-	opacity: 0;
-	position: absolute;
-	left: 0;
-	z-index: 999;
-	padding: 0;
-	background: #fff;
-	width: 200px;
-	-webkit-transition: all 0.35s;
-	transition: all 0.35s;
-	-webkit-transform: translateY(20px);
-	transform: translateY(20px);
-	background-color: #01101B;
-	border: 1px solid #01101B;
-	top: 60px;
-}
-
-.spacious-header-style-two .main-navigation ul li ul.sub-menu li {
-	border-bottom-color: #666666;
-}
-
-.spacious-header-style-two .main-navigation ul li ul.sub-menu li ul {
-	left: 198px;
-	top: -1px;
-}
-
-.spacious-header-style-two .main-navigation ul li ul.sub-menu li:last-child {
-	border-bottom: none transparent;
-}
-
-.spacious-header-style-two .main-navigation ul li ul.sub-menu li a {
-	-webkit-transition: 0.5s ease-in-out;
-	transition: 0.5s ease-in-out;
-	padding: 10px;
-	color: #fff;
-}
-
-.spacious-header-style-two .main-navigation ul li ul.sub-menu li:hover > a {
-	background-color: #ffffff;
-	color: #444444;
-}
-
-.spacious-header-style-two .main-navigation ul li:hover > .sub-menu {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-
-.spacious-header-style-two .main-navigation a {
-	color: #a1b1bc;
-	padding: 20px;
-	height: auto;
-}
-
-.spacious-header-style-two .main-small-navigation {
-	margin-top: 0;
+.spacious-header-display-four .bottom-menu .main-navigation li:first-child {
+	padding-left: 0;
 }
 
 /* =FOOTER WIDGET AREA
@@ -2838,15 +2675,13 @@ li.default-menu {
 	}
 	.main-navigation {
 		float: none;
+		padding-top: 0;
 	}
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
 	.main-navigation ul {
 		display: none;
-	}
-	.spacious-header-style-two .main-navigation {
-		float: none;
 	}
 	#featured-slider .entry-container {
 		max-width: 70%;
@@ -2910,6 +2745,15 @@ li.default-menu {
 		line-height: 30px;
 		margin-left: 0;
 	}
+	.site-header.spacious-header-display-four .bottom-menu {
+		position: relative;
+	}
+	.site-header.spacious-header-display-four .bottom-menu .menu-toggle {
+		position: absolute;
+		z-index: 9999;
+		right: 20px;
+		top: -40px;
+	}
 	.better-responsive-menu #header-right-section {
 		float: right;
 		margin-top: 15px;
@@ -2958,10 +2802,6 @@ li.default-menu {
 		text-align: center;
 		width: 40px;
 	}
-	.better-responsive-menu #site-navigation {
-		float: left;
-		margin-top: 0;
-	}
 	.better-responsive-menu #header-text-nav-wrap {
 		padding: 0;
 	}
@@ -2990,9 +2830,6 @@ li.default-menu {
 		width: 100%;
 		z-index: 9999;
 	}
-	.better-responsive-menu .spacious-header-style-two #header-right-section {
-		margin-top: 0;
-	}
 }
 
 @media screen and (max-width: 767px) {
@@ -3018,6 +2855,11 @@ li.default-menu {
 }
 
 @media screen and (max-width: 600px) {
+	.site-header.spacious-header-display-four .bottom-menu .menu-toggle {
+		position: relative;
+		right: 0;
+		top: 0;
+	}
 	.better-responsive-menu #header-logo-image {
 		display: block;
 		float: none;
@@ -3042,12 +2884,17 @@ li.default-menu {
 	}
 	.better-responsive-menu #site-navigation {
 		float: none;
+		margin-top: 0;
 	}
-	.better-responsive-menu .spacious-header-style-two #header-right-section {
-		padding-top: 0;
+	.better-responsive-menu .site-header.spacious-header-display-four .bottom-menu .menu-toggle {
+		position: absolute;
+		right: auto;
+		top: -45px;
+		left: 15px;
 	}
-	.better-responsive-menu .spacious-header-style-two .main-small-navigation {
-		background-color: transparent;
+	.better-responsive-menu .site-header.spacious-header-display-four #header-left-section,
+	.better-responsive-menu .site-header.spacious-header-display-four #header-right-section {
+		float: none;
 	}
 	.main-navigation,
 	.main-small-navigation {

@@ -19,10 +19,10 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
 	<?php
 	/**
 	 * This hook is important for wordpress plugins and other many things
@@ -37,114 +37,97 @@
 	<?php do_action( 'spacious_before_header' ); ?>
 
 	<?php
-	$spacious_header_design = spacious_options( 'spacious_header_design', 'style_one' );
-	$header_class           = '';
-	if ( $spacious_header_design === 'style_two' ) {
-		$header_class = 'spacious-header-style-two';
+	$spacious_header_display_type = spacious_options( 'spacious_header_display_type', 'one' );
+	$header_class                 = '';
+	if ( $spacious_header_display_type === 'four' ) {
+		$header_class = ' spacious-header-display-four';
 	}
 	?>
 
 	<header id="masthead" class="site-header clearfix <?php echo esc_attr( $header_class ); ?>">
 
-		<?php if ( spacious_options( 'spacious_header_image_position', 'above' ) == 'above' ) {
+		<?php if ( 'above' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
 		} ?>
 
 		<div id="header-text-nav-container">
-			<?php if ( $spacious_header_design !== 'style_two' ): ?>
+
 			<div class="inner-wrap">
-				<?php endif; ?>
 
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
-						<?php if ( $spacious_header_design === 'style_two' ): ?>
-						<div class="inner-wrap clearfix">
+						<?php
+						if ( ( 'both' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
+							<div id="header-logo-image">
+
+								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+									spacious_the_custom_logo();
+								} ?>
+
+							</div><!-- #header-logo-image -->
+
+							<?php
+						}
+
+						$screen_reader = '';
+						if ( ( 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
+							$screen_reader = 'screen-reader-text';
+						} ?>
+
+						<div id="header-text" class="<?php echo $screen_reader; ?>">
+							<?php if ( is_front_page() || is_home() ) : ?>
+								<h1 id="site-title">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+									   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+									   rel="home"><?php bloginfo( 'name' ); ?></a>
+								</h1>
+							<?php else : ?>
+								<h3 id="site-title">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+									   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+									   rel="home"><?php bloginfo( 'name' ); ?></a>
+								</h3>
 							<?php endif;
 
-							if ( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'both' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' ) ) { ?>
-								<div id="header-logo-image">
+							$description = get_bloginfo( 'description', 'display' );
+							if ( $description || is_customize_preview() ) : ?>
+							<p id="site-description"><?php echo $description; ?></p>
+							<?php endif; ?><!-- #site-description -->
+						</div><!-- #header-text -->
 
-									<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
-										spacious_the_custom_logo();
-									} ?>
-								</div><!-- #header-logo-image -->
-
-								<?php
-							}
-
-							$screen_reader = '';
-							if ( ( spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'logo_only' || spacious_options( 'spacious_show_header_logo_text', 'text_only' ) == 'none' ) ) {
-								$screen_reader = 'screen-reader-text';
-							} ?>
-
-							<div id="header-text" class="<?php echo $screen_reader; ?>">
-								<?php if ( is_front_page() || is_home() ) : ?>
-									<h1 id="site-title">
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-										   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-										   rel="home"><?php bloginfo( 'name' ); ?></a>
-									</h1>
-								<?php else : ?>
-									<h3 id="site-title">
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-										   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-										   rel="home"><?php bloginfo( 'name' ); ?></a>
-									</h3>
-								<?php endif;
-
-								$description = get_bloginfo( 'description', 'display' );
-								if ( $description || is_customize_preview() ) : ?>
-								<p id="site-description"><?php echo $description; ?></p>
-								<?php endif; ?><!-- #site-description -->
-							</div><!-- #header-text -->
-
-							<?php if ( $spacious_header_design === 'style_two' ): ?>
-						</div><!-- .inner-wrap -->
-					<?php endif; ?>
 					</div><!-- #header-left-section -->
 					<div id="header-right-section">
-						<?php if ( $spacious_header_design === 'style_two' ): ?>
-						<div class="inner-wrap clearfix">
-							<?php endif;
-
-							if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
-								?>
-								<div id="header-right-sidebar" class="clearfix">
-									<?php
-									// Calling the header sidebar if it exists.
-									if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
-									endif;
-									?>
-								</div>
+						<?php
+						if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
+							?>
+							<div id="header-right-sidebar" class="clearfix">
 								<?php
-							} ?>
-
-							<nav id="site-navigation" class="main-navigation" role="navigation">
-								<p class="menu-toggle"><?php _e( 'Menu', 'spacious' ); ?></p>
-								<?php
-								if ( has_nav_menu( 'primary' ) ) {
-									wp_nav_menu( array(
-										'theme_location'  => 'primary',
-										'container_class' => 'menu-primary-container',
-									) );
-								} else {
-									wp_page_menu();
-								}
+								// Calling the header sidebar if it exists.
+								if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
+								endif;
 								?>
-							</nav>
+							</div>
+							<?php
+						} ?>
 
-							<?php if ( $spacious_header_design === 'style_two' ): ?>
-						</div><!-- .inner-wrap -->
-					<?php endif; ?>
+						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
+							spacious_main_nav();
+						endif; ?>
+
 					</div><!-- #header-right-section -->
 
 				</div><!-- #header-text-nav-wrap -->
-				<?php if ( $spacious_header_design !== 'style_two' ): ?>
 			</div><!-- .inner-wrap -->
-		<?php endif; ?>
+			<?php if ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
+				<div class="bottom-menu clearfix">
+					<div class="inner-wrap">
+						<?php spacious_main_nav(); ?>
+					</div>
+				</div>
+			<?php endif; ?>
 		</div><!-- #header-text-nav-container -->
 
-		<?php if ( spacious_options( 'spacious_header_image_position', 'above' ) == 'below' ) {
+		<?php if ( 'below' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
 		} ?>
 
