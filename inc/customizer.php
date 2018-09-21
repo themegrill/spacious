@@ -201,37 +201,6 @@ function spacious_customize_register( $wp_customize ) {
 
 	// End of Header Options
 
-	/****************************************Start of the Footer Options****************************************/
-
-	$wp_customize->add_panel( 'spacious_footer_options', array(
-		'capabitity' => 'edit_theme_options',
-		'priority'   => 500,
-		'title'      => __( 'Footer', 'spacious' ),
-	) );
-
-	// Footer designs
-	$wp_customize->add_section( 'spacious_footer_design_options', array(
-		'priority' => 5,
-		'title'    => __( 'Footer Designs', 'spacious' ),
-		'panel'    => 'spacious_footer_options',
-	) );
-	$wp_customize->add_setting( $spacious_themename . '[spacious_footer_design]', array(
-		'default'           => 'style_one',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_select_sanitize',
-	) );
-	$wp_customize->add_control( $spacious_themename . '[spacious_footer_design]', array(
-		'type'    => 'radio',
-		'label'   => esc_html__( 'Choose a footer design.', 'spacious' ),
-		'section' => 'spacious_footer_design_options',
-		'choices' => array(
-			'style_one' => esc_html__( 'Style 1', 'spacious' ),
-			'style_two' => esc_html__( 'Style 2', 'spacious' ),
-		),
-	) );
-	// End of Footer Options
-
 	/****************************************Start of the Design Options****************************************/
 	$wp_customize->add_panel( 'spacious_design_options', array(
 		'capabitity' => 'edit_theme_options',

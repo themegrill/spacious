@@ -795,3 +795,34 @@ function spacious_site_header_migrate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_site_header_migrate' );
+
+/**
+ * Remove footer designs options
+ */
+function spacious_site_footer_designs_eliminate() {
+
+	if ( get_option( 'spacious_site_footer_eliminate' ) ) {
+		return;
+	}
+
+	$spacious_footer_design = spacious_options( 'spacious_footer_design', 'style_one' );
+
+	if ( $spacious_footer_design ) {
+
+		// Get theme options.
+		$theme_options = get_option( 'spacious' );
+
+		// Remove footer designs data from db.
+		unset( $theme_options['spacious_footer_design'] );
+
+		// Finally, update spacious theme options.
+		update_option( 'spacious', $theme_options );
+
+		// Set a flag.
+		update_option( 'spacious_site_footer_eliminate', 1 );
+
+	}
+
+}
+
+add_action( 'after_setup_theme', 'spacious_site_footer_designs_eliminate' );
