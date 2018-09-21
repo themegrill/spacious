@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.5.5 - 2018-09-21 =
 * Remove - Backward compatible for header logo.
 * Remove - Backward compatible for favicon.
 * Add    - New style for header display type customizer option.
