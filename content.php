@@ -31,12 +31,18 @@
 			elseif( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' || spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) {
 				$featured = 'featured';
 			}
-			$image = '';
-     		$title_attribute = get_the_title( $post->ID );
-     		$image .= '<figure class="post-featured-image">';
-  			$image .= '<a href="' . get_permalink() . '" title="'.the_title( '', '', false ).'">';
-  			$image .= get_the_post_thumbnail( $post->ID, $featured, array( 'title' => esc_attr( $title_attribute ), 'alt' => esc_attr( $title_attribute ) ) ).'</a>';
-  			$image .= '</figure>';
+			$image           = '';
+			$title_attribute = get_the_title( $post->ID );
+			$thumb_id        = get_post_thumbnail_id( get_the_ID() );
+			$img_altr        = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+			$img_alt         = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+			$image           .= '<figure class="post-featured-image">';
+			$image           .= '<a href="' . get_permalink() . '" title="' . the_title( '', '', false ) . '">';
+			$image           .= get_the_post_thumbnail( $post->ID, $featured, array(
+					'title' => esc_attr( $title_attribute ),
+					'alt'   => esc_attr( $img_alt ),
+				) ) . '</a>';
+			$image           .= '</figure>';
 
   			echo $image;
   		}

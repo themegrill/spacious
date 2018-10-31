@@ -13,7 +13,15 @@
 	<div class="entry-content clearfix">
 		<?php
 		if ( ( spacious_options( 'spacious_featured_image_single_post_page', 0 ) == 1 ) && has_post_thumbnail() ) {
-			the_post_thumbnail( 'featured-blog-large' );
+			$title_attribute     = get_the_title( $post->ID );
+			$thumb_id            = get_post_thumbnail_id( get_the_ID() );
+			$img_altr            = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+			$img_alt             = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+			$post_thumbnail_attr = array(
+				'alt'   => esc_attr( $img_alt ),
+				'title' => esc_attr( $title_attribute ),
+			);
+			the_post_thumbnail( 'featured-blog-large', $post_thumbnail_attr );
 		}
 
 		the_content();
