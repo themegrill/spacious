@@ -113,7 +113,15 @@ class spacious_recent_work_widget extends WP_Widget {
 			<div class="<?php echo $class; ?>">
 				<?php
 				if ( has_post_thumbnail() ) {
-					echo '<div class="service-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'featured-blog-medium' ) . '</a></div>';
+					$title_attribute = get_the_title( $post->ID );
+					$thumb_id        = get_post_thumbnail_id( get_the_ID() );
+					$img_altr        = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+					$img_alt         = ! empty( $img_altr ) ? $img_altr : $title_attribute;
+					$post_thumbnail_attr = array(
+						'alt'   => esc_attr( $img_alt ),
+						'title' => esc_attr( $title_attribute ),
+					);
+					echo '<div class="service-image"><a title="' . get_the_title() . '" href="' . get_permalink() . '">' . get_the_post_thumbnail( $post->ID, 'featured-blog-medium', $post_thumbnail_attr ) . '</a></div>';
 				}
 				?>
 			</div>
