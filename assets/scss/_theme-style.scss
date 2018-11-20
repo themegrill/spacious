@@ -629,6 +629,40 @@ img#wpstats {
 	margin-right: auto;
 }
 
+.no-sidebar-full-width,
+.no-sidebar {
+	overflow: hidden;
+
+	.alignfull {
+		// width: 100vw;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+
+		img {
+			max-width: unset;
+		}
+	}
+
+	.alignwide {
+		margin-left: -100px;
+		margin-right: -100px;
+		max-width: unset;
+	}
+
+	&.narrow-978,
+	&.narrow-1218 {
+
+		#main {
+			overflow: hidden;
+		}
+		.alignwide {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+	}
+}
+
 /*****************************************************************/
 /*****************************************************************/
 

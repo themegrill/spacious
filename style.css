@@ -556,6 +556,42 @@ img#wpstats {
 	margin-right: auto;
 }
 
+.no-sidebar-full-width,
+.no-sidebar {
+	overflow: hidden;
+}
+
+.no-sidebar-full-width .alignfull,
+.no-sidebar .alignfull {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+
+.no-sidebar-full-width .alignfull img,
+.no-sidebar .alignfull img {
+	max-width: unset;
+}
+
+.no-sidebar-full-width .alignwide,
+.no-sidebar .alignwide {
+	margin-left: -100px;
+	margin-right: -100px;
+	max-width: unset;
+}
+
+.no-sidebar-full-width.narrow-978 #main, .no-sidebar-full-width.narrow-1218 #main,
+.no-sidebar.narrow-978 #main,
+.no-sidebar.narrow-1218 #main {
+	overflow: hidden;
+}
+
+.no-sidebar-full-width.narrow-978 .alignwide, .no-sidebar-full-width.narrow-1218 .alignwide,
+.no-sidebar.narrow-978 .alignwide,
+.no-sidebar.narrow-1218 .alignwide {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
 /*****************************************************************/
 /*****************************************************************/
 /* =BODY

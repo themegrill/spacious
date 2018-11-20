@@ -133,6 +133,9 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		// Support for selective refresh widgets in Customizer
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// Gutenberg layout support.
+		add_theme_support( 'align-wide' );
+
 		// Define and register starter content to showcase the theme on new sites.
 		$starter_content = array(
 			'widgets'     => array(
