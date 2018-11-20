@@ -80,6 +80,9 @@ class spacious_featured_single_page_widget extends WP_Widget {
 			$the_query = new WP_Query( 'page_id=' . $page_id );
 			while ( $the_query->have_posts() ):$the_query->the_post();
 				$page_name = get_the_title();
+				$thumb_id  = get_post_thumbnail_id( get_the_ID() );
+				$img_altr  = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+				$img_alt   = ! empty( $img_altr ) ? $img_altr : $page_name;
 
 				$output = $before_widget;
 				if ( $image_position == "below" ) {
@@ -88,7 +91,7 @@ class spacious_featured_single_page_widget extends WP_Widget {
 					endif;
 				}
 				if ( has_post_thumbnail() && $disable_feature_image != "true" ) {
-					$output .= '<div class="service-image">' . get_the_post_thumbnail( $post->ID, 'featured', array( 'title' => esc_attr( $page_name ), 'alt' => esc_attr( $page_name ) ) ) . '</div>';
+					$output .= '<div class="service-image">' . get_the_post_thumbnail( $post->ID, 'featured', array( 'title' => esc_attr( $page_name ), 'alt' => esc_attr( $img_alt ) ) ) . '</div>';
 				}
 
 				if ( $image_position == "above" ) {

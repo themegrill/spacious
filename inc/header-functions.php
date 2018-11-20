@@ -71,7 +71,9 @@ function spacious_featured_image_slider() {
 						?>
 						<div class="<?php echo $classes; ?>">
 							<figure>
-								<img width="<?php echo esc_attr($image_attributes[1]); ?>" height="<?php echo esc_attr($image_attributes[2]); ?>" alt="<?php echo esc_attr( $spacious_slider_title ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
+								<?php $img_altr = get_post_meta( $attachment_post_id, '_wp_attachment_image_alt', true );
+								$img_alt  = ! empty( $img_altr ) ? $img_altr : $spacious_slider_title; ?>
+								<img width="<?php echo esc_attr($image_attributes[1]); ?>" height="<?php echo esc_attr($image_attributes[2]); ?>" alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
 							</figure>
 							<div class="entry-container">
 								<?php if( !empty( $spacious_slider_title ) || !empty( $spacious_slider_text ) ) { ?>
