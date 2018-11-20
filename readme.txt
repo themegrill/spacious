@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD
+= Version 1.5.6 - 2018-11-20 =
 * Added - Gutenberg compatibility
 * Tweak - Add alt attributes to missed img tags
 
