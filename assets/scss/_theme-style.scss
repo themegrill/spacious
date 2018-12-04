@@ -1963,6 +1963,10 @@ a#scroll-up {
 		list-style: square;
 		padding: 0 0 0 35px;
 		margin-bottom: 30px;
+
+		&.wp-block-gallery {
+			padding: 0;
+		}
 	}
 	ol {
 		padding: 0 0 0 35px;
