@@ -637,6 +637,7 @@ img#wpstats {
 		// width: 100vw;
 		margin-left: calc(50% - 50vw);
 		margin-right: calc(50% - 50vw);
+		max-width: unset;
 
 		img {
 			max-width: unset;
