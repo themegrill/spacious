@@ -3,7 +3,7 @@
  * Dark Color Skin for this theme.
  */
 
-/* GLOBAL */ 
+/* GLOBAL */
 #page {
 	background-color: #292929;
 }
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 input.s {
    background-color: #3E3E3E;
-   border: 1px solid #444444;   
+   border: 1px solid #444444;
 	color: #AAAAAA;
 }
 input.s:focus {
@@ -26,14 +26,14 @@ body, input, textarea {
    color: #AAAAAA;
 }
 .spacious-button,
-input[type="reset"], 
-input[type="button"], 
+input[type="reset"],
+input[type="button"],
 input[type="submit"] {
    border: 1px solid #444444;
 }
 .spacious-button:hover,
-input[type="reset"]:hover, 
-input[type="button"]:hover, 
+input[type="reset"]:hover,
+input[type="button"]:hover,
 input[type="submit"]:hover,
 button:hover {
 	-webkit-box-shadow:0 0 2px rgba(255, 255, 255, 0.6);
@@ -106,7 +106,7 @@ pre {
 .breadcrumb {
 	color: #999999;
 }
-.breadcrumb a {	
+.breadcrumb a {
 	color: #AAAAAA;
 }
 
@@ -122,13 +122,13 @@ pre {
 .main-navigation a {
 	color: #BBBBBB;
 }
-.main-navigation ul li ul {	
+.main-navigation ul li ul {
 	background: none repeat scroll 0 0 rgba(0, 0 ,0 , 0.7);
 }
-.main-navigation ul li ul li a, 
-.main-navigation ul li.current-menu-item ul li a, 
+.main-navigation ul li ul li a,
+.main-navigation ul li.current-menu-item ul li a,
 .main-navigation ul li ul li.current-menu-item a,
-.main-navigation ul li.current_page_ancestor ul li a, 
+.main-navigation ul li.current_page_ancestor ul li a,
 .main-navigation ul li.current-menu-ancestor ul li a,
 .main-navigation ul li.current_page_item ul li a {
 	color: #BBBBBB;
@@ -170,6 +170,11 @@ pre {
 }
 .single #content .tags a {
 	border: 1px solid #444444;
+	color: #AAAAAA;
+}
+
+/* RElATED POST */
+.related-posts .entry-title a {
 	color: #AAAAAA;
 }
 
