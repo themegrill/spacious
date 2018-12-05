@@ -48,6 +48,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 = Version TBD =
 * Fix - Gallery padding for Gutenberg
+* Tweak - Utilize single custom JS file for required theme JS settings.
 
 = Version 1.5.6 - 2018-11-20 =
 * Added - Gutenberg compatibility
