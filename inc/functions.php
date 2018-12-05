@@ -69,7 +69,7 @@ function spacious_scripts_styles_method() {
 	 */
 	if ( is_home() || is_front_page() && spacious_options( 'spacious_activate_slider', '0' ) == '1' ) {
 		wp_enqueue_script( 'jquery-swipe' );
-		wp_enqueue_script( 'spacious_slider', SPACIOUS_JS_URL . '/spacious-slider-setting.js', array( 'jquery_cycle' ), false, true );
+		wp_enqueue_script( 'jquery_cycle' );
 	}
 
 	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );

@@ -27,3 +27,28 @@ jQuery( document ).ready( function () {
 		jQuery(this).children('.sub-toggle .fa').first().toggleClass('fa-caret-down fa-caret-right');
 	});
 });
+
+/**
+ * Slider Setting
+ *
+ * Contains all the slider settings for the featured post/page slider.
+ */
+jQuery(window).on('load',function() {
+	if ( typeof jQuery.fn.cycle !== 'undefined' ) {
+		jQuery( '.slider-cycle' ).cycle( {
+			fx               : 'fade',
+			timeout          : 4000,
+			speed            : 1000,
+			slides           : '> div',
+			pager            : '> #controllers',
+			pagerActiveClass : 'active',
+			pagerTemplate    : '<a></a>',
+			pauseOnHover     : true,
+			autoHeight       : 'container',
+			swipe            : true,
+			swipeFx          : 'scrollHorz',
+			log              : false
+		} );
+	}
+});
+
