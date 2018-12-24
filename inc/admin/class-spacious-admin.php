@@ -125,7 +125,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 					<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
 
 					<div class="spacious-screenshot">
-						<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" />
+						<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.jpg'; ?>" />
 					</div>
 				</div>
 			</div>
