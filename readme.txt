@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.5.8 - 2019-01-16 =
 * Update - Waypoint js to 2.0.5
 
 = Version 1.5.7 - 2018-12-05 =
