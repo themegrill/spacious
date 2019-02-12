@@ -841,3 +841,48 @@ if ( ! function_exists( 'spacious_pingback_header' ) ) :
 endif;
 
 add_action( 'wp_head', 'spacious_pingback_header' );
+
+/**
+ * Migrate script to migrate `spacious[spacious_header_display_type]` to
+ * `themefolder[spacious_header_display_type]`.
+ *
+ * @since 1.5.9
+ */
+function spacious_header_display_type_migrate() {
+
+	$spacious_options = get_option( 'spacious' );
+
+	// Return if `spacious` options is not found.
+	if ( ! $spacious_options ) {
+		return;
+	}
+
+	// Return if `spacious_header_display_type_migrate` options is set.
+	if ( get_option( 'spacious_header_display_type_migrate' ) ) {
+		return;
+	}
+
+	/**
+	 * Assigning the theme name.
+	 */
+	$spacious_themename = get_option( 'stylesheet' );
+	$spacious_themename = preg_replace( "/\W/", "_", strtolower( $spacious_themename ) );
+
+	// Store the old value.
+	$spacious_header_display_type = $spacious_options['spacious_header_display_type'];
+
+	// Ready to update the value for saving in `themefolder[spacious_header_display_type]` table.
+	$spacious_options_table                                 = get_option( $spacious_themename );
+	$spacious_options_table['spacious_header_display_type'] = $spacious_header_display_type;
+
+	// Migrate the final array to $spacious_themename table.
+	if ( $spacious_header_display_type ) {
+		update_option( $spacious_themename, $spacious_options_table );
+	}
+
+	// Finally, set the flag to stop executing the script on each load of page.
+	update_option( 'spacious_header_display_type_migrate', 'yes' );
+
+}
+
+add_action( 'after_setup_theme', 'spacious_header_display_type_migrate' );
