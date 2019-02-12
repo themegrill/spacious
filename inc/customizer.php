@@ -40,8 +40,8 @@ function spacious_customize_register( $wp_customize ) {
 	 */
 	class SPACIOUS_Upsell_Section extends WP_Customize_Section {
 		public $type = 'spacious-upsell-section';
-		public $url = '';
-		public $id = '';
+		public $url  = '';
+		public $id   = '';
 
 		/**
 		 * Gather the parameters passed to client JavaScript via JSON.
@@ -62,7 +62,7 @@ function spacious_customize_register( $wp_customize ) {
 		protected function render_template() {
 			?>
 			<li id="accordion-section-{{ data.id }}"
-				class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+			    class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
 				<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
 			</li>
 			<?php
@@ -137,18 +137,18 @@ function spacious_customize_register( $wp_customize ) {
 		'panel'    => 'spacious_header_options',
 	) );
 
-	$wp_customize->add_setting( 'spacious[spacious_header_display_type]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_display_type]', array(
 		'default'           => 'one',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_radio_select_sanitize',
 	) );
 
-	$wp_customize->add_control( new Spacious_Image_Radio_Control( $wp_customize, 'spacious[spacious_header_display_type]', array(
+	$wp_customize->add_control( new Spacious_Image_Radio_Control( $wp_customize, $spacious_themename . '[spacious_header_display_type]', array(
 		'type'     => 'radio',
 		'label'    => __( 'Choose the header display type that you want.', 'spacious' ),
 		'section'  => 'spacious_header_display_type_option',
-		'settings' => 'spacious[spacious_header_display_type]',
+		'settings' => $spacious_themename . '[spacious_header_display_type]',
 		'choices'  => array(
 			'one'  => SPACIOUS_ADMIN_IMAGES_URL . '/header-left.png',
 			'four' => SPACIOUS_ADMIN_IMAGES_URL . '/menu-bottom.png',
@@ -578,7 +578,7 @@ function spacious_customize_register( $wp_customize ) {
 		'settings' => $spacious_themename . '[spacious_blog_slider]',
 	) );
 
-	for ( $i = 1; $i <= 5; $i++ ) {
+	for ( $i = 1; $i <= 5; $i ++ ) {
 		// adding slider section
 		$wp_customize->add_section( 'spacious_slider_number_section' . $i, array(
 			'priority' => 10,
@@ -813,19 +813,19 @@ function spacious_customizer_custom_scripts() { ?>
 	</style>
 
 	<script>
-			( function( $, api ) {
-				api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
+		( function ( $, api ) {
+			api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
 
-					// No events for this type of section.
-					attachEvents: function() {
-					},
+				// No events for this type of section.
+				attachEvents : function () {
+				},
 
-					// Always make the section active.
-					isContextuallyActive: function() {
-						return true;
-					}
-				} );
-			} )( jQuery, wp.customize );
+				// Always make the section active.
+				isContextuallyActive : function () {
+					return true;
+				}
+			} );
+		} )( jQuery, wp.customize );
 
 	</script>
 	<?php
