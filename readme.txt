@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
+* Fix   - Wrong setting id set for Header Display Type option.
 * Tweak - Modify pingback url autodiscovery for single posts, pages, or attachments.
 
 = Version 1.5.8 - 2019-01-16 =
