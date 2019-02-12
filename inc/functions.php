@@ -826,3 +826,18 @@ function spacious_site_footer_designs_eliminate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_site_footer_designs_eliminate' );
+
+if ( ! function_exists( 'spacious_pingback_header' ) ) :
+
+	/**
+	 * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+	 */
+	function spacious_pingback_header() {
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
+	}
+
+endif;
+
+add_action( 'wp_head', 'spacious_pingback_header' );
