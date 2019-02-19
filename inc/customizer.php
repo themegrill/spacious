@@ -444,7 +444,7 @@ function spacious_customize_register( $wp_customize ) {
 		'default'           => 'categories',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_sanitize',
+		'sanitize_callback' => 'spacious_radio_select_sanitize',
 	) );
 
 	$wp_customize->add_control( $spacious_themename . '[spacious_related_posts]', array(
