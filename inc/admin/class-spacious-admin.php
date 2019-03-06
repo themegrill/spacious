@@ -24,7 +24,102 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		public function __construct() {
 			add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 			add_action( 'wp_loaded', array( __CLASS__, 'hide_notices' ) );
-			add_action( 'load-themes.php', array( $this, 'admin_notice' ) );
+			add_action( 'wp_loaded', array( $this, 'admin_notice' ) );
+			add_action( 'wp_ajax_import_button', array( $this, 'spacious_ajax_import_button_handler' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'spacious_ajax_enqueue_scripts' ) );
+		}
+
+		/**
+		 * Localize array for import button AJAX request.
+		 */
+		public function spacious_ajax_enqueue_scripts() {
+
+			wp_enqueue_script( 'plugin-install' );
+			wp_enqueue_script( 'updates' );
+			wp_enqueue_script( 'spacious-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), 1, true );
+			wp_localize_script(
+				'spacious-plugin-install-helper', 'spacious_plugin_helper',
+				array(
+					'activating' => esc_html__( 'Activating ', 'spacious' ),
+				)
+			);
+
+			$translation_array = array(
+				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' ) ),
+				'btn_text' => esc_html__( 'Processing...', 'spacious' ),
+				'nonce'    => wp_create_nonce( 'spacious_demo_import_nonce' ),
+			);
+
+			wp_localize_script( 'spacious-plugin-install-helper', 'spacious_redirect_demo_page', $translation_array );
+
+		}
+
+		/**
+		 * Handle the AJAX process while import or get started button clicked.
+		 */
+		public function spacious_ajax_import_button_handler() {
+
+			check_ajax_referer( 'spacious_demo_import_nonce', 'security' );
+
+			$state = '';
+			if ( is_plugin_active( 'themegrill-demo-importer/themegrill-demo-importer.php' ) ) {
+				$state = 'activated';
+			} elseif ( file_exists( WP_PLUGIN_DIR . '/themegrill-demo-importer/themegrill-demo-importer.php' ) ) {
+				$state = 'installed';
+			}
+
+			if ( 'activated' === $state ) {
+				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' );
+			} elseif ( 'installed' === $state ) {
+				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' );
+				if ( current_user_can( 'activate_plugin' ) ) {
+					$result = activate_plugin( 'themegrill-demo-importer/themegrill-demo-importer.php' );
+
+					if ( is_wp_error( $result ) ) {
+						$response['errorCode']    = $result->get_error_code();
+						$response['errorMessage'] = $result->get_error_message();
+					}
+				}
+			} else {
+				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' );
+
+				/**
+				 * Install Plugin.
+				 */
+				include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+				include_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+
+				$api = plugins_api( 'plugin_information', array(
+					'slug'   => sanitize_key( wp_unslash( 'themegrill-demo-importer' ) ),
+					'fields' => array(
+						'sections' => false,
+					),
+				) );
+
+				$skin     = new WP_Ajax_Upgrader_Skin();
+				$upgrader = new Plugin_Upgrader( $skin );
+				$result   = $upgrader->install( $api->download_link );
+				if ( $result ) {
+					$response['installed'] = 'succeed';
+				} else {
+					$response['installed'] = 'failed';
+				}
+
+				// Activate plugin.
+				if ( current_user_can( 'activate_plugin' ) ) {
+					$result = activate_plugin( 'themegrill-demo-importer/themegrill-demo-importer.php' );
+
+					if ( is_wp_error( $result ) ) {
+						$response['errorCode']    = $result->get_error_code();
+						$response['errorMessage'] = $result->get_error_message();
+					}
+				}
+			}
+
+			wp_send_json( $response );
+
+			exit();
+
 		}
 
 		/**
@@ -33,9 +128,9 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		public function admin_menu() {
 			$theme = wp_get_theme( get_template() );
 
-			$page = add_theme_page( esc_html__( 'About', 'spacious' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'spacious' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'spacious-welcome', array(
+			$page = add_theme_page( esc_html__( 'About', 'spacious' ) . ' ' . $theme->display( 'Name' ), esc_html__( 'About', 'spacious' ) . ' ' . $theme->display( 'Name' ), 'activate_plugins', 'spacious-sitelibrary', array(
 				$this,
-				'welcome_screen',
+				'sitelibrary_screen',
 			) );
 			add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
 		}
@@ -58,12 +153,8 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 			wp_enqueue_style( 'spacious-message', get_template_directory_uri() . '/css/admin/message.css', array(), $spacious_version );
 
 			// Let's bail on theme activation.
-			if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
-				update_option( 'spacious_admin_notice_welcome', 1 );
-
-				// No option? Let run the notice wizard again..
-			} elseif ( ! get_option( 'spacious_admin_notice_welcome' ) ) {
+			$notice_nag = get_option( 'spacious_admin_notice_welcome' );
+			if ( ! $notice_nag ) {
 				add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
 			}
 		}
@@ -83,6 +174,13 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 
 				$hide_notice = sanitize_text_field( $_GET['spacious-hide-notice'] );
 				update_option( 'spacious_admin_notice_' . $hide_notice, 1 );
+
+				// Hide.
+				if ( 'welcome' === $_GET['spacious-hide-notice'] ) {
+					update_option( 'spacious_admin_notice_' . $hide_notice, 1 );
+				} else { // Show.
+					delete_option( 'spacious_admin_notice_' . $hide_notice );
+				}
 			}
 		}
 
@@ -92,11 +190,23 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		public function welcome_notice() {
 			?>
 			<div id="message" class="updated spacious-message">
-				<a class="spacious-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'spacious-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'spacious' ); ?></a>
-				<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p class="submit">
-					<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?></a>
-				</p>
+				<a class="spacious-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'spacious-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>">
+					<?php esc_html_e( 'Dismiss', 'spacious' ); ?>
+				</a>
+
+				<div class="spacious-message-wrapper">
+					<div class="spacious-logo">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/spacious-getting-started-logo.png" alt="<?php esc_html_e( 'Spacious', 'spacious' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					</div>
+
+					<p>
+						<?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?>
+					</p>
+
+					<div class="submit">
+						<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?>"><?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?></a>
+					</div>
+				</div>
 			</div>
 			<?php
 		}
@@ -108,25 +218,21 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		 */
 		private function intro() {
 			global $spacious_version;
-
 			$theme = wp_get_theme( get_template() );
-
-			// Drop minor version if 0
-			$major_version = substr( $spacious_version, 0, 3 );
 			?>
-			<div class="spacious-theme-info">
-				<h1>
-					<?php esc_html_e( 'About', 'spacious' ); ?>
-					<?php echo $theme->display( 'Name' ); ?>
-					<?php printf( '%s', $major_version ); ?>
-				</h1>
+			<div class="header">
+				<div class="info">
+					<h1>
+						<?php esc_html_e( 'About', 'spacious' ); ?>
+						<?php echo $theme->display( 'Name' ); ?>
+						<span class="version-container"><?php echo esc_html( $spacious_version ); ?></span>
+					</h1>
 
-				<div class="welcome-description-wrap">
-					<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
-
-					<div class="spacious-screenshot">
-						<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.jpg'; ?>" />
+					<div class="tg-about-text about-text">
+						<?php echo $theme->display( 'Description' ); ?>
 					</div>
+
+					<a href="https://themegrill.com/" target="_blank" class="wp-badge tg-welcome-logo"></a>
 				</div>
 			</div>
 
@@ -141,15 +247,23 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'spacious-welcome' ) {
+				<a class="nav-tab <?php if ( empty( $_GET['tab'] ) && $_GET['page'] == 'spacious-sitelibrary' ) {
 					echo 'nav-tab-active';
-				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome' ), 'themes.php' ) ) ); ?>">
-					<?php echo $theme->display( 'Name' ); ?>
+				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-sitelibrary' ), 'themes.php' ) ) ); ?>">
+					<?php esc_html_e( 'Site Library', 'spacious' ); ?>
+				</a>
+				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'welcome' ) {
+					echo 'nav-tab-active';
+				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
+					'page' => 'spacious-sitelibrary',
+					'tab'  => 'welcome',
+				), 'themes.php' ) ) ); ?>">
+					<?php esc_html_e( 'Getting Started', 'spacious' ); ?>
 				</a>
 				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
 				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'spacious-welcome',
+					'page' => 'spacious-sitelibrary',
 					'tab'  => 'supported_plugins',
 				), 'themes.php' ) ) ); ?>">
 					<?php esc_html_e( 'Supported Plugins', 'spacious' ); ?>
@@ -157,7 +271,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
 					echo 'nav-tab-active';
 				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'spacious-welcome',
+					'page' => 'spacious-sitelibrary',
 					'tab'  => 'free_vs_pro',
 				), 'themes.php' ) ) ); ?>">
 					<?php esc_html_e( 'Free Vs Pro', 'spacious' ); ?>
@@ -165,7 +279,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 				<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
 				} ?>" href="<?php echo esc_url( admin_url( add_query_arg( array(
-					'page' => 'spacious-welcome',
+					'page' => 'spacious-sitelibrary',
 					'tab'  => 'changelog',
 				), 'themes.php' ) ) ); ?>">
 					<?php esc_html_e( 'Changelog', 'spacious' ); ?>
@@ -175,10 +289,10 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		}
 
 		/**
-		 * Welcome screen page.
+		 * Site library screen page.
 		 */
-		public function welcome_screen() {
-			$current_tab = empty( $_GET['tab'] ) ? 'about' : sanitize_title( $_GET['tab'] );
+		public function sitelibrary_screen() {
+			$current_tab = empty( $_GET['tab'] ) ? 'library' : sanitize_title( $_GET['tab'] );
 
 			// Look for a {$current_tab}_screen method.
 			if ( is_callable( array( $this, $current_tab . '_screen' ) ) ) {
@@ -186,7 +300,30 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 			}
 
 			// Fallback to about screen.
-			return $this->about_screen();
+			return $this->sitelibrary_display_screen();
+		}
+
+		/**
+		 * Render site library.
+		 */
+		public function sitelibrary_display_screen() {
+			?>
+			<div class="wrap about-wrap">
+				<?php
+				$this->intro();
+
+				// Display site library.
+				echo Spacious_Site_Library::spacious_site_library_page_content();
+				?>
+			</div>
+			<?php
+		}
+
+		/**
+		 * Welcome screen page.
+		 */
+		public function welcome_screen() {
+			$this->about_screen();
 		}
 
 		/**
@@ -204,9 +341,10 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 						<div class="col">
 							<h3><?php esc_html_e( 'Import Demo', 'spacious' ); ?></h3>
 							<p><?php esc_html_e( 'Needs ThemeGrill Demo Importer plugin.', 'spacious' ) ?></p>
-							<p>
-								<a href="<?php echo esc_url( network_admin_url( 'plugin-install.php?tab=search&type=term&s=themegrill-demo-importer' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install', 'spacious' ); ?></a>
-							</p>
+
+							<div class="submit">
+								<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Import', 'spacious' ); ?>"><?php esc_html_e( 'Import', 'spacious' ); ?></a>
+							</div>
 						</div>
 						<div class="col">
 							<h3><?php esc_html_e( 'Theme Customizer', 'spacious' ); ?></h3>

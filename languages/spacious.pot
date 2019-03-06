@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.5.8\n"
+"Project-Id-Version: Spacious 1.5.9\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2019-02-12 08:32:03+00:00\n"
+"POT-Creation-Date: 2019-03-06 06:58:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/admin/class-spacious-admin.php:406
+#: inc/admin/class-spacious-admin.php:544
 msgid "5"
 msgstr ""
 
@@ -59,477 +59,495 @@ msgstr ""
 msgid "Tagged on: "
 msgstr ""
 
-#: functions.php:103 functions.php:324
+#: functions.php:104 functions.php:325
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:104 functions.php:336
+#: functions.php:105 functions.php:337
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:163 inc/widgets/widgets.php:51
+#: functions.php:164 inc/widgets/widgets.php:51
 msgid "Business Top Sidebar"
 msgstr ""
 
-#: functions.php:164 inc/widgets/widgets.php:53
+#: functions.php:165 inc/widgets/widgets.php:53
 msgid "Shows widgets on Business Page Template Top Section."
 msgstr ""
 
-#: functions.php:164 functions.php:226 inc/widgets/widgets.php:53
+#: functions.php:165 functions.php:227 inc/widgets/widgets.php:53
 #: inc/widgets/widgets.php:87
 msgid ""
 "Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured "
 "Widget"
 msgstr ""
 
-#: functions.php:166 functions.php:228
+#: functions.php:167 functions.php:229
 #: inc/widgets/class-spacious-service-widget.php:14
 msgid "TG: Services"
 msgstr ""
 
-#: functions.php:166 functions.php:228
+#: functions.php:167 functions.php:229
 #: inc/widgets/class-spacious-service-widget.php:10
 msgid "Display some pages as services. Best for Business Top or Bottom sidebar."
 msgstr ""
 
-#: functions.php:167 functions.php:229
+#: functions.php:168 functions.php:230
 #: inc/widgets/class-spacious-call-to-action-widget.php:14
 msgid "TG: Call To Action Widget"
 msgstr ""
 
-#: functions.php:167 functions.php:229
+#: functions.php:168 functions.php:230
 #: inc/widgets/class-spacious-call-to-action-widget.php:10
 msgid "Use this widget to show the call to action section."
 msgstr ""
 
-#: functions.php:168 functions.php:230
+#: functions.php:169 functions.php:231
 #: inc/widgets/class-spacious-recent-work-widget.php:14
 msgid "TG: Featured Widget"
 msgstr ""
 
-#: functions.php:168 functions.php:230
+#: functions.php:169 functions.php:231
 #: inc/widgets/class-spacious-recent-work-widget.php:10
 msgid ""
 "Show your some pages as recent work. Best for Business Top or Bottom "
 "sidebar."
 msgstr ""
 
-#: functions.php:175 inc/widgets/class-spacious-call-to-action-widget.php:30
+#: functions.php:176 inc/widgets/class-spacious-call-to-action-widget.php:30
 msgid "Call to Action Main Text"
 msgstr ""
 
-#: functions.php:176 inc/widgets/class-spacious-call-to-action-widget.php:32
+#: functions.php:177 inc/widgets/class-spacious-call-to-action-widget.php:32
 msgid "Call to Action Additional Text"
 msgstr ""
 
-#: functions.php:177 functions.php:254 inc/admin/class-spacious-admin.php:134
+#: functions.php:178 functions.php:255 inc/admin/class-spacious-admin.php:240
 msgid "Theme Info"
 msgstr ""
 
-#: functions.php:188 inc/widgets/widgets.php:62
+#: functions.php:189 inc/widgets/widgets.php:62
 msgid "Business Middle Left Sidebar"
 msgstr ""
 
-#: functions.php:189 inc/widgets/widgets.php:64
+#: functions.php:190 inc/widgets/widgets.php:64
 msgid "Shows widgets on Business Page Template Middle Section Left Half."
 msgstr ""
 
-#: functions.php:189 functions.php:206 inc/widgets/widgets.php:64
+#: functions.php:190 functions.php:207 inc/widgets/widgets.php:64
 #: inc/widgets/widgets.php:75
 msgid "Suitable widget: TG: Testimonial, TG: Featured Single Page"
 msgstr ""
 
-#: functions.php:205 inc/widgets/widgets.php:73
+#: functions.php:206 inc/widgets/widgets.php:73
 msgid "Business Middle Right Sidebar"
 msgstr ""
 
-#: functions.php:206 inc/widgets/widgets.php:75
+#: functions.php:207 inc/widgets/widgets.php:75
 msgid "Shows widgets on Business Page Template Middle Section Right Half."
 msgstr ""
 
-#: functions.php:212 inc/admin/class-spacious-admin.php:531
+#: functions.php:213 inc/admin/class-spacious-admin.php:669
 #: inc/widgets/class-spacious-testimonial-widget.php:15
 msgid "TG: Testimonial"
 msgstr ""
 
-#: functions.php:225 inc/widgets/widgets.php:85
+#: functions.php:226 inc/widgets/widgets.php:85
 msgid "Business Bottom Sidebar"
 msgstr ""
 
-#: functions.php:226 inc/widgets/widgets.php:87
+#: functions.php:227 inc/widgets/widgets.php:87
 msgid "Shows widgets on Business Page Template Bottom Section."
 msgstr ""
 
-#: functions.php:252
+#: functions.php:253
 msgid "Spacious Important Links"
 msgstr ""
 
-#: functions.php:255 inc/admin/class-spacious-admin.php:136
+#: functions.php:256 inc/admin/class-spacious-admin.php:242
 msgid "View Demo"
 msgstr ""
 
-#: functions.php:256 inc/admin/class-spacious-admin.php:205
+#: functions.php:257 inc/admin/class-spacious-admin.php:342
 msgid "Import Demo"
 msgstr ""
 
-#: functions.php:257 inc/admin/class-spacious-admin.php:220
-#: inc/admin/class-spacious-admin.php:223
+#: functions.php:258 inc/admin/class-spacious-admin.php:358
+#: inc/admin/class-spacious-admin.php:361
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:258 inc/admin/class-spacious-admin.php:231
+#: functions.php:259 inc/admin/class-spacious-admin.php:369
 msgid "Support Forum"
 msgstr ""
 
-#: functions.php:309 functions.php:314 inc/customizer.php:612
+#: functions.php:310 functions.php:315 inc/customizer.php:612
 msgid "Enter title for your slider."
 msgstr ""
 
-#: functions.php:311 functions.php:316 inc/customizer.php:633
+#: functions.php:312 functions.php:317 inc/customizer.php:633
 #: inc/functions.php:681 inc/header-functions.php:65
 #: inc/widgets/class-spacious-featured-single-page-widget.php:103
 #: inc/widgets/class-spacious-service-widget.php:96
 msgid "Read more"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:36 inc/admin/class-spacious-admin.php:119
+#: inc/admin/class-spacious-admin.php:43
+msgid "Activating "
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:49
+msgid "Processing..."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:131
+#: inc/admin/class-spacious-admin.php:226
 msgid "About"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:77
+#: inc/admin/class-spacious-admin.php:168
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:81
+#: inc/admin/class-spacious-admin.php:172
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:95
+#: inc/admin/class-spacious-admin.php:194
 msgid "Dismiss"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:96
-msgid ""
-"Welcome! Thank you for choosing Spacious! To fully take advantage of the "
-"best our theme can offer please make sure you visit our %swelcome page%s."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:98
-msgid "Get started with Spacious"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:138 inc/customizer.php:79
-msgid "View PRO version"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:140
-msgid "Rate this theme"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:155
-msgid "Supported Plugins"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:163
-msgid "Free Vs Pro"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:171
-msgid "Changelog"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:206
-msgid "Needs ThemeGrill Demo Importer plugin."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:208
-#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2717
-msgid "Install"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:212
-msgid "Theme Customizer"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:213
-msgid "All Theme Options are available via Customize screen."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:215
-msgid "Customize"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:221
-msgid "Please view our documentation page to setup the theme."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:228
-msgid "Got theme support question?"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:229
-msgid "Please put it in our dedicated support forum."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:236
-msgid "Need more features?"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:237
-#: inc/admin/class-spacious-admin.php:393
-msgid "Upgrade to PRO version for more exciting features."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:239
-#: inc/admin/class-spacious-admin.php:549
-msgid "View Pro"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:244
-msgid "Got sales related question?"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:245
-msgid "Please send it via our sales contact page."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:247
-msgid "Contact Page"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:254
-#: inc/admin/class-spacious-admin.php:262
-msgid "Translate"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:258
-msgid "Click below to translate this theme into your own language."
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:274
-msgid "Return to Updates"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:274
-msgid "Return to Dashboard &rarr; Updates"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:277
-msgid "Go to Dashboard &rarr; Home"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:277
-msgid "Go to Dashboard"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:294
-msgid "View changelog below:"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:348
-msgid "This theme recommends following plugins:"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:351
-#: inc/admin/class-spacious-admin.php:435
-msgid "Social Icons"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:352
-#: inc/admin/class-spacious-admin.php:356
-msgid " by ThemeGrill"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:355
-msgid "Easy Social Sharing"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:359
-msgid "Everest Forms – Easy Contact Form and Form Builder"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:360
-msgid " by WPEverest"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:362
-msgid "WP-PageNavi"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:365
-msgid "Breadcrumb NavXT"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:368
-msgid "WooCommerce"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:371
-msgid "Polylang"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:372
-#: inc/admin/class-spacious-admin.php:376
-msgid "Fully Compatible in Pro Version"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:375
-msgid "WPML"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:398
-msgid "Features"
 msgstr ""
 
 #. Theme Name of the plugin/theme
 msgid "Spacious"
 msgstr ""
 
+#: inc/admin/class-spacious-admin.php:203
+msgid ""
+"Welcome! Thank you for choosing Spacious! To fully take advantage of the "
+"best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:207
+#: inc/admin/class-spacious-site-library.php:111
+msgid "Get started with Spacious"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:244 inc/customizer.php:79
+msgid "View PRO version"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:246
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:253
+msgid "Site Library"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:261
+msgid "Getting Started"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:269
+msgid "Supported Plugins"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:277
+msgid "Free Vs Pro"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:285
+msgid "Changelog"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:343
+msgid "Needs ThemeGrill Demo Importer plugin."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:346
+#: inc/admin/class-spacious-site-library.php:111
+msgid "Import"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:350
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:351
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:353
+msgid "Customize"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:359
+msgid "Please view our documentation page to setup the theme."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:366
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:367
+msgid "Please put it in our dedicated support forum."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:374
+msgid "Need more features?"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:375
+#: inc/admin/class-spacious-admin.php:531
+msgid "Upgrade to PRO version for more exciting features."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:377
+#: inc/admin/class-spacious-admin.php:687
+msgid "View Pro"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:382
+msgid "Got sales related question?"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:383
+msgid "Please send it via our sales contact page."
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:385
+msgid "Contact Page"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:392
 #: inc/admin/class-spacious-admin.php:400
-msgid "Spacious Pro"
+msgid "Translate"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:405 inc/customizer.php:528
-msgid "Slider"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:407
-msgid "Unlimited Slides"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:410
-msgid "Slider Settings"
+#: inc/admin/class-spacious-admin.php:396
+msgid "Click below to translate this theme into your own language."
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:412
-msgid "Slides type, duration & delay time"
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:412
+msgid "Return to Dashboard &rarr; Updates"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:415
-msgid "Google Fonts Option"
+msgid "Go to Dashboard &rarr; Home"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:417
-msgid "600+"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:420
-msgid "Font Size options"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:425
-msgid "Color Palette"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:426
-msgid "Primary Color Option"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:427
-msgid "Multiple Color Options"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:430
-msgid "Additional Top Header"
+#: inc/admin/class-spacious-admin.php:415
+msgid "Go to Dashboard"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:432
-msgid "Social Icons + Menu + Header text option"
+msgid "View changelog below:"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:440
-msgid "Boxed & Wide layout option"
+#: inc/admin/class-spacious-admin.php:486
+msgid "This theme recommends following plugins:"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:445
-msgid "Light & Dark Color skin"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:450
-msgid "Woocommerce Compatible"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:455
-msgid "Woocommerce Page Layouts"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:460
-msgid "Translation Ready"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:465
-msgid "WPML Compatible"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:470
-msgid "Polylang Compatible"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:475
-msgid "Breadcrumb NavXT Compatible"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:480
-msgid "BreadCrumb Custom Text"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:485 inc/customizer.php:506
-msgid "Author Bio"
+#: inc/admin/class-spacious-admin.php:489
+#: inc/admin/class-spacious-admin.php:573
+msgid "Social Icons"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:490
-msgid "Footer Copyright Editor"
+#: inc/admin/class-spacious-admin.php:494
+msgid " by ThemeGrill"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:495
-msgid "Footer Widgets Column"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:496
-msgid "One Column"
+#: inc/admin/class-spacious-admin.php:493
+msgid "Easy Social Sharing"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:497
-msgid "1,2,3,4 Columns"
+msgid "Everest Forms – Easy Contact Form and Form Builder"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:498
+msgid " by WPEverest"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:500
-msgid "Demo Content"
+msgid "WP-PageNavi"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:505
-msgid "Support"
+#: inc/admin/class-spacious-admin.php:503
+msgid "Breadcrumb NavXT"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:506
-msgid "Forum"
+msgid "WooCommerce"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:507
-msgid "Forum + Emails/Support Ticket"
+#: inc/admin/class-spacious-admin.php:509
+msgid "Polylang"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:510
-msgid "TG: Services widget"
+#: inc/admin/class-spacious-admin.php:514
+msgid "Fully Compatible in Pro Version"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:515
-msgid "TG: Call to Action widget"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:520
-msgid "TG: Featured Single page widget"
-msgstr ""
-
-#: inc/admin/class-spacious-admin.php:525
-msgid "TG: Featured widget (Recent Work/Portfolio)"
+#: inc/admin/class-spacious-admin.php:513
+msgid "WPML"
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:536
+msgid "Features"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:538
+msgid "Spacious Pro"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:543 inc/customizer.php:528
+msgid "Slider"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:545
+msgid "Unlimited Slides"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:548
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:550
+msgid "Slides type, duration & delay time"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:553
+msgid "Google Fonts Option"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:555
+msgid "600+"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:558
+msgid "Font Size options"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:563
+msgid "Color Palette"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:564
+msgid "Primary Color Option"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:565
+msgid "Multiple Color Options"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:568
+msgid "Additional Top Header"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:570
+msgid "Social Icons + Menu + Header text option"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:578
+msgid "Boxed & Wide layout option"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:583
+msgid "Light & Dark Color skin"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:588
+msgid "Woocommerce Compatible"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:593
+msgid "Woocommerce Page Layouts"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:598
+msgid "Translation Ready"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:603
+msgid "WPML Compatible"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:608
+msgid "Polylang Compatible"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:613
+msgid "Breadcrumb NavXT Compatible"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:618
+msgid "BreadCrumb Custom Text"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:623 inc/customizer.php:506
+msgid "Author Bio"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:628
+msgid "Footer Copyright Editor"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:633
+msgid "Footer Widgets Column"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:634
+msgid "One Column"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:635
+msgid "1,2,3,4 Columns"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:638
+msgid "Demo Content"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:643
+msgid "Support"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:644
+msgid "Forum"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:645
+msgid "Forum + Emails/Support Ticket"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:648
+msgid "TG: Services widget"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:653
+msgid "TG: Call to Action widget"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:658
+msgid "TG: Featured Single page widget"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:663
+msgid "TG: Featured widget (Recent Work/Portfolio)"
+msgstr ""
+
+#: inc/admin/class-spacious-admin.php:674
 msgid "TG: Featured Posts"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:541
+#: inc/admin/class-spacious-admin.php:679
 msgid "TG: Our Clients"
 msgstr ""
 
@@ -547,6 +565,22 @@ msgstr ""
 
 #: inc/admin/class-spacious-new-theme-notice.php:75
 msgid "10+ free starter sites"
+msgstr ""
+
+#: inc/admin/class-spacious-site-library.php:75
+msgid "Themes list"
+msgstr ""
+
+#: inc/admin/class-spacious-site-library.php:92
+msgid "Pro"
+msgstr ""
+
+#: inc/admin/class-spacious-site-library.php:116
+msgid "Preview"
+msgstr ""
+
+#: inc/admin/class-spacious-site-library.php:122
+msgid "Buy Now"
 msgstr ""
 
 #: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
@@ -1238,6 +1272,10 @@ msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2684
 msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2717
+msgid "Install"
 msgstr ""
 
 #: inc/tgm-plugin-activation/class-tgm-plugin-activation.php:2723
