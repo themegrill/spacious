@@ -92,11 +92,23 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		public function welcome_notice() {
 			?>
 			<div id="message" class="updated spacious-message">
-				<a class="spacious-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'spacious-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>"><?php _e( 'Dismiss', 'spacious' ); ?></a>
-				<p><?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p class="submit">
-					<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ); ?>"><?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?></a>
-				</p>
+				<a class="spacious-message-close notice-dismiss" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'spacious-hide-notice', 'welcome' ) ), 'spacious_hide_notices_nonce', '_spacious_notice_nonce' ) ); ?>">
+					<?php esc_html_e( 'Dismiss', 'spacious' ); ?>
+				</a>
+
+				<div class="spacious-message-wrapper">
+					<div class="spacious-logo">
+						<img src="<?php echo get_template_directory_uri(); ?>/img/spacious-getting-started-logo.png" alt="<?php esc_html_e( 'Spacious', 'spacious' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					</div>
+
+					<p>
+						<?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?>
+					</p>
+
+					<div class="submit">
+						<a class="btn-get-started button button-primary button-hero" href="#" data-name="" data-slug="" aria-label="<?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?>"><?php esc_html_e( 'Get started with Spacious', 'spacious' ); ?></a>
+					</div>
+				</div>
 			</div>
 			<?php
 		}
