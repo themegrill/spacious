@@ -120,25 +120,21 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		 */
 		private function intro() {
 			global $spacious_version;
-
 			$theme = wp_get_theme( get_template() );
-
-			// Drop minor version if 0
-			$major_version = substr( $spacious_version, 0, 3 );
 			?>
-			<div class="spacious-theme-info">
-				<h1>
-					<?php esc_html_e( 'About', 'spacious' ); ?>
-					<?php echo $theme->display( 'Name' ); ?>
-					<?php printf( '%s', $major_version ); ?>
-				</h1>
+			<div class="header">
+				<div class="info">
+					<h1>
+						<?php esc_html_e( 'About', 'spacious' ); ?>
+						<?php echo $theme->display( 'Name' ); ?>
+						<span class="version-container"><?php echo esc_html( $spacious_version ); ?></span>
+					</h1>
 
-				<div class="welcome-description-wrap">
-					<div class="about-text"><?php echo $theme->display( 'Description' ); ?></div>
-
-					<div class="spacious-screenshot">
-						<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.jpg'; ?>" />
+					<div class="tg-about-text about-text">
+						<?php echo $theme->display( 'Description' ); ?>
 					</div>
+
+					<a href="https://themegrill.com/" target="_blank" class="wp-badge tg-welcome-logo"></a>
 				</div>
 			</div>
 
