@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.6.0 - 2019-03-06 =
 * Tweak - Added site library and demo import process in About Spacious page.
 
 = Version 1.5.9 - 2019-02-12 =
