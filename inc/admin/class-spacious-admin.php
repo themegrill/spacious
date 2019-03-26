@@ -34,7 +34,6 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		 */
 		public function spacious_ajax_enqueue_scripts() {
 
-			wp_enqueue_script( 'plugin-install' );
 			wp_enqueue_script( 'updates' );
 			wp_enqueue_script( 'spacious-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), 1, true );
 			wp_localize_script(
@@ -81,6 +80,8 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 					}
 				}
 			} else {
+				wp_enqueue_script( 'plugin-install' );
+
 				$response['redirect'] = admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' );
 
 				/**

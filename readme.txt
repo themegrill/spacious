@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Upload Theme button not working
+
 = Version 1.6.0 - 2019-03-06 =
 * Tweak - Added site library and demo import process in About Spacious page.
 
