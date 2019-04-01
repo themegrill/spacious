@@ -13,6 +13,7 @@ function spacious_customize_register( $wp_customize ) {
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
@@ -130,6 +131,56 @@ function spacious_customize_register( $wp_customize ) {
 		),
 	) );
 
+	// Header Top bar activate option
+	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
+		'priority' => 2,
+		'title'    => __( 'Activate Header Top Bar', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_top_header_bar]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_activate_top_header_bar]', array(
+		'type'     => 'checkbox',
+		'label'    => __( 'Check to show top header bar. The top header bar includes social icons area, small text area and menu area.', 'spacious' ),
+		'section'  => 'spacious_header_top_bar_activate_section',
+		'settings' => $spacious_themename . '[spacious_activate_top_header_bar]',
+	) );
+
+	// Header area small text option
+	$wp_customize->add_section( 'spacious_header_small_text_section', array(
+		'priority' => 2,
+		'title'    => __( 'Header Info Text', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_info_text]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => $customizer_selective_refresh,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_editor_sanitize',
+	) );
+
+	$wp_customize->add_control( new Spacious_Editor_Custom_Control( $wp_customize, $spacious_themename . '[spacious_header_info_text]', array(
+		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
+		'section' => 'spacious_header_small_text_section',
+		'setting' => $spacious_themename . '[spacious_header_info_text]',
+	) ) );
+
+	// Selective refresh for header information text
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_header_info_text]', array(
+			'selector'        => '.small-info-text p',
+			'render_callback' => 'spacious_header_info_text',
+		) );
+	}
+
 	// Header display type option
 	$wp_customize->add_section( 'spacious_header_display_type_option', array(
 		'priority' => 2,
@@ -200,6 +251,93 @@ function spacious_customize_register( $wp_customize ) {
 	) );
 
 	// End of Header Options
+
+	/*************************************Start of the Social Links Options*************************************/
+
+	$wp_customize->add_panel( 'spacious_social_links_options', array(
+		'capabitity' => 'edit_theme_options',
+		'priority'   => 510,
+		'title'      => __( 'Social Links', 'spacious' ),
+	) );
+
+	// Social links activate option
+	$wp_customize->add_section( 'spacious_social_links_setting', array(
+		'priority' => 1,
+		'title'    => __( 'Activate social links area', 'spacious' ),
+		'panel'    => 'spacious_social_links_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_social_links]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'transport'         => $customizer_selective_refresh,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_activate_social_links]', array(
+		'type'     => 'checkbox',
+		'label'    => __( 'Check to activate social links area. You also need to activate the header top bar section in Header options to show this social links area', 'spacious' ),
+		'section'  => 'spacious_social_links_setting',
+		'settings' => $spacious_themename . '[spacious_activate_social_links]',
+	) );
+
+	// Selective refresh for social links enable
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_activate_social_links]', array(
+			'selector'        => '.social-links',
+			'render_callback' => '',
+		) );
+	}
+
+	$spacious_social_links = array(
+		'spacious_social_facebook'  => __( 'Facebook', 'spacious' ),
+		'spacious_social_twitter'   => __( 'Twitter', 'spacious' ),
+		'spacious_social_instagram' => __( 'Instagram', 'spacious' ),
+		'spacious_social_linkedin'  => __( 'LinkedIn', 'spacious' ),
+	);
+
+	$i = 1;
+	foreach ( $spacious_social_links as $key => $value ) {
+
+		$wp_customize->add_section( 'spacious_social_sites_section' . $i, array(
+			'priority' => 2,
+			'title'    => $value,
+			'panel'    => 'spacious_social_links_options',
+		) );
+
+		// adding social sites link
+		$wp_customize->add_setting( $spacious_themename . '[' . $key . ']', array(
+			'default'           => '',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw',
+		) );
+
+		$wp_customize->add_control( $spacious_themename . '[' . $key . ']', array(
+			'label'   => sprintf( __( 'Add link for %1$s', 'spacious' ), $value ),
+			'section' => 'spacious_social_sites_section' . $i,
+			'setting' => $spacious_themename . '[' . $key . ']',
+		) );
+
+		// adding social open in new page tab setting
+		$wp_customize->add_setting( $spacious_themename . '[' . $key . 'new_tab]', array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		) );
+
+		$wp_customize->add_control( $spacious_themename . '[' . $key . 'new_tab]', array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Check to show in new tab', 'spacious' ),
+			'section' => 'spacious_social_sites_section' . $i,
+			'setting' => $spacious_themename . '[' . $key . 'new_tab]',
+		) );
+
+		$i ++;
+
+	}
 
 	/****************************************Start of the Design Options****************************************/
 	$wp_customize->add_panel( 'spacious_design_options', array(

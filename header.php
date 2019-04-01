@@ -19,9 +19,9 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php
 	/**
 	 * This hook is important for wordpress plugins and other many things
@@ -44,6 +44,26 @@
 	?>
 
 	<header id="masthead" class="site-header clearfix <?php echo esc_attr( $header_class ); ?>">
+
+		<?php if ( spacious_options( 'spacious_activate_top_header_bar', 0 ) == 1 ) { ?>
+			<div id="header-meta">
+				<div class="inner-wrap clearfix">
+					<?php
+					if ( spacious_options( 'spacious_activate_social_links', 0 ) == 1 ) {
+						spacious_social_links();
+					}
+					spacious_header_info_text();
+					?>
+					<nav class="small-menu" class="clearfix">
+						<?php
+						if ( has_nav_menu( 'header' ) ) {
+							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => - 1 ) );
+						}
+						?>
+					</nav>
+				</div>
+			</div>
+		<?php } ?>
 
 		<?php if ( 'above' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
