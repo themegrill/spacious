@@ -815,6 +815,40 @@ function spacious_customize_register( $wp_customize ) {
 	}
 	// End of Slider Options
 
+	/****************************************Start of the Footer Options****************************************/
+
+	$wp_customize->add_panel( 'spacious_footer_options', array(
+		'capabitity' => 'edit_theme_options',
+		'priority'   => 545,
+		'title'      => __( 'Footer', 'spacious' ),
+	) );
+
+	// Footer widgets select type
+	$wp_customize->add_section( 'spacious_footer_column_select_section', array(
+		'priority' => 5,
+		'title'    => __( 'Footer Widgets Column', 'spacious' ),
+		'panel'    => 'spacious_footer_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_footer_widget_column_select_type]', array(
+		'default'           => 'four',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_radio_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_footer_widget_column_select_type]', array(
+		'type'    => 'select',
+		'label'   => __( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
+		'choices' => array(
+			'one'   => __( 'One Column', 'spacious' ),
+			'two'   => __( 'Two Column', 'spacious' ),
+			'three' => __( 'Three Column', 'spacious' ),
+			'four'  => __( 'Four Column', 'spacious' ),
+		),
+		'section' => 'spacious_footer_column_select_section',
+	) );
+
 	/****************************************Start of the data sanitization****************************************/
 	// radio/select sanitization
 	function spacious_radio_select_sanitize( $input, $setting ) {
@@ -843,6 +877,18 @@ function spacious_customize_register( $wp_customize ) {
 		}
 
 		return $input;
+	}
+
+	// Radio and Select Sanitization
+	function spacious_radio_sanitize( $input, $setting ) {
+		// Ensure input is a slug.
+		$input = sanitize_key( $input );
+
+		// Get list of choices from the control associated with the setting.
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+
+		// If the input is a valid key, return it; otherwise, return the default.
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 
 	// text-area sanitize
