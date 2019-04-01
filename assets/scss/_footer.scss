@@ -1,3 +1,38 @@
+/* =SECONDARY MENUS
+----------------------------------------------- */
+
+.small-menu {
+	float: right;
+	li {
+		float: left;
+		position: relative;
+		font-family: 'Lato', sans-serif;
+		&.default-menu {
+			display: none;
+		}
+	}
+}
+
+li.default-menu {
+	display: none;
+}
+
+.small-menu {
+	a {
+		color: #666666;
+		display: block;
+		padding: 5px 0 0 16px;
+		font-size: 12px;
+		&:hover {
+			color: #0FBE7C;
+		}
+	}
+	ul li {
+		&.current-menu-item a, &.current_page_ancestor a, &.current-menu-ancestor a, &.current_page_item a, &:hover > a {
+			color: #0FBE7C;
+		}
+	}
+}
 
 /* =FOOTER WIDGET AREA
 ----------------------------------------------- */
@@ -88,7 +123,7 @@
 		a {
 			padding-top: 0;
 		}
-		
+
 		ul li ul {
 			top: 21px;
 		}

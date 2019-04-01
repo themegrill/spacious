@@ -109,12 +109,84 @@ h3#site-title {
 	vertical-align: middle;
 	padding: 3px 7px;
 }
+/* =HEADER INFO TEXT
+----------------------------------------------- */
+
+.small-info-text {
+	float: left;
+	max-width: 100%;
+	padding-right: 15px;
+	padding-top: 2px;
+
+	p {
+		font-size: 12px;
+		color: #555555;
+		margin-bottom: 0;
+	}
+}
+
+/* =SOCIAL LINKS
+----------------------------------------------- */
+
+.social-links {
+	max-width: 100%;
+	float: left;
+	padding-right: 15px;
+
+	ul li {
+		padding: 5px 15px 5px 0px;
+		float: left;
+
+		a {
+			background-repeat: no-repeat;
+		}
+	}
+
+	i {
+		font-size: 18px;
+		vertical-align: top;
+	}
+
+	ul li {
+		 &.spacious-facebook,  &.spacious-instagram, &.spacious-linkedin, &.spacious-twitter {
+			a:before {
+				display: inline-block;
+				-webkit-font-smoothing: antialiased;
+				font: normal 18px/1 'FontAwesome';
+				vertical-align: top;
+			}
+		}
+		&.spacious-facebook a:before {
+			content: '\f082';
+			color: #3b5998;
+		}
+
+		&.spacious-instagram a:before {
+			content: '\f16d';
+			color: #3f729b;
+		}
+		&.spacious-linkedin a:before {
+			content: '\f08c';
+			color: #0e76a8;
+		}
+		&.spacious-twitter a:before {
+			content: '\f099';
+			color: #33ccff;
+		}
+		&.spacious-facebook a:hover, &.spacious-instagram a:hover, &.spacious-linkedin a:hover, &.spacious-twitter a:hover,
+		a i:hover {
+			opacity: 0.8;
+			filter: alpha(opacity = 80);
+			/* For IE8 and earlier */
+		}
+	}
+}
 
 /* =NAVIGATION
 ----------------------------------------------- */
 
 nav li > {
-	ul, 
+	ul,
 	ol {
 		margin: 0;
 		list-style: none;
@@ -224,7 +296,7 @@ li.default-menu {
 			}
 
 			ul {
-				li:hover ul ul, 
+				li:hover ul ul,
 				ul li:hover ul ul {
 					display: none;
 					z-index: 9999;
@@ -235,16 +307,16 @@ li.default-menu {
 				}
 
 				ul {
-					li:hover > ul, 
+					li:hover > ul,
 					ul li:hover > ul {
 						display: block;
 					}
 				}
 			}
 		}
-		
+
 		li {
-			
+
 			ul {
 				position: absolute;
 				background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
@@ -294,7 +366,7 @@ li.default-menu {
 			}
 
 			ul li {
-				a:hover, 
+				a:hover,
 				&:hover > a {
 					background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
 					color: #0FBE7C;
@@ -432,10 +504,10 @@ li.default-menu {
 	}
 
 	ul li {
-		&.current-menu-item a, 
+		&.current-menu-item a,
 		&.current_page_ancestor a,
-		&.current-menu-ancestor a, 
-		&.current_page_item a, 
+		&.current-menu-ancestor a,
+		&.current_page_item a,
 		&:hover > a {
 			color: #0FBE7C;
 		}
@@ -446,7 +518,7 @@ li.default-menu {
 ----------------------------------------------- */
 
 .spacious-header-display-four {
-	
+
 	.bottom-menu {
 		.main-navigation {
 			float: none;

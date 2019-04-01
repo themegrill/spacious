@@ -817,6 +817,15 @@ function spacious_customize_register( $wp_customize ) {
 		}
 	}
 
+	// editor sanitization
+	function spacious_editor_sanitize( $input ) {
+		if ( isset( $input ) ) {
+			$input = stripslashes( wp_filter_post_kses( addslashes( $input ) ) );
+		}
+
+		return $input;
+	}
+
 	// text-area sanitize
 	function spacious_text_sanitize( $input ) {
 		return wp_kses_post( force_balance_tags( $input ) );
