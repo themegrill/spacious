@@ -250,6 +250,25 @@ function spacious_customize_register( $wp_customize ) {
 		'section' => 'spacious_new_menu',
 	) );
 
+	// Search icon.
+	$wp_customize->add_section( 'spacious_header_search_icon', array(
+		'priority' => 9,
+		'title'    => __( 'Search icon', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+	$wp_customize->add_setting( 'spacious[spacious_header_search_icon]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( 'spacious[spacious_header_search_icon]', array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Show search icon in header.', 'spacious' ),
+		'section' => 'spacious_header_search_icon',
+	) );
+
 	// End of Header Options
 
 	/*************************************Start of the Social Links Options*************************************/

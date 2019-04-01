@@ -530,3 +530,56 @@ li.default-menu {
 		}
 	}
 }
+
+.header-action {
+	position: relative;
+	float:right;
+
+	.search-wrapper {
+		float:right;
+		padding: 17px 10px;
+		position: relative;
+		line-height: 26px;
+		cursor: pointer;
+
+		&:hover {
+			.fa {
+				color:#0FBE7C;
+			}
+		}
+
+		.header-search-form {
+			visibility: hidden;
+			opacity:0;
+			position: absolute;
+			right: -15px;
+			width: 180px;
+			top: 170%;
+			transition: 0.9s  ease-in-out;
+			background: #ffffff;
+			padding-top:10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			box-shadow: 0 0 6px rgba(0,0,0,.1);
+			z-index: 99999;
+
+			&.show {
+				visibility: visible;
+				opacity:1;
+				top: 100%;
+
+			}
+
+			.search-wrap {
+				input.s {
+					vertical-align: top;
+					width: 140px;
+
+					&:focus{
+						outline: none;
+					}
+				}
+			}
+		}
+	}
+}

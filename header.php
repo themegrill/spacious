@@ -129,6 +129,21 @@
 							<?php
 						} ?>
 
+						<div class="header-action">
+							<?php
+							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+								?>
+								<div class="search-wrapper">
+									<div class="search">
+										<i class="fa fa-search"> </i>
+									</div>
+									<div class="header-search-form">
+										<?php get_search_form(); ?>
+									</div>
+								</div><!-- /.search-wrapper -->
+							<?php endif; ?>
+						</div>
+
 						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
 							spacious_main_nav();
 						endif; ?>
