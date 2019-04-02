@@ -849,6 +849,41 @@ function spacious_customize_register( $wp_customize ) {
 		'section' => 'spacious_footer_column_select_section',
 	) );
 
+	/**************************************Start of the WooCommerce Options*************************************/
+
+	if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+
+		$wp_customize->add_panel( 'spacious_woocommerce_options', array(
+			'priority'   => 570,
+			'title'      => __( 'WooCommerce', 'spacious' ),
+			'capability' => 'edit_theme_options',
+		) );
+
+		// Section: WooCommerce additional options.
+		$wp_customize->add_section( 'spacious_woocommerce_additional', array(
+			'priority' => 3,
+			'title'    => __( 'Additional', 'spacious' ),
+			'panel'    => 'spacious_woocommerce_options',
+		) );
+
+		// Setting: WooCommerce cart icon.
+		$wp_customize->add_setting( $spacious_themename . '[spacious_cart_icon]', array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		) );
+
+		$wp_customize->add_control( 'spacious[spacious_cart_icon]', array(
+			'type'     => 'checkbox',
+			'label'    => __( 'Check to show WooCommerce cart icon on menu bar', 'spacious' ),
+			'section'  => 'spacious_woocommerce_additional',
+			'settings' => $spacious_themename . '[spacious_cart_icon]',
+		) );
+
+	}
+	// End of the WooCommerce Options.
+
 	/****************************************Start of the data sanitization****************************************/
 	// radio/select sanitization
 	function spacious_radio_select_sanitize( $input, $setting ) {

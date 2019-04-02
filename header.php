@@ -131,6 +131,8 @@
 
 						<div class="header-action">
 							<?php
+							spacious_cart_icon();
+
 							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
 								?>
 								<div class="search-wrapper">

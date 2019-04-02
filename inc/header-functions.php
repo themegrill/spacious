@@ -69,6 +69,45 @@ if ( ! function_exists( 'spacious_header_info_text' ) ) :
 
 endif;
 
+/*	 * ************************************* WooCommerce cart icon ************************************** */
+if ( ! function_exists( 'spacious_cart_icon' ) ) :
+
+	/**
+	 * Display cart icon on menu bar.
+	 *
+	 * show cart icon if activated from customizer
+	 */
+	function spacious_cart_icon() {
+		if ( ( spacious_options( 'spacious_cart_icon', 0 ) == 1 ) && class_exists( 'woocommerce' ) ) :
+			?>
+			<div class="cart-wrapper">
+				<div class="spacious-woocommerce-cart-views">
+
+					<!-- Show cart icon with total cart item -->
+					<?php $cart_url = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : WC()->cart->get_cart_url(); ?>
+
+					<a href="<?php echo esc_url( $cart_url ); ?>" class="wcmenucart-contents">
+						<i class="fa fa-shopping-cart"></i>
+						<span class="cart-value"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></span>
+					</a>
+
+					<!-- Show total cart price -->
+					<div class="spacious-woocommerce-cart-wrap">
+						<div class="spacious-woocommerce-cart"><?php esc_html_e( 'Total', 'spacious' ); ?></div>
+						<div class="cart-total"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></div>
+					</div>
+				</div>
+
+				<!-- WooCommerce Cart Widget -->
+				<?php the_widget( 'WC_Widget_Cart', '' ); ?>
+
+			</div> <!-- /.cart-wrapper -->
+		<?php
+		endif;
+	}
+
+endif;
+
 /****************************************************************************************/
 // Filter the get_header_image_tag() for supporting the older way of displaying the header image
 function spacious_header_image_markup( $html, $header, $attr ) {
