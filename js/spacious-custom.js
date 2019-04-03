@@ -35,7 +35,7 @@ jQuery( document ).ready( function () {
 	};
 
 	// On Search icon click.
-	jQuery( '#header-right-section .search' ).click( function () {
+	jQuery( '#header-right-section .search, .bottom-menu .search' ).click( function () {
 		jQuery( this ).next( '.header-search-form' ).toggleClass( 'show' );
 
 		// focus after some time to fix conflict with toggleClass

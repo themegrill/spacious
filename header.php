@@ -129,6 +129,7 @@
 							<?php
 						} ?>
 
+						<?php if ( 'four' !== spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
 						<div class="header-action">
 							<?php
 							spacious_cart_icon();
@@ -145,6 +146,7 @@
 								</div><!-- /.search-wrapper -->
 							<?php endif; ?>
 						</div>
+						<?php endif; ?>
 
 						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
 							spacious_main_nav();
@@ -158,6 +160,23 @@
 				<div class="bottom-menu clearfix">
 					<div class="inner-wrap">
 						<?php spacious_main_nav(); ?>
+
+						<div class="header-action">
+							<?php
+							spacious_cart_icon();
+
+							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+								?>
+								<div class="search-wrapper">
+									<div class="search">
+										<i class="fa fa-search"> </i>
+									</div>
+									<div class="header-search-form">
+										<?php get_search_form(); ?>
+									</div>
+								</div><!-- /.search-wrapper -->
+							<?php endif; ?>
+						</div>
 					</div>
 				</div>
 			<?php endif; ?>

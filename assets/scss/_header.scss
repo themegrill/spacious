@@ -411,6 +411,11 @@ li.default-menu {
 	padding: 17px 10px;
 	line-height: 26px;
 	cursor: pointer;
+
+	.bottom-menu & {
+		padding: 0 10px 0 25px;
+		margin-top: -3px;
+	}
 }
 
 .spacious-woocommerce-cart-views {
@@ -440,7 +445,8 @@ li.default-menu {
 	}
 }
 
-#header-right-section .cart-wrapper {
+#header-right-section .cart-wrapper,
+.bottom-menu .cart-wrapper {
 	.widget_shopping_cart {
 		position: absolute;
 		width: 250px;
@@ -685,12 +691,21 @@ li.default-menu {
 	position: relative;
 	float: right;
 
+	.bottom-menu & {
+		float: left;
+	}
+
 	.search-wrapper {
 		float: right;
 		padding: 17px 10px;
 		position: relative;
 		line-height: 26px;
 		cursor: pointer;
+
+		.bottom-menu & {
+			padding: 0 0 0 25px;
+			margin-top: -3px;
+		}
 
 		&:hover {
 			.fa {
