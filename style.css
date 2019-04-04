@@ -2732,6 +2732,8 @@ li.default-menu {
 	color: #D5D5D5;
 }
 
+.footer-widgets-area .tg-one-half p,
+.footer-widgets-area .tg-one-third p,
 .footer-widgets-area .tg-one-fourth p {
 	text-align: left;
 	color: #999999;
@@ -2926,6 +2928,12 @@ li.default-menu {
 	.tg-one-half, .tg-one-third, .tg-one-fourth {
 		float: left;
 		width: 46.7684729%;
+	}
+	#colophon .tg-one-third {
+		float: left;
+		margin: 0 2.46305%;
+		padding: 0 0 30px;
+		width: 28.4072%;
 	}
 	.widget_service_block .tg-one-third {
 		float: left;
@@ -3196,6 +3204,11 @@ li.default-menu {
 		width: 100%;
 	}
 	.related-posts {
+		margin: 0;
+	}
+	#colophon .tg-one-third {
+		float: none;
+		width: 100%;
 		margin: 0;
 	}
 }
