@@ -32,8 +32,8 @@ if ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 
 	$footer_column_four  = '';
 } elseif ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'three' ) {
 	$footer_column_one   = 'tg-one-third';
-	$footer_column_two   = 'tg-one-third';
-	$footer_column_three = 'tg-one-third';
+	$footer_column_two   = 'tg-one-third tg-column-2';
+	$footer_column_three = 'tg-one-third tg-after-two-blocks-clearfix';
 	$footer_column_four  = '';
 } elseif ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'four' ) {
 	$footer_column_one   = 'tg-one-fourth tg-column-1';
