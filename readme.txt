@@ -46,6 +46,14 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Feature - Added social icons option
+* Feature - Added Header top menu
+* Feature - Added Header top info text option
+* Feature - Added search icon display in menu
+* Feature - Added cart icon display in menu for WooCommerce
+* Feature - Added footer sidebar column option
+
 = Version 1.6.1 - 2019-03-26 =
 * Fix - Upload Theme button not working
 
