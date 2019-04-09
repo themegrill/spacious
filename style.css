@@ -469,6 +469,10 @@ a:focus, a:active, a:hover {
 	text-decoration: none;
 }
 
+a:focus {
+	outline: none;
+}
+
 /* =IMAGES
 ----------------------------------------------- */
 figure {

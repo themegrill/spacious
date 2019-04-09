@@ -525,6 +525,10 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 /* =IMAGES
