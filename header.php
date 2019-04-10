@@ -19,9 +19,9 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11"/>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php
 	/**
 	 * This hook is important for wordpress plugins and other many things
@@ -44,6 +44,26 @@
 	?>
 
 	<header id="masthead" class="site-header clearfix <?php echo esc_attr( $header_class ); ?>">
+
+		<?php if ( spacious_options( 'spacious_activate_top_header_bar', 0 ) == 1 ) { ?>
+			<div id="header-meta">
+				<div class="inner-wrap clearfix">
+					<?php
+					if ( spacious_options( 'spacious_activate_social_links', 0 ) == 1 ) {
+						spacious_social_links();
+					}
+					spacious_header_info_text();
+					?>
+					<nav class="small-menu" class="clearfix">
+						<?php
+						if ( has_nav_menu( 'header' ) ) {
+							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => - 1 ) );
+						}
+						?>
+					</nav>
+				</div>
+			</div>
+		<?php } ?>
 
 		<?php if ( 'above' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
@@ -109,6 +129,25 @@
 							<?php
 						} ?>
 
+						<?php if ( 'four' !== spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
+						<div class="header-action">
+							<?php
+							spacious_cart_icon();
+
+							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+								?>
+								<div class="search-wrapper">
+									<div class="search">
+										<i class="fa fa-search"> </i>
+									</div>
+									<div class="header-search-form">
+										<?php get_search_form(); ?>
+									</div>
+								</div><!-- /.search-wrapper -->
+							<?php endif; ?>
+						</div>
+						<?php endif; ?>
+
 						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
 							spacious_main_nav();
 						endif; ?>
@@ -121,6 +160,23 @@
 				<div class="bottom-menu clearfix">
 					<div class="inner-wrap">
 						<?php spacious_main_nav(); ?>
+
+						<div class="header-action">
+							<?php
+							spacious_cart_icon();
+
+							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+								?>
+								<div class="search-wrapper">
+									<div class="search">
+										<i class="fa fa-search"> </i>
+									</div>
+									<div class="header-search-form">
+										<?php get_search_form(); ?>
+									</div>
+								</div><!-- /.search-wrapper -->
+							<?php endif; ?>
+						</div>
 					</div>
 				</div>
 			<?php endif; ?>

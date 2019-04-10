@@ -26,6 +26,48 @@ jQuery( document ).ready( function () {
 		jQuery(this).parent('.menu-item-has-children').children('ul.sub-menu').first().slideToggle('1000');
 		jQuery(this).children('.sub-toggle .fa').first().toggleClass('fa-caret-down fa-caret-right');
 	});
+
+	/**
+	 * Search
+	 */
+	var hideSearchForm = function() {
+		jQuery( '.header-search-form' ).removeClass( 'show' );
+	};
+
+	// On Search icon click.
+	jQuery( '#header-right-section .search, .bottom-menu .search' ).click( function () {
+		jQuery( this ).next( '.header-search-form' ).toggleClass( 'show' );
+
+		// focus after some time to fix conflict with toggleClass
+		setTimeout( function () {
+			jQuery( '.header-search-form.show input' ).focus();
+		}, 200 );
+
+		// For esc key press.
+		jQuery( document ).on( 'keyup', function ( e ) {
+
+			// on esc key press.
+			if ( 27 === e.keyCode ) {
+				// if search box is opened
+				if ( jQuery( '.header-search-form' ).hasClass( 'show' ) ) {
+					hideSearchForm();
+				}
+
+			}
+		} );
+
+		jQuery( document ).on( 'click.outEvent', function( e ) {
+			if ( e.target.closest( '.search-wrapper' )  ) {
+				return;
+			}
+
+			hideSearchForm();
+
+			// Unbind current click event.
+			jQuery( document ).off( 'click.outEvent' );
+		} );
+
+	} );
 });
 
 /**

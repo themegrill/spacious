@@ -124,38 +124,47 @@ function spacious_widgets_init() {
 		'after_title'   => '</span></h3>',
 	) );
 
-	// Registering footer sidebar two
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Sidebar Two', 'spacious' ),
-		'id'            => 'spacious_footer_sidebar_two',
-		'description'   => esc_html__( 'Shows widgets at footer sidebar two.', 'spacious' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title"><span>',
-		'after_title'   => '</span></h3>',
-	) );
+	// custom footer sidebar column select
+	$sidebar_num = '';
+	$sidebar_num = spacious_options( 'spacious_footer_widget_column_select_type', 'four' );
+	if ( $sidebar_num == 'four' || $sidebar_num == 'three' || $sidebar_num == 'two' ) {
+		// Registering footer sidebar two
+		register_sidebar( array(
+			'name'          => esc_html__( 'Footer Sidebar Two', 'spacious' ),
+			'id'            => 'spacious_footer_sidebar_two',
+			'description'   => esc_html__( 'Shows widgets at footer sidebar two.', 'spacious' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		) );
+	}
 
-	// Registering footer sidebar three
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Sidebar Three', 'spacious' ),
-		'id'            => 'spacious_footer_sidebar_three',
-		'description'   => esc_html__( 'Shows widgets at footer sidebar three.', 'spacious' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title"><span>',
-		'after_title'   => '</span></h3>',
-	) );
+	if ( $sidebar_num == 'four' || $sidebar_num == 'three' ) {
+		// Registering footer sidebar three
+		register_sidebar( array(
+			'name'          => esc_html__( 'Footer Sidebar Three', 'spacious' ),
+			'id'            => 'spacious_footer_sidebar_three',
+			'description'   => esc_html__( 'Shows widgets at footer sidebar three.', 'spacious' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		) );
+	}
 
-	// Registering footer sidebar four
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Sidebar Four', 'spacious' ),
-		'id'            => 'spacious_footer_sidebar_four',
-		'description'   => esc_html__( 'Shows widgets at footer sidebar four.', 'spacious' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title"><span>',
-		'after_title'   => '</span></h3>',
-	) );
+	if ( $sidebar_num == 'four' ) {
+		// Registering footer sidebar four
+		register_sidebar( array(
+			'name'          => esc_html__( 'Footer Sidebar Four', 'spacious' ),
+			'id'            => 'spacious_footer_sidebar_four',
+			'description'   => esc_html__( 'Shows widgets at footer sidebar four.', 'spacious' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		) );
+	}
 
 	// Registering widgets
 	register_widget( 'spacious_featured_single_page_widget' );

@@ -13,6 +13,7 @@ function spacious_customize_register( $wp_customize ) {
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
@@ -130,6 +131,56 @@ function spacious_customize_register( $wp_customize ) {
 		),
 	) );
 
+	// Header Top bar activate option
+	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
+		'priority' => 2,
+		'title'    => __( 'Activate Header Top Bar', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_top_header_bar]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_activate_top_header_bar]', array(
+		'type'     => 'checkbox',
+		'label'    => __( 'Check to show top header bar. The top header bar includes social icons area, small text area and menu area.', 'spacious' ),
+		'section'  => 'spacious_header_top_bar_activate_section',
+		'settings' => $spacious_themename . '[spacious_activate_top_header_bar]',
+	) );
+
+	// Header area small text option
+	$wp_customize->add_section( 'spacious_header_small_text_section', array(
+		'priority' => 2,
+		'title'    => __( 'Header Info Text', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_info_text]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => $customizer_selective_refresh,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_editor_sanitize',
+	) );
+
+	$wp_customize->add_control( new Spacious_Editor_Custom_Control( $wp_customize, $spacious_themename . '[spacious_header_info_text]', array(
+		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
+		'section' => 'spacious_header_small_text_section',
+		'setting' => $spacious_themename . '[spacious_header_info_text]',
+	) ) );
+
+	// Selective refresh for header information text
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_header_info_text]', array(
+			'selector'        => '.small-info-text p',
+			'render_callback' => 'spacious_header_info_text',
+		) );
+	}
+
 	// Header display type option
 	$wp_customize->add_section( 'spacious_header_display_type_option', array(
 		'priority' => 2,
@@ -199,7 +250,113 @@ function spacious_customize_register( $wp_customize ) {
 		'section' => 'spacious_new_menu',
 	) );
 
+	// Search icon.
+	$wp_customize->add_section( 'spacious_header_search_icon', array(
+		'priority' => 9,
+		'title'    => __( 'Search icon', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+	$wp_customize->add_setting( 'spacious[spacious_header_search_icon]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( 'spacious[spacious_header_search_icon]', array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Show search icon in header.', 'spacious' ),
+		'section' => 'spacious_header_search_icon',
+	) );
+
 	// End of Header Options
+
+	/*************************************Start of the Social Links Options*************************************/
+
+	$wp_customize->add_panel( 'spacious_social_links_options', array(
+		'capabitity' => 'edit_theme_options',
+		'priority'   => 510,
+		'title'      => __( 'Social Links', 'spacious' ),
+	) );
+
+	// Social links activate option
+	$wp_customize->add_section( 'spacious_social_links_setting', array(
+		'priority' => 1,
+		'title'    => __( 'Activate social links area', 'spacious' ),
+		'panel'    => 'spacious_social_links_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_social_links]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'transport'         => $customizer_selective_refresh,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_activate_social_links]', array(
+		'type'     => 'checkbox',
+		'label'    => __( 'Check to activate social links area. You also need to activate the header top bar section in Header options to show this social links area', 'spacious' ),
+		'section'  => 'spacious_social_links_setting',
+		'settings' => $spacious_themename . '[spacious_activate_social_links]',
+	) );
+
+	// Selective refresh for social links enable
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_activate_social_links]', array(
+			'selector'        => '.social-links',
+			'render_callback' => '',
+		) );
+	}
+
+	$spacious_social_links = array(
+		'spacious_social_facebook'  => __( 'Facebook', 'spacious' ),
+		'spacious_social_twitter'   => __( 'Twitter', 'spacious' ),
+		'spacious_social_instagram' => __( 'Instagram', 'spacious' ),
+		'spacious_social_linkedin'  => __( 'LinkedIn', 'spacious' ),
+	);
+
+	$i = 1;
+	foreach ( $spacious_social_links as $key => $value ) {
+
+		$wp_customize->add_section( 'spacious_social_sites_section' . $i, array(
+			'priority' => 2,
+			'title'    => $value,
+			'panel'    => 'spacious_social_links_options',
+		) );
+
+		// adding social sites link
+		$wp_customize->add_setting( $spacious_themename . '[' . $key . ']', array(
+			'default'           => '',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw',
+		) );
+
+		$wp_customize->add_control( $spacious_themename . '[' . $key . ']', array(
+			'label'   => sprintf( __( 'Add link for %1$s', 'spacious' ), $value ),
+			'section' => 'spacious_social_sites_section' . $i,
+			'setting' => $spacious_themename . '[' . $key . ']',
+		) );
+
+		// adding social open in new page tab setting
+		$wp_customize->add_setting( $spacious_themename . '[' . $key . 'new_tab]', array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		) );
+
+		$wp_customize->add_control( $spacious_themename . '[' . $key . 'new_tab]', array(
+			'type'    => 'checkbox',
+			'label'   => __( 'Check to show in new tab', 'spacious' ),
+			'section' => 'spacious_social_sites_section' . $i,
+			'setting' => $spacious_themename . '[' . $key . 'new_tab]',
+		) );
+
+		$i ++;
+
+	}
 
 	/****************************************Start of the Design Options****************************************/
 	$wp_customize->add_panel( 'spacious_design_options', array(
@@ -658,6 +815,75 @@ function spacious_customize_register( $wp_customize ) {
 	}
 	// End of Slider Options
 
+	/****************************************Start of the Footer Options****************************************/
+
+	$wp_customize->add_panel( 'spacious_footer_options', array(
+		'capabitity' => 'edit_theme_options',
+		'priority'   => 545,
+		'title'      => __( 'Footer', 'spacious' ),
+	) );
+
+	// Footer widgets select type
+	$wp_customize->add_section( 'spacious_footer_column_select_section', array(
+		'priority' => 5,
+		'title'    => __( 'Footer Widgets Column', 'spacious' ),
+		'panel'    => 'spacious_footer_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_footer_widget_column_select_type]', array(
+		'default'           => 'four',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_radio_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_footer_widget_column_select_type]', array(
+		'type'    => 'select',
+		'label'   => __( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
+		'choices' => array(
+			'one'   => __( 'One Column', 'spacious' ),
+			'two'   => __( 'Two Column', 'spacious' ),
+			'three' => __( 'Three Column', 'spacious' ),
+			'four'  => __( 'Four Column', 'spacious' ),
+		),
+		'section' => 'spacious_footer_column_select_section',
+	) );
+
+	/**************************************Start of the WooCommerce Options*************************************/
+
+	if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+
+		$wp_customize->add_panel( 'spacious_woocommerce_options', array(
+			'priority'   => 570,
+			'title'      => __( 'WooCommerce', 'spacious' ),
+			'capability' => 'edit_theme_options',
+		) );
+
+		// Section: WooCommerce additional options.
+		$wp_customize->add_section( 'spacious_woocommerce_additional', array(
+			'priority' => 3,
+			'title'    => __( 'Additional', 'spacious' ),
+			'panel'    => 'spacious_woocommerce_options',
+		) );
+
+		// Setting: WooCommerce cart icon.
+		$wp_customize->add_setting( $spacious_themename . '[spacious_cart_icon]', array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		) );
+
+		$wp_customize->add_control( 'spacious[spacious_cart_icon]', array(
+			'type'     => 'checkbox',
+			'label'    => __( 'Check to show WooCommerce cart icon on menu bar', 'spacious' ),
+			'section'  => 'spacious_woocommerce_additional',
+			'settings' => $spacious_themename . '[spacious_cart_icon]',
+		) );
+
+	}
+	// End of the WooCommerce Options.
+
 	/****************************************Start of the data sanitization****************************************/
 	// radio/select sanitization
 	function spacious_radio_select_sanitize( $input, $setting ) {
@@ -677,6 +903,27 @@ function spacious_customize_register( $wp_customize ) {
 		} else {
 			return '';
 		}
+	}
+
+	// editor sanitization
+	function spacious_editor_sanitize( $input ) {
+		if ( isset( $input ) ) {
+			$input = stripslashes( wp_filter_post_kses( addslashes( $input ) ) );
+		}
+
+		return $input;
+	}
+
+	// Radio and Select Sanitization
+	function spacious_radio_sanitize( $input, $setting ) {
+		// Ensure input is a slug.
+		$input = sanitize_key( $input );
+
+		// Get list of choices from the control associated with the setting.
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+
+		// If the input is a valid key, return it; otherwise, return the default.
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 
 	// text-area sanitize

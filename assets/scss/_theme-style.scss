@@ -525,6 +525,10 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 /* =IMAGES
@@ -976,6 +980,17 @@ body {
 	width: 28.407225%;
 	margin: 0 2.46305419%;
 	padding: 0px 0px 30px;
+
+	#colophon & {
+		width: 31.7405583%;
+		margin-left: 0;
+		margin-right: 2.38916257%;
+
+		&.tg-after-two-blocks-clearfix {
+			margin-right: 0;
+			float: right;
+		}
+	}
 }
 
 .tg-one-fourth {
@@ -2180,4 +2195,18 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
 
 .date .updated {
 	display: none;
+}
+
+body {
+	&.page-template-page-builder {
+		#primary {
+			float: none;
+			width: 100%;
+		}
+
+		#main {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
 }

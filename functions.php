@@ -101,6 +101,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 
 		// Registering navigation menus.
 		register_nav_menus( array(
+			'header'  => esc_html__( 'Header Menu', 'spacious' ),
 			'primary' => esc_html__( 'Primary Menu', 'spacious' ),
 			'footer'  => esc_html__( 'Footer Menu', 'spacious' ),
 		) );
