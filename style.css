@@ -2018,6 +2018,15 @@ div#wp-custom-header:hover .wp-custom-header-video-button {
 	display: none;
 }
 
+body.page-template-page-builder #primary {
+	float: none;
+	width: 100%;
+}
+
+body.page-template-page-builder #main {
+	padding-top: 0;
+}
+
 /* =HEADER
 ----------------------------------------------- */
 #header-meta {
