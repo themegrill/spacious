@@ -46,8 +46,8 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
-* Added       - New Demo (Spacious Medical) - Aid your patient's health with the help of this Spacious Medical demo.
+= Version 1.6.2 - 2019-04-10 =
+* Added   - New Demo (Spacious Medical) - Aid your patient's health with the help of this Spacious Medical demo.
 * Feature - Added social icons option
 * Feature - Added Header top menu
 * Feature - Added Header top info text option
