@@ -431,7 +431,7 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-icon:before { color: ' . $primary_color . '; }
 			a#scroll-up { background-color: ' . $primary_color . '; }
-			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '}';
+			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '}.main-navigation .tg-header-button-wrap{ background:' . $primary_color . '}';
 	}
 
 	if ( ! empty( $spacious_internal_css ) ) {
@@ -886,3 +886,24 @@ function spacious_header_display_type_migrate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_header_display_type_migrate' );
+
+function spacious_header_menu_button( $items, $args ) {
+	$button_text   = spacious_options( 'spacious_header_button_setting' );
+	$button_link   = spacious_options( 'spacious_header_button_link_setting' );
+	$button_target = spacious_options( 'spacious_header_button_new_tab' );
+	$button_target = $button_target ? ' target="_blank"' : '';
+
+	if ( 'primary' === $args->theme_location ) {
+
+		$items .= '<li class="menu-item tg-header-button-wrap">';
+		$items .= '<a href="' . esc_url( $button_link ) . '"' . esc_attr( $button_target ) . '>';
+		$items .= $button_text;
+		$items .= '</a>';
+		$items .= '</li>';
+
+	}
+
+	return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'spacious_header_menu_button', 10, 2 );

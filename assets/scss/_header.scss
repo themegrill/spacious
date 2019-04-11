@@ -400,6 +400,27 @@ li.default-menu {
 	select {
 		display: none;
 	}
+
+	.tg-header-button-wrap {
+		padding: 15px;
+		background: #0FBE7C;
+		margin-top: -15px;
+		border-radius: 5px;
+		margin-left: 15px;
+
+		&:hover a {
+			color: #ffffff;
+		}
+
+		a {
+			color: #ffffff;
+			height: auto;
+
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
 }
 
 /* =CART ICON

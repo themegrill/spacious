@@ -230,6 +230,55 @@ function spacious_customize_register( $wp_customize ) {
 		),
 	) );
 
+	// Header Button option.
+	$wp_customize->add_section( 'spacious_header_button', array(
+		'priority' => 4,
+		'title'    => __( 'Header Button', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_setting]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'wp_filter_nohtml_kses',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_setting]', array(
+		'label'   => __( 'Button Text', 'spacious' ),
+		'section' => 'spacious_header_button',
+		'setting' => $spacious_themename . '[spacious_header_button_setting]'
+	) );
+
+	// Header button link.
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_link_setting]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_link_setting]', array(
+		'label'   => __( 'Button Link', 'spacious' ),
+		'section' => 'spacious_header_button',
+		'setting' => $spacious_themename . '[spacious_header_button_link_setting]'
+	) );
+
+	// Header button link in new tab.
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_new_tab]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_new_tab]', array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Open in new tab', 'spacious' ),
+		'section' => 'spacious_header_button',
+		'setting' => $spacious_themename . '[spacious_header_button_new_tab]',
+	) );
+
 	// Responsive collapse menu
 	$wp_customize->add_section( 'spacious_new_menu', array(
 		'priority' => 4,

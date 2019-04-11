@@ -2390,6 +2390,27 @@ li.default-menu {
 	display: none;
 }
 
+.main-navigation .tg-header-button-wrap {
+	padding: 15px;
+	background: #0FBE7C;
+	margin-top: -15px;
+	border-radius: 5px;
+	margin-left: 15px;
+}
+
+.main-navigation .tg-header-button-wrap:hover a {
+	color: #ffffff;
+}
+
+.main-navigation .tg-header-button-wrap a {
+	color: #ffffff;
+	height: auto;
+}
+
+.main-navigation .tg-header-button-wrap a:hover {
+	color: #ffffff;
+}
+
 /* =CART ICON
 ----------------------------------------------- */
 .cart-wrapper {
