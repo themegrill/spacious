@@ -247,7 +247,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_setting]', array(
 		'label'   => __( 'Button Text', 'spacious' ),
 		'section' => 'spacious_header_button',
-		'setting' => $spacious_themename . '[spacious_header_button_setting]'
+		'setting' => $spacious_themename . '[spacious_header_button_setting]',
 	) );
 
 	// Header button link.
@@ -261,7 +261,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_link_setting]', array(
 		'label'   => __( 'Button Link', 'spacious' ),
 		'section' => 'spacious_header_button',
-		'setting' => $spacious_themename . '[spacious_header_button_link_setting]'
+		'setting' => $spacious_themename . '[spacious_header_button_link_setting]',
 	) );
 
 	// Header button link in new tab.
@@ -460,10 +460,11 @@ function spacious_customize_register( $wp_customize ) {
 		'section'  => 'spacious_default_layout_setting',
 		'settings' => $spacious_themename . '[spacious_default_layout]',
 		'choices'  => array(
-			'right_sidebar'               => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
-			'left_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
-			'no_sidebar_full_width'       => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-			'no_sidebar_content_centered' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+			'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+			'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+			'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
 		),
 	) ) );
 
@@ -487,10 +488,11 @@ function spacious_customize_register( $wp_customize ) {
 		'section'  => 'spacious_default_page_layout_setting',
 		'settings' => $spacious_themename . '[spacious_pages_default_layout]',
 		'choices'  => array(
-			'right_sidebar'               => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
-			'left_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
-			'no_sidebar_full_width'       => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-			'no_sidebar_content_centered' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+			'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+			'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+			'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
 		),
 	) ) );
 
@@ -514,10 +516,11 @@ function spacious_customize_register( $wp_customize ) {
 		'section'  => 'spacious_default_single_posts_layout_setting',
 		'settings' => $spacious_themename . '[spacious_single_posts_default_layout]',
 		'choices'  => array(
-			'right_sidebar'               => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
-			'left_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
-			'no_sidebar_full_width'       => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-			'no_sidebar_content_centered' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+			'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+			'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+			'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
 		),
 	) ) );
 
