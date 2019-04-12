@@ -2662,6 +2662,10 @@ li.default-menu {
 	padding-left: 0;
 }
 
+.spacious-header-display-four .bottom-menu.header-menu-button {
+	padding-bottom: 15px;
+}
+
 .header-action {
 	position: relative;
 	float: right;
@@ -3266,6 +3270,19 @@ li.default-menu {
 }
 
 @media screen and (max-width: 600px) {
+	.site-header.spacious-header-display-four .bottom-menu {
+		position: relative;
+	}
+	.site-header.spacious-header-display-four .bottom-menu .header-action {
+		position: absolute;
+		right: 25px;
+		top: 35%;
+	}
+	.site-header.spacious-header-display-four .bottom-menu .spacious-woocommerce-cart-views .wcmenucart-contents,
+	.site-header.spacious-header-display-four .bottom-menu .search-wrapper {
+		color: #ffffff;
+		z-index: 9999;
+	}
 	.site-header.spacious-header-display-four .bottom-menu .menu-toggle {
 		position: relative;
 		right: 0;

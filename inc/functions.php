@@ -431,7 +431,7 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-icon:before { color: ' . $primary_color . '; }
 			a#scroll-up { background-color: ' . $primary_color . '; }
-			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '}.main-navigation .tg-header-button-wrap{ background:' . $primary_color . '}';
+			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '}.main-navigation .tg-header-button-wrap{ background:' . $primary_color . '}.main-navigation .tg-header-button-wrap:hover{ background:' . $primary_dark . '}';
 	}
 
 	if ( ! empty( $spacious_internal_css ) ) {

@@ -157,7 +157,7 @@
 				</div><!-- #header-text-nav-wrap -->
 			</div><!-- .inner-wrap -->
 			<?php if ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
-				<div class="bottom-menu clearfix">
+				<div class="bottom-menu clearfix <?php echo spacious_options( 'spacious_header_button_setting') ? 'header-menu-button' : ''; ?>">
 					<div class="inner-wrap">
 						<?php spacious_main_nav(); ?>
 
