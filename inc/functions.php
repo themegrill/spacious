@@ -227,7 +227,7 @@ function spacious_body_class( $classes ) {
 			} elseif ( $spacious_default_page_layout == 'no_sidebar_content_centered' ) {
 				$classes[] = 'no-sidebar';
 			} elseif ( $spacious_default_page_layout == 'no_sidebar_content_stretched' ) {
-				$classes[] = 'no-sidebar-stretched';
+				$classes[] = 'no-sidebar-content-stretched';
 			}
 		} elseif ( is_single() ) {
 			if ( $spacious_default_post_layout == 'right_sidebar' ) {
@@ -239,7 +239,7 @@ function spacious_body_class( $classes ) {
 			} elseif ( $spacious_default_post_layout == 'no_sidebar_content_centered' ) {
 				$classes[] = 'no-sidebar';
 			} elseif ( $spacious_default_post_layout == 'no_sidebar_content_stretched' ) {
-				$classes[] = 'no-sidebar-stretched';
+				$classes[] = 'no-sidebar-content-stretched';
 			}
 		} elseif ( $spacious_default_layout == 'right_sidebar' ) {
 			$classes[] = '';
@@ -249,6 +249,8 @@ function spacious_body_class( $classes ) {
 			$classes[] = 'no-sidebar-full-width';
 		} elseif ( $spacious_default_layout == 'no_sidebar_content_centered' ) {
 			$classes[] = 'no-sidebar';
+		} elseif ( $spacious_default_layout == 'no_sidebar_content_stretched' ) {
+			$classes[] = 'no-sidebar-content-stretched';
 		}
 	} elseif ( $layout_meta == 'right_sidebar' ) {
 		$classes[] = '';
@@ -258,6 +260,8 @@ function spacious_body_class( $classes ) {
 		$classes[] = 'no-sidebar-full-width';
 	} elseif ( $layout_meta == 'no_sidebar_content_centered' ) {
 		$classes[] = 'no-sidebar';
+	} elseif ( $layout_meta == 'no_sidebar_content_stretched' ) {
+		$classes[] = 'no-sidebar-content-stretched';
 	}
 
 	if ( spacious_options( 'spacious_new_menu', 0 ) == '1' ) {

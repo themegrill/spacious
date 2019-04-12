@@ -2209,4 +2209,19 @@ body {
 			padding-bottom: 0;
 		}
 	}
+
+	&.no-sidebar-content-stretched {
+		#main {
+
+			.inner-wrap {
+				width: 100%;
+				max-width: 100%;
+
+				#primary {
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+	}
 }
