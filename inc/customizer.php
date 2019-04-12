@@ -911,6 +911,60 @@ function spacious_customize_register( $wp_customize ) {
 			'capability' => 'edit_theme_options',
 		) );
 
+		// woocommerce archive page layout
+		$wp_customize->add_section( 'spacious_woocommerce_archive_page_layout_setting', array(
+			'priority' => 1,
+			'title'    => __( 'Archive Page Layout', 'spacious' ),
+			'panel'    => 'spacious_woocommerce_options',
+		) );
+
+		$wp_customize->add_setting( $spacious_themename . '[spacious_woo_archive_layout]', array(
+			'default'           => 'no_sidebar_full_width',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_sanitize',
+		) );
+
+		$wp_customize->add_control( new Spacious_Image_Radio_Control( $wp_customize, $spacious_themename . '[spacious_woo_archive_layout]', array(
+			'type'     => 'radio',
+			'label'    => __( 'This layout will be reflected in woocommerce archive page only.', 'spacious' ),
+			'section'  => 'spacious_woocommerce_archive_page_layout_setting',
+			'settings' => $spacious_themename . '[spacious_woo_archive_layout]',
+			'choices'  => array(
+				'right_sidebar'               => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+				'left_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+				'no_sidebar_full_width'       => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+				'no_sidebar_content_centered' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			),
+		) ) );
+
+		// WooCommerce product page layout
+		$wp_customize->add_section( 'spacious_woocommerce_product_page_layout_setting', array(
+			'priority' => 2,
+			'title'    => __( 'Product Page Layout', 'spacious' ),
+			'panel'    => 'spacious_woocommerce_options',
+		) );
+
+		$wp_customize->add_setting( $spacious_themename . '[spacious_woo_product_layout]', array(
+			'default'           => 'no_sidebar_full_width',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_sanitize',
+		) );
+
+		$wp_customize->add_control( new Spacious_Image_Radio_Control( $wp_customize, $spacious_themename . '[spacious_woo_product_layout]', array(
+			'type'     => 'radio',
+			'label'    => __( 'This layout will be reflected in woocommerce Product page.', 'spacious' ),
+			'section'  => 'spacious_woocommerce_product_page_layout_setting',
+			'settings' => $spacious_themename . '[spacious_woo_product_layout]',
+			'choices'  => array(
+				'right_sidebar'               => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+				'left_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+				'no_sidebar_full_width'       => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+				'no_sidebar_content_centered' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+			),
+		) ) );
+
 		// Section: WooCommerce additional options.
 		$wp_customize->add_section( 'spacious_woocommerce_additional', array(
 			'priority' => 3,

@@ -215,6 +215,8 @@ function spacious_body_class( $classes ) {
 	$spacious_default_layout      = spacious_options( 'spacious_default_layout', 'right_sidebar' );
 	$spacious_default_page_layout = spacious_options( 'spacious_pages_default_layout', 'right_sidebar' );
 	$spacious_default_post_layout = spacious_options( 'spacious_single_posts_default_layout', 'right_sidebar' );
+	$spacious_woo_archive_layout  = spacious_options( 'spacious_woo_archive_layout', 'no_sidebar_full_width' );
+	$spacious_woo_product_layout  = spacious_options( 'spacious_woo_product_layout', 'no_sidebar_full_width' );
 
 	if ( $layout_meta == 'default_layout' ) {
 		if ( is_page() ) {
@@ -229,6 +231,16 @@ function spacious_body_class( $classes ) {
 			} elseif ( $spacious_default_page_layout == 'no_sidebar_content_stretched' ) {
 				$classes[] = 'no-sidebar-content-stretched';
 			}
+		} elseif ( function_exists( 'spacious_is_in_woocommerce_page' ) && is_product() ) {
+			if ( $spacious_woo_product_layout == 'right_sidebar' ) {
+				$classes[] = '';
+			} elseif ( $spacious_woo_product_layout == 'left_sidebar' ) {
+				$classes[] = 'left-sidebar';
+			} elseif ( $spacious_woo_product_layout == 'no_sidebar_full_width' ) {
+				$classes[] = 'no-sidebar-full-width';
+			} elseif ( $spacious_woo_product_layout == 'no_sidebar_content_centered' ) {
+				$classes[] = 'no-sidebar';
+			}
 		} elseif ( is_single() ) {
 			if ( $spacious_default_post_layout == 'right_sidebar' ) {
 				$classes[] = '';
@@ -240,6 +252,16 @@ function spacious_body_class( $classes ) {
 				$classes[] = 'no-sidebar';
 			} elseif ( $spacious_default_post_layout == 'no_sidebar_content_stretched' ) {
 				$classes[] = 'no-sidebar-content-stretched';
+			}
+		} elseif ( function_exists( 'spacious_is_in_woocommerce_page' ) && spacious_is_in_woocommerce_page() ) {
+			if ( $spacious_woo_archive_layout == 'right_sidebar' ) {
+				$classes[] = '';
+			} elseif ( $spacious_woo_archive_layout == 'left_sidebar' ) {
+				$classes[] = 'left-sidebar';
+			} elseif ( $spacious_woo_archive_layout == 'no_sidebar_full_width' ) {
+				$classes[] = 'no-sidebar-full-width';
+			} elseif ( $spacious_woo_archive_layout == 'no_sidebar_content_centered' ) {
+				$classes[] = 'no-sidebar';
 			}
 		} elseif ( $spacious_default_layout == 'right_sidebar' ) {
 			$classes[] = '';
@@ -728,6 +750,39 @@ function spacious_woocommerce_support() {
 }
 
 add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
+
+if ( ! function_exists( 'spacious_woo_related_products_limit' ) ) {
+
+	/**
+	 * WooCommerce Extra Feature
+	 * --------------------------
+	 *
+	 * Change number of related products on product page
+	 * Set your own value for 'posts_per_page'
+	 *
+	 */
+	function spacious_woo_related_products_limit() {
+		global $product;
+		$args = array(
+			'posts_per_page' => 4,
+			'columns'        => 4,
+			'orderby'        => 'rand',
+		);
+
+		return $args;
+	}
+}
+add_filter( 'woocommerce_output_related_products_args', 'spacious_woo_related_products_limit' );
+
+if ( class_exists( 'woocommerce' ) && ! function_exists( 'spacious_is_in_woocommerce_page' ) ):
+	/*
+	 * woocommerce - conditional to check if woocommerce related page showed
+	 */
+	function spacious_is_in_woocommerce_page() {
+		return ( is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart() || is_checkout() || is_account_page() ) ? true : false;
+	}
+endif;
+
 
 // Displays the site logo
 if ( ! function_exists( 'spacious_the_custom_logo' ) ) {

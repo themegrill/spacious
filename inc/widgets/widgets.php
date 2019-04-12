@@ -166,6 +166,19 @@ function spacious_widgets_init() {
 		) );
 	}
 
+	// Registering woocommerce sidebar
+	if ( class_exists( 'woocommerce' ) ) {
+		register_sidebar( array(
+			'name'          => __( 'Shop Sidebar', 'spacious' ),
+			'id'            => 'spacious_woocommerce_sidebar',
+			'description'   => __( 'Widget area for WooCommerce Pages.', 'spacious' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title"><span>',
+			'after_title'   => '</span></h3>',
+		) );
+	}
+
 	// Registering widgets
 	register_widget( 'spacious_featured_single_page_widget' );
 	register_widget( 'spacious_service_widget' );
