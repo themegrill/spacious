@@ -14,6 +14,7 @@ function spacious_customize_register( $wp_customize ) {
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
@@ -901,6 +902,56 @@ function spacious_customize_register( $wp_customize ) {
 		'section' => 'spacious_footer_column_select_section',
 	) );
 
+	// End of footer options.
+
+	/***************************************Start of the Typography Option**************************************/
+
+	$wp_customize->add_panel( 'spacious_typography_options', array(
+		'priority'   => 550,
+		'title'      => __( 'Typography', 'spacious' ),
+		'capability' => 'edit_theme_options',
+	) );
+
+	// Font family options
+	$wp_customize->add_section( 'spacious_google_fonts_settings', array(
+		'priority' => 1,
+		'title'    => __( 'Google Font Options', 'spacious' ),
+		'panel'    => 'spacious_typography_options',
+	) );
+
+	$spacious_fonts = array(
+		'spacious_titles_font'  => array(
+			'id'      => 'spacious[spacious_titles_font]',
+			'default' => 'Lato',
+			'title'   => __( 'All Titles font. Default is "Lato".', 'spacious' ),
+		),
+		'spacious_content_font' => array(
+			'id'      => 'spacious[spacious_content_font]',
+			'default' => 'Lato',
+			'title'   => __( 'Content font and for others. Default is "Lato".', 'spacious' ),
+		),
+	);
+
+	foreach ( $spacious_fonts as $spacious_font ) {
+
+		$wp_customize->add_setting( $spacious_font['id'], array(
+			'default'           => $spacious_font['default'],
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_font_sanitize',
+		) );
+
+		$wp_customize->add_control(
+			new Spacious_Typography_Control(
+				$wp_customize,
+				$spacious_font['id'], array(
+					'label'    => $spacious_font['title'],
+					'settings' => $spacious_font['id'],
+					'section'  => 'spacious_google_fonts_settings',
+				)
+			) );
+	}
+
 	/**************************************Start of the WooCommerce Options*************************************/
 
 	if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
@@ -1006,6 +1057,19 @@ function spacious_customize_register( $wp_customize ) {
 	function spacious_checkbox_sanitize( $input ) {
 		if ( $input == 1 ) {
 			return 1;
+		} else {
+			return '';
+		}
+	}
+
+	// Google Font Sanitization
+	function spacious_font_sanitize( $input ) {
+		$spacious_standard_fonts_array = spacious_standard_fonts_array();
+		$spacious_google_fonts         = spacious_google_fonts();
+		$valid_keys                    = array_merge( $spacious_standard_fonts_array, $spacious_google_fonts );
+
+		if ( array_key_exists( $input, $valid_keys ) ) {
+			return $input;
 		} else {
 			return '';
 		}
@@ -1183,5 +1247,47 @@ function spacious_customizer_custom_scripts() { ?>
 	</script>
 	<?php
 }
+
+if ( ! function_exists( 'spacious_standard_fonts_array' ) ) :
+
+	/**
+	 * Standard Fonts array
+	 *
+	 * @return array of Standarad Fonts
+	 */
+	function spacious_standard_fonts_array() {
+		$spacious_standard_fonts = array(
+			'Georgia,Times,"Times New Roman",serif'                                                                                                 => 'serif',
+			'-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif' => 'sans-serif',
+			'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace'                                                   => 'monospace',
+		);
+
+		return $spacious_standard_fonts;
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_google_fonts' ) ) :
+
+	/**
+	 * Google Fonts array
+	 *
+	 * @return array of Google Fonts
+	 */
+	function spacious_google_fonts() {
+		$spacious_google_font = array(
+			'Roboto'           => 'Roboto',
+			'Lato'             => 'Lato',
+			'Open Sans'        => 'Open Sans',
+			'Noto Sans'        => 'Noto Sans',
+			'Noto Serif'       => 'Noto Serif',
+			'PT Sans'          => 'PT Sans',
+			'Playfair Display' => 'Playfair Display',
+		);
+
+		return $spacious_google_font;
+	}
+
+endif;
 
 ?>
