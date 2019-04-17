@@ -11,7 +11,7 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "autoprefixer": "^7.1.6",
-    "browser-sync": "^2.18.8",
+    "browser-sync": "~2.26.3",
     "grunt": "^0.4.5",
     "grunt-checktextdomain": "~1.0.0",
     "grunt-contrib-compress": "~1.2.0",
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "autoprefixer": "^8.0.0",
-    "browser-sync": "^2.23.6",
-    "gulp": "github:gulpjs/gulp#4.0"
+    "browser-sync": "~2.26.3",
+    "gulp": "~4.0.0"
   }
 }
