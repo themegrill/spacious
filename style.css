@@ -3065,13 +3065,6 @@ li.default-menu {
 		display: flex;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		align-items: center;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
-		position: relative;
 	}
 	#header-right-section .widget {
 		padding: 0 0 10px 0;
@@ -3082,9 +3075,8 @@ li.default-menu {
 		width: 100%;
 	}
 	#header-right-section .header-action {
-		top: 33px;
-		right: 25px;
-		position: absolute;
+		top: 31px;
+		left: calc(100% - 106px);
 	}
 	#header-right-section .header-action .fa {
 		color: #fff;

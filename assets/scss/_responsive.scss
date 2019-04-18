@@ -154,9 +154,6 @@
 		max-width: 100%;
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-		position: relative;
 
 		.widget {
 			padding: 0 0 10px 0;
@@ -170,9 +167,8 @@
 		}
 
 		.header-action {
-			top: 33px;
-			right: 25px;
-			position: absolute;
+			top: 31px;
+			left: calc(100% - 106px);
 
 			.fa {
 				color: #fff;
