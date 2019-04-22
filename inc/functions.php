@@ -1019,7 +1019,7 @@ function spacious_header_menu_button( $items, $args ) {
 	$button_target = spacious_options( 'spacious_header_button_new_tab' );
 	$button_target = $button_target ? ' target="_blank"' : '';
 
-	if ( 'primary' === $args->theme_location ) {
+	if ( 'primary' === $args->theme_location && $button_link ) {
 
 		$items .= '<li class="menu-item tg-header-button-wrap">';
 		$items .= '<a href="' . esc_url( $button_link ) . '"' . esc_attr( $button_target ) . '>';
