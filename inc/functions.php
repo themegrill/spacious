@@ -1033,3 +1033,31 @@ function spacious_header_menu_button( $items, $args ) {
 }
 
 add_filter( 'wp_nav_menu_items', 'spacious_header_menu_button', 10, 2 );
+
+if ( ! function_exists( 'spacious_shift_extra_menu' ) ) :
+	/**
+	 * Keep menu items on one line.
+	 *
+	 * @param string   $items The HTML list content for the menu items.
+	 * @param stdClass $args  An object containing wp_nav_menu() arguments.
+	 *
+	 * @return string HTML for more button.
+	 */
+	function spacious_shift_extra_menu( $items, $args ) {
+
+		if ( 'primary' === $args->theme_location && spacious_options( 'spacious_one_line_menu_setting', 0 ) ) :
+
+			$items .= '<li class="menu-item menu-item-has-children tg-menu-extras-wrap">';
+			$items .= '<span class="submenu-expand">';
+			$items .= '<i class="fa fa-ellipsis-v"></i>';
+			$items .= '</span>';
+			$items .= '<ul class="sub-menu" id="tg-menu-extras">';
+			$items .= '</ul>';
+			$items .= '</li>';
+
+		endif;
+
+		return $items;
+	}
+endif;
+add_filter( 'wp_nav_menu_items', 'spacious_shift_extra_menu', 12, 2 );

@@ -280,6 +280,27 @@ function spacious_customize_register( $wp_customize ) {
 		'setting' => $spacious_themename . '[spacious_header_button_new_tab]',
 	) );
 
+	// Display menu in one line.
+	$wp_customize->add_section( 'spacious_one_line_menu_section', array(
+		'priority' => 3,
+		'title'    => __( 'Menu Display', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_one_line_menu_setting]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_one_line_menu_setting]', array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Display menu in one line', 'spacious' ),
+		'section' => 'spacious_one_line_menu_section',
+		'setting' => $spacious_themename . '[spacious_one_line_menu_setting]',
+	) );
+
 	// Responsive collapse menu
 	$wp_customize->add_section( 'spacious_new_menu', array(
 		'priority' => 4,
