@@ -7,7 +7,7 @@
 	var container, button, menu;
 
 	container = document.getElementById( 'site-navigation' );
-	if ( !container ) {
+	if ( ! container ) {
 		return;
 	}
 
@@ -53,7 +53,7 @@
 			touchStartFn = function ( e ) {
 				var menuItem = this.parentNode, i;
 
-				if ( !menuItem.classList.contains( 'focus' ) ) {
+				if ( ! menuItem.classList.contains( 'focus' ) ) {
 					e.preventDefault();
 					for ( i = 0; i < menuItem.parentNode.children.length; ++ i ) {
 						if ( menuItem === menuItem.parentNode.children[i] ) {
@@ -132,19 +132,25 @@
 
 		jQuery( document ).ready( function () {
 			// Get required elements.
-			var mainWrapper       = document.querySelector( '#header-text-nav-container .inner-wrap' ),
-			    branding          = document.getElementById( 'header-left-section' ),
-			    headerAction      = document.querySelector( '#header-right-section .header-action' ),
-			    navigation        = document.getElementById( 'site-navigation' ),
-			    mainWidth         = mainWrapper.offsetWidth,
-			    brandWidth        = branding.offsetWidth,
-			    navWidth          = navigation.offsetWidth,
-			    headerActionWidth = headerAction.offsetWidth,
-			    isExtra           = ( brandWidth + navWidth + headerActionWidth ) > mainWidth,
-			    more              = navigation.getElementsByClassName( 'tg-menu-extras-wrap' )[0];
+			var mainWrapper           = document.querySelector( '#header-text-nav-container .inner-wrap' ),
+			    branding              = document.getElementById( 'header-left-section' ),
+			    headerAction          = document.querySelector( '.header-action' ),
+			    navigation            = document.getElementById( 'site-navigation' ),
+			    mainWidth             = mainWrapper.offsetWidth,
+			    brandWidth            = branding.offsetWidth,
+			    navWidth              = navigation.offsetWidth,
+			    headerActionWidth     = headerAction.offsetWidth,
+			    isExtra               = ( brandWidth + navWidth + headerActionWidth ) > mainWidth,
+			    more                  = navigation.getElementsByClassName( 'tg-menu-extras-wrap' )[0],
+			    headerDisplayTypeFour = document.getElementById( 'spacious-header-display-four' );
+
+			// Check for header style 4.
+			if ( headerDisplayTypeFour !== null ) {
+				isExtra = ( navWidth + headerActionWidth ) >= mainWidth;
+			}
 
 			// Return if no excess menu items.
-			if ( !navigation.classList.contains( 'tg-extra-menus' ) ) {
+			if ( ! navigation.classList.contains( 'tg-extra-menus' ) ) {
 				return;
 			}
 
@@ -160,19 +166,23 @@
 			}
 
 			// If menu excesses.
-			if ( !isExtra ) {
+			if ( ! isExtra ) {
 				more.parentNode.removeChild( more );
 			} else {
 				var widthToBe, headerAction, buttons, headerActionWidth, buttonWidth, moreWidth;
 
-				widthToBe         = mainWidth - brandWidth - headerActionWidth;
-				headerAction      = navigation.getElementsByClassName( 'header-action' )[0];
-				buttons           = navigation.getElementsByClassName( 'tg-header-button-wrap' );
-				headerActionWidth = headerAction ? Dimension( headerAction ) : 0;
-				buttonWidth       = buttons[0] ? Dimension( buttons[0] ) : 0;
-				buttonWidth += buttons[1] ? Dimension( buttons[1] ) : 0;
-				moreWidth         = more ? Dimension( more ) : 0;
-				newNavWidth       = widthToBe - ( buttonWidth + moreWidth );
+				widthToBe = mainWidth - brandWidth - headerActionWidth;
+
+				// Check for header style 4.
+				if ( headerDisplayTypeFour !== null ) {
+					widthToBe = mainWidth - headerActionWidth;
+				}
+
+				headerAction = navigation.getElementsByClassName( 'header-action' )[0];
+				buttons      = navigation.getElementsByClassName( 'tg-header-button-wrap' )[0];
+				buttonWidth  = buttons ? Dimension( buttons ) : 0;
+				moreWidth    = more ? Dimension( more ) : 0;
+				newNavWidth  = widthToBe - ( buttonWidth + moreWidth );
 
 				navigation.style.visibility = 'none';
 				navigation.style.width      = newNavWidth + 'px';
@@ -190,7 +200,7 @@
 					return children;
 				}
 
-				var navUl = navigation.getElementsByClassName( 'menunav-menu' )[0],
+				var navUl = navigation.getElementsByClassName( 'nav-menu' )[0],
 				    navLi = getChildNodes( navUl ); // Get lis.
 
 				function offset( el ) {
@@ -214,7 +224,7 @@
 					}
 
 					if ( posTop > initialPos ) {
-						if ( !li.classList.contains( 'header-action' ) && !li.classList.contains( 'tg-menu-extras-wrap' ) && !li.classList.contains( 'tg-header-button-wrap' ) ) {
+						if ( ! li.classList.contains( 'header-action' ) && ! li.classList.contains( 'tg-menu-extras-wrap' ) && ! li.classList.contains( 'tg-header-button-wrap' ) ) {
 							extraLi.push( li );
 						}
 					}
@@ -222,6 +232,11 @@
 
 				var newNavWidth = newNavWidth + ( buttonWidth + moreWidth ) - 30,
 				    extraWrap   = document.getElementById( 'tg-menu-extras' );
+
+				// Check for header style 3 and 4.
+				if ( headerDisplayTypeFour !== null ) {
+					newNavWidth = navWidth - headerActionWidth;
+				}
 
 				navigation.style.width = newNavWidth + 'px';
 

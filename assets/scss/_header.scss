@@ -696,13 +696,17 @@ li.default-menu {
 
 	.bottom-menu {
 		.main-navigation {
-			float: none;
+			float: left;
 
 			li {
 				&:first-child {
 					padding-left: 0;
 				}
 			}
+		}
+
+		.header-action {
+			padding-top: 20px;
 		}
 
 		&.header-menu-button {

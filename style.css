@@ -2665,11 +2665,15 @@ li.default-menu {
 /* =Header Display Menu Bottom
 ----------------------------------------------- */
 .spacious-header-display-four .bottom-menu .main-navigation {
-	float: none;
+	float: left;
 }
 
 .spacious-header-display-four .bottom-menu .main-navigation li:first-child {
 	padding-left: 0;
+}
+
+.spacious-header-display-four .bottom-menu .header-action {
+	padding-top: 20px;
 }
 
 .spacious-header-display-four .bottom-menu.header-menu-button {

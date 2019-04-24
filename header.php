@@ -39,7 +39,7 @@
 	$spacious_header_display_type = spacious_options( 'spacious_header_display_type', 'one' );
 	$header_class                 = '';
 	if ( $spacious_header_display_type === 'four' ) {
-		$header_class = ' spacious-header-display-four';
+		$header_class = 'spacious-header-display-four';
 	}
 	?>
 
@@ -71,7 +71,7 @@
 
 		<div id="header-text-nav-container" class="<?php echo ( spacious_options( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
 
-			<div class="inner-wrap">
+			<div class="inner-wrap" id="<?php echo esc_attr( $header_class ); ?>">
 
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
