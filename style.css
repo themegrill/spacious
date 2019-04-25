@@ -1315,6 +1315,10 @@ body {
 	padding-top: 5px;
 }
 
+.gallery-columns-3 .gallery-item {
+	padding: 5px 5px;
+}
+
 /* =COMMENTS
 ----------------------------------------------- */
 #comments {
