@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Add review notice message.
+
 = Version 1.6.2 - 2019-04-10 =
 * Added   - New Demo (Spacious Medical) - Aid your patient's health with the help of this Spacious Medical demo.
 * Feature - Added social icons option
