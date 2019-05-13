@@ -521,7 +521,7 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-icon:before { color: ' . $primary_color . '; }
 			a#scroll-up { background-color: ' . $primary_color . '; }
-			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '} .spacious-woocommerce-cart-views .cart-value { background:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a{background-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a{border-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a:hover{background-color:'.$primary_dark .'}';
+			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '} .spacious-woocommerce-cart-views .cart-value { background:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a{background-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a{border-color:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a:hover{background-color:'.$primary_dark .'}.main-navigation .tg-header-button-wrap.button-one a:hover{border-color:' . $primary_dark . '}';
 	}
 
 	/* Typography */
