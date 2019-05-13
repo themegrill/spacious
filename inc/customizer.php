@@ -232,52 +232,52 @@ function spacious_customize_register( $wp_customize ) {
 	) );
 
 	// Header Button option.
-	$wp_customize->add_section( 'spacious_header_button', array(
+	$wp_customize->add_section( 'spacious_header_button_one', array(
 		'priority' => 4,
-		'title'    => __( 'Header Button', 'spacious' ),
+		'title'    => __( 'Header Button One', 'spacious' ),
 		'panel'    => 'spacious_header_options',
 	) );
 
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_setting]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_one_setting]', array(
 		'default'           => '',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'wp_filter_nohtml_kses',
 	) );
 
-	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_setting]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_one_setting]', array(
 		'label'   => __( 'Button Text', 'spacious' ),
-		'section' => 'spacious_header_button',
-		'setting' => $spacious_themename . '[spacious_header_button_setting]',
+		'section' => 'spacious_header_button_one',
+		'setting' => $spacious_themename . '[spacious_header_button_one_setting]',
 	) );
 
 	// Header button link.
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_link_setting]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_one_link]', array(
 		'default'           => '',
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'esc_url_raw',
 	) );
 
-	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_link_setting]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_one_link]', array(
 		'label'   => __( 'Button Link', 'spacious' ),
-		'section' => 'spacious_header_button',
-		'setting' => $spacious_themename . '[spacious_header_button_link_setting]',
+		'section' => 'spacious_header_button_one',
+		'setting' => $spacious_themename . '[spacious_header_button_one_link]',
 	) );
 
 	// Header button link in new tab.
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_new_tab]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_button_one_tab]', array(
 		'default'           => 0,
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_new_tab]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_one_tab]', array(
 		'type'    => 'checkbox',
 		'label'   => __( 'Open in new tab', 'spacious' ),
-		'section' => 'spacious_header_button',
-		'setting' => $spacious_themename . '[spacious_header_button_new_tab]',
+		'section' => 'spacious_header_button_one',
+		'setting' => $spacious_themename . '[spacious_header_button_one_tab]',
 	) );
 
 	// Display menu in one line.
@@ -327,14 +327,14 @@ function spacious_customize_register( $wp_customize ) {
 		'title'    => __( 'Search icon', 'spacious' ),
 		'panel'    => 'spacious_header_options',
 	) );
-	$wp_customize->add_setting( 'spacious[spacious_header_search_icon]', array(
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_search_icon]', array(
 		'default'           => 0,
 		'type'              => 'option',
 		'capability'        => 'edit_theme_options',
 		'sanitize_callback' => 'spacious_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control( 'spacious[spacious_header_search_icon]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_search_icon]', array(
 		'type'    => 'checkbox',
 		'label'   => __( 'Show search icon in header.', 'spacious' ),
 		'section' => 'spacious_header_search_icon',
@@ -942,12 +942,12 @@ function spacious_customize_register( $wp_customize ) {
 
 	$spacious_fonts = array(
 		'spacious_titles_font'  => array(
-			'id'      => 'spacious[spacious_titles_font]',
+			'id'      => $spacious_themename . '[spacious_titles_font]',
 			'default' => 'Lato',
 			'title'   => __( 'All Titles font. Default is "Lato".', 'spacious' ),
 		),
 		'spacious_content_font' => array(
-			'id'      => 'spacious[spacious_content_font]',
+			'id'      => $spacious_themename . '[spacious_content_font]',
 			'default' => 'Lato',
 			'title'   => __( 'Content font and for others. Default is "Lato".', 'spacious' ),
 		),
@@ -1052,7 +1052,7 @@ function spacious_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'spacious_checkbox_sanitize',
 		) );
 
-		$wp_customize->add_control( 'spacious[spacious_cart_icon]', array(
+		$wp_customize->add_control( $spacious_themename . '[spacious_cart_icon]', array(
 			'type'     => 'checkbox',
 			'label'    => __( 'Check to show WooCommerce cart icon on menu bar', 'spacious' ),
 			'section'  => 'spacious_woocommerce_additional',

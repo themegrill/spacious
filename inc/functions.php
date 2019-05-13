@@ -362,6 +362,12 @@ function spacious_body_class( $classes ) {
 		$classes[] = '';
 	}
 
+	// For header menu button enabled option.
+	$header_button_link_1 = spacious_options( 'spacious_header_button_one_link' );
+	if ( $header_button_link_1 ) {
+		$classes[] = 'spacious-menu-header-button-enabled';
+	}
+
 	return $classes;
 }
 
@@ -515,7 +521,7 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-icon:before { color: ' . $primary_color . '; }
 			a#scroll-up { background-color: ' . $primary_color . '; }
-			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '}.main-navigation .tg-header-button-wrap{ background:' . $primary_color . '}.main-navigation .tg-header-button-wrap:hover{ background:' . $primary_dark . '} .spacious-woocommerce-cart-views .cart-value { background:' .$primary_color .'}';
+			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '} .spacious-woocommerce-cart-views .cart-value { background:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a{background-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a{border-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a:hover{background-color:'.$primary_dark .'}';
 	}
 
 	/* Typography */
@@ -814,29 +820,6 @@ function spacious_woocommerce_support() {
 
 add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
 
-if ( ! function_exists( 'spacious_woo_related_products_limit' ) ) {
-
-	/**
-	 * WooCommerce Extra Feature
-	 * --------------------------
-	 *
-	 * Change number of related products on product page
-	 * Set your own value for 'posts_per_page'
-	 *
-	 */
-	function spacious_woo_related_products_limit() {
-		global $product;
-		$args = array(
-			'posts_per_page' => 4,
-			'columns'        => 4,
-			'orderby'        => 'rand',
-		);
-
-		return $args;
-	}
-}
-add_filter( 'woocommerce_output_related_products_args', 'spacious_woo_related_products_limit' );
-
 if ( class_exists( 'woocommerce' ) && ! function_exists( 'spacious_is_in_woocommerce_page' ) ):
 	/*
 	 * woocommerce - conditional to check if woocommerce related page showed
@@ -1014,14 +997,14 @@ function spacious_header_display_type_migrate() {
 add_action( 'after_setup_theme', 'spacious_header_display_type_migrate' );
 
 function spacious_header_menu_button( $items, $args ) {
-	$button_text   = spacious_options( 'spacious_header_button_setting' );
-	$button_link   = spacious_options( 'spacious_header_button_link_setting' );
-	$button_target = spacious_options( 'spacious_header_button_new_tab' );
+	$button_text   = spacious_options( 'spacious_header_button_one_setting' );
+	$button_link   = spacious_options( 'spacious_header_button_one_link' );
+	$button_target = spacious_options( 'spacious_header_button_one_tab' );
 	$button_target = $button_target ? ' target="_blank"' : '';
 
 	if ( 'primary' === $args->theme_location && $button_link ) {
 
-		$items .= '<li class="menu-item tg-header-button-wrap">';
+		$items .= '<li class="menu-item tg-header-button-wrap button-one">';
 		$items .= '<a href="' . esc_url( $button_link ) . '"' . esc_attr( $button_target ) . '>';
 		$items .= $button_text;
 		$items .= '</a>';

@@ -212,6 +212,22 @@ nav li > {
 		font-family: 'Lato', sans-serif;
 	}
 
+	.menu-primary-container {
+		> ul {
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			.spacious-menu-header-button-enabled & {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+		}
+	}
+
 	ul li a {
 		font-size: 16px;
 	}
@@ -230,7 +246,7 @@ li.default-menu {
 		color: #444444;
 		display: block;
 		float: left;
-		height: 30px;
+		line-height: 1.875;
 
 		&:hover {
 			color: #0FBE7C;
@@ -402,22 +418,22 @@ li.default-menu {
 	}
 
 	.tg-header-button-wrap {
-		padding: 15px;
-		background: #0FBE7C;
-		margin-top: -15px;
-		border-radius: 5px;
-		margin-left: 15px;
+		&.button-one {
+			padding: 0;
+			margin-left: 25px;
 
-		&:hover a {
-			color: #ffffff;
-		}
-
-		a {
-			color: #ffffff;
-			height: auto;
-
-			&:hover {
+			a {
+				border: 2px solid #0fbe7c;
+				border-radius: 5px;
+				padding: 5px 15px;
+				background-color: #0fbe7c;
 				color: #ffffff;
+
+				&:hover {
+					color: #ffffff;
+					background-color: #0fbe7c;
+
+				}
 			}
 		}
 	}
@@ -435,6 +451,11 @@ li.default-menu {
 	.bottom-menu & {
 		padding: 0 10px 0 25px;
 		margin-top: -3px;
+	}
+
+	.spacious-woocommerce-cart-views {
+		padding: 5px 0;
+		line-height: 1.875;
 	}
 }
 
@@ -730,6 +751,11 @@ li.default-menu {
 		padding: 0 0 0 25px;
 		position: relative;
 		cursor: pointer;
+
+		.search {
+			padding: 5px 0;
+			line-height: 1.875;
+		}
 
 		.bottom-menu & {
 			padding: 0 0 0 25px;
