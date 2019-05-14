@@ -275,7 +275,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( $spacious_themename . '[spacious_header_button_one_tab]', array(
 		'type'    => 'checkbox',
-		'label'   => __( 'Open in new tab', 'spacious' ),
+		'label'   => __( 'Check to show in new tab', 'spacious' ),
 		'section' => 'spacious_header_button_one',
 		'setting' => $spacious_themename . '[spacious_header_button_one_tab]',
 	) );
