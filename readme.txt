@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.6.3 - 2019-05-23 =
 * Added   - New Demo (Spacious Store) - If you want to create an online store for your website, use this Spacious demo.
 * Feature - Added header button option
 * Feature - Added stretched layout option
