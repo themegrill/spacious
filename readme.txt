@@ -47,7 +47,13 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
-* Tweak - Add review notice message.
+* Added   - New Demo (Spacious Store) - If you want to create an online store for your website, use this Spacious demo.
+* Feature - Added header button option
+* Feature - Added stretched layout option
+* Feature - Added WooCommerce layout option
+* Feature - Added typography option
+* Feature - Added option to display menu items in one line
+* Tweak   - Add review notice message.
 
 = Version 1.6.2 - 2019-04-10 =
 * Added   - New Demo (Spacious Medical) - Aid your patient's health with the help of this Spacious Medical demo.
