@@ -96,7 +96,7 @@ blockquote, q {
 
 a {
 	&:focus {
-		outline: thin dotted;
+		outline: 0;
 	}
 
 	&:hover,
@@ -1431,6 +1431,10 @@ body {
 	padding-top: 5px;
 }
 
+.footer-widgets-area .gallery-columns-3 .gallery-item{
+	padding: 5px 5px;
+}
+
 /* =COMMENTS
 ----------------------------------------------- */
 
@@ -2207,6 +2211,21 @@ body {
 		#main {
 			padding-top: 0;
 			padding-bottom: 0;
+		}
+	}
+
+	&.no-sidebar-content-stretched {
+		#main {
+
+			.inner-wrap {
+				width: 100%;
+				max-width: 100%;
+
+				#primary {
+					float: none;
+					width: 100%;
+				}
+			}
 		}
 	}
 }

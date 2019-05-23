@@ -325,8 +325,16 @@ endif;
 
 /*	 * ************************************************************************************* */
 if ( ! function_exists( 'spacious_main_nav' ) ) :
-	function spacious_main_nav() { ?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+	function spacious_main_nav() {
+		// For header menu button enabled option.
+		$class                = '';
+		$header_button_link_1 = spacious_options( 'spacious_header_button_one_link' );
+		if ( $header_button_link_1 ) {
+			$class = 'spacious-header-button-enabled';
+		}
+		?>
+
+		<nav id="site-navigation" class="main-navigation clearfix  <?php echo esc_attr( $class ); ?> <?php echo spacious_options( 'spacious_one_line_menu_setting' ) ? 'tg-extra-menus' : ''; ?>" role="navigation">
 			<p class="menu-toggle"><?php _e( 'Menu', 'spacious' ); ?></p>
 			<?php
 			if ( has_nav_menu( 'primary' ) ) {
@@ -339,6 +347,7 @@ if ( ! function_exists( 'spacious_main_nav' ) ) :
 			}
 			?>
 		</nav>
+
 		<?php
 	}
 endif;

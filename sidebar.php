@@ -14,6 +14,9 @@
 			if( is_page_template( 'page-templates/contact.php' ) ) {
 				$sidebar = 'spacious_contact_page_sidebar';
 			}
+			elseif( function_exists( 'spacious_is_in_woocommerce_page' ) && spacious_is_in_woocommerce_page() ) {
+				$sidebar = 'spacious_woocommerce_sidebar';
+			}
 			else {
 				$sidebar = 'spacious_right_sidebar';
 			}

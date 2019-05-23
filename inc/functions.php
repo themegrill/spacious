@@ -48,6 +48,62 @@ function spacious_scripts_styles_method() {
 	// Enqueue font-awesome style.
 	wp_enqueue_style( 'spacious-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 
+	$spacious_googlefonts = array();
+	array_push( $spacious_googlefonts, spacious_options( 'spacious_titles_font', 'Lato' ) );
+	array_push( $spacious_googlefonts, spacious_options( 'spacious_content_font', 'Lato' ) );
+
+	// Assign required fonts from database in array and make it unique.
+	$spacious_googlefonts          = array_unique( $spacious_googlefonts );
+	$spacious_google_fonts         = spacious_google_fonts();
+	$spacious_standard_fonts_array = spacious_standard_fonts_array();
+
+	// Check for the Google Fonts arrays.
+	foreach ( $spacious_googlefonts as $spacious_googlefont ) {
+
+		// If the array_key_exists for currently selected fonts,
+		// then only proceed to create new array to include,
+		// only the required Google fonts.
+		// For Standard fonts, no need for loading up the Google Fonts array.
+		if ( array_key_exists( $spacious_googlefont, $spacious_google_fonts ) ) {
+			$spacious_googlefont_lists[] = $spacious_googlefont;
+		}
+
+	}
+
+	// Check for the Standard Fonts arrays.
+	foreach ( $spacious_googlefonts as $spacious_standard_font ) {
+
+		// If the array_key_exists for currently selected fonts,
+		// then only proceed to create new array to include,
+		// only the required Standard fonts,
+		// in order to enqueue to Google Fonts only when,
+		// no theme_mods data is altered.
+		if ( array_key_exists( $spacious_standard_font, $spacious_standard_fonts_array ) ) {
+			$spacious_standard_font_lists[] = $spacious_standard_font;
+		}
+
+	}
+
+	// Proceed only if the Google Fonts array is available,
+	// to enqueue the Google Fonts.
+	if ( isset( $spacious_googlefont_lists ) ) :
+
+		$spacious_googlefont_lists = implode( "|", $spacious_googlefont_lists );
+
+		wp_register_style( 'spacious_googlefonts', '//fonts.googleapis.com/css?family=' . $spacious_googlefont_lists );
+		wp_enqueue_style( 'spacious_googlefonts' );
+
+	// Proceed only if the theme is installed first time,
+	// or the theme_mods data for typography is not changed.
+	elseif ( ! isset( $spacious_standard_font_lists ) ) :
+
+		$spacious_googlefonts = implode( "|", $spacious_googlefonts );
+
+		wp_register_style( 'spacious_googlefonts', '//fonts.googleapis.com/css?family=' . $spacious_googlefonts );
+		wp_enqueue_style( 'spacious_googlefonts' );
+
+	endif;
+
 	/**
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
@@ -74,8 +130,6 @@ function spacious_scripts_styles_method() {
 
 	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
-
-	wp_enqueue_style( 'google_fonts' );
 
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
 	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
@@ -215,6 +269,8 @@ function spacious_body_class( $classes ) {
 	$spacious_default_layout      = spacious_options( 'spacious_default_layout', 'right_sidebar' );
 	$spacious_default_page_layout = spacious_options( 'spacious_pages_default_layout', 'right_sidebar' );
 	$spacious_default_post_layout = spacious_options( 'spacious_single_posts_default_layout', 'right_sidebar' );
+	$spacious_woo_archive_layout  = spacious_options( 'spacious_woo_archive_layout', 'no_sidebar_full_width' );
+	$spacious_woo_product_layout  = spacious_options( 'spacious_woo_product_layout', 'no_sidebar_full_width' );
 
 	if ( $layout_meta == 'default_layout' ) {
 		if ( is_page() ) {
@@ -226,6 +282,18 @@ function spacious_body_class( $classes ) {
 				$classes[] = 'no-sidebar-full-width';
 			} elseif ( $spacious_default_page_layout == 'no_sidebar_content_centered' ) {
 				$classes[] = 'no-sidebar';
+			} elseif ( $spacious_default_page_layout == 'no_sidebar_content_stretched' ) {
+				$classes[] = 'no-sidebar-content-stretched';
+			}
+		} elseif ( function_exists( 'spacious_is_in_woocommerce_page' ) && is_product() ) {
+			if ( $spacious_woo_product_layout == 'right_sidebar' ) {
+				$classes[] = '';
+			} elseif ( $spacious_woo_product_layout == 'left_sidebar' ) {
+				$classes[] = 'left-sidebar';
+			} elseif ( $spacious_woo_product_layout == 'no_sidebar_full_width' ) {
+				$classes[] = 'no-sidebar-full-width';
+			} elseif ( $spacious_woo_product_layout == 'no_sidebar_content_centered' ) {
+				$classes[] = 'no-sidebar';
 			}
 		} elseif ( is_single() ) {
 			if ( $spacious_default_post_layout == 'right_sidebar' ) {
@@ -236,6 +304,18 @@ function spacious_body_class( $classes ) {
 				$classes[] = 'no-sidebar-full-width';
 			} elseif ( $spacious_default_post_layout == 'no_sidebar_content_centered' ) {
 				$classes[] = 'no-sidebar';
+			} elseif ( $spacious_default_post_layout == 'no_sidebar_content_stretched' ) {
+				$classes[] = 'no-sidebar-content-stretched';
+			}
+		} elseif ( function_exists( 'spacious_is_in_woocommerce_page' ) && spacious_is_in_woocommerce_page() ) {
+			if ( $spacious_woo_archive_layout == 'right_sidebar' ) {
+				$classes[] = '';
+			} elseif ( $spacious_woo_archive_layout == 'left_sidebar' ) {
+				$classes[] = 'left-sidebar';
+			} elseif ( $spacious_woo_archive_layout == 'no_sidebar_full_width' ) {
+				$classes[] = 'no-sidebar-full-width';
+			} elseif ( $spacious_woo_archive_layout == 'no_sidebar_content_centered' ) {
+				$classes[] = 'no-sidebar';
 			}
 		} elseif ( $spacious_default_layout == 'right_sidebar' ) {
 			$classes[] = '';
@@ -245,6 +325,8 @@ function spacious_body_class( $classes ) {
 			$classes[] = 'no-sidebar-full-width';
 		} elseif ( $spacious_default_layout == 'no_sidebar_content_centered' ) {
 			$classes[] = 'no-sidebar';
+		} elseif ( $spacious_default_layout == 'no_sidebar_content_stretched' ) {
+			$classes[] = 'no-sidebar-content-stretched';
 		}
 	} elseif ( $layout_meta == 'right_sidebar' ) {
 		$classes[] = '';
@@ -254,6 +336,8 @@ function spacious_body_class( $classes ) {
 		$classes[] = 'no-sidebar-full-width';
 	} elseif ( $layout_meta == 'no_sidebar_content_centered' ) {
 		$classes[] = 'no-sidebar';
+	} elseif ( $layout_meta == 'no_sidebar_content_stretched' ) {
+		$classes[] = 'no-sidebar-content-stretched';
 	}
 
 	if ( spacious_options( 'spacious_new_menu', 0 ) == '1' ) {
@@ -276,6 +360,12 @@ function spacious_body_class( $classes ) {
 		$classes[] = 'wide-1218';
 	} else {
 		$classes[] = '';
+	}
+
+	// For header menu button enabled option.
+	$header_button_link_1 = spacious_options( 'spacious_header_button_one_link' );
+	if ( $header_button_link_1 ) {
+		$classes[] = 'spacious-menu-header-button-enabled';
 	}
 
 	return $classes;
@@ -391,7 +481,7 @@ function spacious_custom_css() {
 	$primary_dark          = spacious_darkcolor( $primary_color, - 50 );
 	$spacious_internal_css = '';
 	if ( $primary_color != '#0FBE7C' ) {
-		$spacious_internal_css = ' blockquote { border-left: 3px solid ' . $primary_color . '; }
+		$spacious_internal_css .= ' blockquote { border-left: 3px solid ' . $primary_color . '; }
 			.spacious-button, input[type="reset"], input[type="button"], input[type="submit"], button { background-color: ' . $primary_color . '; }
 			.previous a:hover, .next a:hover { 	color: ' . $primary_color . '; }
 			a { color: ' . $primary_color . '; }
@@ -431,7 +521,16 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-icon:before { color: ' . $primary_color . '; }
 			a#scroll-up { background-color: ' . $primary_color . '; }
-			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '}';
+			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '} .spacious-woocommerce-cart-views .cart-value { background:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a{background-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a{border-color:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a:hover{background-color:'.$primary_dark .'}.main-navigation .tg-header-button-wrap.button-one a:hover{border-color:' . $primary_dark . '}';
+	}
+
+	/* Typography */
+	// Font family option.
+	if ( spacious_options( 'spacious_titles_font', 'Lato' ) != 'Lato' ) {
+		$spacious_internal_css .= ' h1, h2, h3, h4, h5, h6 { font-family: ' . spacious_options( 'spacious_titles_font', 'Lato' ) . '; }';
+	}
+	if ( spacious_options( 'spacious_content_font', 'Lato' ) != 'Lato' ) {
+		$spacious_internal_css .= ' body, button, input, select, textarea, p, .entry-meta, .read-more, .more-link, .widget_testimonial .testimonial-author, #featured-slider .slider-read-more-button { font-family: ' . spacious_options( 'spacious_content_font', 'Lato' ) . '; }';
 	}
 
 	if ( ! empty( $spacious_internal_css ) ) {
@@ -721,6 +820,16 @@ function spacious_woocommerce_support() {
 
 add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
 
+if ( class_exists( 'woocommerce' ) && ! function_exists( 'spacious_is_in_woocommerce_page' ) ):
+	/*
+	 * woocommerce - conditional to check if woocommerce related page showed
+	 */
+	function spacious_is_in_woocommerce_page() {
+		return ( is_shop() || is_product_category() || is_product_tag() || is_product() || is_cart() || is_checkout() || is_account_page() ) ? true : false;
+	}
+endif;
+
+
 // Displays the site logo
 if ( ! function_exists( 'spacious_the_custom_logo' ) ) {
 	/**
@@ -886,3 +995,52 @@ function spacious_header_display_type_migrate() {
 }
 
 add_action( 'after_setup_theme', 'spacious_header_display_type_migrate' );
+
+function spacious_header_menu_button( $items, $args ) {
+	$button_text   = spacious_options( 'spacious_header_button_one_setting' );
+	$button_link   = spacious_options( 'spacious_header_button_one_link' );
+	$button_target = spacious_options( 'spacious_header_button_one_tab' );
+	$button_target = $button_target ? ' target="_blank"' : '';
+
+	if ( 'primary' === $args->theme_location && $button_link ) {
+
+		$items .= '<li class="menu-item tg-header-button-wrap button-one">';
+		$items .= '<a href="' . esc_url( $button_link ) . '"' . esc_attr( $button_target ) . '>';
+		$items .= $button_text;
+		$items .= '</a>';
+		$items .= '</li>';
+
+	}
+
+	return $items;
+}
+
+add_filter( 'wp_nav_menu_items', 'spacious_header_menu_button', 10, 2 );
+
+if ( ! function_exists( 'spacious_shift_extra_menu' ) ) :
+	/**
+	 * Keep menu items on one line.
+	 *
+	 * @param string   $items The HTML list content for the menu items.
+	 * @param stdClass $args  An object containing wp_nav_menu() arguments.
+	 *
+	 * @return string HTML for more button.
+	 */
+	function spacious_shift_extra_menu( $items, $args ) {
+
+		if ( 'primary' === $args->theme_location && spacious_options( 'spacious_one_line_menu_setting', 0 ) ) :
+
+			$items .= '<li class="menu-item menu-item-has-children tg-menu-extras-wrap">';
+			$items .= '<span class="submenu-expand">';
+			$items .= '<i class="fa fa-ellipsis-v"></i>';
+			$items .= '</span>';
+			$items .= '<ul class="sub-menu" id="tg-menu-extras">';
+			$items .= '</ul>';
+			$items .= '</li>';
+
+		endif;
+
+		return $items;
+	}
+endif;
+add_filter( 'wp_nav_menu_items', 'spacious_shift_extra_menu', 12, 2 );

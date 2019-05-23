@@ -87,7 +87,7 @@ blockquote, q {
 }
 
 a:focus {
-	outline: thin dotted;
+	outline: 0;
 }
 
 a:hover, a:active {
@@ -1315,6 +1315,10 @@ body {
 	padding-top: 5px;
 }
 
+.footer-widgets-area .gallery-columns-3 .gallery-item {
+	padding: 5px 5px;
+}
+
 /* =COMMENTS
 ----------------------------------------------- */
 #comments {
@@ -2028,6 +2032,16 @@ body.page-template-page-builder #main {
 	padding-bottom: 0;
 }
 
+body.no-sidebar-content-stretched #main .inner-wrap {
+	width: 100%;
+	max-width: 100%;
+}
+
+body.no-sidebar-content-stretched #main .inner-wrap #primary {
+	float: none;
+	width: 100%;
+}
+
 /* =HEADER
 ----------------------------------------------- */
 #header-meta {
@@ -2229,6 +2243,23 @@ nav li > ol {
 	font-family: 'Lato', sans-serif;
 }
 
+.main-navigation .menu-primary-container > ul::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.spacious-menu-header-button-enabled .main-navigation .menu-primary-container > ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
 .main-navigation ul li a {
 	font-size: 16px;
 }
@@ -2245,7 +2276,7 @@ li.default-menu {
 	color: #444444;
 	display: block;
 	float: left;
-	height: 30px;
+	line-height: 1.875;
 }
 
 .main-navigation a:hover {
@@ -2390,6 +2421,24 @@ li.default-menu {
 	display: none;
 }
 
+.main-navigation .tg-header-button-wrap.button-one {
+	padding: 0;
+	margin-left: 25px;
+}
+
+.main-navigation .tg-header-button-wrap.button-one a {
+	border: 2px solid #0fbe7c;
+	border-radius: 5px;
+	padding: 5px 15px;
+	background-color: #0fbe7c;
+	color: #ffffff;
+}
+
+.main-navigation .tg-header-button-wrap.button-one a:hover {
+	color: #ffffff;
+	background-color: #0fbe7c;
+}
+
 /* =CART ICON
 ----------------------------------------------- */
 .cart-wrapper {
@@ -2402,6 +2451,11 @@ li.default-menu {
 .bottom-menu .cart-wrapper {
 	padding: 0 10px 0 25px;
 	margin-top: -3px;
+}
+
+.cart-wrapper .spacious-woocommerce-cart-views {
+	padding: 5px 0;
+	line-height: 1.875;
 }
 
 .spacious-woocommerce-cart-views .wcmenucart-contents {
@@ -2634,11 +2688,19 @@ li.default-menu {
 /* =Header Display Menu Bottom
 ----------------------------------------------- */
 .spacious-header-display-four .bottom-menu .main-navigation {
-	float: none;
+	float: left;
 }
 
 .spacious-header-display-four .bottom-menu .main-navigation li:first-child {
 	padding-left: 0;
+}
+
+.spacious-header-display-four .bottom-menu .header-action {
+	padding-top: 20px;
+}
+
+.spacious-header-display-four .bottom-menu.header-menu-button {
+	padding-bottom: 15px;
 }
 
 .header-action {
@@ -2657,6 +2719,11 @@ li.default-menu {
 	padding: 0 0 0 25px;
 	position: relative;
 	cursor: pointer;
+}
+
+.header-action .search-wrapper .search {
+	padding: 5px 0;
+	line-height: 1.875;
 }
 
 .bottom-menu .header-action .search-wrapper {
@@ -3031,15 +3098,27 @@ li.default-menu {
 		float: none;
 		text-align: center;
 	}
-	.menu-toggle {
+	#header-right-section #header-right-sidebar {
+		width: 100%;
+	}
+	.site-header .menu-toggle {
 		display: block;
+		text-align: left;
+		padding: 10px 20px;
+	}
+	.main-small-navigation {
+		width: 100%;
 	}
 	.main-navigation {
 		float: none;
 		padding-top: 0;
+		width: 100%;
 	}
 	.main-navigation.toggled .nav-menu {
 		display: block;
+	}
+	.spacious-menu-header-button-enabled .main-navigation .menu-primary-container > ul {
+		display: none;
 	}
 	.main-navigation ul {
 		display: none;
@@ -3066,6 +3145,27 @@ li.default-menu {
 		font-size: 14px;
 		padding: 5px 10px;
 		padding: 0.5rem 1rem;
+	}
+	.woocommerce .related ul.products li.first,
+	.woocommerce-page .related ul.products li.first {
+		clear: both;
+	}
+	.woocommerce .related ul.products li.product,
+	.woocommerce-page .related ul.products li.product {
+		width: 48%;
+		margin: 0 0 1em 0;
+	}
+	.woocommerce .related ul.products li.product input.input-text, .woocommerce .related ul.products li.product textarea,
+	.woocommerce-page .related ul.products input.input-text,
+	.woocommerce-page .related ul.products textarea,
+	.woocommerce form .form-row input.input-text,
+	.woocommerce form .form-row textarea {
+		line-height: 1.5em;
+		padding: 10px;
+	}
+	.woocommerce-page form .form-row input.input-text, .woocommerce-page form .form-row textarea {
+		line-height: 1.5em;
+		padding: 10px;
 	}
 	/* =RESPONSIVE SUB TOGGLE MENU
 	----------------------------------------------- */
@@ -3313,6 +3413,60 @@ li.default-menu {
 		height: 4px;
 		margin: 0 3px;
 		width: 12px;
+	}
+	.woocommerce table {
+		font-size: 12px;
+	}
+	.woocommerce table.shop_table {
+		border-collapse: collapse;
+	}
+	.woocommerce table.shop_table th {
+		padding: 9px 2px;
+	}
+	.woocommerce table.shop_table td {
+		padding: 6px 2px;
+	}
+	.woocommerce ul.products li.product h3 {
+		font-size: 18px;
+	}
+	.woocommerce-page ul.products li.product h3 {
+		font-size: 18px;
+	}
+	.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
+		font-size: 16px;
+	}
+	.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button {
+		font-size: 14px;
+		margin-bottom: 0;
+		padding: 8px 10px;
+	}
+	.woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button {
+		font-size: 14px;
+		margin-bottom: 0;
+		padding: 8px 10px;
+	}
+	.woocommerce .quantity input.qty, .woocommerce #content .quantity input.qty {
+		height: 24px;
+	}
+	.woocommerce-page .quantity input.qty, .woocommerce-page #content .quantity input.qty {
+		height: 24px;
+	}
+	.woocommerce table.cart td.actions .coupon .input-text, .woocommerce #content table.cart td.actions .coupon .input-text {
+		font-size: 14px;
+		height: 32px;
+		line-height: 1.5;
+		padding: 4px 10px;
+		width: 120px;
+	}
+	.woocommerce-page table.cart td.actions .coupon .input-text, .woocommerce-page #content table.cart td.actions .coupon .input-text {
+		font-size: 14px;
+		height: 32px;
+		line-height: 1.5;
+		padding: 4px 10px;
+		width: 120px;
+	}
+	.woocommerce .cart_totals h2 {
+		float: none;
 	}
 	.gallery-columns-4 .gallery-item,
 	.gallery-columns-5 .gallery-item,

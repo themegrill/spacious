@@ -77,7 +77,7 @@ function sassCompile() {
 function watch() {
 	gulp.watch( paths.elementorStyles.src, elementorStylesCompile );
 	gulp.watch( paths.styles.src, sassCompile );
-	gulp.watch( [ paths.js.src, paths.php.src ], browserSyncReload );
+	// gulp.watch( [ paths.js.src, paths.php.src ], browserSyncReload );
 }
 
 

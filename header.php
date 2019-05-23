@@ -39,7 +39,7 @@
 	$spacious_header_display_type = spacious_options( 'spacious_header_display_type', 'one' );
 	$header_class                 = '';
 	if ( $spacious_header_display_type === 'four' ) {
-		$header_class = ' spacious-header-display-four';
+		$header_class = 'spacious-header-display-four';
 	}
 	?>
 
@@ -69,9 +69,9 @@
 			spacious_render_header_image();
 		} ?>
 
-		<div id="header-text-nav-container">
+		<div id="header-text-nav-container" class="<?php echo ( spacious_options( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
 
-			<div class="inner-wrap">
+			<div class="inner-wrap" id="<?php echo esc_attr( $header_class ); ?>">
 
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
@@ -130,22 +130,22 @@
 						} ?>
 
 						<?php if ( 'four' !== spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
-						<div class="header-action">
-							<?php
-							spacious_cart_icon();
+							<div class="header-action">
+								<?php
+								spacious_cart_icon();
 
-							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
-								?>
-								<div class="search-wrapper">
-									<div class="search">
-										<i class="fa fa-search"> </i>
-									</div>
-									<div class="header-search-form">
-										<?php get_search_form(); ?>
-									</div>
-								</div><!-- /.search-wrapper -->
-							<?php endif; ?>
-						</div>
+								if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+									?>
+									<div class="search-wrapper">
+										<div class="search">
+											<i class="fa fa-search"> </i>
+										</div>
+										<div class="header-search-form">
+											<?php get_search_form(); ?>
+										</div>
+									</div><!-- /.search-wrapper -->
+								<?php endif; ?>
+							</div>
 						<?php endif; ?>
 
 						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
@@ -157,7 +157,7 @@
 				</div><!-- #header-text-nav-wrap -->
 			</div><!-- .inner-wrap -->
 			<?php if ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
-				<div class="bottom-menu clearfix">
+				<div class="bottom-menu clearfix <?php echo spacious_options( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
 					<div class="inner-wrap">
 						<?php spacious_main_nav(); ?>
 
