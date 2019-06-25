@@ -199,7 +199,7 @@
 			}
 		}
 
-		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) ) {
+		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! spacious_options( 'spacious_header_title_hide', 0 ) ) ) {
 			if ( ! ( spacious_options( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
 				<div class="header-post-title-container clearfix">
 					<div class="inner-wrap">
