@@ -136,13 +136,26 @@
 			    branding              = document.getElementById( 'header-left-section' ),
 			    headerAction          = document.querySelector( '.header-action' ),
 			    navigation            = document.getElementById( 'site-navigation' ),
-			    mainWidth             = mainWrapper.offsetWidth,
-			    brandWidth            = branding.offsetWidth,
-			    navWidth              = navigation.offsetWidth,
-			    headerActionWidth     = headerAction.offsetWidth,
-			    isExtra               = ( brandWidth + navWidth + headerActionWidth ) > mainWidth,
-			    more                  = navigation.getElementsByClassName( 'tg-menu-extras-wrap' )[0],
-			    headerDisplayTypeFour = document.getElementById( 'spacious-header-display-four' );
+			    headerDisplayTypeFour = document.getElementById( 'spacious-header-display-four' ),
+				mainWidth, brandWidth, navWidth, headerActionWidth, isExtra, more;
+
+			if (mainWrapper !== null) {
+				mainWidth = mainWrapper.offsetWidth;
+			}
+
+			if (branding !== null) {
+				brandWidth = branding.offsetWidth;
+			}
+
+			if (navigation !== null) {
+				navWidth = navigation.offsetWidth,
+				more = navigation.getElementsByClassName('tg-menu-extras-wrap')[0];
+			}
+
+			if (headerAction !== null) {
+				headerActionWidth = headerAction.offsetWidth,
+				isExtra = (brandWidth + navWidth + headerActionWidth) > mainWidth;
+			}
 
 			// Check for header style 4.
 			if ( headerDisplayTypeFour !== null ) {
