@@ -46,6 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Added `wp_body_open` function to support WordPress 5.2 `wp_body_open` hook.
+* Tweak - Added message to make user aware while installing and activating the ThemeGrill demo importer plugin.
+
 = Version 1.6.3 - 2019-05-23 =
 * Added   - New Demo (Spacious Store) - If you want to create an online store for your website, use this Spacious demo.
 * Feature - Added header button option
