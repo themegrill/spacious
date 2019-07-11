@@ -202,6 +202,8 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 
 					<p>
 						<?php printf( esc_html__( 'Welcome! Thank you for choosing Spacious! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s.', 'spacious' ), '<a href="' . esc_url( admin_url( 'themes.php?page=spacious-welcome' ) ) . '">', '</a>' ); ?>
+
+						<span class="plugin-install-notice"><?php esc_html_e( 'Clicking the button below will install and activate the ThemeGrill demo importer plugin.', 'spacious' ); ?></span>
 					</p>
 
 					<div class="submit">
@@ -312,7 +314,13 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 			<div class="wrap about-wrap">
 				<?php
 				$this->intro();
+				?>
 
+				<div class="plugin-install-notice">
+					<?php esc_html_e( 'Clicking the "Import" button in any of the demos below will install and activate the ThemeGrill demo importer plugin.', 'spacious' ); ?>
+				</div>
+
+				<?php
 				// Display site library.
 				echo Spacious_Site_Library::spacious_site_library_page_content();
 				?>
