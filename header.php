@@ -33,6 +33,13 @@
 <body <?php body_class(); ?>>
 
 <?php
+/**
+ * WordPress function to load custom scripts after body.
+ *
+ * Introduced in WordPress 5.2.0
+ *
+ * @since Spacious 1.6.4
+ */
 if ( function_exists( 'wp_body_open' ) ) {
 	wp_body_open();
 }
