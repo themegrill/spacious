@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.6.5 - 2019-07-12 =
 * Remove - Removed dashboard message to align with the theme review guidelines
 
 = Version 1.6.4 - 2019-07-11 =
