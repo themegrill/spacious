@@ -422,7 +422,6 @@ $spacious_version = $theme['Version'];
  */
 if ( is_admin() ) {
 	require_once get_template_directory() . '/inc/admin/class-spacious-admin.php';
-	require_once get_template_directory() . '/inc/admin/class-spacious-new-theme-notice.php';
 	require get_template_directory() . '/inc/admin/class-spacious-site-library.php';
 	require get_template_directory() . '/inc/admin/class-spacious-theme-review-notice.php';
 }
