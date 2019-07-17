@@ -25,6 +25,12 @@
     "node": ">=0.8.0",
     "npm": ">=1.1.0"
   },
+  "scripts": {
+    "styles" : "gulp sassCompile && gulp elementorStylesCompile",
+    "makepot" : "grunt makepot",
+    "compress": "grunt compress",
+    "build": "npm run styles && npm run makepot && npm run compress"
+  },
   "dependencies": {
     "autoprefixer": "^8.0.0",
     "browser-sync": "~2.26.3",
