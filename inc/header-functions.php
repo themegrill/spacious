@@ -266,7 +266,7 @@ if ( ! function_exists( 'spacious_header_title' ) ) :
 			elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 				$spacious_header_title = __( 'Links', 'spacious' );
 
-			elseif ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) :
+			elseif ( is_plugin_active( 'woocommerce/woocommerce.php' ) && ( is_shop() || is_product_category() || is_product_tag() ) ) :
 				$spacious_header_title = woocommerce_page_title( false );
 
 			else :
