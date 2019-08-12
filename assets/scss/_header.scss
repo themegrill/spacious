@@ -269,12 +269,14 @@ li.default-menu {
 			}
 
 			ul, &:hover ul ul {
-				display: none;
 				z-index: 9999;
+				position: absolute;
+				left: -999999px;
 			}
 
-			&:hover ul {
-				display: block;
+			&:hover ul,
+			&.focus ul {
+				left: auto;
 			}
 
 			.sub-toggle {
@@ -346,7 +348,6 @@ li.default-menu {
 				background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
 				border-top: 1px solid #0FBE7C;
 				top: 30px;
-				left: 25px;
 				width: 150px;
 
 				li {

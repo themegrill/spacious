@@ -2335,12 +2335,14 @@ li.default-menu {
 }
 
 .main-navigation ul li ul, .main-navigation ul li:hover ul ul {
-	display: none;
 	z-index: 9999;
+	position: absolute;
+	left: -999999px;
 }
 
-.main-navigation ul li:hover ul {
-	display: block;
+.main-navigation ul li:hover ul,
+.main-navigation ul li.focus ul {
+	left: auto;
 }
 
 .main-navigation ul li .sub-toggle {
@@ -2395,7 +2397,6 @@ li.default-menu {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
 	border-top: 1px solid #0FBE7C;
 	top: 30px;
-	left: 25px;
 	width: 150px;
 }
 
