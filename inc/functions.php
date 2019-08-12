@@ -129,6 +129,10 @@ function spacious_scripts_styles_method() {
 	}
 
 	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'spacious-skip-link-focus-fix', SPACIOUS_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+
 	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
 
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
