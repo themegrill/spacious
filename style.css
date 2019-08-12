@@ -470,7 +470,7 @@ a:focus, a:active, a:hover {
 }
 
 a:focus {
-	outline: none;
+	outline: thin dotted;
 }
 
 /* =IMAGES
