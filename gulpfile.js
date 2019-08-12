@@ -44,7 +44,7 @@ function elementorStylesCompile() {
 			indentType: 'tab',
 			indentWidth: 1,
 			outputStyle: 'expanded',
-//			linefeed: 'crlf'
+			linefeed: 'crlf'
 		} ).on( 'error', sass.logError ) )
 		.pipe( postcss( [
 			autoprefixer( {
@@ -63,7 +63,7 @@ function sassCompile() {
 			indentType: 'tab',
 			indentWidth: 1,
 			outputStyle: 'expanded',
-//			linefeed: 'crlf'
+			linefeed: 'crlf'
 		} ).on( 'error', sass.logError ) )
 		.pipe( postcss( [
 			autoprefixer( {
