@@ -2335,13 +2335,13 @@ li.default-menu {
 }
 
 .main-navigation ul li ul, .main-navigation ul li:hover ul ul {
-	z-index: 9999;
+	z-index: 99999;
 	position: absolute;
 	left: -999999px;
 }
 
-.main-navigation ul li:hover ul,
-.main-navigation ul li.focus ul {
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
 	left: auto;
 }
 
@@ -2368,13 +2368,31 @@ li.default-menu {
 	left: -100%;
 }
 
-.main-navigation ul ul li:hover ul {
-	display: block;
+.main-navigation ul ul {
+	position: absolute;
+	float: left;
+	left: -99999px;
+	z-index: 99999;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
 }
 
 .main-navigation ul ul li:hover ul ul {
 	display: none;
 	z-index: 9999;
+}
+
+.main-navigation ul ul ul {
+	left: -99999px;
+	top: 0;
+}
+
+.main-navigation ul ul ul li:hover > ul,
+.main-navigation ul ul ul li.focus > ul {
+	left: 100%;
 }
 
 .main-navigation ul ul ul li:hover ul ul,
@@ -2450,7 +2468,6 @@ li.default-menu {
 }
 
 .main-navigation ul li ul li ul {
-	left: 150px;
 	top: -1px;
 }
 
