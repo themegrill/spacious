@@ -46,6 +46,11 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Update `screen-reader-text` CSS.
+* Tweak - Added `skip-link` to content area.
+* Tweak - Modify menu CSS for keyboard accessibility.
+
 = Version 1.6.3 - 2019-05-23 =
 * Added   - New Demo (Spacious Store) - If you want to create an online store for your website, use this Spacious demo.
 * Feature - Added header button option

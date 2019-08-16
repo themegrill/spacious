@@ -33,6 +33,8 @@
 <body <?php body_class(); ?>>
 <?php do_action( 'before' ); ?>
 <div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'spacious' ); ?></a>
+
 	<?php do_action( 'spacious_before_header' ); ?>
 
 	<?php
