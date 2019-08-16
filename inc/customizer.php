@@ -340,6 +340,27 @@ function spacious_customize_register( $wp_customize ) {
 		'section' => 'spacious_header_search_icon',
 	) );
 
+	/**
+	 * Title header options
+	 */
+	$wp_customize->add_section( 'spacious_header_title', array(
+		'priority' => 10,
+		'title'    => __( 'Header Title', 'spacious' ),
+		'panel'    => 'spacious_header_options',
+	) );
+	$wp_customize->add_setting( $spacious_themename . '[spacious_header_title_hide]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control($spacious_themename . '[spacious_header_title_hide]', array(
+		'type'    => 'checkbox',
+		'label'   => __( 'Hide page/post header title', 'spacious' ),
+		'section' => 'spacious_header_title',
+	) );
+
 	// End of Header Options
 
 	/*************************************Start of the Social Links Options*************************************/

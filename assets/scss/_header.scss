@@ -269,12 +269,14 @@ li.default-menu {
 			}
 
 			ul, &:hover ul ul {
-				display: none;
-				z-index: 9999;
+				z-index: 99999;
+				position: absolute;
+				left: -999999px;
 			}
 
-			&:hover ul {
-				display: block;
+			&:hover > ul,
+			&.focus > ul {
+				left: auto;
 			}
 
 			.sub-toggle {
@@ -310,8 +312,14 @@ li.default-menu {
 		}
 
 		ul {
-			li:hover ul {
-				display: block;
+			position: absolute;
+			float: left;
+			left: -99999px;
+			z-index: 99999;
+
+			li:hover > ul,
+			li.focus > ul {
+				left: 100%;
 			}
 
 			li:hover ul ul {
@@ -320,6 +328,16 @@ li.default-menu {
 			}
 
 			ul {
+				left: -99999px;
+				top: 0;
+
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
+				}
+
 				li:hover ul ul,
 				ul li:hover ul ul {
 					display: none;
@@ -404,7 +422,6 @@ li.default-menu {
 			}
 
 			ul li ul {
-				left: 150px;
 				top: -1px;
 			}
 		}

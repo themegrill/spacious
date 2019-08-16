@@ -47,6 +47,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <?php do_action( 'before' ); ?>
 <div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'spacious' ); ?></a>
+
 	<?php do_action( 'spacious_before_header' ); ?>
 
 	<?php
@@ -213,7 +215,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 			}
 		}
 
-		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) ) {
+		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! spacious_options( 'spacious_header_title_hide', 0 ) ) ) {
 			if ( ! ( spacious_options( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
 				<div class="header-post-title-container clearfix">
 					<div class="inner-wrap">
