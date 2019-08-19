@@ -47,6 +47,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Added   - New Demo (Spacious Freelancer) - Use this Spacious demo to create your amazing website.
+* Added   - New Demo (Spacious Car Repair) -Use this demo to create the perfect website for your car repair shop.
+* Added - Option to Enable/Disable Header title.
 * Tweak - Update `screen-reader-text` CSS.
 * Tweak - Added `skip-link` to content area.
 * Tweak - Modify menu CSS for keyboard accessibility.
