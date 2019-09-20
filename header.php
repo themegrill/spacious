@@ -53,8 +53,9 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 	<?php
 	$spacious_header_display_type = spacious_options( 'spacious_header_display_type', 'one' );
-	$header_class                 = '';
-	if ( $spacious_header_display_type === 'four' ) {
+	if ( $spacious_header_display_type === 'one' ) {
+		$header_class .= 'spacious-header-display-one';
+	} elseif ( $spacious_header_display_type === 'four' ) {
 		$header_class = 'spacious-header-display-four';
 	}
 	?>
