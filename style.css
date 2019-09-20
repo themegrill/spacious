@@ -2283,6 +2283,18 @@ nav li > ol {
 	font-family: 'Lato', sans-serif;
 }
 
+.main-navigation .tg-menu-extras-wrap {
+	line-height: 1.875;
+}
+
+.main-navigation .tg-menu-extras-wrap > .sub-toggle {
+	display: none;
+}
+
+.main-navigation .tg-menu-extras-wrap .sub-menu {
+	top: 60%;
+}
+
 .main-navigation .menu-primary-container > ul::after {
 	content: '';
 	display: block;

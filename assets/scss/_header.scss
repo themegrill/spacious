@@ -212,6 +212,18 @@ nav li > {
 		font-family: 'Lato', sans-serif;
 	}
 
+	.tg-menu-extras-wrap {
+		line-height: 1.875;
+
+		> .sub-toggle {
+			display: none;
+		}
+
+		.sub-menu {
+			top: 60%;
+		}
+	}
+
 	.menu-primary-container {
 		> ul {
 			&::after {

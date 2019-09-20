@@ -222,8 +222,10 @@
 					var children = new Array();
 
 					for ( var child in node.childNodes ) {
-						if ( 1 === node.childNodes[child].nodeType ) {
-							children.push( node.childNodes[child] );
+						if ( typeof node !== 'undefined' ) {
+							if ( 1 === node.childNodes[child].nodeType ) {
+								children.push( node.childNodes[child] );
+							}
 						}
 					}
 
