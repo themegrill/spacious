@@ -20,8 +20,6 @@ body.page-template-page-builder #main {
 
 .elementor-column-gap-default .elementor-row {
 	width: calc(100% + 20px);
-	margin-left: -10px;
-	margin-right: -10px;
 }
 
 .elementor-column-gap-narrow .elementor-row {

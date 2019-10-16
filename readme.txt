@@ -46,8 +46,8 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
-* Added   - New Demo (Spacious Food) - Use this Spacious demo to let your user's know what you can offer as menu.
+= Version 1.6.7 - 2019-10-16 =
+* Added   - New Demo (Spacious Food)- Use this Spacious demo to create a fantastic website for your food enthusiasts.
 * Fix - Empty ID for header display type
 * Tweak - Review notice dismiss button removes display of theme review notice permanently.
 
