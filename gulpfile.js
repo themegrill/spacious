@@ -1,10 +1,27 @@
 'use strict';
 
-var gulp = require( 'gulp' );
-var browserSync = require( 'browser-sync' ).create();
-var sass = require( 'gulp-sass' );
-var postcss = require( 'gulp-postcss' );
-var autoprefixer = require( 'autoprefixer' );
+var gulp         = require( 'gulp' ),
+	browserSync  = require( 'browser-sync' ).create(),
+	sass         = require( 'gulp-sass' ),
+	postcss      = require( 'gulp-postcss' ),
+	autoprefixer = require( 'autoprefixer' ),
+	rename       = require( 'gulp-rename' ),
+	notify       = require( 'gulp-notify' ),
+	wpPot        = require( 'gulp-wp-pot' ),
+	zip          = require( 'gulp-zip' );
+
+/**
+ * Project information.
+ */
+var info = {
+    name       : 'Spacious',
+    slug       : 'spacious',
+    url        : 'https://themegrill.com/themes/spacious/',
+    author     : 'ThemeGrill',
+    authorUrl  : 'https://themegrill.com/wordpress-themes/',
+    authorEmail: 'themegrill@gmail.com',
+    teamEmail  : 'team@themegrill.com'
+};
 
 // Define paths
 var paths = {
@@ -22,6 +39,20 @@ var paths = {
 	},
 	php: {
 		src: [ './*.php', './post-templates/*.php' ]
+	},
+	zip   : {
+		src: [
+			'**',
+			'!.*',
+			'!*.md',
+			'!*.zip',
+			'!.*/**',
+			'!dist/**',
+			'!Gruntfile.js',
+			'!package.json',
+			'!node_modules/**'
+		],
+		dest: './dist',
 	}
 };
 
@@ -75,6 +106,22 @@ function sassCompile() {
 		.pipe( browserSync.stream() );
 }
 
+// Generates  translation file.
+function generatePotFile() {
+    return gulp
+        .src( paths.php.src )
+        .pipe(
+           wpPot( {
+                domain   : info.slug,
+                package  : info.name,
+                bugReport: info.authorEmail,
+                team     : info.teamEmail
+            } )
+        )
+        .pipe( gulp.dest( 'languages/' + info.slug + '-pro.pot' ) )
+        .on( 'error', notify.onError() );
+}
+
 // Watch for file changes
 function watch() {
 	gulp.watch( paths.elementorStyles.src, elementorStylesCompile );
@@ -92,3 +139,5 @@ exports.elementorStylesCompile = elementorStylesCompile;
 exports.sassCompile = sassCompile;
 exports.watch = watch;
 exports.server = server;
+exports.generatePotFile        = generatePotFile;
+exports.compressZip            = compressZip;
