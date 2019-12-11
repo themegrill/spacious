@@ -702,10 +702,6 @@ if ( ! function_exists( 'spacious_posts_listing_display_type_select' ) ) :
 			$format = 'blog-image-medium';
 		} elseif ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) == 'blog_full_content' ) {
 			$format = 'blog-full-content';
-		} elseif ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) == 'blog_masonry_content' ) {
-			$format = 'blog-masonry-content';
-		} elseif ( spacious_options( 'spacious_archive_display_type', 'blog_large' ) == 'blog_grid_content' ) {
-			$format = 'blog-grid-content';
 		} else {
 			$format = get_post_format();
 		}
