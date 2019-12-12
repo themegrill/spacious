@@ -2573,10 +2573,16 @@ li.default-menu {
 	transform: translateX(-100%);
 }
 
+#header-right-section .cart-wrapper .widget_shopping_cart .widgettitle,
+.bottom-menu .cart-wrapper .widget_shopping_cart .widgettitle {
+	font-size: 20px;
+	padding-bottom: 0;
+}
+
 #header-right-section .cart-wrapper .widget_shopping_cart .woocommerce-mini-cart__empty-message,
 .bottom-menu .cart-wrapper .widget_shopping_cart .woocommerce-mini-cart__empty-message {
 	margin-bottom: 0;
-	padding: 15px;
+	padding: 15px 0;
 }
 
 #header-right-section .cart-wrapper:hover .widget_shopping_cart,

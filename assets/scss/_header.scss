@@ -537,9 +537,14 @@ li.default-menu {
 		-o-transform: translateX(-100%);
 		transform: translateX(-100%);
 
+		.widgettitle {
+			font-size: 20px;
+			padding-bottom: 0;
+		}
+
 		.woocommerce-mini-cart__empty-message {
 			margin-bottom: 0;
-			padding: 15px;
+			padding: 15px 0;
 		}
 	}
 
