@@ -1731,6 +1731,10 @@ body {
 	padding-bottom: 5px;
 }
 
+.elementor .widget_service_block .widget-title span {
+	border: none;
+}
+
 #colophon #wp-calendar th,
 #colophon #wp-calendar td {
 	border: 1px solid #444444;

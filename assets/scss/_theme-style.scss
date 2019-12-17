@@ -1856,10 +1856,16 @@ body {
 	font-weight: 600;
 }
 
+
 .widget-title span {
 	border-bottom: 2px solid #0FBE7C;
 	padding-bottom: 5px;
+
+	.elementor .widget_service_block & {
+		border: none;
+	}
 }
+
 
 #colophon #wp-calendar {
 	th,
