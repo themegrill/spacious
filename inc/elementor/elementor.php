@@ -64,8 +64,5 @@ function spacious_widgets_classes() {
 			'spacious_call_to_action_widget'       => 'widget_call_to_action',
 			'spacious_testimonial_widget'          => 'widget_testimonial',
 			'spacious_recent_work_widget'          => 'widget_recent_work',
-			'spacious_featured_posts_widget'       => 'widget_featured_posts',
-			'spacious_our_clients_widget'          => 'widget_our_clients',
-			'spacious_team_widget'                 => 'widget_team_block',
 		);
 }
