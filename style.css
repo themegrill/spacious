@@ -1731,7 +1731,9 @@ body {
 	padding-bottom: 5px;
 }
 
-.elementor .widget_service_block .widget-title span {
+.elementor .widget_service_block .widget-title span,
+.elementor .widget_testimonial .widget-title span,
+.elementor .widget_featured_single_post .widget-title span {
 	border: none;
 }
 

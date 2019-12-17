@@ -110,7 +110,7 @@ a {
 
 		&:hover {
 			opacity: 0.8;
-			filter: alpha(opacity = 80);
+			filter: alpha(opacity=80);
 			/* For IE8 and earlier */
 			box-shadow: #000 0 0 0;
 		}
@@ -320,9 +320,11 @@ blockquote {
 	border: 1px solid #EAEAEA;
 	border-left: 3px solid #0FBE7C;
 	margin-bottom: 20px;
+
 	em, i {
 		font-style: normal;
 	}
+
 	cite {
 		font-style: normal;
 		color: #666666;
@@ -388,7 +390,7 @@ input {
 	&[type="email"],
 	&[type="search"],
 	&[type="password"] {
-		&:focus{
+		&:focus {
 			border: 1px solid #EAEAEA;
 		}
 	}
@@ -506,7 +508,7 @@ input {
 	&[type="reset"],
 	&[type="button"],
 	&[type="submit"] {
-		&:active{
+		&:active {
 			-webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 			-moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 			box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
@@ -520,6 +522,7 @@ input {
 a {
 	color: #0FBE7C;
 	text-decoration: none;
+
 	&:focus,
 	&:active,
 	&:hover {
@@ -554,7 +557,9 @@ img {
 img {
 	&[class*="align"],
 	&[class*="wp-image-"],
-	&[class*="attachment-"] {}
+	&[class*="attachment-"] {
+	}
+
 	&.size-full,
 	&.size-large {
 		max-width: 100%;
@@ -577,7 +582,8 @@ img {
 	}
 }
 
-p img {}
+p img {
+}
 
 img#wpstats {
 	display: none;
@@ -660,6 +666,7 @@ img#wpstats {
 		#main {
 			overflow: hidden;
 		}
+
 		.alignwide {
 			margin-left: -10px;
 			margin-right: -10px;
@@ -750,6 +757,7 @@ body {
 	.displayblock {
 		display: block;
 	}
+
 	.displaynone {
 		display: none;
 	}
@@ -1352,7 +1360,8 @@ body {
 	margin: 0.8075rem 0;
 }
 
-.gallery-caption {}
+.gallery-caption {
+}
 
 /* =WORDPRESS GALLERY SUPPORT
 ----------------------------------------------- */
@@ -1431,7 +1440,7 @@ body {
 	padding-top: 5px;
 }
 
-.footer-widgets-area .gallery-columns-3 .gallery-item{
+.footer-widgets-area .gallery-columns-3 .gallery-item {
 	padding: 5px 5px;
 }
 
@@ -1454,6 +1463,7 @@ body {
 	h1, h2, h3, h4, h5, h6 {
 		margin-bottom: 1rem;
 	}
+
 	h2.comments-title, h3.comments-title {
 		margin-bottom: 10px;
 		font-size: 28px;
@@ -1471,6 +1481,7 @@ body {
 		overflow: hidden;
 		position: relative;
 	}
+
 	.comment-edit-link, .comment-permalink, .comment-date-time, .comment-author-link {
 		display: block;
 		margin-left: 100px;
@@ -1514,7 +1525,7 @@ body {
 		.comment-author-link,
 		.comment-edit-link,
 		.comment-permalink,
-		.comment-date-time{
+		.comment-date-time {
 			&:before {
 				display: inline-block;
 				-webkit-font-smoothing: antialiased;
@@ -1714,6 +1725,7 @@ body {
 .related-posts-main-title {
 	padding-bottom: 30px;
 }
+
 .related-posts {
 	margin: 0 -2.46305419%;
 
@@ -1721,6 +1733,7 @@ body {
 		font-size: 18px;
 		line-height: 1.4;
 		padding-bottom: 0;
+
 		a {
 			color: #444444;
 
@@ -1739,7 +1752,7 @@ body {
 		.category,
 		.comments,
 		.edit-link {
-			padding:5px 4px 5px 0;
+			padding: 5px 4px 5px 0;
 
 			&:before {
 				font: 12px/20px "FontAwesome";
@@ -1861,7 +1874,9 @@ body {
 	border-bottom: 2px solid #0FBE7C;
 	padding-bottom: 5px;
 
-	.elementor .widget_service_block & {
+	.elementor .widget_service_block &,
+	.elementor .widget_testimonial &,
+	.elementor .widget_featured_single_post & {
 		border: none;
 	}
 }
@@ -1898,7 +1913,7 @@ a#scroll-up {
 	color: #FFFFFF;
 	background-color: #0FBE7C;
 	opacity: 0.5;
-	filter: alpha(opacity = 50);
+	filter: alpha(opacity=50);
 	/* For IE8 and earlier */
 	border-radius: 3px;
 	padding: 6px;
@@ -1909,7 +1924,7 @@ a#scroll-up {
 
 	&:hover {
 		opacity: 1;
-		filter: alpha(opacity = 100);
+		filter: alpha(opacity=100);
 		/* For IE8 and earlier */
 	}
 }
@@ -1957,6 +1972,7 @@ a#scroll-up {
 	#primary {
 		float: right;
 	}
+
 	#secondary {
 		float: left;
 	}
@@ -2028,10 +2044,12 @@ a#scroll-up {
 			padding: 0;
 		}
 	}
+
 	ol {
 		padding: 0 0 0 35px;
 		margin-bottom: 30px;
 	}
+
 	li > {
 		ul, ol {
 			margin-bottom: 0;
@@ -2055,6 +2073,7 @@ a#scroll-up {
 		float: left;
 		padding-right: 4%;
 	}
+
 	&:nth-child(even) figure {
 		float: right;
 		padding-left: 4%;
@@ -2071,6 +2090,7 @@ a#scroll-up {
 	.by-author, .date, .category, .comments, .edit-link {
 		padding: 5px 10px;
 	}
+
 	.read-more-link {
 		padding: 5px 10px;
 		background-color: #0FBE7C;
@@ -2083,6 +2103,7 @@ a#scroll-up {
 			box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 		}
 	}
+
 	a {
 		color: #666666;
 	}
@@ -2154,7 +2175,6 @@ a#scroll-up {
 		content: '\f411';
 	}
 }
-
 
 
 .author-box {
