@@ -46,9 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version 1.6.8 - 2019-12-13 =
+= Version 1.6.8 - 2020-01-27 =
 * Added   - New Demo (Spacious Gym)- Start creating your fitness website with this Spacious Gym demo.
 * Added   - New Demo (Spacious Interior)- Use this Spacious demo to start building your online interior designing services.
+* Added   - New Demo (Spacious Company)- Use this Spacious demo to build and grow your company website.
 
 = Version 1.6.7 - 2019-10-16 =
 * Added   - New Demo (Spacious Food)- Use this Spacious demo to create a fantastic website for your food enthusiasts.
