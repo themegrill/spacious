@@ -336,7 +336,7 @@ textarea {
 	appearance: none !important;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"], input[type="url"] {
 	padding: 1%;
 	border: 1px solid #EAEAEA;
 	line-height: 20px;
@@ -1538,6 +1538,14 @@ body {
 #respond form {
 	margin: 24px 0;
 	margin: 2.4rem 0;
+}
+
+#respond form .comment-form-cookies-consent #wp-comment-cookies-consent {
+	margin-right: 5px;
+}
+
+#respond form .comment-form-cookies-consent label {
+	display: inline-block;
 }
 
 #respond form p {

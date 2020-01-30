@@ -360,7 +360,7 @@ textarea {
 }
 
 input {
-	&[type="text"], &[type="email"], &[type="password"] {
+	&[type="text"], &[type="email"], &[type="password"],  &[type="url"] {
 		padding: 1%;
 		border: 1px solid #EAEAEA;
 		line-height: 20px;
@@ -1682,6 +1682,15 @@ body {
 	form {
 		margin: 24px 0;
 		margin: 2.4rem 0;
+
+		.comment-form-cookies-consent {
+			#wp-comment-cookies-consent {
+				margin-right: 5px;
+			}
+			label {
+				display: inline-block;
+			}
+		}
 
 		p {
 			margin: 11px 0;
