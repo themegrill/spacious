@@ -42,8 +42,8 @@ function spacious_customize_register( $wp_customize ) {
 	 */
 	class SPACIOUS_Upsell_Section extends WP_Customize_Section {
 		public $type = 'spacious-upsell-section';
-		public $url  = '';
-		public $id   = '';
+		public $url = '';
+		public $id = '';
 
 		/**
 		 * Gather the parameters passed to client JavaScript via JSON.
@@ -131,6 +131,36 @@ function spacious_customize_register( $wp_customize ) {
 			'none'      => __( 'Disable', 'spacious' ),
 		),
 	) );
+	// Retina Logo Option.
+	$wp_customize->add_setting( $spacious_themename . '[spacious_different_retina_logo]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_different_retina_logo]', array(
+		'type'     => 'checkbox',
+		'priority' => 8,
+		'label'    => esc_html__( 'Different Logo for Retina Devices.', 'spacious' ),
+		'section'  => 'title_tagline',
+	) );
+
+	// Retina Logo Upload.
+	$wp_customize->add_setting( $spacious_themename . '[spacious_retina_logo_upload]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_retina_logo_upload]', array(
+		'label'           => esc_html__( 'Retina Logo', 'spacious' ),
+		'priority'        => 8,
+		'setting'         => 'spacious[spacious_retina_logo_upload]',
+		'section'         => 'title_tagline',
+		'active_callback' => 'spacious_retina_logo_option',
+	) ) );
 
 	// Header Top bar activate option
 	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
@@ -355,7 +385,7 @@ function spacious_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'spacious_checkbox_sanitize',
 	) );
 
-	$wp_customize->add_control($spacious_themename . '[spacious_header_title_hide]', array(
+	$wp_customize->add_control( $spacious_themename . '[spacious_header_title_hide]', array(
 		'type'    => 'checkbox',
 		'label'   => __( 'Hide page/post header title', 'spacious' ),
 		'section' => 'spacious_header_title',
@@ -1152,6 +1182,15 @@ function spacious_customize_register( $wp_customize ) {
 		return $color;
 	}
 
+	// Active Callback for Retina Logo.
+	function spacious_retina_logo_option() {
+		if ( spacious_options( 'spacious_different_retina_logo', 0 ) == 1 ) {
+			return true;
+		}
+
+		return false;
+	}
+
 	function spacious_color_escaping_option_sanitize( $input ) {
 		$input = esc_attr( $input );
 
@@ -1273,7 +1312,7 @@ function spacious_customizer_custom_scripts() { ?>
 
 	<script>
 		( function ( $, api ) {
-			api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
+			api.sectionConstructor[ 'spacious-upsell-section' ] = api.Section.extend( {
 
 				// No events for this type of section.
 				attachEvents : function () {
