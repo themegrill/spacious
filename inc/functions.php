@@ -1053,26 +1053,25 @@ endif;
 add_filter( 'wp_nav_menu_items', 'spacious_shift_extra_menu', 12, 2 );
 
 /**
- * + * Update image attributes for retina logo.
- * + *
- * + * @see spacious_change_logo_attr()
- * + */
+  * Update image attributes for retina logo.
+  *
+  * @see spacious_change_logo_attr()
+  */
 if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
-	function spacious_change_logo_attr( $attr, $attachment, $size ) {
 
-	error_log(print_r($attachment, true));
+	function spacious_change_logo_attr( $attr, $attachment, $size ) {
 		$custom_logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 		$custom_logo = $custom_logo[0];
 
 		if ( isset( $attr['class'] ) && 'custom-logo' === $attr['class'] ) {
 
 			if ( 1 == spacious_options( 'spacious_different_retina_logo', 0 ) ) {
-				$retina_logo = spacious_options( 'spacious_retina_logo_upload', '' );
+				$retina_logo = spacious_options( 'spacious_retina_logo_upload' );
 
 				$attr['srcset'] = '';
 
 				if ( $retina_logo ) {
-					$attr['srcset'] = $custom_logo . ' 1x,' . $retina_logo . ' 2x';
+					$attr['srcset'] = $custom_logo . ' 1x, ' . $retina_logo . ' 2x';
 				}
 			}
 
