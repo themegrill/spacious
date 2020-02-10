@@ -590,13 +590,11 @@ if ( ! function_exists( 'spacious_content_nav' ) ) :
 			<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 				<?php if ( get_next_posts_link() ) : ?>
-					<div
-						class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'spacious' ) ); ?></div>
+					<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'spacious' ) ); ?></div>
 				<?php endif; ?>
 
 				<?php if ( get_previous_posts_link() ) : ?>
-					<div
-						class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'spacious' ) ); ?></div>
+					<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'spacious' ) ); ?></div>
 				<?php endif; ?>
 
 			<?php endif; ?>
@@ -771,9 +769,11 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 
 			if ( has_category() ) { ?>
 				<span class="category"><?php the_category( ', ' ); ?></span>
-			<?php }
+			<?php
+			}
 
-			if ( comments_open() ) { ?>
+			if ( comments_open() ) {
+				?>
 				<span
 					class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
 			<?php }
