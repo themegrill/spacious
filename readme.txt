@@ -46,7 +46,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.6.9 - 2020-02-10 =
 * Feature - Added Retina Logo Option.
 * Fix     - Input type CSS for comments
 
