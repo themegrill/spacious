@@ -1068,8 +1068,6 @@ if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
 			if ( 1 == spacious_options( 'spacious_different_retina_logo', 0 ) ) {
 				$retina_logo = spacious_options( 'spacious_retina_logo_upload' );
 
-				$attr['srcset'] = '';
-
 				if ( $retina_logo ) {
 					$attr['srcset'] = $custom_logo . ' 1x, ' . $retina_logo . ' 2x';
 				}
