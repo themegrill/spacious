@@ -156,6 +156,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_retina_logo_upload]', array(
 		'label'           => esc_html__( 'Retina Logo', 'spacious' ),
+		'description'     => esc_html__( 'Please upload the retina logo double the size of logo. For eg: If you upload 100 * 100 pixels for logo then use 200 * 200 pixels for retina logo.', 'spacious' ),
 		'priority'        => 8,
 		'setting'         => 'spacious[spacious_retina_logo_upload]',
 		'section'         => 'title_tagline',
