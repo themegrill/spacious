@@ -89,21 +89,11 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		// Supporting title tag via add_theme_support (since WordPress 4.1)
 		add_theme_support( 'title-tag' );
 
-		// Recommended Logo size.
-		$logo_width  = 100;
-		$logo_height = 100;
-
-		// Double recommended size for Retina logo.
-		if ( spacious_options( 'spacious_retina_logo_upload', false ) ) {
-			$logo_width  = floor( $logo_width * 2 );
-			$logo_height = floor( $logo_height * 2 );
-		}
-
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
 		add_theme_support( 'custom-logo',
 			array(
-				'height'      => $logo_width,
-				'width'       => $logo_height,
+				'height'      => 100,
+				'width'       => 100,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)

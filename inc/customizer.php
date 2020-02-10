@@ -142,7 +142,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_control( $spacious_themename . '[spacious_different_retina_logo]', array(
 		'type'     => 'checkbox',
 		'priority' => 8,
-		'label'    => esc_html__( 'Different Logo for Retina Devices.', 'spacious' ),
+		'label'    => esc_html__( 'Different Logo for Retina Devices?', 'spacious' ),
 		'section'  => 'title_tagline',
 	) );
 
