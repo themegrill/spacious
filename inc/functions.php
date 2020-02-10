@@ -525,7 +525,7 @@ function spacious_custom_css() {
 			.single #content .tags a:hover { color: ' . $primary_color . '; }
 			.widget_testimonial .testimonial-icon:before { color: ' . $primary_color . '; }
 			a#scroll-up { background-color: ' . $primary_color . '; }
-			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '} .spacious-woocommerce-cart-views .cart-value { background:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a{background-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a{border-color:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a:hover{background-color:'.$primary_dark .'}.main-navigation .tg-header-button-wrap.button-one a:hover{border-color:' . $primary_dark . '}';
+			.search-form span { background-color: ' . $primary_color . '; }.header-action .search-wrapper:hover .fa{ color: ' . $primary_color . '} .spacious-woocommerce-cart-views .cart-value { background:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a{background-color:' . $primary_color . '} .main-navigation .tg-header-button-wrap.button-one a{border-color:' . $primary_color . '}.main-navigation .tg-header-button-wrap.button-one a:hover{background-color:' . $primary_dark . '}.main-navigation .tg-header-button-wrap.button-one a:hover{border-color:' . $primary_dark . '}';
 	}
 
 	/* Typography */
@@ -769,10 +769,13 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 
 			if ( has_category() ) { ?>
 				<span class="category"><?php the_category( ', ' ); ?></span>
-			<?php }
+			<?php
+			}
 
-			if ( comments_open() ) { ?>
-				<span class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
+			if ( comments_open() ) {
+				?>
+				<span
+					class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
 			<?php }
 
 			edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' );
@@ -1025,8 +1028,8 @@ if ( ! function_exists( 'spacious_shift_extra_menu' ) ) :
 	/**
 	 * Keep menu items on one line.
 	 *
-	 * @param string   $items The HTML list content for the menu items.
-	 * @param stdClass $args  An object containing wp_nav_menu() arguments.
+	 * @param string $items The HTML list content for the menu items.
+	 * @param stdClass $args An object containing wp_nav_menu() arguments.
 	 *
 	 * @return string HTML for more button.
 	 */
@@ -1048,3 +1051,33 @@ if ( ! function_exists( 'spacious_shift_extra_menu' ) ) :
 	}
 endif;
 add_filter( 'wp_nav_menu_items', 'spacious_shift_extra_menu', 12, 2 );
+
+/**
+  * Update image attributes for retina logo.
+  *
+  * @see spacious_change_logo_attr()
+  */
+if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
+
+	function spacious_change_logo_attr( $attr, $attachment, $size ) {
+		$custom_logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+		$custom_logo = $custom_logo[0];
+
+		if ( isset( $attr['class'] ) && 'custom-logo' === $attr['class'] ) {
+
+			if ( 1 == spacious_options( 'spacious_different_retina_logo', 0 ) ) {
+				$retina_logo = spacious_options( 'spacious_retina_logo_upload' );
+
+				if ( $retina_logo ) {
+					$attr['srcset'] = $custom_logo . ' 1x, ' . $retina_logo . ' 2x';
+				}
+			}
+
+		}
+
+		return $attr;
+	}
+
+endif;
+
+add_filter( 'wp_get_attachment_image_attributes', 'spacious_change_logo_attr', 10, 3 );

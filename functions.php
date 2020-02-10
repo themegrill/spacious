@@ -92,8 +92,8 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
 		add_theme_support( 'custom-logo',
 			array(
-				'height'      => '100',
-				'width'       => '100',
+				'height'      => 100,
+				'width'       => 100,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
