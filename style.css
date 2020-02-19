@@ -4,7 +4,7 @@ Theme URI: https://themegrill.com/themes/spacious
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 2 page templates, 4 blog display types, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/spacious/.
-Version: 1.6.9
+Version: 1.7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, footer-widgets, blog, e-commerce, rtl-language-support
@@ -3043,6 +3043,7 @@ li.default-menu {
 	.wide-978 #featured-slider .entry-container {
 		left: 17.6%;
 	}
+
 	.wide-1218 #featured-slider .entry-container {
 		left: 9.6%;
 	}
@@ -3052,6 +3053,7 @@ li.default-menu {
 	.wide-978 #featured-slider .entry-container {
 		left: 19.45%;
 	}
+
 	.wide-1218 #featured-slider .entry-container {
 		left: 11.9%;
 	}
@@ -3061,9 +3063,11 @@ li.default-menu {
 	#page {
 		width: 97%;
 	}
+
 	.wide-1218 #page, .wide-978 #page {
 		width: 100%;
 	}
+
 	.inner-wrap {
 		width: 94%;
 	}
@@ -3073,81 +3077,100 @@ li.default-menu {
 	body {
 		padding: 15px 0;
 	}
+
 	#featured-slider .entry-container {
 		max-width: 60%;
 	}
+
 	.call-to-action-content {
 		float: none;
 		width: 100%;
 		margin-bottom: 10px;
 		text-align: center;
 	}
+
 	.call-to-action-button {
 		width: 93%;
 	}
+
 	.footer-socket-wrapper .copyright {
 		float: none;
 		max-width: 100%;
 		text-align: center;
 		margin-bottom: 5px;
 	}
+
 	.footer-socket-wrapper .small-menu {
 		float: none;
 		text-align: center;
 	}
+
 	.footer-socket-wrapper .small-menu li {
 		float: none;
 		display: inline;
 	}
+
 	.footer-socket-wrapper .small-menu a {
 		float: none;
 		display: inline;
 		padding: 5px 5px 0;
 	}
+
 	.small-menu li.default-menu, li.default-menu {
 		display: none;
 	}
+
 	.tg-one-half, .tg-one-third, .tg-one-fourth {
 		float: left;
 		width: 46.7684729%;
 	}
+
 	#colophon .tg-one-third {
 		float: left;
 		margin-right: 2.38916257%;
 		padding: 0 0 30px;
 		width: 31.7405583%;
 	}
+
 	#colophon .tg-one-third.tg-after-two-blocks-clearfix {
 		clear: none;
 	}
+
 	.widget_service_block .tg-one-third {
 		float: left;
 		margin: 0 2.46305%;
 		padding: 0 0 30px;
 		width: 28.4072%;
 	}
+
 	.tg-one-half-last, .tg-one-fourth-last {
 		float: right;
 	}
+
 	.tg-service-left {
 		float: left;
 		margin: 0;
 	}
+
 	.tg-service-right {
 		float: right;
 		margin: 0;
 	}
+
 	.tg-column-1, .tg-column-3 {
 		float: left;
 		width: 46.7684729%;
 	}
+
 	.tg-column-2, .tg-column-4 {
 		float: right;
 		margin-right: 0;
 	}
+
 	.tg-after-two-blocks-clearfix {
 		clear: both;
 	}
+
 	.tg-after-three-blocks-clearfix {
 		clear: none;
 	}
@@ -3159,92 +3182,114 @@ li.default-menu {
 		width: 100%;
 		margin: 0;
 	}
+
 	#header-left-section {
 		float: none;
 		max-width: 100%;
 		margin-right: 0px;
 	}
+
 	#header-logo-image {
 		float: none;
 		text-align: center;
 		margin-bottom: 10px;
 		padding-right: 0;
 	}
+
 	#header-text {
 		float: none;
 		text-align: center;
 		padding: 0;
 		margin-bottom: 10px;
 	}
+
 	#site-description {
 		padding-bottom: 5px;
 	}
+
 	#header-right-section {
 		float: none;
 		max-width: 100%;
 	}
+
 	#header-right-section .widget {
 		padding: 0 0 10px 0;
 		float: none;
 		text-align: center;
 	}
+
 	#header-right-section #header-right-sidebar {
 		width: 100%;
 	}
+
 	.site-header .menu-toggle {
 		display: block;
 		text-align: left;
 		padding: 10px 20px;
 	}
+
 	.main-small-navigation {
 		width: 100%;
 	}
+
 	.main-navigation {
 		float: none;
 		padding-top: 0;
 		width: 100%;
 	}
+
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
+
 	.spacious-menu-header-button-enabled .main-navigation .menu-primary-container > ul {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: none;
 	}
+
 	#featured-slider .entry-container {
 		max-width: 70%;
 	}
+
 	#featured-slider .entry-description-container {
 		padding: 5px 10px;
 		padding: 0.5rem 1rem;
 	}
+
 	#featured-slider .slider-title-head {
 		margin-bottom: 0;
 	}
+
 	#featured-slider .entry-title span {
 		font-size: 18px;
 		line-height: 1.4;
 	}
+
 	#featured-slider .entry-content p {
 		font-size: 14px;
 		line-height: 1.4;
 	}
+
 	#featured-slider .slider-read-more-button {
 		font-size: 14px;
 		padding: 5px 10px;
 		padding: 0.5rem 1rem;
 	}
+
 	.woocommerce .related ul.products li.first,
 	.woocommerce-page .related ul.products li.first {
 		clear: both;
 	}
+
 	.woocommerce .related ul.products li.product,
 	.woocommerce-page .related ul.products li.product {
 		width: 48%;
 		margin: 0 0 1em 0;
 	}
+
 	.woocommerce .related ul.products li.product input.input-text, .woocommerce .related ul.products li.product textarea,
 	.woocommerce-page .related ul.products input.input-text,
 	.woocommerce-page .related ul.products textarea,
@@ -3253,10 +3298,12 @@ li.default-menu {
 		line-height: 1.5em;
 		padding: 10px;
 	}
+
 	.woocommerce-page form .form-row input.input-text, .woocommerce-page form .form-row textarea {
 		line-height: 1.5em;
 		padding: 10px;
 	}
+
 	/* =RESPONSIVE SUB TOGGLE MENU
 	----------------------------------------------- */
 	/* sub-toggle */
@@ -3273,75 +3320,93 @@ li.default-menu {
 		top: 9px;
 		width: 24px;
 	}
+
 	.main-small-navigation li.current-menu-item > .sub-toggle {
 		background: #ffffff none repeat scroll 0 0;
 	}
+
 	.main-small-navigation li.current-menu-item > .sub-toggle i {
 		color: #d40234;
 	}
+
 	.better-responsive-menu .menu-primary-container .sub-menu {
 		display: none;
 	}
+
 	.sub-toggle span {
 		display: inline-block;
 		font-size: 11px;
 		line-height: 23px;
 		margin-left: 0;
 	}
+
 	.main-small-navigation li:hover > .sub-toggle {
 		background: #ffffff;
 		color: #0FBE7C;
 	}
+
 	.sub-toggle span.genericon-downarrow {
 		line-height: 30px;
 		margin-left: 0;
 	}
+
 	.site-header.spacious-header-display-four .bottom-menu {
 		position: relative;
 	}
+
 	.site-header.spacious-header-display-four .bottom-menu .menu-toggle {
 		position: absolute;
 		z-index: 9999;
 		right: 20px;
 		top: -40px;
 	}
+
 	.better-responsive-menu #header-right-section {
 		float: right;
 		margin-top: 15px;
 		max-width: 100%;
 	}
+
 	.better-responsive-menu #header-right-section .widget {
 		margin-bottom: 10px;
 	}
+
 	.better-responsive-menu #site-navigation {
 		float: right;
 		margin-top: 10px;
 		padding: 0;
 	}
+
 	.better-responsive-menu .main-small-navigation {
 		margin-top: 10px;
 	}
+
 	.better-responsive-menu #header-logo-image {
 		float: left;
 		margin-bottom: 0;
 		margin-right: 10px;
 	}
+
 	.better-responsive-menu #header-left-section {
 		float: left;
 		margin-top: 10px;
 	}
+
 	.better-responsive-menu #header-text {
 		margin: 13px 0 0;
 		float: left;
 		text-align: left;
 	}
+
 	.better-responsive-menu #site-description {
 		font-size: 13px;
 		margin-bottom: 0;
 	}
+
 	.better-responsive-menu #site-title a {
 		font-size: 28px;
 	}
+
 	.better-responsive-menu .site-header .menu-toggle {
 		background: #3a3a3a none repeat scroll 0 0;
 		color: #fff;
@@ -3353,12 +3418,15 @@ li.default-menu {
 		text-align: center;
 		width: 40px;
 	}
+
 	.better-responsive-menu #header-text-nav-wrap {
 		padding: 0;
 	}
+
 	.better-responsive-menu #header-text-nav-wrap #header-right-section .widget {
 		padding: 0;
 	}
+
 	.better-responsive-menu .site-header .menu-toggle::before {
 		font-size: 21px;
 		left: 50%;
@@ -3369,11 +3437,13 @@ li.default-menu {
 		-webkit-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 	}
+
 	.better-responsive-menu #header-text-nav-container {
 		position: relative;
 		margin-bottom: 15px;
 		border: none;
 	}
+
 	.better-responsive-menu #site-navigation .menu-primary-container {
 		left: 0;
 		position: absolute;
@@ -3389,46 +3459,58 @@ li.default-menu {
 		padding-right: 0;
 		padding-top: 10px;
 	}
+
 	.small-info-text {
 		float: none;
 		padding-right: 0;
 	}
+
 	.social-links ul {
 		display: inline-block;
 	}
+
 	#header-meta {
 		text-align: center;
 	}
+
 	#header-meta .small-menu {
 		float: none;
 	}
+
 	#header-meta .small-menu ul {
 		display: inline-block;
 	}
+
 	.tg-one-half, .tg-one-third, .tg-one-fourth, .widget_service_block .tg-one-third {
 		float: none;
 		width: 100%;
 		margin: 0;
 	}
+
 	.tg-column-1, .tg-column-2, .tg-column-3, .tg-column-4 {
 		float: none;
 	}
+
 	#primary, #secondary {
 		float: none;
 		width: 100%;
 		margin: 0;
 	}
+
 	.wide-978 #primary, .narrow-978 #primary, .wide-978 #secondary, .narrow-978 #secondary {
 		width: 100%;
 	}
+
 	.related-posts {
 		margin: 0;
 	}
+
 	#colophon .tg-one-third {
 		float: none;
 		width: 100%;
 		margin: 0;
 	}
+
 	#colophon .tg-one-third.tg-after-two-blocks-clearfix {
 		clear: both;
 	}
@@ -3440,107 +3522,134 @@ li.default-menu {
 		right: 0;
 		top: 0;
 	}
+
 	.better-responsive-menu #header-logo-image {
 		display: block;
 		float: none;
 	}
+
 	.better-responsive-menu #header-text {
 		display: block;
 		float: none;
 		margin-top: 12px;
 		text-align: center;
 	}
+
 	.better-responsive-menu #header-left-section {
 		padding-top: 10px;
 		text-align: center;
 		float: none;
 	}
+
 	.better-responsive-menu #header-right-section {
 		padding-top: 10px;
 		float: none;
 	}
+
 	.better-responsive-menu #header-right-sidebar {
 		float: right;
 	}
+
 	.better-responsive-menu #site-navigation {
 		float: none;
 		margin-top: 0;
 	}
+
 	.better-responsive-menu .site-header.spacious-header-display-four .bottom-menu .menu-toggle {
 		position: absolute;
 		right: auto;
 		top: -45px;
 		left: 15px;
 	}
+
 	.better-responsive-menu .site-header.spacious-header-display-four #header-left-section,
 	.better-responsive-menu .site-header.spacious-header-display-four #header-right-section {
 		float: none;
 	}
+
 	.main-navigation,
 	.main-small-navigation {
 		padding-top: 8px;
 	}
+
 	#featured-slider .entry-description-container {
 		padding: 3px 6px;
 		padding: 0.3rem 0.6rem;
 	}
+
 	#featured-slider .entry-title span {
 		font-size: 14px;
 	}
+
 	#featured-slider .entry-content p {
 		font-size: 10px;
 	}
+
 	#featured-slider .slider-read-more-button {
 		margin-top: 5px;
 		font-size: 10px;
 		padding: 3px 6px;
 		padding: 0.3rem 0.6rem;
 	}
+
 	#controllers {
 		bottom: 5px;
 	}
+
 	#controllers a {
 		height: 4px;
 		margin: 0 3px;
 		width: 12px;
 	}
+
 	.woocommerce table {
 		font-size: 12px;
 	}
+
 	.woocommerce table.shop_table {
 		border-collapse: collapse;
 	}
+
 	.woocommerce table.shop_table th {
 		padding: 9px 2px;
 	}
+
 	.woocommerce table.shop_table td {
 		padding: 6px 2px;
 	}
+
 	.woocommerce ul.products li.product h3 {
 		font-size: 18px;
 	}
+
 	.woocommerce-page ul.products li.product h3 {
 		font-size: 18px;
 	}
+
 	.woocommerce ul.products li.product .price, .woocommerce-page ul.products li.product .price {
 		font-size: 16px;
 	}
+
 	.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button {
 		font-size: 14px;
 		margin-bottom: 0;
 		padding: 8px 10px;
 	}
+
 	.woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button {
 		font-size: 14px;
 		margin-bottom: 0;
 		padding: 8px 10px;
 	}
+
 	.woocommerce .quantity input.qty, .woocommerce #content .quantity input.qty {
 		height: 24px;
 	}
+
 	.woocommerce-page .quantity input.qty, .woocommerce-page #content .quantity input.qty {
 		height: 24px;
 	}
+
 	.woocommerce table.cart td.actions .coupon .input-text, .woocommerce #content table.cart td.actions .coupon .input-text {
 		font-size: 14px;
 		height: 32px;
@@ -3548,6 +3657,7 @@ li.default-menu {
 		padding: 4px 10px;
 		width: 120px;
 	}
+
 	.woocommerce-page table.cart td.actions .coupon .input-text, .woocommerce-page #content table.cart td.actions .coupon .input-text {
 		font-size: 14px;
 		height: 32px;
@@ -3555,9 +3665,11 @@ li.default-menu {
 		padding: 4px 10px;
 		width: 120px;
 	}
+
 	.woocommerce .cart_totals h2 {
 		float: none;
 	}
+
 	.gallery-columns-4 .gallery-item,
 	.gallery-columns-5 .gallery-item,
 	.gallery-columns-6 .gallery-item,
@@ -3566,9 +3678,11 @@ li.default-menu {
 	.gallery-columns-9 .gallery-item {
 		width: 25%;
 	}
+
 	.author-box .author-img img {
 		margin-bottom: 20px;
 	}
+
 	.author-box .author-description-wrapper {
 		margin-left: 0;
 	}
@@ -3578,13 +3692,16 @@ li.default-menu {
 	#page {
 		width: 97%;
 	}
+
 	.inner-wrap {
 		width: 95%;
 	}
+
 	#featured-slider .entry-content,
 	#featured-slider .slider-read-more-button {
 		display: none;
 	}
+
 	.gallery-columns-4 .gallery-item,
 	.gallery-columns-5 .gallery-item,
 	.gallery-columns-6 .gallery-item,
@@ -3593,6 +3710,7 @@ li.default-menu {
 	.gallery-columns-9 .gallery-item {
 		width: 33.33%;
 	}
+
 	.better-responsive-menu #header-text {
 		text-align: center;
 	}
