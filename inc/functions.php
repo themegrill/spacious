@@ -1081,3 +1081,22 @@ if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
 endif;
 
 add_filter( 'wp_get_attachment_image_attributes', 'spacious_change_logo_attr', 10, 3 );
+
+
+/**
+ * Compare user's current version of plugin.
+ */
+if ( ! function_exists( 'spacious_plugin_version_compare' ) ) {
+	function spacious_plugin_version_compare( $plugin_slug, $version_to_compare ) {
+		$installed_plugins = get_plugins();
+
+		// Plugin not installed.
+		if ( ! isset( $installed_plugins[ $plugin_slug ] ) ) {
+			return false;
+		}
+
+		$tdi_user_version = $installed_plugins[ $plugin_slug ]['Version'];
+
+		return version_compare( $tdi_user_version, $version_to_compare, '<' );
+	}
+}
