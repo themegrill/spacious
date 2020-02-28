@@ -1,0 +1,109 @@
+<?php
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+class Spacious_Dashboard {
+	private static $instance;
+
+	public static function instance() {
+
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	private function __construct() {
+		$this->setup_hooks();
+	}
+
+	private function setup_hooks() {
+		add_action( 'admin_menu', array( $this, 'create_menu' ) );
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+	}
+
+	public function enqueue_scripts() {
+		wp_enqueue_style( 'spacious-admin-dashboard', get_template_directory_uri() . '/css/admin/dashboard.css' );
+	}
+
+	public function create_menu() {
+		$theme = wp_get_theme();
+
+		/* translators: %s: Theme Name. */
+		$theme_page_name = sprintf( esc_html__( '%s Options', 'spacious' ), $theme->Name );
+
+		$page = add_theme_page( $theme_page_name, $theme_page_name, 'edit_theme_options', 'spacious-options', array(
+			$this,
+			'option_page'
+		) );
+
+		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
+	}
+
+	public function enqueue_styles() {
+		wp_enqueue_style( 'spacious-dashboard', get_template_directory_uri() . '/css/admin/dashboard.css', array(), SPACIOUS_THEME_VERSION );
+	}
+
+	public function option_page() {
+		$theme = wp_get_theme();
+		?>
+		<div class="wrap">
+		<div class="spacious-header">
+			<h1>
+				<?php
+				/* translators: %s: Theme version. */
+				echo sprintf( esc_html__( 'Spacious %s', 'spacious' ), SPACIOUS_THEME_VERSION );
+				?>
+			</h1>
+		</div>
+		<div class="welcome-panel">
+			<div class="welcome-panel-content">
+				<h2>
+					<?php
+					/* translators: %s: Theme Name. */
+					echo sprintf( esc_html__( 'Welcome to %s!', 'spacious' ), $theme->Name );
+					?>
+				</h2>
+				<p class="about-description">
+					<?php
+					/* translators: %s: Theme Name. */
+					echo sprintf( esc_html__( 'Important links to get you started with %s', 'spacious' ), $theme->Name );
+					?>
+				</p>
+
+				<div class="welcome-panel-column-container">
+					<div class="welcome-panel-column">
+						<h3><?php esc_html_e( 'Get Started', 'spacious' ); ?></h3>
+						<a class="button button-primary button-hero"
+						   href="<?php echo esc_url( 'https://docs.themegrill.com/spacious/#section-1' ); ?>"
+						   target="_blank"><?php esc_html_e( 'Learn Basics', 'spacious' ); ?>
+						</a>
+					</div>
+
+					<div class="welcome-panel-column">
+						<h3><?php esc_html_e( 'Next Steps', 'spacious' ); ?></h3>
+						<ul>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'spacious' ) . '</a>', esc_url( 'https://docs.themegrill.com/spacious' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'spacious' ) . '</a>', esc_url( 'https://demo.themegrill.com/spacious-demos' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'spacious' ) . '</a>', esc_url( 'https://themegrill.com/themes/spacious' ) ); ?></li>
+						</ul>
+					</div>
+
+					<div class="welcome-panel-column">
+						<h3><?php esc_html_e( 'Further Actions', 'spacious' ); ?></h3>
+						<ul>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-businesswoman">' . esc_html__( 'Got theme support question?', 'spacious' ) . '</a>', esc_url( 'https://wordpress.org/support/theme/spacious/' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-thumbs-up">' . esc_html__( 'Leave a review', 'spacious' ) . '</a>', esc_url( 'https://wordpress.org/support/theme/spacious/reviews/' ) ); ?></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+}
+
+Spacious_Dashboard::instance();
