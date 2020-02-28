@@ -769,7 +769,7 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 
 			if ( has_category() ) { ?>
 				<span class="category"><?php the_category( ', ' ); ?></span>
-			<?php
+				<?php
 			}
 
 			if ( comments_open() ) {
@@ -1053,10 +1053,10 @@ endif;
 add_filter( 'wp_nav_menu_items', 'spacious_shift_extra_menu', 12, 2 );
 
 /**
-  * Update image attributes for retina logo.
-  *
-  * @see spacious_change_logo_attr()
-  */
+ * Update image attributes for retina logo.
+ *
+ * @see spacious_change_logo_attr()
+ */
 if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
 
 	function spacious_change_logo_attr( $attr, $attachment, $size ) {
@@ -1088,6 +1088,10 @@ add_filter( 'wp_get_attachment_image_attributes', 'spacious_change_logo_attr', 1
  */
 if ( ! function_exists( 'spacious_plugin_version_compare' ) ) {
 	function spacious_plugin_version_compare( $plugin_slug, $version_to_compare ) {
+
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
 		$installed_plugins = get_plugins();
 
 		// Plugin not installed.

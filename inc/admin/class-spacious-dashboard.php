@@ -1,5 +1,8 @@
 <?php
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
 class Spacious_Dashboard {
 	private static $instance;
 
@@ -85,7 +88,7 @@ class Spacious_Dashboard {
 						<ul>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-media-text">' . esc_html__( 'Documentation', 'spacious' ) . '</a>', esc_url( 'https://docs.themegrill.com/spacious' ) ); ?></li>
 							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-layout">' . esc_html__( 'Starter Demos', 'spacious' ) . '</a>', esc_url( 'https://demo.themegrill.com/spacious-demos' ) ); ?></li>
-							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'spacious' ) . '</a>', esc_url( 'http://themegrill.com/themes/spacious' ) ); ?></li>
+							<li><?php printf( '<a target="_blank" href="%s" class="welcome-icon dashicons-migrate">' . esc_html__( 'Premium Version', 'spacious' ) . '</a>', esc_url( 'https://themegrill.com/themes/spacious' ) ); ?></li>
 						</ul>
 					</div>
 
