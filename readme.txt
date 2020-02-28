@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version 1.7.1 - 2020-02-19 =
+* Tweak -Refactor theme page according to WordPress theme guidelines.
+
 = Version 1.7.0 - 2020-02-19 =
 * Tweak - Minor Enhancement.
 
