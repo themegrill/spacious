@@ -175,7 +175,7 @@
 			    headerDisplayTypeFour = document.getElementsByClassName( 'spacious-header-display-four' )[0];
 
 			// Check for header style 4.
-			if ( ! headerDisplayTypeFour ) {
+			if ( headerDisplayTypeFour ) {
 				isExtra = ( navWidth + headerActionWidth ) >= mainWidth;
 			}
 
@@ -201,11 +201,10 @@
 			} else {
 				var widthToBe, buttons, buttonWidth, moreWidth;
 
-				widthToBe = mainWidth - brandWidth - headerActionWidth;
+				widthToBe = mainWidth - headerActionWidth;
 
-				// Check for header style 4.
-				if ( headerDisplayTypeFour !== null ) {
-					widthToBe = mainWidth - headerActionWidth;
+				if ( ! headerDisplayTypeFour ) {
+					widthToBe = widthToBe - brandWidth;
 				}
 
 				buttons      = navigation.getElementsByClassName( 'tg-header-button-wrap' )[0];
@@ -218,7 +217,7 @@
 
 				// Returns first children of a node.
 				function getChildNodes( node ) {
-					var children = new Array();
+					var children = [];
 
 					for ( var child in node.childNodes ) {
 						if ( typeof node !== 'undefined' ) {
@@ -261,12 +260,11 @@
 					}
 				}
 
-				var newNavWidth = newNavWidth + ( buttonWidth + moreWidth ) - 30,
+				var newNavWidth = newNavWidth + ( buttonWidth + moreWidth ),
 				    extraWrap   = document.getElementById( 'tg-menu-extras' );
 
-				// Check for header style 3 and 4.
-				if ( headerDisplayTypeFour !== null ) {
-					newNavWidth = navWidth - headerActionWidth;
+				if ( ! headerDisplayTypeFour ) {
+					newNavWidth = newNavWidth - 30;
 				}
 
 				navigation.style.width = newNavWidth + 'px';
