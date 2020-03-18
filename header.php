@@ -175,7 +175,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 			</div><!-- .inner-wrap -->
 			<?php if ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
 				<div class="bottom-menu clearfix <?php echo spacious_options( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
-					<div class="inner-wrap">
+					<div class="inner-wrap clearfix">
 						<?php spacious_main_nav(); ?>
 
 						<div class="header-action">
