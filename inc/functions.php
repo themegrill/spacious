@@ -439,6 +439,9 @@ endif;
  */
 function spacious_hex2rgb( $hexstr ) {
 	$int = hexdec( $hexstr );
+
+	error_log( print_r( $hexstr, true ) );
+
 	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
 	$r   = $rgb['red'];
 	$g   = $rgb['green'];
@@ -1061,7 +1064,7 @@ if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
 
 	function spacious_change_logo_attr( $attr, $attachment, $size ) {
 		$custom_logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
-		$custom_logo = $custom_logo[0];
+		$custom_logo = isset( $custom_logo[0] ) ? $custom_logo[0] : '';
 
 		if ( isset( $attr['class'] ) && 'custom-logo' === $attr['class'] ) {
 
