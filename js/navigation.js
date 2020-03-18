@@ -172,10 +172,10 @@
 			    headerActionWidth     = headerAction ? headerAction.offsetWidth: 0,
 			    isExtra               = ( brandWidth + navWidth + headerActionWidth ) > mainWidth,
 			    more                  = navigation ? navigation.getElementsByClassName( 'tg-menu-extras-wrap' )[0] : '',
-			    headerDisplayTypeFour = document.getElementById( 'spacious-header-display-four' );
+			    headerDisplayTypeFour = document.getElementsByClassName( 'spacious-header-display-four' )[0];
 
 			// Check for header style 4.
-			if ( null !== headerDisplayTypeFour ) {
+			if ( ! headerDisplayTypeFour ) {
 				isExtra = ( navWidth + headerActionWidth ) >= mainWidth;
 			}
 
