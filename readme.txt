@@ -47,7 +47,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
-* Fix - JS error while certain HTML element not rendered.
+* Fix - JS error while certain header HTML element not rendered.
 
 = Version 1.7.1 - 2020-02-19 =
 * Tweak - Refactor theme page according to WordPress theme guidelines.
