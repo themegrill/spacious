@@ -3434,6 +3434,34 @@ li.default-menu {
 	}
 }
 
+@media screen and (min-width: 601px) and (max-width: 768px) {
+	.better-responsive-menu #header-right-section {
+		padding-right: 30px;
+	}
+
+	#header-right-section #header-right-sidebar {
+		width: 100%;
+		float: left;
+		padding-right: 15px;
+		margin-top: 36px;
+	}
+
+	.better-responsive-menu #header-text-nav-wrap #header-right-section .widget {
+		padding: 0;
+		float: left;
+	}
+
+	.better-responsive-menu .site-header .menu-toggle {
+		height: 32px;
+		margin-top: 26px;
+	}
+
+	.better-responsive-menu #site-navigation {
+		max-width: 0;
+	}
+
+}
+
 @media screen and (max-width: 600px) {
 	.site-header.spacious-header-display-four .bottom-menu .menu-toggle {
 		position: relative;
