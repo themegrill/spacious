@@ -1,51 +1,79 @@
+/* Welcome noice */
 .spacious-message {
-	overflow: hidden;
-	position: relative;
-	border: 10px solid #97d2e7 !important;
+    overflow: hidden;
+    position: relative;
 }
 
 .spacious-message-wrapper {
-	width: 500px;
-	text-align: center;
-	margin: 0 auto;
-	padding: 50px 0;
+    padding: 20px 0;
 }
 
-.spacious-message-wrapper .submit {
-	text-align: center;
-	padding-top: 25px;
+.spacious-message-wrapper .spacious-screenshot {
+    width: 20%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #ddd;
 }
 
-.submit a.btn-get-started:before {
-	margin: 0 4px 3px 0;
-	vertical-align: middle;
+.spacious-message-wrapper .spacious-getting-started-notice {
+    width: 70%;
+    max-width: 600px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px;
+}
+
+.spacious-message-wrapper a.btn-get-started:before{
+    margin: -2px 5px 0 -2px;
+    vertical-align: middle;
+}
+
+.spacious-message-wrapper a.btn-get-started {
+    margin-top: 10px;
 }
 
 .spacious-message a.button-primary,
 .spacious-message a.button-secondary {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 
 .spacious-message a.spacious-message-close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: 10px 15px 10px 21px;
-	font-size: 13px;
-	line-height: 1.23076923;
-	text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 15px 10px 21px;
+    font-size: 13px;
+    line-height: 1.23076923;
+    text-decoration: none;
 }
 
 .spacious-message a.spacious-message-close:before {
-	position: absolute;
-	top: 8px;
-	left: 0;
-	-webkit-transition: all .1s ease-in-out;
-	transition: all .1s ease-in-out;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
 }
 
-.spacious-message-wrapper .plugin-install-notice {
-	display: block;
-	font-size: 12px;
-	margin: 10px 0 0;
+.spacious-getting-started-notice h2 {
+    margin: 0 0 10px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.spacious-message-wrapper .spacious-getting-started-notice p {
+    margin: 1em 0;
+    padding: 0;
+    color: #72777c;
+}
+
+@media (max-width: 600px) {
+    .spacious-message-wrapper .spacious-screenshot {
+        display: none;
+    }
+    .spacious-message-wrapper .spacious-getting-started-notice {
+        padding: 0;
+        width: 100%;
+    }
 }
