@@ -3574,6 +3574,15 @@ li.default-menu {
 	}
 }
 
+@media screen and (min-width: 601px) and (max-width: 768px) {
+	.better-responsive-menu #site-navigation {
+		margin-top: 15px;
+	}
+	.main-navigation {
+		width: unset;
+	}
+}
+
 @media only screen and (max-width: 420px) {
 	#page {
 		width: 97%;
