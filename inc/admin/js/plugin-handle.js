@@ -1,62 +1,40 @@
 /**
- * Remove activate button and replace with activation in progress button.
- *
- * @package Spacious
- */
-
-/**
- * Import button
+ * Get Started button on welcome page.
  */
 jQuery( document ).ready( function ( $ ) {
 
-	$( '.btn-get-started' ).click( function ( e ) {
-		e.preventDefault();
-		var extra_uri, redirect_uri, state, dismiss_nonce;
+    $( '.btn-get-started' ).click( function ( e ) {
+        e.preventDefault();
 
-		// Show About > import button while processing.
-		if ( jQuery( this ).parents( '.theme-actions' ).length ) {
-			jQuery( this ).parents( '.theme-actions' ).css( 'opacity', '1' );
-		}
+        // Show updating gif icon and update button text.
+        $( this ).addClass( 'updating-message' ).text( spaciousRedirectDemoPage.btn_text );
 
-		// Show updating gif icon.
-		jQuery( this ).addClass( 'updating-message' );
+        var btnData = {
+            action   : 'import_button',
+            security : spaciousRedirectDemoPage.nonce,
+        };
 
-		// Change button text.
-		jQuery( this ).text( spacious_redirect_demo_page.btn_text );
+        $.ajax( {
+            type    : "POST",
+            url     : ajaxurl, // URL to "wp-admin/admin-ajax.php"
+            data    : btnData,
+            success :function( response ) {
+                var redirectUri,
+                    dismissNonce,
+                    extraUri   = '',
+                    btnDismiss = $( '.spacious-message-close' );
 
-		// Assign `TG demo importer` plugin state for processing from PHP.
-		if ( $( this ).hasClass( 'tdi-activated' ) ) { // Installed and activated.
-			state = 'activated';
-		} else if ( $( this ).hasClass( 'tdi-installed' ) ) { // Installed but not activated.
-			state = 'installed';
-		} else { // Not installed.
-			state = '';
-		}
+                if ( btnDismiss.length ) {
+                    dismissNonce = btnDismiss.attr( 'href' ).split( '_spacious_notice_nonce=' )[1];
+                    extraUri     = '&_spacious_notice_nonce=' + dismissNonce;
+                }
 
-		var data = {
-			action   : 'import_button',
-			security : spacious_redirect_demo_page.nonce,
-			state    : state
-		};
-
-		$.ajax( {
-			type    : "POST",
-			url     : ajaxurl, // URL to "wp-admin/admin-ajax.php"
-			data    : data,
-			success : function ( response ) {
-				extra_uri = '';
-				if ( jQuery( '.spacious-message-close' ).length ) {
-					dismiss_nonce = jQuery( '.spacious-message-close' ).attr( 'href' ).split( '_spacious_notice_nonce=' )[1];
-					extra_uri     = '&_spacious_notice_nonce=' + dismiss_nonce;
-				}
-
-				redirect_uri         = response.redirect + extra_uri;
-				window.location.href = redirect_uri;
-			},
-			error   : function ( xhr, ajaxOptions, thrownError ) {
-				console.log( thrownError );
-			}
-		} );
-
-	} );
+                redirectUri          = response.redirect + extraUri;
+                window.location.href = redirectUri;
+            },
+            error   : function( xhr, ajaxOptions, thrownError ){
+                console.log(thrownError);
+            }
+        } );
+    } );
 } );
