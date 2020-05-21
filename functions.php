@@ -430,6 +430,8 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/class-spacious-theme-review-notice.php';
 	require get_template_directory() . '/inc/admin/class-spacious-tdi-notice.php';
 	require get_template_directory() . '/inc/admin/class-spacious-welcome-notice.php';
+	require get_template_directory() . '/inc/admin/class-spacious-notice.php';
+	require get_template_directory() . '/inc/admin/class-spacious-upgrade-notice.php';
 }
 
 /**
