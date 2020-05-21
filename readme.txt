@@ -47,6 +47,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = TBD =
+* Tweak - Add and improve theme-related notices.
 * Fix - JS error while certain header HTML element not rendered.
 
 = Version 1.7.1 - 2020-02-19 =
