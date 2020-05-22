@@ -48,6 +48,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 = TBD =
 * Fix - JS error while certain header HTML element not rendered.
+* Fix - Theme name and version in the admin dashboard while child theme active.
 
 = Version 1.7.1 - 2020-02-19 =
 * Tweak - Refactor theme page according to WordPress theme guidelines.
