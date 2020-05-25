@@ -9,9 +9,9 @@
  */
 
 /**
- * Class Flash_Customize_Upsell_Control
+ * Class Spacious_Customize_Upsell_Control
  */
-class Flash_Customize_Upsell_Control extends Flash_Customize_Base_Control {
+class Spacious_Customize_Upsell_Control extends Spacious_Customize_Base_Control {
 
 	/**
 	 * Customize control type.
@@ -22,7 +22,7 @@ class Flash_Customize_Upsell_Control extends Flash_Customize_Base_Control {
 	public $type = 'spacious-upsell';
 
 	/**
-	 * Flash_Customize_Upsell_Control constructor.
+	 * Spacious_Customize_Upsell_Control constructor.
 	 *
 	 * @param WP_Customize_Manager $manager Customizer bootstrap instance.
 	 * @param string               $id      An specific ID of the section.
