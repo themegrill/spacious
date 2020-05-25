@@ -19,7 +19,7 @@ class Spacious_Customize_Base_Control extends WP_Customize_Control {
 	public function enqueue() {
 
 		// Scripts for nesting panel/section.
-		wp_enqueue_style( 'spacious-customize-upsell-section', get_template_directory_uri() . '/inc/customizer/assets/css/spacious-customize-upsell-section.css' );
+		wp_enqueue_style( 'spacious-customize-upsell-section', SPACIOUS_INCLUDES_URL . '/customizer/assets/css/spacious-customize-upsell-section.css' );
 
 	}
 
