@@ -440,8 +440,6 @@ endif;
 function spacious_hex2rgb( $hexstr ) {
 	$int = hexdec( $hexstr );
 
-	error_log( print_r( $hexstr, true ) );
-
 	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
 	$r   = $rgb['red'];
 	$g   = $rgb['green'];
