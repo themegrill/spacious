@@ -396,6 +396,7 @@ define( 'SPACIOUS_ADMIN_CSS_URL', SPACIOUS_ADMIN_URL . '/css' );
 require_once SPACIOUS_INCLUDES_DIR . '/custom-header.php';
 require_once SPACIOUS_INCLUDES_DIR . '/functions.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer.php';
+require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php';
 require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
 
 require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
