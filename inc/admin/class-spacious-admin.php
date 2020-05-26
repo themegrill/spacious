@@ -30,7 +30,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 		 * Localize array for import button AJAX request.
 		 */
 		public function enqueue_scripts() {
-			wp_enqueue_style( 'spacious-admin-style', get_template_directory_uri() . '/css/admin/admin.css', array(), SPACIOUS_THEME_VERSION );
+			wp_enqueue_style( 'spacious-admin-style', get_template_directory_uri() . '/inc/admin/css/admin.css', array(), SPACIOUS_THEME_VERSION );
 
 			wp_enqueue_script( 'spacious-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), SPACIOUS_THEME_VERSION, true );
 
@@ -100,7 +100,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 			</p>
 
 			<h2 class="nav-tab-wrapper">
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( empty( $_GET['tab'] ) && $_GET['page'] == 'spacious-welcome' ) {
 					echo 'nav-tab-active';
@@ -109,7 +109,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 				" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'spacious-welcome' ), 'themes.php' ) ) ); ?>">
 					<?php echo $theme->display( 'Name' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'supported_plugins' ) {
 					echo 'nav-tab-active';
@@ -132,7 +132,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Supported Plugins', 'spacious' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'free_vs_pro' ) {
 					echo 'nav-tab-active';
@@ -155,7 +155,7 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 				">
 					<?php esc_html_e( 'Free Vs Pro', 'spacious' ); ?>
 				</a>
-				<a class="nav-tab 
+				<a class="nav-tab
 				<?php
 				if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'changelog' ) {
 					echo 'nav-tab-active';
