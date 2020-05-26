@@ -77,28 +77,16 @@ class Spacious_Customize_Upsell_Control extends Spacious_Customize_Base_Control 
 						class="dashicons dashicons-yes"></span><?php esc_html_e( 'Grid, Masonry, Thumbnail Blog', 'spacious' ); ?>
 				</li>
 				<li class="upsell-feature"><span
-						class="dashicons dashicons-yes"></span>
-					<?php
-					/* Translators: %1$u number of particular feature */
-					echo sprintf( esc_html__( '%1$u+ Footer Layouts', 'spacious' ), 10 );
-					?>
+						class="dashicons dashicons-yes"></span><?php esc_html_e( '10+ Footer Layouts', 'spacious' ); ?>
 				</li>
 				<li class="upsell-feature"><span
-						class="dashicons dashicons-yes"></span>
-					<?php
-					/* Translators: %1$u number of particular feature */
-					echo sprintf( esc_html__( '%1$u+ Customizer Options', 'spacious' ), 100 );
-					?>
+						class="dashicons dashicons-yes"></span><?php esc_html_e( '100+ Customizer Options', 'spacious' ); ?>
 				</li>
 				<li class="upsell-feature"><span
 						class="dashicons dashicons-yes"></span><?php esc_html_e( 'Advanced Page Settings', 'spacious' ); ?>
 				</li>
 				<li class="upsell-feature"><span
-						class="dashicons dashicons-yes"></span>
-					<?php
-					/* Translators: %1$u number of particular feature */
-					echo sprintf( esc_html__( '%1$u+ Starter Demos', 'spacious' ), 17 );
-					?>
+						class="dashicons dashicons-yes"></span><?php esc_html_e( '17+ Starter Demos', 'spacious' ); ?>
 				</li>
 			</ul>
 
