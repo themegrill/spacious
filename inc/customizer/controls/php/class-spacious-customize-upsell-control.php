@@ -11,7 +11,7 @@
 /**
  * Class Spacious_Customize_Upsell_Control
  */
-class Spacious_Customize_Upsell_Control extends Spacious_Customize_Base_Control {
+class Spacious_Customize_Upsell_Control extends WP_Customize_Control {
 
 	/**
 	 * Customize control type.

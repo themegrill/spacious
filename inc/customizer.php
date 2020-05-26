@@ -14,6 +14,7 @@ function spacious_customize_register( $wp_customize ) {
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-upsell-custom-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
 
 	// Transport postMessage variable set
@@ -153,6 +154,28 @@ function spacious_customize_register( $wp_customize ) {
 		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
 		'section' => 'spacious_header_small_text_section',
 		'setting' => $spacious_themename . '[spacious_header_info_text]',
+	) ) );
+
+	/**
+	 * Upsell.
+	 */
+	$wp_customize->add_section( 'spacious_upsell_section', array(
+		'priority' => 1,
+		'title'    => __( 'View Pro Version', 'spacious' ),
+	) );
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_upsell]', array(
+		'default'           => '',
+		'type'              => 'option',
+		'transport'         => $customizer_selective_refresh,
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_editor_sanitize',
+	) );
+
+	$wp_customize->add_control( new Spacious_Upsell_Custom_Control( $wp_customize, $spacious_themename . '[spacious_upsell]', array(
+		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
+		'section' => 'spacious_upsell_section',
+		'setting' => $spacious_themename . '[spacious_upsell]',
 	) ) );
 
 	// Selective refresh for header information text
