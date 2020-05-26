@@ -2,7 +2,7 @@
 
 class Spacious_Upsell_Custom_Control extends WP_Customize_Control {
 
-	public $type = "spacious_upsell_control";
+	public $type = "spacious-upsell-control";
 
 	public function enqueue() {
 		wp_enqueue_style( 'spacious-customizer', get_template_directory_uri() . '/css/admin/customizer.css', array(), SPACIOUS_THEME_VERSION   );
