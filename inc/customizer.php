@@ -167,7 +167,7 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'spacious_upsell', array(
 		'default'           => '',
 		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_editor_sanitize',
+		'sanitize_callback' => 'spacious_false_sanitize',
 	) );
 
 	$wp_customize->add_control( new Spacious_Upsell_Custom_Control( $wp_customize, 'spacious_upsell', array(
