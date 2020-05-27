@@ -164,7 +164,7 @@ function spacious_customize_register( $wp_customize ) {
 		'title'    => __( 'View Pro Version', 'spacious' ),
 	) );
 
-	$wp_customize->add_setting( $spacious_themename . '[-upsell]', array(
+	$wp_customize->add_setting( 'spacious_upsell', array(
 		'default'           => '',
 		'type'              => 'option',
 		'transport'         => $customizer_selective_refresh,
@@ -172,10 +172,10 @@ function spacious_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'spacious_editor_sanitize',
 	) );
 
-	$wp_customize->add_control( new Spacious_Upsell_Custom_Control( $wp_customize, $spacious_themename . '[-upsell]', array(
+	$wp_customize->add_control( new Spacious_Upsell_Custom_Control( $wp_customize, 'spacious_upsell', array(
 		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
 		'section' => 'spacious_upsell_section',
-		'setting' => $spacious_themename . '[spacious_upsell]',
+		'setting' => 'spacious_upsell',
 	) ) );
 
 	// Selective refresh for header information text
