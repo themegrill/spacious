@@ -21,12 +21,6 @@ class Spacious_Dashboard {
 
 	private function setup_hooks() {
 		add_action( 'admin_menu', array( $this, 'create_menu' ) );
-
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-	}
-
-	public function enqueue_scripts() {
-		wp_enqueue_style( 'spacious-admin-dashboard', get_template_directory_uri() . '/css/admin/dashboard.css' );
 	}
 
 	public function create_menu() {
@@ -40,11 +34,6 @@ class Spacious_Dashboard {
 			'option_page'
 		) );
 
-		add_action( 'admin_print_styles-' . $page, array( $this, 'enqueue_styles' ) );
-	}
-
-	public function enqueue_styles() {
-		wp_enqueue_style( 'spacious-dashboard', get_template_directory_uri() . '/css/admin/dashboard.css', array(), SPACIOUS_THEME_VERSION );
 	}
 
 	public function option_page() {
