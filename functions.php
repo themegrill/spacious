@@ -353,7 +353,7 @@ endif;
 add_action( 'after_setup_theme', 'spacious_setup' );
 
 // Theme version.
-$spacious_theme = wp_get_theme();
+$spacious_theme = wp_get_theme('spacious');
 define( 'SPACIOUS_THEME_VERSION', $spacious_theme->get( 'Version' ) );
 
 /**
