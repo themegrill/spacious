@@ -47,6 +47,7 @@ function spacious_scripts_styles_method() {
 
 	// Enqueue font-awesome style.
 	wp_enqueue_style( 'spacious-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
+	
 
 	$spacious_googlefonts = array();
 	array_push( $spacious_googlefonts, spacious_options( 'spacious_titles_font', 'Lato' ) );
@@ -140,6 +141,19 @@ function spacious_scripts_styles_method() {
 }
 
 add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
+
+/**
+ * Enqueue block editor styles.
+ *
+ * @since Spacious 1.0
+ */
+function spacious_block_editor_styles() {
+	wp_enqueue_style( 'spacious-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+	wp_enqueue_style( 'spacious-editor-googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600' );
+}
+add_action( 'enqueue_block_editor_assets', 'spacious_block_editor_styles', 1, 1 );
+
+
 
 /****************************************************************************************/
 
