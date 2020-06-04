@@ -98,6 +98,14 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+		// Gutenberg Wide/fullwidth support.
+		add_theme_support( 'align-wide' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Responsive embeds support.
+		add_theme_support( 'responsive-embeds' );
 
 		// Registering navigation menus.
 		register_nav_menus( array(
