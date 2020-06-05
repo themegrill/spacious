@@ -11,7 +11,6 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, left-sidebar, flexible-header, custom-header, custom-background, custom-menu, custom-colors, sticky-post, threaded-comments, translation-ready, featured-images, theme-options, footer-widgets, blog, e-commerce, rtl-language-support
 Text Domain: spacious
-
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -760,8 +759,8 @@ img#wpstats {
                     }
                 }
                 >.alignwide {
-                    margin-left: -30px;
-                    margin-right: -30px;
+                    margin-left: -100px;
+                    margin-right: -100px;
                     max-width: unset;
                 }
             }
@@ -772,44 +771,11 @@ img#wpstats {
 &.narrow-978,
 &.narrow-1218 {
     #main {
-        .entry-content {
-            >.alignfull {
-                margin-left: calc(50% - 50vw);
-                margin-right: calc(50% - 50vw);
-                max-width: unset;
-                &.wp-block-cover,
-                &.wp-block-cover-image {
-                    width: unset;
-                }
-            }
-            >.alignwide {
-                margin-left: -100px;
-                margin-right: -100px;
-                max-width: unset;
-            }
-        }
+        overflow: hidden;
     }
-    &.box-layout {
-        #main {
-            overflow: hidden;
-        }
-        #primary {
-            .entry-content {
-                >.alignfull {
-                    margin-left: -30px;
-                    margin-right: -30px;
-                    &.wp-block-cover,
-                    &.wp-block-cover-image {
-                        width: unset;
-                    }
-                }
-                >.alignwide {
-                    margin-left: -30px;
-                    margin-right: -30px;
-                    max-width: unset;
-                }
-            }
-        }
+    .alignwide {
+        margin-left: -10px;
+        margin-right: -10px;
     }
 }
 
