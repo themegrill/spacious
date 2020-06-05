@@ -98,15 +98,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
-		// Gutenberg Wide/fullwidth support.
-		add_theme_support( 'align-wide' );
-
-		// Add support for Block Styles.
-		add_theme_support( 'wp-block-styles' );
-
-		// Responsive embeds support.
-		add_theme_support( 'responsive-embeds' );
-
+	
 		// Registering navigation menus.
 		register_nav_menus( array(
 			'header'  => esc_html__( 'Header Menu', 'spacious' ),
@@ -142,6 +134,16 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 
 		// Support for selective refresh widgets in Customizer
 		add_theme_support( 'customize-selective-refresh-widgets' );
+		
+		// Gutenberg Wide/fullwidth support.
+		add_theme_support( 'align-wide' );
+
+		// Add support for Block Styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Responsive embeds support.
+		add_theme_support( 'responsive-embeds' );
+
 
 		// Define and register starter content to showcase the theme on new sites.
 		$starter_content = array(
