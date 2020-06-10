@@ -1243,6 +1243,13 @@ if ( ! function_exists( 'spacious_google_fonts' ) ) :
 			'Noto Serif'       => 'Noto Serif',
 			'PT Sans'          => 'PT Sans',
 			'Playfair Display' => 'Playfair Display',
+			'Muli'             => 'Muli',
+			'Montserrat'       => 'Montserrat',
+			'Poppins'          => 'Poppins',
+			'Raleway'          => 'Raleway',
+			'Oswald'           => 'Oswald',
+			'Ubuntu'           => 'Ubuntu',
+			'Nunito'           => 'Nunito',
 		);
 
 		return $spacious_google_font;
