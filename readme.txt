@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Add more Google Fonts.
+
 = Version 1.7.2 - 2020-05-27 =
 * Fix - JS error while certain header HTML element not rendered.
 * Tweak - Added new required header fields for style.css.
