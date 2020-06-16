@@ -587,17 +587,29 @@ img#wpstats {
 	max-width: unset;
 }
 
-.no-sidebar-full-width.narrow-978 #main, .no-sidebar-full-width.narrow-1218 #main,
-.no-sidebar.narrow-978 #main,
-.no-sidebar.narrow-1218 #main {
+.no-sidebar-full-width .narrow-978 #main,
+.no-sidebar-full-width .narrow-1218 #main,
+.no-sidebar .narrow-978 #main,
+.no-sidebar .narrow-1218 #main {
 	overflow: hidden;
 }
 
-.no-sidebar-full-width.narrow-978 .alignwide, .no-sidebar-full-width.narrow-1218 .alignwide,
-.no-sidebar.narrow-978 .alignwide,
-.no-sidebar.narrow-1218 .alignwide {
-	margin-left: -10px;
-	margin-right: -10px;
+.no-sidebar-full-width .narrow-978 #primary .entry-content > .alignful,
+.no-sidebar-full-width .narrow-1218 #primary .entry-content > .alignful,
+.no-sidebar .narrow-978 #primary .entry-content > .alignful,
+.no-sidebar .narrow-1218 #primary .entry-content > .alignful {
+	margin-left: -30px;
+	margin-right: -30px;
+}
+
+.no-sidebar-full-width .narrow-978 #primary .entry-content > .alignful.wp-block-cover, .no-sidebar-full-width .narrow-978 #primary .entry-content > .alignful.wp-block-cover-image,
+.no-sidebar-full-width .narrow-1218 #primary .entry-content > .alignful.wp-block-cover,
+.no-sidebar-full-width .narrow-1218 #primary .entry-content > .alignful.wp-block-cover-image,
+.no-sidebar .narrow-978 #primary .entry-content > .alignful.wp-block-cover,
+.no-sidebar .narrow-978 #primary .entry-content > .alignful.wp-block-cover-image,
+.no-sidebar .narrow-1218 #primary .entry-content > .alignful.wp-block-cover,
+.no-sidebar .narrow-1218 #primary .entry-content > .alignful.wp-block-cover-image {
+	width: unset;
 }
 
 /*****************************************************************/
