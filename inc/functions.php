@@ -143,6 +143,16 @@ add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 
 /****************************************************************************************/
 
+/**
+ * Enqueue Google fonts and editor styles.
+ */
+function spacious_block_editor_styles() {
+	wp_enqueue_style( 'spacious-editor-googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600' );
+	wp_enqueue_style( 'spacious-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'spacious_block_editor_styles', 1, 1 );
+
 /*
  * Display the related posts.
  */
@@ -1105,12 +1115,4 @@ if ( ! function_exists( 'spacious_plugin_version_compare' ) ) {
 		return version_compare( $tdi_user_version, $version_to_compare, '<' );
 	}
 }
-/**
- * Enqueue Google fonts and editor styles.
- */
-function spacious_block_editor_styles() {
-	wp_enqueue_style( 'spacious-editor-googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600' );
-	wp_enqueue_style( 'spacious-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
-}
 
-add_action( 'enqueue_block_editor_assets', 'spacious_block_editor_styles', 1, 1 );
