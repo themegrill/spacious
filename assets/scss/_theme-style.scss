@@ -645,21 +645,30 @@ img#wpstats {
 .no-sidebar {
 	overflow: hidden;
 
-	.alignfull {
-		// width: 100vw;
-		margin-left: calc(50% - 50vw);
-		margin-right: calc(50% - 50vw);
-		max-width: unset;
+	#primary {
 
-		img {
-			max-width: unset;
+		.entry-content {
+
+			> .alignfull {
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+				max-width: unset;
+
+				&.wp-block-cover,
+				&.wp-block-cover-image,
+				{
+					width: unset;
+				}
+			}
+
+			> .alignwide {
+				margin-left: -100px;
+				margin-right: -100px;
+				max-width: unset;
+			}
+
 		}
-	}
 
-	.alignwide {
-		margin-left: -100px;
-		margin-right: -100px;
-		max-width: unset;
 	}
 
 	&.narrow-978,
