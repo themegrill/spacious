@@ -1,12 +1,16 @@
 /* Basic Block Editor CSS */
+.editor-styles-wrapper,
+.editor-styles-wrapper > * {
+	font-family: 'Lato', sans-serif;
+}
+
 .editor-styles-wrapper {
 	color: #666666;
-	font: 16px 'Lato', sans-serif;
 	line-height: 20px;
 	word-wrap: break-word;
 }
+
 .editor-styles-wrapper > * {
-	font-family: 'Lato', sans-serif;
 	color: #444444;
 }
 
@@ -238,7 +242,7 @@
 .editor-styles-wrapper input[type="email"],
 .editor-styles-wrapper input[type="password"],
 .editor-styles-wrapper input[type="url"],
-.editor-styles-wrapper textarea{
+.editor-styles-wrapper textarea {
 	padding: 1%;
 	border: 1px solid #EAEAEA;
 	line-height: 20px;
@@ -252,14 +256,14 @@
 .editor-styles-wrapper input[type="email"]:focus,
 .editor-styles-wrapper input[type="search"]:focus,
 .editor-styles-wrapper input[type="password"]:focus,
-.editor-styles-wrapper textarea:focus{
+.editor-styles-wrapper textarea:focus {
 	border: 1px solid #EAEAEA;
 }
 
 .editor-styles-wrapper input[type="reset"],
 .editor-styles-wrapper input[type="button"],
 .editor-styles-wrapper input[type="submit"],
-.editor-styles-wrapper .wp-block button:not(.components-button){
+.editor-styles-wrapper .wp-block button:not(.components-button) {
 	color: #FFFFFF;
 	display: inline-block;
 	margin-bottom: 30px;
@@ -275,7 +279,7 @@
 .editor-styles-wrapper input[type="reset"]:hover,
 .editor-styles-wrapper input[type="button"]:hover,
 .editor-styles-wrapper input[type="submit"]:hover,
-.editor-styles-wrapper .wp-block button:not(.components-button){
+.editor-styles-wrapper .wp-block button:not(.components-button) {
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
@@ -305,6 +309,7 @@
 .editor-styles-wrapper .wp-block th {
 	font-weight: bold;
 }
+
 .editor-styles-wrapper th,
 .editor-styles-wrapper td,
 .editor-styles-wrapper .wp-block th,
