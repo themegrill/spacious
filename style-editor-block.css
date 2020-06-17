@@ -1,17 +1,15 @@
 /* Basic Block Editor CSS */
-.editor-styles-wrapper,
-.editor-styles-wrapper > * {
-	font-family: 'Lato', sans-serif;
-}
-
 .editor-styles-wrapper {
 	color: #666666;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
 	line-height: 20px;
 	word-wrap: break-word;
 }
 
 .editor-styles-wrapper > * {
-	color: #444444;
+	font-family: 'Lato', sans-serif;
+	color: #666666;
 }
 
 .editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
