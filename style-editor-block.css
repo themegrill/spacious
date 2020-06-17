@@ -12,6 +12,14 @@
 	color: #666666;
 }
 
+.wp-block {
+	max-width: 1218px;
+}
+
+.editor-styles-wrapper .wp-block[data-align="wide"] {
+	max-width: 1268px;
+}
+
 .editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
 	font-weight: normal;
 	color: #222222;
