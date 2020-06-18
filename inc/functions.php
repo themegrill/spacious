@@ -373,7 +373,7 @@ function spacious_body_class( $classes ) {
 	} elseif ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_1218px' ) {
 		$classes[] = 'wide-1218';
 	} else {
-		$classes[] = '';
+		$classes[] = 'narrow-1218';
 	}
 
 	// For header menu button enabled option.

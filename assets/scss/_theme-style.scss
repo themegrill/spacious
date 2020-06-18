@@ -677,8 +677,8 @@ img#wpstats {
 
 	}
 
-	.narrow-978,
-	.narrow-1218 {
+	&.narrow-978,
+	&.narrow-1218 {
 
 		#main {
 			overflow: hidden;
@@ -1474,6 +1474,15 @@ body {
 
 .footer-widgets-area .gallery-columns-3 .gallery-item {
 	padding: 5px 5px;
+}
+
+ul.blocks-gallery-grid,
+ul.wp-block-gallery {
+	padding: 0;
+
+	img {
+		margin-bottom: 0;
+	}
 }
 
 /* =COMMENTS
