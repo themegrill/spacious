@@ -3211,8 +3211,8 @@ li.default-menu {
 @media screen and (max-width: 768px) {
 	.no-sidebar-full-width #primary .entry-content > .alignwide,
 	.no-sidebar #primary .entry-content > .alignwide {
-		margin-left: -15px;
-		margin-right: -15px;
+		margin-left: -40px;
+		margin-right: -40px;
 	}
 	.no-sidebar-full-width.narrow-978 #primary .entry-content > .alignwide, .no-sidebar-full-width.narrow-1218 #primary .entry-content > .alignwide,
 	.no-sidebar.narrow-978 #primary .entry-content > .alignwide,
