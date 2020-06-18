@@ -1353,12 +1353,12 @@ body {
 	padding: 5px 5px;
 }
 
-ul.blocks-gallery-grid,
+.wp-block-gallery ul.blocks-gallery-grid,
 ul.wp-block-gallery {
 	padding: 0;
 }
 
-ul.blocks-gallery-grid img,
+.wp-block-gallery ul.blocks-gallery-grid img,
 ul.wp-block-gallery img {
 	margin-bottom: 0;
 }
