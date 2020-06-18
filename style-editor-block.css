@@ -268,8 +268,7 @@
 
 .editor-styles-wrapper input[type="reset"],
 .editor-styles-wrapper input[type="button"],
-.editor-styles-wrapper input[type="submit"],
-.editor-styles-wrapper .wp-block button:not(.components-button) {
+.editor-styles-wrapper input[type="submit"] {
 	color: #FFFFFF;
 	display: inline-block;
 	margin-bottom: 30px;
