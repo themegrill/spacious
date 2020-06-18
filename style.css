@@ -623,6 +623,14 @@ img#wpstats {
 	width: unset;
 }
 
+.no-sidebar-full-width.narrow-978 #primary .entry-content > .alignwide, .no-sidebar-full-width.narrow-1218 #primary .entry-content > .alignwide,
+.no-sidebar.narrow-978 #primary .entry-content > .alignwide,
+.no-sidebar.narrow-1218 #primary .entry-content > .alignwide {
+	margin-left: -25px;
+	margin-right: -25px;
+	max-width: unset;
+}
+
 /*****************************************************************/
 /*****************************************************************/
 /* =BODY
