@@ -143,6 +143,16 @@ add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 
 /****************************************************************************************/
 
+/**
+ * Enqueue Google fonts and editor styles.
+ */
+function spacious_block_editor_styles() {
+	wp_enqueue_style( 'spacious-editor-googlefonts', '//fonts.googleapis.com/css2?family=Lato' );
+	wp_enqueue_style( 'spacious-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'spacious_block_editor_styles', 1, 1 );
+
 /*
  * Display the related posts.
  */
@@ -363,7 +373,7 @@ function spacious_body_class( $classes ) {
 	} elseif ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_1218px' ) {
 		$classes[] = 'wide-1218';
 	} else {
-		$classes[] = '';
+		$classes[] = 'narrow-1218';
 	}
 
 	// For header menu button enabled option.
@@ -1105,3 +1115,4 @@ if ( ! function_exists( 'spacious_plugin_version_compare' ) ) {
 		return version_compare( $tdi_user_version, $version_to_compare, '<' );
 	}
 }
+
