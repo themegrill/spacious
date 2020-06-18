@@ -47,8 +47,10 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Enhancement - Gutenberg compatibility
 * Tweak - Add more Google Fonts.
 * Added - New Demo (Spacious Vet)- Use this Spacious demo to create your pet-friendly vet website.
+* Added - New Demo (Spacious Event )- Use this Spacious demo if you want to create an event website.
 * Remove - Unrequired deprecated demo config for theme demo lists
 
 = Version 1.7.2 - 2020-05-27 =
