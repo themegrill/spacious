@@ -1485,6 +1485,18 @@ ul.wp-block-gallery {
 	}
 }
 
+/* Gutenberg Blocks Layout.
+--------------------------------------------------------------*/
+.wp-block-gallery,
+.wp-block-social-links {
+
+	&.alignleft,
+	&.alignright,
+	&.aligncenter {
+		display: flex;
+	}
+}
+
 /* =COMMENTS
 ----------------------------------------------- */
 
