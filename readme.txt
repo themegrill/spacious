@@ -13,7 +13,6 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Genericons by Joen Asmussen http://genericons.com/
   Licensed under the GPL, version 2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
-* Image in the screenshot is from public domain http://unsplash.com/ link: unsplash.com/post/53469911317/download-by-aleks-dorohovich
 * HTML5 Shiv @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 * The script jquery.cycle.all.js is dual licensed under GPL & MIT
 * Other custom js files are our own creation and is licensed under the same license as this theme.
