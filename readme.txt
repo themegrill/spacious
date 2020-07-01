@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Header info text output issue while changing in customizer.
+
 = Version 1.7.3 - 2020-06-19 =
 * Enhancement - Gutenberg compatibility.
 * Tweak - Add more Google Fonts.
