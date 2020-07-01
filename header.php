@@ -70,11 +70,13 @@ if ( function_exists( 'wp_body_open' ) ) {
 						spacious_social_links();
 					}
 					?>
-					<div class="small-info-text"><?php spacious_header_info_text(); ?></div>
+					<div class="small-info-text">
+						<?php spacious_header_info_text(); ?>
+					</div>
 					<nav class="small-menu" class="clearfix">
 						<?php
 						if ( has_nav_menu( 'header' ) ) {
-							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => - 1 ) );
+							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => 1 ) );
 						}
 						?>
 					</nav>
