@@ -45,7 +45,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= TBD =
+= Version 1.7.4 - 2020-07-21 =
 * Fix - Header info text output issue while changing in customizer.
 * Fix - Theme name and version in the admin dashboard while child theme active.
 
