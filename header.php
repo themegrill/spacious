@@ -69,12 +69,14 @@ if ( function_exists( 'wp_body_open' ) ) {
 					if ( spacious_options( 'spacious_activate_social_links', 0 ) == 1 ) {
 						spacious_social_links();
 					}
-					spacious_header_info_text();
 					?>
+
+					<div class="small-info-text"><?php spacious_header_info_text(); ?></div>
+
 					<nav class="small-menu" class="clearfix">
 						<?php
 						if ( has_nav_menu( 'header' ) ) {
-							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => - 1 ) );
+							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => -1 ) );
 						}
 						?>
 					</nav>

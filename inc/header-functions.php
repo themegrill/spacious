@@ -62,7 +62,7 @@ if ( ! function_exists( 'spacious_header_info_text' ) ) :
 			return;
 		}
 
-		$spacious_header_info_text = '<div class="small-info-text"><p>' . spacious_options( 'spacious_header_info_text', '' ) . '</p></div>';
+		$spacious_header_info_text = spacious_options( 'spacious_header_info_text', '' );
 
 		echo do_shortcode( $spacious_header_info_text );
 	}
