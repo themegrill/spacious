@@ -424,6 +424,7 @@ $spacious_version = $theme['Version'];
  * Calling in the admin area for the Welcome Page as well as for the new theme notice too.
  */
 if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/class-spacious-admin.php';
 	require get_template_directory() . '/inc/admin/class-spacious-dashboard.php';
 	require get_template_directory() . '/inc/admin/class-spacious-theme-review-notice.php';
 	require get_template_directory() . '/inc/admin/class-spacious-tdi-notice.php';

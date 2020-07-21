@@ -45,6 +45,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Fix - Header info text output issue while changing in customizer.
+* Fix - Theme name and version in the admin dashboard while child theme active.
+
 = Version 1.7.3 - 2020-06-19 =
 * Enhancement - Gutenberg compatibility.
 * Tweak - Add more Google Fonts.

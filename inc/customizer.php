@@ -9,12 +9,14 @@
 
 function spacious_customize_register( $wp_customize ) {
 
+	// Custom customizer section classes.
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-upsell-section.php';
+
 	// Include control classes.
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-upsell-custom-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
 
 	// Transport postMessage variable set
@@ -156,25 +158,20 @@ function spacious_customize_register( $wp_customize ) {
 		'setting' => $spacious_themename . '[spacious_header_info_text]',
 	) ) );
 
-	/**
-	 * Upsell.
-	 */
-	$wp_customize->add_section( 'spacious_upsell_section', array(
-		'priority' => 1,
-		'title'    => __( 'View Pro Version', 'spacious' ),
-	) );
+	// Register `SPACIOUS_Upsell_Section` type section.
+	$wp_customize->register_section_type( 'SPACIOUS_Upsell_Section' );
 
-	$wp_customize->add_setting( 'spacious_upsell', array(
-		'default'           => '',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_false_sanitize',
-	) );
-
-	$wp_customize->add_control( new Spacious_Upsell_Custom_Control( $wp_customize, 'spacious_upsell', array(
-		'section' => 'spacious_upsell_section',
-		'setting' => 'spacious_upsell',
-	) ) );
-
+	// Add `SPACIOUS_Upsell_Section` to display pro link.
+	$wp_customize->add_section(
+		new SPACIOUS_Upsell_Section( $wp_customize, 'spacious_upsell_section',
+			array(
+				'title'      => esc_html__( 'View PRO version', 'spacious' ),
+				'url'        => 'https://themegrill.com/spacious-pricing/?utm_source=spacious-customizer&utm_medium=view-pricing-link&utm_campaign=upgrade',
+				'capability' => 'edit_theme_options',
+				'priority'   => 1,
+			)
+		)
+	);
 	// Selective refresh for header information text
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_header_info_text]', array(
@@ -1257,4 +1254,78 @@ if ( ! function_exists( 'spacious_google_fonts' ) ) :
 
 endif;
 
-?>
+/* * ************************************************************************************** */
+
+/*
+ * Custom Scripts
+ */
+add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_custom_scripts' );
+
+function spacious_customizer_custom_scripts() {
+	?>
+	<style>
+		/* Theme Instructions Panel CSS */
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title {
+			background-color: #0FBE7C !important;
+			border-left-color: #04a267;
+			color: #fff !important;
+			padding: 0;
+		}
+
+		#accordion-section-spacious_upsell_section h3 a:after {
+			content: '\f345';
+			color: #fff;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			z-index: 1;
+			font: 400 20px/1 dashicons;
+			speak: none;
+			display: block;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-decoration: none !important;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title a {
+			color: #fff;
+			display: block;
+			text-decoration: none;
+			padding: 12px 15px 15px;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title a:focus {
+			box-shadow: none;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title:hover {
+			background-color: #09ad6f !important;
+			border-left-color: #04a267 !important;
+			color: #fff !important;
+		}
+
+		li#accordion-section-spacious_upsell_section h3.accordion-section-title:after {
+			color: #fff !important;
+		}
+	</style>
+
+	<script>
+		(
+			function ( $, api ) {
+				api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
+
+					// No events for this type of section.
+					attachEvents : function () {
+					},
+
+					// Always make the section active.
+					isContextuallyActive : function () {
+						return true;
+					}
+				} );
+			}
+		)( jQuery, wp.customize );
+
+	</script>
+	<?php
+}
