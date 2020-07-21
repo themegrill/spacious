@@ -37,7 +37,7 @@ class Spacious_Typography_Control extends WP_Customize_Control {
 			<?php
 			// Google font options
 			if ( $google_fonts = spacious_google_fonts() ) { ?>
-				<optgroup label="<?php esc__e( 'Google Fonts', 'spacious' ); ?>">
+				<optgroup label="<?php esc_attr_e( 'Google Fonts', 'spacious' ); ?>">
 					<?php
 					// Loop through font options and add to select
 					foreach ( $google_fonts as $font ) { ?>
