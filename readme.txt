@@ -46,8 +46,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Added - New Demo (Spacious Band)- Use this Spacious demo to create a music band website for your music enthusiasts.
 * Fix - File not found: theme-review.css on admin pages.
-* Remove - Extra admin page.
+* Remove - Unwanted admin page.
 
 = Version 1.7.4 - 2020-07-21 =
 * Fix - Header info text output issue while changing in customizer.
