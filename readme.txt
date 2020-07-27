@@ -45,6 +45,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - File not found: theme-review.css on admin pages.
+* Remove - Extra admin page.
+
 = Version 1.7.4 - 2020-07-21 =
 * Fix - Header info text output issue while changing in customizer.
 * Fix - Theme name and version in the admin dashboard while child theme active.
