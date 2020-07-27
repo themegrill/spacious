@@ -43,7 +43,7 @@ class Spacious_Welcome_Notice {
 
 			<div class="spacious-message__content">
 				<div class="spacious-message__image">
-					<img class="spacious-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_html_e( 'Spacious', 'spacious' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
+					<img class="spacious-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" /><?php // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped, Squiz.PHP.EmbeddedPhp.SpacingBeforeClose ?>
 				</div>
 
 				<div class="spacious-message__text">

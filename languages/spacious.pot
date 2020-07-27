@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.7.3\n"
+"Project-Id-Version: Spacious 1.7.4\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-06-19 04:06:13+00:00\n"
+"POT-Creation-Date: 2020-07-21 10:44:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -173,7 +173,7 @@ msgstr ""
 
 #: functions.php:265 inc/admin/class-spacious-admin.php:228
 #: inc/admin/class-spacious-admin.php:231
-#: inc/admin/class-spacious-dashboard.php:78
+#: inc/admin/class-spacious-dashboard.php:87
 msgid "Documentation"
 msgstr ""
 
@@ -181,11 +181,11 @@ msgstr ""
 msgid "Support Forum"
 msgstr ""
 
-#: functions.php:317 functions.php:322 inc/customizer.php:865
+#: functions.php:317 functions.php:322 inc/customizer.php:862
 msgid "Enter title for your slider."
 msgstr ""
 
-#: functions.php:319 functions.php:324 inc/customizer.php:886
+#: functions.php:319 functions.php:324 inc/customizer.php:883
 #: inc/functions.php:798 inc/header-functions.php:166
 #: inc/widgets/class-spacious-featured-single-page-widget.php:103
 #: inc/widgets/class-spacious-service-widget.php:96
@@ -205,7 +205,7 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:97
+#: inc/admin/class-spacious-admin.php:97 inc/customizer.php:168
 msgid "View PRO version"
 msgstr ""
 
@@ -251,7 +251,7 @@ msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
 #: inc/admin/class-spacious-admin.php:236
-#: inc/admin/class-spacious-dashboard.php:87
+#: inc/admin/class-spacious-dashboard.php:96
 #: inc/admin/class-spacious-theme-review-notice.php:106
 msgid "Got theme support question?"
 msgstr ""
@@ -346,55 +346,55 @@ msgstr ""
 msgid "Page Builder by SiteOrigin"
 msgstr ""
 
-#: inc/admin/class-spacious-admin.php:378 inc/customizer.php:1004
+#: inc/admin/class-spacious-admin.php:378 inc/customizer.php:1001
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:30
+#: inc/admin/class-spacious-dashboard.php:34
 #. translators: %s: Theme Name.
 msgid "%s Options"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:47
+#: inc/admin/class-spacious-dashboard.php:56
 #. translators: %s: Theme version.
 msgid "Spacious %s"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:56
+#: inc/admin/class-spacious-dashboard.php:65
 #. translators: %s: Theme Name.
 msgid "Welcome to %s!"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:62
+#: inc/admin/class-spacious-dashboard.php:71
 #. translators: %s: Theme Name.
 msgid "Important links to get you started with %s"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:68
+#: inc/admin/class-spacious-dashboard.php:77
 msgid "Get Started"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:71
+#: inc/admin/class-spacious-dashboard.php:80
 msgid "Learn Basics"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:76
+#: inc/admin/class-spacious-dashboard.php:85
 msgid "Next Steps"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:79
+#: inc/admin/class-spacious-dashboard.php:88
 msgid "Starter Demos"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:80
+#: inc/admin/class-spacious-dashboard.php:89
 msgid "Premium Version"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:85
+#: inc/admin/class-spacious-dashboard.php:94
 msgid "Further Actions"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:88
+#: inc/admin/class-spacious-dashboard.php:97
 msgid "Leave a review"
 msgstr ""
 
@@ -535,487 +535,442 @@ msgstr ""
 msgid "Google Fonts"
 msgstr ""
 
-#: inc/customizer/class-spacious-upsell-custom-control.php:15
-msgid "More Awesome Features"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:17
-msgid "Advanced Header Options"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:20
-msgid "Flexible Menu Designs"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:23
-msgid "Grid, Masonry, Thumbnail Blog"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:26
-msgid "10+ Footer Layouts"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:29
-msgid "100+ Customizer Options"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:32
-msgid "Advanced Page Settings"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:35
-msgid "17+ Starter Demos"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:43
-#. translators: %1$s discount coupon code., %2$s discount percentage
-msgid "Use the coupon code %1$s to get %2$s discount (limited time offer). Enjoy!"
-msgstr ""
-
-#: inc/customizer/class-spacious-upsell-custom-control.php:52
-msgid "View Pricing"
-msgstr ""
-
-#: inc/customizer.php:50
+#: inc/customizer.php:52
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:56
+#: inc/customizer.php:58
 msgid "Header Logo"
 msgstr ""
 
-#: inc/customizer.php:63
+#: inc/customizer.php:65
 msgid "Show"
 msgstr ""
 
-#: inc/customizer.php:76
+#: inc/customizer.php:78
 msgid "Choose the option that you want."
 msgstr ""
 
-#: inc/customizer.php:79
+#: inc/customizer.php:81
 msgid "Header Logo Only"
 msgstr ""
 
-#: inc/customizer.php:80
+#: inc/customizer.php:82
 msgid "Header Text Only"
 msgstr ""
 
-#: inc/customizer.php:81
+#: inc/customizer.php:83
 msgid "Show Both"
 msgstr ""
 
-#: inc/customizer.php:82
+#: inc/customizer.php:84
 msgid "Disable"
 msgstr ""
 
-#: inc/customizer.php:96
+#: inc/customizer.php:98
 msgid "Different Logo for Retina Devices?"
 msgstr ""
 
-#: inc/customizer.php:109
+#: inc/customizer.php:111
 msgid "Retina Logo"
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:112
 msgid ""
 "Please upload the retina logo double the size of logo. For eg: If you "
 "upload 100 * 100 pixels for logo then use 200 * 200 pixels for retina logo."
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:122
 msgid "Activate Header Top Bar"
 msgstr ""
 
-#: inc/customizer.php:133
+#: inc/customizer.php:135
 msgid ""
 "Check to show top header bar. The top header bar includes social icons "
 "area, small text area and menu area."
 msgstr ""
 
-#: inc/customizer.php:141
+#: inc/customizer.php:143
 msgid "Header Info Text"
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:156
 msgid ""
 "You can add phone numbers, other contact info here as you like. This box "
 "also accepts shortcodes."
 msgstr ""
 
-#: inc/customizer.php:164
-msgid "View Pro Version"
-msgstr ""
-
-#: inc/customizer.php:189
+#: inc/customizer.php:186
 msgid "Header Display Type"
 msgstr ""
 
-#: inc/customizer.php:202
+#: inc/customizer.php:199
 msgid "Choose the header display type that you want."
 msgstr ""
 
-#: inc/customizer.php:214
+#: inc/customizer.php:211
 msgid "Header Image Position"
 msgstr ""
 
-#: inc/customizer.php:227
+#: inc/customizer.php:224
 msgid "Choose top header image display position."
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:227
 msgid ""
 "Position Above (Default): Display the Header image just above the site "
 "title and main menu part."
 msgstr ""
 
-#: inc/customizer.php:231
+#: inc/customizer.php:228
 msgid ""
 "Position Below: Display the Header image just below the site title and main "
 "menu part."
 msgstr ""
 
-#: inc/customizer.php:238
+#: inc/customizer.php:235
 msgid "Header Button One"
 msgstr ""
 
-#: inc/customizer.php:250
+#: inc/customizer.php:247
 msgid "Button Text"
 msgstr ""
 
-#: inc/customizer.php:264
+#: inc/customizer.php:261
 msgid "Button Link"
 msgstr ""
 
-#: inc/customizer.php:279 inc/customizer.php:445
+#: inc/customizer.php:276 inc/customizer.php:442
 msgid "Check to show in new tab"
 msgstr ""
 
-#: inc/customizer.php:287
+#: inc/customizer.php:284
 msgid "Menu Display"
 msgstr ""
 
-#: inc/customizer.php:300
+#: inc/customizer.php:297
 msgid "Display menu in one line"
 msgstr ""
 
-#: inc/customizer.php:308
+#: inc/customizer.php:305
 msgid "Responsive Menu Style"
 msgstr ""
 
-#: inc/customizer.php:321
+#: inc/customizer.php:318
 msgid "Switch to new responsive menu."
 msgstr ""
 
-#: inc/customizer.php:328
+#: inc/customizer.php:325
 msgid "Search icon"
 msgstr ""
 
-#: inc/customizer.php:340
+#: inc/customizer.php:337
 msgid "Show search icon in header."
 msgstr ""
 
-#: inc/customizer.php:349
+#: inc/customizer.php:346
 msgid "Header Title"
 msgstr ""
 
-#: inc/customizer.php:361
+#: inc/customizer.php:358
 msgid "Hide page/post header title"
 msgstr ""
 
-#: inc/customizer.php:372
+#: inc/customizer.php:369
 msgid "Social Links"
 msgstr ""
 
-#: inc/customizer.php:378
+#: inc/customizer.php:375
 msgid "Activate social links area"
 msgstr ""
 
-#: inc/customizer.php:392
+#: inc/customizer.php:389
 msgid ""
 "Check to activate social links area. You also need to activate the header "
 "top bar section in Header options to show this social links area"
 msgstr ""
 
-#: inc/customizer.php:406
+#: inc/customizer.php:403
 msgid "Facebook"
 msgstr ""
 
-#: inc/customizer.php:407
+#: inc/customizer.php:404
 msgid "Twitter"
 msgstr ""
 
-#: inc/customizer.php:408
+#: inc/customizer.php:405
 msgid "Instagram"
 msgstr ""
 
-#: inc/customizer.php:409
+#: inc/customizer.php:406
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/customizer.php:430
+#: inc/customizer.php:427
 msgid "Add link for %1$s"
 msgstr ""
 
-#: inc/customizer.php:458
+#: inc/customizer.php:455
 msgid "Design"
 msgstr ""
 
-#: inc/customizer.php:464
+#: inc/customizer.php:461
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer.php:477
+#: inc/customizer.php:474
 msgid "Choose your site layout. The change is reflected in whole site."
 msgstr ""
 
-#: inc/customizer.php:479
+#: inc/customizer.php:476
 msgid "Boxed layout with content width of 1218px"
 msgstr ""
 
-#: inc/customizer.php:480
+#: inc/customizer.php:477
 msgid "Boxed layout with content width of 978px"
 msgstr ""
 
-#: inc/customizer.php:481
+#: inc/customizer.php:478
 msgid "Wide layout with content width of 1218px"
 msgstr ""
 
-#: inc/customizer.php:482
+#: inc/customizer.php:479
 msgid "Wide layout with content width of 978px"
 msgstr ""
 
-#: inc/customizer.php:490
+#: inc/customizer.php:487
 msgid "Default layout"
 msgstr ""
 
-#: inc/customizer.php:503
+#: inc/customizer.php:500
 msgid ""
 "Select default layout. This layout will be reflected in whole site "
 "archives, search etc. The layout for a single post and page can be "
 "controlled from below options."
 msgstr ""
 
-#: inc/customizer.php:518
+#: inc/customizer.php:515
 msgid "Default layout for pages only"
 msgstr ""
 
-#: inc/customizer.php:531
+#: inc/customizer.php:528
 msgid ""
 "Select default layout for pages. This layout will be reflected in all pages "
 "unless unique layout is set for specific page."
 msgstr ""
 
-#: inc/customizer.php:546
+#: inc/customizer.php:543
 msgid "Default layout for single posts only"
 msgstr ""
 
-#: inc/customizer.php:559
+#: inc/customizer.php:556
 msgid ""
 "Select default layout for single posts. This layout will be reflected in "
 "all single posts unless unique layout is set for specific post."
 msgstr ""
 
-#: inc/customizer.php:574
+#: inc/customizer.php:571
 msgid "Blog Posts display type"
 msgstr ""
 
-#: inc/customizer.php:587
+#: inc/customizer.php:584
 msgid ""
 "Choose the display type for the latests posts view or posts page view "
 "(static front page)."
 msgstr ""
 
-#: inc/customizer.php:589
+#: inc/customizer.php:586
 msgid "Blog Image Large"
 msgstr ""
 
-#: inc/customizer.php:590
+#: inc/customizer.php:587
 msgid "Blog Image Medium"
 msgstr ""
 
-#: inc/customizer.php:591
+#: inc/customizer.php:588
 msgid "Blog Image Alternate Medium"
 msgstr ""
 
-#: inc/customizer.php:592
+#: inc/customizer.php:589
 msgid "Blog Full Content"
 msgstr ""
 
-#: inc/customizer.php:601
+#: inc/customizer.php:598
 msgid "Primary color option"
 msgstr ""
 
-#: inc/customizer.php:614
+#: inc/customizer.php:611
 msgid ""
 "This will reflect in links, buttons and many others. Choose a color to "
 "match your site."
 msgstr ""
 
-#: inc/customizer.php:622
+#: inc/customizer.php:619
 msgid "Color Skin"
 msgstr ""
 
-#: inc/customizer.php:635
+#: inc/customizer.php:632
 msgid "Choose the light or dark skin. This will be reflected in whole site."
 msgstr ""
 
-#: inc/customizer.php:648
+#: inc/customizer.php:645
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/customizer.php:661
+#: inc/customizer.php:658
 msgid "Write your Custom CSS."
 msgstr ""
 
-#: inc/customizer.php:672 inc/customizer.php:1065
+#: inc/customizer.php:669 inc/customizer.php:1062
 msgid "Additional"
 msgstr ""
 
-#: inc/customizer.php:678
+#: inc/customizer.php:675
 msgid "Related Posts"
 msgstr ""
 
-#: inc/customizer.php:691
+#: inc/customizer.php:688
 msgid "Check to activate the related posts"
 msgstr ""
 
-#: inc/customizer.php:705
+#: inc/customizer.php:702
 msgid "Related Posts Must Be Shown As:"
 msgstr ""
 
-#: inc/customizer.php:709
+#: inc/customizer.php:706
 msgid "Related Posts By Categories"
 msgstr ""
 
-#: inc/customizer.php:710
+#: inc/customizer.php:707
 msgid "Related Posts By Tags"
 msgstr ""
 
-#: inc/customizer.php:717
+#: inc/customizer.php:714
 msgid "Featured Image In Single Post Page"
 msgstr ""
 
-#: inc/customizer.php:730
+#: inc/customizer.php:727
 msgid "Check to enable the featured image in single post page."
 msgstr ""
 
-#: inc/customizer.php:738
+#: inc/customizer.php:735
 msgid "Featured Image In Single Page"
 msgstr ""
 
-#: inc/customizer.php:751
+#: inc/customizer.php:748
 msgid "Check to enable the featured image in single page."
 msgstr ""
 
-#: inc/customizer.php:759
+#: inc/customizer.php:756
 msgid "Author Bio"
 msgstr ""
 
-#: inc/customizer.php:772
+#: inc/customizer.php:769
 msgid "Check to enable the author bio section just below the post."
 msgstr ""
 
-#: inc/customizer.php:781
+#: inc/customizer.php:778
 msgid "Slider"
 msgstr ""
 
-#: inc/customizer.php:787
+#: inc/customizer.php:784
 msgid "Activate slider"
 msgstr ""
 
-#: inc/customizer.php:800
+#: inc/customizer.php:797
 msgid "Check to activate slider."
 msgstr ""
 
-#: inc/customizer.php:816
+#: inc/customizer.php:813
 msgid "Disable slider in Posts page"
 msgstr ""
 
-#: inc/customizer.php:829
+#: inc/customizer.php:826
 msgid "Check to disable slider in Posts Page"
 msgstr ""
 
-#: inc/customizer.php:838
+#: inc/customizer.php:835
 msgid "Image Upload #%1$s"
 msgstr ""
 
-#: inc/customizer.php:851
+#: inc/customizer.php:848
 msgid "Upload slider image."
 msgstr ""
 
-#: inc/customizer.php:879
+#: inc/customizer.php:876
 msgid "Enter your slider description."
 msgstr ""
 
-#: inc/customizer.php:893
+#: inc/customizer.php:890
 msgid "Enter the button text. Default is \"Read more\""
 msgstr ""
 
-#: inc/customizer.php:907
+#: inc/customizer.php:904
 msgid "Enter link to redirect slider when clicked"
 msgstr ""
 
-#: inc/customizer.php:919
+#: inc/customizer.php:916
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:925
+#: inc/customizer.php:922
 msgid "Footer Widgets Column"
 msgstr ""
 
-#: inc/customizer.php:938
+#: inc/customizer.php:935
 msgid "Choose the number of column for the footer widgetized areas."
 msgstr ""
 
-#: inc/customizer.php:940
+#: inc/customizer.php:937
 msgid "One Column"
 msgstr ""
 
-#: inc/customizer.php:941
+#: inc/customizer.php:938
 msgid "Two Column"
 msgstr ""
 
-#: inc/customizer.php:942
+#: inc/customizer.php:939
 msgid "Three Column"
 msgstr ""
 
-#: inc/customizer.php:943
+#: inc/customizer.php:940
 msgid "Four Column"
 msgstr ""
 
-#: inc/customizer.php:954
+#: inc/customizer.php:951
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:961
+#: inc/customizer.php:958
 msgid "Google Font Options"
 msgstr ""
 
-#: inc/customizer.php:969
+#: inc/customizer.php:966
 msgid "All Titles font. Default is \"Lato\"."
 msgstr ""
 
-#: inc/customizer.php:974
+#: inc/customizer.php:971
 msgid "Content font and for others. Default is \"Lato\"."
 msgstr ""
 
-#: inc/customizer.php:1011
+#: inc/customizer.php:1008
 msgid "Archive Page Layout"
 msgstr ""
 
-#: inc/customizer.php:1024
+#: inc/customizer.php:1021
 msgid "This layout will be reflected in woocommerce archive page only."
 msgstr ""
 
-#: inc/customizer.php:1038
+#: inc/customizer.php:1035
 msgid "Product Page Layout"
 msgstr ""
 
-#: inc/customizer.php:1051
+#: inc/customizer.php:1048
 msgid "This layout will be reflected in woocommerce Product page."
 msgstr ""
 
-#: inc/customizer.php:1079
+#: inc/customizer.php:1076
 msgid "Check to show WooCommerce cart icon on menu bar"
 msgstr ""
 
