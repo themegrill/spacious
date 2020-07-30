@@ -447,15 +447,17 @@ endif;
  * Change hex code to RGB
  * Source: https://css-tricks.com/snippets/php/convert-hex-to-rgb/#comment-1052011
  */
-function spacious_hex2rgb( $hexstr ) {
-	$int = hexdec( str_replace( '#', '', $hexstr ) );
+if ( ! function_exists( 'spacious_hex2rgb' ) ) {
+	function spacious_hex2rgb( $hexstr ) {
+		$int = hexdec( str_replace( '#', '', $hexstr ) );
 
-	$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
-	$r   = $rgb['red'];
-	$g   = $rgb['green'];
-	$b   = $rgb['blue'];
+		$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
+		$r   = $rgb['red'];
+		$g   = $rgb['green'];
+		$b   = $rgb['blue'];
 
-	return "rgba($r,$g,$b, 0.85)";
+		return "rgba($r,$g,$b, 0.85)";
+	}
 }
 
 /**
