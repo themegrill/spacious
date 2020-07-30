@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Child theme compatibility for spacious_hex2rgb function.
+
 = Version 1.7.5 - 2020-07-27 =
 * Added - New Demo (Spacious Band)- Use this Spacious demo to create a music band website for your music enthusiasts.
 * Fix - File not found: theme-review.css on admin pages.
