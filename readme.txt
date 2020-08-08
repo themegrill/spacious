@@ -45,7 +45,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.7.6 - 2020-08-08 =
 * Tweak       - Child theme compatibility for spacious_hex2rgb function.
 * Enhancement - Links CSS transition.
 * Remove      - Unused codes.
