@@ -453,13 +453,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require_once get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Define Elementor partner ID
- */
-if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) {
-	define( 'ELEMENTOR_PARTNER_ID', 2125 );
-}
-
 /** Add the Elementor compatibility file */
 if ( defined( 'ELEMENTOR_VERSION' ) ) {
 	require_once( SPACIOUS_INCLUDES_DIR . '/elementor/elementor.php' );
