@@ -434,12 +434,6 @@ if ( is_admin() ) {
 }
 
 /**
- * Load TGMPA Configs.
- */
-require_once SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php';
-require_once SPACIOUS_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-spacious.php';
-
-/**
  * Load the Spacious Toolkit file.
  */
 if ( class_exists( 'Spacious_Toolkit' ) ) {
