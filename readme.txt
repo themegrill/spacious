@@ -46,6 +46,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Remove - TGMPA library to recommend plugins.
 * Remove -Remove - Repeated unrequired CSS code
 
 = Version 1.7.6 - 2020-08-08 =
