@@ -46,8 +46,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version TBD =
+* Added - New Demo (Spacious Farm)- Use this Spacious demo to create your farm or agricultural website.
 * Remove - TGMPA library to recommend plugins.
-* Remove -Remove - Repeated unrequired CSS code
+* Remove - Repeated unrequired CSS code
 
 = Version 1.7.6 - 2020-08-08 =
 * Tweak       - Child theme compatibility for spacious_hex2rgb function.
