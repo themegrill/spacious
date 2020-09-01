@@ -197,7 +197,7 @@
 	#header-left-section {
 		float: none;
 		max-width: 100%;
-		margin-right: 0px;
+		margin-right: 0;
 	}
 	#header-logo-image {
 		float: none;
@@ -268,7 +268,6 @@
 		}
 
 		.entry-description-container {
-			padding: 5px 10px;
 			padding: 0.5rem 1rem;
 		}
 
@@ -288,7 +287,6 @@
 
 		.slider-read-more-button {
 			font-size: 14px;
-			padding: 5px 10px;
 			padding: 0.5rem 1rem;
 		}
 	}
@@ -432,7 +430,7 @@
 		.site-header .menu-toggle {
 			background: #3a3a3a none repeat scroll 0 0;
 			color: #fff;
-			font: 0px/0 a;
+			font: 0/0 a;
 			height: 36px;
 			margin: 0;
 			padding: 0;
@@ -640,7 +638,6 @@
 
 	#featured-slider {
 		.entry-description-container {
-			padding: 3px 6px;
 			padding: 0.3rem 0.6rem;
 		}
 
@@ -655,7 +652,6 @@
 		.slider-read-more-button {
 			margin-top: 5px;
 			font-size: 10px;
-			padding: 3px 6px;
 			padding: 0.3rem 0.6rem;
 		}
 	}
