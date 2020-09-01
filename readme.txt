@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Remove - Missed repeated unrequired CSS code
+
 = Version 1.7.7 - 2020-08-27  =
 * Added - New Demo (Spacious Farm)- Use this Spacious demo to create your farm or agricultural website.
 * Remove - TGMPA library to recommend plugins.
