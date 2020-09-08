@@ -637,6 +637,29 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_header_image_position]',
+		array(
+			'default'           => 'above',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_select_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_header_image_position]',
+		array(
+			'priority' => 20,
+			'type'    => 'radio',
+			'label'   => esc_html__( 'Choose top header image display position.', 'spacious' ),
+			'section' => 'header_image',
+			'choices' => array(
+				'above' => esc_html__( 'Position Above (Default): Display the Header image just above the site title and main menu part.', 'spacious' ),
+				'below' => esc_html__( 'Position Below: Display the Header image just below the site title and main menu part.', 'spacious' ),
+			),
+		) );
+
 	// Header Top bar activate option
 	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
 		'priority' => 2,
@@ -725,30 +748,6 @@ function spacious_customize_register( $wp_customize ) {
 			'four' => SPACIOUS_ADMIN_IMAGES_URL . '/menu-bottom.png',
 		),
 	) ) );
-
-	// Header image position option
-	$wp_customize->add_section( 'spacious_header_image_position_section', array(
-		'priority' => 3,
-		'title'    => __( 'Header Image Position', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_image_position]', array(
-		'default'           => 'above',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_select_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_header_image_position]', array(
-		'type'    => 'radio',
-		'label'   => __( 'Choose top header image display position.', 'spacious' ),
-		'section' => 'spacious_header_image_position_section',
-		'choices' => array(
-			'above' => __( 'Position Above (Default): Display the Header image just above the site title and main menu part.', 'spacious' ),
-			'below' => __( 'Position Below: Display the Header image just below the site title and main menu part.', 'spacious' ),
-		),
-	) );
 
 	// Header Button option.
 	$wp_customize->add_section( 'spacious_header_button_one', array(
