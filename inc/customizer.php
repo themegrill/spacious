@@ -1170,11 +1170,11 @@ function spacious_customize_register( $wp_customize ) {
 		$wp_customize->add_setting(
 			$spacious_themename . '[spacious_slider_image' . $i . ']',
 			array(
-			'default'           => '',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		)
+				'default'           => '',
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'esc_url_raw',
+			)
 		);
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_slider_image' . $i . ']', array(
@@ -1337,6 +1337,32 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	// blog posts display type setting
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_archive_display_type]',
+		array(
+			'default'           => 'blog_large',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_select_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_archive_display_type]',
+		array(
+			'type'    => 'radio',
+			'label'   => esc_html__( 'Choose the display type for the latests posts view or posts page view (static front page).', 'spacious' ),
+			'choices' => array(
+				'blog_large'            => esc_html__( 'Blog Image Large', 'spacious' ),
+				'blog_medium'           => esc_html__( 'Blog Image Medium', 'spacious' ),
+				'blog_medium_alternate' => esc_html__( 'Blog Image Alternate Medium', 'spacious' ),
+				'blog_full_content'     => esc_html__( 'Blog Full Content', 'spacious' ),
+			),
+			'section' => 'spacious_blog_content_options',
+		)
+	);
+
 	/*************************************Start of the Social Links Options*************************************/
 
 	$wp_customize->add_panel( 'spacious_social_links_options', array(
@@ -1429,32 +1455,6 @@ function spacious_customize_register( $wp_customize ) {
 		'capabitity' => 'edit_theme_options',
 		'priority'   => 505,
 		'title'      => __( 'Design', 'spacious' ),
-	) );
-
-	// blog posts display type setting
-	$wp_customize->add_section( 'spacious_blog_posts_display_type_setting', array(
-		'priority' => 5,
-		'title'    => __( 'Blog Posts display type', 'spacious' ),
-		'panel'    => 'spacious_design_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_archive_display_type]', array(
-		'default'           => 'blog_large',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_select_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_archive_display_type]', array(
-		'type'    => 'radio',
-		'label'   => __( 'Choose the display type for the latests posts view or posts page view (static front page).', 'spacious' ),
-		'choices' => array(
-			'blog_large'            => __( 'Blog Image Large', 'spacious' ),
-			'blog_medium'           => __( 'Blog Image Medium', 'spacious' ),
-			'blog_medium_alternate' => __( 'Blog Image Alternate Medium', 'spacious' ),
-			'blog_full_content'     => __( 'Blog Full Content', 'spacious' ),
-		),
-		'section' => 'spacious_blog_posts_display_type_setting',
 	) );
 
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
