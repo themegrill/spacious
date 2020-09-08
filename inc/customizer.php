@@ -827,6 +827,97 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Primary menu section.
+	$wp_customize->add_section(
+		'spacious_header_primary_menu',
+		array(
+			'priority' => 2,
+			'title'    => esc_html__( 'Primary Menu', 'spacious' ),
+			'panel'    => 'spacious_header_options',
+		)
+	);
+
+	// Heading for search icon.
+	$wp_customize->add_setting(
+		'spacious[header_primary_menu_search]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_primary_menu_display_type',
+			array(
+				'label'    => esc_html__( 'Search Icon', 'spacious' ),
+				'section'  => 'spacious_header_primary_menu',
+				'settings' => 'spacious[header_primary_menu_search]',
+			)
+		)
+	);
+
+	// Search icon.
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_header_search_icon]',
+		array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		) );
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_header_search_icon]',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Show search icon in header.', 'spacious' ),
+			'section' => 'spacious_header_primary_menu',
+		)
+	);
+
+	// Heading for menu display.
+	$wp_customize->add_setting(
+		'spacious[header_primary_menu_display]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_primary_menu_display',
+			array(
+				'label'    => esc_html__( 'Menu Display', 'spacious' ),
+				'section'  => 'spacious_header_primary_menu',
+				'settings' => 'spacious[header_primary_menu_display]',
+			)
+		)
+	);
+
+	// Display menu in one line.
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_one_line_menu_setting]',
+		array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_one_line_menu_setting]',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Display menu in one line', 'spacious' ),
+			'section' => 'spacious_header_primary_menu',
+			'setting' => $spacious_themename . '[spacious_one_line_menu_setting]',
+		)
+	);
+
+
 	// Header Button option.
 	$wp_customize->add_section( 'spacious_header_button_one', array(
 		'priority' => 4,
@@ -876,27 +967,6 @@ function spacious_customize_register( $wp_customize ) {
 		'setting' => $spacious_themename . '[spacious_header_button_one_tab]',
 	) );
 
-	// Display menu in one line.
-	$wp_customize->add_section( 'spacious_one_line_menu_section', array(
-		'priority' => 3,
-		'title'    => __( 'Menu Display', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_one_line_menu_setting]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_one_line_menu_setting]', array(
-		'type'    => 'checkbox',
-		'label'   => __( 'Display menu in one line', 'spacious' ),
-		'section' => 'spacious_one_line_menu_section',
-		'setting' => $spacious_themename . '[spacious_one_line_menu_setting]',
-	) );
-
 	// Responsive collapse menu
 	$wp_customize->add_section( 'spacious_new_menu', array(
 		'priority' => 4,
@@ -915,25 +985,6 @@ function spacious_customize_register( $wp_customize ) {
 		'type'    => 'checkbox',
 		'label'   => __( 'Switch to new responsive menu.', 'spacious' ),
 		'section' => 'spacious_new_menu',
-	) );
-
-	// Search icon.
-	$wp_customize->add_section( 'spacious_header_search_icon', array(
-		'priority' => 9,
-		'title'    => __( 'Search icon', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_search_icon]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_header_search_icon]', array(
-		'type'    => 'checkbox',
-		'label'   => __( 'Show search icon in header.', 'spacious' ),
-		'section' => 'spacious_header_search_icon',
 	) );
 
 	/**
