@@ -513,6 +513,29 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->get_control( 'blogname' )->priority = 10;
+
+	// Heading for Site Tagline.
+	$wp_customize->add_setting(
+		'spacious[site_tagline_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'site_tagline_heading',
+			array(
+				'label'    => esc_html__( 'Site Tagline', 'spacious' ),
+				'section'  => 'title_tagline',
+				'settings' => 'spacious[site_tagline_heading]',
+				'priority' => 10,
+			)
+		)
+	);
+
 	// Header Logo upload option
 	$wp_customize->add_section( 'spacious_header_logo', array(
 		'priority' => 1,
