@@ -395,9 +395,102 @@ function spacious_customize_register( $wp_customize ) {
 	// Header Options Area
 	$wp_customize->add_panel( 'spacious_header_options', array(
 		'capabitity' => 'edit_theme_options',
-		'priority'   => 500,
-		'title'      => __( 'Header', 'spacious' ),
+		'priority'   => 50,
+		'title'      => esc_html__( 'Header', 'spacious' ),
 	) );
+
+	$wp_customize->get_section( 'title_tagline' )->panel    = 'spacious_header_options';
+	$wp_customize->get_section( 'title_tagline' )->priority = 2;
+
+	$wp_customize->add_setting(
+		'spacious[site_logo_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'site_logo_heading',
+			array(
+				'label'    => esc_html__( 'Site Logo', 'spacious' ),
+				'section'  => 'title_tagline',
+				'settings' => 'spacious[site_logo_heading]',
+				'priority' => 1,
+			)
+		)
+	);
+
+	// Retina Logo Option.
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_different_retina_logo]',
+		array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_different_retina_logo]',
+		array(
+			'type'     => 'checkbox',
+			'priority' => 8,
+			'label'    => esc_html__( 'Different Logo for Retina Devices?', 'spacious' ),
+			'section'  => 'title_tagline',
+		)
+	);
+
+	// Retina Logo Upload.
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_retina_logo_upload]',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'esc_url_raw',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			$spacious_themename . '[spacious_retina_logo_upload]',
+			array(
+				'label'           => esc_html__( 'Retina Logo', 'spacious' ),
+				'description'     => esc_html__( 'Please upload the retina logo double the size of logo. For eg: If you upload 100 * 100 pixels for logo then use 200 * 200 pixels for retina logo.', 'spacious' ),
+				'priority'        => 8,
+				'setting'         => 'spacious[spacious_retina_logo_upload]',
+				'section'         => 'title_tagline',
+				'active_callback' => 'spacious_retina_logo_option',
+			)
+		)
+	);
+
+	// Heading for Site Icon.
+	$wp_customize->add_setting(
+		'spacious[site_icon_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'site_icon_heading',
+			array(
+				'label'    => esc_html__( 'Site icon', 'spacious' ),
+				'section'  => 'title_tagline',
+				'settings' => 'spacious[site_icon_heading]',
+				'priority' => 8,
+			)
+		)
+	);
+
+	$wp_customize->get_control( 'site_icon' )->priority = 9;
 
 	// Header Logo upload option
 	$wp_customize->add_section( 'spacious_header_logo', array(
@@ -431,37 +524,6 @@ function spacious_customize_register( $wp_customize ) {
 			'none'      => __( 'Disable', 'spacious' ),
 		),
 	) );
-	// Retina Logo Option.
-	$wp_customize->add_setting( $spacious_themename . '[spacious_different_retina_logo]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_different_retina_logo]', array(
-		'type'     => 'checkbox',
-		'priority' => 8,
-		'label'    => esc_html__( 'Different Logo for Retina Devices?', 'spacious' ),
-		'section'  => 'title_tagline',
-	) );
-
-	// Retina Logo Upload.
-	$wp_customize->add_setting( $spacious_themename . '[spacious_retina_logo_upload]', array(
-		'default'           => '',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'esc_url_raw',
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_retina_logo_upload]', array(
-		'label'           => esc_html__( 'Retina Logo', 'spacious' ),
-		'description'     => esc_html__( 'Please upload the retina logo double the size of logo. For eg: If you upload 100 * 100 pixels for logo then use 200 * 200 pixels for retina logo.', 'spacious' ),
-		'priority'        => 8,
-		'setting'         => 'spacious[spacious_retina_logo_upload]',
-		'section'         => 'title_tagline',
-		'active_callback' => 'spacious_retina_logo_option',
-	) ) );
 
 	// Header Top bar activate option
 	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
