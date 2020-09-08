@@ -1250,7 +1250,7 @@ function spacious_customize_register( $wp_customize ) {
 			'title'      => esc_html__( 'Content', 'spacious' ),
 		)
 	);
-	
+
 	$wp_customize->add_section(
 		'spacious_post_page_content_options',
 		array(
@@ -1306,6 +1306,34 @@ function spacious_customize_register( $wp_customize ) {
 			'type'    => 'checkbox',
 			'label'   => esc_html__( 'Hide page/post header title', 'spacious' ),
 			'section' => 'spacious_post_page_content_options',
+		)
+	);
+
+	$wp_customize->add_section(
+		'spacious_blog_content_options',
+		array(
+			'title' => esc_html__( 'Blog/Archive', 'spacious' ),
+			'panel' => 'spacious_content_options',
+		)
+	);
+
+	// Heading for blog display.
+	$wp_customize->add_setting(
+		'spacious[blog_post_display_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'blog_post_display_heading',
+			array(
+				'label'    => esc_html__( 'Blog Posts display type', 'spacious' ),
+				'section'  => 'spacious_blog_content_options',
+				'settings' => 'spacious[blog_post_display_heading]',
+			)
 		)
 	);
 
