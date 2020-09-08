@@ -612,6 +612,10 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->get_control( 'header_textcolor' )->section  = 'title_tagline';
 	$wp_customize->get_control( 'header_textcolor' )->priority = 20;
 
+	// Header media options.
+	$wp_customize->get_section( 'header_image' )->panel    = 'spacious_header_options';
+	$wp_customize->get_section( 'header_image' )->priority = 2;
+
 	// Header Top bar activate option
 	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
 		'priority' => 2,
