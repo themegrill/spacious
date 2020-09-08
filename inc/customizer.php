@@ -18,6 +18,9 @@ function spacious_customize_register( $wp_customize ) {
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-heading-control.php';
+
+	$wp_customize->register_control_type( 'Spacious_Heading_Control' );
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
@@ -171,6 +174,57 @@ function spacious_customize_register( $wp_customize ) {
 			)
 		)
 	);
+
+	// Global Background options.
+	$wp_customize->add_section(
+		'spacious_global_background_section',
+		array(
+			'panel'    => 'spacious_global_options',
+			'priority' => 7,
+			'title'    => esc_html__( 'Background', 'spacious' ),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'spacious[global_background_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'global_background_heading',
+			array(
+				'label'    => esc_html__( 'Outside Container', 'spacious' ),
+				'section'  => 'spacious_global_background_section',
+				'settings' => 'spacious[global_background_heading]',
+				'priority' => 10,
+			)
+		)
+	);
+
+	$wp_customize->get_control( 'background_color' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_color' )->priority = 20;
+
+	$wp_customize->get_control( 'background_image' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_image' )->priority = 20;
+
+	$wp_customize->get_control( 'background_preset' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_preset' )->priority = 20;
+
+	$wp_customize->get_control( 'background_position' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_position' )->priority = 20;
+
+	$wp_customize->get_control( 'background_size' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_size' )->priority = 20;
+
+	$wp_customize->get_control( 'background_repeat' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_repeat' )->priority = 20;
+
+	$wp_customize->get_control( 'background_attachment' )->section  = 'spacious_global_background_section';
+	$wp_customize->get_control( 'background_attachment' )->priority = 20;
 
 	/****************************************Start of the Header Options****************************************/
 	// Header Options Area
@@ -1234,6 +1288,29 @@ function spacious_customize_preview_js() {
 }
 
 add_action( 'customize_preview_init', 'spacious_customize_preview_js' );
+
+/**
+ * Enqueue customize controls scripts.
+ */
+function spacious_enqueue_customize_controls() {
+
+	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+	/**
+	 * Enqueue required Customize Controls CSS files.
+	 */
+	// Main CSS file.
+	wp_enqueue_style(
+		'spacious-customize-controls',
+		get_template_directory_uri() . '/css/customize-controls' . $suffix . '.css',
+		array(),
+		false
+	);
+
+}
+
+add_action( 'customize_controls_enqueue_scripts', 'spacious_enqueue_customize_controls' );
+
 
 /*****************************************************************************************/
 
