@@ -536,38 +536,57 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Header Logo upload option
-	$wp_customize->add_section( 'spacious_header_logo', array(
-		'priority' => 1,
-		'title'    => __( 'Header Logo', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
+	$wp_customize->get_control( 'blogdescription' )->priority = 11;
 
-	// Header logo and text display type option
-	$wp_customize->add_section( 'spacious_show_option', array(
-		'priority' => 2,
-		'title'    => __( 'Show', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
+	// Heading for logo and header text Visibility.
+	$wp_customize->add_setting(
+		'spacious[logo_text_visibility_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
 
-	$wp_customize->add_setting( $spacious_themename . '[spacious_show_header_logo_text]', array(
-		'default'           => 'text_only',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_select_sanitize',
-	) );
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'logo_text_visibility_heading',
+			array(
+				'label'    => esc_html__( 'Visibility', 'spacious' ),
+				'section'  => 'title_tagline',
+				'settings' => 'spacious[logo_text_visibility_heading]',
+				'priority' => 14,
+			)
+		)
+	);
 
-	$wp_customize->add_control( $spacious_themename . '[spacious_show_header_logo_text]', array(
-		'type'    => 'radio',
-		'label'   => __( 'Choose the option that you want.', 'spacious' ),
-		'section' => 'title_tagline',
-		'choices' => array(
-			'logo_only' => __( 'Header Logo Only', 'spacious' ),
-			'text_only' => __( 'Header Text Only', 'spacious' ),
-			'both'      => __( 'Show Both', 'spacious' ),
-			'none'      => __( 'Disable', 'spacious' ),
-		),
-	) );
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_show_header_logo_text]',
+		array(
+			'default'           => 'text_only',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_select_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_show_header_logo_text]',
+		array(
+			'priority' => 14,
+			'type'     => 'radio',
+			'label'    => esc_html__( 'Choose the option that you want.', 'spacious' ),
+			'section'  => 'title_tagline',
+			'choices'  => array(
+				'logo_only' => esc_html__( 'Header Logo Only', 'spacious' ),
+				'text_only' => esc_html__( 'Header Text Only', 'spacious' ),
+				'both'      => esc_html__( 'Show Both', 'spacious' ),
+				'none'      => esc_html__( 'Disable', 'spacious' ),
+			),
+		)
+	);
+
+	$wp_customize->get_control( 'display_header_text' )->section  = 'title_tagline';
+	$wp_customize->get_control( 'display_header_text' )->priority = 15;
 
 	// Header Top bar activate option
 	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
