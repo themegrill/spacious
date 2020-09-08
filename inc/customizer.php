@@ -115,6 +115,63 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Global typography options.
+	$wp_customize->add_section(
+		'spacious_global_typography_section',
+		array(
+			'panel'    => 'spacious_global_options',
+			'priority' => 7,
+			'title'    => esc_html__( 'Typography', 'spacious' ),
+		)
+	);
+
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_content_font]',
+		array(
+			'default'           => 'Lato',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_font_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Typography_Control(
+			$wp_customize,
+			$spacious_themename . '[spacious_content_font]',
+			array(
+				'priority' => 8,
+				'label'    => esc_html__( 'Body', 'spacious' ),
+				'section'  => 'spacious_global_typography_section',
+				'settings' => $spacious_themename . '[spacious_content_font]',
+			)
+		)
+	);
+
+	// Heading Typography option.
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_titles_font]',
+		array(
+			'default'           => 'Lato',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_font_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Typography_Control(
+			$wp_customize,
+			$spacious_themename . '[spacious_titles_font]',
+			array(
+				'priority' => 8,
+				'label'    => esc_html__( 'Headings', 'spacious' ),
+				'section'  => 'spacious_global_typography_section',
+				'settings' => $spacious_themename . '[spacious_titles_font]',
+			)
+		)
+	);
+
 	/****************************************Start of the Header Options****************************************/
 	// Header Options Area
 	$wp_customize->add_panel( 'spacious_header_options', array(
@@ -968,56 +1025,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	// End of footer options.
 
-	/***************************************Start of the Typography Option**************************************/
-
-	$wp_customize->add_panel( 'spacious_typography_options', array(
-		'priority'   => 550,
-		'title'      => __( 'Typography', 'spacious' ),
-		'capability' => 'edit_theme_options',
-	) );
-
-	// Font family options
-	$wp_customize->add_section( 'spacious_google_fonts_settings', array(
-		'priority' => 1,
-		'title'    => __( 'Google Font Options', 'spacious' ),
-		'panel'    => 'spacious_typography_options',
-	) );
-
-	$spacious_fonts = array(
-		'spacious_titles_font'  => array(
-			'id'      => $spacious_themename . '[spacious_titles_font]',
-			'default' => 'Lato',
-			'title'   => __( 'All Titles font. Default is "Lato".', 'spacious' ),
-		),
-		'spacious_content_font' => array(
-			'id'      => $spacious_themename . '[spacious_content_font]',
-			'default' => 'Lato',
-			'title'   => __( 'Content font and for others. Default is "Lato".', 'spacious' ),
-		),
-	);
-
-	foreach ( $spacious_fonts as $spacious_font ) {
-
-		$wp_customize->add_setting( $spacious_font['id'], array(
-			'default'           => $spacious_font['default'],
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_font_sanitize',
-		) );
-
-		$wp_customize->add_control(
-			new Spacious_Typography_Control(
-				$wp_customize,
-				$spacious_font['id'], array(
-					'label'    => $spacious_font['title'],
-					'settings' => $spacious_font['id'],
-					'section'  => 'spacious_google_fonts_settings',
-				)
-			) );
-	}
-
 	/**************************************Start of the WooCommerce Options*************************************/
-
 	if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 
 		$wp_customize->add_panel( 'spacious_woocommerce_options', array(
