@@ -1043,63 +1043,6 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_section(
-		'spacious_post_page_content_options',
-		array(
-			'title' => esc_html__( 'Page Header', 'spacious' ),
-			'panel' => 'spacious_content_options',
-		)
-	);
-
-	// Heading for header title
-	$wp_customize->add_setting(
-		'spacious[header_title_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'header_title_heading',
-			array(
-				'label'    => esc_html__( 'Header Title', 'spacious' ),
-				'section'  => 'spacious_post_page_content_options',
-				'settings' => 'spacious[header_title_heading]',
-			)
-		)
-	);
-
-	/**
-	 * Title header options
-	 */
-	$wp_customize->add_section(
-		'spacious_post_page_content_options',
-		array(
-			'title' => esc_html__( 'Page Header', 'spacious' ),
-			'panel' => 'spacious_content_options',
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_header_title_hide]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_header_title_hide]',
-		array(
-			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Hide page/post header title', 'spacious' ),
-			'section' => 'spacious_post_page_content_options',
-		)
-	);
 	// End of Header Options
 
 	/****************************************Start of the Slider Options****************************************/
@@ -1297,6 +1240,74 @@ function spacious_customize_register( $wp_customize ) {
 		) );
 	}
 	// End of Slider Options
+
+	// Content Options.
+	$wp_customize->add_panel(
+		'spacious_content_options',
+		array(
+			'capabitity' => 'edit_theme_options',
+			'priority'   => 60,
+			'title'      => esc_html__( 'Content', 'spacious' ),
+		)
+	);
+	
+	$wp_customize->add_section(
+		'spacious_post_page_content_options',
+		array(
+			'title' => esc_html__( 'Page Header', 'spacious' ),
+			'panel' => 'spacious_content_options',
+		)
+	);
+
+	// Heading for header title
+	$wp_customize->add_setting(
+		'spacious[header_title_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_title_heading',
+			array(
+				'label'    => esc_html__( 'Header Title', 'spacious' ),
+				'section'  => 'spacious_post_page_content_options',
+				'settings' => 'spacious[header_title_heading]',
+			)
+		)
+	);
+
+	/**
+	 * Title header options
+	 */
+	$wp_customize->add_section(
+		'spacious_post_page_content_options',
+		array(
+			'title' => esc_html__( 'Page Header', 'spacious' ),
+			'panel' => 'spacious_content_options',
+		)
+	);
+
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_header_title_hide]',
+		array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_header_title_hide]',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Hide page/post header title', 'spacious' ),
+			'section' => 'spacious_post_page_content_options',
+		)
+	);
 
 	/*************************************Start of the Social Links Options*************************************/
 
