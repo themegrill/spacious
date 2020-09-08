@@ -1203,24 +1203,40 @@ function spacious_customize_register( $wp_customize ) {
 	);
 
 	for ( $i = 1; $i <= 5; $i++ ) {
-		// adding slider section
-		$wp_customize->add_section( 'spacious_slider_number_section' . $i, array(
-			'priority' => 10,
-			'title'    => sprintf( __( 'Image Upload #%1$s', 'spacious' ), $i ),
-			'panel'    => 'spacious_slider_options',
-		) );
+		// Heading for Image upload.
+		$wp_customize->add_setting(
+			'spacious[slider_image_upload_heading' . $i . ' ]',
+			array(
+				'sanitize_callback' => false,
+			)
+		);
+
+		$wp_customize->add_control(
+			new Spacious_Heading_Control(
+				$wp_customize,
+				'spacious[slider_image_upload_heading' . $i . ' ]',
+				array(
+					'label'   => sprintf( esc_html__( 'Slider Content #%1$s', 'spacious' ), $i ),
+					'section' => 'spacious_slider_options',
+					'setting' => 'spacious[slider_image_upload_heading' . $i . ']',
+				)
+			)
+		);
 
 		// adding slider image url
-		$wp_customize->add_setting( $spacious_themename . '[spacious_slider_image' . $i . ']', array(
+		$wp_customize->add_setting(
+			$spacious_themename . '[spacious_slider_image' . $i . ']',
+			array(
 			'default'           => '',
 			'type'              => 'option',
 			'capability'        => 'edit_theme_options',
 			'sanitize_callback' => 'esc_url_raw',
-		) );
+		)
+		);
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $spacious_themename . '[spacious_slider_image' . $i . ']', array(
 			'label'   => __( 'Upload slider image.', 'spacious' ),
-			'section' => 'spacious_slider_number_section' . $i,
+			'section' => 'spacious_slider_options',
 			'setting' => $spacious_themename . '[spacious_slider_image' . $i . ']',
 		) ) );
 
@@ -1234,7 +1250,7 @@ function spacious_customize_register( $wp_customize ) {
 
 		$wp_customize->add_control( $spacious_themename . '[spacious_slider_title' . $i . ']', array(
 			'label'   => __( 'Enter title for your slider.', 'spacious' ),
-			'section' => 'spacious_slider_number_section' . $i,
+			'section' => 'spacious_slider_options',
 			'setting' => $spacious_themename . '[spacious_slider_title' . $i . ']',
 		) );
 
@@ -1248,7 +1264,7 @@ function spacious_customize_register( $wp_customize ) {
 
 		$wp_customize->add_control( new Spacious_Text_Area_Control( $wp_customize, $spacious_themename . '[spacious_slider_text' . $i . ']', array(
 			'label'   => __( 'Enter your slider description.', 'spacious' ),
-			'section' => 'spacious_slider_number_section' . $i,
+			'section' => 'spacious_slider_options',
 			'setting' => $spacious_themename . '[spacious_slider_text' . $i . ']',
 		) ) );
 
@@ -1262,7 +1278,7 @@ function spacious_customize_register( $wp_customize ) {
 
 		$wp_customize->add_control( $spacious_themename . '[spacious_slider_button_text' . $i . ']', array(
 			'label'   => __( 'Enter the button text. Default is "Read more"', 'spacious' ),
-			'section' => 'spacious_slider_number_section' . $i,
+			'section' => 'spacious_slider_options',
 			'setting' => $spacious_themename . '[spacious_slider_button_text' . $i . ']',
 		) );
 
@@ -1276,7 +1292,7 @@ function spacious_customize_register( $wp_customize ) {
 
 		$wp_customize->add_control( $spacious_themename . '[spacious_slider_link' . $i . ']', array(
 			'label'   => __( 'Enter link to redirect slider when clicked', 'spacious' ),
-			'section' => 'spacious_slider_number_section' . $i,
+			'section' => 'spacious_slider_options',
 			'setting' => $spacious_themename . '[spacious_slider_link' . $i . ']',
 		) );
 	}
