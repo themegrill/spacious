@@ -44,6 +44,41 @@ function spacious_customize_register( $wp_customize ) {
 	$spacious_themename = get_option( 'stylesheet' );
 	$spacious_themename = preg_replace( "/\W/", "_", strtolower( $spacious_themename ) );
 
+	/****************************************Start of the global Options****************************************/
+	$wp_customize->add_panel(
+		'spacious_global_options',
+		array(
+			'capabitity' => 'edit_theme_options',
+			'priority'   => 50,
+			'title'      => esc_html__( 'Global', 'spacious' ),
+		)
+	);
+
+	// Site primary color option.
+	$wp_customize->add_section(
+		'spacious_global_color_setting',
+		array(
+			'panel'    => 'spacious_global_options',
+			'priority' => 7,
+			'title'    => esc_html__( 'Colors', 'spacious' ),
+		)
+	);
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_primary_color]', array(
+		'default'              => '#0FBE7C',
+		'type'                 => 'option',
+		'transport'            => 'postMessage',
+		'capability'           => 'edit_theme_options',
+		'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
+		'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $spacious_themename . '[spacious_primary_color]', array(
+		'label'    => esc_html__( 'Primary Color', 'spacious' ),
+		'section'  => 'spacious_global_color_setting',
+		'settings' => $spacious_themename . '[spacious_primary_color]',
+	) ) );
+
 	/****************************************Start of the Header Options****************************************/
 	// Header Options Area
 	$wp_customize->add_panel( 'spacious_header_options', array(
@@ -590,28 +625,6 @@ function spacious_customize_register( $wp_customize ) {
 		),
 		'section' => 'spacious_blog_posts_display_type_setting',
 	) );
-
-	// Site primary color option
-	$wp_customize->add_section( 'spacious_primary_color_setting', array(
-		'panel'    => 'spacious_design_options',
-		'priority' => 6,
-		'title'    => __( 'Primary color option', 'spacious' ),
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_primary_color]', array(
-		'default'              => '#0FBE7C',
-		'type'                 => 'option',
-		'transport'            => 'postMessage',
-		'capability'           => 'edit_theme_options',
-		'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
-		'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
-	) );
-
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $spacious_themename . '[spacious_primary_color]', array(
-		'label'    => __( 'This will reflect in links, buttons and many others. Choose a color to match your site.', 'spacious' ),
-		'section'  => 'spacious_primary_color_setting',
-		'settings' => $spacious_themename . '[spacious_primary_color]',
-	) ) );
 
 	// Site dark light skin option
 	$wp_customize->add_section( 'spacious_color_skin_setting', array(
