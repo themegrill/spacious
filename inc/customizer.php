@@ -616,6 +616,27 @@ function spacious_customize_register( $wp_customize ) {
 	$wp_customize->get_section( 'header_image' )->panel    = 'spacious_header_options';
 	$wp_customize->get_section( 'header_image' )->priority = 2;
 
+	// Header image position title heading.
+	$wp_customize->add_setting(
+		'spacious[header_image_position_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_image_position_heading',
+			array(
+				'label'    => esc_html__( 'Header Image Position', 'spacious' ),
+				'section'  => 'header_image',
+				'settings' => 'spacious[header_image_position_heading]',
+				'priority' => 20,
+			)
+		)
+	);
+
 	// Header Top bar activate option
 	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
 		'priority' => 2,
