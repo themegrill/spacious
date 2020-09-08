@@ -64,20 +64,56 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( $spacious_themename . '[spacious_primary_color]', array(
-		'default'              => '#0FBE7C',
-		'type'                 => 'option',
-		'transport'            => 'postMessage',
-		'capability'           => 'edit_theme_options',
-		'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
-		'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
-	) );
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_primary_color]',
+		array(
+			'default'              => '#0FBE7C',
+			'type'                 => 'option',
+			'transport'            => 'postMessage',
+			'capability'           => 'edit_theme_options',
+			'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
+			'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
+		)
+	);
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $spacious_themename . '[spacious_primary_color]', array(
-		'label'    => esc_html__( 'Primary Color', 'spacious' ),
-		'section'  => 'spacious_global_color_setting',
-		'settings' => $spacious_themename . '[spacious_primary_color]',
-	) ) );
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			$spacious_themename . '[spacious_primary_color]',
+			array(
+				'label'    => esc_html__( 'Primary Color', 'spacious' ),
+				'section'  => 'spacious_global_color_setting',
+				'settings' => $spacious_themename . '[spacious_primary_color]',
+			)
+		)
+	);
+
+	// Site dark light skin option.
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_color_skin]',
+		array(
+			'default'           => 'light',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_select_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Image_Radio_Control( $wp_customize,
+			$spacious_themename . '[spacious_color_skin]',
+			array(
+				'type'     => 'radio',
+				'label'    => esc_html__( 'Color Skin', 'spacious' ),
+				'section'  => 'spacious_global_color_setting',
+				'settings' => $spacious_themename . '[spacious_color_skin]',
+				'choices'  => array(
+					'light' => SPACIOUS_ADMIN_IMAGES_URL . '/light-color.jpg',
+					'dark'  => SPACIOUS_ADMIN_IMAGES_URL . '/dark-color.jpg',
+				),
+			)
+		)
+	);
 
 	/****************************************Start of the Header Options****************************************/
 	// Header Options Area
@@ -479,7 +515,7 @@ function spacious_customize_register( $wp_customize ) {
 			'setting' => $spacious_themename . '[' . $key . 'new_tab]',
 		) );
 
-		$i ++;
+		$i++;
 
 	}
 
@@ -625,31 +661,6 @@ function spacious_customize_register( $wp_customize ) {
 		),
 		'section' => 'spacious_blog_posts_display_type_setting',
 	) );
-
-	// Site dark light skin option
-	$wp_customize->add_section( 'spacious_color_skin_setting', array(
-		'priority' => 7,
-		'title'    => __( 'Color Skin', 'spacious' ),
-		'panel'    => 'spacious_design_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_color_skin]', array(
-		'default'           => 'light',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_select_sanitize',
-	) );
-
-	$wp_customize->add_control( new Spacious_Image_Radio_Control( $wp_customize, $spacious_themename . '[spacious_color_skin]', array(
-		'type'     => 'radio',
-		'label'    => __( 'Choose the light or dark skin. This will be reflected in whole site.', 'spacious' ),
-		'section'  => 'spacious_color_skin_setting',
-		'settings' => $spacious_themename . '[spacious_color_skin]',
-		'choices'  => array(
-			'light' => SPACIOUS_ADMIN_IMAGES_URL . '/light-color.jpg',
-			'dark'  => SPACIOUS_ADMIN_IMAGES_URL . '/dark-color.jpg',
-		),
-	) ) );
 
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
 		// Custom CSS setting
@@ -841,7 +852,7 @@ function spacious_customize_register( $wp_customize ) {
 		'settings' => $spacious_themename . '[spacious_blog_slider]',
 	) );
 
-	for ( $i = 1; $i <= 5; $i ++ ) {
+	for ( $i = 1; $i <= 5; $i++ ) {
 		// adding slider section
 		$wp_customize->add_section( 'spacious_slider_number_section' . $i, array(
 			'priority' => 10,
@@ -1325,7 +1336,7 @@ function spacious_customizer_custom_scripts() {
 	<script>
 		(
 			function ( $, api ) {
-				api.sectionConstructor['spacious-upsell-section'] = api.Section.extend( {
+				api.sectionConstructor[ 'spacious-upsell-section' ] = api.Section.extend( {
 
 					// No events for this type of section.
 					attachEvents : function () {
