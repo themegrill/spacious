@@ -651,21 +651,45 @@ function spacious_customize_register( $wp_customize ) {
 		$spacious_themename . '[spacious_header_image_position]',
 		array(
 			'priority' => 20,
-			'type'    => 'radio',
-			'label'   => esc_html__( 'Choose top header image display position.', 'spacious' ),
-			'section' => 'header_image',
-			'choices' => array(
+			'type'     => 'radio',
+			'label'    => esc_html__( 'Choose top header image display position.', 'spacious' ),
+			'section'  => 'header_image',
+			'choices'  => array(
 				'above' => esc_html__( 'Position Above (Default): Display the Header image just above the site title and main menu part.', 'spacious' ),
 				'below' => esc_html__( 'Position Below: Display the Header image just below the site title and main menu part.', 'spacious' ),
 			),
-		) );
+		)
+	);
 
 	// Header Top bar activate option
-	$wp_customize->add_section( 'spacious_header_top_bar_activate_section', array(
-		'priority' => 2,
-		'title'    => __( 'Activate Header Top Bar', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
+	$wp_customize->add_section(
+		'spacious_header_top_bar',
+		array(
+			'priority' => 2,
+			'title'    => esc_html__( 'Top Bar', 'spacious' ),
+			'panel'    => 'spacious_header_options',
+		)
+	);
+
+	// Heading for Activate top bar.
+	$wp_customize->add_setting(
+		'spacious[header_top_bar_active_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_top_bar_active_heading',
+			array(
+				'label'    => esc_html__( 'Activate Header Top Bar', 'spacious' ),
+				'section'  => 'spacious_header_top_bar',
+				'settings' => 'spacious[header_top_bar_active_heading]',
+			)
+		)
+	);
 
 	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_top_header_bar]', array(
 		'default'           => 0,
@@ -676,18 +700,33 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( $spacious_themename . '[spacious_activate_top_header_bar]', array(
 		'type'     => 'checkbox',
-		'label'    => __( 'Check to show top header bar. The top header bar includes social icons area, small text area and menu area.', 'spacious' ),
-		'section'  => 'spacious_header_top_bar_activate_section',
+		'label'    => esc_html__( 'Check to show top header bar. The top header bar includes social icons area, small text area and menu area.', 'spacious' ),
+		'section'  => 'spacious_header_top_bar',
 		'settings' => $spacious_themename . '[spacious_activate_top_header_bar]',
 	) );
 
-	// Header area small text option
-	$wp_customize->add_section( 'spacious_header_small_text_section', array(
-		'priority' => 2,
-		'title'    => __( 'Header Info Text', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
+	// Heading for header info text.
+	$wp_customize->add_setting(
+		'spacious[header_info_text_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
 
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_info_text_heading',
+			array(
+				'label'    => esc_html__( 'Header Info Text', 'spacious' ),
+				'section'  => 'spacious_header_top_bar',
+				'settings' => 'spacious[header_info_text_heading]',
+				'priority' => 10,
+			)
+		)
+	);
+
+	// Header area small text option.
 	$wp_customize->add_setting( $spacious_themename . '[spacious_header_info_text]', array(
 		'default'           => '',
 		'type'              => 'option',
@@ -698,7 +737,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new Spacious_Editor_Custom_Control( $wp_customize, $spacious_themename . '[spacious_header_info_text]', array(
 		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
-		'section' => 'spacious_header_small_text_section',
+		'section' => 'spacious_header_top_bar',
 		'setting' => $spacious_themename . '[spacious_header_info_text]',
 	) ) );
 
