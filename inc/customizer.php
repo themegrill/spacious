@@ -917,6 +917,45 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Heading for responsive menu.
+	$wp_customize->add_setting(
+		'spacious[header_primary_menu_responsive_style]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'header_primary_menu_responsive_style',
+			array(
+				'label'    => esc_html__( 'Responsive Menu Style', 'spacious' ),
+				'section'  => 'spacious_header_primary_menu',
+				'settings' => 'spacious[header_primary_menu_responsive_style]',
+			)
+		)
+	);
+
+	// Responsive collapse menu
+	$wp_customize->add_setting( $spacious_themename . '[spacious_new_menu]',
+		array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_new_menu]',
+		array(
+			'type'    => 'checkbox',
+			'label'   => esc_html__( 'Switch to new responsive menu.', 'spacious' ),
+			'section' => 'spacious_header_primary_menu',
+		)
+	);
+
 
 	// Header Button option.
 	$wp_customize->add_section( 'spacious_header_button_one', array(
@@ -965,26 +1004,6 @@ function spacious_customize_register( $wp_customize ) {
 		'label'   => __( 'Check to show in new tab', 'spacious' ),
 		'section' => 'spacious_header_button_one',
 		'setting' => $spacious_themename . '[spacious_header_button_one_tab]',
-	) );
-
-	// Responsive collapse menu
-	$wp_customize->add_section( 'spacious_new_menu', array(
-		'priority' => 4,
-		'title'    => __( 'Responsive Menu Style', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_new_menu]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_new_menu]', array(
-		'type'    => 'checkbox',
-		'label'   => __( 'Switch to new responsive menu.', 'spacious' ),
-		'section' => 'spacious_new_menu',
 	) );
 
 	/**
