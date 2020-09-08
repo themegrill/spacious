@@ -727,19 +727,27 @@ function spacious_customize_register( $wp_customize ) {
 	);
 
 	// Header area small text option.
-	$wp_customize->add_setting( $spacious_themename . '[spacious_header_info_text]', array(
-		'default'           => '',
-		'type'              => 'option',
-		'transport'         => $customizer_selective_refresh,
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_editor_sanitize',
-	) );
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_header_info_text]',
+		array(
+			'default'           => '',
+			'type'              => 'option',
+			'transport'         => $customizer_selective_refresh,
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_editor_sanitize',
+		)
+	);
 
-	$wp_customize->add_control( new Spacious_Editor_Custom_Control( $wp_customize, $spacious_themename . '[spacious_header_info_text]', array(
-		'label'   => __( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
-		'section' => 'spacious_header_top_bar',
-		'setting' => $spacious_themename . '[spacious_header_info_text]',
-	) ) );
+	$wp_customize->add_control(
+		new Spacious_Editor_Custom_Control(
+			$wp_customize, $spacious_themename . '[spacious_header_info_text]',
+			array(
+				'label'   => esc_html__( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
+				'section' => 'spacious_header_top_bar',
+				'setting' => $spacious_themename . '[spacious_header_info_text]',
+			)
+		)
+	);
 
 	// Register `SPACIOUS_Upsell_Section` type section.
 	$wp_customize->register_section_type( 'SPACIOUS_Upsell_Section' );
