@@ -1363,6 +1363,56 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Single Post section.
+	$wp_customize->add_section(
+		'spacious_single_post_section',
+		array(
+			'title' => esc_html__( 'Single Post', 'spacious' ),
+			'panel' => 'spacious_content_options',
+		)
+	);
+
+	// Heading for Author bio.
+	$wp_customize->add_setting(
+		'spacious[author_bio_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'author_bio_heading',
+			array(
+				'label'    => esc_html__( 'Author Bio', 'spacious' ),
+				'section'  => 'spacious_single_post_section',
+				'settings' => 'spacious[author_bio_heading]',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_author_bio]',
+		array(
+			'default'           => 0,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_checkbox_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_author_bio]',
+		array(
+			'type'     => 'checkbox',
+			'label'    => esc_html__( 'Check to enable the author bio section just below the post.', 'spacious' ),
+			'section'  => 'spacious_single_post_section',
+			'settings' => $spacious_themename . '[spacious_author_bio]',
+		)
+	);
+/////////////
+
 	/*************************************Start of the Social Links Options*************************************/
 
 	$wp_customize->add_panel( 'spacious_social_links_options', array(
@@ -1559,27 +1609,6 @@ function spacious_customize_register( $wp_customize ) {
 		'label'    => __( 'Check to enable the featured image in single page.', 'spacious' ),
 		'section'  => 'spacious_featured_image_single_page_section',
 		'settings' => $spacious_themename . '[spacious_featured_image_single_page]',
-	) );
-
-	// Author bio option.
-	$wp_customize->add_section( 'spacious_author_bio_section', array(
-		'priority' => 5,
-		'title'    => __( 'Author Bio', 'spacious' ),
-		'panel'    => 'spacious_additional_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_author_bio]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_author_bio]', array(
-		'type'     => 'checkbox',
-		'label'    => __( 'Check to enable the author bio section just below the post.', 'spacious' ),
-		'section'  => 'spacious_author_bio_section',
-		'settings' => $spacious_themename . '[spacious_author_bio]',
 	) );
 
 	/****************************************Start of the Footer Options****************************************/
