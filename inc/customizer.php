@@ -1664,33 +1664,63 @@ function spacious_customize_register( $wp_customize ) {
 	foreach ( $spacious_social_links as $key => $value ) {
 
 		// adding social sites link
-		$wp_customize->add_setting( $spacious_themename . '[' . $key . ']', array(
-			'default'           => '',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		) );
+		$wp_customize->add_setting( $spacious_themename . '[' . $key . ']',
+			array(
+				'default'           => '',
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
 
-		$wp_customize->add_control( $spacious_themename . '[' . $key . ']', array(
-			'label'   => sprintf( esc_html__( 'Add link for %1$s', 'spacious' ), $value ),
-			'section' => 'spacious_social_links_options',
-			'setting' => $spacious_themename . '[' . $key . ']',
-		) );
+		$wp_customize->add_control(
+			$spacious_themename . '[' . $key . ']',
+			array(
+				'label'   => sprintf( esc_html__( 'Add link for %1$s', 'spacious' ), $value ),
+				'section' => 'spacious_social_links_options',
+				'setting' => $spacious_themename . '[' . $key . ']',
+			)
+		);
 
 		// adding social open in new page tab setting
-		$wp_customize->add_setting( $spacious_themename . '[' . $key . 'new_tab]', array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		) );
+		$wp_customize->add_setting(
+			$spacious_themename . '[' . $key . 'new_tab]',
+			array(
+				'default'           => 0,
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'spacious_checkbox_sanitize',
+			)
+		);
 
-		$wp_customize->add_control( $spacious_themename . '[' . $key . 'new_tab]', array(
-			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Check to show in new tab', 'spacious' ),
-			'section' => 'spacious_social_links_options',
-			'setting' => $spacious_themename . '[' . $key . 'new_tab]',
-		) );
+		$wp_customize->add_control(
+			$spacious_themename . '[' . $key . 'new_tab]',
+			array(
+				'type'    => 'checkbox',
+				'label'   => esc_html__( 'Check to show in new tab', 'spacious' ),
+				'section' => 'spacious_social_links_options',
+				'setting' => $spacious_themename . '[' . $key . 'new_tab]',
+			)
+		);
+
+		// divider for social link activation.
+		$wp_customize->add_setting(
+			'spacious[' . $key . '_additional]',
+			array(
+				'sanitize_callback' => false,
+			)
+		);
+
+		$wp_customize->add_control(
+			new Spacious_Divider_Control(
+				$wp_customize,
+				'spacious[' . $key . '_additional]',
+				array(
+					'section'  => 'spacious_social_links_options',
+					'settings' => 'spacious[' . $key . '_additional]',
+				)
+			)
+		);
 
 		$i++;
 
@@ -1698,25 +1728,35 @@ function spacious_customize_register( $wp_customize ) {
 
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
 		// Custom CSS setting
-		$wp_customize->add_section( 'spacious_custom_css_setting', array(
-			'priority' => 8,
-			'title'    => __( 'Custom CSS', 'spacious' ),
-			'panel'    => 'spacious_design_options',
-		) );
+		$wp_customize->add_section(
+			'spacious_custom_css_setting', array(
+				'priority' => 8,
+				'title'    => esc_html__( 'Custom CSS', 'spacious' ),
+				'panel'    => 'spacious_design_options',
+			)
+		);
 
-		$wp_customize->add_setting( $spacious_themename . '[spacious_custom_css]', array(
-			'default'              => '',
-			'type'                 => 'option',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'wp_filter_nohtml_kses',
-			'sanitize_js_callback' => 'wp_filter_nohtml_kses',
-		) );
+		$wp_customize->add_setting(
+			$spacious_themename . '[spacious_custom_css]',
+			array(
+				'default'              => '',
+				'type'                 => 'option',
+				'capability'           => 'edit_theme_options',
+				'sanitize_callback'    => 'wp_filter_nohtml_kses',
+				'sanitize_js_callback' => 'wp_filter_nohtml_kses',
+			)
+		);
 
-		$wp_customize->add_control( new spacious_Custom_CSS_Control( $wp_customize, $spacious_themename . '[spacious_custom_css]', array(
-			'label'    => __( 'Write your Custom CSS.', 'spacious' ),
-			'section'  => 'spacious_custom_css_setting',
-			'settings' => $spacious_themename . '[spacious_custom_css]',
-		) ) );
+		$wp_customize->add_control(
+			new spacious_Custom_CSS_Control(
+				$wp_customize, $spacious_themename . '[spacious_custom_css]',
+				array(
+					'label'    => __( 'Write your Custom CSS.', 'spacious' ),
+					'section'  => 'spacious_custom_css_setting',
+					'settings' => $spacious_themename . '[spacious_custom_css]',
+				)
+			)
+		);
 	}
 
 	/****************************************Start of the Footer Options****************************************/
