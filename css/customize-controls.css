@@ -24,3 +24,16 @@
 .customize-control-spacious-heading .description {
 	margin-top: 10px;
 }
+
+/**
+ * Divider control CSS.
+ */
+.customize-control-spacious-divider hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.customize-control-spacious-divider .divider-placement-above + .spacious-control-tooltip {
+	top: 30px;
+}
+

@@ -19,8 +19,10 @@ function spacious_customize_register( $wp_customize ) {
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-heading-control.php';
+	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-divider-control.php';
 
 	$wp_customize->register_control_type( 'Spacious_Heading_Control' );
+	$wp_customize->register_control_type( 'Spacious_Divider_Control' );
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
