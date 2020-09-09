@@ -1411,6 +1411,40 @@ function spacious_customize_register( $wp_customize ) {
 			'settings' => $spacious_themename . '[spacious_author_bio]',
 		)
 	);
+
+	// Heading for single post featured image.
+	$wp_customize->add_setting(
+		'spacious[featured_image_single_post_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
+
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'featured_image_single_post_heading',
+			array(
+				'label'    => esc_html__( 'Featured Image In Single Post Page', 'spacious' ),
+				'section'  => 'spacious_single_post_section',
+				'settings' => 'spacious[featured_image_single_post_heading]',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( $spacious_themename . '[spacious_featured_image_single_post_page]', array(
+		'default'           => 0,
+		'type'              => 'option',
+		'capability'        => 'edit_theme_options',
+		'sanitize_callback' => 'spacious_checkbox_sanitize',
+	) );
+
+	$wp_customize->add_control( $spacious_themename . '[spacious_featured_image_single_post_page]', array(
+		'type'     => 'checkbox',
+		'label'    => __( 'Check to enable the featured image in single post page.', 'spacious' ),
+		'section'  => 'spacious_single_post_section',
+		'settings' => $spacious_themename . '[spacious_featured_image_single_post_page]',
+	) );
 /////////////
 
 	/*************************************Start of the Social Links Options*************************************/
@@ -1567,27 +1601,6 @@ function spacious_customize_register( $wp_customize ) {
 			'categories' => esc_html__( 'Related Posts By Categories', 'spacious' ),
 			'tags'       => esc_html__( 'Related Posts By Tags', 'spacious' ),
 		),
-	) );
-
-	// Featured image in single post page activate option
-	$wp_customize->add_section( 'spacious_featured_image_single_post_page_section', array(
-		'priority' => 6,
-		'title'    => __( 'Featured Image In Single Post Page', 'spacious' ),
-		'panel'    => 'spacious_additional_options',
-	) );
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_featured_image_single_post_page]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_featured_image_single_post_page]', array(
-		'type'     => 'checkbox',
-		'label'    => __( 'Check to enable the featured image in single post page.', 'spacious' ),
-		'section'  => 'spacious_featured_image_single_post_page_section',
-		'settings' => $spacious_themename . '[spacious_featured_image_single_post_page]',
 	) );
 
 	// Featured image in single page activate option
