@@ -1840,7 +1840,7 @@ function spacious_customize_register( $wp_customize ) {
 				$wp_customize, $spacious_themename . '[spacious_woo_product_layout]',
 				array(
 					'type'     => 'radio',
-					'label'    => __( 'This layout will be reflected in woocommerce Product page.', 'spacious' ),
+					'label'    => esc_html__( 'This layout will be reflected in woocommerce Product page.', 'spacious' ),
 					'section'  => 'spacious_woocommerce_page_layout_setting',
 					'settings' => $spacious_themename . '[spacious_woo_product_layout]',
 					'choices'  => array(
@@ -1853,27 +1853,56 @@ function spacious_customize_register( $wp_customize ) {
 			)
 		);
 
-		// Section: WooCommerce additional options.
-		$wp_customize->add_section( 'spacious_woocommerce_additional', array(
-			'priority' => 3,
-			'title'    => __( 'Additional', 'spacious' ),
-			'panel'    => 'spacious_woocommerce_options',
-		) );
+		// Woocommerce sale design.
+		$wp_customize->add_section(
+			'spacious_woocommerce_button_design',
+			array(
+				'priority' => 2,
+				'title'    => esc_html__( 'Design', 'spacious' ),
+				'panel'    => 'woocommerce',
+			)
+		);
+
+		// Heading for Woocommerce cart icon.
+		$wp_customize->add_setting(
+			'spacious[woocommerce_cart_icon_heading]',
+			array(
+				'sanitize_callback' => false,
+			)
+		);
+
+		$wp_customize->add_control(
+			new Spacious_Heading_Control(
+				$wp_customize,
+				'woocommerce_cart_icon_heading',
+				array(
+					'label'    => esc_html__( 'Cart Icon', 'spacious' ),
+					'section'  => 'spacious_woocommerce_button_design',
+					'settings' => 'spacious[woocommerce_cart_icon_heading]',
+				)
+			)
+		);
 
 		// Setting: WooCommerce cart icon.
-		$wp_customize->add_setting( $spacious_themename . '[spacious_cart_icon]', array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		) );
+		$wp_customize->add_setting(
+			$spacious_themename . '[spacious_cart_icon]',
+			array(
+				'default'           => 0,
+				'type'              => 'option',
+				'capability'        => 'edit_theme_options',
+				'sanitize_callback' => 'spacious_checkbox_sanitize',
+			)
+		);
 
-		$wp_customize->add_control( $spacious_themename . '[spacious_cart_icon]', array(
-			'type'     => 'checkbox',
-			'label'    => __( 'Check to show WooCommerce cart icon on menu bar', 'spacious' ),
-			'section'  => 'spacious_woocommerce_additional',
-			'settings' => $spacious_themename . '[spacious_cart_icon]',
-		) );
+		$wp_customize->add_control(
+			$spacious_themename . '[spacious_cart_icon]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Check to show WooCommerce cart icon on menu bar', 'spacious' ),
+				'section'  => 'spacious_woocommerce_button_design',
+				'settings' => $spacious_themename . '[spacious_cart_icon]',
+			)
+		);
 
 	}
 	// End of the WooCommerce Options.
