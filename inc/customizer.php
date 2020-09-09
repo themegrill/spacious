@@ -1450,13 +1450,6 @@ function spacious_customize_register( $wp_customize ) {
 
 	}
 
-	/****************************************Start of the Design Options****************************************/
-	$wp_customize->add_panel( 'spacious_design_options', array(
-		'capabitity' => 'edit_theme_options',
-		'priority'   => 505,
-		'title'      => __( 'Design', 'spacious' ),
-	) );
-
 	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
 		// Custom CSS setting
 		$wp_customize->add_section( 'spacious_custom_css_setting', array(
@@ -1479,7 +1472,6 @@ function spacious_customize_register( $wp_customize ) {
 			'settings' => $spacious_themename . '[spacious_custom_css]',
 		) ) );
 	}
-	// End of Design Options
 
 	/****************************************Start of the Additional Options****************************************/
 	$wp_customize->add_panel( 'spacious_additional_options', array(
