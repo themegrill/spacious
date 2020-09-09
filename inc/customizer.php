@@ -1678,48 +1678,71 @@ function spacious_customize_register( $wp_customize ) {
 		) ) );
 	}
 
-	/****************************************Start of the Additional Options****************************************/
-	$wp_customize->add_panel( 'spacious_additional_options', array(
-		'capabitity' => 'edit_theme_options',
-		'priority'   => 510,
-		'title'      => __( 'Additional', 'spacious' ),
-	) );
-
-
 	/****************************************Start of the Footer Options****************************************/
 
-	$wp_customize->add_panel( 'spacious_footer_options', array(
-		'capabitity' => 'edit_theme_options',
-		'priority'   => 545,
-		'title'      => __( 'Footer', 'spacious' ),
-	) );
+	$wp_customize->add_panel(
+		'spacious_footer_options',
+		array(
+			'capabitity' => 'edit_theme_options',
+			'priority'   => 65,
+			'title'      => esc_html__( 'Footer', 'spacious' ),
+		)
+	);
 
 	// Footer widgets select type
-	$wp_customize->add_section( 'spacious_footer_column_select_section', array(
-		'priority' => 5,
-		'title'    => __( 'Footer Widgets Column', 'spacious' ),
-		'panel'    => 'spacious_footer_options',
-	) );
+	$wp_customize->add_section(
+		'spacious_footer_widgets_area_section',
+		array(
+			'priority' => 5,
+			'title'    => esc_html__( 'Footer Widgets Area', 'spacious' ),
+			'panel'    => 'spacious_footer_options',
+		)
+	);
 
-	$wp_customize->add_setting( $spacious_themename . '[spacious_footer_widget_column_select_type]', array(
-		'default'           => 'four',
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_radio_sanitize',
-	) );
+	// Heading for footer widget column options.
+	$wp_customize->add_setting(
+		'spacious[footer_widget_column_heading]',
+		array(
+			'sanitize_callback' => false,
+		)
+	);
 
-	$wp_customize->add_control( $spacious_themename . '[spacious_footer_widget_column_select_type]', array(
-		'type'    => 'select',
-		'label'   => __( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
-		'choices' => array(
-			'one'   => __( 'One Column', 'spacious' ),
-			'two'   => __( 'Two Column', 'spacious' ),
-			'three' => __( 'Three Column', 'spacious' ),
-			'four'  => __( 'Four Column', 'spacious' ),
-		),
-		'section' => 'spacious_footer_column_select_section',
-	) );
+	$wp_customize->add_control(
+		new Spacious_Heading_Control(
+			$wp_customize,
+			'footer_widget_column_heading',
+			array(
+				'label'    => esc_html__( 'Footer Widgets Column', 'spacious' ),
+				'section'  => 'spacious_footer_widgets_area_section',
+				'settings' => 'spacious[footer_widget_column_heading]',
+			)
+		)
+	);
 
+	$wp_customize->add_setting(
+		$spacious_themename . '[spacious_footer_widget_column_select_type]',
+		array(
+			'default'           => 'four',
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'spacious_radio_sanitize',
+		)
+	);
+
+	$wp_customize->add_control(
+		$spacious_themename . '[spacious_footer_widget_column_select_type]',
+		array(
+			'type'    => 'select',
+			'label'   => esc_html__( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
+			'choices' => array(
+				'one'   => esc_html__( 'One Column', 'spacious' ),
+				'two'   => esc_html__( 'Two Column', 'spacious' ),
+				'three' => esc_html__( 'Three Column', 'spacious' ),
+				'four'  => esc_html__( 'Four Column', 'spacious' ),
+			),
+			'section' => 'spacious_footer_widgets_area_section',
+		)
+	);
 	// End of footer options.
 
 	/**************************************Start of the WooCommerce Options*************************************/
