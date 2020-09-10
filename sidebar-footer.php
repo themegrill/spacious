@@ -20,11 +20,6 @@ if ( ! is_active_sidebar( 'spacious_footer_sidebar_one' ) &&
 	return;
 }
 
-$footer_column_one   = '';
-$footer_column_two   = '';
-$footer_column_three = '';
-$footer_column_four  = '';
-
 if ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'one' ) {
 	$footer_column_one   = 'tg-column-full';
 	$footer_column_two   = '';
