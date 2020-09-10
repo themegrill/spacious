@@ -45,7 +45,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.7.8 - 2020-09-10  =
 * Refactor - Customize options re-arrangement
 * Tweak - Updated `Tested up to` to 5.5
 * Remove - Missed repeated unrequired CSS code
