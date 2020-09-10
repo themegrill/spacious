@@ -991,7 +991,7 @@ function spacious_customize_register( $wp_customize ) {
 			'default'           => '',
 			'type'              => 'option',
 			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
+			'sanitize_callback' => 'esc_url_raw',
 		)
 	);
 
