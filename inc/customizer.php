@@ -1811,17 +1811,19 @@ function spacious_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		$spacious_themename . '[spacious_footer_widget_column_select_type]',
-		array(
-			'type'    => 'select',
-			'label'   => esc_html__( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
-			'choices' => array(
-				'one'   => esc_html__( 'One Column', 'spacious' ),
-				'two'   => esc_html__( 'Two Column', 'spacious' ),
-				'three' => esc_html__( 'Three Column', 'spacious' ),
-				'four'  => esc_html__( 'Four Column', 'spacious' ),
-			),
-			'section' => 'spacious_footer_widgets_area_section',
+		new Spacious_Image_Radio_Control(
+			$wp_customize,
+			$spacious_themename . '[spacious_footer_widget_column_select_type]',
+			array(
+				'label'   => esc_html__( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
+				'choices' => array(
+					'one'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-full-column.png',
+					'two'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-two-column.png',
+					'three' => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-third-column.png',
+					'four'  => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-fourth-column.png',
+				),
+				'section' => 'spacious_footer_widgets_area_section',
+			)
 		)
 	);
 	// End of footer options.
