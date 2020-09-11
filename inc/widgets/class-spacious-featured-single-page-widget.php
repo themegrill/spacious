@@ -77,6 +77,7 @@ class spacious_featured_single_page_widget extends WP_Widget {
 		$image_position        = isset( $instance[ 'image_position' ] ) ? $instance[ 'image_position' ] : 'above';
 
 		if ( $page_id ) {
+			$output = '';
 			$the_query = new WP_Query( 'page_id=' . $page_id );
 			while ( $the_query->have_posts() ):$the_query->the_post();
 				$page_name = get_the_title();
@@ -84,7 +85,7 @@ class spacious_featured_single_page_widget extends WP_Widget {
 				$img_altr  = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
 				$img_alt   = ! empty( $img_altr ) ? $img_altr : $page_name;
 
-				$output = $before_widget;
+				$output .= $before_widget;
 				if ( $image_position == "below" ) {
 					if ( $title ): $output .= $before_title . '<a href="' . get_permalink() . '" title="' . $title . '">' . $title . '</a>' . $after_title;
 					else: $output .= $before_title . '<a href="' . get_permalink() . '" title="' . $page_name . '">' . $page_name . '</a>' . $after_title;
