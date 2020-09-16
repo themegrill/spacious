@@ -14,7 +14,6 @@ function spacious_customize_register( $wp_customize ) {
 
 	// Include control classes.
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-custom-css-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
@@ -1724,39 +1723,6 @@ function spacious_customize_register( $wp_customize ) {
 
 		$i++;
 
-	}
-
-	if ( ! function_exists( 'wp_update_custom_css_post' ) ) {
-		// Custom CSS setting
-		$wp_customize->add_section(
-			'spacious_custom_css_setting', array(
-				'priority' => 8,
-				'title'    => esc_html__( 'Custom CSS', 'spacious' ),
-				'panel'    => 'spacious_design_options',
-			)
-		);
-
-		$wp_customize->add_setting(
-			$spacious_themename . '[spacious_custom_css]',
-			array(
-				'default'              => '',
-				'type'                 => 'option',
-				'capability'           => 'edit_theme_options',
-				'sanitize_callback'    => 'wp_filter_nohtml_kses',
-				'sanitize_js_callback' => 'wp_filter_nohtml_kses',
-			)
-		);
-
-		$wp_customize->add_control(
-			new spacious_Custom_CSS_Control(
-				$wp_customize, $spacious_themename . '[spacious_custom_css]',
-				array(
-					'label'    => __( 'Write your Custom CSS.', 'spacious' ),
-					'section'  => 'spacious_custom_css_setting',
-					'settings' => $spacious_themename . '[spacious_custom_css]',
-				)
-			)
-		);
 	}
 
 	/****************************************Start of the Footer Options****************************************/
