@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version 
+Tweak - Deprecate Custom CSS customize option provided via theme
+
 = Version 1.7.8 - 2020-09-11  =
 * Refactor - Customize options re-arrangement
 * Tweak - Updated `Tested up to` to 5.5
