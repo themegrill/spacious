@@ -318,9 +318,6 @@ li.default-menu {
 				right: 10px;
 			}
 
-			> ul.spacious-menu--left {
-				left: -100%;
-			}
 		}
 
 		ul {
@@ -692,6 +689,30 @@ li.default-menu {
 		> {
 			.current_page_item, .current-menu-item {
 				background: #0FBE7C;
+			}
+		}
+	}
+
+	.menu-primary-container {
+
+		> ul {
+
+			> li {
+				.sub-menu {
+
+					li {
+
+						&.menu-item-has-children {
+
+							.sub-menu {
+
+								&.spacious-menu--left {
+									left: -100%;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
