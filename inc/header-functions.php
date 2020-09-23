@@ -184,7 +184,7 @@ if ( ! function_exists( 'spacious_featured_image_slider' ) ) :
 								<?php } else { ?>
 									<img alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
 								<?php } ?>
-								
+
 							</figure>
 							<div class="entry-container">
 								<?php if ( ! empty( $spacious_slider_title ) || ! empty( $spacious_slider_text ) ) { ?>
