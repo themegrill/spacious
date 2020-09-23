@@ -159,7 +159,7 @@ if ( ! function_exists( 'spacious_featured_image_slider' ) ) :
 		<section id="featured-slider">
 			<div class="slider-cycle">
 				<?php
-				for ( $i = 1; $i <= 5; $i ++ ) {
+				for ( $i = 1; $i <= 5; $i++ ) {
 					$spacious_slider_title       = spacious_options( 'spacious_slider_title' . $i, '' );
 					$spacious_slider_text        = spacious_options( 'spacious_slider_text' . $i, '' );
 					$spacious_slider_image       = spacious_options( 'spacious_slider_image' . $i, '' );
@@ -178,7 +178,13 @@ if ( ! function_exists( 'spacious_featured_image_slider' ) ) :
 							<figure>
 								<?php $img_altr = get_post_meta( $attachment_post_id, '_wp_attachment_image_alt', true );
 								$img_alt        = ! empty( $img_altr ) ? $img_altr : $spacious_slider_title; ?>
-								<img width="<?php echo esc_attr( $image_attributes[1] ); ?>" height="<?php echo esc_attr( $image_attributes[2] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
+
+								<?php if ( ! empty ( $image_attributes ) ) { ?>
+									<img width="<?php echo esc_attr( $image_attributes[1] ); ?>" height="<?php echo esc_attr( $image_attributes[2] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
+								<?php } else { ?>
+									<img alt="<?php echo esc_attr( $img_alt ); ?>" src="<?php echo esc_url( $spacious_slider_image ); ?>">
+								<?php } ?>
+								
 							</figure>
 							<div class="entry-container">
 								<?php if ( ! empty( $spacious_slider_title ) || ! empty( $spacious_slider_text ) ) { ?>
