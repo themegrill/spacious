@@ -2435,10 +2435,6 @@ li.default-menu {
 	right: 10px;
 }
 
-.main-navigation ul li > ul.spacious-menu--left {
-	left: -100%;
-}
-
 .main-navigation ul ul {
 	position: absolute;
 	float: left;
@@ -2777,6 +2773,10 @@ li.default-menu {
 
 .main-small-navigation ul > .current_page_item, .main-small-navigation ul > .current-menu-item {
 	background: #0FBE7C;
+}
+
+.main-small-navigation .menu-primary-container > ul > li .sub-menu li.menu-item-has-children .sub-menu.spacious-menu--left {
+	left: -100%;
 }
 
 /* =SECONDARY MENUS
