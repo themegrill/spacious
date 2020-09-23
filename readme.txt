@@ -46,6 +46,7 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 = Version 
+* Fix - Last menu with sub-menu on hover displays the sub-menu always.
 * Fix - PHP warning message on slider images on certain condition.
 * Tweak - Deprecate Custom CSS customize option provided via theme.
 
