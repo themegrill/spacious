@@ -316,15 +316,10 @@ if ( ! function_exists( 'spacious_breadcrumb' ) ) :
 			echo '</div> <!-- .breadcrumb : NavXT -->';
 
 		} elseif ( function_exists( 'yoast_breadcrumb' ) ) { // SEO by Yoast
-			$yoast_breadcrumb_option = get_option( 'wpseo_internallinks' );
-
-			// check if yoast breadcrumb is enabled
-			if ( $yoast_breadcrumb_option['breadcrumbs-enable'] === true ) {
-				echo '<div class="breadcrumb">';
-				echo '<span class="breadcrumb-title">' . __( 'You are here: ', 'spacious' ) . '</span>';
-				yoast_breadcrumb();
-				echo '</div> <!-- .breadcrumb : Yoast -->';
-			}
+			yoast_breadcrumb(
+				'<div class="breadcrumb">' . '<span class="breadcrumb-title">' . wp_kses_post( spacious_options( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>',
+				'</div> <!-- .breadcrumb : Yoast -->'
+			);
 		}
 	}
 endif;
