@@ -45,7 +45,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-= Version TBD =
+= Version 1.8.0 - 2020-10-02  =
 * Fix - RTL design issues.
 
 = Version 1.7.9 - 2020-09-24  =
