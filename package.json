@@ -17,7 +17,10 @@
     "grunt-contrib-compress": "~1.2.0",
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-wp-i18n": "~0.5.4",
+    "gulp-line-ending-corrector": "^1.0.3",
     "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-rtlcss": "^1.4.1",
     "gulp-sass": "^3.2.1",
     "gulp-watch": "^4.3.11"
   },
