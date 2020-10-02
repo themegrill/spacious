@@ -37,6 +37,7 @@ function spacious_scripts_styles_method() {
 	 * Loads our main stylesheet.
 	 */
 	wp_enqueue_style( 'spacious_style', get_stylesheet_uri() );
+	wp_style_add_data( 'spacious_style', 'rtl', 'replace' );
 
 	if ( spacious_options( 'spacious_color_skin', 'light' ) == 'dark' ) {
 		wp_enqueue_style( 'spacious_dark_style', SPACIOUS_CSS_URL . '/dark.css' );
@@ -466,7 +467,7 @@ if ( ! function_exists( 'spacious_hex2rgb' ) ) {
  */
 function spacious_darkcolor( $hex, $steps ) {
 	// Steps should be between -255 and 255. Negative = darker, positive = lighter
-	$steps = max( - 255, min( 255, $steps ) );
+	$steps = max( -255, min( 255, $steps ) );
 
 	// Normalize into a six character long hex string
 	$hex = str_replace( '#', '', $hex );
@@ -495,7 +496,7 @@ function spacious_darkcolor( $hex, $steps ) {
 function spacious_custom_css() {
 	$primary_color         = spacious_options( 'spacious_primary_color', '#0FBE7C' );
 	$primary_opacity       = spacious_hex2rgb( $primary_color );
-	$primary_dark          = spacious_darkcolor( $primary_color, - 50 );
+	$primary_dark          = spacious_darkcolor( $primary_color, -50 );
 	$spacious_internal_css = '';
 	if ( $primary_color != '#0FBE7C' ) {
 		$spacious_internal_css .= ' blockquote { border-left: 3px solid ' . $primary_color . '; }
