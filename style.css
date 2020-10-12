@@ -2399,7 +2399,6 @@ li.default-menu {
 .main-navigation ul li.current-menu-ancestor a,
 .main-navigation ul li.current_page_item a,
 .main-navigation ul li.current-menu-ancestor > .sub-toggle,
-.main-navigation ul li.current-menu-item > .sub-toggle,
 .main-navigation ul li:hover > a,
 .main-navigation ul li:hover > .sub-toggle {
 	color: #0FBE7C;
