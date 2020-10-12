@@ -45,6 +45,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+Fix - Header button text displaying text as url
+
 = Version 1.8.0 - 2020-10-02  =
 * Fix - RTL design issues.
 
