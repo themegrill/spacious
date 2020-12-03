@@ -47,17 +47,6 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 				'priority' => 5,
 			),
 
-			// Base color option.
-			array(
-				'name'     => 'spacious[spacious_content_text_color]',
-				'default'  => '#666666',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => esc_html__( 'Base Color', 'spacious' ),
-				'section'  => 'spacious_primary_colors_section',
-				'priority' => 10,
-			),
-
 			// Skin color option.
 			array(
 				'name'     => 'spacious[spacious_color_skin]',
@@ -79,34 +68,6 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 				'priority' => 0,
 			),
 		);
-
-		$options = array_merge( $options, $configs );
-
-		// Category color options.
-		$args           = array(
-			'orderby'    => 'id',
-			'hide_empty' => 0,
-		);
-		$categories     = get_categories( $args );
-		$priority_count = 110;
-
-		foreach ( $categories as $category_list ) {
-
-			$configs[] = array(
-				'name'     => 'spacious_category_color_' . get_cat_id( $category_list->cat_name ),
-				'default'  => '',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => $category_list->cat_name,
-				'section'  => 'spacious_category_colors_section',
-				'priority' => $priority_count,
-			);
-
-			$priority_count++;
-
-		}
-
-		$options = array_merge( $options, $configs );
 
 		return $options;
 	}
