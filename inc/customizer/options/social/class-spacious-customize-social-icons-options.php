@@ -139,7 +139,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 		}
 
 		$options = array_merge( $options, $configs );
-		
+
 		return $options;
 	}
 
