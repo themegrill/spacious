@@ -71,66 +71,7 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 				'image_col' => 2,
 				'priority' => 10,
 			),
-
-			array(
-				'name'     => 'spacious[header_border_heading]',
-				'type'     => 'control',
-				'control'  => 'spacious-title',
-				'label'    => esc_html__( 'Header Border', 'spacious' ),
-				'section'  => 'spacious_header_main',
-				'priority' => 15,
-			),
-
-			/**
-			 * Colors.
-			 */
-			array(
-				'name'     => 'spacious[spacious_header_border_color_setting]',
-				'default'  => '#eaeaea',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => esc_html__( 'Border Color', 'spacious' ),
-				'section'  => 'spacious_header_main',
-				'priority' => 20,
-			),
-
-			// Border Width.
-			array(
-				'name'     => 'spacious[spacious_header_border_width_setting]',
-				'default'  => '1',
-				'type'     => 'control',
-				'control'  => 'select',
-				'label'    => esc_html__( 'Border Width', 'colormag' ),
-				'section'  => 'spacious_header_main',
-				'choices'  => array(
-					'1' => esc_html__( '1px', 'spacious' ),
-					'2' => esc_html__( '2px', 'spacious' ),
-					'3' => esc_html__( '3px', 'spacious' ),
-					'4' => esc_html__( '4px', 'spacious' ),
-					'5' => esc_html__( '5px', 'spacious' ),
-				),
-				'priority' => 25,
-			),
-
-			array(
-				'name'     => 'spacious[header_background_heading]',
-				'type'     => 'control',
-				'control'  => 'spacious-title',
-				'label'    => esc_html__( 'Colors', 'spacious' ),
-				'section'  => 'spacious_header_main',
-				'priority' => 30,
-			),
-
-			array(
-				'name'     => 'spacious[spacious_header_background_color]',
-				'default'  => '#FFFFFF',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => esc_html__( 'Header background color. Default is #FFFFFF.', 'spacious' ),
-				'section'  => 'spacious_header_main',
-				'priority' => 40,
-			),
-
+			
 		);
 
 		$options = array_merge( $options, $configs );
