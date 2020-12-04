@@ -37,27 +37,6 @@ class Spacious_Customize_Background_Options extends Spacious_Customize_Base_Opti
 			/**
 			 * Global color background options.
 			 */
-			// Post/Page/Blog general design options heading separator.
-			array(
-				'name'     => 'spacious[global_content_background_heading]',
-				'type'     => 'control',
-				'control'  => 'spacious-title',
-				'label'    => esc_html__( 'Content Area', 'spacious' ),
-				'section'  => 'spacious_global_background_section',
-				'priority' => 5,
-			),
-
-			// Post content background option.
-			array(
-				'name'     => 'spacious[spacious_content_background_color]',
-				'default'  => '#FFFFFF',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => esc_html__( 'Content part background color. Default is #FFFFFF.', 'spacious' ),
-				'section'  => 'spacious_global_background_section',
-				'priority' => 10,
-			),
-
 			// Outside container design options heading separator.
 			array(
 				'name'     => 'spacious[global_background_heading]',
@@ -66,22 +45,6 @@ class Spacious_Customize_Background_Options extends Spacious_Customize_Base_Opti
 				'label'    => esc_html__( 'Outside Container', 'spacious' ),
 				'section'  => 'spacious_global_background_section',
 				'priority' => 15,
-			),
-
-			// Background image clickable link.
-			array(
-				'name'       => 'spacious[spacious_background_image_link]',
-				'default'    => '',
-				'type'       => 'control',
-				'control'    => 'url',
-				'label'      => esc_html__( 'Add the background link url.', 'spacious' ),
-				'section'    => 'spacious_global_background_section',
-				'dependency' => array(
-					'background_image',
-					'!=',
-					'',
-				),
-				'priority'   => 55,
 			),
 
 		);

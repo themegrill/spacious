@@ -177,55 +177,55 @@ function spacious_customize_register( $wp_customize ) {
 	);
 
 	// Global Background options.
-	$wp_customize->add_section(
-		'spacious_global_background_section',
-		array(
-			'panel'    => 'spacious_global_options',
-			'priority' => 7,
-			'title'    => esc_html__( 'Background', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_global_background_section',
+//		array(
+//			'panel'    => 'spacious_global_options',
+//			'priority' => 7,
+//			'title'    => esc_html__( 'Background', 'spacious' ),
+//		)
+//	);
 
-	$wp_customize->add_setting(
-		'spacious[global_background_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[global_background_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'global_background_heading',
-			array(
-				'label'    => esc_html__( 'Outside Container', 'spacious' ),
-				'section'  => 'spacious_global_background_section',
-				'settings' => 'spacious[global_background_heading]',
-				'priority' => 10,
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'global_background_heading',
+//			array(
+//				'label'    => esc_html__( 'Outside Container', 'spacious' ),
+//				'section'  => 'spacious_global_background_section',
+//				'settings' => 'spacious[global_background_heading]',
+//				'priority' => 10,
+//			)
+//		)
+//	);
 
-	$wp_customize->get_control( 'background_color' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_color' )->priority = 20;
-
-	$wp_customize->get_control( 'background_image' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_image' )->priority = 20;
-
-	$wp_customize->get_control( 'background_preset' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_preset' )->priority = 20;
-
-	$wp_customize->get_control( 'background_position' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_position' )->priority = 20;
-
-	$wp_customize->get_control( 'background_size' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_size' )->priority = 20;
-
-	$wp_customize->get_control( 'background_repeat' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_repeat' )->priority = 20;
-
-	$wp_customize->get_control( 'background_attachment' )->section  = 'spacious_global_background_section';
-	$wp_customize->get_control( 'background_attachment' )->priority = 20;
+//	$wp_customize->get_control( 'background_color' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_color' )->priority = 20;
+//
+//	$wp_customize->get_control( 'background_image' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_image' )->priority = 20;
+//
+//	$wp_customize->get_control( 'background_preset' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_preset' )->priority = 20;
+//
+//	$wp_customize->get_control( 'background_position' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_position' )->priority = 20;
+//
+//	$wp_customize->get_control( 'background_size' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_size' )->priority = 20;
+//
+//	$wp_customize->get_control( 'background_repeat' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_repeat' )->priority = 20;
+//
+//	$wp_customize->get_control( 'background_attachment' )->section  = 'spacious_global_background_section';
+//	$wp_customize->get_control( 'background_attachment' )->priority = 20;
 
 	// Layout option.
 	$wp_customize->add_section(
