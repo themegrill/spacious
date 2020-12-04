@@ -71,7 +71,7 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 				'image_col' => 2,
 				'priority' => 10,
 			),
-			
+
 		);
 
 		$options = array_merge( $options, $configs );
