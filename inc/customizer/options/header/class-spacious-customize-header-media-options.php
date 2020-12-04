@@ -100,68 +100,6 @@ class Spacious_Customize_Header_Media_Options extends Spacious_Customize_Base_Op
 				'priority'   => 10,
 			),
 
-			// Header image link to home page option.
-			array(
-				'name'       => 'spacious[spacious_header_image_link]',
-				'default'    => 0,
-				'type'       => 'control',
-				'control'    => 'checkbox',
-				'label'      => esc_html__( 'Check to make header image link back to home page', 'spacious' ),
-				'section'    => 'header_image',
-				'dependency' => array(
-					'conditions' => array(
-						array(
-							'header_image',
-							'!=',
-							$header_image_value,
-						),
-						array(
-							'header_video',
-							'!=',
-							$header_video_value,
-						),
-						array(
-							'external_header_video',
-							'!=',
-							'',
-						),
-					),
-					'operator'   => 'OR',
-				),
-				'priority'   => 15,
-			),
-
-			// Header image link to custom location option.
-			array(
-				'name'       => 'spacious[spacious_header_image_link_to_other_sites]',
-				'default'    => '',
-				'type'       => 'control',
-				'control'    => 'url',
-				'label'      => esc_html__( 'Custom link to header image ', 'spacious' ),
-				'section'    => 'header_image',
-				'dependency' => array(
-					'conditions' => array(
-						array(
-							'header_image',
-							'!=',
-							$header_image_value,
-						),
-						array(
-							'header_video',
-							'!=',
-							$header_video_value,
-						),
-						array(
-							'external_header_video',
-							'!=',
-							'',
-						),
-					),
-					'operator'   => 'OR',
-				),
-				'priority'   => 20,
-			),
-
 		);
 
 		$options = array_merge( $options, $configs );
