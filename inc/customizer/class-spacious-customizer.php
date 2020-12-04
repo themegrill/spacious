@@ -85,9 +85,7 @@ class Spacious_Customizer {
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/header/class-spacious-customize-header-top-bar-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/header/class-spacious-customize-primary-header-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/header/class-spacious-customize-primary-menu-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/header/class-spacious-customize-sticky-header-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/header/class-spacious-customize-header-button.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/header/class-spacious-customize-toggable-header-option.php';
 
 		// Slider.
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/slider/class-spacious-customize-slider-options.php';
@@ -96,21 +94,13 @@ class Spacious_Customizer {
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-page-header-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-blog-archive-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-single-post-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-post-meta-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-page-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-sidebar-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-comments-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-404-page-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/content/class-spacious-customize-widgets-options.php';
 
 		// Additional.
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/social/class-spacious-customize-social-icons-options.php';
 
 		// Footer.
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/footer/class-spacious-customize-footer-general-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/footer/class-spacious-customize-footer-widgets-area-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/footer/class-spacious-customize-footer-bottom-bar-options.php';
-		require SPACIOUS_CUSTOMIZER_DIR . '/options/footer/class-spacious-customize-footer-scroll-to-top-options.php';
 
 		// WooCommerce.
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/woocommerce/class-spacious-customize-woocommerce-sidebar-options.php';
