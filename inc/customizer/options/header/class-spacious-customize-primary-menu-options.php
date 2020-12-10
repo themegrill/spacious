@@ -40,7 +40,7 @@ class Spacious_Customize_Primary_Menu_Options extends Spacious_Customize_Base_Op
 			 * Search icon options.
 			 */
 			array(
-				'name'     => 'spacious[header_primary_menu_search]',
+				'name'     => 'header_primary_menu_search',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Search Icon', 'spacious' ),
@@ -50,7 +50,7 @@ class Spacious_Customize_Primary_Menu_Options extends Spacious_Customize_Base_Op
 
 			// Search Icon option.
 			array(
-				'name'      => 'spacious[spacious_header_search_icon]',
+				'name'      => 'spacious_header_search_icon',
 				'default'   => 0,
 				'type'      => 'control',
 				'control'   => 'checkbox',
@@ -65,7 +65,7 @@ class Spacious_Customize_Primary_Menu_Options extends Spacious_Customize_Base_Op
 
 			// Menu Display option.
 			array(
-				'name'     => 'spacious[header_primary_menu_display]',
+				'name'     => 'header_primary_menu_display',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Menu Display', 'spacious' ),
@@ -74,7 +74,7 @@ class Spacious_Customize_Primary_Menu_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[spacious_one_line_menu_setting]',
+				'name'     => 'spacious_one_line_menu_setting',
 				'default'  => 0,
 				'type'     => 'control',
 				'control'  => 'checkbox',
@@ -85,7 +85,7 @@ class Spacious_Customize_Primary_Menu_Options extends Spacious_Customize_Base_Op
 
 			// Responsive menu style heading.
 			array(
-				'name'     => 'spacious[header_primary_menu_responsive_style]',
+				'name'     => 'header_primary_menu_responsive_style',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Responsive Menu Style', 'spacious' ),
@@ -94,7 +94,7 @@ class Spacious_Customize_Primary_Menu_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[spacious_new_menu]',
+				'name'     => 'spacious_new_menu',
 				'default'  => 1,
 				'type'     => 'control',
 				'control'  => 'checkbox',
