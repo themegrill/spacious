@@ -37,7 +37,7 @@ class Spacious_Customize_Page_Header_options extends Spacious_Customize_Base_Opt
 		$configs = array(
 
 			array(
-				'name'    => 'spacious[header_title_heading]',
+				'name'    => 'header_title_heading',
 				'type'    => 'control',
 				'control' => 'spacious-title',
 				'label'   => esc_html__( 'Header Title', 'spacious' ),
@@ -45,7 +45,7 @@ class Spacious_Customize_Page_Header_options extends Spacious_Customize_Base_Opt
 			),
 
 			array(
-				'name'    => 'spacious[spacious_header_title_hide]',
+				'name'    => 'spacious_header_title_hide',
 				'default' => 0,
 				'type'    => 'control',
 				'control' => 'checkbox',

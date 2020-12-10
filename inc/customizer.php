@@ -1310,13 +1310,13 @@ function spacious_customize_register( $wp_customize ) {
 //		)
 //	);
 
-	$wp_customize->add_section(
-		'spacious_blog_content_options',
-		array(
-			'title' => esc_html__( 'Blog/Archive', 'spacious' ),
-			'panel' => 'spacious_content_options',
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_blog_content_options',
+//		array(
+//			'title' => esc_html__( 'Blog/Archive', 'spacious' ),
+//			'panel' => 'spacious_content_options',
+//		)
+//	);
 
 	// Heading for blog display.
 	$wp_customize->add_setting(

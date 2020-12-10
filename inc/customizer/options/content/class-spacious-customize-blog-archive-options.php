@@ -37,7 +37,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 		$configs = array(
 
 			array(
-				'name'     => 'spacious_blog_layout_heading',
+				'name'     => 'blog_post_display_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Blog Posts display type', 'spacious' ),
@@ -46,7 +46,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'        => 'spacious[spacious_archive_display_type]',
+				'name'        => 'spacious_archive_display_type',
 				'default'     => 'blog_large',
 				'type'        => 'control',
 				'control'     => 'radio',
@@ -66,7 +66,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'       => 'spacious[spacious_blog_column_option]',
+				'name'       => 'spacious_blog_column_option',
 				'default'    => '2',
 				'type'       => 'control',
 				'control'    => 'radio',
@@ -79,12 +79,12 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 				'dependency' => array(
 					'conditions' => array(
 						array(
-							'spacious[spacious_archive_display_type]',
+							'spacious_archive_display_type',
 							'==',
 							'blog_masonry_content',
 						),
 						array(
-							'spacious[spacious_archive_display_type]',
+							'spacious_archive_display_type',
 							'==',
 							'blog_grid_content',
 						),
@@ -95,7 +95,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[excerpt_length_heading]',
+				'name'     => 'excerpt_length_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Excerpt Length', 'spacious' ),
@@ -105,7 +105,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 
 			// Excerpt length option.
 			array(
-				'name'     => 'spacious[spacious_excerpt_length]',
+				'name'     => 'spacious_excerpt_length',
 				'default'  => 40,
 				'type'     => 'control',
 				'control'  => 'number',
@@ -115,7 +115,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[excerpt_readmore_heading]',
+				'name'     => 'excerpt_readmore_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Excerpt Read More Text', 'spacious' ),
@@ -125,7 +125,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 
 			// Read more text change option.
 			array(
-				'name'      => 'spacious[spacious_read_more_text]',
+				'name'      => 'spacious_read_more_text',
 				'default'   => esc_html__( 'Read more', 'spacious' ),
 				'type'      => 'control',
 				'control'   => 'text',
@@ -143,7 +143,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[content_readmore_heading]',
+				'name'     => 'content_readmore_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Content Read More Tag', 'spacious' ),
@@ -152,7 +152,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[spacious_content_read_more_tag_display]',
+				'name'     => 'spacious_content_read_more_tag_display',
 				'default'  => 0,
 				'type'     => 'control',
 				'control'  => 'checkbox',
@@ -162,7 +162,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'     => 'spacious[category_description_heading]',
+				'name'     => 'category_description_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Category Options', 'spacious' ),
@@ -171,7 +171,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'      => 'spacious[spacious_term_description]',
+				'name'      => 'spacious_term_description',
 				'default'   => 0,
 				'type'      => 'control',
 				'control'   => 'checkbox',
