@@ -1319,50 +1319,50 @@ function spacious_customize_register( $wp_customize ) {
 //	);
 
 	// Heading for blog display.
-	$wp_customize->add_setting(
-		'spacious[blog_post_display_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'blog_post_display_heading',
-			array(
-				'label'    => esc_html__( 'Blog Posts display type', 'spacious' ),
-				'section'  => 'spacious_blog_content_options',
-				'settings' => 'spacious[blog_post_display_heading]',
-			)
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[blog_post_display_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'blog_post_display_heading',
+//			array(
+//				'label'    => esc_html__( 'Blog Posts display type', 'spacious' ),
+//				'section'  => 'spacious_blog_content_options',
+//				'settings' => 'spacious[blog_post_display_heading]',
+//			)
+//		)
+//	);
 
 	// blog posts display type setting
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_archive_display_type]',
-		array(
-			'default'           => 'blog_large',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_archive_display_type]',
+//		array(
+//			'default'           => 'blog_large',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_select_sanitize',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_archive_display_type]',
-		array(
-			'type'    => 'radio',
-			'label'   => esc_html__( 'Choose the display type for the latests posts view or posts page view (static front page).', 'spacious' ),
-			'choices' => array(
-				'blog_large'            => esc_html__( 'Blog Image Large', 'spacious' ),
-				'blog_medium'           => esc_html__( 'Blog Image Medium', 'spacious' ),
-				'blog_medium_alternate' => esc_html__( 'Blog Image Alternate Medium', 'spacious' ),
-				'blog_full_content'     => esc_html__( 'Blog Full Content', 'spacious' ),
-			),
-			'section' => 'spacious_blog_content_options',
-		)
-	);
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_archive_display_type]',
+//		array(
+//			'type'    => 'radio',
+//			'label'   => esc_html__( 'Choose the display type for the latests posts view or posts page view (static front page).', 'spacious' ),
+//			'choices' => array(
+//				'blog_large'            => esc_html__( 'Blog Image Large', 'spacious' ),
+//				'blog_medium'           => esc_html__( 'Blog Image Medium', 'spacious' ),
+//				'blog_medium_alternate' => esc_html__( 'Blog Image Alternate Medium', 'spacious' ),
+//				'blog_full_content'     => esc_html__( 'Blog Full Content', 'spacious' ),
+//			),
+//			'section' => 'spacious_blog_content_options',
+//		)
+//	);
 
 	// Single Post section.
 	$wp_customize->add_section(
