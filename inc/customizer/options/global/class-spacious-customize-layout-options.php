@@ -35,7 +35,7 @@ class Spacious_Customize_Layout_Options extends Spacious_Customize_Base_Option {
 
 			// Site layout option.
 			array(
-				'name'      => 'spacious[spacious_site_layout]',
+				'name'      => 'spacious_site_layout',
 				'default'   => 'wide_layout',
 				'type'      => 'control',
 				'control'   => 'radio',
@@ -52,7 +52,7 @@ class Spacious_Customize_Layout_Options extends Spacious_Customize_Base_Option {
 
 			// Default layout option.
 			array(
-				'name'      => 'spacious[spacious_default_layout]',
+				'name'      => 'spacious_default_layout',
 				'default'   => 'right_sidebar',
 				'type'      => 'control',
 				'control'   => 'spacious-radio-image',
@@ -86,7 +86,7 @@ class Spacious_Customize_Layout_Options extends Spacious_Customize_Base_Option {
 
 			// Default layout for pages only option.
 			array(
-				'name'      => 'spacious[spacious_pages_default_layout]',
+				'name'      => 'spacious_pages_default_layout',
 				'default'   => 'right_sidebar',
 				'type'      => 'control',
 				'control'   => 'spacious-radio-image',
@@ -120,7 +120,7 @@ class Spacious_Customize_Layout_Options extends Spacious_Customize_Base_Option {
 
 			// Default layout for single posts page only option.
 			array(
-				'name'      => 'spacious[spacious_single_posts_default_layout]',
+				'name'      => 'spacious_single_posts_default_layout',
 				'default'   => 'right_sidebar',
 				'type'      => 'control',
 				'control'   => 'spacious-radio-image',

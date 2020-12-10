@@ -228,169 +228,169 @@ function spacious_customize_register( $wp_customize ) {
 //	$wp_customize->get_control( 'background_attachment' )->priority = 20;
 
 	// Layout option.
-	$wp_customize->add_section(
-		'spacious_global_layout_section',
-		array(
-			'panel'    => 'spacious_global_options',
-			'priority' => 7,
-			'title'    => esc_html__( 'Layout', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_global_layout_section',
+//		array(
+//			'panel'    => 'spacious_global_options',
+//			'priority' => 7,
+//			'title'    => esc_html__( 'Layout', 'spacious' ),
+//		)
+//	);
 
 	// Site layout heading
-	$wp_customize->add_setting(
-		'spacious[global_site_layout_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[global_site_layout_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'global_site_layout_heading',
-			array(
-				'label'    => esc_html__( 'Site Layout', 'spacious' ),
-				'section'  => 'spacious_global_layout_section',
-				'settings' => 'spacious[global_site_layout_heading]',
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'global_site_layout_heading',
+//			array(
+//				'label'    => esc_html__( 'Site Layout', 'spacious' ),
+//				'section'  => 'spacious_global_layout_section',
+//				'settings' => 'spacious[global_site_layout_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_site_layout]',
-		array(
-			'default'           => 'box_1218px',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_site_layout]',
+//		array(
+//			'default'           => 'box_1218px',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_select_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_site_layout]',
+//		array(
+//			'type'    => 'radio',
+//			'label'   => esc_html__( 'Choose your site layout. The change is reflected in whole site.', 'spacious' ),
+//			'choices' => array(
+//				'box_1218px'  => esc_html__( 'Boxed layout with content width of 1218px', 'spacious' ),
+//				'box_978px'   => esc_html__( 'Boxed layout with content width of 978px', 'spacious' ),
+//				'wide_1218px' => esc_html__( 'Wide layout with content width of 1218px', 'spacious' ),
+//				'wide_978px'  => esc_html__( 'Wide layout with content width of 978px', 'spacious' ),
+//			),
+//			'section' => 'spacious_global_layout_section',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_site_layout]',
-		array(
-			'type'    => 'radio',
-			'label'   => esc_html__( 'Choose your site layout. The change is reflected in whole site.', 'spacious' ),
-			'choices' => array(
-				'box_1218px'  => esc_html__( 'Boxed layout with content width of 1218px', 'spacious' ),
-				'box_978px'   => esc_html__( 'Boxed layout with content width of 978px', 'spacious' ),
-				'wide_1218px' => esc_html__( 'Wide layout with content width of 1218px', 'spacious' ),
-				'wide_978px'  => esc_html__( 'Wide layout with content width of 978px', 'spacious' ),
-			),
-			'section' => 'spacious_global_layout_section',
-		)
-	);
+//	// Site layout heading
+//	$wp_customize->add_setting(
+//		'spacious[global_sidebar_layout_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			$spacious_themename . 'global_sidebar_layout_heading',
+//			array(
+//				'label'    => esc_html__( 'Sidebar Layout', 'spacious' ),
+//				'section'  => 'spacious_global_layout_section',
+//				'settings' => 'spacious[global_sidebar_layout_heading]',
+//			)
+//		)
+//	);
 
-	// Site layout heading
-	$wp_customize->add_setting(
-		'spacious[global_sidebar_layout_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_default_layout]',
+//		array(
+//			'default'           => 'right_sidebar',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_select_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Image_Radio_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_default_layout]',
+//			array(
+//				'type'     => 'radio',
+//				'label'    => esc_html__( 'Default layout', 'spacious' ),
+//				'section'  => 'spacious_global_layout_section',
+//				'settings' => $spacious_themename . '[spacious_default_layout]',
+//				'choices'  => array(
+//					'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+//					'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+//					'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+//					'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+//					'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
+//				),
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			$spacious_themename . 'global_sidebar_layout_heading',
-			array(
-				'label'    => esc_html__( 'Sidebar Layout', 'spacious' ),
-				'section'  => 'spacious_global_layout_section',
-				'settings' => 'spacious[global_sidebar_layout_heading]',
-			)
-		)
-	);
+////	// default layout for pages.
+////	$wp_customize->add_setting(
+////		$spacious_themename . '[spacious_pages_default_layout]',
+////		array(
+////			'default'           => 'right_sidebar',
+////			'type'              => 'option',
+////			'capability'        => 'edit_theme_options',
+////			'sanitize_callback' => 'spacious_radio_select_sanitize',
+////		) );
+//
+//	$wp_customize->add_control(
+//		new Spacious_Image_Radio_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_pages_default_layout]',
+//			array(
+//				'type'     => 'radio',
+//				'label'    => esc_html__( 'Default layout for pages only', 'spacious' ),
+//				'section'  => 'spacious_global_layout_section',
+//				'settings' => $spacious_themename . '[spacious_pages_default_layout]',
+//				'choices'  => array(
+//					'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+//					'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+//					'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+//					'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+//					'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
+//				),
+//			)
+//		)
+//	);
 
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_default_layout]',
-		array(
-			'default'           => 'right_sidebar',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_single_posts_default_layout]',
+//		array(
+//			'default'           => 'right_sidebar',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_select_sanitize',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Image_Radio_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_default_layout]',
-			array(
-				'type'     => 'radio',
-				'label'    => esc_html__( 'Default layout', 'spacious' ),
-				'section'  => 'spacious_global_layout_section',
-				'settings' => $spacious_themename . '[spacious_default_layout]',
-				'choices'  => array(
-					'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
-					'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
-					'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
-					'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
-				),
-			)
-		)
-	);
-
-	// default layout for pages.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_pages_default_layout]',
-		array(
-			'default'           => 'right_sidebar',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		) );
-
-	$wp_customize->add_control(
-		new Spacious_Image_Radio_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_pages_default_layout]',
-			array(
-				'type'     => 'radio',
-				'label'    => esc_html__( 'Default layout for pages only', 'spacious' ),
-				'section'  => 'spacious_global_layout_section',
-				'settings' => $spacious_themename . '[spacious_pages_default_layout]',
-				'choices'  => array(
-					'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
-					'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
-					'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
-					'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
-				),
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_single_posts_default_layout]',
-		array(
-			'default'           => 'right_sidebar',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Image_Radio_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_single_posts_default_layout]',
-			array(
-				'type'     => 'radio',
-				'label'    => esc_html__( 'Default layout for single posts only', 'spacious' ),
-				'section'  => 'spacious_global_layout_section',
-				'settings' => $spacious_themename . '[spacious_single_posts_default_layout]',
-				'choices'  => array(
-					'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
-					'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
-					'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
-					'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
-				),
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Image_Radio_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_single_posts_default_layout]',
+//			array(
+//				'type'     => 'radio',
+//				'label'    => esc_html__( 'Default layout for single posts only', 'spacious' ),
+//				'section'  => 'spacious_global_layout_section',
+//				'settings' => $spacious_themename . '[spacious_single_posts_default_layout]',
+//				'choices'  => array(
+//					'right_sidebar'                => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
+//					'left_sidebar'                 => SPACIOUS_ADMIN_IMAGES_URL . '/left-sidebar.png',
+//					'no_sidebar_full_width'        => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+//					'no_sidebar_content_centered'  => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+//					'no_sidebar_content_stretched' => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-stretched-layout.png',
+//				),
+//			)
+//		)
+//	);
 
 	/****************************************Start of the Header Options****************************************/
 	// Header Options Area
