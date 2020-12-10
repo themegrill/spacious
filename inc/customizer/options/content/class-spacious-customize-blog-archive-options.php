@@ -60,7 +60,7 @@ class Spacious_Customize_Blog_Archive_Options extends Spacious_Customize_Base_Op
 				),
 				'priority'    => 20,
 			),
-			
+
 		);
 
 		$options = array_merge( $options, $configs );

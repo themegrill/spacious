@@ -40,7 +40,7 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			 * Author Bio.
 			 */
 			array(
-				'name'     => 'spacious[author_bio_heading]',
+				'name'     => 'author_bio_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Author Bio', 'spacious' ),
@@ -49,7 +49,7 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			),
 
 			array(
-				'name'      => 'spacious[spacious_author_bio]',
+				'name'      => 'spacious_author_bio',
 				'default'   => 0,
 				'type'      => 'control',
 				'control'   => 'checkbox',
@@ -62,41 +62,11 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 				'priority'  => 20,
 			),
 
-			array(
-				'name'     => 'spacious[spacious_author_bio_link]',
-				'default'  => 0,
-				'type'     => 'control',
-				'control'  => 'checkbox',
-				'label'    => esc_html__( 'Check to add the all post link of author url in the author box.', 'spacious' ),
-				'section'  => 'spacious_single_post_section',
-				'priority' => 30,
-			),
-
-			array(
-				'name'     => 'spacious[spacious_author_bio_social_link_setting]',
-				'default'  => 0,
-				'type'     => 'control',
-				'control'  => 'checkbox',
-				'label'    => esc_html__( 'Check to show the Social Profiles in the Author Bio.', 'spacious' ),
-				'section'  => 'spacious_single_post_section',
-				'priority' => 40,
-			),
-
-			array(
-				'name'     => 'spacious[spacious_author_bio_social_link]',
-				'default'  => 0,
-				'type'     => 'control',
-				'control'  => 'checkbox',
-				'label'    => esc_html__( 'Check to add the social links in the author bio section. Note: it suppots only the social icons provided by All In One SEO Pack or WordPress SEO plugin.', 'spacious' ),
-				'section'  => 'spacious_single_post_section',
-				'priority' => 50,
-			),
-
 			/**
 			 * Featured Image.
 			 */
 			array(
-				'name'     => 'spacious[featured_image_single_post_heading]',
+				'name'     => 'featured_image_single_post_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Featured Image In Single Post Page', 'spacious' ),
@@ -105,7 +75,7 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			),
 
 			array(
-				'name'     => 'spacious[spacious_featured_image_single_post_page]',
+				'name'     => 'spacious_featured_image_single_post_page',
 				'default'  => 0,
 				'type'     => 'control',
 				'control'  => 'checkbox',
@@ -118,7 +88,7 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			 * Related posts options.
 			 */
 			array(
-				'name'     => 'spacious[related_post_heading]',
+				'name'     => 'related_post_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Related Posts', 'spacious' ),
@@ -127,7 +97,7 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			),
 
 			array(
-				'name'        => 'spacious[spacious_related_posts_activate]',
+				'name'        => 'spacious_related_posts_activate',
 				'default'     => 0,
 				'type'        => 'control',
 				'control'     => 'checkbox',
@@ -137,7 +107,7 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			),
 
 			array(
-				'name'       => 'spacious[spacious_related_posts]',
+				'name'       => 'spacious_related_posts',
 				'default'    => 'categories',
 				'type'       => 'control',
 				'control'    => 'radio',
@@ -148,32 +118,12 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 					'tags'       => esc_html__( 'Related Posts By Tags', 'spacious' ),
 				),
 				'dependency' => array(
-					'spacious[spacious_related_posts_activate]',
+					'spacious_related_posts_activate',
 					'!=',
 					0,
 				),
 				'priority'   => 180,
 			),
-
-			array(
-				'name'       => 'spacious[spacious_related_post_number_display]',
-				'default'    => '3',
-				'type'       => 'control',
-				'control'    => 'select',
-				'label'      => esc_html__( 'Number of post to display', 'spacious' ),
-				'section'    => 'spacious_single_post_section',
-				'choices'    => array(
-					'3' => esc_html__( '3', 'spacious' ),
-					'6' => esc_html__( '6', 'spacious' ),
-				),
-				'dependency' => array(
-					'spacious[spacious_related_posts_activate]',
-					'!=',
-					0,
-				),
-				'priority'   => 190,
-			),
-
 		);
 
 		$options = array_merge( $options, $configs );

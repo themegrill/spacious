@@ -1365,158 +1365,158 @@ function spacious_customize_register( $wp_customize ) {
 //	);
 
 	// Single Post section.
-	$wp_customize->add_section(
-		'spacious_single_post_section',
-		array(
-			'title' => esc_html__( 'Single Post', 'spacious' ),
-			'panel' => 'spacious_content_options',
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_single_post_section',
+//		array(
+//			'title' => esc_html__( 'Single Post', 'spacious' ),
+//			'panel' => 'spacious_content_options',
+//		)
+//	);
 
 	// Heading for Author bio.
-	$wp_customize->add_setting(
-		'spacious[author_bio_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[author_bio_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'author_bio_heading',
+//			array(
+//				'label'    => esc_html__( 'Author Bio', 'spacious' ),
+//				'section'  => 'spacious_single_post_section',
+//				'settings' => 'spacious[author_bio_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'author_bio_heading',
-			array(
-				'label'    => esc_html__( 'Author Bio', 'spacious' ),
-				'section'  => 'spacious_single_post_section',
-				'settings' => 'spacious[author_bio_heading]',
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_author_bio]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_author_bio]',
-		array(
-			'type'     => 'checkbox',
-			'label'    => esc_html__( 'Check to enable the author bio section just below the post.', 'spacious' ),
-			'section'  => 'spacious_single_post_section',
-			'settings' => $spacious_themename . '[spacious_author_bio]',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_author_bio]',
+//		array(
+//			'default'           => 0,
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_checkbox_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_author_bio]',
+//		array(
+//			'type'     => 'checkbox',
+//			'label'    => esc_html__( 'Check to enable the author bio section just below the post.', 'spacious' ),
+//			'section'  => 'spacious_single_post_section',
+//			'settings' => $spacious_themename . '[spacious_author_bio]',
+//		)
+//	);
 
 	// Heading for single post featured image.
-	$wp_customize->add_setting(
-		'spacious[featured_image_single_post_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[featured_image_single_post_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'featured_image_single_post_heading',
+//			array(
+//				'label'    => esc_html__( 'Featured Image In Single Post Page', 'spacious' ),
+//				'section'  => 'spacious_single_post_section',
+//				'settings' => 'spacious[featured_image_single_post_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'featured_image_single_post_heading',
-			array(
-				'label'    => esc_html__( 'Featured Image In Single Post Page', 'spacious' ),
-				'section'  => 'spacious_single_post_section',
-				'settings' => 'spacious[featured_image_single_post_heading]',
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_featured_image_single_post_page]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_featured_image_single_post_page]',
-		array(
-			'type'     => 'checkbox',
-			'label'    => esc_html__( 'Check to enable the featured image in single post page.', 'spacious' ),
-			'section'  => 'spacious_single_post_section',
-			'settings' => $spacious_themename . '[spacious_featured_image_single_post_page]',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_featured_image_single_post_page]',
+//		array(
+//			'default'           => 0,
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_checkbox_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_featured_image_single_post_page]',
+//		array(
+//			'type'     => 'checkbox',
+//			'label'    => esc_html__( 'Check to enable the featured image in single post page.', 'spacious' ),
+//			'section'  => 'spacious_single_post_section',
+//			'settings' => $spacious_themename . '[spacious_featured_image_single_post_page]',
+//		)
+//	);
 
 	// Heading for related post.
-	$wp_customize->add_setting(
-		'spacious[related_post_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[related_post_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'related_post_heading',
+//			array(
+//				'label'    => esc_html__( 'Related Posts', 'spacious' ),
+//				'section'  => 'spacious_single_post_section',
+//				'settings' => 'spacious[related_post_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'related_post_heading',
-			array(
-				'label'    => esc_html__( 'Related Posts', 'spacious' ),
-				'section'  => 'spacious_single_post_section',
-				'settings' => 'spacious[related_post_heading]',
-			)
-		)
-	);
-
-	//Related post
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_related_posts_activate]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_related_posts_activate]',
-		array(
-			'type'     => 'checkbox',
-			'label'    => esc_html__( 'Check to activate the related posts', 'spacious' ),
-			'section'  => 'spacious_single_post_section',
-			'settings' => $spacious_themename . '[spacious_related_posts_activate]',
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_related_posts]',
-		array(
-			'default'           => 'categories',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_related_posts]',
-		array(
-			'type'     => 'radio',
-			'label'    => esc_html__( 'Related Posts Must Be Shown As:', 'spacious' ),
-			'section'  => 'spacious_single_post_section',
-			'settings' => $spacious_themename . '[spacious_related_posts]',
-			'choices'  => array(
-				'categories' => esc_html__( 'Related Posts By Categories', 'spacious' ),
-				'tags'       => esc_html__( 'Related Posts By Tags', 'spacious' ),
-			),
-		)
-	);
+//	//Related post
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_related_posts_activate]',
+//		array(
+//			'default'           => 0,
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_checkbox_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_related_posts_activate]',
+//		array(
+//			'type'     => 'checkbox',
+//			'label'    => esc_html__( 'Check to activate the related posts', 'spacious' ),
+//			'section'  => 'spacious_single_post_section',
+//			'settings' => $spacious_themename . '[spacious_related_posts_activate]',
+//		)
+//	);
+//
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_related_posts]',
+//		array(
+//			'default'           => 'categories',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_select_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_related_posts]',
+//		array(
+//			'type'     => 'radio',
+//			'label'    => esc_html__( 'Related Posts Must Be Shown As:', 'spacious' ),
+//			'section'  => 'spacious_single_post_section',
+//			'settings' => $spacious_themename . '[spacious_related_posts]',
+//			'choices'  => array(
+//				'categories' => esc_html__( 'Related Posts By Categories', 'spacious' ),
+//				'tags'       => esc_html__( 'Related Posts By Tags', 'spacious' ),
+//			),
+//		)
+//	);
 
 	// Page section.
 	$wp_customize->add_section(
