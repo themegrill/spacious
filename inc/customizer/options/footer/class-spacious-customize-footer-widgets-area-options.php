@@ -35,7 +35,7 @@ class Spacious_Customize_Footer_widgets_Area_Options extends Spacious_Customize_
 		$configs = array(
 
 			array(
-				'name'     => 'spacious[footer_widget_column_heading]',
+				'name'     => 'footer_widget_column_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Footer Widgets Column', 'spacious' ),
@@ -44,7 +44,7 @@ class Spacious_Customize_Footer_widgets_Area_Options extends Spacious_Customize_
 			),
 
 			array(
-				'name'      => 'spacious[spacious_footer_widget_column_select_type]',
+				'name'      => 'spacious_footer_widget_column_select_type',
 				'default'   => 'four',
 				'type'      => 'control',
 				'control'   => 'spacious-radio-image',
@@ -67,190 +67,9 @@ class Spacious_Customize_Footer_widgets_Area_Options extends Spacious_Customize_
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-fourth-column.png',
 					),
-					'two-style-1'   => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-two-style1.png',
-					),
-					'two-style-2'   => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-two-style2.png',
-					),
-					'three-style-1' => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-three-style1.png',
-					),
-					'three-style-2' => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-three-style2.png',
-					),
-					'three-style-3' => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-three-style3.png',
-					),
-					'four-style-1'  => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-four-style1.png',
-					),
-					'four-style-2'  => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-four-style2.png',
-					),
 				),
 				'image_col' => 3,
 				'priority'  => 15,
-			),
-
-			/**
-			 * Colors.
-			 */
-			array(
-				'name'     => 'spacious[footer_widget_color_heading]',
-				'type'     => 'control',
-				'control'  => 'spacious-title',
-				'label'    => esc_html__( 'Colors', 'spacious' ),
-				'section'  => 'spacious_footer_widgets_area_section',
-				'priority' => 20,
-			),
-
-			// Widget title color option.
-			array(
-				'name'     => 'spacious[spacious_footer_widget_title_color]',
-				'default'  => '#D5D5D5',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => esc_html__( 'Widget title color. Default is #D5D5D5.', 'spacious' ),
-				'section'  => 'spacious_footer_widgets_area_section',
-				'priority' => 25,
-			),
-
-			// Widget content color option.
-			array(
-				'name'     => 'spacious[spacious_footer_widget_content_color]',
-				'default'  => '#999999',
-				'type'     => 'control',
-				'control'  => 'spacious-color',
-				'label'    => esc_html__( 'Widget content color. Default is #999999.', 'spacious' ),
-				'section'  => 'spacious_footer_widgets_area_section',
-				'priority' => 30,
-			),
-
-//			array(
-//				'name'     => 'spacious[spacious_footer_widget_background_color]',
-//				'default'  => '#333333',
-//				'type'     => 'control',
-//				'control'  => 'spacious-color',
-//				'label'    => esc_html__( 'Widget background color. Default is #333333.', 'spacious' ),
-//				'section'  => 'spacious_footer_widgets_area_section',
-//				'priority' => 40,
-//			),
-
-			array(
-				'name'     => 'spacious[footer_widget_typography_heading]',
-				'type'     => 'control',
-				'control'  => 'spacious-title',
-				'label'    => esc_html__( 'Typography', 'spacious' ),
-				'section'  => 'spacious_footer_widgets_area_section',
-				'priority' => 105,
-			),
-
-			// Footer widget typography group.
-			array(
-				'name'     => 'spacious_footer_widget_title_font_size_group',
-				'label'    => esc_html__( 'Footer widget title font size. Default is 22px.', 'spacious' ),
-				'default'  => '',
-				'type'     => 'control',
-				'control'  => 'spacious-group',
-				'section'  => 'spacious_footer_widgets_area_section',
-				'priority' => 110,
-			),
-
-			array(
-				'name'        => 'spacious[spacious_footer_widget_title_font_size_typography]',
-				'default'     => array(
-					'font-size' => array(
-						'desktop' => '22',
-						'tablet'  => '',
-						'mobile'  => '',
-					),
-				),
-				'input_attrs' => array(
-					'desktop' => array(
-						'font-size' => array(
-							'step' => 1,
-							'min'  => 18,
-							'max'  => 30,
-						),
-					),
-					'tablet'  => array(
-						'font-size' => array(
-							'step' => 1,
-							'min'  => 12,
-							'max'  => 20,
-						),
-					),
-					'mobile'  => array(
-						'font-size' => array(
-							'step' => 1,
-							'min'  => 12,
-							'max'  => 20,
-						),
-					),
-				),
-				'type'        => 'sub-control',
-				'control'     => 'spacious-typography',
-				'parent'      => 'spacious_footer_widget_title_font_size_group',
-				'section'     => 'spacious_footer_widgets_area_section',
-				'priority'    => 120,
-			),
-
-			// Footer content typography group.
-			array(
-				'name'     => 'spacious_footer_widget_content_font_size_group',
-				'label'    => esc_html__( 'Footer widget content font size. Default is 14px.', 'spacious' ),
-				'default'  => '',
-				'type'     => 'control',
-				'control'  => 'spacious-group',
-				'section'  => 'spacious_footer_widgets_area_section',
-				'priority' => 110,
-			),
-
-			array(
-				'name'        => 'spacious[spacious_footer_widget_content_font_size_typography]',
-				'default'     => array(
-					'font-size' => array(
-						'desktop' => '14',
-						'tablet'  => '',
-						'mobile'  => '',
-					),
-				),
-				'input_attrs' => array(
-					'desktop' => array(
-						'font-size' => array(
-							'step' => 1,
-							'min'  => 10,
-							'max'  => 18,
-						),
-					),
-					'tablet'  => array(
-						'font-size' => array(
-							'step' => 1,
-							'min'  => 10,
-							'max'  => 18,
-						),
-					),
-					'mobile'  => array(
-						'font-size' => array(
-							'step' => 1,
-							'min'  => 10,
-							'max'  => 18,
-						),
-					),
-				),
-				'type'        => 'sub-control',
-				'control'     => 'spacious-typography',
-				'parent'      => 'spacious_footer_widget_content_font_size_group',
-				'section'     => 'spacious_footer_widgets_area_section',
-				'priority'    => 120,
 			),
 
 		);

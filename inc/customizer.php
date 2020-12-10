@@ -1727,71 +1727,71 @@ function spacious_customize_register( $wp_customize ) {
 
 	/****************************************Start of the Footer Options****************************************/
 
-	$wp_customize->add_panel(
-		'spacious_footer_options',
-		array(
-			'capabitity' => 'edit_theme_options',
-			'priority'   => 65,
-			'title'      => esc_html__( 'Footer', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_panel(
+//		'spacious_footer_options',
+//		array(
+//			'capabitity' => 'edit_theme_options',
+//			'priority'   => 65,
+//			'title'      => esc_html__( 'Footer', 'spacious' ),
+//		)
+//	);
 
 	// Footer widgets select type
-	$wp_customize->add_section(
-		'spacious_footer_widgets_area_section',
-		array(
-			'priority' => 5,
-			'title'    => esc_html__( 'Footer Widgets Area', 'spacious' ),
-			'panel'    => 'spacious_footer_options',
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_footer_widgets_area_section',
+//		array(
+//			'priority' => 5,
+//			'title'    => esc_html__( 'Footer Widgets Area', 'spacious' ),
+//			'panel'    => 'spacious_footer_options',
+//		)
+//	);
 
 	// Heading for footer widget column options.
-	$wp_customize->add_setting(
-		'spacious[footer_widget_column_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[footer_widget_column_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'footer_widget_column_heading',
+//			array(
+//				'label'    => esc_html__( 'Footer Widgets Column', 'spacious' ),
+//				'section'  => 'spacious_footer_widgets_area_section',
+//				'settings' => 'spacious[footer_widget_column_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'footer_widget_column_heading',
-			array(
-				'label'    => esc_html__( 'Footer Widgets Column', 'spacious' ),
-				'section'  => 'spacious_footer_widgets_area_section',
-				'settings' => 'spacious[footer_widget_column_heading]',
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_footer_widget_column_select_type]',
-		array(
-			'default'           => 'four',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Image_Radio_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_footer_widget_column_select_type]',
-			array(
-				'label'   => esc_html__( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
-				'choices' => array(
-					'one'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-full-column.png',
-					'two'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-two-column.png',
-					'three' => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-third-column.png',
-					'four'  => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-fourth-column.png',
-				),
-				'section' => 'spacious_footer_widgets_area_section',
-			)
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_footer_widget_column_select_type]',
+//		array(
+//			'default'           => 'four',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Image_Radio_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_footer_widget_column_select_type]',
+//			array(
+//				'label'   => esc_html__( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
+//				'choices' => array(
+//					'one'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-full-column.png',
+//					'two'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-two-column.png',
+//					'three' => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-third-column.png',
+//					'four'  => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-fourth-column.png',
+//				),
+//				'section' => 'spacious_footer_widgets_area_section',
+//			)
+//		)
+//	);
 	// End of footer options.
 
 	/**************************************Start of the WooCommerce Options*************************************/
