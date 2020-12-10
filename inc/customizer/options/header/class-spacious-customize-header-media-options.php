@@ -37,10 +37,10 @@ class Spacious_Customize_Header_Media_Options extends Spacious_Customize_Base_Op
 		$configs = array(
 
 			array(
-				'name'       => 'spacious[header_image_position_heading]',
+				'name'       => 'header_image_position_heading',
 				'type'       => 'control',
 				'control'    => 'spacious-title',
-				'label'      => esc_html__( 'Position', 'spacious' ),
+				'label'      => esc_html__( 'Header Image Position', 'spacious' ),
 				'section'    => 'header_image',
 				'dependency' => array(
 					'conditions' => array(
@@ -67,7 +67,7 @@ class Spacious_Customize_Header_Media_Options extends Spacious_Customize_Base_Op
 
 			// Header image position option.
 			array(
-				'name'       => 'spacious[spacious_header_image_position]',
+				'name'       => 'spacious_header_image_position',
 				'default'    => 'above',
 				'type'       => 'control',
 				'control'    => 'radio',
