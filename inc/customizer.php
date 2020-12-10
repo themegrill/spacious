@@ -957,92 +957,92 @@ function spacious_customize_register( $wp_customize ) {
 //		)
 //	);
 
-	// Header Button option.
-	$wp_customize->add_section( 'spacious_header_button', array(
-		'priority' => 4,
-		'title'    => esc_html__( 'Header Button', 'spacious' ),
-		'panel'    => 'spacious_header_options',
-	) );
+//	// Header Button option.
+//	$wp_customize->add_section( 'spacious_header_button', array(
+//		'priority' => 4,
+//		'title'    => esc_html__( 'Header Button', 'spacious' ),
+//		'panel'    => 'spacious_header_options',
+//	) );
+//
+//	// Heading for header button one.
+//	$wp_customize->add_setting(
+//		'spacious[header_button_one_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'header_button_one_heading',
+//			array(
+//				'label'    => esc_html__( 'Header Button One', 'spacious' ),
+//				'section'  => 'spacious_header_button',
+//				'settings' => 'spacious[header_button_one_heading]',
+//			)
+//		)
+//	);
 
-	// Heading for header button one.
-	$wp_customize->add_setting(
-		'spacious[header_button_one_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'header_button_one_heading',
-			array(
-				'label'    => esc_html__( 'Header Button One', 'spacious' ),
-				'section'  => 'spacious_header_button',
-				'settings' => 'spacious[header_button_one_heading]',
-			)
-		)
-	);
-
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_header_button_one_setting]',
-		array(
-			'default'           => '',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_header_button_one_setting]',
-		array(
-			'label'   => esc_html__( 'Button Text', 'spacious' ),
-			'section' => 'spacious_header_button',
-			'setting' => $spacious_themename . '[spacious_header_button_one_setting]',
-		)
-	);
-
-	// Header button link.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_header_button_one_link]',
-		array(
-			'default'           => '',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'esc_url_raw',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_header_button_one_link]',
-		array(
-			'label'   => esc_html__( 'Button Link', 'spacious' ),
-			'section' => 'spacious_header_button',
-			'setting' => $spacious_themename . '[spacious_header_button_one_link]',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_header_button_one_setting]',
+//		array(
+//			'default'           => '',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'wp_filter_nohtml_kses',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_header_button_one_setting]',
+//		array(
+//			'label'   => esc_html__( 'Button Text', 'spacious' ),
+//			'section' => 'spacious_header_button',
+//			'setting' => $spacious_themename . '[spacious_header_button_one_setting]',
+//		)
+//	);
+//
+//	// Header button link.
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_header_button_one_link]',
+//		array(
+//			'default'           => '',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'esc_url_raw',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_header_button_one_link]',
+//		array(
+//			'label'   => esc_html__( 'Button Link', 'spacious' ),
+//			'section' => 'spacious_header_button',
+//			'setting' => $spacious_themename . '[spacious_header_button_one_link]',
+//		)
+//	);
 
 	// Header button link in new tab.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_header_button_one_tab]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_header_button_one_tab]',
-		array(
-			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Check to show in new tab', 'spacious' ),
-			'section' => 'spacious_header_button',
-			'setting' => $spacious_themename . '[spacious_header_button_one_tab]',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_header_button_one_tab]',
+//		array(
+//			'default'           => 0,
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_checkbox_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_header_button_one_tab]',
+//		array(
+//			'type'    => 'checkbox',
+//			'label'   => esc_html__( 'Check to show in new tab', 'spacious' ),
+//			'section' => 'spacious_header_button',
+//			'setting' => $spacious_themename . '[spacious_header_button_one_tab]',
+//		)
+//	);
 
 	// End of Header Options
 

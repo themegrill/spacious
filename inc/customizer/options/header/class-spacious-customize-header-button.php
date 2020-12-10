@@ -38,7 +38,7 @@ class Spacious_Customize_Header_Button_Options extends Spacious_Customize_Base_O
 
 			// Header button one option.
 			array(
-				'name'     => 'spacious[spacious_header_button_one_setting]',
+				'name'     => 'spacious_header_button_one_setting',
 				'default'  => '',
 				'type'     => 'control',
 				'control'  => 'text',
@@ -49,7 +49,7 @@ class Spacious_Customize_Header_Button_Options extends Spacious_Customize_Base_O
 
 			// Header button one option.
 			array(
-				'name'     => 'spacious[spacious_header_button_one_link]',
+				'name'     => 'spacious_header_button_one_link',
 				'default'  => '',
 				'type'     => 'control',
 				'control'  => 'url',
@@ -59,7 +59,7 @@ class Spacious_Customize_Header_Button_Options extends Spacious_Customize_Base_O
 			),
 
 			array(
-				'name'     => 'spacious[spacious_header_button_one_tab]',
+				'name'     => 'spacious_header_button_one_tab',
 				'default'  => 0,
 				'type'     => 'control',
 				'control'  => 'checkbox',
