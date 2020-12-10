@@ -12,7 +12,7 @@
 	<?php do_action( 'spacious_before_post_content' ); ?>
 	<div class="entry-content clearfix">
 		<?php
-		if ( ( spacious_options( 'spacious_featured_image_single_page', 0 ) == 1 ) && has_post_thumbnail() ) {
+		if ( ( get_theme_mod( 'spacious_featured_image_single_page', 0 ) == 1 ) && has_post_thumbnail() ) {
 			$title_attribute = get_the_title( $post->ID );
 			$thumb_id        = get_post_thumbnail_id( get_the_ID() );
 			$img_altr        = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );

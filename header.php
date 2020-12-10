@@ -52,7 +52,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 	<?php do_action( 'spacious_before_header' ); ?>
 
 	<?php
-	$spacious_header_display_type = spacious_options( 'spacious_header_display_type', 'one' );
+	$spacious_header_display_type = get_theme_mod( 'spacious_header_display_type', 'one' );
 	if ( $spacious_header_display_type === 'one' ) {
 		$header_class = 'spacious-header-display-one';
 	} elseif ( $spacious_header_display_type === 'four' ) {
@@ -62,11 +62,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 	<header id="masthead" class="site-header clearfix <?php echo esc_attr( $header_class ); ?>">
 
-		<?php if ( spacious_options( 'spacious_activate_top_header_bar', 0 ) == 1 ) { ?>
+		<?php if ( get_theme_mod( 'spacious_activate_top_header_bar', 0 ) == 1 ) { ?>
 			<div id="header-meta">
 				<div class="inner-wrap clearfix">
 					<?php
-					if ( spacious_options( 'spacious_activate_social_links', 0 ) == 1 ) {
+					if ( get_theme_mod( 'spacious_activate_social_links', 0 ) == 1 ) {
 						spacious_social_links();
 					}
 					?>
@@ -84,18 +84,18 @@ if ( function_exists( 'wp_body_open' ) ) {
 			</div>
 		<?php } ?>
 
-		<?php if ( 'above' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
+		<?php if ( 'above' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
 		} ?>
 
-		<div id="header-text-nav-container" class="<?php echo ( spacious_options( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
+		<div id="header-text-nav-container" class="<?php echo ( get_theme_mod( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
 
 			<div class="inner-wrap" id="<?php echo esc_attr( $header_class ); ?>">
 
 				<div id="header-text-nav-wrap" class="clearfix">
 					<div id="header-left-section">
 						<?php
-						if ( ( 'both' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
+						if ( ( 'both' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
 							<div id="header-logo-image">
 
 								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
@@ -108,7 +108,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 						}
 
 						$screen_reader = '';
-						if ( ( 'logo_only' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === spacious_options( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
+						if ( ( 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
 							$screen_reader = 'screen-reader-text';
 						} ?>
 
@@ -148,12 +148,12 @@ if ( function_exists( 'wp_body_open' ) ) {
 							<?php
 						} ?>
 
-						<?php if ( 'four' !== spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
+						<?php if ( 'four' !== get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
 							<div class="header-action">
 								<?php
 								spacious_cart_icon();
 
-								if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+								if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
 									?>
 									<div class="search-wrapper">
 										<div class="search">
@@ -167,7 +167,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 							</div>
 						<?php endif; ?>
 
-						<?php if ( ! ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) ) :
+						<?php if ( ! ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) ) :
 							spacious_main_nav();
 						endif; ?>
 
@@ -175,8 +175,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 				</div><!-- #header-text-nav-wrap -->
 			</div><!-- .inner-wrap -->
-			<?php if ( 'four' === spacious_options( 'spacious_header_display_type', 'one' ) ) : ?>
-				<div class="bottom-menu clearfix <?php echo spacious_options( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
+			<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+				<div class="bottom-menu clearfix <?php echo get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
 					<div class="inner-wrap clearfix">
 						<?php spacious_main_nav(); ?>
 
@@ -184,7 +184,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 							<?php
 							spacious_cart_icon();
 
-							if ( 1 === spacious_options( 'spacious_header_search_icon', 0 ) ) :
+							if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
 								?>
 								<div class="search-wrapper">
 									<div class="search">
@@ -201,13 +201,13 @@ if ( function_exists( 'wp_body_open' ) ) {
 			<?php endif; ?>
 		</div><!-- #header-text-nav-container -->
 
-		<?php if ( 'below' === spacious_options( 'spacious_header_image_position', 'above' ) ) {
+		<?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
 		} ?>
 
 		<?php
-		if ( spacious_options( 'spacious_activate_slider', '0' ) == '1' ) {
-			if ( spacious_options( 'spacious_blog_slider', '0' ) != '1' ) {
+		if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
+			if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
 				if ( is_home() || is_front_page() ) {
 					spacious_featured_image_slider();
 				}
@@ -218,8 +218,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 			}
 		}
 
-		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! spacious_options( 'spacious_header_title_hide', 0 ) ) ) {
-			if ( ! ( spacious_options( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
+		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
+			if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
 				<div class="header-post-title-container clearfix">
 					<div class="inner-wrap">
 						<div class="post-title-wrapper">

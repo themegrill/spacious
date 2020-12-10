@@ -28,15 +28,15 @@ class Spacious_Customizer_Partials {
 	 */
 	public static function read_more_text_render() { ?>
 		Hello!
-		<a class="read-more" href="<?php the_permalink(); ?>"><?php echo esc_html( spacious_options( 'spacious_read_more_text', __( 'Read more', 'spacious' ) ) ); ?></a>
+		<a class="read-more" href="<?php the_permalink(); ?>"><?php echo esc_html( get_theme_mod( 'spacious_read_more_text', __( 'Read more', 'spacious' ) ) ); ?></a>
 	<?php }
 
 	public static function spacious_header_info_text() {
-		if ( spacious_options( 'spacious_header_info_text', '' ) == '' ) {
+		if ( get_theme_mod( 'spacious_header_info_text', '' ) == '' ) {
 			return;
 		}
 
-		$spacious_header_info_text = '<div class="small-info-text"><p>' . spacious_options( 'spacious_header_info_text', '' ) . '</p></div>';
+		$spacious_header_info_text = '<div class="small-info-text"><p>' . get_theme_mod( 'spacious_header_info_text', '' ) . '</p></div>';
 
 		echo do_shortcode( $spacious_header_info_text );
 	}
@@ -47,14 +47,14 @@ class Spacious_Customizer_Partials {
 		if ( function_exists( 'bcn_display' ) ) {
 
 			echo '<div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">';
-			echo '<span class="breadcrumb-title">' . wp_kses_post( spacious_options( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>';
+			echo '<span class="breadcrumb-title">' . wp_kses_post( get_theme_mod( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>';
 			bcn_display();
 			echo '</div> <!-- .breadcrumb : NavXT -->';
 
 		} else if ( function_exists( 'yoast_breadcrumb' ) ) { // SEO by Yoast
 
 			yoast_breadcrumb(
-				'<div class="breadcrumb">' . '<span class="breadcrumb-title">' . wp_kses_post( spacious_options( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>',
+				'<div class="breadcrumb">' . '<span class="breadcrumb-title">' . wp_kses_post( get_theme_mod( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>',
 				'</div> <!-- .breadcrumb : Yoast -->'
 			);
 
@@ -66,7 +66,7 @@ class Spacious_Customizer_Partials {
 
 		<div class="taxonomy-description">
 			<?php
-			if ( spacious_options( 'spacious_term_description', 0 ) == 1 ) :
+			if ( get_theme_mod( 'spacious_term_description', 0 ) == 1 ) :
 				// Show term description for category.
 				$term_description = term_description();
 
@@ -83,7 +83,7 @@ class Spacious_Customizer_Partials {
 
 	public static function spacious_footer_copyright() {
 
-		$default_footer_value = spacious_options( 'spacious_footer_editor', __( 'Copyright &copy; ', 'spacious' ) . '[the-year] [site-link] ' . __( 'Theme by: ', 'spacious' ) . '[tg-link] ' . __( 'Powered by: ', 'spacious' ) . '[wp-link]' );
+		$default_footer_value = get_theme_mod( 'spacious_footer_editor', __( 'Copyright &copy; ', 'spacious' ) . '[the-year] [site-link] ' . __( 'Theme by: ', 'spacious' ) . '[tg-link] ' . __( 'Powered by: ', 'spacious' ) . '[wp-link]' );
 
 		$spacious_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
 

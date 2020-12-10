@@ -49,14 +49,14 @@ function spacious_customize_register( $wp_customize ) {
 	$spacious_themename = preg_replace( "/\W/", "_", strtolower( $spacious_themename ) );
 
 	/****************************************Start of the global Options****************************************/
-	$wp_customize->add_panel(
-		'spacious_global_options',
-		array(
-			'capabitity' => 'edit_theme_options',
-			'priority'   => 50,
-			'title'      => esc_html__( 'Global', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_panel(
+//		'spacious_global_options',
+//		array(
+//			'capabitity' => 'edit_theme_options',
+//			'priority'   => 50,
+//			'title'      => esc_html__( 'Global', 'spacious' ),
+//		)
+//	);
 
 	// Site primary color option.
 //	$wp_customize->add_section(
@@ -2027,7 +2027,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	// Active Callback for Retina Logo.
 	function spacious_retina_logo_option() {
-		if ( spacious_options( 'spacious_different_retina_logo', 0 ) == 1 ) {
+		if ( get_theme_mod( 'spacious_different_retina_logo', 0 ) == 1 ) {
 			return true;
 		}
 

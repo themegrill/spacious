@@ -20,22 +20,22 @@ if ( ! is_active_sidebar( 'spacious_footer_sidebar_one' ) &&
 	return;
 }
 
-if ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'one' ) {
+if ( get_theme_mod( 'spacious_footer_widget_column_select_type', 'four' ) == 'one' ) {
 	$footer_column_one   = 'tg-column-full';
 	$footer_column_two   = '';
 	$footer_column_three = '';
 	$footer_column_four  = '';
-} elseif ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'two' ) {
+} elseif ( get_theme_mod( 'spacious_footer_widget_column_select_type', 'four' ) == 'two' ) {
 	$footer_column_one   = 'tg-one-half';
 	$footer_column_two   = 'tg-one-half tg-one-half-last';
 	$footer_column_three = '';
 	$footer_column_four  = '';
-} elseif ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'three' ) {
+} elseif ( get_theme_mod( 'spacious_footer_widget_column_select_type', 'four' ) == 'three' ) {
 	$footer_column_one   = 'tg-one-third';
 	$footer_column_two   = 'tg-one-third tg-column-2';
 	$footer_column_three = 'tg-one-third tg-after-two-blocks-clearfix';
 	$footer_column_four  = '';
-} elseif ( spacious_options( 'spacious_footer_widget_column_select_type', 'four' ) == 'four' ) {
+} elseif ( get_theme_mod( 'spacious_footer_widget_column_select_type', 'four' ) == 'four' ) {
 	$footer_column_one   = 'tg-one-fourth tg-column-1';
 	$footer_column_two   = 'tg-one-fourth tg-column-2';
 	$footer_column_three = 'tg-one-fourth tg-after-two-blocks-clearfix tg-column-3';
