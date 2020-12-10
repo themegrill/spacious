@@ -40,7 +40,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 			 * Social Icons.
 			 */
 			array(
-				'name'    => 'spacious[social_link_activation_heading]',
+				'name'    => 'social_link_activation_heading',
 				'type'    => 'control',
 				'control' => 'spacious-title',
 				'label'   => esc_html__( 'Activate social links area', 'spacious' ),
@@ -49,7 +49,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links enable/disable option.
 			array(
-				'name'      => 'spacious[spacious_activate_social_links]',
+				'name'      => 'spacious_activate_social_links',
 				'default'   => 0,
 				'type'      => 'control',
 				'control'   => 'checkbox',
@@ -62,13 +62,13 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 			),
 
 			array(
-				'name'       => 'spacious[social_icon_heading]',
+				'name'       => 'social_icon_heading',
 				'type'       => 'control',
 				'control'    => 'spacious-title',
 				'label'      => esc_html__( 'Social Icon', 'spacious' ),
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious[spacious_social_link_activate]',
+					'spacious_social_link_activate',
 					'!=',
 					0,
 				),
@@ -93,14 +93,14 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links url option.
 			$configs[] = array(
-				'name'       => 'spacious[' . $key . ']',
+				'name'       =>  $key,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'url',
 				'label'      => sprintf( 'Add link for %1$s', $value ),
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious[spacious_social_link_activate]',
+					'spacious_social_link_activate',
 					'!=',
 					0,
 				),
@@ -108,14 +108,14 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links open in new tab enable/disable option.
 			$configs[] = array(
-				'name'       => 'spacious[' . $key . 'new_tab]',
+				'name'       =>  $key . 'new_tab',
 				'default'    => 0,
 				'type'       => 'control',
 				'control'    => 'checkbox',
 				'label'      => esc_html__( 'Check to show in new tab', 'spacious' ),
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious[spacious_social_link_activate]',
+					'spacious_social_link_activate',
 					'!=',
 					0,
 				),
@@ -123,12 +123,12 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links separator.
 			$configs[] = array(
-				'name'       => 'spacious[' . $key . '_additional]',
+				'name'       =>  $key . '_additional',
 				'type'       => 'control',
 				'control'    => 'spacious-divider',
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious[spacious_social_link_activate]',
+					'spacious_social_link_activate',
 					'!=',
 					0,
 				),

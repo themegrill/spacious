@@ -1570,56 +1570,56 @@ function spacious_customize_register( $wp_customize ) {
 
 	/*************************************Start of the Social Links Options*************************************/
 
-	$wp_customize->add_section(
-		'spacious_social_links_options',
-		array(
-			'capabitity' => 'edit_theme_options',
-			'priority'   => 75,
-			'title'      => esc_html__( 'Social Links', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_social_links_options',
+//		array(
+//			'capabitity' => 'edit_theme_options',
+//			'priority'   => 75,
+//			'title'      => esc_html__( 'Social Links', 'spacious' ),
+//		)
+//	);
 
 	// Heading for social link activation.
-	$wp_customize->add_setting(
-		'spacious[social_link_activation_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'social_link_activation_heading',
-			array(
-				'label'    => esc_html__( 'Activate social links area', 'spacious' ),
-				'section'  => 'spacious_social_links_options',
-				'settings' => 'spacious[social_link_activation_heading]',
-			)
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[social_link_activation_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'social_link_activation_heading',
+//			array(
+//				'label'    => esc_html__( 'Activate social links area', 'spacious' ),
+//				'section'  => 'spacious_social_links_options',
+//				'settings' => 'spacious[social_link_activation_heading]',
+//			)
+//		)
+//	);
 
 	// Social links activate option.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_activate_social_links]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'transport'         => $customizer_selective_refresh,
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_activate_social_links]',
-		array(
-			'type'     => 'checkbox',
-			'label'    => esc_html__( 'Check to activate social links area. You also need to activate the header top bar section in Header options to show this social links area', 'spacious' ),
-			'section'  => 'spacious_social_links_options',
-			'settings' => $spacious_themename . '[spacious_activate_social_links]',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_activate_social_links]',
+//		array(
+//			'default'           => 0,
+//			'type'              => 'option',
+//			'transport'         => $customizer_selective_refresh,
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_checkbox_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_activate_social_links]',
+//		array(
+//			'type'     => 'checkbox',
+//			'label'    => esc_html__( 'Check to activate social links area. You also need to activate the header top bar section in Header options to show this social links area', 'spacious' ),
+//			'section'  => 'spacious_social_links_options',
+//			'settings' => $spacious_themename . '[spacious_activate_social_links]',
+//		)
+//	);
 
 	// Selective refresh for social links enable
 	if ( isset( $wp_customize->selective_refresh ) ) {
@@ -1633,97 +1633,97 @@ function spacious_customize_register( $wp_customize ) {
 	}
 
 	// Heading for social icon.
-	$wp_customize->add_setting(
-		'spacious[social_icon_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[social_icon_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'social_icon_heading',
+//			array(
+//				'label'    => esc_html__( 'Social Icon', 'spacious' ),
+//				'section'  => 'spacious_social_links_options',
+//				'settings' => 'spacious[social_icon_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'social_icon_heading',
-			array(
-				'label'    => esc_html__( 'Social Icon', 'spacious' ),
-				'section'  => 'spacious_social_links_options',
-				'settings' => 'spacious[social_icon_heading]',
-			)
-		)
-	);
-
-	$spacious_social_links = array(
-		'spacious_social_facebook'  => esc_html__( 'Facebook', 'spacious' ),
-		'spacious_social_twitter'   => esc_html__( 'Twitter', 'spacious' ),
-		'spacious_social_instagram' => esc_html__( 'Instagram', 'spacious' ),
-		'spacious_social_linkedin'  => esc_html__( 'LinkedIn', 'spacious' ),
-	);
-
-	$i = 1;
-	foreach ( $spacious_social_links as $key => $value ) {
-
-		// adding social sites link
-		$wp_customize->add_setting( $spacious_themename . '[' . $key . ']',
-			array(
-				'default'           => '',
-				'type'              => 'option',
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw',
-			)
-		);
-
-		$wp_customize->add_control(
-			$spacious_themename . '[' . $key . ']',
-			array(
-				'label'   => sprintf( esc_html__( 'Add link for %1$s', 'spacious' ), $value ),
-				'section' => 'spacious_social_links_options',
-				'setting' => $spacious_themename . '[' . $key . ']',
-			)
-		);
-
-		// adding social open in new page tab setting
-		$wp_customize->add_setting(
-			$spacious_themename . '[' . $key . 'new_tab]',
-			array(
-				'default'           => 0,
-				'type'              => 'option',
-				'capability'        => 'edit_theme_options',
-				'sanitize_callback' => 'spacious_checkbox_sanitize',
-			)
-		);
-
-		$wp_customize->add_control(
-			$spacious_themename . '[' . $key . 'new_tab]',
-			array(
-				'type'    => 'checkbox',
-				'label'   => esc_html__( 'Check to show in new tab', 'spacious' ),
-				'section' => 'spacious_social_links_options',
-				'setting' => $spacious_themename . '[' . $key . 'new_tab]',
-			)
-		);
-
-		// divider for social link activation.
-		$wp_customize->add_setting(
-			'spacious[' . $key . '_additional]',
-			array(
-				'sanitize_callback' => false,
-			)
-		);
-
-		$wp_customize->add_control(
-			new Spacious_Divider_Control(
-				$wp_customize,
-				'spacious[' . $key . '_additional]',
-				array(
-					'section'  => 'spacious_social_links_options',
-					'settings' => 'spacious[' . $key . '_additional]',
-				)
-			)
-		);
-
-		$i++;
-
-	}
+//	$spacious_social_links = array(
+//		'spacious_social_facebook'  => esc_html__( 'Facebook', 'spacious' ),
+//		'spacious_social_twitter'   => esc_html__( 'Twitter', 'spacious' ),
+//		'spacious_social_instagram' => esc_html__( 'Instagram', 'spacious' ),
+//		'spacious_social_linkedin'  => esc_html__( 'LinkedIn', 'spacious' ),
+//	);
+//
+//	$i = 1;
+//	foreach ( $spacious_social_links as $key => $value ) {
+//
+//		// adding social sites link
+//		$wp_customize->add_setting( $spacious_themename . '[' . $key . ']',
+//			array(
+//				'default'           => '',
+//				'type'              => 'option',
+//				'capability'        => 'edit_theme_options',
+//				'sanitize_callback' => 'esc_url_raw',
+//			)
+//		);
+//
+//		$wp_customize->add_control(
+//			$spacious_themename . '[' . $key . ']',
+//			array(
+//				'label'   => sprintf( esc_html__( 'Add link for %1$s', 'spacious' ), $value ),
+//				'section' => 'spacious_social_links_options',
+//				'setting' => $spacious_themename . '[' . $key . ']',
+//			)
+//		);
+//
+//		// adding social open in new page tab setting
+//		$wp_customize->add_setting(
+//			$spacious_themename . '[' . $key . 'new_tab]',
+//			array(
+//				'default'           => 0,
+//				'type'              => 'option',
+//				'capability'        => 'edit_theme_options',
+//				'sanitize_callback' => 'spacious_checkbox_sanitize',
+//			)
+//		);
+//
+//		$wp_customize->add_control(
+//			$spacious_themename . '[' . $key . 'new_tab]',
+//			array(
+//				'type'    => 'checkbox',
+//				'label'   => esc_html__( 'Check to show in new tab', 'spacious' ),
+//				'section' => 'spacious_social_links_options',
+//				'setting' => $spacious_themename . '[' . $key . 'new_tab]',
+//			)
+//		);
+//
+//		// divider for social link activation.
+//		$wp_customize->add_setting(
+//			'spacious[' . $key . '_additional]',
+//			array(
+//				'sanitize_callback' => false,
+//			)
+//		);
+//
+//		$wp_customize->add_control(
+//			new Spacious_Divider_Control(
+//				$wp_customize,
+//				'spacious[' . $key . '_additional]',
+//				array(
+//					'section'  => 'spacious_social_links_options',
+//					'settings' => 'spacious[' . $key . '_additional]',
+//				)
+//			)
+//		);
+//
+//		$i++;
+//
+//	}
 
 	/****************************************Start of the Footer Options****************************************/
 
