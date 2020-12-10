@@ -1519,54 +1519,54 @@ function spacious_customize_register( $wp_customize ) {
 //	);
 
 	// Page section.
-	$wp_customize->add_section(
-		'spacious_page_section',
-		array(
-			'title' => esc_html__( 'Page', 'spacious' ),
-			'panel' => 'spacious_content_options',
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_page_section',
+//		array(
+//			'title' => esc_html__( 'Page', 'spacious' ),
+//			'panel' => 'spacious_content_options',
+//		)
+//	);
 
 	// Heading for featured image in page.
-	$wp_customize->add_setting(
-		'spacious[featured_image_page_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'featured_image_page_heading',
-			array(
-				'label'    => esc_html__( 'Featured Image in Single Page', 'spacious' ),
-				'section'  => 'spacious_page_section',
-				'settings' => 'spacious[featured_image_page_heading]',
-			)
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[featured_image_page_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'featured_image_page_heading',
+//			array(
+//				'label'    => esc_html__( 'Featured Image in Single Page', 'spacious' ),
+//				'section'  => 'spacious_page_section',
+//				'settings' => 'spacious[featured_image_page_heading]',
+//			)
+//		)
+//	);
 
 	// Featured image in single page activate option.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_featured_image_single_page]',
-		array(
-			'default'           => 0,
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_checkbox_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		$spacious_themename . '[spacious_featured_image_single_page]',
-		array(
-			'type'     => 'checkbox',
-			'label'    => esc_html__( 'Check to enable the featured image in single page.', 'spacious' ),
-			'section'  => 'spacious_page_section',
-			'settings' => $spacious_themename . '[spacious_featured_image_single_page]',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_featured_image_single_page]',
+//		array(
+//			'default'           => 0,
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_checkbox_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		$spacious_themename . '[spacious_featured_image_single_page]',
+//		array(
+//			'type'     => 'checkbox',
+//			'label'    => esc_html__( 'Check to enable the featured image in single page.', 'spacious' ),
+//			'section'  => 'spacious_page_section',
+//			'settings' => $spacious_themename . '[spacious_featured_image_single_page]',
+//		)
+//	);
 
 	/*************************************Start of the Social Links Options*************************************/
 

@@ -34,7 +34,7 @@ class Spacious_Customize_Page_Options extends Spacious_Customize_Base_Option {
 		$configs = array(
 
 			array(
-				'name'     => 'spacious[featured_image_page_heading]',
+				'name'     => 'featured_image_page_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Featured Image in Single Page', 'spacious' ),
@@ -44,7 +44,7 @@ class Spacious_Customize_Page_Options extends Spacious_Customize_Base_Option {
 
 			// Featured image display in single page option.
 			array(
-				'name'        => 'spacious[spacious_featured_image_single_page]',
+				'name'        => 'spacious_featured_image_single_page',
 				'default'     => 0,
 				'type'        => 'control',
 				'control'     => 'checkbox',
