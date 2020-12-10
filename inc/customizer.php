@@ -13,12 +13,12 @@ function spacious_customize_register( $wp_customize ) {
 //	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-upsell-section.php';
 
 	// Include control classes.
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-heading-control.php';
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-divider-control.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-text-area-control.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-editor-custom-control.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-typography-control.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-heading-control.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-divider-control.php';
 
 	$wp_customize->register_control_type( 'Spacious_Heading_Control' );
 	$wp_customize->register_control_type( 'Spacious_Divider_Control' );
@@ -120,61 +120,61 @@ function spacious_customize_register( $wp_customize ) {
 //	);
 
 	// Global typography options.
-	$wp_customize->add_section(
-		'spacious_global_typography_section',
-		array(
-			'panel'    => 'spacious_global_options',
-			'priority' => 7,
-			'title'    => esc_html__( 'Typography', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_global_typography_section',
+//		array(
+//			'panel'    => 'spacious_global_options',
+//			'priority' => 7,
+//			'title'    => esc_html__( 'Typography', 'spacious' ),
+//		)
+//	);
 
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_content_font]',
-		array(
-			'default'           => 'Lato',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_font_sanitize',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_content_font]',
+//		array(
+//			'default'           => 'Lato',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_font_sanitize',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Typography_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_content_font]',
-			array(
-				'priority' => 8,
-				'label'    => esc_html__( 'Body', 'spacious' ),
-				'section'  => 'spacious_global_typography_section',
-				'settings' => $spacious_themename . '[spacious_content_font]',
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Typography_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_content_font]',
+//			array(
+//				'priority' => 8,
+//				'label'    => esc_html__( 'Body', 'spacious' ),
+//				'section'  => 'spacious_global_typography_section',
+//				'settings' => $spacious_themename . '[spacious_content_font]',
+//			)
+//		)
+//	);
 
-	// Heading Typography option.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_titles_font]',
-		array(
-			'default'           => 'Lato',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_font_sanitize',
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Typography_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_titles_font]',
-			array(
-				'priority' => 8,
-				'label'    => esc_html__( 'Headings', 'spacious' ),
-				'section'  => 'spacious_global_typography_section',
-				'settings' => $spacious_themename . '[spacious_titles_font]',
-			)
-		)
-	);
+//	// Heading Typography option.
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_titles_font]',
+//		array(
+//			'default'           => 'Lato',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_font_sanitize',
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Typography_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_titles_font]',
+//			array(
+//				'priority' => 8,
+//				'label'    => esc_html__( 'Headings', 'spacious' ),
+//				'section'  => 'spacious_global_typography_section',
+//				'settings' => $spacious_themename . '[spacious_titles_font]',
+//			)
+//		)
+//	);
 
 	// Global Background options.
 //	$wp_customize->add_section(

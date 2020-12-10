@@ -37,7 +37,7 @@ class Spacious_Customize_Typography_options extends Spacious_Customize_Base_Opti
 			 * Content.
 			 */
 			array(
-				'name'     => 'spacious[spacious_body_font_heading]',
+				'name'     => 'spacious_body_font_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Body', 'spacious' ),
@@ -46,7 +46,7 @@ class Spacious_Customize_Typography_options extends Spacious_Customize_Base_Opti
 			),
 
 			array(
-				'name'     => 'spacious[spacious_content_font_typography]',
+				'name'     => 'spacious_content_font_typography',
 				'default'  => array(
 					'font-family' => 'Lato',
 				),
@@ -69,7 +69,7 @@ class Spacious_Customize_Typography_options extends Spacious_Customize_Base_Opti
 			),
 
 			array(
-				'name'     => 'spacious[spacious_titles_font_typography]',
+				'name'     => 'spacious_titles_font_typography',
 				'default'  => array(
 					'font-family' => 'Lato',
 				),
