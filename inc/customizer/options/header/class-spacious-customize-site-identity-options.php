@@ -34,6 +34,32 @@ class Spacious_Customize_Site_Identity_Options extends Spacious_Customize_Base_O
 		$configs = array(
 
 			array(
+				'name'     => 'logo_text_visibility_heading',
+				'type'     => 'control',
+				'control'  => 'spacious-title',
+				'label'    => esc_html__( 'Visibility', 'spacious' ),
+				'section'  => 'title_tagline',
+				'priority' => 0,
+			),
+
+			// Header logo placement option.
+			array(
+				'name'     => 'spacious_show_header_logo_text',
+				'default'  => 'text_only',
+				'type'     => 'control',
+				'control'  => 'radio',
+				'label'    => esc_html__( 'Choose the option that you want.', 'spacious' ),
+				'section'  => 'title_tagline',
+				'choices'  => array(
+					'logo_only' => esc_html__( 'Header Logo Only', 'spacious' ),
+					'text_only' => esc_html__( 'Header Text Only', 'spacious' ),
+					'both'      => esc_html__( 'Show Both', 'spacious' ),
+					'none'      => esc_html__( 'Disable', 'spacious' ),
+				),
+				'priority' => 1,
+			),
+
+			array(
 				'name'     => 'site_logo_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
@@ -43,7 +69,7 @@ class Spacious_Customize_Site_Identity_Options extends Spacious_Customize_Base_O
 			),
 
 			array(
-				'name'     => 'spacious[spacious_different_retina_logo]',
+				'name'     => 'spacious_different_retina_logo',
 				'type'     => 'control',
 				'control'  => 'checkbox',
 				'default'  => 0,
@@ -53,21 +79,21 @@ class Spacious_Customize_Site_Identity_Options extends Spacious_Customize_Base_O
 			),
 
 			array(
-				'name'       => 'spacious[spacious_retina_logo_upload]',
+				'name'       => 'spacious_retina_logo_upload',
 				'type'       => 'control',
 				'control'    => 'image',
 				'label'      => esc_html__( 'Retina Logo', 'spacious' ),
 				'section'    => 'title_tagline',
 				'priority'   => 7,
 				'dependency' => array(
-					'spacious[spacious_different_retina_logo]',
+					'spacious_different_retina_logo',
 					'!=',
 					0,
 				),
 			),
 
 			array(
-				'name'     => 'spacious[site_icon_heading]',
+				'name'     => 'site_icon_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Site Icon', 'spacious' ),
@@ -76,7 +102,7 @@ class Spacious_Customize_Site_Identity_Options extends Spacious_Customize_Base_O
 			),
 
 			array(
-				'name'     => 'spacious[site_title_heading]',
+				'name'     => 'site_title_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Site Title', 'spacious' ),
@@ -85,7 +111,7 @@ class Spacious_Customize_Site_Identity_Options extends Spacious_Customize_Base_O
 			),
 
 			array(
-				'name'     => 'spacious[site_tagline_heading]',
+				'name'     => 'site_tagline_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Site Tagline', 'spacious' ),
@@ -97,7 +123,7 @@ class Spacious_Customize_Site_Identity_Options extends Spacious_Customize_Base_O
 			 * Colors.
 			 */
 			array(
-				'name'     => 'spacious[header_text_color_heading]',
+				'name'     => 'header_text_color_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Colors', 'spacious' ),
