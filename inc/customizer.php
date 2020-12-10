@@ -662,93 +662,93 @@ function spacious_customize_register( $wp_customize ) {
 //		)
 //	);
 
-	// Header Top bar activate option
-	$wp_customize->add_section(
-		'spacious_header_top_bar',
-		array(
-			'priority' => 2,
-			'title'    => esc_html__( 'Top Bar', 'spacious' ),
-			'panel'    => 'spacious_header_options',
-		)
-	);
+//	// Header Top bar activate option
+//	$wp_customize->add_section(
+//		'spacious_header_top_bar',
+//		array(
+//			'priority' => 2,
+//			'title'    => esc_html__( 'Top Bar', 'spacious' ),
+//			'panel'    => 'spacious_header_options',
+//		)
+//	);
+//
+//	// Heading for Activate top bar.
+//	$wp_customize->add_setting(
+//		'spacious[header_top_bar_active_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
 
-	// Heading for Activate top bar.
-	$wp_customize->add_setting(
-		'spacious[header_top_bar_active_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'header_top_bar_active_heading',
+//			array(
+//				'label'    => esc_html__( 'Activate Header Top Bar', 'spacious' ),
+//				'section'  => 'spacious_header_top_bar',
+//				'settings' => 'spacious[header_top_bar_active_heading]',
+//			)
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'header_top_bar_active_heading',
-			array(
-				'label'    => esc_html__( 'Activate Header Top Bar', 'spacious' ),
-				'section'  => 'spacious_header_top_bar',
-				'settings' => 'spacious[header_top_bar_active_heading]',
-			)
-		)
-	);
-
-	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_top_header_bar]', array(
-		'default'           => 0,
-		'type'              => 'option',
-		'capability'        => 'edit_theme_options',
-		'sanitize_callback' => 'spacious_checkbox_sanitize',
-	) );
-
-	$wp_customize->add_control( $spacious_themename . '[spacious_activate_top_header_bar]', array(
-		'type'     => 'checkbox',
-		'label'    => esc_html__( 'Check to show top header bar. The top header bar includes social icons area, small text area and menu area.', 'spacious' ),
-		'section'  => 'spacious_header_top_bar',
-		'settings' => $spacious_themename . '[spacious_activate_top_header_bar]',
-	) );
+//	$wp_customize->add_setting( $spacious_themename . '[spacious_activate_top_header_bar]', array(
+//		'default'           => 0,
+//		'type'              => 'option',
+//		'capability'        => 'edit_theme_options',
+//		'sanitize_callback' => 'spacious_checkbox_sanitize',
+//	) );
+//
+//	$wp_customize->add_control( $spacious_themename . '[spacious_activate_top_header_bar]', array(
+//		'type'     => 'checkbox',
+//		'label'    => esc_html__( 'Check to show top header bar. The top header bar includes social icons area, small text area and menu area.', 'spacious' ),
+//		'section'  => 'spacious_header_top_bar',
+//		'settings' => $spacious_themename . '[spacious_activate_top_header_bar]',
+//	) );
 
 	// Heading for header info text.
-	$wp_customize->add_setting(
-		'spacious[header_info_text_heading]',
-		array(
-			'sanitize_callback' => false,
-		)
-	);
-
-	$wp_customize->add_control(
-		new Spacious_Heading_Control(
-			$wp_customize,
-			'header_info_text_heading',
-			array(
-				'label'    => esc_html__( 'Header Info Text', 'spacious' ),
-				'section'  => 'spacious_header_top_bar',
-				'settings' => 'spacious[header_info_text_heading]',
-				'priority' => 10,
-			)
-		)
-	);
+//	$wp_customize->add_setting(
+//		'spacious[header_info_text_heading]',
+//		array(
+//			'sanitize_callback' => false,
+//		)
+//	);
+//
+//	$wp_customize->add_control(
+//		new Spacious_Heading_Control(
+//			$wp_customize,
+//			'header_info_text_heading',
+//			array(
+//				'label'    => esc_html__( 'Header Info Text', 'spacious' ),
+//				'section'  => 'spacious_header_top_bar',
+//				'settings' => 'spacious[header_info_text_heading]',
+//				'priority' => 10,
+//			)
+//		)
+//	);
 
 	// Header area small text option.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_header_info_text]',
-		array(
-			'default'           => '',
-			'type'              => 'option',
-			'transport'         => $customizer_selective_refresh,
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_editor_sanitize',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_header_info_text]',
+//		array(
+//			'default'           => '',
+//			'type'              => 'option',
+//			'transport'         => $customizer_selective_refresh,
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_editor_sanitize',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Editor_Custom_Control(
-			$wp_customize, $spacious_themename . '[spacious_header_info_text]',
-			array(
-				'label'   => esc_html__( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
-				'section' => 'spacious_header_top_bar',
-				'setting' => $spacious_themename . '[spacious_header_info_text]',
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Editor_Custom_Control(
+//			$wp_customize, $spacious_themename . '[spacious_header_info_text]',
+//			array(
+//				'label'   => esc_html__( 'You can add phone numbers, other contact info here as you like. This box also accepts shortcodes.', 'spacious' ),
+//				'section' => 'spacious_header_top_bar',
+//				'setting' => $spacious_themename . '[spacious_header_info_text]',
+//			)
+//		)
+//	);
 
 //	// Register `SPACIOUS_Upsell_Section` type section.
 //	$wp_customize->register_section_type( 'SPACIOUS_Upsell_Section' );

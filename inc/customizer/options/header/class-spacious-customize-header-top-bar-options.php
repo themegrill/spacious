@@ -40,7 +40,7 @@ class Spacious_Customize_Header_Top_Bar_Options extends Spacious_Customize_Base_
 			 * Tob bar Activation.
 			 */
 			array(
-				'name'     => 'spacious[header_top_bar_active_heading]',
+				'name'     => 'header_top_bar_active_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Activate Header Top Bar', 'spacious' ),
@@ -49,7 +49,7 @@ class Spacious_Customize_Header_Top_Bar_Options extends Spacious_Customize_Base_
 			),
 
 			array(
-				'name'     => 'spacious[spacious_activate_top_header_bar]',
+				'name'     => 'spacious_activate_top_header_bar',
 				'default'  => 0,
 				'type'     => 'control',
 				'control'  => 'checkbox',
@@ -60,21 +60,21 @@ class Spacious_Customize_Header_Top_Bar_Options extends Spacious_Customize_Base_
 
 			// Header Info text option.
 			array(
-				'name'       => 'spacious[header_info_text_heading]',
+				'name'       => 'header_info_text_heading',
 				'type'       => 'control',
 				'control'    => 'spacious-title',
 				'label'      => esc_html__( 'Header Info Text', 'spacious' ),
 				'section'    => 'spacious_header_top_bar',
 				'priority'   => 20,
 				'dependency' => array(
-					'spacious[spacious_activate_top_header_bar]',
+					'spacious_activate_top_header_bar',
 					'!=',
 					0,
 				),
 			),
 
 			array(
-				'name'       => 'spacious[spacious_header_info_text]',
+				'name'       => 'spacious_header_info_text',
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'textarea',
@@ -89,7 +89,7 @@ class Spacious_Customize_Header_Top_Bar_Options extends Spacious_Customize_Base_
 					),
 				),
 				'dependency' => array(
-					'spacious[spacious_activate_top_header_bar]',
+					'spacious_activate_top_header_bar',
 					'!=',
 					0,
 				),
