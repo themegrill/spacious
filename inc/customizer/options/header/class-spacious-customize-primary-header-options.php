@@ -34,7 +34,7 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 		$configs = array(
 
 			array(
-				'name'     => 'spacious[header_primary_menu_display_type]',
+				'name'     => 'header_display_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Header Display Type', 'spacious' ),
@@ -44,7 +44,7 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 
 			// Main total header area display type option.
 			array(
-				'name'     => 'spacious[spacious_header_display_type]',
+				'name'     => 'spacious_header_display_type',
 				'default'  => 'one',
 				'type'     => 'control',
 				'control'  => 'spacious-radio-image',
@@ -54,14 +54,6 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 					'one'   => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/header-left.png',
-					),
-					'two'   => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/header-right.png',
-					),
-					'three' => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/header-center.png',
 					),
 					'four'  => array(
 						'label' => '',
