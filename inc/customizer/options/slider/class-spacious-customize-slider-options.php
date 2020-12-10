@@ -37,7 +37,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 
 			// Slider Activate heading.
 			array(
-				'name'    => 'spacious[slider_activate_heading]',
+				'name'    => 'slider_activate_heading',
 				'type'    => 'control',
 				'control' => 'spacious-title',
 				'label'   => esc_html__( 'Activate slider', 'spacious' ),
@@ -45,7 +45,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 			),
 
 			array(
-				'name'      => 'spacious[spacious_activate_slider]',
+				'name'      => 'spacious_activate_slider',
 				'default'   => 0,
 				'type'      => 'control',
 				'control'   => 'checkbox',
@@ -60,20 +60,20 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 
 			// slider status heading.
 			array(
-				'name'       => 'spacious[slider_status_heading]',
+				'name'       => 'slider_status_heading',
 				'type'       => 'control',
 				'control'    => 'spacious-title',
 				'label'      => esc_html__( 'Disable slider in Posts page', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
 			),
 
 			array(
-				'name'      => 'spacious[spacious_blog_slider]',
+				'name'      => 'spacious_blog_slider',
 				'default'   => 0,
 				'type'      => 'control',
 				'control'   => 'checkbox',
@@ -92,83 +92,83 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 		for ( $i = 1; $i <= 5; $i++ ) {
 
 			$configs[] = array(
-				'name'       => 'spacious[slider_image_upload_heading' . $i . ' ]',
+				'name'       => 'slider_image_upload_heading' . $i,
 				'type'       => 'control',
 				'control'    => 'spacious-title',
 				'label'      => sprintf( esc_html__( 'Slider Content #%1$s', 'spacious' ), $i ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
 			);
 
 			$configs[] = array(
-				'name'       => 'spacious[spacious_slider_image' . $i . ']',
+				'name'       => 'spacious_slider_image' . $i,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'image',
 				'label'      => esc_html__( 'Upload slider image.', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
 			);
 
 			$configs[] = array(
-				'name'       => 'spacious[spacious_slider_title' . $i . ']',
+				'name'       => 'spacious_slider_title' . $i,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'text',
 				'label'      => esc_html__( 'Enter title for your slider.', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
 			);
 
 			$configs[] = array(
-				'name'       => 'spacious[spacious_slider_text' . $i . ']',
+				'name'       => 'spacious_slider_text' . $i,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'textarea',
 				'label'      => esc_html__( 'Enter your slider description.', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
 			);
 
 			$configs[] = array(
-				'name'       => 'spacious[spacious_slider_button_text' . $i . ']',
+				'name'       => 'spacious_slider_button_text' . $i,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'text',
 				'label'      => esc_html__( 'Enter the button text. Default is "Read more"', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
 			);
 
 			$configs[] = array(
-				'name'       => 'spacious[spacious_slider_link' . $i . ']',
+				'name'       => 'spacious_slider_link' . $i,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'url',
 				'label'      => esc_html__( 'Enter link to redirect slider when clicked', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious[spacious_activate_slider]',
+					'spacious_activate_slider]',
 					'!=',
 					0,
 				),
