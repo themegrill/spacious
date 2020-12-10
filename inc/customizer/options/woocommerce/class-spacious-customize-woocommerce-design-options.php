@@ -41,7 +41,7 @@ class Spacious_Customize_WooCommerce_Design_Options extends Spacious_Customize_B
 		$configs = array(
 
 			array(
-				'name'     => 'spacious[woocommerce_cart_icon_heading]',
+				'name'     => 'woocommerce_cart_icon_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Cart Icon', 'spacious' ),
@@ -50,7 +50,7 @@ class Spacious_Customize_WooCommerce_Design_Options extends Spacious_Customize_B
 			),
 
 			array(
-				'name'     => 'spacious[spacious_cart_icon]',
+				'name'     => 'spacious_cart_icon',
 				'default'  => 0,
 				'type'     => 'control',
 				'control'  => 'checkbox',

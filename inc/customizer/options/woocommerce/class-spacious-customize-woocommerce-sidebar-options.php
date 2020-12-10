@@ -41,7 +41,7 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 		$configs = array(
 
 			array(
-				'name'     => 'spacious[woocommerce_sidebar_layout_heading]',
+				'name'     => 'woocommerce_sidebar_layout_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Archive Page Layout', 'spacious' ),
@@ -52,7 +52,7 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 
 			// WooCommerce shop page layout option.
 			array(
-				'name'       => 'spacious[spacious_woo_archive_layout]',
+				'name'       => 'spacious_woo_archive_layout',
 				'default'    => 'no_sidebar_full_width',
 				'type'       => 'control',
 				'control'    => 'spacious-radio-image',
@@ -71,17 +71,13 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
 					),
-					'no_sidebar_content_centered' => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
-					),
 				),
 				'image_col'  => 3,
 				'priority'   => 30,
 			),
 
 			array(
-				'name'     => 'spacious[woocommerce_product_sidebar_layout_heading]',
+				'name'     => 'woocommerce_product_sidebar_layout_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Product Page Layout', 'spacious' ),
@@ -91,7 +87,7 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 
 			// WooCommerce archive page layout option.
 			array(
-				'name'       => 'spacious[spacious_woo_product_layout]',
+				'name'       => 'spacious_woo_product_layout',
 				'default'    => 'right_sidebar',
 				'type'       => 'control',
 				'control'    => 'spacious-radio-image',
@@ -109,10 +105,6 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 					'no_sidebar_full_width'       => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
-					),
-					'no_sidebar_content_centered' => array(
-						'label' => '',
-						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
 					),
 				),
 				'image_col'  => 3,
