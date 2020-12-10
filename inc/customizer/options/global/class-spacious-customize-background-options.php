@@ -39,7 +39,7 @@ class Spacious_Customize_Background_Options extends Spacious_Customize_Base_Opti
 			 */
 			// Outside container design options heading separator.
 			array(
-				'name'     => 'spacious[global_background_heading]',
+				'name'     => 'global_background_heading',
 				'type'     => 'control',
 				'control'  => 'spacious-title',
 				'label'    => esc_html__( 'Outside Container', 'spacious' ),
