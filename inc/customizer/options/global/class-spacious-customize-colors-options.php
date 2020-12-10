@@ -38,7 +38,7 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 			 */
 			// Primary color option.
 			array(
-				'name'     => 'spacious[spacious_primary_color]',
+				'name'     => 'spacious_primary_color',
 				'default'  => '#0FBE7C',
 				'type'     => 'control',
 				'control'  => 'spacious-color',
@@ -49,7 +49,7 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 
 			// Skin color option.
 			array(
-				'name'     => 'spacious[spacious_color_skin]',
+				'name'     => 'spacious_color_skin',
 				'default'  => 'light',
 				'type'     => 'control',
 				'control'  => 'spacious-radio-image',

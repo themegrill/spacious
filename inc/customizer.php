@@ -10,7 +10,7 @@
 function spacious_customize_register( $wp_customize ) {
 
 	// Custom customizer section classes.
-	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-upsell-section.php';
+//	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-upsell-section.php';
 
 	// Include control classes.
 	require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-image-radio-control.php';
@@ -59,65 +59,65 @@ function spacious_customize_register( $wp_customize ) {
 	);
 
 	// Site primary color option.
-	$wp_customize->add_section(
-		'spacious_global_color_setting',
-		array(
-			'panel'    => 'spacious_global_options',
-			'priority' => 7,
-			'title'    => esc_html__( 'Colors', 'spacious' ),
-		)
-	);
+//	$wp_customize->add_section(
+//		'spacious_global_color_setting',
+//		array(
+//			'panel'    => 'spacious_global_options',
+//			'priority' => 7,
+//			'title'    => esc_html__( 'Colors', 'spacious' ),
+//		)
+//	);
 
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_primary_color]',
-		array(
-			'default'              => '#0FBE7C',
-			'type'                 => 'option',
-			'transport'            => 'postMessage',
-			'capability'           => 'edit_theme_options',
-			'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
-			'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
-		)
-	);
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_primary_color]',
+//		array(
+//			'default'              => '#0FBE7C',
+//			'type'                 => 'option',
+//			'transport'            => 'postMessage',
+//			'capability'           => 'edit_theme_options',
+//			'sanitize_callback'    => 'spacious_color_option_hex_sanitize',
+//			'sanitize_js_callback' => 'spacious_color_escaping_option_sanitize',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			$spacious_themename . '[spacious_primary_color]',
-			array(
-				'label'    => esc_html__( 'Primary Color', 'spacious' ),
-				'section'  => 'spacious_global_color_setting',
-				'settings' => $spacious_themename . '[spacious_primary_color]',
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new WP_Customize_Color_Control(
+//			$wp_customize,
+//			$spacious_themename . '[spacious_primary_color]',
+//			array(
+//				'label'    => esc_html__( 'Primary Color', 'spacious' ),
+//				'section'  => 'spacious_global_color_setting',
+//				'settings' => $spacious_themename . '[spacious_primary_color]',
+//			)
+//		)
+//	);
 
-	// Site dark light skin option.
-	$wp_customize->add_setting(
-		$spacious_themename . '[spacious_color_skin]',
-		array(
-			'default'           => 'light',
-			'type'              => 'option',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'spacious_radio_select_sanitize',
-		)
-	);
+//	// Site dark light skin option.
+//	$wp_customize->add_setting(
+//		$spacious_themename . '[spacious_color_skin]',
+//		array(
+//			'default'           => 'light',
+//			'type'              => 'option',
+//			'capability'        => 'edit_theme_options',
+//			'sanitize_callback' => 'spacious_radio_select_sanitize',
+//		)
+//	);
 
-	$wp_customize->add_control(
-		new Spacious_Image_Radio_Control( $wp_customize,
-			$spacious_themename . '[spacious_color_skin]',
-			array(
-				'type'     => 'radio',
-				'label'    => esc_html__( 'Color Skin', 'spacious' ),
-				'section'  => 'spacious_global_color_setting',
-				'settings' => $spacious_themename . '[spacious_color_skin]',
-				'choices'  => array(
-					'light' => SPACIOUS_ADMIN_IMAGES_URL . '/light-color.jpg',
-					'dark'  => SPACIOUS_ADMIN_IMAGES_URL . '/dark-color.jpg',
-				),
-			)
-		)
-	);
+//	$wp_customize->add_control(
+//		new Spacious_Image_Radio_Control( $wp_customize,
+//			$spacious_themename . '[spacious_color_skin]',
+//			array(
+//				'type'     => 'radio',
+//				'label'    => esc_html__( 'Color Skin', 'spacious' ),
+//				'section'  => 'spacious_global_color_setting',
+//				'settings' => $spacious_themename . '[spacious_color_skin]',
+//				'choices'  => array(
+//					'light' => SPACIOUS_ADMIN_IMAGES_URL . '/light-color.jpg',
+//					'dark'  => SPACIOUS_ADMIN_IMAGES_URL . '/dark-color.jpg',
+//				),
+//			)
+//		)
+//	);
 
 	// Global typography options.
 	$wp_customize->add_section(
@@ -750,20 +750,20 @@ function spacious_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Register `SPACIOUS_Upsell_Section` type section.
-	$wp_customize->register_section_type( 'SPACIOUS_Upsell_Section' );
-
-	// Add `SPACIOUS_Upsell_Section` to display pro link.
-	$wp_customize->add_section(
-		new SPACIOUS_Upsell_Section( $wp_customize, 'spacious_upsell_section',
-			array(
-				'title'      => esc_html__( 'View PRO version', 'spacious' ),
-				'url'        => 'https://themegrill.com/spacious-pricing/?utm_source=spacious-customizer&utm_medium=view-pricing-link&utm_campaign=upgrade',
-				'capability' => 'edit_theme_options',
-				'priority'   => 1,
-			)
-		)
-	);
+//	// Register `SPACIOUS_Upsell_Section` type section.
+//	$wp_customize->register_section_type( 'SPACIOUS_Upsell_Section' );
+//
+//	// Add `SPACIOUS_Upsell_Section` to display pro link.
+//	$wp_customize->add_section(
+//		new SPACIOUS_Upsell_Section( $wp_customize, 'spacious_upsell_section',
+//			array(
+//				'title'      => esc_html__( 'View PRO version', 'spacious' ),
+//				'url'        => 'https://themegrill.com/spacious-pricing/?utm_source=spacious-customizer&utm_medium=view-pricing-link&utm_campaign=upgrade',
+//				'capability' => 'edit_theme_options',
+//				'priority'   => 1,
+//			)
+//		)
+//	);
 	// Selective refresh for header information text
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( $spacious_themename . '[spacious_header_info_text]', array(

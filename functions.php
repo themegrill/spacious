@@ -403,11 +403,15 @@ require_once SPACIOUS_INCLUDES_DIR . '/custom-header.php';
 require_once SPACIOUS_INCLUDES_DIR . '/functions.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer.php';
 require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
+require_once( SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php' );
+require_once( SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php' );
 
 require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
 
 /** Load Widgets and Widgetized Area */
 require_once SPACIOUS_WIDGETS_DIR . '/widgets.php';
+
+define( 'SPACIOUS_CUSTOMIZER_DIR', SPACIOUS_INCLUDES_DIR . '/customizer' );
 
 /**
  * Detect plugin. For use on Front End only.
