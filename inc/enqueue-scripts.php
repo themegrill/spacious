@@ -28,104 +28,14 @@ function spacious_scripts_styles_method() {
 	wp_style_add_data( 'spacious_style', 'rtl', 'replace' );
 
 	if ( get_theme_mod( 'spacious_color_skin', 'light' ) == 'dark' ) {
-		wp_enqueue_style( 'spacious_dark_style', SPACIOUS_CSS_URL . '/dark' . $suffix . '.css' );
+		wp_enqueue_style( 'spacious_dark_style', SPACIOUS_CSS_URL . '/dark.css' );
 	}
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'spacious-genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3.1' );
 
 	// Enqueue font-awesome style.
-	wp_enqueue_style( 'spacious-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome' . $suffix . '.css', array(), '4.6.3' );
-
-	/**
-	 * Adds JavaScript to pages with the comment form to support
-	 * sites with threaded comments (when in use).
-	 */
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	// Sticky menu.
-	if ( get_theme_mod( 'spacious_sticky_menu', 0 ) == 1 ) {
-		wp_enqueue_script( 'headroom', SPACIOUS_JS_URL . '/headroom' . $suffix . '.js', array(), false, true );
-		wp_enqueue_script( 'jQuery-headroom', SPACIOUS_JS_URL . '/jQuery.headroom' . $suffix . '.js', array(), false, true );
-	}
-
-	/**
-	 * Enqueue Slider setup js file.
-	 */
-	// Register jQuery Cycle 2 JS
-	wp_register_script( 'jquery_cycle', SPACIOUS_JS_URL . '/jquery.cycle2' . $suffix . '.js', array( 'jquery' ), '2.1.6', true );
-	wp_register_script( 'jquery-swipe', SPACIOUS_JS_URL . '/jquery.cycle2.swipe' . $suffix . '.js', array( 'jquery' ), false, true );
-	wp_register_script( 'jquery-cycle2-carousel', SPACIOUS_JS_URL . '/jquery.cycle2.carousel' . $suffix . '.js', array( 'jquery' ), false, true );
-
-
-	if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
-
-		$transition_effect   = get_theme_mod( 'spacious_slider_transition_effect', 'fade' );
-		$transition_delay    = get_theme_mod( 'spacious_slider_transition_delay', 4 );
-		$transition_duration = get_theme_mod( 'spacious_slider_transition_length', 1 );
-		$pauseonhover        = get_theme_mod( 'spacious_slider_pause_on_hover_option', 1 );
-		$random_order        = get_theme_mod( 'spacious_slider_random_order_option', false );
-
-		$transition_delay    = intval( $transition_delay );
-		$transition_duration = intval( $transition_duration );
-
-		if ( $transition_delay != 0 ) {
-			$transition_delay = $transition_delay * 1000;
-		} else {
-			$transition_delay = 4000;
-		}
-
-		if ( $transition_duration != 0 ) {
-			$transition_duration = $transition_duration * 1000;
-		} else {
-			$transition_duration = 1000;
-		}
-		if ( ( get_theme_mod( 'spacious_slider_status', 'home_front_page' ) == 'all_page' ) || is_front_page() || ( is_home() && get_theme_mod( 'spacious_slider_status', 'home_front_page' ) == 'home_front_page' ) ) {
-			wp_enqueue_script( 'jquery_cycle' );
-			wp_enqueue_script( 'jquery-swipe' );
-			wp_localize_script( 'jquery_cycle', 'spacious_slider_value',
-				array(
-					'transition_effect'   => $transition_effect,
-					'transition_delay'    => $transition_delay,
-					'transition_duration' => $transition_duration,
-					'pauseonhover'        => $pauseonhover,
-					'random_order'        => $random_order,
-				)
-			);
-		}
-	}
-
-	// Waypoints Script Register
-	wp_register_script( 'jquery-waypoints', SPACIOUS_JS_URL . '/waypoints' . $suffix . '.js', array( 'jquery' ), '2.0.3', true );
-
-	// CounterUp Script Register
-	wp_register_script( 'jquery-counterup', SPACIOUS_JS_URL . '/jquery.counterup' . $suffix . '.js', array( 'jquery' ), false, true );
-
-	// Theia Sticky Sidebar enqueue
-	if ( get_theme_mod( 'spacious_sticky_content_sidebar', '0' ) == '1' ) {
-		wp_enqueue_script( 'theia-sticky-sidebar', SPACIOUS_JS_URL . '/theia-sticky-sidebar/theia-sticky-sidebar' . $suffix . '.js', array( 'jquery' ), '1.7.0', true );
-		wp_enqueue_script( 'ResizeSensor', SPACIOUS_JS_URL . '/theia-sticky-sidebar/ResizeSensor' . $suffix . '.js', array( 'jquery' ), false, true );
-	}
-
-	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation' . $suffix . '.js', array( 'jquery' ), false, true );
-
-	// Skip link focus fix JS enqueue.
-	wp_enqueue_script( 'spacious-skip-link-focus-fix', SPACIOUS_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
-
-	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom' . $suffix . '.js', array( 'jquery' ), false, true );
-
-	wp_enqueue_style( 'google_fonts' );
-
-	// Masonry JS.
-	if ( is_page_template( 'page-templates/blog-image-masonry.php' ) || ( get_theme_mod( 'spacious_archive_display_type', 'blog_large' ) == 'blog_masonry_content' ) && ( is_home() || is_archive() || is_search() ) ) {
-		wp_enqueue_script( 'masonry' );
-	}
-
-	// HTML5Shiv for Lower IE versions
-	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv' . $suffix . '.js', true );
-	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
+	wp_enqueue_style( 'spacious-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 
 	/**
 	 * Inline CSS for this theme.
@@ -139,7 +49,44 @@ function spacious_scripts_styles_method() {
 	$theme_dynamic_css = apply_filters( 'spacious_dynamic_theme_css', '' );
 	wp_add_inline_style( 'spacious_style', $theme_dynamic_css );
 
+	/**
+	 * Adds JavaScript to pages with the comment form to support
+	 * sites with threaded comments (when in use).
+	 */
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
+	/**
+	 * Register JQuery cycle2 js file for slider.
+	 */
+	wp_register_script( 'jquery_cycle', SPACIOUS_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
+	wp_register_script( 'jquery-swipe', SPACIOUS_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), false, true );
+
+	wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Lato' );
+
+	/**
+	 * Enqueue Slider setup js file.
+	 */
+	if ( is_home() || is_front_page() && get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
+		wp_enqueue_script( 'jquery-swipe' );
+		wp_enqueue_script( 'jquery_cycle' );
+	}
+
+	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+
+	// Skip link focus fix JS enqueue.
+	wp_enqueue_script( 'spacious-skip-link-focus-fix', SPACIOUS_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+
+	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
+
+	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
+	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
+
 }
+
+add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
+
 
 /**
  * Action hook to get the required Google fonts for this theme.
@@ -166,15 +113,9 @@ function spacious_get_fonts() {
 	);
 	$spacious_content_font_typography            = get_theme_mod( 'spacious_content_font_typography', $spacious_content_font_typography_default );
 	$spacious_titles_font_typography             = get_theme_mod( 'spacious_titles_font_typography', $spacious_titles_font_typography_default );
-	$spacious_site_title_font_typography         = get_theme_mod( 'spacious_site_title_font_typography', $spacious_site_title_font_typography_default );
-	$spacious_site_tagline_font_typography         = get_theme_mod( 'spacious_site_tagline_font_typography', $spacious_site_tagline_font_typography_default );
-	$spacious_primary_menu_font_typography         = get_theme_mod( 'spacious_primary_menu_font_typography', $spacious_primary_menu_font_typography_default );
 
 	Spacious_Generate_Fonts::add_font( $spacious_content_font_typography['font-family'] );
 	Spacious_Generate_Fonts::add_font( $spacious_titles_font_typography['font-family'] );
-	Spacious_Generate_Fonts::add_font( $spacious_site_title_font_typography['font-family'] );
-	Spacious_Generate_Fonts::add_font( $spacious_site_tagline_font_typography['font-family'] );
-	Spacious_Generate_Fonts::add_font( $spacious_primary_menu_font_typography['font-family'] );
 }
 
 add_action( 'spacious_get_fonts', 'spacious_get_fonts' );

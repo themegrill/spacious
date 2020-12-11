@@ -116,7 +116,7 @@ class Spacious_Dynamic_CSS {
 		);
 
 		// Add the custom CSS rendered dynamically, which is static.
-		$parse_css .= self::render_custom_output();
+//		$parse_css .= self::render_custom_output();
 
 
 		$parse_css .= $dynamic_css;
