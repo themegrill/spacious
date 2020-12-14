@@ -63,48 +63,52 @@ function spacious_major_controls_migrate() {
 add_action( 'after_setup_theme', 'spacious_major_controls_migrate' );
 
 
-/**
- * Migrate Options Framework data to Customizer
- * df
- */
-function spacious_options_migrate() {
+if ( ! function_exists( 'spacious_options_migrate' ) ) :
+	/**
+	 * Migrate Options Framework data to Customizer
+	 *
+	 */
+	function spacious_options_migrate() {
 
-	// Shifting Users data from Theme Option to Customizer
-	if ( get_option( 'spacious_customizer_transfer' ) ) {
-		return;
-	}
-
-	// Set transfer
-	update_option( 'spacious_customizer_transfer', 1 );
-
-	$spacious_themename = get_option( 'stylesheet' );
-
-	$spacious_theme_options = array();
-	$spacious_theme_mods    = array();
-
-	// When child theme is active.
-	if ( is_child_theme() ) {
-		$spacious_theme_options = get_option( 'spacious' );
-		$spacious_theme_mods    = get_theme_mods();
-
-		foreach ( $spacious_theme_options as $key => $value ) {
-			$spacious_theme_mods[ $key ] = $value;
+		// Shifting Users data from Theme Option to Customizer
+		if ( get_option( 'spacious_customizer_transfer' ) ) {
+			return;
 		}
 
-		update_option( 'theme_mods_' . $spacious_themename, $spacious_theme_mods );
-	}
+		// Set transfer
+		update_option( 'spacious_customizer_transfer', 1 );
 
-	// For parent theme data Transfer
-	if ( false !== ( $mods = get_option( 'spacious' ) ) ) {
-		$spacious_theme_options = get_option( 'spacious' );
-		$spacious_theme_mods    = get_option( 'theme_mods_spacious-pro' );
-
-		foreach ( $spacious_theme_options as $key => $value ) {
-			$spacious_theme_mods[ $key ] = $value;
+		$spacious_themename      = get_option( 'stylesheet' );
+		$spacious_themename_preg = preg_replace( '/\W/', '_', strtolower( $spacious_themename ) );
+		if ( false === ( $mods = get_option( $spacious_themename_preg ) ) ) {
+			return;
 		}
 
-		update_option( 'theme_mods_spacious-pro', $spacious_theme_mods );
+		$spacious_theme_options = array();
+		$spacious_theme_mods    = array();
+
+		// When child theme is active.
+		if ( is_child_theme() ) {
+			$spacious_theme_options = get_option( $spacious_themename_preg );
+			$spacious_theme_mods    = get_theme_mods();
+
+			foreach ( $spacious_theme_options as $key => $value ) {
+				$spacious_theme_mods[ $key ] = $value;
+			}
+			update_option( 'theme_mods_' . $spacious_themename, $spacious_theme_mods );
+		}
+		// For parent theme data Transfer
+		if ( false !== ( $mods = get_option( 'spacious' ) ) ) {
+			$spacious_theme_options = get_option( 'spacious' );
+			$spacious_theme_mods    = get_option( 'theme_mods_spacious' );
+
+			foreach ( $spacious_theme_options as $key => $value ) {
+				$spacious_theme_mods[ $key ] = $value;
+			}
+
+			update_option( 'theme_mods_spacious', $spacious_theme_mods );
+		}
 	}
-}
+endif;
 
 add_action( 'after_setup_theme', 'spacious_options_migrate', 12 );
