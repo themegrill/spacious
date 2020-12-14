@@ -459,3 +459,7 @@ if ( defined( 'ELEMENTOR_VERSION' ) ) {
 	require_once( SPACIOUS_INCLUDES_DIR . '/elementor/elementor.php' );
 }
 
+/**
+ * Load deprecated functions.
+ */
+require get_template_directory() . '/inc/deprecated/deprecated-functions.php';

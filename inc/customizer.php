@@ -1968,77 +1968,77 @@ function spacious_customize_register( $wp_customize ) {
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 
-	// checkbox sanitize
-	function spacious_checkbox_sanitize( $input ) {
-		if ( $input == 1 ) {
-			return 1;
-		} else {
-			return '';
-		}
-	}
+//	// checkbox sanitize
+//	function spacious_checkbox_sanitize( $input ) {
+//		if ( $input == 1 ) {
+//			return 1;
+//		} else {
+//			return '';
+//		}
+//	}
 
-	// Google Font Sanitization
-	function spacious_font_sanitize( $input ) {
-		$spacious_standard_fonts_array = spacious_standard_fonts_array();
-		$spacious_google_fonts         = spacious_google_fonts();
-		$valid_keys                    = array_merge( $spacious_standard_fonts_array, $spacious_google_fonts );
-
-		if ( array_key_exists( $input, $valid_keys ) ) {
-			return $input;
-		} else {
-			return '';
-		}
-	}
+//	// Google Font Sanitization
+//	function spacious_font_sanitize( $input ) {
+//		$spacious_standard_fonts_array = spacious_standard_fonts_array();
+//		$spacious_google_fonts         = spacious_google_fonts();
+//		$valid_keys                    = array_merge( $spacious_standard_fonts_array, $spacious_google_fonts );
+//
+//		if ( array_key_exists( $input, $valid_keys ) ) {
+//			return $input;
+//		} else {
+//			return '';
+//		}
+//	}
 
 	// editor sanitization
-	function spacious_editor_sanitize( $input ) {
-		if ( isset( $input ) ) {
-			$input = stripslashes( wp_filter_post_kses( addslashes( $input ) ) );
-		}
+//	function spacious_editor_sanitize( $input ) {
+//		if ( isset( $input ) ) {
+//			$input = stripslashes( wp_filter_post_kses( addslashes( $input ) ) );
+//		}
+//
+//		return $input;
+//	}
+//
+//	// Radio and Select Sanitization
+//	function spacious_radio_sanitize( $input, $setting ) {
+//		// Ensure input is a slug.
+//		$input = sanitize_key( $input );
+//
+//		// Get list of choices from the control associated with the setting.
+//		$choices = $setting->manager->get_control( $setting->id )->choices;
+//
+//		// If the input is a valid key, return it; otherwise, return the default.
+//		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+//	}
 
-		return $input;
-	}
-
-	// Radio and Select Sanitization
-	function spacious_radio_sanitize( $input, $setting ) {
-		// Ensure input is a slug.
-		$input = sanitize_key( $input );
-
-		// Get list of choices from the control associated with the setting.
-		$choices = $setting->manager->get_control( $setting->id )->choices;
-
-		// If the input is a valid key, return it; otherwise, return the default.
-		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-	}
-
-	// text-area sanitize
-	function spacious_text_sanitize( $input ) {
-		return wp_kses_post( force_balance_tags( $input ) );
-	}
+//	// text-area sanitize
+//	function spacious_text_sanitize( $input ) {
+//		return wp_kses_post( force_balance_tags( $input ) );
+//	}
 
 	// color sanitization
-	function spacious_color_option_hex_sanitize( $color ) {
-		if ( $unhashed = sanitize_hex_color_no_hash( $color ) ) {
-			return '#' . $unhashed;
-		}
-
-		return $color;
-	}
+//	function spacious_color_option_hex_sanitize( $color ) {
+//		if ( $unhashed = sanitize_hex_color_no_hash( $color ) ) {
+//			return '#' . $unhashed;
+//		}
+//
+//		return $color;
+//	}
 
 	// Active Callback for Retina Logo.
-	function spacious_retina_logo_option() {
-		if ( get_theme_mod( 'spacious_different_retina_logo', 0 ) == 1 ) {
-			return true;
-		}
+//	function spacious_retina_logo_option() {
+//		if ( get_theme_mod( 'spacious_different_retina_logo', 0 ) == 1 ) {
+//			return true;
+//		}
+//
+//		return false;
+//	}
 
-		return false;
-	}
-
-	function spacious_color_escaping_option_sanitize( $input ) {
-		$input = esc_attr( $input );
-
-		return $input;
-	}
+//	function spacious_color_escaping_option_sanitize( $input ) {
+//		$input = esc_attr( $input );
+//
+//		return $input;
+//	}
 
 	function spacious_false_sanitize() {
 		return false;
@@ -2121,36 +2121,36 @@ if ( ! function_exists( 'spacious_standard_fonts_array' ) ) :
 	}
 
 endif;
-
-if ( ! function_exists( 'spacious_google_fonts' ) ) :
-
-	/**
-	 * Google Fonts array
-	 *
-	 * @return array of Google Fonts
-	 */
-	function spacious_google_fonts() {
-		$spacious_google_font = array(
-			'Roboto'           => 'Roboto',
-			'Lato'             => 'Lato',
-			'Open Sans'        => 'Open Sans',
-			'Noto Sans'        => 'Noto Sans',
-			'Noto Serif'       => 'Noto Serif',
-			'PT Sans'          => 'PT Sans',
-			'Playfair Display' => 'Playfair Display',
-			'Muli'             => 'Muli',
-			'Montserrat'       => 'Montserrat',
-			'Poppins'          => 'Poppins',
-			'Raleway'          => 'Raleway',
-			'Oswald'           => 'Oswald',
-			'Ubuntu'           => 'Ubuntu',
-			'Nunito'           => 'Nunito',
-		);
-
-		return $spacious_google_font;
-	}
-
-endif;
+//
+//if ( ! function_exists( 'spacious_google_fonts' ) ) :
+//
+//	/**
+//	 * Google Fonts array
+//	 *
+//	 * @return array of Google Fonts
+//	 */
+//	function spacious_google_fonts() {
+//		$spacious_google_font = array(
+//			'Roboto'           => 'Roboto',
+//			'Lato'             => 'Lato',
+//			'Open Sans'        => 'Open Sans',
+//			'Noto Sans'        => 'Noto Sans',
+//			'Noto Serif'       => 'Noto Serif',
+//			'PT Sans'          => 'PT Sans',
+//			'Playfair Display' => 'Playfair Display',
+//			'Muli'             => 'Muli',
+//			'Montserrat'       => 'Montserrat',
+//			'Poppins'          => 'Poppins',
+//			'Raleway'          => 'Raleway',
+//			'Oswald'           => 'Oswald',
+//			'Ubuntu'           => 'Ubuntu',
+//			'Nunito'           => 'Nunito',
+//		);
+//
+//		return $spacious_google_font;
+//	}
+//
+//endif;
 
 /* * ************************************************************************************** */
 
