@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Tweak - Update footer credit link with `rel="nofollow"` attributes.
+
 = Version 1.8.1 - 2020-10-12 =
 Fix - Header button text displaying text as url
 

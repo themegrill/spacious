@@ -683,11 +683,11 @@ if ( ! function_exists( 'spacious_footer_copyright' ) ) :
 	function spacious_footer_copyright() {
 		$site_link = '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '" ><span>' . get_bloginfo( 'name', 'display' ) . '</span></a>';
 
-		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'spacious' ) . '" rel="no-follow"><span>' . __( 'WordPress', 'spacious' ) . '</span></a>';
+		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'spacious' ) . '" rel="nofollow"><span>' . __( 'WordPress', 'spacious' ) . '</span></a>';
 
-		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/spacious' ) . '" target="_blank" title="' . esc_attr__( 'Spacious', 'spacious' ) . '" rel="no-follow"><span>' . __( 'Spacious', 'spacious' ) . '</span></a>';
+		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/spacious' ) . '" target="_blank" title="' . esc_attr__( 'Spacious', 'spacious' ) . '" rel="nofollow"><span>' . __( 'Spacious', 'spacious' ) . '</span></a>';
 
-		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'spacious' ), date( 'Y' ), $site_link ) . ' ' .__('All rights reserved.', 'spacious' ). sprintf( __( ' Theme %1s', 'spacious' ), $tg_link ) . ' ' . sprintf( __( 'by ThemeGrill. Powered by: %2$s.', 'spacious' ), 'Spacious', $wp_link );
+		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'spacious' ), date( 'Y' ), $site_link ) . ' ' .__('All rights reserved.', 'spacious' ). sprintf( __( ' Theme %1$s', 'spacious' ), $tg_link ) . ' ' . sprintf( __( 'by ThemeGrill. Powered by: %2$s.', 'spacious' ), 'Spacious', $wp_link );
 
 		$spacious_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
 		echo $spacious_footer_copyright;
