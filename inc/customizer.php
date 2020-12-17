@@ -2100,11 +2100,8 @@ function spacious_enqueue_customize_controls() {
 	wp_enqueue_script(
 		'spacious-customize-controls',
 		get_template_directory_uri() . '/js/customize-controls' . $suffix . '.js',
-		array(
-			'customize-controls',
-		),
-		false,
-		true
+		array(),
+		false
 	);
 
 }

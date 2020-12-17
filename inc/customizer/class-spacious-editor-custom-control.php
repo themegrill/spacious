@@ -2,77 +2,68 @@
 
 class Spacious_Editor_Custom_Control extends WP_Customize_Control {
 
-	public $type = "spacious_editor_control";
+	/**
+	 * Control's Type.
+	 *
+	 * @var string
+	 */
+	public $type = 'spacious-editor';
 
-	public function render_content() {
-		static $i = 1;
-		?>
-		<script type="text/javascript">
-			( function ( $ ) {
-				wp.customizerCtrlEditor = {
-					init : function () {
+	/**
+	 * Refresh the parameters passed to the JavaScript via JSON.
+	 *
+	 * @see WP_Customize_Control::to_json()
+	 */
+	public function to_json() {
 
-						$( window ).load( function () {
+		parent::to_json();
 
-							$( 'textarea.wp-editor-area' ).each( function () {
-								var tArea  = $( this ),
-								    id     = tArea.attr( 'id' ),
-								    name   = tArea.attr( 'name' ),
-								    input  = $( 'input[data-customize-setting-link="' + name + '"]' ),
-								    editor = tinyMCE.get( id ),
-								    setChange,
-								    content;
-
-								if ( editor ) {
-									editor.on( 'change', function ( e ) {
-										editor.save();
-										content = editor.getContent();
-										clearTimeout( setChange );
-										setChange = setTimeout( function () {
-											input.val( content ).trigger( 'change' );
-										}, 500 );
-									} );
-								}
-
-								tArea.css( {
-									visibility : 'visible'
-								} ).on( 'keyup', function () {
-									content = tArea.val();
-									clearTimeout( setChange );
-									setChange = setTimeout( function () {
-										input.val( content ).trigger( 'change' );
-									}, 500 );
-								} );
-							} );
-						} );
-					}
-				};
-				wp.customizerCtrlEditor.init();
-			} )( jQuery );
-		</script>
-		<style type="text/css">
-			.wp-full-overlay {
-				z-index: unset !important;
-			}
-		</style>
-		<label>
-			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-			<input type="hidden" <?php $this->link(); ?> value="<?php echo esc_textarea( $this->value() ); ?>">
-		</label>
-		<?php
-		$settings = array(
-			'textarea_name' => $this->id,
-			'teeny'         => true,
-		);
-		$new_id   = str_replace( array( '[', ']' ), '', $this->id );
-		wp_editor( htmlspecialchars_decode( $this->value() ), $new_id, $settings );
-
-		if ( $i == 1 ) {
-			do_action( 'admin_print_footer_scripts' );
+		$this->json['default'] = $this->setting->default;
+		if ( isset( $this->default ) ) {
+			$this->json['default'] = $this->default;
 		}
-		$i ++;
+		$this->json['value'] = $this->value();
+
+		$this->json['link']        = $this->get_link();
+		$this->json['id']          = $this->id;
+		$this->json['label']       = esc_html( $this->label );
+		$this->json['description'] = $this->description;
+
+	}
+
+	/**
+	 * An Underscore (JS) template for this control's content (but not its container).
+	 *
+	 * Class variables for this control class are available in the `data` JS object;
+	 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
+	 *
+	 * @see    WP_Customize_Control::print_template()
+	 *
+	 * @access protected
+	 */
+	protected function content_template() {
 		?>
+		<# var editorID = data.id.replace( '[', '-' ).replace( ']', '' ) #>
+
+		<div class="customizer-text">
+			<# if ( data.label ) { #>
+			<span class="customize-control-title">{{{ data.label }}}</span>
+			<# } #>
+
+			<# if ( data.description ) { #>
+			<span class="description customize-control-description">{{{ data.description }}}</span>
+			<# } #>
+		</div>
+
+		<textarea id="editor_{{{ editorID }}}" {{{ data.link }}}>{{ data.value }}</textarea>
+
 		<?php
+	}
+
+	/**
+	 * Don't render the control content from PHP, as it's rendered via JS on load.
+	 */
+	public function render_content() {
 	}
 
 }
