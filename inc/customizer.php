@@ -22,6 +22,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->register_control_type( 'Spacious_Heading_Control' );
 	$wp_customize->register_control_type( 'Spacious_Divider_Control' );
+	$wp_customize->register_control_type( 'Spacious_Editor_Custom_Control' );
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
