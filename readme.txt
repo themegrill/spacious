@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version TBD =
+* Fix - Custom customize editor control not working since WordPress 5.6
+
 = Version 1.8.2 - 2020-12-15 =
 * Tweak - Update footer credit link with `rel="nofollow"` attributes.
 
