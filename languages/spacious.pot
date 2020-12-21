@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.8.1\n"
+"Project-Id-Version: Spacious 1.8.2\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2020-10-12 03:24:15+00:00\n"
+"POT-Creation-Date: 2020-12-16 03:06:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -901,20 +901,20 @@ msgstr ""
 msgid "WordPress"
 msgstr ""
 
-#. Author of the plugin/theme
-msgid "ThemeGrill"
-msgstr ""
-
 #: inc/functions.php:690
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
 #: inc/functions.php:690
-msgid "Powered by %s."
+msgid "All rights reserved."
 msgstr ""
 
 #: inc/functions.php:690
-msgid "Theme: %1$s by %2$s."
+msgid " Theme %1$s"
+msgstr ""
+
+#: inc/functions.php:690
+msgid "by ThemeGrill. Powered by: %2$s."
 msgstr ""
 
 #: inc/functions.php:772 inc/related-posts.php:64
@@ -1190,6 +1190,10 @@ msgid ""
 "translation ready and many more. You can get free support in "
 "https://themegrill.com/support-forum/ and check the demo at "
 "https://demo.themegrill.com/spacious/."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ThemeGrill"
 msgstr ""
 
 #. Author URI of the plugin/theme

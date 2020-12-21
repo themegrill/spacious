@@ -22,6 +22,7 @@ function spacious_customize_register( $wp_customize ) {
 
 	$wp_customize->register_control_type( 'Spacious_Heading_Control' );
 	$wp_customize->register_control_type( 'Spacious_Divider_Control' );
+	$wp_customize->register_control_type( 'Spacious_Editor_Custom_Control' );
 
 	// Transport postMessage variable set
 	$customizer_selective_refresh = isset( $wp_customize->selective_refresh ) ? 'postMessage' : 'refresh';
@@ -2092,6 +2093,13 @@ function spacious_enqueue_customize_controls() {
 	wp_enqueue_style(
 		'spacious-customize-controls',
 		get_template_directory_uri() . '/css/customize-controls' . $suffix . '.css',
+		array(),
+		false
+	);
+
+	wp_enqueue_script(
+		'spacious-customize-controls',
+		get_template_directory_uri() . '/js/customize-controls' . $suffix . '.js',
 		array(),
 		false
 	);
