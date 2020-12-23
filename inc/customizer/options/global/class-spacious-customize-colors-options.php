@@ -69,6 +69,8 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 			),
 		);
 
+		$options = array_merge( $options, $configs );
+
 		return $options;
 	}
 

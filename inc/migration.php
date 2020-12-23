@@ -24,7 +24,9 @@ function spacious_major_controls_migrate() {
 	}
 
 	// Get theme options.
-	$spacious_theme_options = get_option( 'spacious' );
+	$themename = get_option( 'stylesheet' );
+	$themename = preg_replace( "/\W/", "_", strtolower( $themename ) );
+	$spacious_theme_options = get_option( $themename );
 
 	// Base heading.
 	$spacious_content_font = get_theme_mod( 'spacious_content_font', 'Lato' );
