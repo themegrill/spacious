@@ -32,16 +32,6 @@ class Spacious_Customizer {
 	 */
 	public function __construct() {
 
-		add_filter( 'spacious_customizer_default_configuration', array(
-			$this,
-			'customizer_default_configuration'
-		), 1 );
-
-		add_filter( 'spacious_customize_datastore_type', array(
-			$this,
-			'customize_datastore_type'
-		), 1 );
-
 		// Include the required files for Customize option.
 		add_action( 'customize_register', array( $this, 'customize_register' ), 12 );
 
@@ -105,16 +95,6 @@ class Spacious_Customizer {
 		// WooCommerce.
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/woocommerce/class-spacious-customize-woocommerce-sidebar-options.php';
 		require SPACIOUS_CUSTOMIZER_DIR . '/options/woocommerce/class-spacious-customize-woocommerce-design-options.php';
-	}
-
-	public function customizer_default_configuration( $default_configuration ) {
-		$default_configuration['datastore_type'] = 'option';
-
-		return $default_configuration;
-	}
-
-	public function customize_datastore_type() {
-		return 'option';
 	}
 
 }
