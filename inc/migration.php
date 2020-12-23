@@ -29,9 +29,11 @@ function spacious_major_controls_migrate() {
 	$spacious_theme_options = get_option( $themename );
 
 	// Base heading.
-	$spacious_content_font = get_theme_mod( 'spacious_content_font', 'Lato' );
+	$spacious_content_font = isset( $spacious_theme_options['spacious_content_font'] ) ? $spacious_theme_options['spacious_content_font'] : 'Lato';
+
 	// All heading
-	$spacious_titles_font     = get_theme_mod( 'spacious_titles_font', 'Lato' );
+	$spacious_titles_font     = isset( $spacious_theme_options['spacious_titles_font'] ) ? $spacious_theme_options['spacious_titles_font'] : 'Lato';
+
 
 	if ( 'Lato' !== $spacious_content_font ) {
 		$spacious_theme_options['spacious_content_font_typography'] = array(
