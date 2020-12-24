@@ -12,23 +12,6 @@
 
 /****************************************************************************************/
 
-// Spacious theme options
-function spacious_options( $id, $default = false ) {
-	// assigning theme name
-	$themename = get_option( 'stylesheet' );
-	$themename = preg_replace( "/\W/", "_", strtolower( $themename ) );
-
-	// getting options value
-	$spacious_options = get_option( $themename );
-	if ( isset( $spacious_options[ $id ] ) ) {
-		return $spacious_options[ $id ];
-	} else {
-		return $default;
-	}
-}
-
-/****************************************************************************************/
-
 /**
  * Register jquery scripts
  */
@@ -792,7 +775,7 @@ function spacious_site_footer_designs_eliminate() {
 		return;
 	}
 
-	$spacious_footer_design = spacious_options( 'spacious_footer_design', 'style_one' );
+	$spacious_footer_design = get_theme_mod( 'spacious_footer_design', 'style_one' );
 
 	if ( $spacious_footer_design ) {
 
@@ -875,9 +858,9 @@ function spacious_header_display_type_migrate() {
 add_action( 'after_setup_theme', 'spacious_header_display_type_migrate' );
 
 function spacious_header_menu_button( $items, $args ) {
-	$button_text   = spacious_options( 'spacious_header_button_one_setting' );
-	$button_link   = spacious_options( 'spacious_header_button_one_link' );
-	$button_target = spacious_options( 'spacious_header_button_one_tab' );
+	$button_text   = get_theme_mod( 'spacious_header_button_one_setting' );
+	$button_link   = get_theme_mod( 'spacious_header_button_one_link' );
+	$button_target = get_theme_mod( 'spacious_header_button_one_tab' );
 	$button_target = $button_target ? ' target="_blank"' : '';
 
 	if ( 'primary' === $args->theme_location && $button_link ) {
@@ -906,7 +889,7 @@ if ( ! function_exists( 'spacious_shift_extra_menu' ) ) :
 	 */
 	function spacious_shift_extra_menu( $items, $args ) {
 
-		if ( 'primary' === $args->theme_location && spacious_options( 'spacious_one_line_menu_setting', 0 ) ) :
+		if ( 'primary' === $args->theme_location && get_theme_mod( 'spacious_one_line_menu_setting', 0 ) ) :
 
 			$items .= '<li class="menu-item menu-item-has-children tg-menu-extras-wrap">';
 			$items .= '<span class="submenu-expand">';
@@ -936,8 +919,8 @@ if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
 
 		if ( isset( $attr['class'] ) && 'custom-logo' === $attr['class'] ) {
 
-			if ( 1 == spacious_options( 'spacious_different_retina_logo', 0 ) ) {
-				$retina_logo = spacious_options( 'spacious_retina_logo_upload' );
+			if ( 1 == get_theme_mod( 'spacious_different_retina_logo', 0 ) ) {
+				$retina_logo = get_theme_mod( 'spacious_retina_logo_upload' );
 
 				if ( $retina_logo ) {
 					$attr['srcset'] = $custom_logo . ' 1x, ' . $retina_logo . ' 2x';
