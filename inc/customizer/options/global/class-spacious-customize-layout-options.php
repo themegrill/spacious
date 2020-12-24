@@ -36,7 +36,7 @@ class Spacious_Customize_Layout_Options extends Spacious_Customize_Base_Option {
 			// Site layout option.
 			array(
 				'name'      => 'spacious_site_layout',
-				'default'   => 'wide_layout',
+				'default'   => 'box_1218px',
 				'type'      => 'control',
 				'control'   => 'radio',
 				'label'     => esc_html__( 'Choose your site layout. The change is reflected in whole site.', 'spacious' ),
