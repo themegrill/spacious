@@ -71,6 +71,10 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
 					),
+					'no_sidebar_content_centered'  => array(
+						'label' => '',
+						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
+					),
 				),
 				'image_col'  => 3,
 				'priority'   => 30,
@@ -105,6 +109,10 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 					'no_sidebar_full_width'       => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
+					),
+					'no_sidebar_content_centered'  => array(
+						'label' => '',
+						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
 					),
 				),
 				'image_col'  => 3,
