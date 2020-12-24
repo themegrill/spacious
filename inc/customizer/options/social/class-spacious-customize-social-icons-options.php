@@ -68,7 +68,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 				'label'      => esc_html__( 'Social Icon', 'spacious' ),
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious_social_link_activate',
+					'spacious_activate_social_links',
 					'!=',
 					0,
 				),
@@ -100,7 +100,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 				'label'      => sprintf( 'Add link for %1$s', $value ),
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious_social_link_activate',
+					'spacious_activate_social_links',
 					'!=',
 					0,
 				),
@@ -115,7 +115,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 				'label'      => esc_html__( 'Check to show in new tab', 'spacious' ),
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious_social_link_activate',
+					'spacious_activate_social_links',
 					'!=',
 					0,
 				),
@@ -128,7 +128,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 				'control'    => 'spacious-divider',
 				'section'    => 'spacious_social_links_options',
 				'dependency' => array(
-					'spacious_social_link_activate',
+					'spacious_activate_social_links',
 					'!=',
 					0,
 				),
