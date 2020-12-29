@@ -411,6 +411,10 @@ require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
 require_once SPACIOUS_INCLUDES_DIR . '/class-spacious-dynamic-css.php';
 require_once SPACIOUS_INCLUDES_DIR . '/migration.php';
 
+/** Load demo import migration scripts. */
+require_once SPACIOUS_INCLUDES_DIR . '/demo-import-migration.php';
+
+
 /** Load Widgets and Widgetized Area */
 require_once SPACIOUS_WIDGETS_DIR . '/widgets.php';
 
