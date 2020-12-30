@@ -66,7 +66,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => esc_html__( 'Disable slider in Posts page', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
@@ -84,6 +84,11 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 					'selector'        => '#featured-slider',
 					'render_callback' => '',
 				),
+				'dependency' => array(
+					'spacious_activate_slider',
+					'!=',
+					0,
+				),
 			),
 		);
 
@@ -98,7 +103,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => sprintf( esc_html__( 'Slider Content #%1$s', 'spacious' ), $i ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
@@ -112,7 +117,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => esc_html__( 'Upload slider image.', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
@@ -126,7 +131,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => esc_html__( 'Enter title for your slider.', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
@@ -140,7 +145,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => esc_html__( 'Enter your slider description.', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
@@ -154,7 +159,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => esc_html__( 'Enter the button text. Default is "Read more"', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
@@ -168,7 +173,7 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 				'label'      => esc_html__( 'Enter link to redirect slider when clicked', 'spacious' ),
 				'section'    => 'spacious_slider_options',
 				'dependency' => array(
-					'spacious_activate_slider]',
+					'spacious_activate_slider',
 					'!=',
 					0,
 				),
