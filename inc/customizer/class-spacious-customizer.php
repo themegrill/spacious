@@ -45,10 +45,338 @@ class Spacious_Customizer {
 	 *
 	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 	 */
+	public function customize_custom_panels_sections_includes( $wp_customize ) {
+
+		// Include the required customizer nested panels and sections files.
+		require SPACIOUS_CUSTOMIZER_DIR . '/extend-customizer/class-spacious-upsell-section.php';
+
+	}
+
+	/**
+	 * Include the required files for extending the custom Customize controls.
+	 *
+	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+	 */
 	public function customize_register( $wp_customize ) {
 
 		// Override default.
 		require SPACIOUS_CUSTOMIZER_DIR . '/override-defaults.php';
+
+	}
+
+	/**
+	 * Register Spacious customize panels, sections and controls type.
+	 *
+	 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+	 */
+	public function register_panels_sections_controls( $wp_customize ) {
+
+		// Register panels and sections.
+		$wp_customize->register_panel_type( 'Spacious_WP_Customize_Panel' );
+		$wp_customize->register_section_type( 'Spacious_WP_Customize_Section' );
+		$wp_customize->register_section_type( 'Spacious_Upsell_Section' );
+
+		/**
+		 * Register controls.
+		 */
+		/**
+		 * WordPress default controls.
+		 */
+		// Checkbox control.
+		Spacious_Customize_Base_Control::add_control(
+			'checkbox',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_checkbox',
+				),
+			)
+		);
+
+		// Radio control.
+		Spacious_Customize_Base_Control::add_control(
+			'radio',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_radio_select',
+				),
+			)
+		);
+
+		// Select control.
+		Spacious_Customize_Base_Control::add_control(
+			'select',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_radio_select',
+				),
+			)
+		);
+
+		// Text control.
+		Spacious_Customize_Base_Control::add_control(
+			'text',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_nohtml',
+				),
+			)
+		);
+
+		// Number control.
+		Spacious_Customize_Base_Control::add_control(
+			'number',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_number',
+				),
+			)
+		);
+
+		// Email control.
+		Spacious_Customize_Base_Control::add_control(
+			'email',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_email',
+				),
+			)
+		);
+
+		// URL control.
+		Spacious_Customize_Base_Control::add_control(
+			'url',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_url',
+				),
+			)
+		);
+
+		// Textarea control.
+		Spacious_Customize_Base_Control::add_control(
+			'textarea',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_html',
+				),
+			)
+		);
+
+		// Dropdown pages control.
+		Spacious_Customize_Base_Control::add_control(
+			'dropdown-pages',
+			array(
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_dropdown_pages',
+				),
+			)
+		);
+
+		// Color control.
+		Spacious_Customize_Base_Control::add_control(
+			'color',
+			array(
+				'callback'          => 'WP_Customize_Color_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_hex_color',
+				),
+			)
+		);
+
+		// Image upload control.
+		Spacious_Customize_Base_Control::add_control(
+			'image',
+			array(
+				'callback'          => 'WP_Customize_Image_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_image_upload',
+				),
+			)
+		);
+
+		// Radio image control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-radio-image',
+			array(
+				'callback'          => 'Spacious_Radio_Image_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_radio_select',
+				),
+			)
+		);
+
+		// Heading control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-heading',
+			array(
+				'callback'          => 'Spacious_Heading_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_false_values',
+				),
+			)
+		);
+
+		// Editor control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-editor',
+			array(
+				'callback'          => 'Spacious_Editor_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_html',
+				),
+			)
+		);
+
+		// Color control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-color',
+			array(
+				'callback'          => 'Spacious_Color_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_alpha_color',
+				),
+			)
+		);
+
+		// Buttonset control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-buttonset',
+			array(
+				'callback'          => 'Spacious_Buttonset_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_radio_select',
+				),
+			)
+		);
+
+		// Toggle control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-toggle',
+			array(
+				'callback'          => 'Spacious_Toggle_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_checkbox',
+				),
+			)
+		);
+
+		// Divider control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-divider',
+			array(
+				'callback'          => 'Spacious_Divider_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_false_values',
+				),
+			)
+		);
+
+		// Slider control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-slider',
+			array(
+				'callback'          => 'Spacious_Slider_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_number',
+				),
+			)
+		);
+
+		// Custom control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-custom',
+			array(
+				'callback'          => 'Spacious_Custom_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_false_values',
+				),
+			)
+		);
+
+		// Dropdown categories control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-dropdown-categories',
+			array(
+				'callback'          => 'Spacious_Dropdown_Categories_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_dropdown_categories',
+				),
+			)
+		);
+
+		// Background control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-background',
+			array(
+				'callback'          => 'Spacious_Background_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_background',
+				),
+			)
+		);
+
+		// Typography control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-typography',
+			array(
+				'callback'          => 'Spacious_Typography_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_typography',
+				),
+			)
+		);
+
+		// Hidden control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-hidden',
+			array(
+				'callback'          => 'Spacious_Hidden_Control',
+				'sanitize_callback' => '',
+			)
+		);
+
+		// Sortable control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-sortable',
+			array(
+				'callback'          => 'Spacious_Sortable_Control',
+				'sanitize_callback' => array(
+					'Spacious_Customizer_Sanitizes',
+					'sanitize_sortable',
+				),
+			)
+		);
+
+		// Group control.
+		Spacious_Customize_Base_Control::add_control(
+			'spacious-group',
+			array(
+				'callback' => 'Spacious_Group_Control',
+			)
+		);
 
 	}
 
@@ -59,6 +387,9 @@ class Spacious_Customizer {
 
 		// Include the required customize section and panels register file.
 		require SPACIOUS_CUSTOMIZER_DIR . '/class-spacious-customizer-register-sections-panels.php';
+
+		// Include the required customize upsell button file.
+		require SPACIOUS_CUSTOMIZER_DIR . '/class-spacious-customizer-upsell-button.php';
 
 		/**
 		 * Include the required customize options file.

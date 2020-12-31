@@ -2165,7 +2165,7 @@ endif;
 /*
  * Custom Scripts
  */
-add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_custom_scripts' );
+//add_action( 'customize_controls_print_footer_scripts', 'spacious_customizer_custom_scripts' );
 
 function spacious_customizer_custom_scripts() {
 	?>
