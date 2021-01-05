@@ -13,14 +13,6 @@
 /****************************************************************************************/
 
 /**
- * Register jquery scripts
- */
-
-add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
-
-/****************************************************************************************/
-
-/**
  * Enqueue Google fonts and editor styles.
  */
 function spacious_block_editor_styles() {

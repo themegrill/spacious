@@ -87,7 +87,6 @@ function spacious_scripts_styles_method() {
 
 add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
 
-
 /**
  * Action hook to get the required Google fonts for this theme.
  */
