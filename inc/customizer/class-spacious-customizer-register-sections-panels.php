@@ -33,6 +33,17 @@ class Spacious_Customize_Register_Section_Panels extends Spacious_Customize_Base
 
 		$configs = array(
 
+			// View Pro Version section.
+			array(
+				'name'             => 'spacious_customize_upsell_section',
+				'type'             => 'section',
+				'title'            => esc_html__( 'View Pro Version', 'spacious' ),
+				'url'              => 'https://themegrill.com/spacious-pricing/?utm_source=spacious-customizer&utm_medium=view-pro-link&utm_campaign=spacious-pricing',
+				'priority'         => 1,
+				'section_callback' => 'Spacious_Upsell_Section',
+			),
+
+
 			/**
 			 * Panels.
 			 */

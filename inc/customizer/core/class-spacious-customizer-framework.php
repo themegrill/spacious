@@ -137,6 +137,7 @@ class Spacious_Customizer_FrameWork {
 		$wp_customize->register_section_type( 'Spacious_WP_Customize_Section' );
 		$wp_customize->register_section_type( 'Spacious_WP_Customize_Separator' );
 		$wp_customize->register_panel_type( 'Spacious_WP_Customize_Panel' );
+		$wp_customize->register_section_type( 'Spacious_Upsell_Section' );
 
 		/**
 		 * Register controls.

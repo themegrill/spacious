@@ -418,7 +418,7 @@ jQuery( document ).ready(
 /**
  * Extend the Customize section to make it clickable.
  *
- * Currently used for the ColorMag Upseel section only.
+ * Currently used for the Spacious Upseel section only.
  */
 (
 	function ( $, api ) {
