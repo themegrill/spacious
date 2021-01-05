@@ -6,7 +6,7 @@
  *
  * @package    ThemeGrill
  * @subpackage Spacious
- * @since      Spacious 3.0.0
+ * @since      Spacious 1.9.0
  */
 
 // Exit if accessed directly.
@@ -859,7 +859,7 @@ class Spacious_Customizer_FrameWork {
 	/**
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 *
-	 * @since Spacious 3.0.0
+	 * @since Spacious 1.9.0
 	 */
 	public function customize_preview_js() {
 

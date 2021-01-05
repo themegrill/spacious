@@ -4,7 +4,7 @@
  *
  * @package    ThemeGrill
  * @subpackage Spacious
- * @since      Spacious 3.0.0
+ * @since      Spacious 1.9.0
  */
 
 // Exit if accessed directly.
@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Migrate all of the customize options for 3.0.0 theme update.
+ * Migrate all of the customize options for 1.9.0 theme update.
  *
- * @since Spacious 3.0.0
+ * @since Spacious 1.9.0
  */
 function spacious_major_controls_migrate() {
 
