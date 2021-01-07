@@ -388,9 +388,6 @@ class Spacious_Customizer {
 		// Include the required customize section and panels register file.
 		require SPACIOUS_CUSTOMIZER_DIR . '/class-spacious-customizer-register-sections-panels.php';
 
-		// Include the required customize upsell button file.
-		require SPACIOUS_CUSTOMIZER_DIR . '/class-spacious-customizer-upsell-button.php';
-
 		/**
 		 * Include the required customize options file.
 		 */
