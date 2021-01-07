@@ -27,7 +27,6 @@ class Spacious_Customizer_Partials {
 	 * @return void
 	 */
 	public static function read_more_text_render() { ?>
-		Hello!
 		<a class="read-more" href="<?php the_permalink(); ?>"><?php echo esc_html( get_theme_mod( 'spacious_read_more_text', __( 'Read more', 'spacious' ) ) ); ?></a>
 	<?php }
 

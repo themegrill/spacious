@@ -115,10 +115,6 @@ class Spacious_Dynamic_CSS {
 			'h1, h2, h3, h4, h5, h6',
 		);
 
-		// Add the custom CSS rendered dynamically, which is static.
-//		$parse_css .= self::render_custom_output();
-
-
 		$parse_css .= $dynamic_css;
 
 		return apply_filters( 'spacious_theme_dynamic_css', $parse_css );
