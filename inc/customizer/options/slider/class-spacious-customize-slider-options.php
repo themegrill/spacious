@@ -73,14 +73,14 @@ class Spacious_Customize_Slider_Options extends Spacious_Customize_Base_Option {
 			),
 
 			array(
-				'name'      => 'spacious_blog_slider',
-				'default'   => 0,
-				'type'      => 'control',
-				'control'   => 'checkbox',
-				'label'     => esc_html__( 'Check to disable slider in Posts Page', 'spacious' ),
-				'section'   => 'spacious_slider_options',
-				'transport' => $customizer_selective_refresh,
-				'partial'   => array(
+				'name'       => 'spacious_blog_slider',
+				'default'    => 0,
+				'type'       => 'control',
+				'control'    => 'checkbox',
+				'label'      => esc_html__( 'Check to disable slider in Posts Page', 'spacious' ),
+				'section'    => 'spacious_slider_options',
+				'transport'  => $customizer_selective_refresh,
+				'partial'    => array(
 					'selector'        => '#featured-slider',
 					'render_callback' => '',
 				),

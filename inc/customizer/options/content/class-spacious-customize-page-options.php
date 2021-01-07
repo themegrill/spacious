@@ -24,7 +24,7 @@ class Spacious_Customize_Page_Options extends Spacious_Customize_Base_Option {
 	/**
 	 * Include customize options.
 	 *
-	 * @param array                 $options      Customize options provided via the theme.
+	 * @param array $options Customize options provided via the theme.
 	 * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
 	 * @return mixed|void Customizer options for registering panels, sections as well as controls.
@@ -44,13 +44,13 @@ class Spacious_Customize_Page_Options extends Spacious_Customize_Base_Option {
 
 			// Featured image display in single page option.
 			array(
-				'name'        => 'spacious_featured_image_single_page',
-				'default'     => 0,
-				'type'        => 'control',
-				'control'     => 'checkbox',
-				'label' => esc_html__( 'Check to enable the featured image in single page.', 'spacious' ),
-				'section'     => 'spacious_page_section',
-				'priority'    => 20,
+				'name'     => 'spacious_featured_image_single_page',
+				'default'  => 0,
+				'type'     => 'control',
+				'control'  => 'checkbox',
+				'label'    => esc_html__( 'Check to enable the featured image in single page.', 'spacious' ),
+				'section'  => 'spacious_page_section',
+				'priority' => 20,
 			),
 
 		);

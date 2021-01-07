@@ -51,19 +51,19 @@ class Spacious_Customize_Footer_widgets_Area_Options extends Spacious_Customize_
 				'label'     => esc_html__( 'Choose the number of column for the footer widgetized areas.', 'spacious' ),
 				'section'   => 'spacious_footer_widgets_area_section',
 				'choices'   => array(
-					'one'           => array(
+					'one'   => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-full-column.png',
 					),
-					'two'           => array(
+					'two'   => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-two-column.png',
 					),
-					'three'         => array(
+					'three' => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-third-column.png',
 					),
-					'four'          => array(
+					'four'  => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/sidebar-layout-fourth-column.png',
 					),

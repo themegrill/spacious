@@ -93,7 +93,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links url option.
 			$configs[] = array(
-				'name'       =>  $key,
+				'name'       => $key,
 				'default'    => '',
 				'type'       => 'control',
 				'control'    => 'url',
@@ -108,7 +108,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links open in new tab enable/disable option.
 			$configs[] = array(
-				'name'       =>  $key . 'new_tab',
+				'name'       => $key . 'new_tab',
 				'default'    => 0,
 				'type'       => 'control',
 				'control'    => 'checkbox',
@@ -123,7 +123,7 @@ class Spacious_Customize_Social_Icons_Options extends Spacious_Customize_Base_Op
 
 			// Social links separator.
 			$configs[] = array(
-				'name'       =>  $key . '_additional',
+				'name'       => $key . '_additional',
 				'type'       => 'control',
 				'control'    => 'spacious-divider',
 				'section'    => 'spacious_social_links_options',

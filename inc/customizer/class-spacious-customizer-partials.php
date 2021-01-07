@@ -50,7 +50,7 @@ class Spacious_Customizer_Partials {
 			bcn_display();
 			echo '</div> <!-- .breadcrumb : NavXT -->';
 
-		} else if ( function_exists( 'yoast_breadcrumb' ) ) { // SEO by Yoast
+		} elseif ( function_exists( 'yoast_breadcrumb' ) ) { // SEO by Yoast
 
 			yoast_breadcrumb(
 				'<div class="breadcrumb">' . '<span class="breadcrumb-title">' . wp_kses_post( get_theme_mod( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>',

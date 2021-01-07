@@ -31,7 +31,7 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 	/**
 	 * Include customize options.
 	 *
-	 * @param array                 $options      Customize options provided via the theme.
+	 * @param array $options Customize options provided via the theme.
 	 * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
 	 * @return mixed|void Customizer options for registering panels, sections as well as controls.
@@ -52,13 +52,13 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 
 			// WooCommerce shop page layout option.
 			array(
-				'name'       => 'spacious_woo_archive_layout',
-				'default'    => 'no_sidebar_full_width',
-				'type'       => 'control',
-				'control'    => 'spacious-radio-image',
-				'label'      => esc_html__( 'This layout will be reflected in woocommerce archive page only.', 'spacious' ),
-				'section'    => 'spacious_woocommerce_page_layout_setting',
-				'choices'    => array(
+				'name'      => 'spacious_woo_archive_layout',
+				'default'   => 'no_sidebar_full_width',
+				'type'      => 'control',
+				'control'   => 'spacious-radio-image',
+				'label'     => esc_html__( 'This layout will be reflected in woocommerce archive page only.', 'spacious' ),
+				'section'   => 'spacious_woocommerce_page_layout_setting',
+				'choices'   => array(
 					'right_sidebar'               => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
@@ -71,13 +71,13 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
 					),
-					'no_sidebar_content_centered'  => array(
+					'no_sidebar_content_centered' => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
 					),
 				),
-				'image_col'  => 3,
-				'priority'   => 30,
+				'image_col' => 3,
+				'priority'  => 30,
 			),
 
 			array(
@@ -91,13 +91,13 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 
 			// WooCommerce archive page layout option.
 			array(
-				'name'       => 'spacious_woo_product_layout',
-				'default'    => 'right_sidebar',
-				'type'       => 'control',
-				'control'    => 'spacious-radio-image',
-				'label'      => esc_html__( 'This layout will be reflected in woocommerce Product page.', 'spacious' ),
-				'section'    => 'spacious_woocommerce_page_layout_setting',
-				'choices'    => array(
+				'name'      => 'spacious_woo_product_layout',
+				'default'   => 'right_sidebar',
+				'type'      => 'control',
+				'control'   => 'spacious-radio-image',
+				'label'     => esc_html__( 'This layout will be reflected in woocommerce Product page.', 'spacious' ),
+				'section'   => 'spacious_woocommerce_page_layout_setting',
+				'choices'   => array(
 					'right_sidebar'               => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/right-sidebar.png',
@@ -110,13 +110,13 @@ class Spacious_Customize_WooCommerce_Sidebar_Options extends Spacious_Customize_
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-full-width-layout.png',
 					),
-					'no_sidebar_content_centered'  => array(
+					'no_sidebar_content_centered' => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/no-sidebar-content-centered-layout.png',
 					),
 				),
-				'image_col'  => 3,
-				'priority'   => 50,
+				'image_col' => 3,
+				'priority'  => 50,
 			),
 
 		);

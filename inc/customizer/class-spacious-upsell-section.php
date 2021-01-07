@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Class to include upsell link for theme.
  *
@@ -6,8 +7,8 @@
  */
 class SPACIOUS_Upsell_Section extends WP_Customize_Section {
 	public $type = 'spacious-upsell-section';
-	public $url  = '';
-	public $id   = '';
+	public $url = '';
+	public $id = '';
 
 	/**
 	 * Gather the parameters passed to client JavaScript via JSON.

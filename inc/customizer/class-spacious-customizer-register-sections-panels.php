@@ -24,7 +24,7 @@ class Spacious_Customize_Register_Section_Panels extends Spacious_Customize_Base
 	/**
 	 * Include customize options.
 	 *
-	 * @param array                 $options      Customize options provided via the theme.
+	 * @param array $options Customize options provided via the theme.
 	 * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
 	 * @return mixed|void Customizer options for registering panels, sections as well as controls.

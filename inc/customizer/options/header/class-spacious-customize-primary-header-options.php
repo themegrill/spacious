@@ -24,7 +24,7 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 	/**
 	 * Include customize options.
 	 *
-	 * @param array                 $options      Customize options provided via the theme.
+	 * @param array $options Customize options provided via the theme.
 	 * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
 	 * @return mixed|void Customizer options for registering panels, sections as well as controls.
@@ -44,24 +44,24 @@ class Spacious_Customize_Primary_Header_Options extends Spacious_Customize_Base_
 
 			// Main total header area display type option.
 			array(
-				'name'     => 'spacious_header_display_type',
-				'default'  => 'one',
-				'type'     => 'control',
-				'control'  => 'spacious-radio-image',
-				'label'    => esc_html__( 'Choose the header display type that you want.', 'spacious' ),
-				'section'  => 'spacious_header_main',
-				'choices'  => array(
-					'one'   => array(
+				'name'      => 'spacious_header_display_type',
+				'default'   => 'one',
+				'type'      => 'control',
+				'control'   => 'spacious-radio-image',
+				'label'     => esc_html__( 'Choose the header display type that you want.', 'spacious' ),
+				'section'   => 'spacious_header_main',
+				'choices'   => array(
+					'one'  => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/header-left.png',
 					),
-					'four'  => array(
+					'four' => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/menu-bottom.png',
 					),
 				),
 				'image_col' => 2,
-				'priority' => 10,
+				'priority'  => 10,
 			),
 
 		);

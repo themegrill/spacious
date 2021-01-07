@@ -35,19 +35,19 @@ class Spacious_Customize_Layout_Options extends Spacious_Customize_Base_Option {
 
 			// Site layout option.
 			array(
-				'name'      => 'spacious_site_layout',
-				'default'   => 'box_1218px',
-				'type'      => 'control',
-				'control'   => 'radio',
-				'label'     => esc_html__( 'Choose your site layout. The change is reflected in whole site.', 'spacious' ),
-				'section'   => 'spacious_site_layout_section',
-				'choices'   => array(
+				'name'     => 'spacious_site_layout',
+				'default'  => 'box_1218px',
+				'type'     => 'control',
+				'control'  => 'radio',
+				'label'    => esc_html__( 'Choose your site layout. The change is reflected in whole site.', 'spacious' ),
+				'section'  => 'spacious_site_layout_section',
+				'choices'  => array(
 					'box_1218px'  => esc_html__( 'Boxed layout with content width of 1218px', 'spacious' ),
 					'box_978px'   => esc_html__( 'Boxed layout with content width of 978px', 'spacious' ),
 					'wide_1218px' => esc_html__( 'Wide layout with content width of 1218px', 'spacious' ),
 					'wide_978px'  => esc_html__( 'Wide layout with content width of 978px', 'spacious' ),
 				),
-				'priority'  => 10,
+				'priority' => 10,
 			),
 
 			// Default layout option.

@@ -24,7 +24,7 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 	/**
 	 * Include customize options.
 	 *
-	 * @param array                 $options      Customize options provided via the theme.
+	 * @param array $options Customize options provided via the theme.
 	 * @param \WP_Customize_Manager $wp_customize Theme Customizer object.
 	 *
 	 * @return mixed|void Customizer options for registering panels, sections as well as controls.
@@ -56,11 +56,11 @@ class Spacious_Customize_Colors_Options extends Spacious_Customize_Base_Option {
 				'label'    => esc_html__( 'Color Skin', 'spacious' ),
 				'section'  => 'spacious_skin_color_section',
 				'choices'  => array(
-					'light'               => array(
+					'light' => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/light-color.jpg',
 					),
-					'dark'                => array(
+					'dark'  => array(
 						'label' => '',
 						'url'   => SPACIOUS_ADMIN_IMAGES_URL . '/dark-color.jpg',
 					),

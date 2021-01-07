@@ -97,13 +97,13 @@ class Spacious_Customize_Single_Post_Options extends Spacious_Customize_Base_Opt
 			),
 
 			array(
-				'name'        => 'spacious_related_posts_activate',
-				'default'     => 0,
-				'type'        => 'control',
-				'control'     => 'checkbox',
-				'label'       => esc_html__( 'Check to activate the related posts', 'spacious' ),
-				'section'     => 'spacious_single_post_section',
-				'priority'    => 170,
+				'name'     => 'spacious_related_posts_activate',
+				'default'  => 0,
+				'type'     => 'control',
+				'control'  => 'checkbox',
+				'label'    => esc_html__( 'Check to activate the related posts', 'spacious' ),
+				'section'  => 'spacious_single_post_section',
+				'priority' => 170,
 			),
 
 			array(
