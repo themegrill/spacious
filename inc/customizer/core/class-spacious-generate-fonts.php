@@ -6,7 +6,7 @@
  *
  * @package    ThemeGrill
  * @subpackage Spacious
- * @since      Spacious 1.9.0
+ * @since      Spacious 3.0.0
  */
 
 // Exit if accessed directly.

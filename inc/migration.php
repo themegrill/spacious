@@ -129,6 +129,8 @@ function spacious_options_migrate() {
 		update_option( 'spacious_demo_import_migration_notice_dismiss', true );
 	}
 
+	delete_option( $spacious_theme_mods );
+
 }
 
 add_action( 'after_setup_theme', 'spacious_options_migrate', 12 );
