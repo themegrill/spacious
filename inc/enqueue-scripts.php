@@ -47,8 +47,12 @@ function spacious_scripts_styles_method() {
 
 	// Generate dynamic CSS to add inline styles for the theme.
 	$theme_dynamic_css = apply_filters( 'spacious_dynamic_theme_css', '' );
-	wp_add_inline_style( 'spacious_style', $theme_dynamic_css );
-
+	if ( get_theme_mod( 'spacious_color_skin', 'light' ) == 'dark' ) {
+		wp_add_inline_style( 'spacious_dark_style', $theme_dynamic_css );
+	} else {
+		wp_add_inline_style( 'spacious_style', $theme_dynamic_css );
+	}
+	
 	/**
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
