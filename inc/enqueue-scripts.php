@@ -52,7 +52,7 @@ function spacious_scripts_styles_method() {
 	} else {
 		wp_add_inline_style( 'spacious_style', $theme_dynamic_css );
 	}
-	
+
 	/**
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
