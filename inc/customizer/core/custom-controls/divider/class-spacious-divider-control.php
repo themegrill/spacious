@@ -6,6 +6,7 @@
  *
  * @package    ThemeGrill
  * @subpackage Spacious
+ * @since      Spacious 3.0.0
  */
 
 // Exit if accessed directly.
@@ -18,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Class Spacious_Divider_Control
  */
-class Spacious_Divider_Control extends WP_Customize_Control {
+class Spacious_Divider_Control extends Spacious_Customize_Base_Additional_Control {
 
 	/**
 	 * Control's Type.

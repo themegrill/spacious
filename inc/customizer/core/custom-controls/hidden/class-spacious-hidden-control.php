@@ -1,13 +1,32 @@
 <?php
+/**
+ * Extend WP_Customize_Control to include hidden control.
+ *
+ * Class Spacious_Hidden_Control
+ *
+ * @package    ThemeGrill
+ * @subpackage Spacious
+ * @since      Spacious 3.0.0
+ */
 
-class Spacious_Editor_Custom_Control extends WP_Customize_Control {
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * Class to extend WP_Customize_Control to add the hidden customize control.
+ *
+ * Class Spacious_Hidden_Control
+ */
+class Spacious_Hidden_Control extends Spacious_Customize_Base_Additional_Control {
 
 	/**
 	 * Control's Type.
 	 *
 	 * @var string
 	 */
-	public $type = 'spacious-editor';
+	public $type = 'spacious-hidden';
 
 	/**
 	 * Refresh the parameters passed to the JavaScript via JSON.
@@ -43,19 +62,12 @@ class Spacious_Editor_Custom_Control extends WP_Customize_Control {
 	 */
 	protected function content_template() {
 		?>
-		<# var editorID = data.id.replace( '[', '-' ).replace( ']', '' ) #>
 
-		<div class="customizer-text">
-			<# if ( data.label ) { #>
-			<span class="customize-control-title">{{{ data.label }}}</span>
-			<# } #>
-
-			<# if ( data.description ) { #>
-			<span class="description customize-control-description">{{{ data.description }}}</span>
-			<# } #>
-		</div>
-
-		<textarea id="editor_{{{ editorID }}}" {{{ data.link }}}>{{ data.value }}</textarea>
+		<input type='hidden'
+		       class='hidden-field-{{ data.settings.default }}'
+		       data-name='{{ data.settings.default }}'
+		       value='{{ data.value }}'
+		>
 
 		<?php
 	}

@@ -35,11 +35,11 @@ function spacious_content_width() {
 		$layout_meta = 'default_layout';
 	}
 
-	$spacious_default_layout = spacious_options( 'default_layout', 'right_sidebar' );
+	$spacious_default_layout = get_theme_mod( 'default_layout', 'right_sidebar' );
 
 	if ( $layout_meta == 'default_layout' ) {
 
-		if ( ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
+		if ( ( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
 			if ( $spacious_default_layout == 'no_sidebar_full_width' ) {
 				$content_width = 978; /* pixels */
 			} else {
@@ -51,7 +51,7 @@ function spacious_content_width() {
 			$content_width = 750; /* pixels */
 		}
 
-	} elseif ( ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
+	} elseif ( ( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
 		if ( $layout_meta == 'no_sidebar_full_width' ) {
 			$content_width = 978; /* pixels */
 		} else {
@@ -401,13 +401,23 @@ define( 'SPACIOUS_ADMIN_CSS_URL', SPACIOUS_ADMIN_URL . '/css' );
 /** Load functions */
 require_once SPACIOUS_INCLUDES_DIR . '/custom-header.php';
 require_once SPACIOUS_INCLUDES_DIR . '/functions.php';
-require_once SPACIOUS_INCLUDES_DIR . '/customizer.php';
 require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
+require_once( SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php' );
+require_once( SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php' );
 
 require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
+require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
+require_once SPACIOUS_INCLUDES_DIR . '/class-spacious-dynamic-css.php';
+require_once SPACIOUS_INCLUDES_DIR . '/migration.php';
+
+/** Load demo import migration scripts. */
+require_once SPACIOUS_INCLUDES_DIR . '/demo-import-migration.php';
+
 
 /** Load Widgets and Widgetized Area */
 require_once SPACIOUS_WIDGETS_DIR . '/widgets.php';
+
+define( 'SPACIOUS_CUSTOMIZER_DIR', SPACIOUS_INCLUDES_DIR . '/customizer' );
 
 /**
  * Detect plugin. For use on Front End only.
@@ -452,3 +462,7 @@ if ( defined( 'ELEMENTOR_VERSION' ) ) {
 	require_once( SPACIOUS_INCLUDES_DIR . '/elementor/elementor.php' );
 }
 
+/**
+ * Load deprecated functions.
+ */
+require get_template_directory() . '/inc/deprecated/deprecated-functions.php';

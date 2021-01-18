@@ -126,7 +126,7 @@ function spacious_widgets_init() {
 
 	// custom footer sidebar column select
 	$sidebar_num = '';
-	$sidebar_num = spacious_options( 'spacious_footer_widget_column_select_type', 'four' );
+	$sidebar_num = get_theme_mod( 'spacious_footer_widget_column_select_type', 'four' );
 	if ( $sidebar_num == 'four' || $sidebar_num == 'three' || $sidebar_num == 'two' ) {
 		// Registering footer sidebar two
 		register_sidebar( array(

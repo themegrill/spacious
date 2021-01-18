@@ -30,9 +30,9 @@ if ( ! function_exists( 'spacious_social_links' ) ) :
 				$spacious_links_output = '';
 
 				foreach ( $spacious_social_links as $key => $value ) {
-					$link = spacious_options( $key, '' );
+					$link = get_theme_mod( $key, '' );
 					if ( ! empty( $link ) ) {
-						if ( spacious_options( $key . 'new_tab', '0' ) == '1' ) {
+						if ( get_theme_mod( $key . 'new_tab', '0' ) == '1' ) {
 							$new_tab = 'target="_blank"';
 						} else {
 							$new_tab = '';
@@ -58,11 +58,11 @@ if ( ! function_exists( 'spacious_header_info_text' ) ) :
 	 * Shows the small info text on top header part
 	 */
 	function spacious_header_info_text() {
-		if ( spacious_options( 'spacious_header_info_text', '' ) == '' ) {
+		if ( get_theme_mod( 'spacious_header_info_text', '' ) == '' ) {
 			return;
 		}
 
-		$spacious_header_info_text = spacious_options( 'spacious_header_info_text', '' );
+		$spacious_header_info_text = get_theme_mod( 'spacious_header_info_text', '' );
 
 		echo do_shortcode( $spacious_header_info_text );
 	}
@@ -78,7 +78,7 @@ if ( ! function_exists( 'spacious_cart_icon' ) ) :
 	 * show cart icon if activated from customizer
 	 */
 	function spacious_cart_icon() {
-		if ( ( spacious_options( 'spacious_cart_icon', 0 ) == 1 ) && class_exists( 'woocommerce' ) ) :
+		if ( ( get_theme_mod( 'spacious_cart_icon', 0 ) == 1 ) && class_exists( 'woocommerce' ) ) :
 			?>
 			<div class="cart-wrapper">
 				<div class="spacious-woocommerce-cart-views">
@@ -160,11 +160,11 @@ if ( ! function_exists( 'spacious_featured_image_slider' ) ) :
 			<div class="slider-cycle">
 				<?php
 				for ( $i = 1; $i <= 5; $i++ ) {
-					$spacious_slider_title       = spacious_options( 'spacious_slider_title' . $i, '' );
-					$spacious_slider_text        = spacious_options( 'spacious_slider_text' . $i, '' );
-					$spacious_slider_image       = spacious_options( 'spacious_slider_image' . $i, '' );
-					$spacious_slider_button_text = spacious_options( 'spacious_slider_button_text' . $i, __( 'Read more', 'spacious' ) );
-					$spacious_slider_link        = spacious_options( 'spacious_slider_link' . $i, '#' );
+					$spacious_slider_title       = get_theme_mod( 'spacious_slider_title' . $i, '' );
+					$spacious_slider_text        = get_theme_mod( 'spacious_slider_text' . $i, '' );
+					$spacious_slider_image       = get_theme_mod( 'spacious_slider_image' . $i, '' );
+					$spacious_slider_button_text = get_theme_mod( 'spacious_slider_button_text' . $i, __( 'Read more', 'spacious' ) );
+					$spacious_slider_link        = get_theme_mod( 'spacious_slider_link' . $i, '#' );
 					$attachment_post_id          = attachment_url_to_postid( $spacious_slider_image );
 					$image_attributes            = wp_get_attachment_image_src( $attachment_post_id, 'full' );
 					if ( ! empty( $spacious_header_title ) || ! empty( $spacious_slider_text ) || ! empty( $spacious_slider_image ) ) {
@@ -317,7 +317,7 @@ if ( ! function_exists( 'spacious_breadcrumb' ) ) :
 
 		} elseif ( function_exists( 'yoast_breadcrumb' ) ) { // SEO by Yoast
 			yoast_breadcrumb(
-				'<div class="breadcrumb">' . '<span class="breadcrumb-title">' . wp_kses_post( spacious_options( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>',
+				'<div class="breadcrumb">' . '<span class="breadcrumb-title">' . wp_kses_post( get_theme_mod( 'spacious_custom_breadcrumb_text', __( 'You are here: ', 'spacious' ) ) ) . '</span>',
 				'</div> <!-- .breadcrumb : Yoast -->'
 			);
 		}
@@ -329,13 +329,13 @@ if ( ! function_exists( 'spacious_main_nav' ) ) :
 	function spacious_main_nav() {
 		// For header menu button enabled option.
 		$class                = '';
-		$header_button_link_1 = spacious_options( 'spacious_header_button_one_link' );
+		$header_button_link_1 = get_theme_mod( 'spacious_header_button_one_link' );
 		if ( $header_button_link_1 ) {
 			$class = 'spacious-header-button-enabled';
 		}
 		?>
 
-		<nav id="site-navigation" class="main-navigation clearfix  <?php echo esc_attr( $class ); ?> <?php echo spacious_options( 'spacious_one_line_menu_setting' ) ? 'tg-extra-menus' : ''; ?>" role="navigation">
+		<nav id="site-navigation" class="main-navigation clearfix  <?php echo esc_attr( $class ); ?> <?php echo get_theme_mod( 'spacious_one_line_menu_setting' ) ? 'tg-extra-menus' : ''; ?>" role="navigation">
 			<p class="menu-toggle"><?php _e( 'Menu', 'spacious' ); ?></p>
 			<?php
 			if ( has_nav_menu( 'primary' ) ) {

@@ -19,10 +19,10 @@
 	<div class="post-image-content-wrap clearfix">
 		<?php
 		if( has_post_thumbnail() ) {
-			if( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_1218px' || spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_1218px' ) {
+			if( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'box_1218px' || get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'wide_1218px' ) {
 				$featured = 'featured-blog-medium';
 			}
-			elseif( spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' || spacious_options( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) {
+			elseif( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' || get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) {
 				$featured = 'featured-blog-medium-small';
 			}
 			$image = '';
