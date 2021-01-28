@@ -831,7 +831,7 @@ function spacious_header_display_type_migrate() {
 	$spacious_themename = preg_replace( "/\W/", "_", strtolower( $spacious_themename ) );
 
 	// Store the old value.
-	$spacious_header_display_type = $spacious_options['spacious_header_display_type'];
+	$spacious_header_display_type = isset( $spacious_options['spacious_header_display_type'] ) ? $spacious_options['spacious_header_display_type'] : '';
 
 	// Ready to update the value for saving in `themefolder[spacious_header_display_type]` table.
 	$spacious_options_table                                 = get_option( $spacious_themename );
