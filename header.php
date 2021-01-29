@@ -19,12 +19,16 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<?php
 	/**
-	 * This hook is important for wordpress plugins and other many things
+	 * Functions hooked into spacious_action_head action.
+	 *
+	 * @hooked spacious_head - 10
+	 */
+	do_action( 'spacious_action_head' );
+
+	/**
+	 * This hook is important for WordPress plugins and other many things
 	 */
 	wp_head();
 	?>
