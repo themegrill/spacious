@@ -49,3 +49,71 @@ if ( ! function_exists( 'spacious_skip_content_link' ) ) :
 	}
 
 endif;
+
+if ( ! function_exists( 'spacious_header_start' ) ) :
+
+	/**
+	 * Header starts.
+	 */
+	function spacious_header_start() {
+		?>
+
+		<header id="masthead" class="site-header clearfix <?php echo esc_attr( $header_class ); ?>">
+
+	<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_top_header' ) ) :
+
+	function spacious_top_header() {
+	if ( get_theme_mod( 'spacious_activate_top_header_bar', 0 ) == 1 ) { ?>
+		<div id="header-meta">
+			<div class="inner-wrap clearfix">
+				<?php
+					/**
+					 * Functions hooked into spacious_action_header_top_content action.
+					 *
+					 * @hooked spacious_top_info - 5
+					 * @hooked spacious_top_small_menu - 10
+					 */
+					do_action('spacious_action_header_top_content' );
+					?>
+			</div>
+		</div>
+	<?php }
+	}
+endif;
+
+if ( ! function_exists( 'spacious_top_info' ) ) :
+
+	function spacious_top_info() {
+
+		if ( get_theme_mod( 'spacious_activate_social_links', 0 ) == 1 ) {
+			spacious_social_links();
+		}
+		?>
+
+		<div class="small-info-text"><?php spacious_header_info_text(); ?></div>
+	<?php
+	}
+endif;
+
+if ( ! function_exists( 'spacious_top_small_menu' ) ) :
+
+function spacious_top_small_menu() {
+	?>
+
+	<nav class="small-menu" class="clearfix">
+		<?php
+		if ( has_nav_menu( 'header' ) ) {
+			wp_nav_menu( array( 'theme_location' => 'header', 'depth' => -1 ) );
+		}
+		?>
+	</nav>
+
+	<?php
+}
+
+endif;

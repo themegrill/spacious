@@ -57,43 +57,25 @@ if ( function_exists( 'wp_body_open' ) ) {
 * @hooked spacious_page_start - 10
 * @hooked spacious_skip_content_link - 15
 */
-do_action( 'spacious_action_before' ); ?>
+do_action( 'spacious_action_before' );
 
+/*
+ * Hook: spacious_before_header
+ */
+do_action( 'spacious_before_header' );
 
-<?php do_action( 'spacious_before_header' ); ?>
+/**
+ * Functions hooked into spacious_action_before_header action.
+ * @hooked spacious_header_start
+ */
+do_action( 'spacious_action_before_header' );
 
-	<?php
-	$spacious_header_display_type = get_theme_mod( 'spacious_header_display_type', 'one' );
-	if ( $spacious_header_display_type === 'one' ) {
-		$header_class = 'spacious-header-display-one';
-	} elseif ( $spacious_header_display_type === 'four' ) {
-		$header_class = 'spacious-header-display-four';
-	}
-	?>
+/**
+ * Functions hooked into spacious_action_header_top action.
+ * @hooked spacious_top_header
+ */
+do_action( 'spacious_action_header_top' ); ?>
 
-	<header id="masthead" class="site-header clearfix <?php echo esc_attr( $header_class ); ?>">
-
-		<?php if ( get_theme_mod( 'spacious_activate_top_header_bar', 0 ) == 1 ) { ?>
-			<div id="header-meta">
-				<div class="inner-wrap clearfix">
-					<?php
-					if ( get_theme_mod( 'spacious_activate_social_links', 0 ) == 1 ) {
-						spacious_social_links();
-					}
-					?>
-
-					<div class="small-info-text"><?php spacious_header_info_text(); ?></div>
-
-					<nav class="small-menu" class="clearfix">
-						<?php
-						if ( has_nav_menu( 'header' ) ) {
-							wp_nav_menu( array( 'theme_location' => 'header', 'depth' => -1 ) );
-						}
-						?>
-					</nav>
-				</div>
-			</div>
-		<?php } ?>
 
 		<?php if ( 'above' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
 			spacious_render_header_image();
