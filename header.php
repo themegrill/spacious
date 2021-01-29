@@ -74,12 +74,13 @@ do_action( 'spacious_action_before_header' );
  * Functions hooked into spacious_action_header_top action.
  * @hooked spacious_top_header
  */
-do_action( 'spacious_action_header_top' ); ?>
+do_action( 'spacious_action_header_top' );
 
+/**
+* @hooked spacious_header_image_position - 10
+*/
+do_action( 'spacious_action_header_image' );  ?>
 
-		<?php if ( 'above' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
-			spacious_render_header_image();
-		} ?>
 
 		<div id="header-text-nav-container" class="<?php echo ( get_theme_mod( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
 

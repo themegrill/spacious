@@ -117,3 +117,15 @@ function spacious_top_small_menu() {
 }
 
 endif;
+
+if ( ! function_exists( 'spacious_header_image_position' ) ) :
+
+	function spacious_header_image_position() {
+
+		if ( 'above' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
+			spacious_render_header_image();
+		}
+
+	}
+
+endif;

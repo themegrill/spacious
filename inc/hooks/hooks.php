@@ -28,3 +28,6 @@ add_action( 'spacious_action_before_header', 'spacious_header_start', 10 );
 add_action( 'spacious_action_header_top', 'spacious_top_header' );
 add_action( 'spacious_action_header_top_content', 'spacious_top_info', 5 );
 add_action( 'spacious_action_header_top_content', 'spacious_top_small_menu', 10 );
+
+add_action( 'spacious_action_header_image', 'spacious_header_image_position', 10 );
+
