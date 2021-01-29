@@ -49,11 +49,18 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 ?>
 
-<?php do_action( 'before' ); ?>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'spacious' ); ?></a>
+<?php do_action( 'before' );
 
-	<?php do_action( 'spacious_before_header' ); ?>
+/**
+* Functions hooked into spacious_action_before action.
+*
+* @hooked spacious_page_start - 10
+* @hooked spacious_skip_content_link - 15
+*/
+do_action( 'spacious_action_before' ); ?>
+
+
+<?php do_action( 'spacious_before_header' ); ?>
 
 	<?php
 	$spacious_header_display_type = get_theme_mod( 'spacious_header_display_type', 'one' );
