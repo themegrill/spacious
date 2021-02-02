@@ -335,3 +335,80 @@ if ( ! function_exists( 'spacious_nav_container_close' ) ) :
 	}
 
 endif;
+
+if ( ! function_exists( 'spacious_header_image_below' ) ) :
+
+	/**
+	 * Header image position below.
+	 */
+	function spacious_header_image_below() {
+
+		if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
+	spacious_render_header_image();
+		}
+
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_slider_activation' ) ) :
+
+	/**
+	 * Slider activation.
+	 */
+	function spacious_slider_activation() {
+
+		if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
+			if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
+				if ( is_home() || is_front_page() ) {
+					spacious_featured_image_slider();
+				}
+			} else {
+				if ( is_front_page() ) {
+					spacious_featured_image_slider();
+				}
+			}
+		}
+
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_header_title_content' ) ) :
+
+	/**
+	 * Slider activation.
+	 */
+	function spacious_header_title_content() {
+
+
+		if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
+			if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
+				<div class="header-post-title-container clearfix">
+					<div class="inner-wrap">
+						<div class="post-title-wrapper">
+							<?php
+							if ( '' != spacious_header_title() ) {
+								?>
+								<?php if ( is_home() ) : ?>
+									<h2 class="header-post-title-class"><?php echo spacious_header_title(); ?></h2>
+								<?php else : ?>
+									<h1 class="header-post-title-class"><?php echo spacious_header_title(); ?></h1>
+								<?php endif; ?>
+								<?php
+							}
+							?>
+						</div>
+						<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
+							spacious_breadcrumb();
+						} ?>
+					</div>
+				</div>
+				<?php
+			}
+		}
+
+	}
+
+endif;
+

@@ -110,52 +110,18 @@ do_action( 'spacious_action_header_section' );
 * @hooked spacious_bottom_menu - 20
 * @hooked spacious_nav_container_close - 25
 */
-do_action( 'spacious_action_header_section_close' ); ?>
+do_action( 'spacious_action_header_section_close' );
+
+/**
+ * Functions hooked into spacious_action_header_content action.
+ *
+ * @hooked spacious_header_image_below - 5
+ * @hooked spacious_slider_activation - 10
+ * @hooked spacious_header_title_content - 15
+ */
+do_action( 'spacious_action_header_content' ); ?>
 
 
-<?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
-	spacious_render_header_image();
-} ?>
-
-<?php
-if ( get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
-	if ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' ) {
-		if ( is_home() || is_front_page() ) {
-			spacious_featured_image_slider();
-		}
-	} else {
-		if ( is_front_page() ) {
-			spacious_featured_image_slider();
-		}
-	}
-}
-
-if ( ( '' != spacious_header_title() ) && ! ( is_front_page() ) && ( ! get_theme_mod( 'spacious_header_title_hide', 0 ) ) ) {
-	if ( ! ( get_theme_mod( 'spacious_blog_slider', '0' ) != '1' && is_home() ) ) { ?>
-		<div class="header-post-title-container clearfix">
-			<div class="inner-wrap">
-				<div class="post-title-wrapper">
-					<?php
-					if ( '' != spacious_header_title() ) {
-						?>
-						<?php if ( is_home() ) : ?>
-							<h2 class="header-post-title-class"><?php echo spacious_header_title(); ?></h2>
-						<?php else : ?>
-							<h1 class="header-post-title-class"><?php echo spacious_header_title(); ?></h1>
-						<?php endif; ?>
-						<?php
-					}
-					?>
-				</div>
-				<?php if ( function_exists( 'spacious_breadcrumb' ) ) {
-					spacious_breadcrumb();
-				} ?>
-			</div>
-		</div>
-		<?php
-	}
-}
-?>
 </header>
 <?php do_action( 'spacious_after_header' ); ?>
 <?php do_action( 'spacious_before_main' ); ?>

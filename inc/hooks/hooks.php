@@ -45,6 +45,11 @@ add_action( 'spacious_action_header_section_close', 'spacious_inner_wrap_end', 1
 add_action( 'spacious_action_header_section_close', 'spacious_bottom_menu', 20 );
 add_action( 'spacious_action_header_section_close', 'spacious_nav_container_close', 25 );
 
+// Header image position.
+add_action( 'spacious_action_header_content', 'spacious_header_image_below', 5 );
+add_action( 'spacious_action_header_content', 'spacious_slider_activation', 10 );
+add_action( 'spacious_action_header_content', 'spacious_header_title_content', 15 );
+
 
 
 
