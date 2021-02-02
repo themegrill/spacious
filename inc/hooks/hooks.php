@@ -50,6 +50,9 @@ add_action( 'spacious_action_header_content', 'spacious_header_image_below', 5 )
 add_action( 'spacious_action_header_content', 'spacious_slider_activation', 10 );
 add_action( 'spacious_action_header_content', 'spacious_header_title_content', 15 );
 
+// Header ends.
+add_action( 'spacious_action_after_header', 'spacious_header_end', 10 );
+
 
 
 

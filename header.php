@@ -85,31 +85,31 @@ do_action( 'spacious_action_header_top' );
 do_action( 'spacious_action_header_image' );
 
 /**
-* Functions hooked into spacious_action_nav_container action.
-*
-* @hooked spacious_nav_container_open - 5
-* @hooked spacious_nav_inner_wrap - 10
-* @hooked spacious_nav_text_wrap - 15
-*/
+ * Functions hooked into spacious_action_nav_container action.
+ *
+ * @hooked spacious_nav_container_open - 5
+ * @hooked spacious_nav_inner_wrap - 10
+ * @hooked spacious_nav_text_wrap - 15
+ */
 do_action( 'spacious_action_nav_container' );
 
 
 /**
-* Functions hooked into spacious_action_header_section action.
-*
-* @hooked spacious_header_left_section - 10
-* @hooked spacious_header_right_section - 15
-*/
+ * Functions hooked into spacious_action_header_section action.
+ *
+ * @hooked spacious_header_left_section - 10
+ * @hooked spacious_header_right_section - 15
+ */
 do_action( 'spacious_action_header_section' );
 
 /**
-* Functions hooked into spacious_action_header_section action.
-*
-* @hooked spacious_nav_text_wrap_close - 5
-* @hooked spacious_inner_wrap_end - 15
-* @hooked spacious_bottom_menu - 20
-* @hooked spacious_nav_container_close - 25
-*/
+ * Functions hooked into spacious_action_header_section action.
+ *
+ * @hooked spacious_nav_text_wrap_close - 5
+ * @hooked spacious_inner_wrap_end - 15
+ * @hooked spacious_bottom_menu - 20
+ * @hooked spacious_nav_container_close - 25
+ */
 do_action( 'spacious_action_header_section_close' );
 
 /**
@@ -119,11 +119,18 @@ do_action( 'spacious_action_header_section_close' );
  * @hooked spacious_slider_activation - 10
  * @hooked spacious_header_title_content - 15
  */
-do_action( 'spacious_action_header_content' ); ?>
+do_action( 'spacious_action_header_content' );
 
+/**
+ * Functions hooked into spacious_action_after_header action.
+ *
+ * @hooked spacious_header_end - 10
+ */
+do_action( 'spacious_action_after_header' );
 
-</header>
-<?php do_action( 'spacious_after_header' ); ?>
-<?php do_action( 'spacious_before_main' ); ?>
+do_action( 'spacious_after_header' );
+
+do_action( 'spacious_before_main' ); ?>
+
 <div id="main" class="clearfix">
 	<div class="inner-wrap">

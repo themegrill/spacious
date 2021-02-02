@@ -412,3 +412,17 @@ if ( ! function_exists( 'spacious_header_title_content' ) ) :
 
 endif;
 
+
+if ( ! function_exists( 'spacious_header_end' ) ) :
+
+	/**
+	 * Header ends.
+	 */
+	function spacious_header_end() {
+		?>
+		</header><!-- #masthead -->
+		<?php
+	}
+
+endif;
+
