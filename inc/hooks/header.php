@@ -159,3 +159,103 @@ if ( ! function_exists( 'spacious_nav_text_wrap' ) ) :
 	}
 
 endif;
+
+
+
+if ( ! function_exists( 'spacious_header_left_section' ) ) :
+
+	function spacious_header_left_section() {
+		?>
+		<div id="header-left-section">
+				<?php
+				if ( ( 'both' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) { ?>
+					<div id="header-logo-image">
+
+						<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo( $blog_id = 0 ) ) {
+							spacious_the_custom_logo();
+						} ?>
+
+					</div><!-- #header-logo-image -->
+
+					<?php
+				}
+
+				$screen_reader = '';
+				if ( ( 'logo_only' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) || 'none' === get_theme_mod( 'spacious_show_header_logo_text', 'text_only' ) ) ) {
+					$screen_reader = 'screen-reader-text';
+				} ?>
+
+				<div id="header-text" class="<?php echo $screen_reader; ?>">
+					<?php if ( is_front_page() || is_home() ) : ?>
+						<h1 id="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+							   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+							   rel="home"><?php bloginfo( 'name' ); ?></a>
+						</h1>
+					<?php else : ?>
+						<h3 id="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+							   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+							   rel="home"><?php bloginfo( 'name' ); ?></a>
+						</h3>
+					<?php endif;
+
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description || is_customize_preview() ) : ?>
+					<p id="site-description"><?php echo $description; ?></p>
+					<?php endif; ?><!-- #site-description -->
+				</div><!-- #header-text -->
+
+			</div><!-- #header-left-section -->
+		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_header_right_section' ) ) :
+
+	function spacious_header_right_section() {
+		?>
+		<div id="header-right-section">
+				<?php
+				if ( is_active_sidebar( 'spacious_header_sidebar' ) ) {
+					?>
+					<div id="header-right-sidebar" class="clearfix">
+						<?php
+						// Calling the header sidebar if it exists.
+						if ( ! dynamic_sidebar( 'spacious_header_sidebar' ) ):
+						endif;
+						?>
+					</div>
+					<?php
+				} ?>
+
+				<?php if ( 'four' !== get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+					<div class="header-action">
+						<?php
+						spacious_cart_icon();
+
+						if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
+							?>
+							<div class="search-wrapper">
+								<div class="search">
+									<i class="fa fa-search"> </i>
+								</div>
+								<div class="header-search-form">
+									<?php get_search_form(); ?>
+								</div>
+							</div><!-- /.search-wrapper -->
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( ! ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) ) :
+					spacious_main_nav();
+				endif; ?>
+
+			</div><!-- #header-right-section -->
+		<?php
+	}
+
+endif;
+

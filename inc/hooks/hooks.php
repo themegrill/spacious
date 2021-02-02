@@ -35,3 +35,9 @@ add_action( 'spacious_action_header_image', 'spacious_header_image_position', 10
 add_action( 'spacious_action_nav_container', 'spacious_nav_container_open', 5 );
 add_action( 'spacious_action_nav_container', 'spacious_nav_inner_wrap', 10 );
 add_action( 'spacious_action_nav_container', 'spacious_nav_text_wrap', 15 );
+
+// Header left/right section.
+add_action( 'spacious_action_header_section', 'spacious_header_left_section', 5 );
+add_action( 'spacious_action_header_section', 'spacious_header_right_section', 10 );
+
+
