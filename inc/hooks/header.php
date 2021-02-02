@@ -426,3 +426,28 @@ if ( ! function_exists( 'spacious_header_end' ) ) :
 
 endif;
 
+if ( ! function_exists( 'spacious_main_start' ) ) :
+
+	/**
+	 * main starts.
+	 */
+function spacious_main_start() {
+	?>
+	<div id="main" class="clearfix">
+	<?php
+}
+
+endif;
+
+if ( ! function_exists( 'spacious_main_inner_wrap' ) ) :
+
+	/**
+	 * Inner wrap.
+	 */
+	function spacious_main_inner_wrap() {
+		?>
+		<div class="inner-wrap">
+		<?php
+	}
+
+endif;

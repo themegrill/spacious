@@ -53,6 +53,6 @@ add_action( 'spacious_action_header_content', 'spacious_header_title_content', 1
 // Header ends.
 add_action( 'spacious_action_after_header', 'spacious_header_end', 10 );
 
-
-
-
+// Main Starts
+add_action( 'spacious_action_main', 'spacious_main_start', 5 );
+add_action( 'spacious_action_main', 'spacious_main_inner_wrap', 10 );

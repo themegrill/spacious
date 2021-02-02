@@ -130,7 +130,13 @@ do_action( 'spacious_action_after_header' );
 
 do_action( 'spacious_after_header' );
 
-do_action( 'spacious_before_main' ); ?>
+do_action( 'spacious_before_main' );
 
-<div id="main" class="clearfix">
-	<div class="inner-wrap">
+/**
+* Functions hooked into spacious_action_main action.
+*
+* @hooked spacious_main_start - 5
+* @hooked spacious_main_inner_wrap - 10
+*/
+do_action( 'spacious_action_main' );
+
