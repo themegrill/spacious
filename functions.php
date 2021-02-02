@@ -359,7 +359,7 @@ endif;
 add_action( 'after_setup_theme', 'spacious_setup' );
 
 // Theme version.
-$spacious_theme = wp_get_theme('spacious');
+$spacious_theme = wp_get_theme( 'spacious' );
 define( 'SPACIOUS_THEME_VERSION', $spacious_theme->get( 'Version' ) );
 
 /**
@@ -409,6 +409,16 @@ require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
 require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
 require_once SPACIOUS_INCLUDES_DIR . '/class-spacious-dynamic-css.php';
 require_once SPACIOUS_INCLUDES_DIR . '/migration.php';
+
+/**
+ * Load required theme hook files.
+ */
+require_once SPACIOUS_INCLUDES_DIR . '/hooks/hooks.php';
+require_once SPACIOUS_INCLUDES_DIR . '/hooks/header.php';
+require_once SPACIOUS_INCLUDES_DIR . '/hooks/footer.php';
+
+/** Dynamic class file include. */
+require_once SPACIOUS_INCLUDES_DIR . '/spacious-dynamic-classes.php';
 
 /** Load demo import migration scripts. */
 require_once SPACIOUS_INCLUDES_DIR . '/demo-import-migration.php';

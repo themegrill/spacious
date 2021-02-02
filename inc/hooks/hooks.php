@@ -56,3 +56,17 @@ add_action( 'spacious_action_after_header', 'spacious_header_end', 10 );
 // Main Starts
 add_action( 'spacious_action_main', 'spacious_main_start', 5 );
 add_action( 'spacious_action_main', 'spacious_main_inner_wrap', 10 );
+
+add_action( 'spacious_action_main_end', 'spacious_main_inner_wrap_end', 5 );
+add_action( 'spacious_action_main_end', 'spacious_main_end', 10 );
+
+// Footer start.
+add_action( 'spacious_action_footer_start', 'spacious_footer_wrapper_start' );
+
+add_action( 'spacious_action_footer_content', 'spacious_footer_content' );
+
+add_action( 'spacious_action_footer_end', 'spacious_footer_wrapper_end' );
+
+add_action( 'spacious_action_after_footer', 'spacious_after_footer', 5 );
+add_action( 'spacious_action_after_footer', 'spacious_footer_page_end', 15 );
+
