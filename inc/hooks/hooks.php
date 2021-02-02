@@ -31,3 +31,7 @@ add_action( 'spacious_action_header_top_content', 'spacious_top_small_menu', 10 
 
 add_action( 'spacious_action_header_image', 'spacious_header_image_position', 10 );
 
+// Header nav container.
+add_action( 'spacious_action_nav_container', 'spacious_nav_container_open', 5 );
+add_action( 'spacious_action_nav_container', 'spacious_nav_inner_wrap', 10 );
+add_action( 'spacious_action_nav_container', 'spacious_nav_text_wrap', 15 );

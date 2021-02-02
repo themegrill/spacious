@@ -129,3 +129,33 @@ if ( ! function_exists( 'spacious_header_image_position' ) ) :
 	}
 
 endif;
+
+if ( ! function_exists( 'spacious_nav_container_open' ) ) :
+
+	function spacious_nav_container_open() {
+		?>
+	<div id="header-text-nav-container" class="<?php echo ( get_theme_mod( 'spacious_one_line_menu_setting', 0 ) == 1 ) ? 'menu-one-line' : ''; ?>">
+		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_nav_inner_wrap' ) ) :
+
+function spacious_nav_inner_wrap() {
+	?>
+	<div class="inner-wrap" id="<?php echo esc_attr( spacious_header_display_type_class() ); ?>">
+	<?php
+}
+
+endif;
+
+if ( ! function_exists( 'spacious_nav_text_wrap' ) ) :
+
+	function spacious_nav_text_wrap() {
+		?>
+		<div id="header-text-nav-wrap" class="clearfix">
+		<?php
+	}
+
+endif;

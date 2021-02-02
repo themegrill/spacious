@@ -33,3 +33,4 @@ return $header_class;
 }
 
 endif;
+
