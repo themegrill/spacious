@@ -100,36 +100,18 @@ do_action( 'spacious_action_nav_container' );
 * @hooked spacious_header_left_section - 10
 * @hooked spacious_header_right_section - 15
 */
-do_action( 'spacious_action_header_section' ); ?>
+do_action( 'spacious_action_header_section' );
 
+/**
+* Functions hooked into spacious_action_header_section action.
+*
+* @hooked spacious_nav_text_wrap_close - 5
+* @hooked spacious_inner_wrap_end - 15
+* @hooked spacious_bottom_menu - 20
+* @hooked spacious_nav_container_close - 25
+*/
+do_action( 'spacious_action_header_section_close' ); ?>
 
-		</div><!-- #header-text-nav-wrap -->
-	</div><!-- .inner-wrap -->
-	<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
-		<div class="bottom-menu clearfix <?php echo get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
-			<div class="inner-wrap clearfix">
-				<?php spacious_main_nav(); ?>
-
-				<div class="header-action">
-					<?php
-					spacious_cart_icon();
-
-					if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
-						?>
-						<div class="search-wrapper">
-							<div class="search">
-								<i class="fa fa-search"> </i>
-							</div>
-							<div class="header-search-form">
-								<?php get_search_form(); ?>
-							</div>
-						</div><!-- /.search-wrapper -->
-					<?php endif; ?>
-				</div>
-			</div>
-		</div>
-	<?php endif; ?>
-</div><!-- #header-text-nav-container -->
 
 <?php if ( 'below' === get_theme_mod( 'spacious_header_image_position', 'above' ) ) {
 	spacious_render_header_image();

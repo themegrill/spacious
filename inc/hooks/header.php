@@ -259,3 +259,79 @@ if ( ! function_exists( 'spacious_header_right_section' ) ) :
 
 endif;
 
+if ( ! function_exists( 'spacious_nav_text_wrap_close' ) ) :
+
+	/**
+	 * Header text nav wrap end.
+	 */
+	function spacious_nav_text_wrap_close() {
+		?>
+		</div><!-- #header-text-nav-wrap -->
+		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_inner_wrap_end' ) ) :
+
+	/**
+	 * Inner wrap ends.
+	 */
+	function spacious_inner_wrap_end() {
+		?>
+		</div><!-- .inner-wrap-->
+		<?php
+	}
+
+endif;
+
+
+if ( ! function_exists( 'spacious_bottom_menu' ) ) :
+
+	/**
+	 * Header ends.
+	 */
+	function spacious_bottom_menu() {
+		?>
+		<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
+		<div class="bottom-menu clearfix <?php echo get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
+			<div class="inner-wrap clearfix">
+				<?php spacious_main_nav(); ?>
+
+				<div class="header-action">
+					<?php
+					spacious_cart_icon();
+
+					if ( 1 === get_theme_mod( 'spacious_header_search_icon', 0 ) ) :
+						?>
+						<div class="search-wrapper">
+							<div class="search">
+								<i class="fa fa-search"> </i>
+							</div>
+							<div class="header-search-form">
+								<?php get_search_form(); ?>
+							</div>
+						</div><!-- /.search-wrapper -->
+					<?php endif; ?>
+				</div>
+			</div>
+		</div>
+	<?php endif; ?>
+		<?php
+	}
+
+endif;
+
+
+if ( ! function_exists( 'spacious_nav_container_close' ) ) :
+
+	/**
+	 * Header nav ends.
+	 */
+	function spacious_nav_container_close() {
+		?>
+		</div><!-- #header-text-nav-container -->
+		<?php
+	}
+
+endif;

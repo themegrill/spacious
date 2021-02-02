@@ -40,4 +40,11 @@ add_action( 'spacious_action_nav_container', 'spacious_nav_text_wrap', 15 );
 add_action( 'spacious_action_header_section', 'spacious_header_left_section', 5 );
 add_action( 'spacious_action_header_section', 'spacious_header_right_section', 10 );
 
+add_action( 'spacious_action_header_section_close', 'spacious_nav_text_wrap_close', 5 );
+add_action( 'spacious_action_header_section_close', 'spacious_inner_wrap_end', 15 );
+add_action( 'spacious_action_header_section_close', 'spacious_bottom_menu', 20 );
+add_action( 'spacious_action_header_section_close', 'spacious_nav_container_close', 25 );
+
+
+
 
