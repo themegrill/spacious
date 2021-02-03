@@ -8,36 +8,51 @@
  * @subpackage Spacious
  * @since      Spacious 1.0
  */
-?>
 
-</div><!-- .inner-wrap -->
-</div><!-- #main -->
-<?php do_action( 'spacious_before_footer' ); ?>
+/**
+* Functions hooked into spacious_action_main_end action.
+*
+* @hooked spacious_main_inner_wrap_end - 5
+* @hooked spacious_main_end - 10
+*/
+do_action( 'spacious_action_main_end' );
 
-<footer id="colophon" class="clearfix">
-	<?php get_sidebar( 'footer' ); ?>
-	<div class="footer-socket-wrapper clearfix">
-		<div class="inner-wrap">
-			<div class="footer-socket-area">
-				<?php do_action( 'spacious_footer_copyright' ); ?>
-				<nav class="small-menu clearfix">
-					<?php
-					if ( has_nav_menu( 'footer' ) ) {
-						wp_nav_menu( array(
-							'theme_location' => 'footer',
-							'depth'          => -1,
-						) );
-					}
-					?>
-				</nav>
-			</div>
-		</div>
-	</div>
-</footer>
-<a href="#masthead" id="scroll-up"></a>
-</div><!-- #page -->
+/**
+ * Hook: spacious_before_footer
+ */
+do_action( 'spacious_before_footer' );
 
-<?php wp_footer(); ?>
+
+/**
+ * Functions hooked into spacious_action_footer_start action.
+ *
+ * @hooked spacious_footer_wrapper_start
+ */
+do_action( 'spacious_action_footer_start' );
+
+/**
+ * Functions hooked into spacious_action_footer_content action.
+ *
+ * @hooked spacious_footer_content
+ */
+do_action( 'spacious_action_footer_content' );
+
+/**
+ * Functions hooked into spacious_action_footer_end action.
+ *
+ * @hooked spacious_footer_wrapper_end
+ */
+do_action( 'spacious_action_footer_end' );
+
+/**
+ * Functions hooked into spacious_action_after_footer action.
+ *
+ * @hooked spacious_after_footer - 5
+ * @hooked spacious_footer_page_end - 15
+ */
+do_action( 'spacious_action_after_footer' );
+
+wp_footer(); ?>
 
 </body>
 </html>
