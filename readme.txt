@@ -46,9 +46,14 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+<<<<<<< HEAD
 == Version 1.9.0 - 2021-01-18 =
 * Refactor - Customize setting and control 
 * Modify - Theme options now uses Customize API instead of Options API.
+=======
+= TBD =
+* Tweak - Update Screenshot image.
+>>>>>>> update/screenshot
 
 = Version 1.8.3 - 2020-12-21 =
 * Fix - Custom customize editor control not working since WordPress 5.6
