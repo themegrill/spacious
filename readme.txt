@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= Version 1.8.4 - 2021-02-24 =
+* Tweak - Update Screenshot image.
+
 = Version 1.8.3 - 2020-12-21 =
 * Fix - Custom customize editor control not working since WordPress 5.6
 
