@@ -176,7 +176,7 @@ if ( function_exists( 'wp_body_open' ) ) {
 				</div><!-- #header-text-nav-wrap -->
 			</div><!-- .inner-wrap -->
 			<?php if ( 'four' === get_theme_mod( 'spacious_header_display_type', 'one' ) ) : ?>
-				<div class="bottom-menu clearfix <?php echo get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''; ?>">
+				<div class="bottom-menu clearfix <?php echo esc_attr(get_theme_mod( 'spacious_header_button_setting' ) ? 'header-menu-button' : ''); ?>">
 					<div class="inner-wrap clearfix">
 						<?php spacious_main_nav(); ?>
 
