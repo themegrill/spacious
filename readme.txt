@@ -46,7 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-== Version 1.9.1 - 2021-02-24 =
+== Version 1.9.2 - 2021-03-01 =
+* Fix - Missed close span tag for menu toggle button.
+
+== Version 1.9.1 - 2021-02-25 =
 * Tweak - Update Screenshot image.
 
 == Version 1.9.0 - 2021-01-18 =
