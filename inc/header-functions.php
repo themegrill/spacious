@@ -338,7 +338,7 @@ if ( ! function_exists( 'spacious_main_nav' ) ) :
 
 		<nav id="site-navigation" class="main-navigation clearfix  <?php echo esc_attr( $class ); ?> <?php echo esc_attr( get_theme_mod( 'spacious_one_line_menu_setting' )) ? 'tg-extra-menus' : ''; ?>" role="navigation">
 			<p class="menu-toggle">
-				<span class="<?php echo esc_attr( $responsive_menu_enable == '1' ? 'screen-reader-text' : '' ); ?>"><?php _e( 'Menu', 'spacious' ); ?>
+				<span class="<?php echo esc_attr( $responsive_menu_enable == '1' ? 'screen-reader-text' : '' ); ?>"><?php _e( 'Menu', 'spacious' ); ?></span>
 			</p>
 			<?php
 			if ( has_nav_menu( 'primary' ) ) {
