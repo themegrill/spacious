@@ -58,6 +58,16 @@ class Spacious_Theme_Review_Notice {
 		$current_user             = wp_get_current_user();
 		$ignored_notice           = get_user_meta( $user_id, 'spacious_ignore_theme_review_notice', true );
 		$ignored_notice_partially = get_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', true );
+		$dismiss_url              = wp_nonce_url(
+			add_query_arg( 'nag_spacious_ignore_theme_review_notice', 0 ),
+			'spacious_ignore_theme_review_notice_nonce',
+			'_spacious_ignore_theme_review_notice_nonce'
+		);
+		$temporary_dismiss_url    = wp_nonce_url(
+			add_query_arg( 'nag_spacious_ignore_theme_review_notice_partially', 0 ),
+			'spacious_ignore_theme_review_notice_partially_nonce',
+			'_spacious_ignore_theme_review_notice_nonce'
+		);
 
 		/**
 		 * Return from notice display if:
@@ -72,41 +82,44 @@ class Spacious_Theme_Review_Notice {
 		?>
 
 		<div class="notice updated theme-review-notice" style="position:relative;">
-			<p>
-				<?php
-				printf(
-				/* Translators: %1$s current user display name. */
-					esc_html__(
-						'Howdy, %1$s! It seems that you have been using this theme for more than 15 day. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!', 'spacious'
-					),
-					'<strong>' . esc_html( $current_user->display_name ) . '</strong>'
-				);
-				?>
-			</p>
-
-			<div class="links">
-				<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
-					<span class="dashicons dashicons-thumbs-up"></span>
-					<span><?php esc_html_e( 'Sure', 'spacious' ); ?></span>
-				</a>
-
-				<a href="?nag_spacious_ignore_theme_review_notice_partially=0" class="btn button-secondary">
-					<span class="dashicons dashicons-calendar"></span>
-					<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
-				</a>
-
-				<a href="?nag_spacious_ignore_theme_review_notice=0" class="btn button-secondary">
-					<span class="dashicons dashicons-smiley"></span>
-					<span><?php esc_html_e( 'I already did', 'spacious' ); ?></span>
-				</a>
-
-				<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
-					<span class="dashicons dashicons-edit"></span>
-					<span><?php esc_html_e( 'Got theme support question?', 'spacious' ); ?></span>
-				</a>
-			</div>
-
-			<a class="notice-dismiss" style="text-decoration:none;" href="?nag_spacious_ignore_theme_review_notice=0"></a>
+			<div class="spacious-message__content">
+					<div class="spacious-message__image">
+						<img class="spacious-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
+					</div>
+					<div class="spacious-message__text">
+						<p>
+							<?php
+							printf(
+							/* Translators: %1$s current user display name. */
+								esc_html__(
+									'Howdy, %1$s! It seems that you have been using this theme for more than 15 day. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!',
+									'spacious'
+								),
+								'<strong>' . esc_html( $current_user->display_name ) . '</strong>'
+							);
+							?>
+						</p>
+						<div class="links">
+							<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
+								<span class="dashicons dashicons-thumbs-up"></span>
+								<span><?php esc_html_e( 'Sure', 'spacious' ); ?></span>
+							</a>
+							<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
+								<span class="dashicons dashicons-calendar"></span>
+								<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
+							</a>
+							<a href="<?php echo esc_url( $dismiss_url ); ?>" class="btn button-secondary">
+								<span class="dashicons dashicons-smiley"></span>
+								<span><?php esc_html_e( 'I already did', 'spacious' ); ?></span>
+							</a>
+							<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
+								<span class="dashicons dashicons-edit"></span>
+								<span><?php esc_html_e( 'Got theme support question?', 'spacious' ); ?></span>
+							</a>
+						</div><!-- /.links -->
+					</div>
+				<a class="notice-dismiss" style="text-decoration:none;" href="?nag_spacious_ignore_theme_review_notice=0"></a>
+			</div><!-- /.spacious-message__content -->
 		</div>
 
 		<?php
@@ -121,10 +134,16 @@ class Spacious_Theme_Review_Notice {
 		$user_id = $current_user->ID;
 
 		/* If user clicks to ignore the notice, add that to their user meta */
-		if ( isset( $_GET['nag_spacious_ignore_theme_review_notice'] ) && '0' == $_GET['nag_spacious_ignore_theme_review_notice'] ) {
-			add_user_meta( $user_id, 'spacious_ignore_theme_review_notice', 'true', true );
-		}
+		if ( isset( $_GET['nag_spacious_ignore_theme_review_notice'] ) && isset( $_GET['_spacious_ignore_theme_review_notice_nonce'] ) ) {
 
+			if ( ! wp_verify_nonce( wp_unslash( $_GET['_spacious_ignore_theme_review_notice_nonce'] ), 'spacious_ignore_theme_review_notice_nonce' ) ) {
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'spacious' ) );
+			}
+
+			if ( '0' === $_GET['nag_spacious_ignore_theme_review_notice'] ) {
+				add_user_meta( $user_id, 'spacious_ignore_theme_review_notice', 'true', true );
+			}
+		}
 	}
 
 	/**
@@ -136,10 +155,16 @@ class Spacious_Theme_Review_Notice {
 		$user_id = $current_user->ID;
 
 		/* If user clicks to ignore the notice, add that to their user meta */
-		if ( isset( $_GET['nag_spacious_ignore_theme_review_notice_partially'] ) && '0' == $_GET['nag_spacious_ignore_theme_review_notice_partially'] ) {
-			update_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', time() );
-		}
+		if ( isset( $_GET['nag_spacious_ignore_theme_review_notice_partially'] ) && isset( $_GET['_spacious_ignore_theme_review_notice_nonce'] ) ) {
 
+			if ( ! wp_verify_nonce( wp_unslash( $_GET['_spacious_ignore_theme_review_notice_nonce'] ), 'spacious_ignore_theme_review_notice_partially_nonce' ) ) {
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'spacious' ) );
+			}
+
+			if ( '0' === $_GET['nag_spacious_ignore_theme_review_notice_partially'] ) {
+				update_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', time() );
+			}
+		}
 	}
 
 	/**
@@ -169,7 +194,6 @@ class Spacious_Theme_Review_Notice {
 			if ( $ignored_notice_partially ) {
 				delete_user_meta( $user->ID, 'nag_spacious_ignore_theme_review_notice_partially' );
 			}
-
 		}
 	}
 }
