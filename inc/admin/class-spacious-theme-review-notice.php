@@ -69,6 +69,10 @@ class Spacious_Theme_Review_Notice {
 			'_spacious_ignore_theme_review_notice_nonce'
 		);
 
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			return;
+		}
+
 		/**
 		 * Return from notice display if:
 		 *
