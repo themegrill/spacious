@@ -82,7 +82,7 @@ class Spacious_Theme_Review_Notice {
 		?>
 
 		<!-- Added two classes review these classes styles later and delte this comment-->
-		<div class="notice notice-success spacious-notice updated theme-review-notice" style="position:relative;">
+		<div class="notice notice-success spacious-notice theme-review-notice" style="position:relative;">
 			<div class="spacious-message__content">
 					<div class="spacious-message__image">
 						<img class="spacious-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
