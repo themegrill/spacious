@@ -26,35 +26,31 @@ class Spacious_Theme_Review_Notice {
 	 */
 	public function __construct() {
 
-		add_action( 'after_setup_theme', array( $this, 'spacious_theme_rating_notice' ) );
-		add_action( 'switch_theme', array( $this, 'spacious_theme_rating_notice_data_remove' ) );
+		add_action( 'after_setup_theme', array( $this, 'review_notice' ) );
+		add_action( 'admin_notices', array( $this, 'review_notice_markup' ), 0 );
+		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice' ), 0 );
+		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice_partially' ), 0 );
+		add_action( 'switch_theme', array( $this, 'review_notice_data_remove' ) );
 
 	}
 
 	/**
 	 * Set the required option value as needed for theme review notice.
 	 */
-	public function spacious_theme_rating_notice() {
+	public function review_notice() {
 
 		// Set the installed time in `spacious_theme_installed_time` option table.
-		$option = get_option( 'spacious_theme_installed_time' );
-		if ( ! $option ) {
+		if ( ! get_option( 'spacious_theme_installed_time' ) ) {
 			update_option( 'spacious_theme_installed_time', time() );
 		}
-
-		add_action( 'admin_notices', array( $this, 'spacious_theme_review_notice' ), 0 );
-		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice' ), 0 );
-		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice_partially' ), 0 );
-
 	}
 
 	/**
-	 * Display the theme review notice.
+	 * Show HTML markup if conditions meet.
 	 */
-	public function spacious_theme_review_notice() {
+	public function review_notice_markup() {
 
-		global $current_user;
-		$user_id                  = $current_user->ID;
+		$user_id                  = get_current_user_id();
 		$current_user             = wp_get_current_user();
 		$ignored_notice           = get_user_meta( $user_id, 'spacious_ignore_theme_review_notice', true );
 		$ignored_notice_partially = get_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', true );
@@ -76,7 +72,7 @@ class Spacious_Theme_Review_Notice {
 		/**
 		 * Return from notice display if:
 		 *
-		 * 1. The theme installed is less than 15 days.
+		 * 1. The theme installed is less than 15 days ago.
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
@@ -85,7 +81,8 @@ class Spacious_Theme_Review_Notice {
 		}
 		?>
 
-		<div class="notice updated theme-review-notice" style="position:relative;">
+		<!-- Added two classes review these classes styles later and delte this comment-->
+		<div class="notice notice-success spacious-notice updated theme-review-notice" style="position:relative;">
 			<div class="spacious-message__content">
 					<div class="spacious-message__image">
 						<img class="spacious-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
@@ -121,8 +118,8 @@ class Spacious_Theme_Review_Notice {
 								<span><?php esc_html_e( 'Got theme support question?', 'spacious' ); ?></span>
 							</a>
 						</div><!-- /.links -->
-					</div>
-				<a class="notice-dismiss" style="text-decoration:none;" href="?nag_spacious_ignore_theme_review_notice=0"></a>
+					</div> <!-- /.spacious-message__text -->
+				<a class="notice-dismiss" style="text-decoration:none;" href="<?php echo esc_url( $dismiss_url ); ?>"></a>
 			</div><!-- /.spacious-message__content -->
 		</div>
 
@@ -134,9 +131,6 @@ class Spacious_Theme_Review_Notice {
 	 */
 	public function spacious_ignore_theme_review_notice() {
 
-		global $current_user;
-		$user_id = $current_user->ID;
-
 		/* If user clicks to ignore the notice, add that to their user meta */
 		if ( isset( $_GET['nag_spacious_ignore_theme_review_notice'] ) && isset( $_GET['_spacious_ignore_theme_review_notice_nonce'] ) ) {
 
@@ -145,7 +139,7 @@ class Spacious_Theme_Review_Notice {
 			}
 
 			if ( '0' === $_GET['nag_spacious_ignore_theme_review_notice'] ) {
-				add_user_meta( $user_id, 'spacious_ignore_theme_review_notice', 'true', true );
+				add_user_meta( get_current_user_id(), 'spacious_ignore_theme_review_notice', 'true', true );
 			}
 		}
 	}
@@ -155,9 +149,6 @@ class Spacious_Theme_Review_Notice {
 	 */
 	public function spacious_ignore_theme_review_notice_partially() {
 
-		global $current_user;
-		$user_id = $current_user->ID;
-
 		/* If user clicks to ignore the notice, add that to their user meta */
 		if ( isset( $_GET['nag_spacious_ignore_theme_review_notice_partially'] ) && isset( $_GET['_spacious_ignore_theme_review_notice_nonce'] ) ) {
 
@@ -166,7 +157,7 @@ class Spacious_Theme_Review_Notice {
 			}
 
 			if ( '0' === $_GET['nag_spacious_ignore_theme_review_notice_partially'] ) {
-				update_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', time() );
+				update_user_meta( get_current_user_id(), 'nag_spacious_ignore_theme_review_notice_partially', time() );
 			}
 		}
 	}
@@ -174,7 +165,7 @@ class Spacious_Theme_Review_Notice {
 	/**
 	 * Remove the data set after the theme has been switched to other theme.
 	 */
-	public function spacious_theme_rating_notice_data_remove() {
+	public function review_notice_data_remove() {
 
 		$get_all_users        = get_users();
 		$theme_installed_time = get_option( 'spacious_theme_installed_time' );
