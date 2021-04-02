@@ -76,7 +76,7 @@ class Spacious_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-0 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 sec' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
@@ -90,20 +90,31 @@ class Spacious_Theme_Review_Notice {
 					<div class="spacious-message__text">
 						<p>
 							<?php
+							/* translators: %s Current theme's name */
+							$message_text = __(
+								'<strong>Hakuna Matata!</strong>
+							<small>(The above word is just to draw your attention.)</small>&#128522;<br>
+							<em>Please provide our theme <strong>%s</strong> with a nice review.</em>
+							<span>What benefit would you have?</span><br>
+							Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. &#128522;'
+							);
+							$allowed_tags = array(
+								'br'     => array(),
+								'strong' => array(),
+								'small'  => array(),
+								'em'     => array(),
+								'span'   => array(),
+							);
 							printf(
-							/* Translators: %1$s current user display name. */
-								esc_html__(
-									'Howdy, %1$s! It seems that you have been using this theme for more than 15 day. We hope you are happy with everything that the theme has to offer. If you can spare a minute, please help us by leaving a 5-star review on WordPress.org.  By spreading the love, we can continue to develop new amazing features in the future, for free!',
-									'spacious'
-								),
-								'<strong>' . esc_html( $current_user->display_name ) . '</strong>'
+								wp_kses( $message_text, $allowed_tags ),
+								wp_get_theme()->get( 'Name' )
 							);
 							?>
 						</p>
 						<div class="links">
 							<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
 								<span class="dashicons dashicons-thumbs-up"></span>
-								<span><?php esc_html_e( 'Sure', 'spacious' ); ?></span>
+								<span><?php esc_html_e( 'Sure, I\'d love to', 'spacious' ); ?></span>
 							</a>
 							<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
 								<span class="dashicons dashicons-calendar"></span>
@@ -115,7 +126,7 @@ class Spacious_Theme_Review_Notice {
 							</a>
 							<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
 								<span class="dashicons dashicons-edit"></span>
-								<span><?php esc_html_e( 'Got theme support question?', 'spacious' ); ?></span>
+								<span><?php esc_html_e( 'I have a query', 'spacious' ); ?></span>
 							</a>
 						</div><!-- /.links -->
 					</div> <!-- /.spacious-message__text -->
