@@ -26,12 +26,20 @@ class Spacious_Theme_Review_Notice {
 	 */
 	public function __construct() {
 
+		add_action( 'init', array( $this, 'review_reset' ) );
 		add_action( 'after_setup_theme', array( $this, 'review_notice' ) );
 		add_action( 'admin_notices', array( $this, 'review_notice_markup' ), 0 );
 		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice' ), 0 );
 		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice_partially' ), 0 );
 		add_action( 'switch_theme', array( $this, 'review_notice_data_remove' ) );
 
+	}
+
+	public function review_reset() {
+		if ( 'completed' !== get_option( 'spacious_theme_review_notice_reset' ) ) {
+			$this->review_notice_data_remove();
+			update_option( 'spacious_theme_review_notice_reset', 'completed' );
+		}
 	}
 
 	/**
@@ -76,7 +84,7 @@ class Spacious_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-0 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 sec' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
