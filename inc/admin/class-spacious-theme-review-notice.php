@@ -80,7 +80,7 @@ class Spacious_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-0 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 sec' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
@@ -88,7 +88,7 @@ class Spacious_Theme_Review_Notice {
 		<div class="notice notice-success spacious-notice theme-review-notice" style="position:relative;">
 			<div class="spacious-message__content">
 				<div class="spacious-message__image">
-					<img class="spacious-logo--png" src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/images/spacious-logo.png' ); ?>" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
+					<img class="spacious-logo--png" src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/images/spacious-logo-square.png' ); ?>" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
 				</div>
 				<div class="spacious-message__text">
 					<h3><?php printf( esc_html( 'HAKUNA %s' ), '<strong>MATATA!</strong>' ); ?></h3>
@@ -128,19 +128,19 @@ class Spacious_Theme_Review_Notice {
 					</p>				
 					<div class="links">
 						<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
-							<span class="dashicons dashicons-thumbs-up"></span>
+							<span class="dashicons dashicons-external"></span>
 							<span><?php esc_html_e( 'Sure, I\'d love to', 'spacious' ); ?></span>
-						</a>
-						<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
-							<span class="dashicons dashicons-calendar"></span>
-							<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
 						</a>
 						<a href="<?php echo esc_url( $dismiss_url ); ?>" class="btn button-secondary">
 							<span class="dashicons dashicons-smiley"></span>
 							<span><?php esc_html_e( 'I already did!', 'spacious' ); ?></span>
 						</a>
+						<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
+							<span class="dashicons dashicons-calendar"></span>
+							<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
+						</a>
 						<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
-							<span class="dashicons dashicons-edit"></span>
+							<span class="dashicons dashicons-testimonial"></span>
 							<span><?php esc_html_e( 'I have a query', 'spacious' ); ?></span>
 						</a>
 					</div><!-- /.links -->

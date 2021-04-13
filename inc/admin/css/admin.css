@@ -129,7 +129,7 @@ a.spacious-message-close:before {
  * spacious Review Notice
  */
  .spacious-notice.theme-review-notice {
-	border-left-color: #23AB70;
+	border-left-color: #0FBE7C;
 	padding: 20px 15px;
 }
 
@@ -188,8 +188,8 @@ a.spacious-message-close:before {
 }
 
 .spacious-notice.theme-review-notice .button-primary {
-	background: #23AB70;
-	border-color: #23AB70;
+	background: #0FBE7C;
+	border-color: #0FBE7C;
 	box-shadow: none;
 	color: #fff;
 }
@@ -201,8 +201,8 @@ a.spacious-message-close:before {
 }
 
 .spacious-notice.theme-review-notice .button-secondary {
-	color: #23AB70;
-	border-color: #23AB70;
+	color: #0FBE7C;
+	border-color: #0FBE7C;
 	background: #f6f7f7;
 	vertical-align: top;
 }
