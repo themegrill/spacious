@@ -7,10 +7,8 @@
  * @since   1.6.3
  */
 
-// Exit if directly accessed.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Class to display the theme review notice for this theme after certain period.
@@ -25,7 +23,6 @@ class Spacious_Theme_Review_Notice {
 	 * Spacious_Theme_Review_Notice constructor.
 	 */
 	public function __construct() {
-
 		add_action( 'init', array( $this, 'review_reset' ) );
 		add_action( 'after_setup_theme', array( $this, 'review_notice' ) );
 		add_action( 'admin_notices', array( $this, 'review_notice_markup' ), 0 );
@@ -59,7 +56,6 @@ class Spacious_Theme_Review_Notice {
 	public function review_notice_markup() {
 
 		$user_id                  = get_current_user_id();
-		$current_user             = wp_get_current_user();
 		$ignored_notice           = get_user_meta( $user_id, 'spacious_ignore_theme_review_notice', true );
 		$ignored_notice_partially = get_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', true );
 		$dismiss_url              = wp_nonce_url(
@@ -84,60 +80,71 @@ class Spacious_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-0 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 sec' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
 
-		<!-- Added two classes review these classes styles later and delte this comment-->
 		<div class="notice notice-success spacious-notice theme-review-notice" style="position:relative;">
 			<div class="spacious-message__content">
-					<div class="spacious-message__image">
-						<img class="spacious-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.jpg" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
-					</div>
-					<div class="spacious-message__text">
-						<p>
-							<?php
-							/* translators: %s Current theme's name */
-							$message_text = __(
-								'<strong>Hakuna Matata!</strong>
-							<small>(The above word is just to draw your attention.)</small>&#128522;<br>
-							<em>Please provide our theme <strong>%s</strong> with a nice review.</em>
-							<span>What benefit would you have?</span><br>
-							Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. &#128522;'
-							);
-							$allowed_tags = array(
-								'br'     => array(),
-								'strong' => array(),
-								'small'  => array(),
-								'em'     => array(),
-								'span'   => array(),
-							);
+				<div class="spacious-message__image">
+					<img class="spacious-logo--png" src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/images/spacious-logo.png' ); ?>" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
+				</div>
+				<div class="spacious-message__text">
+					<h3><?php printf( esc_html( 'HAKUNA %s' ), '<strong>MATATA!</strong>' ); ?></h3>
+					<p>(
+					<?php
+						printf(
+							/* translators: %s: Smile icon */
+							esc_html__( 'The above word is just to draw your attention. %s', 'spacious' ),
+							'<span class="dashicons dashicons-smiley smile-icon"></span>'
+						);
+					?>
+					)</p>
+					<p>
+						<?php
 							printf(
-								wp_kses( $message_text, $allowed_tags ),
-								wp_get_theme()->get( 'Name' )
+								/* translators: %1$s: Opening of strong tag, %2$s: Theme's Name, %3$s: Closing of strong tag  */
+								esc_html__( 'Hope you are having a nice experience with %1$s %2$s %3$s theme. Please provide this theme a nice review.', 'spacious' ),
+								'<strong>',
+								esc_html( wp_get_theme()->get( 'Name' ) ),
+								'</strong>'
 							);
-							?>
-						</p>
-						<div class="links">
-							<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
-								<span class="dashicons dashicons-thumbs-up"></span>
-								<span><?php esc_html_e( 'Sure, I\'d love to', 'spacious' ); ?></span>
-							</a>
-							<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
-								<span class="dashicons dashicons-calendar"></span>
-								<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
-							</a>
-							<a href="<?php echo esc_url( $dismiss_url ); ?>" class="btn button-secondary">
-								<span class="dashicons dashicons-smiley"></span>
-								<span><?php esc_html_e( 'I already did', 'spacious' ); ?></span>
-							</a>
-							<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
-								<span class="dashicons dashicons-edit"></span>
-								<span><?php esc_html_e( 'I have a query', 'spacious' ); ?></span>
-							</a>
-						</div><!-- /.links -->
-					</div> <!-- /.spacious-message__text -->
+						?>
+					</p>
+					<strong>
+						<?php
+							esc_html_e( 'What benefit would you have?', 'spacious' )
+						?>
+					</strong>
+					<p>
+						<?php
+							printf(
+								/* translators: %s: Smiley icon */
+								esc_html__( 'Basically, it would encourage us to release updates regularly with new features & bug fixes so that you can keep on using the theme without any issues and also to provide free support like we have been doing. %s', 'spacious' ),
+								'<span class="dashicons dashicons-smiley smile-icon"></span>'
+							);
+						?>
+					</p>				
+					<div class="links">
+						<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
+							<span class="dashicons dashicons-thumbs-up"></span>
+							<span><?php esc_html_e( 'Sure, I\'d love to', 'spacious' ); ?></span>
+						</a>
+						<a href="<?php echo esc_url( $temporary_dismiss_url ); ?>" class="btn button-secondary">
+							<span class="dashicons dashicons-calendar"></span>
+							<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
+						</a>
+						<a href="<?php echo esc_url( $dismiss_url ); ?>" class="btn button-secondary">
+							<span class="dashicons dashicons-smiley"></span>
+							<span><?php esc_html_e( 'I already did!', 'spacious' ); ?></span>
+						</a>
+						<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
+							<span class="dashicons dashicons-edit"></span>
+							<span><?php esc_html_e( 'I have a query', 'spacious' ); ?></span>
+						</a>
+					</div><!-- /.links -->
+				</div> <!-- /.spacious-message__text -->
 				<a class="notice-dismiss" style="text-decoration:none;" href="<?php echo esc_url( $dismiss_url ); ?>"></a>
 			</div><!-- /.spacious-message__content -->
 		</div>
