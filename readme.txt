@@ -46,6 +46,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+= TBD =
+* Enhancement – Review notice UI and contents.
+* Enhancement – Upgrade notice contents.
+
 == Version 1.9.2 - 2021-03-01 =
 * Fix - Missed close span tag for menu toggle button.
 
