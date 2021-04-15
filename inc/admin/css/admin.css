@@ -8,6 +8,7 @@
 
 .spacious-notice .links {
 	margin: 1.2em 0;
+	display: flex;
 }
 
 .spacious-notice .links a {
@@ -16,6 +17,7 @@
 
 .spacious-notice .links a > span {
 	vertical-align: middle;
+	padding-right: 5px;
 }
 
 .spacious-notice .notice-text .coupon-code {
@@ -220,3 +222,10 @@ a.spacious-message-close:before {
 .spacious-notice.theme-review-notice .links {
 	margin: 1.2em 0 5px 0;
 }
+
+.spacious-notice.theme-review-notice a.btn{
+    display: flex;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }

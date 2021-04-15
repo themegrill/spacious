@@ -129,7 +129,7 @@ class Spacious_Theme_Review_Notice {
 					<div class="links">
 						<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
 							<span class="dashicons dashicons-external"></span>
-							<span><?php esc_html_e( 'Sure, I\'d love to', 'spacious' ); ?></span>
+							<span><?php esc_html_e( 'Sure, I\'d love to!', 'spacious' ); ?></span>
 						</a>
 						<a href="<?php echo esc_url( $dismiss_url ); ?>" class="btn button-secondary">
 							<span class="dashicons dashicons-smiley"></span>
