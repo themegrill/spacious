@@ -90,7 +90,7 @@ a.spacious-message-close:before {
 }
 
 @media screen and (max-width: 768px) {
-	.spacious-message__image {
+	.spacious-message__content .spacious-message__image {
 		display: none;
 	}
 }
