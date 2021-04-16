@@ -80,7 +80,7 @@ class Spacious_Theme_Review_Notice {
 		 * 2. If the user has ignored the message partially for 15 days.
 		 * 3. Dismiss always if clicked on 'I Already Did' button.
 		 */
-		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-15 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
+		if ( ( get_option( 'spacious_theme_installed_time' ) > strtotime( '-0 day' ) ) || ( $ignored_notice_partially > strtotime( '-15 day' ) ) || ( $ignored_notice ) ) {
 			return;
 		}
 		?>
@@ -91,7 +91,7 @@ class Spacious_Theme_Review_Notice {
 					<img class="spacious-logo--png" src="<?php echo esc_url( get_template_directory_uri() . '/inc/admin/images/spacious-logo-square.png' ); ?>" alt="<?php esc_attr_e( 'Spacious', 'spacious' ); ?>" />
 				</div>
 				<div class="spacious-message__text">
-					<h3><?php printf( esc_html( 'HAKUNA %s' ), '<strong>MATATA!</strong>' ); ?></h3>
+					<h3><?php echo esc_html( 'HAKUNA MATATA!' ); ?></h3>
 					<p>(
 					<?php
 						printf(

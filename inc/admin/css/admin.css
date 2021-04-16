@@ -1,6 +1,4 @@
-/**
- * Notices.
- */
+/* Notices. */
 .spacious-notice {
 	position: relative;
 	padding: 8px 40px 8px 8px;
@@ -9,6 +7,7 @@
 .spacious-notice .links {
 	margin: 1.2em 0;
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .spacious-notice .links a {
@@ -28,9 +27,7 @@
 	text-decoration: none;
 }
 
-/**
- * Welcome notice.
- */
+/* Welcome notice. */
 .spacious-message__content {
 	display: flex;
 }
@@ -55,7 +52,7 @@
 	line-height: 1.4;
 }
 
-.spacious-message__content .spacious-message__heading > a{
+.spacious-message__content .spacious-message__heading > a {
 	font-size: inherit;
 }
 
@@ -92,15 +89,13 @@ a.spacious-message-close:before {
 	transition: all .1s ease-in-out;
 }
 
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 768px) {
 	.spacious-message__image {
 		display: none;
 	}
 }
 
-/**
- * Dashboard page.
- */
+/* Dashboard page. */
 .wrap .spacious-header {
 	background-color: #fff;
 	padding: 12px 20px;
@@ -113,10 +108,8 @@ a.spacious-message-close:before {
 	margin-top: 0;
 }
 
-/**
- * Responsive.
- */
-@media (max-width: 600px) {
+/* Responsive. */
+@media (max-width: 768px) {
 	.spacious-message__content .spacious-screenshot {
 		display: none;
 	}
@@ -127,15 +120,13 @@ a.spacious-message-close:before {
 }
 
 
-/**
- * spacious Review Notice
- */
+/* Spacious review notice. */
  .spacious-notice.theme-review-notice {
 	border-left-color: #0FBE7C;
 	padding: 20px 15px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
 	.spacious-notice.theme-review-notice .spacious-message__content {
 		display: flex;
 		flex-direction: column;
@@ -151,7 +142,7 @@ a.spacious-message-close:before {
 	border-right: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
 	.spacious-notice.theme-review-notice .spacious-message__image {
 		margin-bottom: 15px;
 		margin-right: 0px;
@@ -196,7 +187,7 @@ a.spacious-message-close:before {
 	color: #fff;
 }
 
-@media screen and (max-width: 603px) {
+@media screen and (max-width: 768px) {
 	.spacious-notice.theme-review-notice .button-primary {
 		margin-bottom: 10px;
 	}
@@ -209,7 +200,7 @@ a.spacious-message-close:before {
 	vertical-align: top;
 }
 
-@media screen and (max-width: 603px) {
+@media screen and (max-width: 768px) {
 	.spacious-notice.theme-review-notice .button-secondary {
 		margin-bottom: 10px;
 	}
@@ -223,7 +214,7 @@ a.spacious-message-close:before {
 	margin: 1.2em 0 5px 0;
 }
 
-.spacious-notice.theme-review-notice a.btn{
+.spacious-notice.theme-review-notice a.btn {
     display: flex;
     max-width: fit-content;
     justify-content: center;
