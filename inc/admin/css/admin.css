@@ -142,14 +142,6 @@ a.spacious-message-close:before {
 	border-right: none;
 }
 
-@media screen and (max-width: 768px) {
-	.spacious-notice.theme-review-notice .spacious-message__image {
-		margin-bottom: 15px;
-		margin-right: 0px;
-		margin-left: 0px;
-	}
-}
-
 .spacious-notice.theme-review-notice .spacious-logo--png {
 	width: 80px;
 	height: 80px;
