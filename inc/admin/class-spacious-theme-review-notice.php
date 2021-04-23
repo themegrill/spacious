@@ -113,9 +113,7 @@ class Spacious_Theme_Review_Notice {
 						?>
 					</p>
 					<strong>
-						<?php
-							esc_html_e( 'What benefit would you have?', 'spacious' )
-						?>
+						<?php esc_html_e( 'What benefit would you have?', 'spacious' ); ?>
 					</strong>
 					<p>
 						<?php
