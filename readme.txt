@@ -46,6 +46,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== TBD ==
+* Fix - Updated the license information for the images used in the screenshot.
+
 == Version 1.9.2 - 2021-03-01 =
 * Fix - Missed close span tag for menu toggle button.
 
