@@ -11,8 +11,8 @@ External resources linked to the theme.
   Licensed under SIL Open Font License, 1.1 http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 
 Resources packed within the theme.
-* Images used in screenshot
-  Screenshot, Creative Commons Zero (CC0)
+* Images used in the screenshot are licensed under Creative Commons Zero (CC0):
+
   https://pxhere.com/en/photo/1096297
 
 * Genericons by Joen Asmussen http://genericons.com/
