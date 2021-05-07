@@ -223,10 +223,6 @@
 			float: none;
 			text-align: center;
 		}
-
-		#header-right-sidebar {
-			width: 100%;
-		}
 	}
 
 	.site-header .menu-toggle {
@@ -241,8 +237,6 @@
 
 	.main-navigation {
 		float: none;
-		padding-top: 0;
-		width: 100%;
 
 		&.toggled .nav-menu {
 			display: block;
@@ -385,10 +379,6 @@
 			float: right;
 			margin-top: 15px;
 			max-width: 100%;
-
-			.widget {
-				margin-bottom: 10px;
-			}
 		}
 
 		#site-navigation {
@@ -599,12 +589,12 @@
 		}
 
 		#header-right-section {
-			padding-top: 10px;
 			float: none;
 		}
 
 		#header-right-sidebar {
 			float: right;
+			padding-left: 20px;
 		}
 
 		#site-navigation {

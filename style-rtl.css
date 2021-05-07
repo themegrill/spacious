@@ -4,7 +4,7 @@ Theme URI: https://themegrill.com/themes/spacious
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 2 page templates, 4 blog display types, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in https://themegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/spacious/.
-Version: 1.7.9
+Version: 1.9.2
 Tested up to: 5.5
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -308,7 +308,6 @@ blockquote,
 	font-weight: normal;
 	padding: 20px;
 	border: 1px solid #EAEAEA;
-	border-left: 3px solid #0FBE7C;
 	margin-bottom: 20px;
 }
 
@@ -2399,7 +2398,6 @@ li.default-menu {
 .main-navigation ul li.current-menu-ancestor a,
 .main-navigation ul li.current_page_item a,
 .main-navigation ul li.current-menu-ancestor > .sub-toggle,
-.main-navigation ul li.current-menu-item > .sub-toggle,
 .main-navigation ul li:hover > a,
 .main-navigation ul li:hover > .sub-toggle {
 	color: #0FBE7C;
@@ -3177,9 +3175,6 @@ li.default-menu {
 		float: none;
 		text-align: center;
 	}
-	#header-right-section #header-right-sidebar {
-		width: 100%;
-	}
 	.site-header .menu-toggle {
 		display: block;
 		text-align: right;
@@ -3190,8 +3185,6 @@ li.default-menu {
 	}
 	.main-navigation {
 		float: none;
-		padding-top: 0;
-		width: 100%;
 	}
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -3297,9 +3290,6 @@ li.default-menu {
 		margin-top: 15px;
 		max-width: 100%;
 	}
-	.better-responsive-menu #header-right-section .widget {
-		margin-bottom: 10px;
-	}
 	.better-responsive-menu #site-navigation {
 		float: left;
 		margin-top: 10px;
@@ -3332,7 +3322,6 @@ li.default-menu {
 	.better-responsive-menu .site-header .menu-toggle {
 		background: #3a3a3a none repeat scroll 100% 0;
 		color: #fff;
-		font: 0/0 a;
 		height: 36px;
 		margin: 0;
 		padding: 0;
@@ -3454,11 +3443,11 @@ li.default-menu {
 		float: none;
 	}
 	.better-responsive-menu #header-right-section {
-		padding-top: 10px;
 		float: none;
 	}
 	.better-responsive-menu #header-right-sidebar {
 		float: left;
+		padding-right: 20px;
 	}
 	.better-responsive-menu #site-navigation {
 		float: none;
