@@ -51,6 +51,7 @@ and we will include it within the theme from next version update.
 == Changelog ==
 == TBD ==
 * Tweak - Update screenshot image source link.
+* Enhancement - Mobile menu design.
 
 == Version 1.9.2 - 2021-03-01 =
 * Fix - Missed close span tag for menu toggle button.
