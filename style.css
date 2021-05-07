@@ -3175,9 +3175,6 @@ li.default-menu {
 		float: none;
 		text-align: center;
 	}
-	#header-right-section #header-right-sidebar {
-		width: 100%;
-	}
 	.site-header .menu-toggle {
 		display: block;
 		text-align: left;
@@ -3188,8 +3185,6 @@ li.default-menu {
 	}
 	.main-navigation {
 		float: none;
-		padding-top: 0;
-		width: 100%;
 	}
 	.main-navigation.toggled .nav-menu {
 		display: block;
@@ -3294,9 +3289,6 @@ li.default-menu {
 		float: right;
 		margin-top: 15px;
 		max-width: 100%;
-	}
-	.better-responsive-menu #header-right-section .widget {
-		margin-bottom: 10px;
 	}
 	.better-responsive-menu #site-navigation {
 		float: right;
@@ -3451,11 +3443,11 @@ li.default-menu {
 		float: none;
 	}
 	.better-responsive-menu #header-right-section {
-		padding-top: 10px;
 		float: none;
 	}
 	.better-responsive-menu #header-right-sidebar {
 		float: right;
+		padding-left: 20px;
 	}
 	.better-responsive-menu #site-navigation {
 		float: none;
