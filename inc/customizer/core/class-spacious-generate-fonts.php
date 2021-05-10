@@ -155,7 +155,8 @@ class Spacious_Generate_Fonts {
 				$font_args['subset'] = rawurlencode( trim( $subsets ) );
 			}
 
-			return add_query_arg( $font_args, $base_url );
+			$font_url = esc_url( add_query_arg( $font_args, $base_url ) );
+			return add_query_arg( array( 'display' => 'swap' ), $font_url );
 		}
 
 		return '';
