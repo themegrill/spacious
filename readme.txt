@@ -50,8 +50,8 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 == TBD ==
-* Tweak - Update screenshot image source link.
 * Tweak - Update Screenshot image.
+* Tweak - Update screenshot image source link.
 * Fix   - Position of menu toggle button and input search field.
 
 
