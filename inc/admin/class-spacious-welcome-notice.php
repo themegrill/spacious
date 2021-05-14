@@ -11,7 +11,7 @@ class Spacious_Welcome_Notice {
 	}
 
 	public function welcome_notice() {
-        if ( ! get_option( 'spacious_admin_notice_welcome' ) ) {
+		if ( ! get_option( 'spacious_admin_notice_welcome' ) ) {
 			add_action( 'admin_notices', array( $this, 'welcome_notice_markup' ) ); // Show notice.
 		}
 	}
