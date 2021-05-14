@@ -50,8 +50,10 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 == TBD ==
+* Tweak - Update Screenshot image.
 * Tweak - Update screenshot image source link.
 * Fix   - Position of menu toggle button and input search field.
+
 
 == Version 1.9.2 - 2021-03-01 =
 * Fix - Missed close span tag for menu toggle button.
