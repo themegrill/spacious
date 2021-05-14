@@ -13,7 +13,7 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Images used in the screenshot are licensed under Creative Commons Zero (CC0):
 
-  https://pxhere.com/en/photo/1096297
+  https://pxhere.com/en/photo/971381
 
 * Genericons by Joen Asmussen http://genericons.com/
   Licensed under the GPL, version 2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
