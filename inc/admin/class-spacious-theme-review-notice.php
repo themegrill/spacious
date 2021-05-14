@@ -29,12 +29,14 @@ class Spacious_Theme_Review_Notice {
 		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice' ), 0 );
 		add_action( 'admin_init', array( $this, 'spacious_ignore_theme_review_notice_partially' ), 0 );
 		add_action( 'switch_theme', array( $this, 'review_notice_data_remove' ) );
-
 	}
 
 	public function review_reset() {
+
 		if ( 'completed' !== get_option( 'spacious_theme_review_notice_reset' ) ) {
+
 			$this->review_notice_data_remove();
+
 			update_option( 'spacious_theme_review_notice_reset', 'completed' );
 		}
 	}
@@ -123,7 +125,7 @@ class Spacious_Theme_Review_Notice {
 								'<span class="dashicons dashicons-smiley smile-icon"></span>'
 							);
 						?>
-					</p>				
+					</p>
 					<div class="links">
 						<a href="https://wordpress.org/support/theme/spacious/reviews/?filter=5#new-post" class="btn button-primary" target="_blank">
 							<span class="dashicons dashicons-external"></span>
