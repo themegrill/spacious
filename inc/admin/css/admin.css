@@ -122,7 +122,7 @@ a.spacious-message-close:before {
 
 /* Spacious review notice. */
  .spacious-notice.theme-review-notice {
-	border-left-color: #0FBE7C;
+	border-left-color: #6547DB;
 	padding: 20px 15px;
 }
 
@@ -161,6 +161,7 @@ a.spacious-message-close:before {
 	margin: 0;
 	margin-bottom: 6px;
 	max-width: 720px;
+	padding: 2px 0;
 }
 
 .spacious-notice.theme-review-notice span.dashicons.dashicons-smiley.smile-icon {
@@ -173,8 +174,8 @@ a.spacious-message-close:before {
 }
 
 .spacious-notice.theme-review-notice .button-primary {
-	background: #0FBE7C;
-	border-color: #0FBE7C;
+	background: #6547DB;
+	border-color: #6547DB;
 	box-shadow: none;
 	color: #fff;
 }
@@ -186,8 +187,8 @@ a.spacious-message-close:before {
 }
 
 .spacious-notice.theme-review-notice .button-secondary {
-	color: #0FBE7C;
-	border-color: #0FBE7C;
+	color: #6547DB;
+	border-color: #6547DB;
 	background: #f6f7f7;
 	vertical-align: top;
 }
