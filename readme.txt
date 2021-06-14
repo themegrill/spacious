@@ -50,6 +50,9 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 == TBD ==
+* Enhancement - Added (font-display: swap) CSS property for better load performance.
+
+== TBD ==
 * Tweak - Update screenshot image source link.
 * Fix   - Position of menu toggle button and input search field.
 
