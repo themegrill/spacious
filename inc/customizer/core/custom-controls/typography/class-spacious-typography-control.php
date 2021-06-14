@@ -113,9 +113,12 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 		$standard_fonts       = Spacious_Fonts::get_system_fonts();
 		$standard_fonts_array = array();
 		$default_variants     = $this->format_variants_array(
-			array(
-				'regular',
-				'italic',
+			apply_filters(
+				'spacious_default_variants',
+				array(
+					'regular',
+					'italic',
+				)
 			)
 		);
 
@@ -324,7 +327,7 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 				</ul>
 
 				<div class="desktop control-wrap active">
-					<input type="number"
+					<input type="text"
 					       id="spacious-font-size-desktop-{{{ data.id || data.name }}}"
 					       data-device="desktop"
 							<# if ( data.value['font-size'] ) { #>
@@ -344,11 +347,10 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 								<# } #>
 							<# } #>
 					/>
-					<span class="unit">px</span>
 				</div>
 
 				<div class="tablet control-wrap">
-					<input type="number"
+					<input type="text"
 					       id="spacious-font-size-tablet-{{{ data.id || data.name }}}"
 					       data-device="tablet"
 							<# if ( data.value['font-size'] ) { #>
@@ -368,11 +370,10 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 								<# } #>
 							<# } #>
 					/>
-					<span class="unit">px</span>
 				</div>
 
 				<div class="mobile control-wrap">
-					<input type="number"
+					<input type="text"
 					       id="spacious-font-size-mobile-{{{ data.id || data.name }}}"
 					       data-device="mobile"
 							<# if ( data.value['font-size'] ) { #>
@@ -392,7 +393,6 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 								<# } #>
 							<# } #>
 					/>
-					<span class="unit">px</span>
 				</div>
 			</div>
 			<# } #>
@@ -419,7 +419,7 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 				</ul>
 
 				<div class="desktop control-wrap active">
-					<input type="number"
+					<input type="text"
 					       id="spacious-line-height-desktop-{{{ data.id || data.name }}}"
 					       data-device="desktop"
 							<# if ( data.value['line-height'] ) { #>
@@ -442,7 +442,7 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 				</div>
 
 				<div class="tablet control-wrap">
-					<input type="number"
+					<input type="text"
 					       id="spacious-line-height-tablet-{{{ data.id || data.name }}}"
 					       data-device="tablet"
 							<# if ( data.value['line-height'] ) { #>
@@ -465,7 +465,7 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 				</div>
 
 				<div class="mobile control-wrap">
-					<input type="number"
+					<input type="text"
 					       id="spacious-line-height-mobile-{{{ data.id || data.name }}}"
 					       data-device="mobile"
 							<# if ( data.value['line-height'] ) { #>
@@ -511,7 +511,7 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 				</ul>
 
 				<div class="desktop control-wrap active">
-					<input type="number"
+					<input type="text"
 					       id="spacious-letter-spacing-desktop-{{{ data.id || data.name }}}"
 					       data-device="desktop"
 							<# if ( data.value['letter-spacing'] ) { #>
@@ -531,11 +531,10 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 								<# } #>
 							<# } #>
 					/>
-					<span class="unit">px</span>
 				</div>
 
 				<div class="tablet control-wrap">
-					<input type="number"
+					<input type="text"
 					       id="spacious-letter-spacing-tablet-{{{ data.id || data.name }}}"
 					       data-device="tablet"
 							<# if ( data.value['letter-spacing'] ) { #>
@@ -555,11 +554,10 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 								<# } #>
 							<# } #>
 					/>
-					<span class="unit">px</span>
 				</div>
 
 				<div class="mobile control-wrap">
-					<input type="number"
+					<input type="text"
 					       id="spacious-letter-spacing-mobile-{{{ data.id || data.name }}}"
 					       data-device="mobile"
 							<# if ( data.value['letter-spacing'] ) { #>
@@ -579,7 +577,6 @@ class Spacious_Typography_Control extends Spacious_Customize_Base_Additional_Con
 								<# } #>
 							<# } #>
 					/>
-					<span class="unit">px</span>
 				</div>
 			</div>
 			<# } #>
