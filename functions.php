@@ -260,10 +260,10 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 							'title' => esc_html__( 'Spacious Important Links', 'spacious' ),
 							'text'  => '<ul>
 											<li><a href="https://themegrill.com/themes/spacious/">' . esc_html__( 'Theme Info', 'spacious' ) . '</a></li>
-											<li><a href="https://demo.themegrill.com/spacious/">' . esc_html__( 'View Demo', 'spacious' ) . '</a></li>
+											<li><a href="https://themegrilldemos.com/spacious/">' . esc_html__( 'View Demo', 'spacious' ) . '</a></li>
 											<li><a href="https://www.youtube.com/watch?v=rhiybsv3vUU">' . esc_html__( 'Import Demo', 'spacious' ) . '</a></li>
 											<li><a href="https://docs.themegrill.com/spacious/">' . esc_html__( 'Documentation', 'spacious' ) . '</a></li>
-											<li><a href="https://themegrill.com/support-forum/forum/spacious-free/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
+											<li><a href="https://wordpress.org/support/theme/spacious/">' . esc_html__( 'Support Forum', 'spacious' ) . '</a></li>
 										</ul>',
 						),
 					),
