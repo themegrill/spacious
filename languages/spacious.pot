@@ -1656,8 +1656,8 @@ msgid ""
 "focusing on business template, awesome slider, primary color option to "
 "match your logo & website, boxed & wide layout, light & dark color skin, "
 "translation ready and many more. You can get free support in "
-"https://themegrill.com/support-forum/ and check the demo at "
-"https://demo.themegrill.com/spacious/."
+"https://themegrill.com/contact/ and check the demo at "
+"https://themegrilldemos.com/spacious/."
 msgstr ""
 
 #. Author of the plugin/theme
