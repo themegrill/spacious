@@ -50,7 +50,6 @@ function spacious_content_width() {
 		} else {
 			$content_width = 750; /* pixels */
 		}
-
 	} elseif ( ( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'box_978px' ) || ( get_theme_mod( 'spacious_site_layout', 'box_1218px' ) == 'wide_978px' ) ) {
 		if ( $layout_meta == 'no_sidebar_full_width' ) {
 			$content_width = 978; /* pixels */
@@ -90,7 +89,8 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		// Adds the support for the Custom Logo introduced in WordPress 4.5
-		add_theme_support( 'custom-logo',
+		add_theme_support(
+			'custom-logo',
 			array(
 				'height'      => 100,
 				'width'       => 100,
@@ -100,11 +100,13 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		);
 
 		// Registering navigation menus.
-		register_nav_menus( array(
-			'header'  => esc_html__( 'Header Menu', 'spacious' ),
-			'primary' => esc_html__( 'Primary Menu', 'spacious' ),
-			'footer'  => esc_html__( 'Footer Menu', 'spacious' ),
-		) );
+		register_nav_menus(
+			array(
+				'header'  => esc_html__( 'Header Menu', 'spacious' ),
+				'primary' => esc_html__( 'Primary Menu', 'spacious' ),
+				'footer'  => esc_html__( 'Footer Menu', 'spacious' ),
+			)
+		);
 
 		// Cropping the images to different sizes to be used in the theme
 		add_image_size( 'featured-blog-large', 750, 350, true );
@@ -113,9 +115,15 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		add_image_size( 'featured-blog-medium-small', 230, 230, true );
 
 		// Setup the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'spacious_custom_background_args', array(
-			'default-color' => 'eaeaea',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'spacious_custom_background_args',
+				array(
+					'default-color' => 'eaeaea',
+				)
+			)
+		);
 
 		// Adding excerpt option box for pages as well
 		add_post_type_support( 'page', 'excerpt' );
@@ -124,13 +132,16 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Support for selective refresh widgets in Customizer
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -148,7 +159,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		$starter_content = array(
 			'widgets'     => array(
 				// Add the search widget to the header sidebar.
-				'spacious_header_sidebar'                                  => array(
+				'spacious_header_sidebar'       => array(
 					'header_search' => array(
 						'search',
 						array(
@@ -158,19 +169,19 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widgets to the contact sidebar.
-				'spacious_contact_page_sidebar'                            => array(
+				'spacious_contact_page_sidebar' => array(
 					'text_business_info',
 					'text_about',
 				),
 
 				// Add text widget and cta widget in the Business Top sidebar.
-				'spacious_business_page_top_section_sidebar'               => array(
+				'spacious_business_page_top_section_sidebar' => array(
 					'text_top_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Top Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Top Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-							           '<ul>
+									   '<ul>
 											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
@@ -189,7 +200,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widget and featured single page widget in the Business Middle Left Sidebar.
-				'spacious_business_page_middle_section_left_half_sidebar'  => array(
+				'spacious_business_page_middle_section_left_half_sidebar' => array(
 					'text_middle_left_sidebar_info' => array(
 						'text',
 						array(
@@ -226,13 +237,13 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add text widget in the Business Bottom Sidebar.
-				'spacious_business_page_bottom_section_sidebar'            => array(
+				'spacious_business_page_bottom_section_sidebar' => array(
 					'text_bottom_sidebar_info' => array(
 						'text',
 						array(
 							'title' => esc_html__( 'Business Bottom Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Bottom Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-							           '<ul>
+									   '<ul>
 											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
@@ -242,18 +253,18 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add the text widget in the footer siderbar 1.
-				'spacious_footer_sidebar_one'                              => array(
+				'spacious_footer_sidebar_one'   => array(
 					'text_business_info',
 				),
 
 				// Add search widget and text widget in the footer siderbar 2.
-				'spacious_footer_sidebar_two'                              => array(
+				'spacious_footer_sidebar_two'   => array(
 					'search',
 					'text_about',
 				),
 
 				// Add the text widget in the footer siderbar 3.
-				'spacious_footer_sidebar_three'                            => array(
+				'spacious_footer_sidebar_three' => array(
 					'text_custom_menu' => array(
 						'text',
 						array(
@@ -270,7 +281,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 				),
 
 				// Add the featured single page widget in the footer siderbar 4.
-				'spacious_footer_sidebar_four'                             => array(
+				'spacious_footer_sidebar_four'  => array(
 					'featured_single_page' => array(
 						'spacious_featured_single_page_widget',
 						array(
@@ -359,7 +370,7 @@ endif;
 add_action( 'after_setup_theme', 'spacious_setup' );
 
 // Theme version.
-$spacious_theme = wp_get_theme('spacious');
+$spacious_theme = wp_get_theme( 'spacious' );
 define( 'SPACIOUS_THEME_VERSION', $spacious_theme->get( 'Version' ) );
 
 /**
@@ -402,8 +413,8 @@ define( 'SPACIOUS_ADMIN_CSS_URL', SPACIOUS_ADMIN_URL . '/css' );
 require_once SPACIOUS_INCLUDES_DIR . '/custom-header.php';
 require_once SPACIOUS_INCLUDES_DIR . '/functions.php';
 require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
-require_once( SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php' );
-require_once( SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php' );
+require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php';
+require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php';
 
 require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
 require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
@@ -422,7 +433,7 @@ define( 'SPACIOUS_CUSTOMIZER_DIR', SPACIOUS_INCLUDES_DIR . '/customizer' );
 /**
  * Detect plugin. For use on Front End only.
  */
-include_once ABSPATH . 'wp-admin/includes/plugin.php';
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 /**
  * Assign the Spacious version to a variable.
@@ -459,7 +470,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 /** Add the Elementor compatibility file */
 if ( defined( 'ELEMENTOR_VERSION' ) ) {
-	require_once( SPACIOUS_INCLUDES_DIR . '/elementor/elementor.php' );
+	require_once SPACIOUS_INCLUDES_DIR . '/elementor/elementor.php';
 }
 
 /**
