@@ -139,7 +139,7 @@ class Spacious_Theme_Review_Notice {
 							<span class="dashicons dashicons-calendar"></span>
 							<span><?php esc_html_e( 'Maybe later', 'spacious' ); ?></span>
 						</a>
-						<a href="<?php echo esc_url( 'https://themegrill.com/support-forum/forum/spacious-free/' ); ?>" class="btn button-secondary" target="_blank">
+						<a href="<?php echo esc_url( 'https://wordpress.org/support/theme/spacious/' ); ?>" class="btn button-secondary" target="_blank">
 							<span class="dashicons dashicons-testimonial"></span>
 							<span><?php esc_html_e( 'I have a query', 'spacious' ); ?></span>
 						</a>

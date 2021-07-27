@@ -1,6 +1,6 @@
 == SPACIOUS ==
 
-Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 6 page templates, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in http://sthemegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/spacious/.
+Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 6 page templates, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in https://themegrill.com/contact/ and check the demo at https://themegrilldemos.com/spacious/.
 
 /**********************************************************/
 
@@ -32,10 +32,10 @@ Spacious is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at https://themegrill.com/theme-instruction/spacious
+Get theme instruction at https://docs.themegrill.com/spacious/
 
 = Free Support =
-Get free support at https://themegrill.com/support-forum
+Get free support at https://themegrill.com/contact/
 
 = Theme Features Usage =
 All available options can be used from Appearance->Customize
