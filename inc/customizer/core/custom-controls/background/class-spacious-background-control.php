@@ -80,141 +80,141 @@ class Spacious_Background_Control extends Spacious_Customize_Base_Additional_Con
 	protected function content_template() {
 		?>
 
-        <div class="customizer-text">
-            <# if ( data.label ) { #>
-            <span class="customize-control-title">{{{ data.label }}}</span>
-            <# } #>
+		<div class="customizer-text">
+			<# if ( data.label ) { #>
+			<span class="customize-control-title">{{{ data.label }}}</span>
+			<# } #>
 
-            <# if ( data.description ) { #>
-            <span class="description customize-control-description">{{{ data.description }}}</span>
-            <# } #>
-        </div>
+			<# if ( data.description ) { #>
+			<span class="description customize-control-description">{{{ data.description }}}</span>
+			<# } #>
+		</div>
 
-        <div class="customize-control-content">
+		<div class="customize-control-content">
 
-            <div class="background-color">
-                <span class="customize-control-title"><?php esc_html_e( 'Background Color', 'spacious' ); ?></span>
-                <input data-name="{{ data.name }}"
-                       type="text"
-                       data-default-color="{{ data.default['background-color'] }}"
-                       data-alpha="true"
-                       value="{{ data.value['background-color'] }}"
-                       class="spacious-color-picker-alpha color-picker-hex"
-                />
-            </div>
+			<div class="background-color">
+				<span class="customize-control-title"><?php esc_html_e( 'Background Color', 'spacious' ); ?></span>
+				<input data-name="{{ data.name }}"
+						type="text"
+						data-default-color="{{ data.default['background-color'] }}"
+						data-alpha-enabled="true"
+						value="{{ data.value['background-color'] }}"
+						class="spacious-color-picker-alpha color-picker-hex"
+				/>
+			</div>
 
-            <div class="background-image">
-                <span class="customize-control-title"><?php esc_html_e( 'Background Image', 'spacious' ); ?></span>
-                <div class="attachment-media-view background-image-upload">
-                    <# if ( data.value['background-image'] ) { #>
-                    <div class="thumbnail thumbnail-image"><img src="{{ data.value['background-image'] }}" alt="" />
-                    </div>
-                    <# } else { #>
-                    <div class="placeholder"><?php esc_html_e( 'No Image Selected', 'spacious' ); ?></div>
-                    <# } #>
+			<div class="background-image">
+				<span class="customize-control-title"><?php esc_html_e( 'Background Image', 'spacious' ); ?></span>
+				<div class="attachment-media-view background-image-upload">
+					<# if ( data.value['background-image'] ) { #>
+					<div class="thumbnail thumbnail-image"><img src="{{ data.value['background-image'] }}" alt="" />
+					</div>
+					<# } else { #>
+					<div class="placeholder"><?php esc_html_e( 'No Image Selected', 'spacious' ); ?></div>
+					<# } #>
 
-                    <div class="actions">
-                        <button data-name="{{ data.name }}"
-                                class="button background-image-upload-remove-button<# if ( ! data.value['background-image'] ) { #> hidden <# } #>"
-                        >
+					<div class="actions">
+						<button data-name="{{ data.name }}"
+								class="button background-image-upload-remove-button<# if ( ! data.value['background-image'] ) { #> hidden <# } #>"
+						>
 							<?php esc_attr_e( 'Remove', 'spacious' ); ?>
-                        </button>
+						</button>
 
-                        <button data-name="{{ data.name }}"
-                                type="button"
-                                class="button background-image-upload-button"
-                        >
+						<button data-name="{{ data.name }}"
+								type="button"
+								class="button background-image-upload-button"
+						>
 							<?php esc_attr_e( 'Select Image', 'spacious' ); ?>
-                        </button>
-                    </div>
-                </div>
-            </div>
+						</button>
+					</div>
+				</div>
+			</div>
 
-            <div class="background-repeat">
-                <span class="customize-control-title"><?php esc_html_e( 'Background Repeat', 'spacious' ); ?></span>
-                <select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
-                    <option value="no-repeat"
-                    <# if ( 'no-repeat' === data.value['background-repeat'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'No Repeat', 'spacious' ); ?></option>
-                    <option value="repeat"
-                    <# if ( 'repeat' === data.value['background-repeat'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Repeat All', 'spacious' ); ?></option>
-                    <option value="repeat-x"
-                    <# if ( 'repeat-x' === data.value['background-repeat'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Repeat Horizontally', 'spacious' ); ?></option>
-                    <option value="repeat-y"
-                    <# if ( 'repeat-y' === data.value['background-repeat'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Repeat Vertically', 'spacious' ); ?></option>
-                </select>
-            </div>
+			<div class="background-repeat">
+				<span class="customize-control-title"><?php esc_html_e( 'Background Repeat', 'spacious' ); ?></span>
+				<select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
+					<option value="no-repeat"
+					<# if ( 'no-repeat' === data.value['background-repeat'] ) { #> selected <# }
+					#>><?php esc_html_e( 'No Repeat', 'spacious' ); ?></option>
+					<option value="repeat"
+					<# if ( 'repeat' === data.value['background-repeat'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Repeat All', 'spacious' ); ?></option>
+					<option value="repeat-x"
+					<# if ( 'repeat-x' === data.value['background-repeat'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Repeat Horizontally', 'spacious' ); ?></option>
+					<option value="repeat-y"
+					<# if ( 'repeat-y' === data.value['background-repeat'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Repeat Vertically', 'spacious' ); ?></option>
+				</select>
+			</div>
 
-            <div class="background-position">
-                <span class="customize-control-title"><?php esc_html_e( 'Background Position', 'spacious' ); ?></span>
-                <select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
-                    <option value="left top"
-                    <# if ( 'left top' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Left Top', 'spacious' ); ?></option>
-                    <option value="left center"
-                    <# if ( 'left center' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Left Center', 'spacious' ); ?></option>
-                    <option value="left bottom"
-                    <# if ( 'left bottom' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Left Bottom', 'spacious' ); ?></option>
-                    <option value="right top"
-                    <# if ( 'right top' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Right Top', 'spacious' ); ?></option>
-                    <option value="right center"
-                    <# if ( 'right center' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Right Center', 'spacious' ); ?></option>
-                    <option value="right bottom"
-                    <# if ( 'right bottom' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Right Bottom', 'spacious' ); ?></option>
-                    <option value="center top"
-                    <# if ( 'center top' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Center Top', 'spacious' ); ?></option>
-                    <option value="center center"
-                    <# if ( 'center center' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Center Center', 'spacious' ); ?></option>
-                    <option value="center bottom"
-                    <# if ( 'center bottom' === data.value['background-position'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Center Bottom', 'spacious' ); ?></option>
-                </select>
-            </div>
+			<div class="background-position">
+				<span class="customize-control-title"><?php esc_html_e( 'Background Position', 'spacious' ); ?></span>
+				<select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
+					<option value="left top"
+					<# if ( 'left top' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Left Top', 'spacious' ); ?></option>
+					<option value="left center"
+					<# if ( 'left center' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Left Center', 'spacious' ); ?></option>
+					<option value="left bottom"
+					<# if ( 'left bottom' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Left Bottom', 'spacious' ); ?></option>
+					<option value="right top"
+					<# if ( 'right top' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Right Top', 'spacious' ); ?></option>
+					<option value="right center"
+					<# if ( 'right center' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Right Center', 'spacious' ); ?></option>
+					<option value="right bottom"
+					<# if ( 'right bottom' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Right Bottom', 'spacious' ); ?></option>
+					<option value="center top"
+					<# if ( 'center top' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Center Top', 'spacious' ); ?></option>
+					<option value="center center"
+					<# if ( 'center center' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Center Center', 'spacious' ); ?></option>
+					<option value="center bottom"
+					<# if ( 'center bottom' === data.value['background-position'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Center Bottom', 'spacious' ); ?></option>
+				</select>
+			</div>
 
-            <div class="background-size">
-                <span class="customize-control-title"><?php esc_html_e( 'Background Size', 'spacious' ); ?></span>
-                <select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
-                    <option value="cover"
-                    <# if ( 'cover' === data.value['background-size'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Cover', 'spacious' ); ?></option>
-                    <option value="contain"
-                    <# if ( 'contain' === data.value['background-size'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Contain', 'spacious' ); ?></option>
-                    <option value="auto"
-                    <# if ( 'auto' === data.value['background-size'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Auto', 'spacious' ); ?></option>
-                </select>
-            </div>
+			<div class="background-size">
+				<span class="customize-control-title"><?php esc_html_e( 'Background Size', 'spacious' ); ?></span>
+				<select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
+					<option value="cover"
+					<# if ( 'cover' === data.value['background-size'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Cover', 'spacious' ); ?></option>
+					<option value="contain"
+					<# if ( 'contain' === data.value['background-size'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Contain', 'spacious' ); ?></option>
+					<option value="auto"
+					<# if ( 'auto' === data.value['background-size'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Auto', 'spacious' ); ?></option>
+				</select>
+			</div>
 
-            <div class="background-attachment">
-                <span class="customize-control-title"><?php esc_html_e( 'Background Attachment', 'spacious' ); ?></span>
-                <select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
-                    <option value="scroll"
-                    <# if ( 'scroll' === data.value['background-attachment'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Scroll', 'spacious' ); ?></option>
-                    <option value="fixed"
-                    <# if ( 'fixed' === data.value['background-attachment'] ) { #> selected <# }
-                    #>><?php esc_html_e( 'Fixed', 'spacious' ); ?></option>
-                </select>
-            </div>
+			<div class="background-attachment">
+				<span class="customize-control-title"><?php esc_html_e( 'Background Attachment', 'spacious' ); ?></span>
+				<select data-name="{{ data.name }}" {{{ data.inputAttrs }}}>
+					<option value="scroll"
+					<# if ( 'scroll' === data.value['background-attachment'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Scroll', 'spacious' ); ?></option>
+					<option value="fixed"
+					<# if ( 'fixed' === data.value['background-attachment'] ) { #> selected <# }
+					#>><?php esc_html_e( 'Fixed', 'spacious' ); ?></option>
+				</select>
+			</div>
 
-            <input class="background-hidden-value"
-                   value="{{ JSON.stringify( data.value ) }}"
-                   data-name="{{ data.name }}"
-                   type="hidden" {{{ data.link }}}
-            >
+			<input class="background-hidden-value"
+					value="{{ JSON.stringify( data.value ) }}"
+					data-name="{{ data.name }}"
+					type="hidden" {{{ data.link }}}
+			>
 
-        </div>
+		</div>
 
 		<?php
 	}
