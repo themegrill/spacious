@@ -1,6 +1,6 @@
 == SPACIOUS ==
 
-Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 6 page templates, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in http://sthemegrill.com/support-forum/ and check the demo at https://demo.themegrill.com/spacious/.
+Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 6 page templates, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in https://themegrill.com/contact/ and check the demo at https://themegrilldemos.com/spacious/.
 
 /**********************************************************/
 
@@ -13,7 +13,7 @@ External resources linked to the theme.
 Resources packed within the theme.
 * Images used in the screenshot are licensed under Creative Commons Zero (CC0):
 
-  https://pxhere.com/en/photo/1096297
+  https://pxhere.com/en/photo/971381
 
 * Genericons by Joen Asmussen http://genericons.com/
   Licensed under the GPL, version 2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
@@ -32,10 +32,10 @@ Spacious is distributed under the terms of the GNU GPL
 == THEME USAGE ==
 
 = Theme Instruction =
-Get theme instruction at https://themegrill.com/theme-instruction/spacious
+Get theme instruction at https://docs.themegrill.com/spacious/
 
 = Free Support =
-Get free support at https://themegrill.com/support-forum
+Get free support at https://themegrill.com/contact/
 
 = Theme Features Usage =
 All available options can be used from Appearance->Customize
@@ -50,9 +50,11 @@ and we will include it within the theme from next version update.
 
 == Changelog ==
 == TBD ==
-* Enhancement - Added (font-display: swap) CSS property for better load performance.
+* Enhancement - Added CSS font-display property and swap value for better performance.
 
 == TBD ==
+== Version 1.9.3 - 2021-05-14 =
+* Tweak - Update Screenshot image.
 * Tweak - Update screenshot image source link.
 * Fix   - Position of menu toggle button and input search field.
 
