@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.9.0\n"
+"Project-Id-Version: Spacious 1.9.4\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2021-01-18 03:22:49+00:00\n"
+"POT-Creation-Date: 2021-08-16 11:38:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,137 +55,137 @@ msgstr ""
 msgid "Tagged on: "
 msgstr ""
 
-#: functions.php:104
+#: functions.php:105
 msgid "Header Menu"
 msgstr ""
 
-#: functions.php:105 functions.php:332
+#: functions.php:106 functions.php:343
 #: inc/customizer/class-spacious-customizer-register-sections-panels.php:216
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:106 functions.php:344
+#: functions.php:107 functions.php:355
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:171 inc/widgets/widgets.php:51
+#: functions.php:182 inc/widgets/widgets.php:51
 msgid "Business Top Sidebar"
 msgstr ""
 
-#: functions.php:172 inc/widgets/widgets.php:53
+#: functions.php:183 inc/widgets/widgets.php:53
 msgid "Shows widgets on Business Page Template Top Section."
 msgstr ""
 
-#: functions.php:172 functions.php:234 inc/widgets/widgets.php:53
+#: functions.php:183 functions.php:245 inc/widgets/widgets.php:53
 #: inc/widgets/widgets.php:87
 msgid ""
 "Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured "
 "Widget"
 msgstr ""
 
-#: functions.php:174 functions.php:236
+#: functions.php:185 functions.php:247
 #: inc/widgets/class-spacious-service-widget.php:14
 msgid "TG: Services"
 msgstr ""
 
-#: functions.php:174 functions.php:236
+#: functions.php:185 functions.php:247
 #: inc/widgets/class-spacious-service-widget.php:10
 msgid "Display some pages as services. Best for Business Top or Bottom sidebar."
 msgstr ""
 
-#: functions.php:175 functions.php:237
+#: functions.php:186 functions.php:248
 #: inc/widgets/class-spacious-call-to-action-widget.php:14
 msgid "TG: Call To Action Widget"
 msgstr ""
 
-#: functions.php:175 functions.php:237
+#: functions.php:186 functions.php:248
 #: inc/widgets/class-spacious-call-to-action-widget.php:10
 msgid "Use this widget to show the call to action section."
 msgstr ""
 
-#: functions.php:176 functions.php:238
+#: functions.php:187 functions.php:249
 #: inc/widgets/class-spacious-recent-work-widget.php:14
 msgid "TG: Featured Widget"
 msgstr ""
 
-#: functions.php:176 functions.php:238
+#: functions.php:187 functions.php:249
 #: inc/widgets/class-spacious-recent-work-widget.php:10
 msgid ""
 "Show your some pages as recent work. Best for Business Top or Bottom "
 "sidebar."
 msgstr ""
 
-#: functions.php:183 inc/widgets/class-spacious-call-to-action-widget.php:30
+#: functions.php:194 inc/widgets/class-spacious-call-to-action-widget.php:30
 msgid "Call to Action Main Text"
 msgstr ""
 
-#: functions.php:184 inc/widgets/class-spacious-call-to-action-widget.php:32
+#: functions.php:195 inc/widgets/class-spacious-call-to-action-widget.php:32
 msgid "Call to Action Additional Text"
 msgstr ""
 
-#: functions.php:185 functions.php:262
+#: functions.php:196 functions.php:273
 msgid "Theme Info"
 msgstr ""
 
-#: functions.php:196 inc/widgets/widgets.php:62
+#: functions.php:207 inc/widgets/widgets.php:62
 msgid "Business Middle Left Sidebar"
 msgstr ""
 
-#: functions.php:197 inc/widgets/widgets.php:64
+#: functions.php:208 inc/widgets/widgets.php:64
 msgid "Shows widgets on Business Page Template Middle Section Left Half."
 msgstr ""
 
-#: functions.php:197 functions.php:214 inc/widgets/widgets.php:64
+#: functions.php:208 functions.php:225 inc/widgets/widgets.php:64
 #: inc/widgets/widgets.php:75
 msgid "Suitable widget: TG: Testimonial, TG: Featured Single Page"
 msgstr ""
 
-#: functions.php:213 inc/widgets/widgets.php:73
+#: functions.php:224 inc/widgets/widgets.php:73
 msgid "Business Middle Right Sidebar"
 msgstr ""
 
-#: functions.php:214 inc/widgets/widgets.php:75
+#: functions.php:225 inc/widgets/widgets.php:75
 msgid "Shows widgets on Business Page Template Middle Section Right Half."
 msgstr ""
 
-#: functions.php:220 inc/widgets/class-spacious-testimonial-widget.php:15
+#: functions.php:231 inc/widgets/class-spacious-testimonial-widget.php:15
 msgid "TG: Testimonial"
 msgstr ""
 
-#: functions.php:233 inc/widgets/widgets.php:85
+#: functions.php:244 inc/widgets/widgets.php:85
 msgid "Business Bottom Sidebar"
 msgstr ""
 
-#: functions.php:234 inc/widgets/widgets.php:87
+#: functions.php:245 inc/widgets/widgets.php:87
 msgid "Shows widgets on Business Page Template Bottom Section."
 msgstr ""
 
-#: functions.php:260
+#: functions.php:271
 msgid "Spacious Important Links"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:274
 msgid "View Demo"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:275
 msgid "Import Demo"
 msgstr ""
 
-#: functions.php:265 inc/admin/class-spacious-dashboard.php:87
+#: functions.php:276 inc/admin/class-spacious-dashboard.php:93
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:277
 msgid "Support Forum"
 msgstr ""
 
-#: functions.php:317 functions.php:322
+#: functions.php:328 functions.php:333
 #: inc/customizer/options/slider/class-spacious-customize-slider-options.php:131
 msgid "Enter title for your slider."
 msgstr ""
 
-#: functions.php:319 functions.php:324
+#: functions.php:330 functions.php:335
 #: inc/customizer/class-spacious-customizer-partials.php:30
 #: inc/functions.php:663 inc/header-functions.php:166
 #: inc/widgets/class-spacious-featured-single-page-widget.php:104
@@ -206,56 +206,57 @@ msgstr ""
 msgid "%s Options"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:56
+#: inc/admin/class-spacious-dashboard.php:62
 #. translators: %s: Theme version.
 msgid "Spacious %s"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:65
+#: inc/admin/class-spacious-dashboard.php:71
 #. translators: %s: Theme Name.
 msgid "Welcome to %s!"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:71
+#: inc/admin/class-spacious-dashboard.php:77
 #. translators: %s: Theme Name.
 msgid "Important links to get you started with %s"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:77
+#: inc/admin/class-spacious-dashboard.php:83
 msgid "Get Started"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:80
+#: inc/admin/class-spacious-dashboard.php:86
 msgid "Learn Basics"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:85
+#: inc/admin/class-spacious-dashboard.php:91
 msgid "Next Steps"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:88
+#: inc/admin/class-spacious-dashboard.php:94
 msgid "Starter Demos"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:89
+#: inc/admin/class-spacious-dashboard.php:95
 msgid "Premium Version"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:94
+#: inc/admin/class-spacious-dashboard.php:100
 msgid "Further Actions"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:96
-#: inc/admin/class-spacious-theme-review-notice.php:105
+#: inc/admin/class-spacious-dashboard.php:102
 msgid "Got theme support question?"
 msgstr ""
 
-#: inc/admin/class-spacious-dashboard.php:97
+#: inc/admin/class-spacious-dashboard.php:103
 msgid "Leave a review"
 msgstr ""
 
 #: inc/admin/class-spacious-notice.php:59
 #: inc/admin/class-spacious-notice.php:78
+#: inc/admin/class-spacious-theme-review-notice.php:164
+#: inc/admin/class-spacious-theme-review-notice.php:182
 #: inc/admin/class-spacious-welcome-notice.php:77
 #: inc/demo-import-migration.php:64 inc/demo-import-migration.php:82
 msgid "Action failed. Please refresh the page and retry."
@@ -296,32 +297,65 @@ msgid ""
 "fulfilled, you can simply delete this plugin now."
 msgstr ""
 
-#: inc/admin/class-spacious-theme-review-notice.php:79
-#. Translators: %1$s current user display name.
+#. Theme Name of the plugin/theme
+msgid "Spacious"
+msgstr ""
+
+#: inc/admin/class-spacious-theme-review-notice.php:101
+#. translators: %s: Smile icon
+msgid "The above word is just to draw your attention. %s"
+msgstr ""
+
+#: inc/admin/class-spacious-theme-review-notice.php:110
+#. translators: %1$s: Opening of strong tag, %2$s: Theme's Name, %3$s: Closing
+#. of strong tag
 msgid ""
-"Howdy, %1$s! It seems that you have been using this theme for more than 15 "
-"day. We hope you are happy with everything that the theme has to offer. If "
-"you can spare a minute, please help us by leaving a 5-star review on "
-"WordPress.org.  By spreading the love, we can continue to develop new "
-"amazing features in the future, for free!"
+"Hope you are having a nice experience with %1$s %2$s %3$s theme. Please "
+"provide this theme a nice review."
 msgstr ""
 
-#: inc/admin/class-spacious-theme-review-notice.php:90
-msgid "Sure"
+#: inc/admin/class-spacious-theme-review-notice.php:118
+msgid "What benefit would you have?"
 msgstr ""
 
-#: inc/admin/class-spacious-theme-review-notice.php:95
+#: inc/admin/class-spacious-theme-review-notice.php:124
+#. translators: %s: Smiley icon
+msgid ""
+"Basically, it would encourage us to release updates regularly with new "
+"features & bug fixes so that you can keep on using the theme without any "
+"issues and also to provide free support like we have been doing. %s"
+msgstr ""
+
+#: inc/admin/class-spacious-theme-review-notice.php:132
+msgid "Sure, I'd love to!"
+msgstr ""
+
+#: inc/admin/class-spacious-theme-review-notice.php:136
+msgid "I already did!"
+msgstr ""
+
+#: inc/admin/class-spacious-theme-review-notice.php:140
 #: inc/admin/class-spacious-upgrade-notice.php:95
 msgid "Maybe later"
 msgstr ""
 
-#: inc/admin/class-spacious-theme-review-notice.php:100
-msgid "I already did"
+#: inc/admin/class-spacious-theme-review-notice.php:144
+msgid "I have a query"
+msgstr ""
+
+#: inc/admin/class-spacious-upgrade-notice.php:75
+#. Translators: %1$s current user display name., %2$s this theme name., %3$s
+#. discount coupon code., %4$s discount percentage.
+msgid ""
+"Howdy, %1$s! You've been using %2$s theme for a while now, and we hope "
+"you're happy with it. To access more premium features you can always "
+"upgrade to pro. All contents and settings will remain as it is after "
+"upgrading to pro, you basically start from where you left. Also, you can "
+"use the coupon code %3$s to get up to %4$s discount (limited time offer) "
+"while making the purchase. Enjoy! "
 msgstr ""
 
 #: inc/admin/class-spacious-upgrade-notice.php:90
-#. Translators: %1$s current user display name., %2$s this theme name., %3$s
-#. discount coupon code., %4$s discount percentage.
 msgid "Upgrade to pro"
 msgstr ""
 
@@ -335,10 +369,6 @@ msgstr ""
 
 #: inc/admin/class-spacious-welcome-notice.php:26
 msgid "Get started with Spacious"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Spacious"
 msgstr ""
 
 #: inc/admin/class-spacious-welcome-notice.php:54
@@ -866,19 +896,19 @@ msgstr ""
 msgid "Custom Fonts"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:275
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:278
 msgid "Family"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:283
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:286
 msgid "Weight"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:292
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:295
 msgid "Subset(s)"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:307
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:310
 msgid "Size"
 msgstr ""
 
@@ -890,68 +920,68 @@ msgstr ""
 msgid "Letter Spacing"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:589
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:586
 msgid "Style"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:594
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:591
 msgid "Normal"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:597
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:594
 msgid "Italic"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:600
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:597
 msgid "Oblique"
+msgstr ""
+
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:600
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:628
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:656
+msgid "Initial"
 msgstr ""
 
 #: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:603
 #: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:631
 #: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:659
-msgid "Initial"
-msgstr ""
-
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:606
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:634
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:662
 msgid "Inherit"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:614
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:611
 msgid "Transform"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:619
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:647
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:616
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:644
 msgid "None"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:622
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:619
 msgid "Capitalize"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:625
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:622
 msgid "Uppercase"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:628
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:625
 msgid "Lowercase"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:642
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:639
 msgid "Decoration"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:650
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:647
 msgid "Underline"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:653
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:650
 msgid "Overline"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:656
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:653
 msgid "Line Through"
 msgstr ""
 
@@ -1463,7 +1493,7 @@ msgstr ""
 msgid "Search Results"
 msgstr ""
 
-#: inc/header-functions.php:339
+#: inc/header-functions.php:341
 msgid "Menu"
 msgstr ""
 
