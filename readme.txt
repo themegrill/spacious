@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== Version TBD ==
+* Fix - Color opacity option in customizer not working properly.
+
 == Version 1.9.4 - 2021-08-16 ==
 * Enhancement - Added CSS font-display property and swap value for better performance.
 
