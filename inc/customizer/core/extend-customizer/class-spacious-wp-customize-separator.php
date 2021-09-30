@@ -4,8 +4,7 @@
  *
  * Creates a jQuery color control.
  *
- * @package     Spacious
- * @author      Spacious
+ * @package Spacious
  */
 
 // Exit if accessed directly.

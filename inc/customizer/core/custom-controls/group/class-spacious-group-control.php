@@ -59,7 +59,7 @@ class Spacious_Group_Control extends Spacious_Customize_Base_Additional_Control 
 		// Enqueue jQuery UI tabs.
 		wp_enqueue_script( 'jquery-ui-tabs' );
 
-		$tmpl = '<div class="spacious-field-settings-modal">';
+		$tmpl  = '<div class="spacious-field-settings-modal">';
 		$tmpl .= '<ul class="spacious-fields-wrap">';
 		$tmpl .= '</ul>';
 		$tmpl .= '</div>';
@@ -121,9 +121,7 @@ class Spacious_Group_Control extends Spacious_Customize_Base_Additional_Control 
 	 * Class variables for this control class are available in the `data` JS object;
 	 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
 	 *
-	 * @see    WP_Customize_Control::print_template()
-	 *
-	 * @access protected
+	 * @see WP_Customize_Control::print_template()
 	 */
 	protected function content_template() {
 		?>

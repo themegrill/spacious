@@ -63,7 +63,7 @@ class Spacious_Upsell_Section extends WP_Customize_Section {
 	protected function render_template() {
 		?>
 		<li id="accordion-section-{{ data.id }}"
-		    class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section"
+			class="spacious-upsell-accordion-section control-section-{{ data.type }} cannot-expand accordion-section"
 		>
 			<h3 class="accordion-section-title"><a href="{{{ data.url }}}" target="_blank">{{ data.title }}</a></h3>
 		</li>

@@ -26,7 +26,8 @@ class Spacious_Sortable_Control extends Spacious_Customize_Base_Additional_Contr
 	 *
 	 * @var string
 	 */
-	public $type = 'spacious-sortable';
+	public $type       = 'spacious-sortable';
+	public $unsortable = array();
 
 	/**
 	 * Refresh the parameters passed to the JavaScript via JSON.
@@ -34,27 +35,37 @@ class Spacious_Sortable_Control extends Spacious_Customize_Base_Additional_Contr
 	 * @see WP_Customize_Control::to_json()
 	 */
 	public function to_json() {
-
 		parent::to_json();
-
 		$this->json['default'] = $this->setting->default;
 		if ( isset( $this->default ) ) {
 			$this->json['default'] = $this->default;
 		}
-		$this->json['value'] = $this->value();
-
+		$this->json['value']       = $this->value();
 		$this->json['link']        = $this->get_link();
 		$this->json['id']          = $this->id;
 		$this->json['label']       = esc_html( $this->label );
 		$this->json['description'] = $this->description;
+		$this->json['choices']     = array();
+		$this->json['unsortable']  = array();
+		$this->json['inputAttrs']  = '';
 
-		$this->json['choices'] = $this->choices;
+		foreach ( $this->choices as $key => $value ) {
+			if ( in_array( $key, $this->unsortable, true ) ) {
+				continue;
+			}
 
-		$this->json['inputAttrs'] = '';
+			$this->json['choices'][ $key ] = $value;
+		}
+
+		foreach ( $this->unsortable as $item ) {
+			if ( in_array( $item, array_keys( $this->choices ), true ) ) {
+				$this->json['unsortable'][ $item ] = $this->choices[ $item ];
+			}
+		}
+
 		foreach ( $this->input_attrs as $attr => $value ) {
 			$this->json['inputAttrs'] .= $attr . '="' . esc_attr( $value ) . '" ';
 		}
-
 	}
 
 	/**
@@ -64,43 +75,58 @@ class Spacious_Sortable_Control extends Spacious_Customize_Base_Additional_Contr
 	 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
 	 *
 	 * @see    WP_Customize_Control::print_template()
-	 *
-	 * @access protected
 	 */
 	protected function content_template() {
 		?>
 
-        <div class="customizer-text">
-            <# if ( data.label ) { #>
-            <span class="customize-control-title">{{{ data.label }}}</span>
-            <# } #>
+		<div class="customizer-text">
+			<# if ( data.label ) { #>
+			<span class="customize-control-title">{{{ data.label }}}</span>
+			<# } #>
 
-            <# if ( data.description ) { #>
-            <span class="description customize-control-description">{{{ data.description }}}</span>
-            <# } #>
-        </div>
+			<# if ( data.description ) { #>
+			<span class="description customize-control-description">{{{ data.description }}}</span>
+			<# } #>
+		</div>
 
-        <ul class="sortable">
-            <# _.each( data.value, function( choiceID ) { #>
-            <# if ( data.choices[ choiceID ] ) { #>
-            <li {{{ data.inputAttrs }}} class='spacious-sortable-item' data-value='{{ choiceID }}'>
-                <i class='dashicons dashicons-menu'></i>
-                <i class="dashicons dashicons-visibility visibility"></i>
-                {{{ data.choices[ choiceID ] }}}
-            </li>
-            <# } #>
-            <# } ); #>
+		<ul class="unsortable">
+			<# _.each( data.unsortable, function( choiceLabel, choiceID ) { #>
+			<# if( _.contains( data.value, choiceID ) ){ #>
+			<li {{{ data.inputAttrs }}} class='spacious-sortable-item' data-value='{{ choiceID }}'>
+				<i class="dashicons dashicons-visibility visibility"></i>
+				{{{ choiceLabel }}}
+			</li>
+			<# }else { #>
+			<li {{{ data.inputAttrs }}} class='spacious-sortable-item invisible' data-value='{{ choiceID }}'>
+				<i class="dashicons dashicons-visibility visibility"></i>
+				{{{ choiceLabel }}}
+			</li>
+			<# } #>
 
-            <# _.each( data.choices, function( choiceLabel, choiceID ) { #>
-            <# if ( Array.isArray(data.value) && -1 === data.value.indexOf( choiceID ) ) { #>
-            <li {{{ data.inputAttrs }}} class='spacious-sortable-item invisible' data-value='{{ choiceID }}'>
-                <i class='dashicons dashicons-menu'></i>
-                <i class="dashicons dashicons-visibility visibility"></i>
-                {{{ choiceLabel }}}
-            </li>
-            <# } #>
-            <# } ); #>
-        </ul>
+			<# } ); #>
+		</ul>
+
+		<ul class="sortable">
+			<# _.each( data.value, function( choiceID ) { #>
+			<# if ( data.choices[ choiceID ] ) { #>
+			<li {{{ data.inputAttrs }}} class='spacious-sortable-item' data-value='{{ choiceID }}'>
+				<i class='dashicons dashicons-menu'></i>
+				<i class="dashicons dashicons-visibility visibility"></i>
+				{{{ data.choices[ choiceID ] }}}
+			</li>
+			<# } #>
+			<# } ); #>
+
+			<# _.each( data.choices, function( choiceLabel, choiceID ) { #>
+			<# if ( Array.isArray(data.value) && -1 === data.value.indexOf( choiceID ) ) { #>
+			<li {{{ data.inputAttrs }}} class='spacious-sortable-item invisible' data-value='{{ choiceID }}'>
+				<i class='dashicons dashicons-menu'></i>
+				<i class="dashicons dashicons-visibility visibility"></i>
+				{{{ choiceLabel }}}
+			</li>
+			<# } #>
+			<# } ); #>
+		</ul>
 
 		<?php
 	}

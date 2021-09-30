@@ -692,6 +692,34 @@ li.customize-control.customize-control-spacious-hidden {
 	color: #aaaaaa;
 }
 
+.customize-control-spacious-sortable ul.unsortable .dashicons-visibility {
+	cursor: pointer;
+}
+
+.customize-control-spacious-sortable ul.unsortable li {
+	padding: 5px 10px;
+	border: 1px solid #555555;
+	background: #ffffff;
+	cursor: default;
+}
+
+.customize-control-spacious-sortable ul.unsortable li .dashicons.dashicons-menu {
+	float: left;
+}
+
+.customize-control-spacious-sortable ul.unsortable li .dashicons.visibility {
+	margin-left: 10px;
+}
+
+.customize-control-spacious-sortable ul.unsortable li.invisible {
+	color: #aaaaaa;
+	border: 1px dashed #aaaaaa;
+}
+
+.customize-control-spacious-sortable ul.unsortable li.invisible .dashicons.visibility {
+	color: #aaaaaa;
+}
+
 /**
  * Switch toggle control CSS.
  */

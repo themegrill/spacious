@@ -38,7 +38,7 @@ class Spacious_Customize_Base_Option {
 	public function get_section_description( $args ) {
 
 		// Description.
-		$content = '<div class="spacious-section-description">';
+		$content  = '<div class="spacious-section-description">';
 		$content .= wp_kses_post( $args['description'] );
 
 		// Links.

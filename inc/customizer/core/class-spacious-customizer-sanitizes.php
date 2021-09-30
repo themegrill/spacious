@@ -30,7 +30,7 @@ class Spacious_Customizer_FrameWork_Sanitizes {
 	 */
 	public static function sanitize_checkbox( $input ) {
 
-		return ( ( $input == 1 ) ? 1 : '' );
+		return ( ( 1 === $input || '1' === $input || true === (bool) $input ) ? 1 : '' );
 
 	}
 
@@ -148,23 +148,84 @@ class Spacious_Customizer_FrameWork_Sanitizes {
 	 *
 	 * @return string
 	 */
-	public static function sanitize_alpha_color( $color ) {
+	public static function sanitize_alpha_color( $color, $setting ) {
 
 		if ( '' === $color ) {
 			return '';
 		}
 
 		// Hex sanitize if no rgba color option is chosen.
-		if ( false === strpos( $color, 'rgba' ) ) {
+		if ( false === strpos( $color, 'rgb' ) ) {
 			return self::sanitize_hex_color( $color );
 		}
 
 		// Sanitize the rgba color provided via customize option.
 		$color = str_replace( ' ', '', $color );
-		sscanf( $color, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
 
-		return 'rgba(' . $red . ',' . $green . ',' . $blue . ',' . $alpha . ')';
+		if ( strpos( $color, 'rgba' ) !== false ) {
 
+			sscanf( $color, 'rgba(%d,%d,%d,%f)', $red, $green, $blue, $alpha );
+
+			if ( 'background_color' === $setting->id ) {
+				return self::convert_rgba_to_hex( $red, $green, $blue, $alpha );
+			}
+
+			return 'rgba(' . $red . ',' . $green . ',' . $blue . ',' . $alpha . ')';
+
+		}
+
+		sscanf( $color, 'rgb(%d,%d,%d)', $red, $green, $blue );
+
+		if ( 'background_color' === $setting->id ) {
+			return self::convert_rgba_to_hex( $red, $green, $blue );
+		}
+
+		return 'rgb(' . $red . ',' . $green . ',' . $blue . ')';
+
+	}
+
+	/**
+	 * Converts RGB/A to a Hex value.
+	 *
+	 * @param int   $red color value.
+	 * @param int   $green color value.
+	 * @param int   $blue color value.
+	 * @param float $alpha color value.
+	 * @return string Hex value.
+	 */
+	public static function convert_rgba_to_hex( $red, $green, $blue, $alpha = 1 ) {
+
+		$red   = dechex( (int) $red );
+		$green = dechex( (int) $green );
+		$blue  = dechex( (int) $blue );
+		$alpha = (float) $alpha;
+
+		if ( strlen( $red ) < 2 ) {
+			$red = '0' . $red;
+		}
+
+		if ( strlen( $green ) < 2 ) {
+			$green = '0' . $green;
+		}
+
+		if ( strlen( $blue ) < 2 ) {
+			$blue = '0' . $blue;
+		}
+
+		if ( $alpha < 1 ) {
+
+			$alpha = $alpha * 255;
+
+			if ( $alpha < 7 ) {
+				$alpha = '0' . dechex( $alpha );
+			} else {
+				$alpha = dechex( $alpha );
+			}
+
+			return $red . $green . $blue . $alpha;
+		}
+
+		return $red . $green . $blue;
 	}
 
 	/**
@@ -273,7 +334,7 @@ class Spacious_Customizer_FrameWork_Sanitizes {
 		$page_id = absint( $page_id );
 
 		// If $page_id is an ID of a published page, return it, otherwise, return the default value.
-		return ( 'publish' == get_post_status( $page_id ) ? $page_id : $setting->default );
+		return ( 'publish' === get_post_status( $page_id ) ? $page_id : $setting->default );
 
 	}
 
@@ -327,7 +388,7 @@ class Spacious_Customizer_FrameWork_Sanitizes {
 
 		// Sanitizing the alpha color option.
 		if ( isset( $background_args['background-color'] ) ) {
-			$output['background-color'] = self::sanitize_alpha_color( $background_args['background-color'] );
+			$output['background-color'] = self::sanitize_alpha_color( $background_args['background-color'], $setting );
 		}
 
 		// Sanitizing the background image option.
@@ -563,7 +624,7 @@ class Spacious_Customizer_FrameWork_Sanitizes {
 		$choices    = $setting->manager->get_control( $setting->id )->choices;
 		$input_keys = $input;
 
-		foreach ( $input_keys as $key => $value ) {
+		foreach ( (array) $input_keys as $key => $value ) {
 			if ( ! array_key_exists( $value, $choices ) ) {
 				unset( $input[ $key ] );
 			}
