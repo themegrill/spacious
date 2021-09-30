@@ -65,10 +65,10 @@ function spacious_header_style() {
 		else :
 	?>
 		#site-title a {
-			color: #<?php echo $header_text_color; ?>;
+			color: <?php echo $header_text_color; ?>;
 		}
 		#site-description {
-			color: #<?php echo $header_text_color; ?>;
+			color: <?php echo $header_text_color; ?>;
 		}
 	<?php endif; ?>
 	</style>
