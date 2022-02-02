@@ -43,6 +43,14 @@ class Spacious_Customize_Register_Section_Panels extends Spacious_Customize_Base
 				'section_callback' => 'Spacious_Upsell_Section',
 			),
 
+			array(
+				'name'             => 'spacious_customize_review_link_section',
+				'type'             => 'section',
+				'title'            => esc_html__( 'Leave a Review on .org', 'spacious' ),
+				'url'              => 'https://wordpress.org/support/theme/spacious/reviews/?filter=5/#new-post',
+				'priority'         => 200,
+				'section_callback' => 'Spacious_Upsell_Section',
+			),
 
 			/**
 			 * Panels.
