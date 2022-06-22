@@ -16,7 +16,6 @@
  * Enqueue Google fonts and editor styles.
  */
 function spacious_block_editor_styles() {
-	wp_enqueue_style( 'spacious-editor-googlefonts', '//fonts.googleapis.com/css2?family=Lato' );
 	wp_enqueue_style( 'spacious-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
 }
 

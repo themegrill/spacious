@@ -84,6 +84,9 @@ class Spacious_Generate_Fonts {
 
 		foreach ( $font_list as $name => $font ) {
 			if ( ! empty( $name ) && ! isset( $system_fonts[ $name ] ) ) {
+				if ( 'Lato' == $name) {
+					continue;
+				}
 
 				// Add font variants.
 				$google_fonts[ $name ] = $font['font-weight'];
@@ -94,6 +97,12 @@ class Spacious_Generate_Fonts {
 					$font_subset = array_unique( $subset );
 				}
 			}
+		}
+
+		if ( empty( $google_fonts ) ) {
+
+			return;
+
 		}
 
 		$google_font_url = self::google_fonts_url( $google_fonts, $font_subset );
