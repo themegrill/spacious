@@ -1,14 +1,14 @@
-# Copyright (C) 2021 ThemeGrill
-# This file is distributed under the GNU General Public License v2 or later.
+# Copyright (C) 2022 
+# This file is distributed under the same license as the  package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.9.4\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2021-08-16 11:38:49+00:00\n"
+"POT-Creation-Date: 2022-06-23 07:21:07+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:39 inc/functions.php:657
+#: content-page.php:39 inc/functions.php:656
 msgid "Edit"
 msgstr ""
 
@@ -187,7 +187,7 @@ msgstr ""
 
 #: functions.php:330 functions.php:335
 #: inc/customizer/class-spacious-customizer-partials.php:30
-#: inc/functions.php:663 inc/header-functions.php:166
+#: inc/functions.php:662 inc/header-functions.php:166
 #: inc/widgets/class-spacious-featured-single-page-widget.php:104
 #: inc/widgets/class-spacious-service-widget.php:96
 msgid "Read more"
@@ -297,7 +297,8 @@ msgid ""
 "fulfilled, you can simply delete this plugin now."
 msgstr ""
 
-#. Theme Name of the plugin/theme
+#: inc/admin/class-spacious-theme-review-notice.php:93
+#: inc/admin/class-spacious-welcome-notice.php:46 inc/functions.php:555
 msgid "Spacious"
 msgstr ""
 
@@ -742,111 +743,111 @@ msgstr ""
 msgid "No file selected"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:96
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:94
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:107
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:105
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:113
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:111
 msgid "No Image Selected"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:120
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:118
 msgid "Remove"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:127
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:125
 msgid "Select Image"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:134
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:132
 msgid "Background Repeat"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:138
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:136
 msgid "No Repeat"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:141
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:139
 msgid "Repeat All"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:144
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:142
 msgid "Repeat Horizontally"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:147
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:145
 msgid "Repeat Vertically"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:152
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:150
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:156
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:154
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:159
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:157
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:162
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:160
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:165
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:163
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:168
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:166
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:171
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:169
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:174
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:172
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:177
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:175
 msgid "Center Center"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:180
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:178
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:185
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:183
 msgid "Background Size"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:189
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:187
 msgid "Cover"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:192
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:190
 msgid "Contain"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:195
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:193
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:200
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:198
 msgid "Background Attachment"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:204
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:202
 msgid "Scroll"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:207
+#: inc/customizer/core/custom-controls/background/class-spacious-background-control.php:205
 msgid "Fixed"
 msgstr ""
 
@@ -874,13 +875,13 @@ msgstr ""
 msgid "Color value"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/navigate/class-spacious-navigate-control.php:64
+#: inc/customizer/core/custom-controls/navigate/class-spacious-navigate-control.php:62
 #. Translators: %1$s: Anchor tag open, %2$s: Customizer section name %3$s:
 #. Anchor tag close
 msgid "%1$s Click here to edit %2$s features %3$s"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/slider/class-spacious-slider-control.php:112
+#: inc/customizer/core/custom-controls/slider/class-spacious-slider-control.php:110
 msgid "Back to default"
 msgstr ""
 
@@ -896,100 +897,101 @@ msgstr ""
 msgid "Custom Fonts"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:278
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:274
 msgid "Family"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:286
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:282
 msgid "Weight"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:295
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:291
 msgid "Subset(s)"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:310
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:306
 msgid "Size"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:402
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:398
 msgid "Line Height"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:494
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:490
 msgid "Letter Spacing"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:586
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:582
 msgid "Style"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:591
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:587
 msgid "Normal"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:594
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:590
 msgid "Italic"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:597
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:593
 msgid "Oblique"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:600
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:628
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:656
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:596
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:624
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:652
 msgid "Initial"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:603
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:631
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:659
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:599
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:627
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:655
 msgid "Inherit"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:611
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:607
 msgid "Transform"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:616
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:644
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:612
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:640
 msgid "None"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:619
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:615
 msgid "Capitalize"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:622
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:618
 msgid "Uppercase"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:625
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:621
 msgid "Lowercase"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:639
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:635
 msgid "Decoration"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:647
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:643
 msgid "Underline"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:650
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:646
 msgid "Overline"
 msgstr ""
 
-#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:653
+#: inc/customizer/core/custom-controls/typography/class-spacious-typography-control.php:649
 msgid "Line Through"
 msgstr ""
 
-#: inc/customizer/core/extend-customizer/class-spacious-wp-customize-section.php:68
+#: inc/customizer/core/extend-customizer/class-spacious-wp-customize-section.php:69
+#. Translators: 1: Panel Title.
 msgid "Customizing &#9656; %s"
 msgstr ""
 
-#: inc/customizer/core/extend-customizer/class-spacious-wp-customize-section.php:72
+#: inc/customizer/core/extend-customizer/class-spacious-wp-customize-section.php:73
 msgid "Customizing"
 msgstr ""
 
@@ -1359,85 +1361,85 @@ msgstr ""
 msgid "Any confusion?"
 msgstr ""
 
-#: inc/functions.php:459
+#: inc/functions.php:458
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:469
+#: inc/functions.php:468
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:473
+#: inc/functions.php:472
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:499
+#: inc/functions.php:498
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:499
+#: inc/functions.php:498
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:514
+#: inc/functions.php:513
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:517
+#: inc/functions.php:516
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:519
+#: inc/functions.php:518
 msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
 msgstr ""
 
-#: inc/functions.php:525
+#: inc/functions.php:524
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:531
+#: inc/functions.php:530
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:554
+#: inc/functions.php:553
 msgid "WordPress"
 msgstr ""
 
-#: inc/functions.php:558
+#: inc/functions.php:557
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:558
+#: inc/functions.php:557
 msgid "All rights reserved."
 msgstr ""
 
-#: inc/functions.php:558
+#: inc/functions.php:557
 msgid " Theme %1$s"
 msgstr ""
 
-#: inc/functions.php:558
+#: inc/functions.php:557
 msgid "by ThemeGrill. Powered by: %2$s."
 msgstr ""
 
-#: inc/functions.php:640 inc/related-posts.php:64
+#: inc/functions.php:639 inc/related-posts.php:64
 msgid ""
 "<span class=\"date\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:654
+#: inc/functions.php:653
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:654
+#: inc/functions.php:653
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:654
+#: inc/functions.php:653
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:654
+#: inc/functions.php:653
 msgid "Comments Off"
 msgstr ""
 
@@ -1673,31 +1675,6 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://themegrill.com/themes/spacious"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Spacious is an incredibly spacious multipurpose responsive theme coded & "
-"designed with a lot of care and love. You can use it for your business, "
-"portfolio, blogging or any type of site. It has 4 page layouts, 2 page "
-"templates, 4 blog display types, 13 widgets areas, 5 custom widgets "
-"focusing on business template, awesome slider, primary color option to "
-"match your logo & website, boxed & wide layout, light & dark color skin, "
-"translation ready and many more. You can get free support in "
-"https://themegrill.com/contact/ and check the demo at "
-"https://themegrilldemos.com/spacious/."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "ThemeGrill"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://themegrill.com"
-msgstr ""
-
 #. Template Name of the plugin/theme
 msgid "Business Template"
 msgstr ""
@@ -1710,12 +1687,12 @@ msgstr ""
 msgid "Page Builder Template"
 msgstr ""
 
-#: inc/functions.php:463 navigation.php:39
+#: inc/functions.php:462 navigation.php:39
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:464 navigation.php:40
+#: inc/functions.php:463 navigation.php:40
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""
