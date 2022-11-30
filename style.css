@@ -669,11 +669,6 @@ img#wpstats {
 	text-align: center;
 }
 
-.no-sidebar-full-width,
-.no-sidebar {
-	overflow: hidden;
-}
-
 .no-sidebar-full-width #primary .entry-content > .alignfull,
 .no-sidebar #primary .entry-content > .alignfull {
 	margin-left: calc(50% - 50vw);
