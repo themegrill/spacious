@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
@@ -93,8 +94,8 @@ Theme Name: Spacious
 Theme URI: https://themegrill.com/themes/spacious
 Author: ThemeGrill
 Author URI: https://themegrill.com
-Description: Spacious is an incredibly spacious multipurpose responsive theme coded & designed with a lot of care and love. You can use it for your business, portfolio, blogging or any type of site. It has 4 page layouts, 2 page templates, 4 blog display types, 13 widgets areas, 5 custom widgets focusing on business template, awesome slider, primary color option to match your logo & website, boxed & wide layout, light & dark color skin, translation ready and many more. You can get free support in https://themegrill.com/contact/ and check the demo at https://themegrilldemos.com/spacious/.
-Version: 1.9.4
+Description: Spacious is an incredible free business WordPress theme that fits small to medium businesses. This responsive theme is optimized for speed. So, you end up with a business website that loads within 1 second. Since Spacious is compatible with WooCommerce, you can easily set up an online store for your business. It's amazing collection of 16 free starter demos makes building a complete website very beginner-friendly. Spacious theme supports Gutenberg and page builder plugins like Elementor, Brizy, Beaver Builder, SiteOrigin, etc. So, import a demo with just one click and start customizing it using a page builder of your choice. Here are the key Spacious features you get with this theme: >> Well-coded >> Translation & RTL Ready >> Sticky Menu >> Complete Documentation >> Multiple Widget Areas >> Optimized for SEO >> Compatible with Major Browsers. Try this free theme yourself to establish and grow your business’ online presence without having to rely on developers or designers. You can always reach out at https://themegrill.com/contact/ if you encounter any issues. Also, explore all the available free starter sites at https://themegrilldemos.com/spacious-demos.
+Version: 1.9.5
 Tested up to: 5.5
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -2058,8 +2059,8 @@ a#scroll-up:hover {
 }
 
 .post .entry-meta .read-more-link {
-	padding: 5px 10px;
 	background-color: #0FBE7C;
+	padding: 0;
 	float: left;
 	border-left: none;
 }
@@ -2067,6 +2068,11 @@ a#scroll-up:hover {
 .post .entry-meta .read-more-link:hover {
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+.post .entry-meta .read-more-link .read-more {
+	display: block;
+	padding: 5px 10px;
 }
 
 .post .entry-meta a {

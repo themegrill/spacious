@@ -2131,8 +2131,8 @@ a#scroll-up {
 	}
 
 	.read-more-link {
-		padding: 5px 10px;
 		background-color: #0FBE7C;
+        padding: 0;
 		float: right;
 		border-right: none;
 
@@ -2141,6 +2141,11 @@ a#scroll-up {
 			-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 			box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 		}
+
+        .read-more {
+            display: block;
+            padding: 5px 10px;
+        }
 	}
 
 	a {
