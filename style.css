@@ -2401,11 +2401,14 @@ h3#site-title {
 }
 
 .social-links ul li.spacious-twitter a:before {
-	content: '\f099';
-	color: #33ccff;
+	content: "\e61b";
+	color: #000000;
 }
 
-.social-links ul li.spacious-facebook a:hover, .social-links ul li.spacious-instagram a:hover, .social-links ul li.spacious-linkedin a:hover, .social-links ul li.spacious-twitter a:hover,
+.social-links ul li.spacious-facebook a:hover,
+.social-links ul li.spacious-instagram a:hover,
+.social-links ul li.spacious-linkedin a:hover,
+.social-links ul li.spacious-twitter a:hover,
 .social-links ul li a i:hover {
 	opacity: 0.8;
 	filter: alpha(opacity=80);
@@ -2494,7 +2497,8 @@ li.default-menu {
 	color: #0FBE7C;
 }
 
-.main-navigation ul li ul, .main-navigation ul li:hover ul ul {
+.main-navigation ul li ul,
+.main-navigation ul li:hover ul ul {
 	z-index: 99999;
 	position: absolute;
 	left: -999999px;
@@ -2735,7 +2739,8 @@ li.default-menu {
 	opacity: 1;
 }
 
-.cart-wrapper .woocommerce ul.cart_list li, .cart-wrapper .woocommerce ul.product_list_widget li {
+.cart-wrapper .woocommerce ul.cart_list li,
+.cart-wrapper .woocommerce ul.product_list_widget li {
 	padding-top: 10px;
 	margin: 0;
 	border-bottom: 1px solid #efefef;
@@ -2744,7 +2749,8 @@ li.default-menu {
 	text-align: left;
 }
 
-.cart-wrapper .woocommerce ul.cart_list li:last-child, .cart-wrapper .woocommerce ul.product_list_widget li:last-child {
+.cart-wrapper .woocommerce ul.cart_list li:last-child,
+.cart-wrapper .woocommerce ul.product_list_widget li:last-child {
 	border-bottom: none transparent;
 }
 
@@ -2860,7 +2866,8 @@ li.default-menu {
 	padding-left: 80px;
 }
 
-.main-small-navigation ul > .current_page_item, .main-small-navigation ul > .current-menu-item {
+.main-small-navigation ul > .current_page_item,
+.main-small-navigation ul > .current-menu-item {
 	background: #0FBE7C;
 }
 

@@ -35,7 +35,7 @@ function spacious_scripts_styles_method() {
 	wp_enqueue_style( 'spacious-genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3.1' );
 
 	// Enqueue font-awesome style.
-	wp_enqueue_style( 'spacious-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
+	wp_enqueue_style( 'spacious-font-awesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', array(), '4.7.1' );
 
 	/**
 	 * Inline CSS for this theme.
@@ -84,7 +84,6 @@ function spacious_scripts_styles_method() {
 
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
 	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
-
 }
 
 add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
@@ -97,13 +96,13 @@ function spacious_get_fonts() {
 	/*
 	 * Global
 	 */
-	$spacious_content_font_typography_default    = array(
+	$spacious_content_font_typography_default      = array(
 		'font-family' => 'Lato',
 	);
-	$spacious_titles_font_typography_default     = array(
+	$spacious_titles_font_typography_default       = array(
 		'font-family' => 'Lato',
 	);
-	$spacious_site_title_font_typography_default = array(
+	$spacious_site_title_font_typography_default   = array(
 		'font-family' => 'Lato',
 	);
 	$spacious_site_tagline_font_typography_default = array(
@@ -112,8 +111,8 @@ function spacious_get_fonts() {
 	$spacious_primary_menu_font_typography_default = array(
 		'font-family' => 'Lato',
 	);
-	$spacious_content_font_typography            = get_theme_mod( 'spacious_content_font_typography', $spacious_content_font_typography_default );
-	$spacious_titles_font_typography             = get_theme_mod( 'spacious_titles_font_typography', $spacious_titles_font_typography_default );
+	$spacious_content_font_typography              = get_theme_mod( 'spacious_content_font_typography', $spacious_content_font_typography_default );
+	$spacious_titles_font_typography               = get_theme_mod( 'spacious_titles_font_typography', $spacious_titles_font_typography_default );
 
 	Spacious_Generate_Fonts::add_font( $spacious_content_font_typography['font-family'] );
 	Spacious_Generate_Fonts::add_font( $spacious_titles_font_typography['font-family'] );
@@ -164,7 +163,7 @@ if ( ! function_exists( 'spacious_parse_css' ) ) :
 						continue;
 					}
 
-					$properties_added++;
+					++$properties_added;
 					$temp_parse_css .= $property . ':' . $value . ';';
 				}
 
@@ -202,7 +201,6 @@ if ( ! function_exists( 'spacious_parse_css' ) ) :
 		}
 
 		return $parse_css;
-
 	}
 
 endif;
@@ -224,7 +222,7 @@ if ( ! function_exists( 'spacious_parse_background_css' ) ) :
 			return;
 		}
 
-		$parse_css = '';
+		$parse_css  = '';
 		$parse_css .= $selector . '{';
 
 		// For background color.
@@ -260,7 +258,6 @@ if ( ! function_exists( 'spacious_parse_background_css' ) ) :
 		$parse_css .= '}';
 
 		return $parse_css;
-
 	}
 
 endif;
@@ -283,7 +280,7 @@ if ( ! function_exists( 'spacious_parse_typography_css' ) ) :
 			return;
 		}
 
-		$parse_css = '';
+		$parse_css  = '';
 		$parse_css .= $selector . '{';
 
 		// For font family.
@@ -394,7 +391,6 @@ if ( ! function_exists( 'spacious_parse_typography_css' ) ) :
 		}
 
 		return $parse_css;
-
 	}
 
 endif;
