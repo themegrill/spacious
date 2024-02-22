@@ -95,8 +95,8 @@ Theme URI: https://themegrill.com/themes/spacious
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Spacious is an incredible free business WordPress theme that fits small to medium businesses. This responsive theme is optimized for speed. So, you end up with a business website that loads within 1 second. Since Spacious is compatible with WooCommerce, you can easily set up an online store for your business. It's amazing collection of 16 free starter demos makes building a complete website very beginner-friendly. Spacious theme supports Gutenberg and page builder plugins like Elementor, Brizy, Beaver Builder, SiteOrigin, etc. So, import a demo with just one click and start customizing it using a page builder of your choice. Here are the key Spacious features you get with this theme: >> Well-coded >> Translation & RTL Ready >> Sticky Menu >> Complete Documentation >> Multiple Widget Areas >> Optimized for SEO >> Compatible with Major Browsers. Try this free theme yourself to establish and grow your business’ online presence without having to rely on developers or designers. You can always reach out at https://themegrill.com/contact/ if you encounter any issues. Also, explore all the available free starter sites at https://themegrilldemos.com/spacious-demos.
-Version: 1.9.5
-Tested up to: 5.5
+Version: 1.9.6
+Tested up to: 6.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -110,7 +110,63 @@ and Blueprint http://www.blueprintcss.org/
 */
 /* =Reset
 -------------------------------------------------------------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	border: 0;
 	font: inherit;
 	font-size: 100%;
@@ -136,11 +192,21 @@ html {
 	box-sizing: border-box;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
 	display: block;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
@@ -165,7 +231,9 @@ td,
 	padding: 6px 10px;
 }
 
-caption, th, td {
+caption,
+th,
+td {
 	text-align: right;
 }
 
@@ -177,7 +245,8 @@ q:before, q:after {
 	content: "";
 }
 
-blockquote, q {
+blockquote,
+q {
 	quotes: "" "";
 }
 
@@ -295,7 +364,9 @@ strong {
 	font-weight: bold;
 }
 
-cite, em, i {
+cite,
+em,
+i {
 	font-style: italic;
 }
 
@@ -305,7 +376,7 @@ pre {
 	overflow: auto;
 	padding: 20px;
 	border: 1px solid #EAEAEA;
-	font-family: "Courier 10 Pitch",Courier,monospace;
+	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 14px;
 	line-height: 1.4;
 	white-space: pre-wrap;
@@ -346,7 +417,8 @@ table {
 
 /* =SUPERCRIPT AND SUBSCRIPT
 ----------------------------------------------- */
-sup, sub {
+sup,
+sub {
 	font-size: 10px;
 	height: 0;
 	line-height: 1;
@@ -385,7 +457,8 @@ ol {
 	list-style: decimal;
 }
 
-li > ul, li > ol {
+li > ul,
+li > ol {
 	margin: 0 10px 0 0;
 }
 
@@ -402,7 +475,8 @@ blockquote,
 	margin-bottom: 20px;
 }
 
-blockquote em, blockquote i,
+blockquote em,
+blockquote i,
 .wp-block-quote em,
 .wp-block-quote i,
 .wp-block-quote.is-style-large em,
@@ -426,7 +500,8 @@ blockquote cite,
 
 /* =FORMS
 ----------------------------------------------- */
-input, textarea {
+input,
+textarea {
 	-webkit-border-radius: 0;
 }
 
@@ -547,7 +622,8 @@ button:hover {
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 }
 
-.previous a, .next a {
+.previous a,
+.next a {
 	color: #666666;
 	padding: 5px 25px;
 	cursor: pointer;
@@ -555,7 +631,8 @@ button:hover {
 	font-size: 16px;
 }
 
-.previous a:hover, .next a:hover {
+.previous a:hover,
+.next a:hover {
 	color: #0FBE7C;
 }
 
@@ -595,7 +672,9 @@ img {
 	margin-bottom: 18px;
 }
 
-.entry-content img, .comment-content img, .widget img {
+.entry-content img,
+.comment-content img,
+.widget img {
 	max-width: 100%;
 	/* Fluid images for posts, comments, and widgets */
 }
@@ -773,7 +852,8 @@ body {
 	max-width: 1218px;
 }
 
-.narrow-978 .inner-wrap, .wide-978 .inner-wrap {
+.narrow-978 .inner-wrap,
+.wide-978 .inner-wrap {
 	max-width: 978px;
 }
 
@@ -1476,11 +1556,17 @@ ul.wp-block-gallery img {
 	display: block;
 }
 
-#comments h1, #comments h2, #comments h3, #comments h4, #comments h5, #comments h6 {
+#comments h1,
+#comments h2,
+#comments h3,
+#comments h4,
+#comments h5,
+#comments h6 {
 	margin-bottom: 1rem;
 }
 
-#comments h2.comments-title, #comments h3.comments-title {
+#comments h2.comments-title,
+#comments h3.comments-title {
 	margin-bottom: 10px;
 	font-size: 28px;
 }
@@ -1496,7 +1582,10 @@ ul.wp-block-gallery img {
 	position: relative;
 }
 
-.comments-area .comment-edit-link, .comments-area .comment-permalink, .comments-area .comment-date-time, .comments-area .comment-author-link {
+.comments-area .comment-edit-link,
+.comments-area .comment-permalink,
+.comments-area .comment-date-time,
+.comments-area .comment-author-link {
 	display: block;
 	margin-right: 100px;
 	color: #999999;
@@ -1563,7 +1652,8 @@ ul.wp-block-gallery img {
 	margin-bottom: 20px;
 }
 
-.comment ul, .comment ol {
+.comment ul,
+.comment ol {
 	margin: 0 20px 20px 0;
 }
 
@@ -1644,12 +1734,12 @@ ul.wp-block-gallery img {
 	outline: 0;
 }
 
-.nav-previous, .nav-next {
+.nav-previous,
+.nav-next {
 	margin-bottom: 15px;
 }
 
-.nav-previous
-.nav-next a {
+.nav-previous .nav-next a {
 	color: #666666;
 	padding: 5px 25px;
 	cursor: pointer;
@@ -1847,7 +1937,9 @@ ul.wp-block-gallery img {
 
 /* =CALENDAR WIDGET
 ----------------------------------------------- */
-#wp-calendar th, #wp-calendar td, #wp-calendar caption {
+#wp-calendar th,
+#wp-calendar td,
+#wp-calendar caption {
 	text-align: right;
 	padding-bottom: 10px;
 }
@@ -1923,7 +2015,8 @@ a#scroll-up:hover {
 
 /* =READ MORE LINK
 ----------------------------------------------- */
-.read-more, .more-link {
+.read-more,
+.more-link {
 	font-size: 14px;
 	color: #0FBE7C;
 	font-family: 'Lato', sans-serif;
@@ -1994,11 +2087,13 @@ a#scroll-up:hover {
 	line-height: 32px;
 }
 
-.post .entry-title a, .page .entry-title a {
+.post .entry-title a,
+.page .entry-title a {
 	color: #444444;
 }
 
-.post .entry-title a:hover, .page .entry-title a:hover {
+.post .entry-title a:hover,
+.page .entry-title a:hover {
 	color: #0FBE7C;
 }
 
@@ -2021,7 +2116,8 @@ a#scroll-up:hover {
 	margin-bottom: 30px;
 }
 
-.entry-content li > ul, .entry-content li > ol {
+.entry-content li > ul,
+.entry-content li > ol {
 	margin-bottom: 0;
 }
 
@@ -2054,7 +2150,11 @@ a#scroll-up:hover {
 	margin: 0 0 20px;
 }
 
-.post .entry-meta .by-author, .post .entry-meta .date, .post .entry-meta .category, .post .entry-meta .comments, .post .entry-meta .edit-link {
+.post .entry-meta .by-author,
+.post .entry-meta .date,
+.post .entry-meta .category,
+.post .entry-meta .comments,
+.post .entry-meta .edit-link {
 	padding: 5px 10px;
 }
 

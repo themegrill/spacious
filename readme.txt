@@ -49,6 +49,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== Version 1.9.6 - 2024-02-22 ==
+* Update - FontAwesome version to 6.5.1.
+* Update - WordPress tested upto version to 6.4.
+
 == Version 1.9.5 - 2022-06-23 ==
 * Tweak - Load default fonts locally.
 * Fix - Color opacity option in customizer not working properly.
