@@ -113,14 +113,16 @@ add_filter( 'use_default_gallery_style', '__return_false' );
  * Filtering the size to be medium from thumbnail to be used in WordPress gallery as a default size
  */
 function spacious_gallery_atts( $out, $pairs, $atts ) {
-	$atts = shortcode_atts( array(
-		'size' => 'medium',
-	), $atts );
+	$atts = shortcode_atts(
+		array(
+			'size' => 'medium',
+		),
+		$atts
+	);
 
 	$out['size'] = $atts['size'];
 
 	return $out;
-
 }
 
 add_filter( 'shortcode_atts_gallery', 'spacious_gallery_atts', 10, 3 );
@@ -319,7 +321,11 @@ if ( ! function_exists( 'spacious_hex2rgb' ) ) {
 	function spacious_hex2rgb( $hexstr ) {
 		$int = hexdec( str_replace( '#', '', $hexstr ) );
 
-		$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
+		$rgb = array(
+			'red'   => 0xFF & ( $int >> 0x10 ),
+			'green' => 0xFF & ( $int >> 0x8 ),
+			'blue'  => 0xFF & $int,
+		);
 		$r   = $rgb['red'];
 		$g   = $rgb['green'];
 		$b   = $rgb['blue'];
@@ -347,8 +353,8 @@ function spacious_darkcolor( $hex, $steps ) {
 	$return      = '#';
 
 	foreach ( $color_parts as $color ) {
-		$color  = hexdec( $color ); // Convert to decimal
-		$color  = max( 0, min( 255, $color + $steps ) ); // Adjust color
+		$color   = hexdec( $color ); // Convert to decimal
+		$color   = max( 0, min( 255, $color + $steps ) ); // Adjust color
 		$return .= str_pad( dechex( $color ), 2, '0', STR_PAD_LEFT ); // Make two char hex code
 	}
 
@@ -423,7 +429,6 @@ function spacious_custom_css() {
 		<style type="text/css"><?php echo $spacious_internal_css; ?></style>
 		<?php
 	}
-
 }
 
 add_action( 'wp_head', 'spacious_custom_css', 100 );
@@ -490,15 +495,15 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 	function spacious_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) :
-			case 'pingback' :
-			case 'trackback' :
+			case 'pingback':
+			case 'trackback':
 				// Display trackbacks differently than normal comments.
 				?>
 				<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 				<p><?php _e( 'Pingback:', 'spacious' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'spacious' ), '<span class="edit-link">', '</span>' ); ?></p>
 				<?php
 				break;
-			default :
+			default:
 				// Proceed with normal comments.
 				global $post;
 				?>
@@ -507,12 +512,14 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 					<header class="comment-meta comment-author vcard">
 						<?php
 						echo get_avatar( $comment, 74 );
-						printf( '<div class="comment-author-link">%1$s%2$s</div>',
+						printf(
+							'<div class="comment-author-link">%1$s%2$s</div>',
 							get_comment_author_link(),
 							// If current post author is also comment author, make it known visually.
 							( $comment->user_id === $post->post_author ) ? '<span>' . __( 'Post author', 'spacious' ) . '</span>' : ''
 						);
-						printf( '<div class="comment-date-time">%1$s</div>',
+						printf(
+							'<div class="comment-date-time">%1$s</div>',
 							sprintf( __( '%1$s at %2$s', 'spacious' ), get_comment_date(), get_comment_time() )
 						);
 						printf( __( '<a class="comment-permalink" href="%1$s">Permalink</a>', 'spacious' ), esc_url( get_comment_link( $comment->comment_ID ) ) );
@@ -526,12 +533,19 @@ if ( ! function_exists( 'spacious_comment' ) ) :
 
 					<section class="comment-content comment">
 						<?php comment_text(); ?>
-						<?php comment_reply_link( array_merge( $args, array(
-							'reply_text' => __( 'Reply', 'spacious' ),
-							'after'      => '',
-							'depth'      => $depth,
-							'max_depth'  => $args['max_depth'],
-						) ) ); ?>
+						<?php
+						comment_reply_link(
+							array_merge(
+								$args,
+								array(
+									'reply_text' => __( 'Reply', 'spacious' ),
+									'after'      => '',
+									'depth'      => $depth,
+									'max_depth'  => $args['max_depth'],
+								)
+							)
+						);
+						?>
 					</section><!-- .comment-content -->
 
 				</article><!-- #comment-## -->
@@ -552,9 +566,9 @@ if ( ! function_exists( 'spacious_footer_copyright' ) ) :
 
 		$wp_link = '<a href="' . esc_url( 'https://wordpress.org' ) . '" target="_blank" title="' . esc_attr__( 'WordPress', 'spacious' ) . '" rel="nofollow"><span>' . __( 'WordPress', 'spacious' ) . '</span></a>';
 
-		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/spacious' ) . '" target="_blank" title="' . esc_attr__( 'Spacious', 'spacious' ) . '" rel="nofollow"><span>' . __( 'Spacious', 'spacious' ) . '</span></a>';
+		$tg_link = '<a href="' . esc_url( '#' ) . '" target="_blank" title="' . esc_attr__( 'Spacious', 'spacious' ) . '" rel="nofollow"><span>' . __( 'Spacious', 'spacious' ) . '</span></a>';
 
-		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'spacious' ), date( 'Y' ), $site_link ) . ' ' .__('All rights reserved.', 'spacious' ). sprintf( __( ' Theme %1$s', 'spacious' ), $tg_link ) . ' ' . sprintf( __( 'by ThemeGrill. Powered by: %2$s.', 'spacious' ), 'Spacious', $wp_link );
+		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'spacious' ), date( 'Y' ), $site_link ) . ' ' . __( 'All rights reserved.', 'spacious' ) . sprintf( __( ' Theme %1$s', 'spacious' ), $tg_link ) . ' ' . sprintf( __( 'by ThemeGrill. Powered by: %2$s.', 'spacious' ), 'Spacious', $wp_link );
 
 		$spacious_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
 		echo $spacious_footer_copyright;
@@ -591,7 +605,7 @@ endif;
  * sanitize the input for custom css
  */
 function spacious_sanitize_textarea_custom( $input, $option ) {
-	if ( $option['id'] == "spacious_custom_css" ) {
+	if ( $option['id'] == 'spacious_custom_css' ) {
 		$output = wp_filter_nohtml_kses( $input );
 	} else {
 		$output = $input;
@@ -623,26 +637,29 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 			?>
 
 			<span class="by-author author vcard"><a class="url fn n"
-			                                        href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+													href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
 
 			<?php
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 				$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 			}
-			$time_string = sprintf( $time_string,
+			$time_string = sprintf(
+				$time_string,
 				esc_attr( get_the_date( 'c' ) ),
 				esc_html( get_the_date() ),
 				esc_attr( get_the_modified_date( 'c' ) ),
 				esc_html( get_the_modified_date() )
 			);
-			printf( __( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark">%3$s</a></span>', 'spacious' ),
+			printf(
+				__( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark">%3$s</a></span>', 'spacious' ),
 				esc_url( get_permalink() ),
 				esc_attr( get_the_time() ),
 				$time_string
 			);
 
-			if ( has_category() ) { ?>
+			if ( has_category() ) {
+				?>
 				<span class="category"><?php the_category( ', ' ); ?></span>
 				<?php
 			}
@@ -651,15 +668,17 @@ if ( ! function_exists( 'spacious_entry_meta' ) ) :
 				?>
 				<span
 					class="comments"><?php comments_popup_link( __( 'No Comments', 'spacious' ), __( '1 Comment', 'spacious' ), __( '% Comments', 'spacious' ), '', __( 'Comments Off', 'spacious' ) ); ?></span>
-			<?php }
+				<?php
+			}
 
 			edit_post_link( __( 'Edit', 'spacious' ), '<span class="edit-link">', '</span>' );
 
 			if ( ( ( get_theme_mod( 'spacious_archive_display_type', 'blog_large' ) != 'blog_full_content' ) && ! is_single() ) || is_archive() || is_search() ) {
-				if ( $spacious_show_readmore ) { ?>
+				if ( $spacious_show_readmore ) {
+					?>
 					<span class="read-more-link">
 						<a class="read-more"
-						   href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a>
+							href="<?php the_permalink(); ?>"><?php _e( 'Read more', 'spacious' ); ?></a>
 					</span>
 					<?php
 				}
@@ -702,7 +721,7 @@ function spacious_woocommerce_support() {
 
 add_action( 'after_setup_theme', 'spacious_woocommerce_support' );
 
-if ( class_exists( 'woocommerce' ) && ! function_exists( 'spacious_is_in_woocommerce_page' ) ):
+if ( class_exists( 'woocommerce' ) && ! function_exists( 'spacious_is_in_woocommerce_page' ) ) :
 	/*
 	 * woocommerce - conditional to check if woocommerce related page showed
 	 */
@@ -752,7 +771,6 @@ function spacious_site_header_migrate() {
 	update_option( 'spacious', $theme_options );
 
 	update_option( 'spacious_site_header_migrate', 1 );
-
 }
 
 add_action( 'after_setup_theme', 'spacious_site_header_migrate' );
@@ -783,7 +801,6 @@ function spacious_site_footer_designs_eliminate() {
 		update_option( 'spacious_site_footer_eliminate', 1 );
 
 	}
-
 }
 
 add_action( 'after_setup_theme', 'spacious_site_footer_designs_eliminate' );
@@ -827,7 +844,7 @@ function spacious_header_display_type_migrate() {
 	 * Assigning the theme name.
 	 */
 	$spacious_themename = get_option( 'stylesheet' );
-	$spacious_themename = preg_replace( "/\W/", "_", strtolower( $spacious_themename ) );
+	$spacious_themename = preg_replace( '/\W/', '_', strtolower( $spacious_themename ) );
 
 	// Store the old value.
 	$spacious_header_display_type = isset( $spacious_options['spacious_header_display_type'] ) ? $spacious_options['spacious_header_display_type'] : '';
@@ -843,7 +860,6 @@ function spacious_header_display_type_migrate() {
 
 	// Finally, set the flag to stop executing the script on each load of page.
 	update_option( 'spacious_header_display_type_migrate', 'yes' );
-
 }
 
 add_action( 'after_setup_theme', 'spacious_header_display_type_migrate' );
@@ -917,7 +933,6 @@ if ( ! function_exists( 'spacious_change_logo_attr' ) ) :
 					$attr['srcset'] = $custom_logo . ' 1x, ' . $retina_logo . ' 2x';
 				}
 			}
-
 		}
 
 		return $attr;
