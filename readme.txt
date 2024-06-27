@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== TBD ==
+* Added - Option to change TG:service cta text.
+
 == Version 1.9.6 - 2024-02-22 ==
 * Update - FontAwesome version to 6.5.1.
 * Update - WordPress tested upto version to 6.4.
