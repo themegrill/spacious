@@ -49,7 +49,10 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-== Version 1.9.7 - 2024-06-27 ==ss
+== Version 1.9.8 - 2024-12-04 ==
+* Update - FontAwesome version to 6.7.1.
+
+== Version 1.9.7 - 2024-06-27 ==
 * Added - Option to change TG:service cta text.
 
 == Version 1.9.6 - 2024-02-22 ==
