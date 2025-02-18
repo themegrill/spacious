@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== Version TBD ==
+* Update - Settings for blocks.
+
 == Version 1.9.8 - 2024-12-04 ==
 * Update - FontAwesome version to 6.7.1.
 
