@@ -49,7 +49,7 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
-== Version TBD ==
+== Version 1.9.9 - 2024-12-20 ==
 * Update - Settings for blocks.
 
 == Version 1.9.8 - 2024-12-04 ==
