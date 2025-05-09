@@ -77,7 +77,12 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 */
-		load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
+		add_action(
+			'after_setup_theme',
+			function () {
+				load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
+			}
+		);
 
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
