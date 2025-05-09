@@ -78,7 +78,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 		 * Translations can be filed in the /languages/ directory.
 		 */
 		add_action(
-			'init',
+			'after_setup_theme',
 			function () {
 				load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
 			}
