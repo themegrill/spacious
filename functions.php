@@ -73,17 +73,6 @@ add_action( 'template_redirect', 'spacious_content_width' );
 if ( ! function_exists( 'spacious_setup' ) ) :
 	function spacious_setup() {
 
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 */
-		add_action(
-			'after_setup_theme',
-			function () {
-				load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
-			}
-		);
-
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
 
@@ -373,6 +362,11 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'spacious_setup' );
+
+function spacious_load_textdomain() {
+	load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'spacious_load_textdomain', 20 );
 
 // Theme version.
 $spacious_theme = wp_get_theme( 'spacious' );
