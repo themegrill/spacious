@@ -415,7 +415,9 @@ require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php';
 
-require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
+add_action('init', function (){
+	require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
+});
 require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
 require_once SPACIOUS_INCLUDES_DIR . '/class-spacious-dynamic-css.php';
 require_once SPACIOUS_INCLUDES_DIR . '/migration.php';
