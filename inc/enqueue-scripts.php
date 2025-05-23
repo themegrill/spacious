@@ -21,7 +21,7 @@ function spacious_scripts_styles_method() {
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-	// Font Awesome 6.7.1.
+	// Font Awesome 6.7.2.
 	$font_awesome_styles = array(
 		array(
 			'handle'  => 'font-awesome-4',
@@ -31,22 +31,22 @@ function spacious_scripts_styles_method() {
 		array(
 			'handle'  => 'font-awesome-all',
 			'file'    => '/library/font-awesome/css/all',
-			'version' => '6.2.4',
+			'version' => '6.7.2',
 		),
 		array(
 			'handle'  => 'font-awesome-solid',
 			'file'    => '/library/font-awesome/css/solid',
-			'version' => '6.2.4',
+			'version' => '6.7.2',
 		),
 		array(
 			'handle'  => 'font-awesome-regular',
 			'file'    => '/library/font-awesome/css/regular',
-			'version' => '6.2.4',
+			'version' => '6.7.2',
 		),
 		array(
 			'handle'  => 'font-awesome-brands',
 			'file'    => '/library/font-awesome/css/brands',
-			'version' => '6.2.4',
+			'version' => '6.7.2',
 		),
 	);
 
