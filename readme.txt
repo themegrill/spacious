@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== Version 1.9.10 - 2025-05-09 ==
+* Fix - Load text domain warning issue.
+
 == Version 1.9.9 - 2024-12-20 ==
 * Update - Settings for blocks.
 

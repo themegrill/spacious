@@ -73,17 +73,6 @@ add_action( 'template_redirect', 'spacious_content_width' );
 if ( ! function_exists( 'spacious_setup' ) ) :
 	function spacious_setup() {
 
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 */
-		add_action(
-			'after_setup_theme',
-			function () {
-				load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
-			}
-		);
-
 		// Add default posts and comments RSS feed links to head
 		add_theme_support( 'automatic-feed-links' );
 
@@ -374,6 +363,11 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'spacious_setup' );
 
+function spacious_load_textdomain() {
+	load_theme_textdomain( 'spacious', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'spacious_load_textdomain', 20 );
+
 // Theme version.
 $spacious_theme = wp_get_theme( 'spacious' );
 define( 'SPACIOUS_THEME_VERSION', $spacious_theme->get( 'Version' ) );
@@ -421,7 +415,9 @@ require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php';
 
-require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
+add_action('init', function (){
+	require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
+});
 require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
 require_once SPACIOUS_INCLUDES_DIR . '/class-spacious-dynamic-css.php';
 require_once SPACIOUS_INCLUDES_DIR . '/migration.php';
