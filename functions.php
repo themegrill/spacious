@@ -175,7 +175,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 						array(
 							'title' => esc_html__( 'Business Top Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Top Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-									   '<ul>
+										'<ul>
 											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
@@ -237,7 +237,7 @@ if ( ! function_exists( 'spacious_setup' ) ) :
 						array(
 							'title' => esc_html__( 'Business Bottom Sidebar', 'spacious' ),
 							'text'  => esc_html__( 'Shows widgets on Business Page Template Bottom Section.', 'spacious' ) . ' ' . __( 'Suitable widget: TG: Services, TG: Call To Action Widget, TG: Featured Widget', 'spacious' ) .
-									   '<ul>
+										'<ul>
 											<li>' . '<strong>' . esc_html__( 'TG: Services', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Display some pages as services. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Call To Action Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Use this widget to show the call to action section.', 'spacious' ) . '</li>
 											<li>' . '<strong>' . esc_html__( 'TG: Featured Widget', 'spacious' ) . '</strong>' . ' - ' . esc_html__( 'Show your some pages as recent work. Best for Business Top or Bottom sidebar.', 'spacious' ) . '</li>
@@ -408,6 +408,33 @@ define( 'SPACIOUS_WIDGETS_URL', SPACIOUS_INCLUDES_URL . '/widgets' );
 define( 'SPACIOUS_ADMIN_IMAGES_URL', SPACIOUS_ADMIN_URL . '/images' );
 define( 'SPACIOUS_ADMIN_CSS_URL', SPACIOUS_ADMIN_URL . '/css' );
 
+
+// Load customind.
+require_once get_template_directory() . '/inc/customizer/customind/init.php';
+
+/**
+ * @var \customizer\customind\core\Customind
+ */
+global $customind;
+$customind->set_css_var_prefix( 'spcaious' );
+$customind->set_i18n_data(
+	[
+		'domain' => 'spcaious',
+	]
+);
+add_action(
+	'after_setup_theme',
+	function () use ( $customind ) {
+		$customind->set_section_i18n(
+			[
+				/* Translators: 1: Panel Title. */
+				'customizing-action' => __( 'Customizing ▶ %s', 'spcaious' ),
+				'customizing'        => __( 'Customizing', 'spcaious' ),
+			]
+		);
+	}
+);
+
 /** Load functions */
 require_once SPACIOUS_INCLUDES_DIR . '/custom-header.php';
 require_once SPACIOUS_INCLUDES_DIR . '/functions.php';
@@ -415,9 +442,12 @@ require_once SPACIOUS_INCLUDES_DIR . '/header-functions.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer.php';
 require_once SPACIOUS_INCLUDES_DIR . '/customizer/class-spacious-customizer-partials.php';
 
-add_action('init', function (){
-	require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
-});
+add_action(
+	'init',
+	function () {
+		require_once SPACIOUS_ADMIN_DIR . '/meta-boxes.php';
+	}
+);
 require_once SPACIOUS_INCLUDES_DIR . '/enqueue-scripts.php';
 require_once SPACIOUS_INCLUDES_DIR . '/class-spacious-dynamic-css.php';
 require_once SPACIOUS_INCLUDES_DIR . '/migration.php';
