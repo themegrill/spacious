@@ -32,11 +32,18 @@ if ( ! class_exists( 'Spacious_Admin' ) ) :
 
 			wp_enqueue_script( 'spacious-plugin-install-helper', get_template_directory_uri() . '/inc/admin/js/plugin-handle.js', array( 'jquery' ), SPACIOUS_THEME_VERSION, true );
 
+			// Only expose the nonce and AJAX functionality to users with appropriate capabilities
 			$welcome_data = array(
-				'uri'      => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' ) ),
-				'btn_text' => esc_html__( 'Processing...', 'spacious' ),
-				'nonce'    => wp_create_nonce( 'spacious_demo_import_nonce' ),
+				'uri'       => esc_url( admin_url( '/themes.php?page=demo-importer&browse=all&spacious-hide-notice=welcome' ) ),
+				'btn_text'  => esc_html__( 'Processing...', 'spacious' ),
+				'admin_url' => esc_url( admin_url() ),
 			);
+
+			// Only add nonce and ajaxurl if user has appropriate capabilities
+			if ( current_user_can( 'manage_options' ) ) {
+				$welcome_data['nonce']   = wp_create_nonce( 'spacious_demo_import_nonce' );
+				$welcome_data['ajaxurl'] = admin_url( 'admin-ajax.php' );
+			}
 
 			wp_localize_script( 'spacious-plugin-install-helper', 'spaciousRedirectDemoPage', $welcome_data );
 		}
