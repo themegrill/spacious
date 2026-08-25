@@ -1934,6 +1934,16 @@ ul.wp-block-gallery {
     padding: 5px 0;
 }
 
+#secondary {
+    .wp-block-search__input {
+        max-height: 54px; 
+    }
+
+    .wp-block-search__button {
+        line-height: 1.8;
+    }
+}
+
 #colophon .widget ul li {
     line-height: 1.5;
     border-bottom: 1px solid #EAEAEA;
