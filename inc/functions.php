@@ -415,7 +415,7 @@ function spacious_custom_css() {
 		$spacious_internal_css .= ' h1, h2, h3, h4, h5, h6 { font-family: ' . get_theme_mod( 'spacious_titles_font', 'Lato' ) . '; }';
 	}
 	if ( get_theme_mod( 'spacious_content_font', 'Lato' ) != 'Lato' ) {
-		$spacious_internal_css .= ' body, button, input, select, textarea, p, .entry-meta, .read-more, .more-link, .widget_testimonial .testimonial-author, #featured-slider .slider-read-more-button { font-family: ' . get_theme_mod( 'spacious_content_font', 'Lato' ) . '; }';
+		$spacious_internal_css .= ' body, button, input, select, textarea, p, .entry-meta, .post .entry-meta, .related-posts .entry-meta, .read-more, .more-link, .widget_testimonial .testimonial-author, #featured-slider .slider-read-more-button { font-family: ' . get_theme_mod( 'spacious_content_font', 'Lato' ) . '; }';
 	}
 
 	if ( ! empty( $spacious_internal_css ) ) {

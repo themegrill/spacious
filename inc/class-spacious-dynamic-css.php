@@ -105,7 +105,7 @@ class Spacious_Dynamic_CSS {
 		$parse_css .= spacious_parse_typography_css(
 			$spacious_content_font,
 			$base_typography,
-			'body, button, input, select, textarea, p, .entry-meta, .read-more, .more-link, .widget_testimonial .testimonial-author, #featured-slider .slider-read-more-button'
+			'body, button, input, select, textarea, p, .entry-meta, .post .entry-meta, .related-posts .entry-meta, .read-more, .more-link, .widget_testimonial .testimonial-author, #featured-slider .slider-read-more-button'
 		);
 
 		// Heading typography.

@@ -49,6 +49,9 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== Version 1.9.13 - 2026-08-25 ==
+* Fix - Apply Global Typography Base settings to post meta data.
+
 == Version 1.9.12- 2025-08-08 ==
 * Update - Settings for blocks.
 
