@@ -12,11 +12,11 @@
   "devDependencies": {
     "autoprefixer": "^7.1.6",
     "browser-sync": "~2.26.3",
-    "grunt": "^0.4.5",
+    "grunt": "^1.5.3",
     "grunt-checktextdomain": "~1.0.0",
     "grunt-contrib-compress": "~1.2.0",
     "grunt-contrib-jshint": "~1.0.0",
-    "grunt-wp-i18n": "~0.5.4",
+    "grunt-wp-i18n": "~1.0.3",
     "gulp-line-ending-corrector": "^1.0.3",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^2.0.0",
