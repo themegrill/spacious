@@ -122,7 +122,11 @@ function spacious_scripts_styles_method() {
 	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
 
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
-	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
+	// The 'conditional' data key is deprecated since WP 6.9.0 and has no effect there;
+	// only set it on older versions to keep html5 restricted to IE8 and below.
+	if ( version_compare( $GLOBALS['wp_version'], '6.9', '<' ) ) {
+		wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
