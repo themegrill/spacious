@@ -313,11 +313,29 @@ endif;
 
 /**
  * Change hex code to RGB
- * Source: https://css-tricks.com/snippets/php/convert-hex-to-rgb/#comment-1052011
  */
+if ( ! function_exists( 'spacious_color_to_hex' ) ) {
+	/**
+	 * Normalize a color value to a bare hex string.
+	 *
+	 * The primary color customizer control allows picking an alpha color, so the
+	 * stored value can be an `rgba(r,g,b,a)` string rather than a hex string.
+	 * hexdec() doesn't understand that format, so convert it to hex first.
+	 */
+	function spacious_color_to_hex( $color ) {
+		if ( preg_match( '/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i', $color, $matches ) ) {
+			return str_pad( dechex( (int) $matches[1] ), 2, '0', STR_PAD_LEFT )
+				. str_pad( dechex( (int) $matches[2] ), 2, '0', STR_PAD_LEFT )
+				. str_pad( dechex( (int) $matches[3] ), 2, '0', STR_PAD_LEFT );
+		}
+
+		return str_replace( '#', '', $color );
+	}
+}
+
 if ( ! function_exists( 'spacious_hex2rgb' ) ) {
 	function spacious_hex2rgb( $hexstr ) {
-		$int = hexdec( str_replace( '#', '', $hexstr ) );
+		$int = hexdec( spacious_color_to_hex( $hexstr ) );
 
 		$rgb = array( "red" => 0xFF & ( $int >> 0x10 ), "green" => 0xFF & ( $int >> 0x8 ), "blue" => 0xFF & $int );
 		$r   = $rgb['red'];
@@ -337,7 +355,7 @@ function spacious_darkcolor( $hex, $steps ) {
 	$steps = max( -255, min( 255, $steps ) );
 
 	// Normalize into a six character long hex string
-	$hex = str_replace( '#', '', $hex );
+	$hex = spacious_color_to_hex( $hex );
 	if ( strlen( $hex ) == 3 ) {
 		$hex = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
 	}
