@@ -27,7 +27,7 @@
     "node-sass": "^9.0.0"
   },
   "engines": {
-    "node": ">=16",
+    "node": ">=20",
     "npm": ">=8"
   },
   "scripts": {
