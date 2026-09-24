@@ -152,7 +152,7 @@ function spacious_body_class( $classes ) {
 	$spacious_default_page_layout = get_theme_mod( 'spacious_pages_default_layout', 'right_sidebar' );
 	$spacious_default_post_layout = get_theme_mod( 'spacious_single_posts_default_layout', 'right_sidebar' );
 	$spacious_woo_archive_layout  = get_theme_mod( 'spacious_woo_archive_layout', 'no_sidebar_full_width' );
-	$spacious_woo_product_layout  = get_theme_mod( 'spacious_woo_product_layout', 'no_sidebar_full_width' );
+	$spacious_woo_product_layout  = get_theme_mod( 'spacious_woo_product_layout', 'right_sidebar' );
 
 	if ( $layout_meta == 'default_layout' ) {
 		if ( is_page() ) {
