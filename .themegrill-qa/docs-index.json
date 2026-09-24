@@ -1,0 +1,312 @@
+{
+  "source": "https://docs.themegrill.com/spacious",
+  "mode": "rest",
+  "sections": [
+    {
+      "section": "content",
+      "label": "Content",
+      "parent": "Customization",
+      "file": "docs/content.md",
+      "articles": 17,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 1,
+      "titles": [
+        "How to Change TG: Call to Action Widget Color?",
+        "Comment Part Color Overview",
+        "How to Change the Content on 404 page?",
+        "How to Enable/Disable Social Profile Links of Author in Author Bio?",
+        "How to Enable/Disable Post Meta?",
+        "How to Display Category Description?",
+        "How to Change Excerpt Read More Text?",
+        "How to Change the Excerpt Length of Blog Post?",
+        "How to Display Posts in Grid or Masonry Layout?",
+        "How to Change the Breadcrumb Title?",
+        "How to Change the Style of Post/ Page title?",
+        "How to Enable Author Bio in Post Page?",
+        "How to Enable Featured Image in Page?",
+        "How to enable Featured Image in Single Post Page?",
+        "How to Display Related Posts?",
+        "How to Manage Blog Post Display Type?",
+        "How to Disable Header Title?"
+      ]
+    },
+    {
+      "section": "header",
+      "label": "Header",
+      "parent": "Customization",
+      "file": "docs/header.md",
+      "articles": 11,
+      "failed": 0,
+      "thin": [
+        {
+          "url": "https://docs.themegrill.com/spacious/docs/how-to-change-header-drawer-layout/",
+          "chars": 149
+        }
+      ],
+      "outcomes": 5,
+      "titles": [
+        "Customize the Primary Menu of the Site",
+        "Customize Site Logo, Site Icon, Site Title, and Tagline",
+        "Header Media Overview",
+        "How to Change Header Sidebar Drawer Layout?",
+        "Add Second Header Button",
+        "Enable/Disable Sticky Menu",
+        "How to add Widgets to Header Sidebar Drawer?",
+        "How to Enable/ Disable Header Sidebar Drawer?",
+        "Enable Header Button",
+        "Primary Header Overview",
+        "Customize the Header Top Bar"
+      ]
+    },
+    {
+      "section": "slider",
+      "label": "Slider",
+      "parent": "Customization",
+      "file": "docs/slider.md",
+      "articles": 11,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 1,
+      "titles": [
+        "Slider Overview",
+        "How to Change Position of Slider Content?",
+        "How to Make Slider Images Linked to Respective Links?",
+        "How to Display Slides in Random Order?",
+        "How to Enable Progress Bar in a Slider?",
+        "How to Enable/Disable Pause On Hover Effect for Slider?",
+        "How to add Navigation Arrow in Slider?",
+        "How to Change the Number of Slides in the Slider?",
+        "How to Change Slider Settings?",
+        "How to Show Slider on Specific Pages?",
+        "How to Display Slider?"
+      ]
+    },
+    {
+      "section": "faqs",
+      "label": "FAQ's",
+      "parent": null,
+      "file": "docs/faqs.md",
+      "articles": 8,
+      "failed": 0,
+      "thin": [
+        {
+          "url": "https://docs.themegrill.com/spacious/docs/how-to-disable-comments-on-whole-site-or-just-a-specific-post-page/",
+          "chars": 28
+        },
+        {
+          "url": "https://docs.themegrill.com/spacious/docs/demo-import-process-failed/",
+          "chars": 35
+        },
+        {
+          "url": "https://docs.themegrill.com/spacious/docs/will-i-lose-my-work-if-i-update-from-free-version-to-pro-version/",
+          "chars": 35
+        }
+      ],
+      "outcomes": 2,
+      "titles": [
+        "Can’t Log In to My ThemeGrill Account",
+        "How to find the invoice of the purchased theme?",
+        "GDPR Compliance and Google Fonts",
+        "Where are the customizer options available after the Spacious Major update?",
+        "Can We Import Demo in Our Existing Website?",
+        "How to Disable Comments on Whole Site or just a specific Post/Page?",
+        "Demo Import Process Failed.",
+        "Will I lose my work if I update from Free version to Pro version?"
+      ]
+    },
+    {
+      "section": "footer",
+      "label": "Footer",
+      "parent": "Customization",
+      "file": "docs/footer.md",
+      "articles": 8,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "How to Display Menu on Footer?",
+        "How to add Background Image on Footer?",
+        "How to Change Footer Copyright Alignment?",
+        "How to Change Footer Copyright?",
+        "How to Change the Footer Widgets Layout?",
+        "How to Change Style of Footer Border?",
+        "How to Enable/Disable Scroll to Top Button?",
+        "How to change the number of Widgets Area in Footer?"
+      ]
+    },
+    {
+      "section": "global",
+      "label": "Global",
+      "parent": "Customization",
+      "file": "docs/global.md",
+      "articles": 7,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "Customize the Typography of Site",
+        "Change the Background of Site",
+        "Change the Heading Color of the Site",
+        "Change the Skin Color of the Site",
+        "Customize the Primary Color of the Site",
+        "Manage the Sidebar Layout",
+        "Manage the Site Layout"
+      ]
+    },
+    {
+      "section": "typography",
+      "label": "Typography",
+      "parent": "Customization",
+      "file": "docs/typography.md",
+      "articles": 7,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "How to Change Font Size of Slider?",
+        "How to Change the Font Size of Footer?",
+        "How to Change the Font Size of Content?",
+        "How to Change Font Size of Widget Title?",
+        "How to Change Font Size of Post/Page Title?",
+        "How to Change Font Size of Header Content?",
+        "How to Change Font Family on the site?"
+      ]
+    },
+    {
+      "section": "how-to",
+      "label": "How to?",
+      "parent": null,
+      "file": "docs/how-to.md",
+      "articles": 5,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 17,
+      "titles": [
+        "Edit Imported Demo Site",
+        "Recommended Image Size",
+        "How to create a Contact Us Page?",
+        "How to Setup Blog Page?",
+        "How to Setup Business Template?"
+      ]
+    },
+    {
+      "section": "color",
+      "label": "Color",
+      "parent": "Customization",
+      "file": "docs/color.md",
+      "articles": 5,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "How to Change the Color of the Footer Area?",
+        "Content Part Color overview",
+        "Header Bar Color Overview",
+        "Slider Color Overview",
+        "Header Area Color Overview"
+      ]
+    },
+    {
+      "section": "getting-started",
+      "label": "Getting Started",
+      "parent": null,
+      "file": "docs/getting-started.md",
+      "articles": 4,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 2,
+      "titles": [
+        "Import Spacious Demo",
+        "Upgrading from Spacious to Spacious Pro",
+        "Install Spacious Pro Theme",
+        "Install Spacious Theme"
+      ]
+    },
+    {
+      "section": "woocommerce",
+      "label": "WooCommerce",
+      "parent": "Customization",
+      "file": "docs/woocommerce.md",
+      "articles": 3,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "How to Display the WooCommerce Cart Icon in Menu bar?",
+        "How to Select Product Page Layout?",
+        "How to Select Archive Page Layout ?"
+      ]
+    },
+    {
+      "section": "demos",
+      "label": "Demos",
+      "parent": null,
+      "file": "docs/demos.md",
+      "articles": 2,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 3,
+      "titles": [
+        "How to Change the Content of Demos?",
+        "How to Get Starter Sites With Spacious Demos?"
+      ]
+    },
+    {
+      "section": "layout",
+      "label": "Layout",
+      "parent": "Customization",
+      "file": "docs/layout.md",
+      "articles": 1,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "How to Make Sidebar Sticky?"
+      ]
+    },
+    {
+      "section": "uncategorised",
+      "label": "uncategorised",
+      "parent": null,
+      "file": "docs/uncategorised.md",
+      "articles": 1,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "Preview Customization Overview"
+      ]
+    },
+    {
+      "section": "social-icons",
+      "label": "Social Icons",
+      "parent": "Customization",
+      "file": "docs/social-icons.md",
+      "articles": 1,
+      "failed": 0,
+      "thin": [],
+      "outcomes": 0,
+      "titles": [
+        "Display Social Icons in Header Top Bar"
+      ]
+    }
+  ],
+  "suggested_areas": [
+    "content",
+    "header",
+    "slider",
+    "faqs",
+    "footer",
+    "global",
+    "typography",
+    "how-to",
+    "color",
+    "getting-started",
+    "woocommerce",
+    "demos",
+    "layout",
+    "uncategorised",
+    "social-icons"
+  ]
+}

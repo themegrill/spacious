@@ -1,4 +1,5 @@
 {
+  "packageManager": "pnpm@11.24.0",
   "name": "spacious",
   "title": "Spacious",
   "version": "1.9.12",
@@ -10,8 +11,11 @@
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.14.0",
     "autoprefixer": "^7.1.6",
     "browser-sync": "~2.26.3",
+    "dotenv": "^16.4.5",
     "grunt": "^0.4.5",
     "grunt-cli": "^1.4.3",
     "grunt-checktextdomain": "~1.0.0",
@@ -24,7 +28,8 @@
     "gulp-rtlcss": "^1.4.1",
     "gulp-sass": "^5.1.0",
     "gulp-watch": "^4.3.11",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=20",
@@ -34,7 +39,12 @@
     "styles": "gulp sassCompile && gulp elementorStylesCompile",
     "makepot": "grunt makepot",
     "compress": "grunt compress",
-    "build": "npm run styles && npm run makepot && npm run compress"
+    "build": "npm run styles && npm run makepot && npm run compress",
+    "test:e2e": "playwright test --config=tests/e2e/playwright.config.ts",
+    "test:e2e:fresh": "playwright test --config=tests/e2e/playwright.config.ts --grep @fresh",
+    "test:e2e:ui": "playwright test --config=tests/e2e/playwright.config.ts --ui",
+    "test:e2e:report": "playwright show-report tests/e2e/playwright-report",
+    "test:e2e:pr": "playwright test --config=tests/e2e/playwright.config.ts --grep @fresh"
   },
   "dependencies": {
     "autoprefixer": "^8.0.0",

@@ -1,0 +1,105 @@
+{
+  "runner": "playwright",
+  "package_manager": "pnpm",
+  "install": "pnpm install --frozen-lockfile",
+  "command": "pnpm exec playwright test --config=tests/e2e/playwright.config.ts",
+  "config": "tests/e2e/playwright.config.ts",
+  "spec_dir": "tests/e2e/specs",
+  "spec_extension": ".spec.ts",
+  "json_report": "test-results/results.json",
+  "env": {
+    "base_url": "SPACIOUS_BASE_URL",
+    "admin_user": "SPACIOUS_ADMIN_USER",
+    "admin_pass": "SPACIOUS_ADMIN_PASS"
+  },
+  "tiers": {
+    "fresh": "@fresh",
+    "demo": "@demo"
+  },
+  "area_paths": {
+    "activation": [
+      "functions.php",
+      "style.css",
+      "index.php",
+      "inc/functions.php",
+      "inc/enqueue-scripts.php",
+      "header.php",
+      "footer.php",
+      "404.php",
+      "search.php",
+      "archive.php",
+      "single.php",
+      "page.php",
+      "no-results.php"
+    ],
+    "global": [
+      "inc/customizer/options/global/**",
+      "inc/class-spacious-dynamic-css.php",
+      "inc/functions.php",
+      "assets/scss/_theme-style.scss"
+    ],
+    "header": [
+      "inc/customizer/options/header/**",
+      "inc/header-functions.php",
+      "header.php",
+      "navigation.php",
+      "assets/scss/_header.scss"
+    ],
+    "footer": [
+      "inc/customizer/options/footer/**",
+      "footer.php",
+      "sidebar-footer.php",
+      "assets/scss/_footer.scss"
+    ],
+    "content": [
+      "inc/customizer/options/content/**",
+      "content.php",
+      "content-*.php",
+      "sidebar.php",
+      "sidebar-left.php",
+      "single.php",
+      "inc/related-posts.php",
+      "inc/functions.php"
+    ],
+    "slider": ["inc/customizer/options/slider/**"],
+    "front-page": [
+      "inc/customizer/options/slider/**",
+      "inc/header-functions.php",
+      "header.php"
+    ],
+    "social": ["inc/customizer/options/social/**"],
+    "woocommerce": [
+      "inc/customizer/options/woocommerce/**",
+      "inc/header-functions.php",
+      "inc/functions.php"
+    ],
+    "widgets": ["inc/widgets/**"],
+    "elementor": ["inc/elementor/**"],
+    "demo-import": ["inc/demo-import-migration.php"],
+    "upgrade": ["inc/migration.php"],
+    "customizer-core": [
+      "inc/customizer/core/**",
+      "inc/customizer/class-spacious-customizer.php",
+      "inc/customizer/class-spacious-customizer-register-sections-panels.php",
+      "inc/customizer/class-spacious-customizer-partials.php",
+      "inc/customizer/class-spacious-upsell-section.php",
+      "inc/customizer/override-defaults.php",
+      "inc/customizer/extend-customizer/**"
+    ],
+    "roles": [
+      "inc/admin/class-spacious-dashboard.php",
+      "inc/admin/class-spacious-welcome-notice.php",
+      "inc/admin/class-spacious-notice.php",
+      "inc/admin/class-spacious-upgrade-notice.php",
+      "inc/admin/class-spacious-theme-review-notice.php",
+      "inc/admin/class-spacious-tdi-notice.php",
+      "inc/admin/meta-boxes.php"
+    ],
+    "accessibility": [
+      "js/navigation.js",
+      "assets/scss/_header.scss",
+      "assets/scss/_responsive.scss"
+    ],
+    "rtl": ["style-rtl.css", "inc/enqueue-scripts.php"]
+  }
+}
