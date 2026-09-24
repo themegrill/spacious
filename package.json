@@ -10,7 +10,7 @@
   "license": "GPL-3.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "autoprefixer": "^7.1.6",
+    "autoprefixer": "^10.6.1",
     "browser-sync": "~2.26.3",
     "grunt": "^0.4.5",
     "grunt-cli": "^1.4.3",
@@ -19,9 +19,9 @@
     "grunt-contrib-jshint": "~1.0.0",
     "grunt-wp-i18n": "~1.0.3",
     "gulp-line-ending-corrector": "^1.0.3",
-    "gulp-postcss": "^7.0.0",
+    "gulp-postcss": "^10.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-rtlcss": "^1.4.1",
+    "gulp-rtlcss": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-watch": "^4.3.11",
     "node-sass": "^9.0.0"
@@ -37,7 +37,7 @@
     "build": "npm run styles && npm run makepot && npm run compress"
   },
   "dependencies": {
-    "autoprefixer": "^8.0.0",
+    "autoprefixer": "^10.6.1",
     "browser-sync": "~2.26.3",
     "gulp": "~4.0.0"
   }
