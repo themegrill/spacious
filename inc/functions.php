@@ -222,7 +222,7 @@ function spacious_body_class( $classes ) {
 		$classes[] = 'no-sidebar-content-stretched';
 	}
 
-	if ( get_theme_mod( 'spacious_new_menu', 0 ) == '1' ) {
+	if ( get_theme_mod( 'spacious_new_menu', '1' ) == '1' ) {
 		$classes[] = 'better-responsive-menu';
 	}
 
