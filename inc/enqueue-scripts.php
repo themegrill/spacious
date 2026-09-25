@@ -109,7 +109,7 @@ function spacious_scripts_styles_method() {
 	/**
 	 * Enqueue Slider setup js file.
 	 */
-	if ( is_home() || is_front_page() && get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
+	if ( ( is_home() || is_front_page() ) && get_theme_mod( 'spacious_activate_slider', '0' ) == '1' ) {
 		wp_enqueue_script( 'jquery-swipe' );
 		wp_enqueue_script( 'jquery_cycle' );
 	}
