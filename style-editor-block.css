@@ -20,10 +20,7 @@
 	max-width: 1268px;
 }
 
-.editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
-	font-weight: normal;
-	color: #222222;
-	font-family: 'Lato', sans-serif;
+.editor-styles-wrapper .editor-post-title__input {
 	font-size: 22px;
 	padding-bottom: 0;
 	line-height: 36px;
