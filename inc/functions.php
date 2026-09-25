@@ -17,9 +17,114 @@
  */
 function spacious_block_editor_styles() {
 	wp_enqueue_style( 'spacious-block-editor-styles', get_template_directory_uri() . '/style-editor-block.css' );
+
+	$editor_css = spacious_block_editor_dynamic_css();
+
+	if ( $editor_css ) {
+		wp_add_inline_style( 'spacious-block-editor-styles', $editor_css );
+	}
 }
 
 add_action( 'enqueue_block_editor_assets', 'spacious_block_editor_styles', 1, 1 );
+
+/**
+ * Load the theme fonts inside the block editor canvas.
+ *
+ * Lato is bundled with the theme, like on the front end; other Customizer fonts
+ * come from the same loader the front end uses.
+ */
+function spacious_block_editor_fonts() {
+	if ( ! is_admin() ) {
+		return;
+	}
+
+	$lato_faces = array(
+		'Thin'        => array( 100, 'normal' ),
+		'ThinItalic'  => array( 100, 'italic' ),
+		'Light'       => array( 300, 'normal' ),
+		'LightItalic' => array( 300, 'italic' ),
+		'Regular'     => array( 400, 'normal' ),
+		'Italic'      => array( 400, 'italic' ),
+		'Bold'        => array( 700, 'normal' ),
+		'BoldItalic'  => array( 700, 'italic' ),
+		'Black'       => array( 900, 'normal' ),
+		'BlackItalic' => array( 900, 'italic' ),
+	);
+	$lato_css   = '';
+
+	foreach ( $lato_faces as $file => $face ) {
+		$lato_css .= "@font-face{font-family:'Lato';font-style:" . $face[1] . ';font-weight:' . $face[0] . ';src:url(' . esc_url( get_template_directory_uri() . '/assets/fonts/Lato-' . $file . '.woff' ) . ") format('woff');}";
+	}
+
+	wp_register_style( 'spacious-editor-fonts', false, array(), SPACIOUS_THEME_VERSION );
+	wp_enqueue_style( 'spacious-editor-fonts' );
+	wp_add_inline_style( 'spacious-editor-fonts', $lato_css );
+
+	Spacious_Generate_Fonts::render_fonts();
+}
+
+add_action( 'enqueue_block_assets', 'spacious_block_editor_fonts' );
+
+if ( ! function_exists( 'spacious_block_editor_dynamic_css' ) ) :
+
+	/**
+	 * Build block editor CSS from the Customizer typography and color settings.
+	 *
+	 * Mirrors the post content rules of Spacious_Dynamic_CSS::render_output(), scoped to
+	 * the editor canvas. Like the front end, a setting outputs nothing while it is at its default.
+	 *
+	 * @return string Editor CSS.
+	 */
+	function spacious_block_editor_dynamic_css() {
+		$wrapper = '.editor-styles-wrapper';
+		$css     = '';
+
+		// The Dark skin stylesheet is front-end only, so its colors would be overridden here.
+		if ( 'dark' !== get_theme_mod( 'spacious_color_skin', 'light' ) ) {
+			$primary_color = get_theme_mod( 'spacious_primary_color', '#0FBE7C' );
+			$primary_dark  = spacious_darkcolor( $primary_color, -50 );
+
+			$css .= spacious_parse_css(
+				'#0FBE7C',
+				$primary_color,
+				array(
+					$wrapper . ' a, ' . $wrapper . ' .wp-block-file .wp-block-file__textlink' => array(
+						'color' => esc_html( $primary_color ),
+					),
+					$wrapper . ' input[type="reset"], ' . $wrapper . ' input[type="button"], ' . $wrapper . ' input[type="submit"]' => array(
+						'background-color' => esc_html( $primary_color ),
+					),
+					$wrapper . ' blockquote:not(.wp-block-quote)' => array(
+						'border-left-color' => esc_html( $primary_color ),
+					),
+					$wrapper . ' input[type="reset"]:hover, ' . $wrapper . ' input[type="button"]:hover, ' . $wrapper . ' input[type="submit"]:hover' => array(
+						'background' => esc_html( $primary_dark ),
+					),
+				)
+			);
+		}
+
+		$font_default = array(
+			'font-family' => 'Lato',
+			'font-weight' => 'regular',
+		);
+
+		$css .= spacious_parse_typography_css(
+			$font_default,
+			get_theme_mod( 'spacious_content_font_typography', $font_default ),
+			$wrapper . ', ' . $wrapper . ' > *, ' . $wrapper . ' p'
+		);
+
+		$css .= spacious_parse_typography_css(
+			$font_default,
+			get_theme_mod( 'spacious_titles_font_typography', $font_default ),
+			$wrapper . ' h1, ' . $wrapper . ' h2, ' . $wrapper . ' h3, ' . $wrapper . ' h4, ' . $wrapper . ' h5, ' . $wrapper . ' h6'
+		);
+
+		return $css;
+	}
+
+endif;
 
 /*
  * Display the related posts.
