@@ -1,5 +1,5 @@
 {
-  "packageManager": "pnpm@11.24.0",
+  "packageManager": "pnpm@9.15.9",
   "name": "spacious",
   "title": "Spacious",
   "version": "1.9.12",
