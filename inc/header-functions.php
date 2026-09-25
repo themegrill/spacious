@@ -81,22 +81,7 @@ if ( ! function_exists( 'spacious_cart_icon' ) ) :
 		if ( ( get_theme_mod( 'spacious_cart_icon', 0 ) == 1 ) && class_exists( 'woocommerce' ) ) :
 			?>
 			<div class="cart-wrapper">
-				<div class="spacious-woocommerce-cart-views">
-
-					<!-- Show cart icon with total cart item -->
-					<?php $cart_url = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : WC()->cart->get_cart_url(); ?>
-
-					<a href="<?php echo esc_url( $cart_url ); ?>" class="wcmenucart-contents">
-						<i class="fa fa-shopping-cart"></i>
-						<span class="cart-value"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></span>
-					</a>
-
-					<!-- Show total cart price -->
-					<div class="spacious-woocommerce-cart-wrap">
-						<div class="spacious-woocommerce-cart"><?php esc_html_e( 'Total', 'spacious' ); ?></div>
-						<div class="cart-total"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></div>
-					</div>
-				</div>
+				<?php spacious_cart_icon_views(); ?>
 
 				<!-- WooCommerce Cart Widget -->
 				<?php the_widget( 'WC_Widget_Cart', '' ); ?>
@@ -104,6 +89,65 @@ if ( ! function_exists( 'spacious_cart_icon' ) ) :
 			</div> <!-- /.cart-wrapper -->
 		<?php
 		endif;
+	}
+
+	// Registered with the default renderer, so a child theme overriding spacious_cart_icon() keeps its own markup.
+	add_filter( 'woocommerce_add_to_cart_fragments', 'spacious_cart_icon_fragment' );
+
+endif;
+
+if ( ! function_exists( 'spacious_cart_icon_views' ) ) :
+
+	/**
+	 * Output the header cart icon, item count and total.
+	 *
+	 * Shared by the initial render and the WooCommerce cart fragment so both stay identical.
+	 */
+	function spacious_cart_icon_views() {
+		$cart_url = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : WC()->cart->get_cart_url();
+		?>
+		<div class="spacious-woocommerce-cart-views">
+
+			<!-- Show cart icon with total cart item -->
+
+			<a href="<?php echo esc_url( $cart_url ); ?>" class="wcmenucart-contents">
+				<i class="fa fa-shopping-cart"></i>
+				<span class="cart-value"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></span>
+			</a>
+
+			<!-- Show total cart price -->
+			<div class="spacious-woocommerce-cart-wrap">
+				<div class="spacious-woocommerce-cart"><?php esc_html_e( 'Total', 'spacious' ); ?></div>
+				<div class="cart-total"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></div>
+			</div>
+		</div>
+		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_cart_icon_fragment' ) ) :
+
+	/**
+	 * Keep the header cart icon in sync when the cart changes via AJAX.
+	 *
+	 * Leaves alone a fragment that a plugin or child theme already supplies for the same selector.
+	 *
+	 * @param array $fragments Cart fragments, keyed by the CSS selector they replace.
+	 * @return array Cart fragments including the header cart icon.
+	 */
+	function spacious_cart_icon_fragment( $fragments ) {
+		$selector = 'div.spacious-woocommerce-cart-views';
+
+		if ( 1 !== (int) get_theme_mod( 'spacious_cart_icon', 0 ) || ! isset( WC()->cart ) || isset( $fragments[ $selector ] ) ) {
+			return $fragments;
+		}
+
+		ob_start();
+		spacious_cart_icon_views();
+		$fragments[ $selector ] = ob_get_clean();
+
+		return $fragments;
 	}
 
 endif;
