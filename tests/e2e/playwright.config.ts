@@ -55,6 +55,10 @@ export default defineConfig({
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    // A local DDEV site serves over HTTPS with a self-signed cert — without
+    // this, every navigation on `local` fails at the certificate check
+    // before a single spec's own logic runs.
+    ignoreHTTPSErrors: true,
   },
 
   projects: [

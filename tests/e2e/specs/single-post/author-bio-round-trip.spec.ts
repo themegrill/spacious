@@ -107,6 +107,11 @@ test('Content > Single Post > Author Bio shows/hides .author-box based on the co
     await expect(authorBox, '.author-box should render once spacious_author_bio is on and the author has a bio').toBeVisible();
     await expect(authorBox.locator('.author-description')).toContainText(TEST_BIO);
 
+    // setControl() drives window.wp.customize() in the CURRENT page — the
+    // goto() above navigated away from the Customizer entirely, so it must
+    // be reopened before the next setControl() call has anything to act on.
+    await customizer.open({ control: CONTROL_ID });
+
     // ---- control OFF: .author-box gone even though the bio is still set ----
     await customizer.setControl(CONTROL_ID, false);
     await customizer.publish();
@@ -116,8 +121,13 @@ test('Content > Single Post > Author Bio shows/hides .author-box based on the co
       '.author-box should not render once spacious_author_bio is off, regardless of the author bio',
     ).toHaveCount(0);
   } finally {
+    // Published, not just set: on Playground the fixture's own MySQL-based
+    // restore (customizer.ts / theme-mods-snapshot.ts) is a no-op, so this
+    // publish is what actually reverts the live, persisted value there.
     try {
+      await customizer.open({ control: CONTROL_ID });
       await customizer.setControl(CONTROL_ID, originalControlValue);
+      await customizer.publish();
     } catch (revertError) {
       console.warn(`Revert of ${CONTROL_ID} did not complete cleanly:`, revertError);
     }

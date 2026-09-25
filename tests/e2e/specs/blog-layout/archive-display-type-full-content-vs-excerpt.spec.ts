@@ -119,6 +119,11 @@ test('Content > Blog Posts display type swaps excerpt for full content on the fr
       'Expected the 40-word excerpt to truncate before the tail marker with spacious_archive_display_type=blog_large',
     ).not.toContain(TAIL_MARKER);
 
+    // setControl() drives window.wp.customize() in the CURRENT page — the
+    // goto() above navigated away from the Customizer entirely, so it must
+    // be reopened before the next setControl() call has anything to act on.
+    await customizer.open({ control: CONTROL_ID });
+
     // ---- blog_full_content: the_content(), tail marker present ----
     await customizer.setControl(CONTROL_ID, 'blog_full_content');
     await customizer.publish();
@@ -129,8 +134,13 @@ test('Content > Blog Posts display type swaps excerpt for full content on the fr
       'Expected the full post content (including the tail marker) with spacious_archive_display_type=blog_full_content',
     ).toContain(TAIL_MARKER);
   } finally {
+    // Published, not just set: on Playground the fixture's own MySQL-based
+    // restore (customizer.ts / theme-mods-snapshot.ts) is a no-op, so this
+    // publish is what actually reverts the live, persisted value there.
     try {
+      await customizer.open({ control: CONTROL_ID });
       await customizer.setControl(CONTROL_ID, originalValue);
+      await customizer.publish();
     } catch (revertError) {
       console.warn(`Revert of ${CONTROL_ID} did not complete cleanly:`, revertError);
     }

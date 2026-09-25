@@ -50,6 +50,15 @@ const NARROW_VIEWPORT = { width: 390, height: 844 };
  * NOT verified live — no live session has exercised a mobile viewport against
  * a real Spacious site yet. Written from js/navigation.js and style.css read
  * in full, not from an observed click.
+ *
+ * With `spacious_new_menu` on by default (this repo's own #135 fix), `<body>`
+ * carries `better-responsive-menu`, under which `js/spacious-custom.js`
+ * appends a `.sub-toggle` caret to every `.menu-item-has-children` and keeps
+ * `.sub-menu` collapsed (`display:none`, same breakpoint as the main toggle)
+ * until that caret — not the main nav toggle — is clicked
+ * (`.sub-toggle` click handler calls `.sub-menu.slideToggle()`). So opening
+ * the main toggle alone is not enough to reveal the child link; the submenu's
+ * own toggle must be opened first.
  */
 test('mobile menu toggle opens and closes the primary nav @fresh @accessibility', async ({ page, content }) => {
   const menu = await content.aMenuWithDropdown();
@@ -62,6 +71,8 @@ test('mobile menu toggle opens and closes the primary nav @fresh @accessibility'
   // The child link's own text is unambiguous evidence of the seeded menu,
   // rather than asserting against the whole <ul>'s bounding box.
   const childLink = nav.getByRole('link', { name: menu.childLabel, exact: true });
+  const parentItem = nav.locator('.menu-item-has-children', { hasText: menu.parentLabel }).first();
+  const subToggle = parentItem.locator('.sub-toggle').first();
 
   // Closed by default: main-navigation, menu hidden under the 768px breakpoint.
   await expect(nav).toHaveClass(/(^|\s)main-navigation(\s|$)/);
@@ -70,9 +81,14 @@ test('mobile menu toggle opens and closes the primary nav @fresh @accessibility'
 
   await toggle.click();
 
-  // Open: navigation.js's onclick replaced the class, exposing the menu.
+  // Open: navigation.js's onclick replaced the class, exposing the top-level menu.
   await expect(nav).toHaveClass(/main-small-navigation/);
   await expect(nav).not.toHaveClass(/(^|\s)main-navigation(\s|$)/);
+
+  // The submenu itself stays collapsed behind its own caret toggle — opening
+  // the main nav is not sufficient on its own.
+  await expect(subToggle).toBeVisible();
+  await subToggle.click();
   await expect(childLink).toBeVisible();
 
   await toggle.click();

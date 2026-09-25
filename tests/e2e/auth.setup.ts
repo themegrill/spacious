@@ -32,8 +32,19 @@ setup('authenticate', async ({ browser }) => {
 
   try {
     await page.goto('/wp-login.php');
-    await page.locator('#user_login').fill(user);
-    await page.locator('#user_pass').fill(password);
+    // A cold Playground boot can serve wp-login.php before it has fully
+    // hydrated — filling a field that's about to be replaced silently loses
+    // the value with no error, which is exactly what an empty-password
+    // "Please fill out this field" native-validation failure looks like.
+    // Waiting for both fields to be attached AND stable first is cheap
+    // insurance against that race.
+    const loginField = page.locator('#user_login');
+    const passField = page.locator('#user_pass');
+    await loginField.waitFor({ state: 'visible' });
+    await passField.waitFor({ state: 'visible' });
+    await loginField.fill(user);
+    await passField.fill(password);
+    await expect(passField).toHaveValue(password);
     await page.locator('#wp-submit').click();
 
     // The admin bar only renders once the login round-trip actually completed,
