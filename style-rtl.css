@@ -607,6 +607,10 @@ button {
 	font-size: 16px;
 }
 
+.wp-block-search__button {
+	margin-bottom: 0;
+}
+
 .spacious-button:hover {
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
