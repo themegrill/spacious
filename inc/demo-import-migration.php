@@ -16,6 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Display the admin notice for demo import customize migration.
  */
 function spacious_demo_import_migration_notice() {
+	if ( ! current_user_can( 'edit_theme_options' ) ) {
+		return;
+	}
+
 	$demo_imported  = get_option( 'themegrill_demo_importer_activated_id' );
 	$notice_dismiss = get_option( 'spacious_demo_import_migration_notice_dismiss' );
 
@@ -60,6 +64,10 @@ add_action( 'admin_notices', 'spacious_demo_import_migration_notice' );
  */
 function spacious_demo_import_migration_notice_dismiss() {
 	if ( isset( $_GET['demo-import-migration-notice-dismiss'] ) && isset( $_GET['_demo_import_migration_notice_dismiss_nonce'] ) ) {
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			wp_die( __( 'You do not have permission to perform this action.', 'spacious' ) );
+		}
+
 		if ( ! wp_verify_nonce( $_GET['_demo_import_migration_notice_dismiss_nonce'], 'demo_import_migration_notice_dismiss' ) ) {
 			wp_die( __( 'Action failed. Please refresh the page and retry.', 'spacious' ) );
 		}
@@ -78,6 +86,10 @@ add_action( 'admin_init', 'spacious_demo_import_migration_notice_dismiss' );
  */
 function spacious_demo_import_migration() {
 	if ( isset( $_GET['demo-import-migration'] ) && isset( $_GET['_demo_import_migration_nonce'] ) ) {
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			wp_die( __( 'You do not have permission to perform this action.', 'spacious' ) );
+		}
+
 		if ( ! wp_verify_nonce( $_GET['_demo_import_migration_nonce'], 'demo_import_migration' ) ) {
 			wp_die( __( 'Action failed. Please refresh the page and retry.', 'spacious' ) );
 		}
