@@ -193,7 +193,7 @@ class Spacious_Theme_Review_Notice {
 	 */
 	public function review_notice_data_remove() {
 
-		$get_all_users        = get_users();
+		$user_ids             = get_users( array( 'fields' => 'ID' ) );
 		$theme_installed_time = get_option( 'spacious_theme_installed_time' );
 
 		// Delete options data.
@@ -201,19 +201,23 @@ class Spacious_Theme_Review_Notice {
 			delete_option( 'spacious_theme_installed_time' );
 		}
 
+		// Fetching IDs only skips core's own cache_users() priming, so prime
+		// it ourselves - one query for every user's meta instead of two per user.
+		update_meta_cache( 'user', $user_ids );
+
 		// Delete user meta data for theme review notice.
-		foreach ( $get_all_users as $user ) {
-			$ignored_notice           = get_user_meta( $user->ID, 'spacious_ignore_theme_review_notice', true );
-			$ignored_notice_partially = get_user_meta( $user->ID, 'nag_spacious_ignore_theme_review_notice_partially', true );
+		foreach ( $user_ids as $user_id ) {
+			$ignored_notice           = get_user_meta( $user_id, 'spacious_ignore_theme_review_notice', true );
+			$ignored_notice_partially = get_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially', true );
 
 			// Delete permanent notice remove data.
 			if ( $ignored_notice ) {
-				delete_user_meta( $user->ID, 'spacious_ignore_theme_review_notice' );
+				delete_user_meta( $user_id, 'spacious_ignore_theme_review_notice' );
 			}
 
 			// Delete partial notice remove data.
 			if ( $ignored_notice_partially ) {
-				delete_user_meta( $user->ID, 'nag_spacious_ignore_theme_review_notice_partially' );
+				delete_user_meta( $user_id, 'nag_spacious_ignore_theme_review_notice_partially' );
 			}
 		}
 	}
