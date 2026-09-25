@@ -71,6 +71,9 @@
 ( function () {
 	var container;
 	container = document.getElementById( 'site-navigation' );
+	if ( ! container ) {
+		return;
+	}
 
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
@@ -180,7 +183,7 @@
 			}
 
 			// Return if no excess menu items.
-			if ( ! navigation.classList.contains( 'tg-extra-menus' ) ) {
+			if ( ! navigation || ! navigation.classList.contains( 'tg-extra-menus' ) ) {
 				return;
 			}
 
