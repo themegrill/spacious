@@ -65,14 +65,14 @@ class Spacious_Elementor_Addons {
 	 */
 	public function spacious_elementor_styles() {
 		// Enqueue the main Elementor CSS file for use with Elementor.
-		wp_enqueue_style( 'spacious-elementor', get_template_directory_uri() . '/inc/elementor/assets/css/elementor.css' );
+		wp_enqueue_style( 'spacious-elementor', get_template_directory_uri() . '/inc/elementor/assets/css/elementor.css', array(), SPACIOUS_THEME_VERSION );
 	}
 
 	/**
 	 * Enqueue scripts for Elementor frontends
 	 */
 	public function spacious_elementor_enqueue_scripts() {
-		wp_enqueue_script( 'elementor-custom', SPACIOUS_JS_URL . '/elementor-custom.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'elementor-custom', SPACIOUS_JS_URL . '/elementor-custom.js', array( 'jquery' ), SPACIOUS_THEME_VERSION, true );
 	}
 
 	/**
@@ -80,7 +80,7 @@ class Spacious_Elementor_Addons {
 	 */
 	public function spacious_elementor_register_scripts() {
 		wp_register_script( 'jquery-waypoints', SPACIOUS_JS_URL . '/waypoints' . $this->suffix . '.js', array( 'jquery' ), '2.0.3', true );
-		wp_register_script( 'jquery-countTo', SPACIOUS_JS_URL . '/jquery.countTo' . $this->suffix . '.js', array( 'jquery' ), false, true );
+		wp_register_script( 'jquery-countTo', SPACIOUS_JS_URL . '/jquery.countTo' . $this->suffix . '.js', array( 'jquery' ), SPACIOUS_THEME_VERSION, true );
 	}
 
 }

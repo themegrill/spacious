@@ -63,11 +63,11 @@ function spacious_scripts_styles_method() {
 	/**
 	 * Loads our main stylesheet.
 	 */
-	wp_enqueue_style( 'spacious_style', get_stylesheet_uri() );
+	wp_enqueue_style( 'spacious_style', get_stylesheet_uri(), array(), SPACIOUS_THEME_VERSION );
 	wp_style_add_data( 'spacious_style', 'rtl', 'replace' );
 
 	if ( get_theme_mod( 'spacious_color_skin', 'light' ) == 'dark' ) {
-		wp_enqueue_style( 'spacious_dark_style', SPACIOUS_CSS_URL . '/dark.css' );
+		wp_enqueue_style( 'spacious_dark_style', SPACIOUS_CSS_URL . '/dark.css', array(), SPACIOUS_THEME_VERSION );
 	}
 
 	// Add Genericons, used in the main stylesheet.
@@ -104,7 +104,7 @@ function spacious_scripts_styles_method() {
 	 * Register JQuery cycle2 js file for slider.
 	 */
 	wp_register_script( 'jquery_cycle', SPACIOUS_JS_URL . '/jquery.cycle2.min.js', array( 'jquery' ), '2.1.6', true );
-	wp_register_script( 'jquery-swipe', SPACIOUS_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), false, true );
+	wp_register_script( 'jquery-swipe', SPACIOUS_JS_URL . '/jquery.cycle2.swipe.min.js', array( 'jquery' ), SPACIOUS_THEME_VERSION, true );
 
 	/**
 	 * Enqueue Slider setup js file.
@@ -114,12 +114,12 @@ function spacious_scripts_styles_method() {
 		wp_enqueue_script( 'jquery_cycle' );
 	}
 
-	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'spacious-navigation', SPACIOUS_JS_URL . '/navigation.js', array( 'jquery' ), SPACIOUS_THEME_VERSION, true );
 
 	// Skip link focus fix JS enqueue.
-	wp_enqueue_script( 'spacious-skip-link-focus-fix', SPACIOUS_JS_URL . '/skip-link-focus-fix.js', array(), false, true );
+	wp_enqueue_script( 'spacious-skip-link-focus-fix', SPACIOUS_JS_URL . '/skip-link-focus-fix.js', array(), SPACIOUS_THEME_VERSION, true );
 
-	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
+	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ), SPACIOUS_THEME_VERSION );
 
 	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
 	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
