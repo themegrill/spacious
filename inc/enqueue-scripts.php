@@ -63,7 +63,8 @@ function spacious_scripts_styles_method() {
 	/**
 	 * Loads our main stylesheet.
 	 */
-	wp_enqueue_style( 'spacious_style', get_stylesheet_uri(), array(), SPACIOUS_THEME_VERSION );
+	// A child theme's own style.css keeps WordPress' default version; only Spacious' stylesheet uses the theme version.
+	wp_enqueue_style( 'spacious_style', get_stylesheet_uri(), array(), is_child_theme() ? false : SPACIOUS_THEME_VERSION );
 	wp_style_add_data( 'spacious_style', 'rtl', 'replace' );
 
 	if ( get_theme_mod( 'spacious_color_skin', 'light' ) == 'dark' ) {
