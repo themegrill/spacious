@@ -11,9 +11,9 @@ jobs:
     uses: themegrill/.github/.github/workflows/pr-build-zip.yml@master
     with:
       node-version: '20.x'
-      package-manager: npm
+      package-manager: pnpm
       composer-install: false
-      build-command: npm run build
+      build-command: pnpm run build
       zip-glob: 'dist/spacious.zip'
       artifacts-bucket: themegrill-pr-artifacts
       public-base-url: https://themegrill-pr-artifacts.s3.amazonaws.com
