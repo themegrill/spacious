@@ -121,8 +121,8 @@ function spacious_scripts_styles_method() {
 
 	wp_enqueue_script( 'spacious-custom', SPACIOUS_JS_URL . '/spacious-custom.js', array( 'jquery' ) );
 
-	wp_enqueue_script( 'html5', SPACIOUS_JS_URL . '/html5shiv.min.js', true );
-	wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
+	// Empty handle kept so scripts that list 'html5' as a dependency still load.
+	wp_register_script( 'html5', false, array(), SPACIOUS_THEME_VERSION, false );
 }
 
 add_action( 'wp_enqueue_scripts', 'spacious_scripts_styles_method' );
