@@ -120,6 +120,11 @@ test('Content > Single Post > Related Posts shows/hides "You May Also Like" base
     ).toBeVisible();
     await expect(page.locator('.related-posts')).toContainText(other.title.rendered);
 
+    // setControl() drives window.wp.customize() in the CURRENT page — the
+    // goto() above navigated away from the Customizer entirely, so it must
+    // be reopened before the next setControl() call has anything to act on.
+    await customizer.open({ control: CONTROL_ID });
+
     // ---- control OFF: neither renders ----
     await customizer.setControl(CONTROL_ID, false);
     await customizer.publish();
@@ -129,8 +134,13 @@ test('Content > Single Post > Related Posts shows/hides "You May Also Like" base
       'Related Posts heading should not render once spacious_related_posts_activate is off',
     ).toHaveCount(0);
   } finally {
+    // Published, not just set: on Playground the fixture's own MySQL-based
+    // restore (customizer.ts / theme-mods-snapshot.ts) is a no-op, so this
+    // publish is what actually reverts the live, persisted value there.
     try {
+      await customizer.open({ control: CONTROL_ID });
       await customizer.setControl(CONTROL_ID, originalControlValue);
+      await customizer.publish();
     } catch (revertError) {
       console.warn(`Revert of ${CONTROL_ID} did not complete cleanly:`, revertError);
     }
