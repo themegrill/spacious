@@ -20,10 +20,7 @@
 	max-width: 1268px;
 }
 
-.editor-styles-wrapper .wp-block.editor-post-title__block .editor-post-title__input {
-	font-weight: normal;
-	color: #222222;
-	font-family: 'Lato', sans-serif;
+.editor-styles-wrapper .editor-post-title__input {
 	font-size: 22px;
 	padding-bottom: 0;
 	line-height: 36px;
@@ -42,32 +39,32 @@
 	font-family: 'Lato', sans-serif;
 }
 
-.editor-styles-wrapper .wp-block h1 {
+.editor-styles-wrapper h1 {
 	font-size: 30px;
 	line-height: 36px;
 }
 
-.editor-styles-wrapper .wp-block h2 {
+.editor-styles-wrapper h2 {
 	font-size: 28px;
 	line-height: 34px;
 }
 
-.editor-styles-wrapper .wp-block h3 {
+.editor-styles-wrapper h3 {
 	font-size: 26px;
+	line-height: 32px;
+}
+
+.editor-styles-wrapper h4 {
+	font-size: 24px;
 	line-height: 30px;
 }
 
-.editor-styles-wrapper .wp-block h4 {
-	font-size: 24px;
+.editor-styles-wrapper h5 {
+	font-size: 22px;
 	line-height: 28px;
 }
 
-.editor-styles-wrapper .wp-block h5 {
-	font-size: 22px;
-	line-height: 26px;
-}
-
-.editor-styles-wrapper .wp-block h6 {
+.editor-styles-wrapper h6 {
 	font-size: 19px;
 	line-height: 25px;
 }
