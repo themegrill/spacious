@@ -1,6 +1,6 @@
 import { execFile } from 'child_process';
 import { promisify } from 'util';
-import { baseUrl, hasMysql, targetEnv } from './env';
+import { adminCredentials, baseUrl, hasMysql, targetEnv } from './env';
 import {
   connectionArgs,
   readDbConfig,
@@ -60,6 +60,11 @@ export default async function globalSetup() {
  * fixture, and Spacious shares the same Customizer changeset mechanics
  * (core WordPress, not theme-specific), so the same precaution applies here.
  *
+ * Scoped to the suite's own admin user (via `post_author`) — this can run
+ * against a shared `local` site, and an unscoped trash would discard any
+ * *other* administrator's unpublished Customizer work along with this
+ * suite's own leftovers.
+ *
  * `customize_changeset` is not a REST-exposed post type, so this shells out to
  * a `mysql` client directly, configured via WP_DB_* env vars. Trashes rather
  * than deletes, matching how WP's own UI handles removal.
@@ -69,10 +74,13 @@ export default async function globalSetup() {
  */
 async function clearStaleChangesets(): Promise<void> {
   const config = readDbConfig();
+  const { user: adminUser } = adminCredentials();
+  const escapedUser = adminUser.replace(/'/g, "''");
 
   const sql =
     `UPDATE ${config.tablePrefix}posts SET post_status='trash' ` +
-    `WHERE post_type='customize_changeset' AND post_status='auto-draft';`;
+    `WHERE post_type='customize_changeset' AND post_status='auto-draft' ` +
+    `AND post_author = (SELECT ID FROM ${config.tablePrefix}users WHERE user_login='${escapedUser}');`;
 
   const args = [...connectionArgs(config), '-u', config.user];
   if (config.password) args.push(`-p${config.password}`);

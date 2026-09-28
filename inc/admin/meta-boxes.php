@@ -98,7 +98,7 @@ function spacious_save_custom_meta( $post_id ) {
 		return;
 	}
 
-	if ( 'page' == $_POST['post_type'] ) {
+	if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
 		if ( ! current_user_can( 'edit_page', $post_id ) ) {
 			return $post_id;
 		}
@@ -106,10 +106,22 @@ function spacious_save_custom_meta( $post_id ) {
 		return $post_id;
 	}
 
+	$allowed_values = wp_list_pluck( $page_layout, 'value' );
+
 	foreach ( $page_layout as $field ) {
+		if ( ! isset( $_POST[ $field['id'] ] ) ) {
+			continue;
+		}
+
+		$new = $_POST[ $field['id'] ];
+
+		// Allow '' through (it clears the meta below); reject anything else not in the whitelist.
+		if ( '' !== $new && ! in_array( $new, $allowed_values, true ) ) {
+			continue;
+		}
+
 		//Execute this saving function
 		$old = get_post_meta( $post_id, $field['id'], true );
-		$new = $_POST[ $field['id'] ];
 		if ( $new && $new != $old ) {
 			update_post_meta( $post_id, $field['id'], $new );
 		} elseif ( '' == $new && $old ) {

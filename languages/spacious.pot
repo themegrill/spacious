@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or laterals.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Spacious 1.9.12\n"
+"Project-Id-Version: Spacious 1.10.0\n"
 "Report-Msgid-Bugs-To: themegrill@gmail.com\n"
-"POT-Creation-Date: 2026-09-18 11:47:31+00:00\n"
+"POT-Creation-Date: 2026-09-28 08:16:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:39 inc/functions.php:656
+#: content-page.php:39 inc/functions.php:761
 msgid "Edit"
 msgstr ""
 
@@ -187,7 +187,7 @@ msgstr ""
 
 #: functions.php:324 functions.php:329
 #: inc/customizer/class-spacious-customizer-partials.php:30
-#: inc/functions.php:662 inc/header-functions.php:166
+#: inc/functions.php:767 inc/header-functions.php:259
 #: inc/widgets/class-spacious-featured-single-page-widget.php:104
 #: inc/widgets/class-spacious-service-widget.php:48
 #: inc/widgets/class-spacious-service-widget.php:74
@@ -259,7 +259,7 @@ msgstr ""
 #: inc/admin/class-spacious-theme-review-notice.php:164
 #: inc/admin/class-spacious-theme-review-notice.php:182
 #: inc/admin/class-spacious-welcome-notice.php:82
-#: inc/demo-import-migration.php:64 inc/demo-import-migration.php:82
+#: inc/demo-import-migration.php:72 inc/demo-import-migration.php:94
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
@@ -388,6 +388,7 @@ msgid ""
 msgstr ""
 
 #: inc/admin/class-spacious-welcome-notice.php:110
+#: inc/demo-import-migration.php:68 inc/demo-import-migration.php:90
 msgid "You do not have permission to perform this action."
 msgstr ""
 
@@ -421,7 +422,7 @@ msgstr ""
 
 #: inc/customizer/class-spacious-customizer-partials.php:49
 #: inc/customizer/class-spacious-customizer-partials.php:56
-#: inc/header-functions.php:314 inc/header-functions.php:320
+#: inc/header-functions.php:407 inc/header-functions.php:413
 msgid "You are here: "
 msgstr ""
 
@@ -1350,156 +1351,156 @@ msgstr ""
 msgid "This layout will be reflected in woocommerce Product page."
 msgstr ""
 
-#: inc/demo-import-migration.php:29
+#: inc/demo-import-migration.php:33
 msgid ""
 "It looks like you have imported one of the demos recently. Please check "
 "your site, if fonts and background are not the same as in the demo. Please "
 "click the 'Fix Imported Demo' button below."
 msgstr ""
 
-#: inc/demo-import-migration.php:40
+#: inc/demo-import-migration.php:44
 msgid "Fix Imported Demo"
 msgstr ""
 
-#: inc/demo-import-migration.php:44
+#: inc/demo-import-migration.php:48
 msgid "Any confusion?"
 msgstr ""
 
-#: inc/functions.php:458
+#: inc/functions.php:563
 msgid "Post navigation"
 msgstr ""
 
-#: inc/functions.php:468
+#: inc/functions.php:573
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/functions.php:472
+#: inc/functions.php:577
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/functions.php:498
+#: inc/functions.php:603
 msgid "Pingback:"
 msgstr ""
 
-#: inc/functions.php:498
+#: inc/functions.php:603
 msgid "(Edit)"
 msgstr ""
 
-#: inc/functions.php:513
+#: inc/functions.php:618
 msgid "Post author"
 msgstr ""
 
-#: inc/functions.php:516
+#: inc/functions.php:621
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/functions.php:518
+#: inc/functions.php:623
 msgid "<a class=\"comment-permalink\" href=\"%1$s\">Permalink</a>"
 msgstr ""
 
-#: inc/functions.php:524
+#: inc/functions.php:629
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/functions.php:530
+#: inc/functions.php:635
 msgid "Reply"
 msgstr ""
 
-#: inc/functions.php:553
+#: inc/functions.php:658
 msgid "WordPress"
 msgstr ""
 
-#: inc/functions.php:557
+#: inc/functions.php:662
 msgid "Copyright &copy; %1$s %2$s."
 msgstr ""
 
-#: inc/functions.php:557
+#: inc/functions.php:662
 msgid "All rights reserved."
 msgstr ""
 
-#: inc/functions.php:557
+#: inc/functions.php:662
 msgid " Theme %1$s"
 msgstr ""
 
-#: inc/functions.php:557
+#: inc/functions.php:662
 msgid "by ThemeGrill. Powered by: %2$s."
 msgstr ""
 
-#: inc/functions.php:639 inc/related-posts.php:64
+#: inc/functions.php:744 inc/related-posts.php:64
 msgid ""
 "<span class=\"date\"><a href=\"%1$s\" title=\"%2$s\" "
 "rel=\"bookmark\">%3$s</a></span>"
 msgstr ""
 
-#: inc/functions.php:653
+#: inc/functions.php:758
 msgid "No Comments"
 msgstr ""
 
-#: inc/functions.php:653
+#: inc/functions.php:758
 msgid "1 Comment"
 msgstr ""
 
-#: inc/functions.php:653
+#: inc/functions.php:758
 msgid "% Comments"
 msgstr ""
 
-#: inc/functions.php:653
+#: inc/functions.php:758
 msgid "Comments Off"
 msgstr ""
 
-#: inc/header-functions.php:96
+#: inc/header-functions.php:121
 msgid "Total"
 msgstr ""
 
-#: inc/header-functions.php:244
+#: inc/header-functions.php:337
 msgid "Author: %s"
 msgstr ""
 
-#: inc/header-functions.php:252
+#: inc/header-functions.php:345
 msgid "Day: %s"
 msgstr ""
 
-#: inc/header-functions.php:255
+#: inc/header-functions.php:348
 msgid "Month: %s"
 msgstr ""
 
-#: inc/header-functions.php:258
+#: inc/header-functions.php:351
 msgid "Year: %s"
 msgstr ""
 
-#: inc/header-functions.php:261
+#: inc/header-functions.php:354
 msgid "Asides"
 msgstr ""
 
-#: inc/header-functions.php:264
+#: inc/header-functions.php:357
 msgid "Images"
 msgstr ""
 
-#: inc/header-functions.php:267
+#: inc/header-functions.php:360
 msgid "Videos"
 msgstr ""
 
-#: inc/header-functions.php:270
+#: inc/header-functions.php:363
 msgid "Quotes"
 msgstr ""
 
-#: inc/header-functions.php:273
+#: inc/header-functions.php:366
 msgid "Links"
 msgstr ""
 
-#: inc/header-functions.php:279 sidebar-left.php:29 sidebar.php:32
+#: inc/header-functions.php:372 sidebar-left.php:29 sidebar.php:32
 msgid "Archives"
 msgstr ""
 
-#: inc/header-functions.php:283
+#: inc/header-functions.php:376
 msgid "Page NOT Found"
 msgstr ""
 
-#: inc/header-functions.php:285
+#: inc/header-functions.php:378
 msgid "Search Results"
 msgstr ""
 
-#: inc/header-functions.php:341
+#: inc/header-functions.php:434
 msgid "Menu"
 msgstr ""
 
@@ -1728,12 +1729,12 @@ msgstr ""
 msgid "Page Builder Template"
 msgstr ""
 
-#: inc/functions.php:462 navigation.php:39
+#: inc/functions.php:567 navigation.php:39
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: inc/functions.php:463 navigation.php:40
+#: inc/functions.php:568 navigation.php:40
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""

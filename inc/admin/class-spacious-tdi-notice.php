@@ -71,14 +71,18 @@ class Spacious_TDI_Notice {
 	}
 
 	public function remove_tdi_notice() {
-		$get_all_users = get_users();
+		$user_ids = get_users( array( 'fields' => 'ID' ) );
 
-		foreach ( $get_all_users as $user ) {
-			$ignored_notice = get_user_meta( $user->ID, 'ignore_spacious_tdi_notice', true );
+		// Fetching IDs only skips core's own cache_users() priming, so prime
+		// it ourselves - one query for every user's meta instead of one per user.
+		update_meta_cache( 'user', $user_ids );
+
+		foreach ( $user_ids as $user_id ) {
+			$ignored_notice = get_user_meta( $user_id, 'ignore_spacious_tdi_notice', true );
 
 			// Delete permanent notice remove data.
 			if ( $ignored_notice ) {
-				delete_user_meta( $user->ID, 'ignore_spacious_tdi_notice' );
+				delete_user_meta( $user_id, 'ignore_spacious_tdi_notice' );
 			}
 		}
 	}

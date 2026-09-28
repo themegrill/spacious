@@ -49,6 +49,19 @@ and we will include it within the theme from next version update.
 /**********************************************************/
 
 == Changelog ==
+== Version 1.10.0 - 2026-09-28 ==
+* Dev - Missing capability check on demo-import migration trigger.
+* Dev - Unbounded get_users() full-table scan in theme-switch cleanup.
+* Dev - Meta box save routine reads $_POST without isset() checks or a value whitelist.
+* Dev - Deprecation notice on every page load from the IE 8 html5shiv script under WordPress 6.9+.
+* Dev - JavaScript errors from navigation.js on the Widgets screen and other pages without the theme header.
+* Fix - Submenu caret icon never flips direction when toggled.
+* Fix - Search block input renders taller than its Search button.
+* Fix - Slider scripts loaded on the homepage even when the slider setting was off.
+* Fix - Header cart count and total now update right after an AJAX add to cart, without a page reload.
+* Fix - Block editor typography (fonts, sizes, and colors) didn't reflect the Customizer's configured settings.
+* Fix - Block borders set in the editor now also show on the front end. Borders that were set but hidden will now appear.
+
 == Version 1.9.12- 2025-08-08 ==
 * Update - Settings for blocks.
 
@@ -90,7 +103,7 @@ and we will include it within the theme from next version update.
 * Tweak - Update Screenshot image.
 
 == Version 1.9.0 - 2021-01-18 =
-* Refactor - Customize setting and control 
+* Refactor - Customize setting and control
 * Modify - Theme options now uses Customize API instead of Options API.
 
 = Version 1.8.3 - 2020-12-21 =

@@ -4,8 +4,8 @@ Theme URI: https://themegrill.com/themes/spacious
 Author: ThemeGrill
 Author URI: https://themegrill.com
 Description: Spacious is an incredible free business WordPress theme that fits small to medium businesses. This responsive theme is optimized for speed. So, you end up with a business website that loads within 1 second. Since Spacious is compatible with WooCommerce, you can easily set up an online store for your business. It's amazing collection of 16 free starter demos makes building a complete website very beginner-friendly. Spacious theme supports Gutenberg and page builder plugins like Elementor, Brizy, Beaver Builder, SiteOrigin, etc. So, import a demo with just one click and start customizing it using a page builder of your choice. Here are the key Spacious features you get with this theme: >> Well-coded >> Translation & RTL Ready >> Sticky Menu >> Complete Documentation >> Multiple Widget Areas >> Optimized for SEO >> Compatible with Major Browsers. Try this free theme yourself to establish and grow your business’ online presence without having to rely on developers or designers. You can always reach out at https://themegrill.com/contact/ if you encounter any issues. Also, explore all the available free starter sites at https://themegrilldemos.com/spacious-demos.
-Version: 1.9.12
-Tested up to: 6.8
+Version: 1.10.0
+Tested up to: 7.1
 Requires PHP: 7.4
 License: GNU General Public License v2 or laterals
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -88,6 +88,55 @@ td {
     padding: 0;
     vertical-align: baseline;
 }
+
+/*rtl:begin:ignore*/
+html :where(.has-border-color),
+html :where([style^=border-color], [style*=";border-color"], [style*="; border-color"]),
+html :where([style^=border-width], [style*=";border-width"], [style*="; border-width"]) {
+    border-style: solid;
+}
+
+html :where([style^=border-top-color], [style*=";border-top-color"], [style*="; border-top-color"]),
+html :where([style^=border-top-width], [style*=";border-top-width"], [style*="; border-top-width"]) {
+    border-top-style: solid;
+}
+
+html :where([style^=border-right-color], [style*=";border-right-color"], [style*="; border-right-color"]),
+html :where([style^=border-right-width], [style*=";border-right-width"], [style*="; border-right-width"]) {
+    border-right-style: solid;
+}
+
+html :where([style^=border-bottom-color], [style*=";border-bottom-color"], [style*="; border-bottom-color"]),
+html :where([style^=border-bottom-width], [style*=";border-bottom-width"], [style*="; border-bottom-width"]) {
+    border-bottom-style: solid;
+}
+
+html :where([style^=border-left-color], [style*=";border-left-color"], [style*="; border-left-color"]),
+html :where([style^=border-left-width], [style*=";border-left-width"], [style*="; border-left-width"]) {
+    border-left-style: solid;
+}
+
+html :where(.has-border-color),
+html :where([style^=border-color], [style*=";border-color"], [style*="; border-color"]) {
+    border-width: medium;
+}
+
+html :where([style^=border-top-color], [style*=";border-top-color"], [style*="; border-top-color"]) {
+    border-top-width: medium;
+}
+
+html :where([style^=border-right-color], [style*=";border-right-color"], [style*="; border-right-color"]) {
+    border-right-width: medium;
+}
+
+html :where([style^=border-bottom-color], [style*=";border-bottom-color"], [style*="; border-bottom-color"]) {
+    border-bottom-width: medium;
+}
+
+html :where([style^=border-left-color], [style*=";border-left-color"], [style*="; border-left-color"]) {
+    border-left-width: medium;
+}
+/*rtl:end:ignore*/
 
 html {
     overflow-y: scroll;
@@ -562,6 +611,10 @@ button {
     -moz-border-radius: 3px;
     border-radius: 3px;
     font-size: 16px;
+}
+
+.wp-block-search__button {
+    margin-bottom: 0;
 }
 
 .spacious-button:hover {

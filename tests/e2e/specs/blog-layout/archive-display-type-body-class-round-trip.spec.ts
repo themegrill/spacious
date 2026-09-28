@@ -72,8 +72,12 @@ test('Content > Blog Posts display type persists a body class through publish an
     const reopened = await page.evaluate((id) => (window as any).wp.customize(id).get(), CONTROL_ID);
     expect(reopened).toBe(testValue);
   } finally {
+    // Published, not just set: on Playground the fixture's own MySQL-based
+    // restore (customizer.ts / theme-mods-snapshot.ts) is a no-op, so this
+    // publish is what actually reverts the live, persisted value there.
     try {
       await customizer.setControl(CONTROL_ID, original);
+      await customizer.publish();
     } catch (revertError) {
       console.warn(`Revert of ${CONTROL_ID} did not complete cleanly:`, revertError);
     }

@@ -13,10 +13,10 @@ importers:
         version: 8.6.5
       browser-sync:
         specifier: ~2.26.3
-        version: 2.26.14(debug@4.3.2(supports-color@7.2.0))(supports-color@7.2.0)
+        version: 2.26.14
       gulp:
         specifier: ~4.0.0
-        version: 4.0.2(supports-color@7.2.0)
+        version: 4.0.2
     devDependencies:
       '@playwright/test':
         specifier: ^1.48.0
@@ -62,10 +62,10 @@ importers:
         version: 5.1.0
       gulp-watch:
         specifier: ^4.3.11
-        version: 4.3.11(supports-color@7.2.0)
+        version: 4.3.11
       node-sass:
         specifier: ^9.0.0
-        version: 9.0.0(bluebird@3.7.2)(supports-color@7.2.0)
+        version: 9.0.0
       typescript:
         specifier: ^5.4.5
         version: 5.9.3
@@ -507,8 +507,8 @@ packages:
     resolution: {integrity: sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==}
     engines: {node: '>=6'}
 
-  caniuse-lite@1.0.30001810:
-    resolution: {integrity: sha512-TITQPUkaz+aVk5GL6NhOdwk1aEaNTSDPsGFWrTuhKGtjTF70jL/Oht2W4c6rXUe5fu7Ie19VIahAXHIIiWWNeg==}
+  caniuse-lite@1.0.30001812:
+    resolution: {integrity: sha512-qN+QNNBr93TCmFrmte0bBCjSDMuRvt78VlHT99qIGPszm4QsqCX8lnyWUFkHi8B7ZBAPq8SH+UqyXNy/odMdng==}
 
   chalk@0.2.1:
     resolution: {integrity: sha512-nmVapomwGksziCuynboy7I+dtW4ytIdqXPlrfY/ySx8l8EqFRGHyA04q6NMNpOri8XliGUGwXyfScVl48zFHbw==}
@@ -871,8 +871,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.436:
-    resolution: {integrity: sha512-iG79/xCF3iThADicbgbES2+liFYmTvelo7jWcEfg6lQ+Adrh7zShrXSg2ZdEDLbKjJ298kGAKMnnzVWobp0L+g==}
+  electron-to-chromium@1.5.439:
+    resolution: {integrity: sha512-qu6QIPXhsb+CRcAiTMNjR4A1y/7tCYKkKjr5CZXRVih6qkDf79peZ2BpEU3qoDBNCRrcy3Mra3X9nG5oruuA7Q==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3349,9 +3349,9 @@ snapshots:
 
   after@0.8.2: {}
 
-  agent-base@6.0.2(supports-color@7.2.0):
+  agent-base@6.0.2:
     dependencies:
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -3403,9 +3403,9 @@ snapshots:
       micromatch: 2.3.11
       normalize-path: 2.1.1
 
-  anymatch@2.0.0(supports-color@7.2.0):
+  anymatch@2.0.0:
     dependencies:
-      micromatch: 3.1.10(supports-color@7.2.0)
+      micromatch: 3.1.10
       normalize-path: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -3544,15 +3544,15 @@ snapshots:
   autoprefixer@8.6.5:
     dependencies:
       browserslist: 3.2.8
-      caniuse-lite: 1.0.30001810
+      caniuse-lite: 1.0.30001812
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       postcss: 6.0.23
       postcss-value-parser: 3.3.1
 
-  axios@0.21.4(debug@4.3.2(supports-color@7.2.0)):
+  axios@0.21.4(debug@4.3.2):
     dependencies:
-      follow-redirects: 1.16.0(debug@4.3.2(supports-color@7.2.0))
+      follow-redirects: 1.16.0(debug@4.3.2)
     transitivePeerDependencies:
       - debug
 
@@ -3629,7 +3629,7 @@ snapshots:
       preserve: 0.2.0
       repeat-element: 1.1.4
 
-  braces@2.3.2(supports-color@7.2.0):
+  braces@2.3.2:
     dependencies:
       arr-flatten: 1.1.0
       array-unique: 0.3.2
@@ -3637,7 +3637,7 @@ snapshots:
       fill-range: 4.0.0
       isobject: 3.0.1
       repeat-element: 1.1.4
-      snapdragon: 0.8.2(supports-color@7.2.0)
+      snapdragon: 0.8.2
       snapdragon-node: 2.1.1
       split-string: 3.1.0
       to-regex: 3.0.2
@@ -3654,28 +3654,28 @@ snapshots:
       fresh: 0.5.2
       mitt: 1.2.0
 
-  browser-sync-ui@2.29.3(supports-color@7.2.0):
+  browser-sync-ui@2.29.3:
     dependencies:
       async-each-series: 0.1.1
       chalk: 4.1.2
       connect-history-api-fallback: 1.6.0
       immutable: 3.8.4
       server-destroy: 1.0.1
-      socket.io-client: 4.8.3(supports-color@7.2.0)
+      socket.io-client: 4.8.3
       stream-throttle: 0.1.3
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  browser-sync@2.26.14(debug@4.3.2(supports-color@7.2.0))(supports-color@7.2.0):
+  browser-sync@2.26.14:
     dependencies:
       browser-sync-client: 2.29.3
-      browser-sync-ui: 2.29.3(supports-color@7.2.0)
+      browser-sync-ui: 2.29.3
       bs-recipes: 1.3.4
       bs-snippet-injector: 2.0.1
       chokidar: 3.6.0
-      connect: 3.6.6(supports-color@7.2.0)
+      connect: 3.6.6
       connect-history-api-fallback: 1.6.0
       dev-ip: 1.0.1
       easy-extender: 2.3.4
@@ -3683,21 +3683,21 @@ snapshots:
       etag: 1.8.1
       fresh: 0.5.2
       fs-extra: 3.0.1
-      http-proxy: 1.18.1(debug@4.3.2(supports-color@7.2.0))
+      http-proxy: 1.18.1
       immutable: 3.8.4
-      localtunnel: 2.0.2(supports-color@7.2.0)
+      localtunnel: 2.0.2
       micromatch: 4.0.8
       opn: 5.3.0
       portscanner: 2.1.1
       qs: 6.2.3
       raw-body: 2.5.3
-      resp-modifier: 6.0.2(supports-color@7.2.0)
+      resp-modifier: 6.0.2
       rx: 4.1.0
-      send: 0.16.2(supports-color@7.2.0)
-      serve-index: 1.9.1(supports-color@7.2.0)
-      serve-static: 1.13.2(supports-color@7.2.0)
+      send: 0.16.2
+      serve-index: 1.9.1
+      serve-static: 1.13.2
       server-destroy: 1.0.1
-      socket.io: 2.4.0(supports-color@7.2.0)
+      socket.io: 2.4.0
       ua-parser-js: 0.7.41
       yargs: 15.4.1
     transitivePeerDependencies:
@@ -3708,8 +3708,8 @@ snapshots:
 
   browserslist@3.2.8:
     dependencies:
-      caniuse-lite: 1.0.30001810
-      electron-to-chromium: 1.5.436
+      caniuse-lite: 1.0.30001812
+      electron-to-chromium: 1.5.439
 
   bs-recipes@1.3.4: {}
 
@@ -3723,7 +3723,7 @@ snapshots:
 
   bytes@3.1.2: {}
 
-  cacache@15.3.0(bluebird@3.7.2):
+  cacache@15.3.0:
     dependencies:
       '@npmcli/fs': 1.1.1
       '@npmcli/move-file': 1.1.2
@@ -3738,7 +3738,7 @@ snapshots:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1(bluebird@3.7.2)
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 8.0.1
       tar: 6.2.1
@@ -3746,7 +3746,7 @@ snapshots:
     transitivePeerDependencies:
       - bluebird
 
-  cacache@16.1.3(bluebird@3.7.2):
+  cacache@16.1.3:
     dependencies:
       '@npmcli/fs': 2.1.2
       '@npmcli/move-file': 2.0.1
@@ -3761,7 +3761,7 @@ snapshots:
       minipass-pipeline: 1.2.4
       mkdirp: 1.0.4
       p-map: 4.0.0
-      promise-inflight: 1.0.1(bluebird@3.7.2)
+      promise-inflight: 1.0.1
       rimraf: 3.0.2
       ssri: 9.0.1
       tar: 6.2.1
@@ -3808,7 +3808,7 @@ snapshots:
 
   camelcase@5.3.1: {}
 
-  caniuse-lite@1.0.30001810: {}
+  caniuse-lite@1.0.30001812: {}
 
   chalk@0.2.1:
     dependencies:
@@ -3834,7 +3834,7 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chokidar@1.7.0(supports-color@7.2.0):
+  chokidar@1.7.0:
     dependencies:
       anymatch: 1.3.2
       async-each: 1.0.6
@@ -3843,24 +3843,24 @@ snapshots:
       is-binary-path: 1.0.1
       is-glob: 2.0.1
       path-is-absolute: 1.0.1
-      readdirp: 2.2.1(supports-color@7.2.0)
+      readdirp: 2.2.1
     optionalDependencies:
       fsevents: 1.2.13
     transitivePeerDependencies:
       - supports-color
 
-  chokidar@2.1.8(supports-color@7.2.0):
+  chokidar@2.1.8:
     dependencies:
-      anymatch: 2.0.0(supports-color@7.2.0)
+      anymatch: 2.0.0
       async-each: 1.0.6
-      braces: 2.3.2(supports-color@7.2.0)
+      braces: 2.3.2
       glob-parent: 3.1.0
       inherits: 2.0.4
       is-binary-path: 1.0.1
       is-glob: 4.0.3
       normalize-path: 3.0.0
       path-is-absolute: 1.0.1
-      readdirp: 2.2.1(supports-color@7.2.0)
+      readdirp: 2.2.1
       upath: 1.2.0
     optionalDependencies:
       fsevents: 1.2.13
@@ -3999,10 +3999,10 @@ snapshots:
 
   connect-history-api-fallback@1.6.0: {}
 
-  connect@3.6.6(supports-color@7.2.0):
+  connect@3.6.6:
     dependencies:
-      debug: 2.6.9(supports-color@7.2.0)
-      finalhandler: 1.1.0(supports-color@7.2.0)
+      debug: 2.6.9
+      finalhandler: 1.1.0
       parseurl: 1.3.3
       utils-merge: 1.0.1
     transitivePeerDependencies:
@@ -4061,35 +4061,25 @@ snapshots:
 
   dateformat@4.6.3: {}
 
-  debug@2.6.9(supports-color@7.2.0):
+  debug@2.6.9:
     dependencies:
       ms: 2.0.0
-    optionalDependencies:
-      supports-color: 7.2.0
 
-  debug@3.1.0(supports-color@7.2.0):
+  debug@3.1.0:
     dependencies:
       ms: 2.0.0
-    optionalDependencies:
-      supports-color: 7.2.0
 
-  debug@4.1.1(supports-color@7.2.0):
+  debug@4.1.1:
     dependencies:
       ms: 2.1.3
-    optionalDependencies:
-      supports-color: 7.2.0
 
-  debug@4.3.2(supports-color@7.2.0):
+  debug@4.3.2:
     dependencies:
       ms: 2.1.2
-    optionalDependencies:
-      supports-color: 7.2.0
 
-  debug@4.4.3(supports-color@7.2.0):
+  debug@4.4.3:
     dependencies:
       ms: 2.1.3
-    optionalDependencies:
-      supports-color: 7.2.0
 
   decamelize-keys@1.1.1:
     dependencies:
@@ -4197,7 +4187,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.436: {}
+  electron-to-chromium@1.5.439: {}
 
   emoji-regex@8.0.0: {}
 
@@ -4211,11 +4201,11 @@ snapshots:
     dependencies:
       once: 1.4.0
 
-  engine.io-client@3.5.6(supports-color@7.2.0):
+  engine.io-client@3.5.6:
     dependencies:
       component-emitter: 1.3.1
       component-inherit: 0.0.3
-      debug: 3.1.0(supports-color@7.2.0)
+      debug: 3.1.0
       engine.io-parser: 2.2.1
       has-cors: 1.1.0
       indexof: 0.0.1
@@ -4229,10 +4219,10 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  engine.io-client@6.6.6(supports-color@7.2.0):
+  engine.io-client@6.6.6:
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
       engine.io-parser: 5.2.3
       ws: 8.21.3
       xmlhttprequest-ssl: 2.1.2
@@ -4251,12 +4241,12 @@ snapshots:
 
   engine.io-parser@5.2.3: {}
 
-  engine.io@3.5.0(supports-color@7.2.0):
+  engine.io@3.5.0:
     dependencies:
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.4.2
-      debug: 4.1.1(supports-color@7.2.0)
+      debug: 4.1.1
       engine.io-parser: 2.2.1
       ws: 7.4.6
     transitivePeerDependencies:
@@ -4345,14 +4335,14 @@ snapshots:
     dependencies:
       is-posix-bracket: 0.1.1
 
-  expand-brackets@2.1.4(supports-color@7.2.0):
+  expand-brackets@2.1.4:
     dependencies:
-      debug: 2.6.9(supports-color@7.2.0)
+      debug: 2.6.9
       define-property: 0.2.5
       extend-shallow: 2.0.1
       posix-character-classes: 0.1.1
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@7.2.0)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -4388,15 +4378,15 @@ snapshots:
     dependencies:
       is-extglob: 1.0.0
 
-  extglob@2.0.4(supports-color@7.2.0):
+  extglob@2.0.4:
     dependencies:
       array-unique: 0.3.2
       define-property: 1.0.0
-      expand-brackets: 2.1.4(supports-color@7.2.0)
+      expand-brackets: 2.1.4
       extend-shallow: 2.0.1
       fragment-cache: 0.2.1
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@7.2.0)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -4434,9 +4424,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.1.0(supports-color@7.2.0):
+  finalhandler@1.1.0:
     dependencies:
-      debug: 2.6.9(supports-color@7.2.0)
+      debug: 2.6.9
       encodeurl: 1.0.2
       escape-html: 1.0.3
       on-finished: 2.3.0
@@ -4461,20 +4451,20 @@ snapshots:
       glob: 3.2.11
       lodash: 2.4.2
 
-  findup-sync@2.0.0(supports-color@7.2.0):
+  findup-sync@2.0.0:
     dependencies:
       detect-file: 1.0.0
       is-glob: 3.1.0
-      micromatch: 3.1.10(supports-color@7.2.0)
+      micromatch: 3.1.10
       resolve-dir: 1.0.1
     transitivePeerDependencies:
       - supports-color
 
-  findup-sync@3.0.0(supports-color@7.2.0):
+  findup-sync@3.0.0:
     dependencies:
       detect-file: 1.0.0
       is-glob: 4.0.3
-      micromatch: 3.1.10(supports-color@7.2.0)
+      micromatch: 3.1.10
       resolve-dir: 1.0.1
     transitivePeerDependencies:
       - supports-color
@@ -4512,9 +4502,9 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 2.3.8
 
-  follow-redirects@1.16.0(debug@4.3.2(supports-color@7.2.0)):
+  follow-redirects@1.16.0(debug@4.3.2):
     optionalDependencies:
-      debug: 4.3.2(supports-color@7.2.0)
+      debug: 4.3.2
 
   for-in@1.0.2: {}
 
@@ -4647,11 +4637,11 @@ snapshots:
       to-absolute-glob: 2.0.2
       unique-stream: 2.4.0
 
-  glob-watcher@5.0.5(supports-color@7.2.0):
+  glob-watcher@5.0.5:
     dependencies:
-      anymatch: 2.0.0(supports-color@7.2.0)
+      anymatch: 2.0.0
       async-done: 1.3.2
-      chokidar: 2.1.8(supports-color@7.2.0)
+      chokidar: 2.1.8
       is-negated-glob: 1.0.0
       just-debounce: 1.1.0
       normalize-path: 3.0.0
@@ -4863,7 +4853,7 @@ snapshots:
       minimatch: 3.1.5
       nopt: 5.0.0
 
-  gulp-cli@2.3.0(supports-color@7.2.0):
+  gulp-cli@2.3.0:
     dependencies:
       ansi-colors: 1.1.0
       archy: 1.0.0
@@ -4875,8 +4865,8 @@ snapshots:
       gulplog: 1.0.0
       interpret: 1.4.0
       isobject: 3.0.1
-      liftoff: 3.1.0(supports-color@7.2.0)
-      matchdep: 2.0.0(supports-color@7.2.0)
+      liftoff: 3.1.0
+      matchdep: 2.0.0
       mute-stdout: 1.0.1
       pretty-hrtime: 1.0.3
       replace-homedir: 1.0.0
@@ -4940,10 +4930,10 @@ snapshots:
       through2: 2.0.5
       vinyl: 0.5.3
 
-  gulp-watch@4.3.11(supports-color@7.2.0):
+  gulp-watch@4.3.11:
     dependencies:
       anymatch: 1.3.2
-      chokidar: 1.7.0(supports-color@7.2.0)
+      chokidar: 1.7.0
       glob-parent: 3.1.0
       gulp-util: 3.0.8
       object-assign: 4.1.1
@@ -4955,10 +4945,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  gulp@4.0.2(supports-color@7.2.0):
+  gulp@4.0.2:
     dependencies:
-      glob-watcher: 5.0.5(supports-color@7.2.0)
-      gulp-cli: 2.3.0(supports-color@7.2.0)
+      glob-watcher: 5.0.5
+      gulp-cli: 2.3.0
       undertaker: 1.3.0
       vinyl-fs: 3.0.3
     transitivePeerDependencies:
@@ -5058,34 +5048,34 @@ snapshots:
       statuses: 2.0.2
       toidentifier: 1.0.1
 
-  http-proxy-agent@4.0.1(supports-color@7.2.0):
+  http-proxy-agent@4.0.1:
     dependencies:
       '@tootallnate/once': 1.1.2
-      agent-base: 6.0.2(supports-color@7.2.0)
-      debug: 4.4.3(supports-color@7.2.0)
+      agent-base: 6.0.2
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
-  http-proxy-agent@5.0.0(supports-color@7.2.0):
+  http-proxy-agent@5.0.0:
     dependencies:
       '@tootallnate/once': 2.0.1
-      agent-base: 6.0.2(supports-color@7.2.0)
-      debug: 4.4.3(supports-color@7.2.0)
+      agent-base: 6.0.2
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
-  http-proxy@1.18.1(debug@4.3.2(supports-color@7.2.0)):
+  http-proxy@1.18.1:
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.16.0(debug@4.3.2(supports-color@7.2.0))
+      follow-redirects: 1.16.0(debug@4.3.2)
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
 
-  https-proxy-agent@5.0.1(supports-color@7.2.0):
+  https-proxy-agent@5.0.1:
     dependencies:
-      agent-base: 6.0.2(supports-color@7.2.0)
-      debug: 4.4.3(supports-color@7.2.0)
+      agent-base: 6.0.2
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -5345,10 +5335,10 @@ snapshots:
     dependencies:
       flush-write-stream: 1.1.1
 
-  liftoff@3.1.0(supports-color@7.2.0):
+  liftoff@3.1.0:
     dependencies:
       extend: 3.0.2
-      findup-sync: 3.0.0(supports-color@7.2.0)
+      findup-sync: 3.0.0
       fined: 1.2.0
       flagged-respawn: 1.0.1
       is-plain-object: 2.0.4
@@ -5385,10 +5375,10 @@ snapshots:
       pinkie-promise: 2.0.1
       strip-bom: 2.0.0
 
-  localtunnel@2.0.2(supports-color@7.2.0):
+  localtunnel@2.0.2:
     dependencies:
-      axios: 0.21.4(debug@4.3.2(supports-color@7.2.0))
-      debug: 4.3.2(supports-color@7.2.0)
+      axios: 0.21.4(debug@4.3.2)
+      debug: 4.3.2
       openurl: 1.1.1
       yargs: 17.1.1
     transitivePeerDependencies:
@@ -5473,13 +5463,13 @@ snapshots:
 
   lru-cache@7.18.3: {}
 
-  make-fetch-happen@10.2.1(bluebird@3.7.2)(supports-color@7.2.0):
+  make-fetch-happen@10.2.1:
     dependencies:
       agentkeepalive: 4.6.0
-      cacache: 16.1.3(bluebird@3.7.2)
+      cacache: 16.1.3
       http-cache-semantics: 4.2.0
-      http-proxy-agent: 5.0.0(supports-color@7.2.0)
-      https-proxy-agent: 5.0.1(supports-color@7.2.0)
+      http-proxy-agent: 5.0.0
+      https-proxy-agent: 5.0.1
       is-lambda: 1.0.1
       lru-cache: 7.18.3
       minipass: 3.3.6
@@ -5489,19 +5479,19 @@ snapshots:
       minipass-pipeline: 1.2.4
       negotiator: 0.6.4
       promise-retry: 2.0.1
-      socks-proxy-agent: 7.0.0(supports-color@7.2.0)
+      socks-proxy-agent: 7.0.0
       ssri: 9.0.1
     transitivePeerDependencies:
       - bluebird
       - supports-color
 
-  make-fetch-happen@9.1.0(bluebird@3.7.2)(supports-color@7.2.0):
+  make-fetch-happen@9.1.0:
     dependencies:
       agentkeepalive: 4.6.0
-      cacache: 15.3.0(bluebird@3.7.2)
+      cacache: 15.3.0
       http-cache-semantics: 4.2.0
-      http-proxy-agent: 4.0.1(supports-color@7.2.0)
-      https-proxy-agent: 5.0.1(supports-color@7.2.0)
+      http-proxy-agent: 4.0.1
+      https-proxy-agent: 5.0.1
       is-lambda: 1.0.1
       lru-cache: 6.0.0
       minipass: 3.3.6
@@ -5511,7 +5501,7 @@ snapshots:
       minipass-pipeline: 1.2.4
       negotiator: 0.6.4
       promise-retry: 2.0.1
-      socks-proxy-agent: 6.2.1(supports-color@7.2.0)
+      socks-proxy-agent: 6.2.1
       ssri: 8.0.1
     transitivePeerDependencies:
       - bluebird
@@ -5531,10 +5521,10 @@ snapshots:
     dependencies:
       object-visit: 1.0.1
 
-  matchdep@2.0.0(supports-color@7.2.0):
+  matchdep@2.0.0:
     dependencies:
-      findup-sync: 2.0.0(supports-color@7.2.0)
-      micromatch: 3.1.10(supports-color@7.2.0)
+      findup-sync: 2.0.0
+      micromatch: 3.1.10
       resolve: 1.22.12
       stack-trace: 0.0.10
     transitivePeerDependencies:
@@ -5575,20 +5565,20 @@ snapshots:
       parse-glob: 3.0.4
       regex-cache: 0.4.4
 
-  micromatch@3.1.10(supports-color@7.2.0):
+  micromatch@3.1.10:
     dependencies:
       arr-diff: 4.0.0
       array-unique: 0.3.2
-      braces: 2.3.2(supports-color@7.2.0)
+      braces: 2.3.2
       define-property: 2.0.2
       extend-shallow: 3.0.2
-      extglob: 2.0.4(supports-color@7.2.0)
+      extglob: 2.0.4
       fragment-cache: 0.2.1
       kind-of: 6.0.3
-      nanomatch: 1.2.13(supports-color@7.2.0)
+      nanomatch: 1.2.13
       object.pick: 1.3.0
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@7.2.0)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -5716,7 +5706,7 @@ snapshots:
 
   nan@2.29.0: {}
 
-  nanomatch@1.2.13(supports-color@7.2.0):
+  nanomatch@1.2.13:
     dependencies:
       arr-diff: 4.0.0
       array-unique: 0.3.2
@@ -5727,7 +5717,7 @@ snapshots:
       kind-of: 6.0.3
       object.pick: 1.3.0
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@7.2.0)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -5738,12 +5728,12 @@ snapshots:
 
   next-tick@1.1.0: {}
 
-  node-gyp@8.4.1(bluebird@3.7.2)(supports-color@7.2.0):
+  node-gyp@8.4.1:
     dependencies:
       env-paths: 2.2.1
       glob: 7.2.3
       graceful-fs: 4.2.11
-      make-fetch-happen: 9.1.0(bluebird@3.7.2)(supports-color@7.2.0)
+      make-fetch-happen: 9.1.0
       nopt: 5.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
@@ -5756,7 +5746,7 @@ snapshots:
 
   node-int64@0.4.0: {}
 
-  node-sass@9.0.0(bluebird@3.7.2)(supports-color@7.2.0):
+  node-sass@9.0.0:
     dependencies:
       async-foreach: 0.1.3
       chalk: 4.1.2
@@ -5765,10 +5755,10 @@ snapshots:
       get-stdin: 4.0.1
       glob: 7.2.3
       lodash: 4.18.1
-      make-fetch-happen: 10.2.1(bluebird@3.7.2)(supports-color@7.2.0)
+      make-fetch-happen: 10.2.1
       meow: 9.0.0
       nan: 2.29.0
-      node-gyp: 8.4.1(bluebird@3.7.2)(supports-color@7.2.0)
+      node-gyp: 8.4.1
       sass-graph: 4.0.1
       stdout-stream: 1.4.1
       true-case-path: 2.2.1
@@ -6068,9 +6058,7 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
-  promise-inflight@1.0.1(bluebird@3.7.2):
-    optionalDependencies:
-      bluebird: 3.7.2
+  promise-inflight@1.0.1: {}
 
   promise-retry@2.0.1:
     dependencies:
@@ -6170,10 +6158,10 @@ snapshots:
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
 
-  readdirp@2.2.1(supports-color@7.2.0):
+  readdirp@2.2.1:
     dependencies:
       graceful-fs: 4.2.11
-      micromatch: 3.1.10(supports-color@7.2.0)
+      micromatch: 3.1.10
       readable-stream: 2.3.8
     transitivePeerDependencies:
       - supports-color
@@ -6261,9 +6249,9 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  resp-modifier@6.0.2(supports-color@7.2.0):
+  resp-modifier@6.0.2:
     dependencies:
-      debug: 2.6.9(supports-color@7.2.0)
+      debug: 2.6.9
       minimatch: 3.1.5
     transitivePeerDependencies:
       - supports-color
@@ -6318,9 +6306,9 @@ snapshots:
 
   semver@7.8.5: {}
 
-  send@0.16.2(supports-color@7.2.0):
+  send@0.16.2:
     dependencies:
-      debug: 2.6.9(supports-color@7.2.0)
+      debug: 2.6.9
       depd: 1.1.2
       destroy: 1.0.4
       encodeurl: 1.0.2
@@ -6336,11 +6324,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-index@1.9.1(supports-color@7.2.0):
+  serve-index@1.9.1:
     dependencies:
       accepts: 1.3.8
       batch: 0.6.1
-      debug: 2.6.9(supports-color@7.2.0)
+      debug: 2.6.9
       escape-html: 1.0.3
       http-errors: 1.6.3
       mime-types: 2.1.35
@@ -6348,12 +6336,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.13.2(supports-color@7.2.0):
+  serve-static@1.13.2:
     dependencies:
       encodeurl: 1.0.2
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.16.2(supports-color@7.2.0)
+      send: 0.16.2
     transitivePeerDependencies:
       - supports-color
 
@@ -6409,10 +6397,10 @@ snapshots:
     dependencies:
       kind-of: 3.2.2
 
-  snapdragon@0.8.2(supports-color@7.2.0):
+  snapdragon@0.8.2:
     dependencies:
       base: 0.11.2
-      debug: 2.6.9(supports-color@7.2.0)
+      debug: 2.6.9
       define-property: 0.2.5
       extend-shallow: 2.0.1
       map-cache: 0.2.2
@@ -6424,83 +6412,83 @@ snapshots:
 
   socket.io-adapter@1.1.2: {}
 
-  socket.io-client@2.4.0(supports-color@7.2.0):
+  socket.io-client@2.4.0:
     dependencies:
       backo2: 1.0.2
       component-bind: 1.0.0
       component-emitter: 1.3.1
-      debug: 3.1.0(supports-color@7.2.0)
-      engine.io-client: 3.5.6(supports-color@7.2.0)
+      debug: 3.1.0
+      engine.io-client: 3.5.6
       has-binary2: 1.0.3
       indexof: 0.0.1
       parseqs: 0.0.6
       parseuri: 0.0.6
-      socket.io-parser: 3.3.6(supports-color@7.2.0)
+      socket.io-parser: 3.3.6
       to-array: 0.1.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  socket.io-client@4.8.3(supports-color@7.2.0):
+  socket.io-client@4.8.3:
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.4.3(supports-color@7.2.0)
-      engine.io-client: 6.6.6(supports-color@7.2.0)
-      socket.io-parser: 4.2.7(supports-color@7.2.0)
+      debug: 4.4.3
+      engine.io-client: 6.6.6
+      socket.io-parser: 4.2.7
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  socket.io-parser@3.3.6(supports-color@7.2.0):
+  socket.io-parser@3.3.6:
     dependencies:
       component-emitter: 1.3.1
-      debug: 3.1.0(supports-color@7.2.0)
+      debug: 3.1.0
       isarray: 2.0.1
     transitivePeerDependencies:
       - supports-color
 
-  socket.io-parser@3.4.5(supports-color@7.2.0):
+  socket.io-parser@3.4.5:
     dependencies:
       component-emitter: 1.2.1
-      debug: 4.1.1(supports-color@7.2.0)
+      debug: 4.1.1
       isarray: 2.0.1
     transitivePeerDependencies:
       - supports-color
 
-  socket.io-parser@4.2.7(supports-color@7.2.0):
+  socket.io-parser@4.2.7:
     dependencies:
       '@socket.io/component-emitter': 3.1.2
-      debug: 4.4.3(supports-color@7.2.0)
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
-  socket.io@2.4.0(supports-color@7.2.0):
+  socket.io@2.4.0:
     dependencies:
-      debug: 4.1.1(supports-color@7.2.0)
-      engine.io: 3.5.0(supports-color@7.2.0)
+      debug: 4.1.1
+      engine.io: 3.5.0
       has-binary2: 1.0.3
       socket.io-adapter: 1.1.2
-      socket.io-client: 2.4.0(supports-color@7.2.0)
-      socket.io-parser: 3.4.5(supports-color@7.2.0)
+      socket.io-client: 2.4.0
+      socket.io-parser: 3.4.5
     transitivePeerDependencies:
       - bufferutil
       - supports-color
       - utf-8-validate
 
-  socks-proxy-agent@6.2.1(supports-color@7.2.0):
+  socks-proxy-agent@6.2.1:
     dependencies:
-      agent-base: 6.0.2(supports-color@7.2.0)
-      debug: 4.4.3(supports-color@7.2.0)
+      agent-base: 6.0.2
+      debug: 4.4.3
       socks: 2.8.10
     transitivePeerDependencies:
       - supports-color
 
-  socks-proxy-agent@7.0.0(supports-color@7.2.0):
+  socks-proxy-agent@7.0.0:
     dependencies:
-      agent-base: 6.0.2(supports-color@7.2.0)
-      debug: 4.4.3(supports-color@7.2.0)
+      agent-base: 6.0.2
+      debug: 4.4.3
       socks: 2.8.10
     transitivePeerDependencies:
       - supports-color

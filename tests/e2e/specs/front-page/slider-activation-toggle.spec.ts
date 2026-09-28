@@ -66,6 +66,10 @@ test('Slider > Activate slider shows and hides #featured-slider on the front pag
       'Expected #featured-slider to render on the front page once spacious_activate_slider is on',
     ).toBeVisible();
 
+    // setControl() drives window.wp.customize() in the CURRENT page — the
+    // goto() above navigated away from the Customizer entirely, so it must
+    // be reopened before the next setControl() call has anything to act on.
+    await customizer.open({ control: CONTROL_ID });
     await customizer.setControl(CONTROL_ID, false);
     await customizer.publish();
     await page.goto('/?e2e-cache-bust=' + Date.now());
@@ -77,9 +81,13 @@ test('Slider > Activate slider shows and hides #featured-slider on the front pag
     // Courtesy-only revert for a reused browser context — the fixture's own
     // teardown (see customizer.ts / theme-mods-snapshot.ts) is the real
     // safety net and restores the true DB value regardless of how this test
-    // exits.
+    // exits. Published, not just set: on Playground the fixture's own
+    // teardown is a no-op (no MySQL there), so this publish is the only
+    // thing that actually reverts the live, persisted value on that tier.
     try {
+      await customizer.open({ control: CONTROL_ID });
       await customizer.setControl(CONTROL_ID, original);
+      await customizer.publish();
     } catch (revertError) {
       console.warn(`Revert of ${CONTROL_ID} did not complete cleanly:`, revertError);
     }

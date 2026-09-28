@@ -1,3 +1,6 @@
-allowBuilds:
-  es5-ext: true
-  node-sass: true
+packages:
+  - '.'
+
+onlyBuiltDependencies:
+  - es5-ext
+  - node-sass
