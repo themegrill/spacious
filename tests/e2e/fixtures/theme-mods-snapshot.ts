@@ -5,6 +5,11 @@ import { hasMysql, targetEnv } from '../env';
 
 const SNAPSHOT_PATH = path.join(__dirname, '..', '.auth', 'theme-mods-baseline.json');
 
+// Sentinel written instead of a base64 payload when the option row doesn't
+// exist at all — standard base64 (MySQL's TO_BASE64 alphabet) never contains
+// an underscore, so this can't collide with a real snapshot.
+const ABSENT = '__ABSENT__';
+
 export type DbConfig = {
   host?: string;
   port: string;
@@ -132,6 +137,13 @@ async function themeModsOption(config: DbConfig): Promise<string> {
  * A no-op off `local`. On Playground the site is disposable and rebuilt from a
  * blueprint per run, so there is nothing to protect and — more to the point —
  * no MySQL to protect it with.
+ *
+ * A genuinely fresh install has no `theme_mods_<stylesheet>` row at all — the
+ * option doesn't exist until the first `set_theme_mod()` call. That is a
+ * normal, expected baseline (the whole point of the `@fresh` tier is to run
+ * against exactly this state), not a failure: recorded as the `ABSENT`
+ * sentinel rather than thrown, since throwing here runs inside unguarded
+ * global-setup and would abort the entire suite before any test executes.
  */
 export async function snapshotThemeMods(): Promise<void> {
   if (!hasMysql()) {
@@ -147,14 +159,12 @@ export async function snapshotThemeMods(): Promise<void> {
     config,
     `SELECT TO_BASE64(option_value) FROM ${config.tablePrefix}options WHERE option_name='${option}';`,
   );
-  if (!base64) {
-    throw new Error(
-      `theme-mods-snapshot: '${option}' not found in ${config.tablePrefix}options — nothing to snapshot. ` +
-        'That means the active theme has never had a customizer setting saved; open the Customizer ' +
-        'and publish once, then re-run.',
-    );
-  }
   fs.mkdirSync(path.dirname(SNAPSHOT_PATH), { recursive: true });
+  if (!base64) {
+    fs.writeFileSync(SNAPSHOT_PATH, ABSENT, 'utf8');
+    console.warn(`theme-mods-snapshot: '${option}' does not exist yet — baseline recorded as absent.`);
+    return;
+  }
   fs.writeFileSync(SNAPSHOT_PATH, base64, 'utf8');
   console.warn(`theme-mods-snapshot: baseline captured for '${option}'.`);
 }
@@ -192,10 +202,22 @@ export async function restoreThemeMods(): Promise<void> {
   try {
     const config = readDbConfig();
     const option = await themeModsOption(config);
-    const base64 = fs.readFileSync(SNAPSHOT_PATH, 'utf8').trim();
+    const snapshot = fs.readFileSync(SNAPSHOT_PATH, 'utf8').trim();
+
+    if (snapshot === ABSENT) {
+      // The baseline was "no row at all" — an UPDATE can't represent that,
+      // it can only modify a row that already exists. Delete whatever a test
+      // created instead, so the site genuinely returns to its fresh state.
+      await runMysql(
+        config,
+        `DELETE FROM ${config.tablePrefix}options WHERE option_name='${option}';`,
+      );
+      return;
+    }
+
     await runMysql(
       config,
-      `UPDATE ${config.tablePrefix}options SET option_value = FROM_BASE64('${base64}') ` +
+      `UPDATE ${config.tablePrefix}options SET option_value = FROM_BASE64('${snapshot}') ` +
         `WHERE option_name='${option}';`,
     );
   } catch (err) {

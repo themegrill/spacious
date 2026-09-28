@@ -41,6 +41,7 @@
     "header": [
       "inc/customizer/options/header/**",
       "inc/header-functions.php",
+      "inc/functions.php",
       "header.php",
       "navigation.php",
       "assets/scss/_header.scss"

@@ -72,9 +72,12 @@ test('Global > Colors > Primary Color persists through publish and reopen @fresh
     // Courtesy-only revert for a reused browser context — the fixture's own
     // teardown (see customizer.ts / theme-mods-snapshot.ts) is the real
     // safety net and restores the true DB value regardless of how this test
-    // exits.
+    // exits. Published, not just set: on Playground that teardown is a
+    // no-op (no MySQL there), so this publish is what actually reverts the
+    // live, persisted value on that tier.
     try {
       await customizer.setControl(CONTROL_ID, original);
+      await customizer.publish();
     } catch (revertError) {
       console.warn(`Revert of ${CONTROL_ID} did not complete cleanly:`, revertError);
     }
