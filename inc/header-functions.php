@@ -93,6 +93,7 @@ if ( ! function_exists( 'spacious_cart_icon' ) ) :
 
 	// Registered with the default renderer, so a child theme overriding spacious_cart_icon() keeps its own markup.
 	add_filter( 'woocommerce_add_to_cart_fragments', 'spacious_cart_icon_fragment' );
+	add_action( 'wp_enqueue_scripts', 'spacious_cart_icon_scripts' );
 
 endif;
 
@@ -148,6 +149,54 @@ if ( ! function_exists( 'spacious_cart_icon_fragment' ) ) :
 		$fragments[ $selector ] = ob_get_clean();
 
 		return $fragments;
+	}
+
+endif;
+
+if ( ! function_exists( 'spacious_cart_icon_scripts' ) ) :
+
+	/**
+	 * Load what keeps the header cart icon in sync on the Cart and Checkout pages.
+	 *
+	 * The WooCommerce cart widget, which normally loads cart fragments, hides itself on those pages,
+	 * and the Cart and Checkout blocks change the cart without firing the events cart fragments listen for.
+	 */
+	function spacious_cart_icon_scripts() {
+		if ( 1 !== (int) get_theme_mod( 'spacious_cart_icon', 0 ) || ! class_exists( 'woocommerce' ) ) {
+			return;
+		}
+
+		wp_enqueue_script( 'wc-cart-fragments' );
+
+		// Printed only where the blocks load their cart store.
+		wp_add_inline_script(
+			'wc-blocks-data-store',
+			"( function () {
+				var cart = window.wp && wp.data && wp.data.select( 'wc/store/cart' );
+
+				if ( ! cart ) {
+					return;
+				}
+
+				function key() {
+					var data = cart.getCartData();
+
+					return data.itemsCount + '|' + data.totals.total_items;
+				}
+
+				var last = key();
+
+				wp.data.subscribe( function () {
+					var now = key();
+
+					if ( now !== last && window.jQuery ) {
+						jQuery( document.body ).trigger( 'wc_fragment_refresh' );
+					}
+
+					last = now;
+				} );
+			} )();"
+		);
 	}
 
 endif;
