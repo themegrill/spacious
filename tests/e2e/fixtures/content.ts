@@ -257,9 +257,11 @@ export const test = base.extend<{ content: ContentHelper }>({
         );
 
         for (const menu of menus) {
-          // An unassigned menu is never rendered, so reusing it would hand the
-          // mobile specs labels that do not appear in the header.
-          if (!menu.locations || 0 === menu.locations.length) continue;
+          // #site-navigation only ever renders the 'primary'-location menu
+          // (inc/header-functions.php's spacious_main_nav()) — a menu assigned
+          // only to some other location is never rendered there, so reusing it
+          // would hand the mobile specs labels that do not appear in the header.
+          if (!menu.locations || !menu.locations.includes('primary')) continue;
 
           const items = await get<
             Array<{ id: number; parent: number; title: { rendered: string }; url: string }>
