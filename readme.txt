@@ -55,6 +55,7 @@ and we will include it within the theme from next version update.
 * Dev - Meta box save routine reads $_POST without isset() checks or a value whitelist.
 * Dev - Deprecation notice on every page load from the IE 8 html5shiv script under WordPress 6.9+.
 * Dev - JavaScript errors from navigation.js on the Widgets screen and other pages without the theme header.
+* Dev - PHP 8.1+ deprecation notices from the major controls migration on fresh installs with no saved theme options.
 * Fix - Submenu caret icon never flips direction when toggled.
 * Fix - Search block input renders taller than its Search button.
 * Fix - Slider scripts loaded on the homepage even when the slider setting was off.

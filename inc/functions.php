@@ -659,7 +659,7 @@ if ( ! function_exists( 'spacious_footer_copyright' ) ) :
 
 		$tg_link = '<a href="' . esc_url( 'https://themegrill.com/themes/spacious' ) . '" target="_blank" title="' . esc_attr__( 'Spacious', 'spacious' ) . '" rel="nofollow"><span>' . __( 'Spacious', 'spacious' ) . '</span></a>';
 
-		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'spacious' ), date( 'Y' ), $site_link ) . ' ' .__('All rights reserved.', 'spacious' ). sprintf( __( ' Theme %1$s', 'spacious' ), $tg_link ) . ' ' . sprintf( __( 'by ThemeGrill. Powered by: %2$s.', 'spacious' ), 'Spacious', $wp_link );
+		$default_footer_value = sprintf( __( 'Copyright &copy; %1$s %2$s.', 'spacious' ), date( 'Y' ), $site_link ) . ' ' .__('All rights reserved.', 'spacious' ). sprintf( __( ' Theme: %1$s', 'spacious' ), $tg_link ) . ' ' . sprintf( __( 'by ThemeGrill. Powered by: %2$s', 'spacious' ), 'Spacious', $wp_link );
 
 		$spacious_footer_copyright = '<div class="copyright">' . $default_footer_value . '</div>';
 		echo $spacious_footer_copyright;
