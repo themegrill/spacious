@@ -154,7 +154,7 @@ msgstr "Odstrániť"
 
 #: inc/admin/options/includes/class-options-media-uploader.php:71
 msgid "Upgrade your version of WordPress for full media support."
-msgstr "Aktualizujte vašu verziu Wordpress pre plnú podporu médií."
+msgstr "Aktualizujte vašu verziu WordPress pre plnú podporu médií."
 
 #: inc/admin/options/includes/class-options-media-uploader.php:95
 msgid "View File"
