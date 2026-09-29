@@ -32,7 +32,9 @@ function spacious_major_controls_migrate() {
 	// Get theme options.
 	$themename              = get_option( 'stylesheet' );
 	$themename              = preg_replace( "/\W/", "_", strtolower( $themename ) );
-	$spacious_theme_options = get_option( $themename );
+	// get_option() returns false when the option doesn't exist (fresh installs), and the
+	// array writes/unset() below on a false value log PHP 8.1+ deprecation notices.
+	$spacious_theme_options = (array) get_option( $themename, array() );
 
 	// Base heading.
 	$spacious_content_font = isset( $spacious_theme_options['spacious_content_font'] ) ? $spacious_theme_options['spacious_content_font'] : 'Lato';
