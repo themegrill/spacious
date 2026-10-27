@@ -13,7 +13,14 @@ import { test, expect } from '../../fixtures/customizer';
 
 const CONTROL_ID = 'background_color';
 
-test('background color accepts an rgba value and renders it as hex @fresh @customizer', async ({
+/**
+ * @area    customizer-core
+ * @tier    fresh
+ * @source  issue #154
+ * @why     Guards that the missing-setting check did not stop the alpha-color
+ *          override from running in a normal Customizer load.
+ */
+test('background color accepts an rgba value and renders it as hex @fresh @customizer-core', async ({
   page,
   customizer,
 }) => {
