@@ -32,16 +32,18 @@ setup('authenticate', async ({ browser }) => {
 
   try {
     await page.goto('/wp-login.php');
-    // A cold Playground boot can serve wp-login.php before it has fully
-    // hydrated — filling a field that's about to be replaced silently loses
-    // the value with no error, which is exactly what an empty-password
-    // "Please fill out this field" native-validation failure looks like.
-    // Waiting for both fields to be attached AND stable first is cheap
-    // insurance against that race.
+    // WordPress's own wp-login.php arms a 200ms timer that runs
+    // `user_pass.value = ""` and then focuses the field (wp_attempt_focus).
+    // Filling the password inside that window is silently undone, and the
+    // click then fails the browser's own "Please fill out this field" check —
+    // an empty-password failure that looks like a bad login. Page load alone
+    // does not wait for it, and a cold Playground boot makes the window easy
+    // to hit. The timer focuses the field AFTER clearing it, so waiting for
+    // focus means it has already fired. Visible/stable checks cannot see this.
     const loginField = page.locator('#user_login');
     const passField = page.locator('#user_pass');
     await loginField.waitFor({ state: 'visible' });
-    await passField.waitFor({ state: 'visible' });
+    await expect(passField).toBeFocused();
     await loginField.fill(user);
     await passField.fill(password);
     await expect(passField).toHaveValue(password);
