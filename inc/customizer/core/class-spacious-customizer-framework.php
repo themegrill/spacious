@@ -143,14 +143,15 @@ class Spacious_Customizer_FrameWork {
 		$wp_customize->register_section_type( 'Spacious_Upsell_Section' );
 
 		// Overrides sanitize callback if theme supports custom-background.
-		if ( current_theme_supports( 'custom-background' ) ) {
+		$background_color = $wp_customize->get_setting( 'background_color' );
+		if ( current_theme_supports( 'custom-background' ) && $background_color ) {
 
 			remove_filter(
 				'customize_sanitize_background_color',
-				$wp_customize->get_setting( 'background_color' )->sanitize_callback
+				$background_color->sanitize_callback
 			);
 
-			$wp_customize->get_setting( 'background_color' )->sanitize_callback = array(
+			$background_color->sanitize_callback = array(
 				'Spacious_Customizer_FrameWork_Sanitizes',
 				'sanitize_alpha_color',
 			);
@@ -164,14 +165,15 @@ class Spacious_Customizer_FrameWork {
 		}
 
 		// Overrides sanitize callback if theme supports custom-header.
-		if ( current_theme_supports( 'custom-header' ) ) {
+		$header_textcolor = $wp_customize->get_setting( 'header_textcolor' );
+		if ( current_theme_supports( 'custom-header' ) && $header_textcolor ) {
 
 			remove_filter(
 				'customize_sanitize_header_textcolor',
-				$wp_customize->get_setting( 'header_textcolor' )->sanitize_callback
+				$header_textcolor->sanitize_callback
 			);
 
-			$wp_customize->get_setting( 'header_textcolor' )->sanitize_callback = array(
+			$header_textcolor->sanitize_callback = array(
 				'Spacious_Customizer_FrameWork_Sanitizes',
 				'sanitize_alpha_color',
 			);
